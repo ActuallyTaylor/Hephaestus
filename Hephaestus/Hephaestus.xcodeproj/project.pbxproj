@@ -11,6 +11,7 @@
 		4B45369826EB8A2400B9D379 /* libglfw.3.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 4B74681C26EB0F5100548E70 /* libglfw.3.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4B45369A26EB8A4000B9D379 /* libGLEW.2.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B74682026EB0F6E00548E70 /* libGLEW.2.2.0.dylib */; };
 		4B45369B26EB8A4000B9D379 /* libGLEW.2.2.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 4B74682026EB0F6E00548E70 /* libGLEW.2.2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4B4536A126ED8EE500B9D379 /* Triangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B45369F26ED8EE500B9D379 /* Triangle.cpp */; };
 		4B74681126EB051000548E70 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B74681026EB051000548E70 /* main.cpp */; };
 		4B74681B26EB0F0B00548E70 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B74681A26EB0F0B00548E70 /* OpenGL.framework */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4B45369F26ED8EE500B9D379 /* Triangle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Triangle.cpp; sourceTree = "<group>"; };
+		4B4536A026ED8EE500B9D379 /* Triangle.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Triangle.hpp; sourceTree = "<group>"; };
 		4B74680D26EB051000548E70 /* Hephaestus */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Hephaestus; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B74681026EB051000548E70 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4B74681A26EB0F0B00548E70 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -61,6 +64,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B4536A226ED8EEF00B9D379 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4B45369F26ED8EE500B9D379 /* Triangle.cpp */,
+				4B4536A026ED8EE500B9D379 /* Triangle.hpp */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		4B74680426EB051000548E70 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				4B74681026EB051000548E70 /* main.cpp */,
+				4B4536A226ED8EEF00B9D379 /* Classes */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -184,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B74681126EB051000548E70 /* main.cpp in Sources */,
+				4B4536A126ED8EE500B9D379 /* Triangle.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
