@@ -17,7 +17,6 @@
 #include <GLFW/glfw3.h>
 
 // Include Classes
-#include "Triangle.hpp"
 
 using namespace std;
 
@@ -41,13 +40,28 @@ const char* fragment_shader =
 "}";
 
 int currentTriangleID = 1;
-vector<Triangle> triangles;
+vector<GLfloat> triangleVertices = {};
 
-static void addTriangle(GLfloat vertices[]) {
-    Triangle newTriangle = Triangle(vertices, currentTriangleID - 1);
-    newTriangle.id = currentTriangleID;
-    triangles.push_back(newTriangle);
-    currentTriangleID += 1;
+static void addTriangle(GLfloat (&vertices)[9]) {
+    for(int i = 0; i < 9; i++) {
+        triangleVertices.push_back(vertices[i]);
+    }
+}
+
+unsigned long loadVertices() {
+    GLuint vbo = 0;
+    glGenBuffers(1, &vbo);
+    glBindBuffer(GL_ARRAY_BUFFER, vbo);
+    glBufferData(GL_ARRAY_BUFFER, triangleVertices.size() * sizeof(float), triangleVertices.data(), GL_STATIC_DRAW);
+
+    GLuint vao = 0;
+    glGenVertexArrays(1, &vao);
+    glBindVertexArray(vao);
+    glEnableVertexAttribArray(0);
+    glBindBuffer(GL_ARRAY_BUFFER, vbo);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, NULL);
+
+    return triangleVertices.size();
 }
 
 static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
@@ -122,7 +136,9 @@ int main(int argc, const char * argv[]) {
         0.5f, -0.5f,  0.0f,
     };
     addTriangle(secondTrianglePoints);
-
+    
+    int verticeCount = loadVertices();
+    
     // Loop until the user closes the window
     while (!glfwWindowShouldClose(window)) {
         /*
@@ -133,9 +149,11 @@ int main(int argc, const char * argv[]) {
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         glUseProgram(shader_programme);
 
-        for(int i = 0; i < triangles.size(); i++) {
-            triangles[i].Draw();
-        }
+        glDrawArrays(GL_TRIANGLES, 0, verticeCount);
+
+//        for(int i = 0; i < triangles.size(); i++) {
+//            triangles[i].Draw();
+//        }
 
         // Swap front and back buffers
         glfwSwapBuffers(window);
