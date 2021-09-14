@@ -21,8 +21,8 @@
 using namespace std;
 
 class Shader {
-    const char* vertexShader;
-    const char* fragmentShader;
+    const char *vertexShader;
+    const char *fragmentShader;
     
 public:
     Shader (string vertexShader, string fragmentShader);

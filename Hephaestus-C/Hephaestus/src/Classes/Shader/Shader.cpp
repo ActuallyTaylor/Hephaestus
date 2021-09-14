@@ -15,20 +15,26 @@ Shader::Shader(string vertexPath, string fragmentPath) {
     while(getline(in, line)) {
         text += line + "\n";
     }
-    vertexShader = text.c_str();
+    char* c = new char[text.length() + 1];
+    strcpy(c, text.c_str());
+    vertexShader = c;
 
     string line2,text2;
     ifstream in2(fragmentPath);
     while(getline(in2, line2)) {
         text2 += line2 + "\n";
     }
-    fragmentShader = text.c_str();
+    char* c2 = new char[text.length() + 1];
+    strcpy(c2, text2.c_str());
+    fragmentShader = c2;
+
 }
 
 void Shader::setup() {
     GLuint vs = glCreateShader(GL_VERTEX_SHADER);
     glShaderSource(vs, 1, &vertexShader, NULL);
     glCompileShader(vs);
+    
     GLuint fs = glCreateShader(GL_FRAGMENT_SHADER);
     glShaderSource(fs, 1, &fragmentShader, NULL);
     glCompileShader(fs);
