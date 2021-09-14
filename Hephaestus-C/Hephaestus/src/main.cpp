@@ -9,7 +9,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
-#include <strings.h>
 #include <vector>
 
 // Include GLEW & GLFW headers
@@ -19,33 +18,31 @@
 // Include Classes
 #include "Window.hpp"
 #include "Shader.hpp"
+#include "GeometryManager.hpp"
 
 using namespace std;
 
-//int currentTriangleID = 1;
-vector<GLfloat> triangleVertices = {};
+char* vertex_shader =
+"#version 400\n"
+"in vec3 vp;"
+"void main() {"
+"  gl_Position = vec4(vp, 1.0);"
+"}";
 
-static void addTriangle(GLfloat (&vertices)[9]) {
-    for(int i = 0; i < 9; i++) {
-        triangleVertices.push_back(vertices[i]);
-    }
-}
 
-unsigned long loadVertices() {
-    GLuint vbo = 0;
-    glGenBuffers(1, &vbo);
-    glBindBuffer(GL_ARRAY_BUFFER, vbo);
-    glBufferData(GL_ARRAY_BUFFER, triangleVertices.size() * sizeof(float), triangleVertices.data(), GL_STATIC_DRAW);
+char* fragment_shader =
+"#version 400\n"
+"out vec4 frag_colour;"
+"void main() {"
+"  frag_colour = vec4(1.0, 1.0, 1.0, 1.0);"
+"}";
 
-    GLuint vao = 0;
-    glGenVertexArrays(1, &vao);
-    glBindVertexArray(vao);
-    glEnableVertexAttribArray(0);
-    glBindBuffer(GL_ARRAY_BUFFER, vbo);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, NULL);
 
-    return triangleVertices.size();
-}
+// Global Geometry Manager
+GeometryManager geometryManager = GeometryManager();
+
+//Global Shader
+Shader shader = Shader(vertex_shader, fragment_shader);
 
 void init() {
     // Get version info
@@ -59,16 +56,14 @@ void init() {
         0.5f, -0.5f,  0.0f,
         -0.5f, -0.5f,  0.0f,
     };
-    addTriangle(firstTrianglePoints);
+    geometryManager.addTriangle(firstTrianglePoints);
 
     float secondTrianglePoints[] = {
         -0.5, 0.5f,  0.0f,
         0.5f, 0.5f,  0.0f,
         0.5f, -0.5f,  0.0f,
     };
-    addTriangle(secondTrianglePoints);
-    
-    int verticeCount = loadVertices();
+    geometryManager.addTriangle(secondTrianglePoints);
 }
 
 void destroy() {
@@ -80,6 +75,7 @@ void tick() {
 }
 
 void update() {
+    geometryManager.createVirtualBufferObject();
 }
 
 void render() {
@@ -90,24 +86,8 @@ int main(int argc, const char * argv[]) {
     /*
      Define Shaders
      */
-
-    char* vertex_shader =
-    "#version 400\n"
-    "in vec3 vp;"
-    "void main() {"
-    "  gl_Position = vec4(vp, 1.0);"
-    "}";
-
-
-    char* fragment_shader =
-    "#version 400\n"
-    "out vec4 frag_colour;"
-    "void main() {"
-    "  frag_colour = vec4(1.0, 1.0, 1.0, 1.0);"
-    "}";
-
-    Shader shader = Shader(vertex_shader, fragment_shader);
-    Window mainWindow = Window(1280, 720, "Hephaestus Game Engine", &shader, init, destroy, tick, update, render);
+    
+    Window mainWindow = Window(1280, 720, "Hephaestus Game Engine", &shader, &geometryManager, init, destroy, tick, update, render);
     
     mainWindow.windowLoop();
     return 0;

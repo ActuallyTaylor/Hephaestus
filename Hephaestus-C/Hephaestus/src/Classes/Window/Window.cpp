@@ -13,7 +13,7 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
         glfwSetWindowShouldClose(window, GLFW_TRUE);
 }
 
-Window::Window(GLfloat windowWidth, GLfloat windowHeight, char* windowName, Shader *windowShader, Function windowInit, Function windowDestroy, Function windowTick, Function windowUpdate, Function windowRender) {
+Window::Window(GLfloat windowWidth, GLfloat windowHeight, char* windowName, Shader *shader, GeometryManager *geometryManager, Function windowInit, Function windowDestroy, Function windowTick, Function windowUpdate, Function windowRender) {
     this->init = windowInit;
     this->destroy = windowDestroy;
     this->tick = windowTick;
@@ -25,9 +25,9 @@ Window::Window(GLfloat windowWidth, GLfloat windowHeight, char* windowName, Shad
         exit(-9);
     }
     
-    width = windowWidth;
-    height = windowHeight;
-    shader = windowShader;
+    this->width = windowWidth;
+    this->height = windowHeight;
+    this->shader = shader;
 
     // macOS specific flags
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);

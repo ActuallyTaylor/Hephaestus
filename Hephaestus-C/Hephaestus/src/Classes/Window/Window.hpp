@@ -23,6 +23,7 @@
 #include <GLFW/glfw3.h>
 
 #include "Shader.hpp"
+#include "GeometryManager.hpp"
 
 using namespace std;
 
@@ -35,7 +36,7 @@ class Window {
     GLFWwindow* window;
 
 public:
-    Window (GLfloat windowWidth, GLfloat windowHeight, char* windowName, Shader *shader, Function init, Function destroy, Function tick, Function update, Function render);
+    Window (GLfloat windowWidth, GLfloat windowHeight, char* windowName, Shader *shader, GeometryManager *geometryManager, Function init, Function destroy, Function tick, Function update, Function render);
     Function init, destroy, tick, update, render;
     void windowLoop ();
   

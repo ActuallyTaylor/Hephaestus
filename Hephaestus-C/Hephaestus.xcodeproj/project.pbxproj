@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4B05F09326EFF5A900285C21 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B05F09126EFF5A900285C21 /* Window.cpp */; };
 		4B05F09926F02A9900285C21 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B05F09726F02A9900285C21 /* Shader.cpp */; };
+		4B05F09D26F033CB00285C21 /* Triangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B05F09B26F033CB00285C21 /* Triangle.cpp */; };
+		4B05F0A126F0358C00285C21 /* GeometryManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B05F09F26F0358C00285C21 /* GeometryManager.cpp */; };
 		4B45369726EB8A2400B9D379 /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B74681C26EB0F5100548E70 /* libglfw.3.3.dylib */; };
 		4B45369826EB8A2400B9D379 /* libglfw.3.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 4B74681C26EB0F5100548E70 /* libglfw.3.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4B45369A26EB8A4000B9D379 /* libGLEW.2.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B74682026EB0F6E00548E70 /* libGLEW.2.2.0.dylib */; };
@@ -46,6 +48,10 @@
 		4B05F09226EFF5A900285C21 /* Window.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Window.hpp; sourceTree = "<group>"; };
 		4B05F09726F02A9900285C21 /* Shader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.cpp; sourceTree = "<group>"; };
 		4B05F09826F02A9900285C21 /* Shader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Shader.hpp; sourceTree = "<group>"; };
+		4B05F09B26F033CB00285C21 /* Triangle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Triangle.cpp; sourceTree = "<group>"; };
+		4B05F09C26F033CB00285C21 /* Triangle.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Triangle.hpp; sourceTree = "<group>"; };
+		4B05F09F26F0358C00285C21 /* GeometryManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GeometryManager.cpp; sourceTree = "<group>"; };
+		4B05F0A026F0358C00285C21 /* GeometryManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GeometryManager.hpp; sourceTree = "<group>"; };
 		4B74680D26EB051000548E70 /* Hephaestus */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Hephaestus; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B74681026EB051000548E70 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4B74681A26EB0F0B00548E70 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -70,6 +76,8 @@
 		4B05F09426F029EE00285C21 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4B05F09E26F0357F00285C21 /* Geometry Manager */,
+				4B05F09A26F033C000285C21 /* Triangle */,
 				4B05F09626F02A5900285C21 /* Shader */,
 				4B05F09526F029F300285C21 /* Window */,
 			);
@@ -92,6 +100,24 @@
 				4B05F09826F02A9900285C21 /* Shader.hpp */,
 			);
 			path = Shader;
+			sourceTree = "<group>";
+		};
+		4B05F09A26F033C000285C21 /* Triangle */ = {
+			isa = PBXGroup;
+			children = (
+				4B05F09B26F033CB00285C21 /* Triangle.cpp */,
+				4B05F09C26F033CB00285C21 /* Triangle.hpp */,
+			);
+			path = Triangle;
+			sourceTree = "<group>";
+		};
+		4B05F09E26F0357F00285C21 /* Geometry Manager */ = {
+			isa = PBXGroup;
+			children = (
+				4B05F09F26F0358C00285C21 /* GeometryManager.cpp */,
+				4B05F0A026F0358C00285C21 /* GeometryManager.hpp */,
+			);
+			path = "Geometry Manager";
 			sourceTree = "<group>";
 		};
 		4B74680426EB051000548E70 = {
@@ -218,8 +244,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B74681126EB051000548E70 /* main.cpp in Sources */,
+				4B05F0A126F0358C00285C21 /* GeometryManager.cpp in Sources */,
 				4B05F09926F02A9900285C21 /* Shader.cpp in Sources */,
 				4B05F09326EFF5A900285C21 /* Window.cpp in Sources */,
+				4B05F09D26F033CB00285C21 /* Triangle.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
