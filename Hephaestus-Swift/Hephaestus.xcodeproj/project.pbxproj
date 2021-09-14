@@ -7,28 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4B45369726EB8A2400B9D379 /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B74681C26EB0F5100548E70 /* libglfw.3.3.dylib */; };
-		4B45369826EB8A2400B9D379 /* libglfw.3.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 4B74681C26EB0F5100548E70 /* libglfw.3.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		4B45369A26EB8A4000B9D379 /* libGLEW.2.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B74682026EB0F6E00548E70 /* libGLEW.2.2.0.dylib */; };
-		4B45369B26EB8A4000B9D379 /* libGLEW.2.2.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 4B74682026EB0F6E00548E70 /* libGLEW.2.2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		4B74681126EB051000548E70 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B74681026EB051000548E70 /* main.cpp */; };
-		4B74681B26EB0F0B00548E70 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B74681A26EB0F0B00548E70 /* OpenGL.framework */; };
+		4BA9DBD126EFEE5500110DFC /* String Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA9DBD026EFEE5500110DFC /* String Extensions.swift */; };
+		4BED57AB26EFAC9500071E8C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BED57AA26EFAC9500071E8C /* main.swift */; };
+		4BED57B726EFAE4E00071E8C /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BED57B626EFAE4E00071E8C /* libglfw.3.3.dylib */; };
+		4BED57B826EFAE4E00071E8C /* libglfw.3.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 4BED57B626EFAE4E00071E8C /* libglfw.3.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4BED57BB26EFAE4F00071E8C /* libGLEW.2.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BED57BA26EFAE4F00071E8C /* libGLEW.2.2.0.dylib */; };
+		4BED57BC26EFAE4F00071E8C /* libGLEW.2.2.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 4BED57BA26EFAE4F00071E8C /* libGLEW.2.2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		4B45369926EB8A2400B9D379 /* Embed Libraries */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				4B45369826EB8A2400B9D379 /* libglfw.3.3.dylib in Embed Libraries */,
-				4B45369B26EB8A4000B9D379 /* libGLEW.2.2.0.dylib in Embed Libraries */,
-			);
-			name = "Embed Libraries";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4B74680B26EB051000548E70 /* CopyFiles */ = {
+		4BED57A526EFAC9500071E8C /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -37,69 +25,74 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		4BED57B926EFAE4E00071E8C /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4BED57B826EFAE4E00071E8C /* libglfw.3.3.dylib in Embed Libraries */,
+				4BED57BC26EFAE4F00071E8C /* libGLEW.2.2.0.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4B74680D26EB051000548E70 /* Hephaestus */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Hephaestus; sourceTree = BUILT_PRODUCTS_DIR; };
-		4B74681026EB051000548E70 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		4B74681A26EB0F0B00548E70 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
-		4B74681C26EB0F5100548E70 /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../../usr/local/Cellar/glfw/3.3.2/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
-		4B74682026EB0F6E00548E70 /* libGLEW.2.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.2.0.dylib; path = ../../../../../usr/local/Cellar/glew/2.2.0/lib/libGLEW.2.2.0.dylib; sourceTree = "<group>"; };
+		4BA9DBCF26EFDAD400110DFC /* opengl_includes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opengl_includes.h; sourceTree = "<group>"; };
+		4BA9DBD026EFEE5500110DFC /* String Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String Extensions.swift"; sourceTree = "<group>"; };
+		4BED57A726EFAC9500071E8C /* Hephaestus */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Hephaestus; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BED57AA26EFAC9500071E8C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		4BED57B626EFAE4E00071E8C /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../../usr/local/Cellar/glfw/3.3.2/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
+		4BED57BA26EFAE4F00071E8C /* libGLEW.2.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.2.0.dylib; path = ../../../../../usr/local/Cellar/glew/2.2.0/lib/libGLEW.2.2.0.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4B74680A26EB051000548E70 /* Frameworks */ = {
+		4BED57A426EFAC9500071E8C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B45369726EB8A2400B9D379 /* libglfw.3.3.dylib in Frameworks */,
-				4B45369A26EB8A4000B9D379 /* libGLEW.2.2.0.dylib in Frameworks */,
-				4B74681B26EB0F0B00548E70 /* OpenGL.framework in Frameworks */,
+				4BED57B726EFAE4E00071E8C /* libglfw.3.3.dylib in Frameworks */,
+				4BED57BB26EFAE4F00071E8C /* libGLEW.2.2.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4B74680426EB051000548E70 = {
+		4BED579E26EFAC9500071E8C = {
 			isa = PBXGroup;
 			children = (
-				4B74680F26EB051000548E70 /* Hephaestus */,
-				4B74680E26EB051000548E70 /* Products */,
-				4B74681926EB0F0B00548E70 /* Frameworks */,
+				4BED57A926EFAC9500071E8C /* Hephaestus */,
+				4BED57A826EFAC9500071E8C /* Products */,
+				4BED57B526EFAE4E00071E8C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		4B74680E26EB051000548E70 /* Products */ = {
+		4BED57A826EFAC9500071E8C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4B74680D26EB051000548E70 /* Hephaestus */,
+				4BED57A726EFAC9500071E8C /* Hephaestus */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4B74680F26EB051000548E70 /* Hephaestus */ = {
+		4BED57A926EFAC9500071E8C /* Hephaestus */ = {
 			isa = PBXGroup;
 			children = (
-				4B74681826EB0EE300548E70 /* src */,
+				4BED57AA26EFAC9500071E8C /* main.swift */,
+				4BA9DBD026EFEE5500110DFC /* String Extensions.swift */,
+				4BA9DBCF26EFDAD400110DFC /* opengl_includes.h */,
 			);
 			path = Hephaestus;
 			sourceTree = "<group>";
 		};
-		4B74681826EB0EE300548E70 /* src */ = {
+		4BED57B526EFAE4E00071E8C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4B74681026EB051000548E70 /* main.cpp */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
-		4B74681926EB0F0B00548E70 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				4B74682026EB0F6E00548E70 /* libGLEW.2.2.0.dylib */,
-				4B74681C26EB0F5100548E70 /* libglfw.3.3.dylib */,
-				4B74681A26EB0F0B00548E70 /* OpenGL.framework */,
+				4BED57BA26EFAE4F00071E8C /* libGLEW.2.2.0.dylib */,
+				4BED57B626EFAE4E00071E8C /* libglfw.3.3.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -107,39 +100,41 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4B74680C26EB051000548E70 /* Hephaestus */ = {
+		4BED57A626EFAC9500071E8C /* Hephaestus */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4B74681426EB051000548E70 /* Build configuration list for PBXNativeTarget "Hephaestus" */;
+			buildConfigurationList = 4BED57AE26EFAC9500071E8C /* Build configuration list for PBXNativeTarget "Hephaestus" */;
 			buildPhases = (
-				4B74680A26EB051000548E70 /* Frameworks */,
-				4B45369926EB8A2400B9D379 /* Embed Libraries */,
-				4B74680926EB051000548E70 /* Sources */,
-				4B74680B26EB051000548E70 /* CopyFiles */,
-				4B74682626EB10A100548E70 /* ShellScript */,
+				4BED57A326EFAC9500071E8C /* Sources */,
+				4BED57A426EFAC9500071E8C /* Frameworks */,
+				4BED57A526EFAC9500071E8C /* CopyFiles */,
+				4BED57B926EFAE4E00071E8C /* Embed Libraries */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Hephaestus;
+			packageProductDependencies = (
+			);
 			productName = Hephaestus;
-			productReference = 4B74680D26EB051000548E70 /* Hephaestus */;
+			productReference = 4BED57A726EFAC9500071E8C /* Hephaestus */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4B74680526EB051000548E70 /* Project object */ = {
+		4BED579F26EFAC9500071E8C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
-					4B74680C26EB051000548E70 = {
+					4BED57A626EFAC9500071E8C = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
 				};
 			};
-			buildConfigurationList = 4B74680826EB051000548E70 /* Build configuration list for PBXProject "Hephaestus" */;
+			buildConfigurationList = 4BED57A226EFAC9500071E8C /* Build configuration list for PBXProject "Hephaestus" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -147,50 +142,32 @@
 				en,
 				Base,
 			);
-			mainGroup = 4B74680426EB051000548E70;
-			productRefGroup = 4B74680E26EB051000548E70 /* Products */;
+			mainGroup = 4BED579E26EFAC9500071E8C;
+			packageReferences = (
+			);
+			productRefGroup = 4BED57A826EFAC9500071E8C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4B74680C26EB051000548E70 /* Hephaestus */,
+				4BED57A626EFAC9500071E8C /* Hephaestus */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		4B74682626EB10A100548E70 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "
-";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		4B74680926EB051000548E70 /* Sources */ = {
+		4BED57A326EFAC9500071E8C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B74681126EB051000548E70 /* main.cpp in Sources */,
+				4BED57AB26EFAC9500071E8C /* main.swift in Sources */,
+				4BA9DBD126EFEE5500110DFC /* String Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		4B74681226EB051000548E70 /* Debug */ = {
+		4BED57AC26EFAC9500071E8C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -246,10 +223,12 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		4B74681326EB051000548E70 /* Release */ = {
+		4BED57AD26EFAC9500071E8C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -298,10 +277,12 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
-		4B74681526EB051000548E70 /* Debug */ = {
+		4BED57AF26EFAC9500071E8C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -313,10 +294,12 @@
 					/usr/local/Cellar/glfw/3.3.2/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/zacharylineman/GitHub/Hephaestus/Hephaestus-Swift/Hephaestus/opengl_includes.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		4B74681626EB051000548E70 /* Release */ = {
+		4BED57B026EFAC9500071E8C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -328,31 +311,33 @@
 					/usr/local/Cellar/glfw/3.3.2/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/zacharylineman/GitHub/Hephaestus/Hephaestus-Swift/Hephaestus/opengl_includes.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4B74680826EB051000548E70 /* Build configuration list for PBXProject "Hephaestus" */ = {
+		4BED57A226EFAC9500071E8C /* Build configuration list for PBXProject "Hephaestus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4B74681226EB051000548E70 /* Debug */,
-				4B74681326EB051000548E70 /* Release */,
+				4BED57AC26EFAC9500071E8C /* Debug */,
+				4BED57AD26EFAC9500071E8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4B74681426EB051000548E70 /* Build configuration list for PBXNativeTarget "Hephaestus" */ = {
+		4BED57AE26EFAC9500071E8C /* Build configuration list for PBXNativeTarget "Hephaestus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4B74681526EB051000548E70 /* Debug */,
-				4B74681626EB051000548E70 /* Release */,
+				4BED57AF26EFAC9500071E8C /* Debug */,
+				4BED57B026EFAC9500071E8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 4B74680526EB051000548E70 /* Project object */;
+	rootObject = 4BED579F26EFAC9500071E8C /* Project object */;
 }
