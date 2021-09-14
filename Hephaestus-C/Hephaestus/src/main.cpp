@@ -22,27 +22,11 @@
 
 using namespace std;
 
-char* vertex_shader =
-"#version 400\n"
-"in vec3 vp;"
-"void main() {"
-"  gl_Position = vec4(vp, 1.0);"
-"}";
-
-
-char* fragment_shader =
-"#version 400\n"
-"out vec4 frag_colour;"
-"void main() {"
-"  frag_colour = vec4(1.0, 1.0, 1.0, 1.0);"
-"}";
-
-
 // Global Geometry Manager
 GeometryManager geometryManager = GeometryManager();
 
 //Global Shader
-Shader shader = Shader(vertex_shader, fragment_shader);
+Shader shader = Shader("./resources/shader.vert", "./resources/shader.frag");
 
 void init() {
     // Get version info
@@ -67,7 +51,7 @@ void init() {
 }
 
 void destroy() {
-    
+
 }
 
 void tick() {

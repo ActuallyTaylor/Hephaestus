@@ -26,12 +26,12 @@ int GeometryManager::createVirtualBufferObject() {
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, NULL);
     
-    return compressedVertices.size();
+    return (unsigned long) compressedVertices.size();
 }
 
 vector<GLfloat> GeometryManager::compressTriangleVertices() {
     vector<GLfloat> compressedVertices;
-    printf("Test: %lu", triangles.size());
+
     for(int i = 0; i < triangles.size(); i++) {
         for(int n = 0; n < triangles[i].vertexAmount(); n++) {
             compressedVertices.push_back(triangles[i].vertices[n]);

@@ -7,10 +7,22 @@
 
 #include "Shader.hpp"
 
-Shader::Shader(char* vertexShader, char* fragmentShader) {
+
+Shader::Shader(string vertexPath, string fragmentPath) {
     // Build Shaders
-    this->vertexShader = vertexShader;
-    this->fragmentShader = fragmentShader;
+    string line,text;
+    ifstream in(vertexPath);
+    while(getline(in, line)) {
+        text += line + "\n";
+    }
+    vertexShader = text.c_str();
+
+    string line2,text2;
+    ifstream in2(fragmentPath);
+    while(getline(in2, line2)) {
+        text2 += line2 + "\n";
+    }
+    fragmentShader = text.c_str();
 }
 
 void Shader::setup() {

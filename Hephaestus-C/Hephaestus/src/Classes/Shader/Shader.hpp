@@ -9,17 +9,23 @@
 #define Shader_hpp
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <string>
+
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
 using namespace std;
 
 class Shader {
-    char* vertexShader;
-    char* fragmentShader;
+    const char* vertexShader;
+    const char* fragmentShader;
     
 public:
-    Shader (char* vertexShader, char* fragmentShader);
+    Shader (string vertexShader, string fragmentShader);
     GLuint shader_programme;
     void setup ();
 private:
