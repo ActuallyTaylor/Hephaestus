@@ -13,7 +13,10 @@
 #include <vector>
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
+
 #include "Triangle.hpp"
+#include "Vector3.hpp"
+#include "CompressedData.hpp"
 
 using namespace std;
 
@@ -22,15 +25,19 @@ class GeometryManager {
 public:
     GeometryManager ();
     vector<Triangle> triangles = {};
-    
+
     // Function for creating vbo
-    int createVirtualBufferObject();
+    void createVirtualBufferObject();
     
     // Functions for adding different shapes
-    void addTriangle(GLfloat vertices[9]);
+    void addTriangle(Vector3 vertices[3]);
+    
+    // Draw contents onto the screen
+    void draw();
 private:
     // Functions that handle organizing all the vertexes
-    vector<GLfloat> compressTriangleVertices();
+    CompressedData compressTriangleVertices();
+    GLint indiceCount;
 };
 
 #endif /* GeometryManager_hpp */

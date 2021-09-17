@@ -26,7 +26,7 @@ class Shader {
     
 public:
     Shader (string vertexShader, string fragmentShader);
-    GLuint shader_programme;
+    GLuint shaderProgram;
     void setup ();
 private:
 

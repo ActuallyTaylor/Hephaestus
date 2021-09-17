@@ -7,8 +7,8 @@
 
 #include "Triangle.hpp"
 
-Triangle::Triangle(GLfloat triangleVertices[9]) {
-    for(int i = 0; i < 9; i++) {
+Triangle::Triangle(Vector3 triangleVertices[3]) {
+    for(int i = 0; i < 3; i++) {
         vertices.push_back(triangleVertices[i]);
     }
 }

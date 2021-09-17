@@ -14,13 +14,15 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
+#include "Vector3.hpp"
+
 using namespace std;
 
 class Triangle {
     
 public:
-    Triangle (GLfloat triangleVertices[9]);
-    vector<GLfloat> vertices;
+    Triangle (Vector3 triangleVertices[3]);
+    vector<Vector3> vertices;
     int vertexAmount ();
 private:
 

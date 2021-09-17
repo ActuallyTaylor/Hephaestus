@@ -10,6 +10,7 @@
 #include <stdlib.h>
 #include <iostream>
 #include <vector>
+#include <math.h>
 
 // Include GLEW & GLFW headers
 #include <GL/glew.h>
@@ -19,6 +20,7 @@
 #include "Window.hpp"
 #include "Shader.hpp"
 #include "GeometryManager.hpp"
+#include "Vector3.hpp"
 
 using namespace std;
 
@@ -35,17 +37,17 @@ void init() {
     printf("Renderer: %s\n", renderer);
     printf("OpenGL version supported %s\n", version);
 
-    float firstTrianglePoints[] = {
-        -0.5,  0.5f,  0.0f,
-        0.5f, -0.5f,  0.0f,
-        -0.5f, -0.5f,  0.0f,
+    Vector3 firstTrianglePoints[] = {
+        Vector3(-0.5f, 0.5f, 0.0f),
+        Vector3(0.5f, -0.5f,  0.0f),
+        Vector3(-0.5f, -0.5f,  0.0f),
     };
     geometryManager.addTriangle(firstTrianglePoints);
 
-    float secondTrianglePoints[] = {
-        -0.5, 0.5f,  0.0f,
-        0.5f, 0.5f,  0.0f,
-        0.5f, -0.5f,  0.0f,
+    Vector3 secondTrianglePoints[] = {
+        Vector3(-0.5, 0.5f,  0.0f),
+        Vector3(0.5f, 0.5f,  0.0f),
+        Vector3(0.5f, -0.5f,  0.0f),
     };
     geometryManager.addTriangle(secondTrianglePoints);
 }
@@ -63,14 +65,11 @@ void update() {
 }
 
 void render() {
-    glDrawArrays(GL_TRIANGLES, 0, 6);
+    geometryManager.draw();
+    
 }
 
 int main(int argc, const char * argv[]) {
-    /*
-     Define Shaders
-     */
-    
     Window mainWindow = Window(1280, 720, "Hephaestus Game Engine", &shader, &geometryManager, init, destroy, tick, update, render);
     
     mainWindow.windowLoop();

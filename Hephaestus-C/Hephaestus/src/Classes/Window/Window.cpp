@@ -80,13 +80,14 @@ void Window::_update () {
 
 void Window::_render () {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    glUseProgram(shader->shader_programme);
+    glUseProgram(shader->shaderProgram);
     render();
 }
 
 void Window::windowLoop() {
     _init();
-    
+    glEnable(GL_DEPTH_TEST);
+
     while (!glfwWindowShouldClose(window)) {
         _update();
         _render();

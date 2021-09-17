@@ -19,6 +19,8 @@
 		4B45369B26EB8A4000B9D379 /* libGLEW.2.2.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 4B74682026EB0F6E00548E70 /* libGLEW.2.2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4B74681126EB051000548E70 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B74681026EB051000548E70 /* main.cpp */; };
 		4B74681B26EB0F0B00548E70 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B74681A26EB0F0B00548E70 /* OpenGL.framework */; };
+		4BE928AE26F4F18A009C634C /* Vector3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BE928AC26F4F18A009C634C /* Vector3.cpp */; };
+		4BE928B226F54D2A009C634C /* CompressedData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BE928B026F54D2A009C634C /* CompressedData.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -63,6 +65,11 @@
 		4B74681A26EB0F0B00548E70 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		4B74681C26EB0F5100548E70 /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../../usr/local/Cellar/glfw/3.3.2/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
 		4B74682026EB0F6E00548E70 /* libGLEW.2.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.2.0.dylib; path = ../../../../../usr/local/Cellar/glew/2.2.0/lib/libGLEW.2.2.0.dylib; sourceTree = "<group>"; };
+		4B86CC5426F253BE000E8FB9 /* TestImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TestImage.png; sourceTree = "<group>"; };
+		4BE928AC26F4F18A009C634C /* Vector3.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Vector3.cpp; sourceTree = "<group>"; };
+		4BE928AD26F4F18A009C634C /* Vector3.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Vector3.hpp; sourceTree = "<group>"; };
+		4BE928B026F54D2A009C634C /* CompressedData.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CompressedData.cpp; sourceTree = "<group>"; };
+		4BE928B126F54D2A009C634C /* CompressedData.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CompressedData.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +89,7 @@
 		4B05F09426F029EE00285C21 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4BE928AB26F4F12B009C634C /* Vector */,
 				4B05F09E26F0357F00285C21 /* Geometry Manager */,
 				4B05F09A26F033C000285C21 /* Triangle */,
 				4B05F09626F02A5900285C21 /* Shader */,
@@ -120,6 +128,7 @@
 		4B05F09E26F0357F00285C21 /* Geometry Manager */ = {
 			isa = PBXGroup;
 			children = (
+				4BE928AF26F54D16009C634C /* Compressed Data */,
 				4B05F09F26F0358C00285C21 /* GeometryManager.cpp */,
 				4B05F0A026F0358C00285C21 /* GeometryManager.hpp */,
 			);
@@ -129,8 +138,8 @@
 		4B05F0A226F03EFD00285C21 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				4B86CC5526F253C2000E8FB9 /* Images */,
 				4B05F0A726F051D300285C21 /* shader.frag */,
-				4B05F0A826F051D300285C21 /* shader.vert */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -164,6 +173,7 @@
 		4B74681826EB0EE300548E70 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				4B05F0A826F051D300285C21 /* shader.vert */,
 				4B74681026EB051000548E70 /* main.cpp */,
 				4B05F09426F029EE00285C21 /* Classes */,
 			);
@@ -178,6 +188,32 @@
 				4B74681A26EB0F0B00548E70 /* OpenGL.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B86CC5526F253C2000E8FB9 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				4B86CC5426F253BE000E8FB9 /* TestImage.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		4BE928AB26F4F12B009C634C /* Vector */ = {
+			isa = PBXGroup;
+			children = (
+				4BE928AC26F4F18A009C634C /* Vector3.cpp */,
+				4BE928AD26F4F18A009C634C /* Vector3.hpp */,
+			);
+			path = Vector;
+			sourceTree = "<group>";
+		};
+		4BE928AF26F54D16009C634C /* Compressed Data */ = {
+			isa = PBXGroup;
+			children = (
+				4BE928B026F54D2A009C634C /* CompressedData.cpp */,
+				4BE928B126F54D2A009C634C /* CompressedData.hpp */,
+			);
+			path = "Compressed Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,7 +299,9 @@
 				4B05F0A126F0358C00285C21 /* GeometryManager.cpp in Sources */,
 				4B05F09926F02A9900285C21 /* Shader.cpp in Sources */,
 				4B05F09326EFF5A900285C21 /* Window.cpp in Sources */,
+				4BE928AE26F4F18A009C634C /* Vector3.cpp in Sources */,
 				4B05F09D26F033CB00285C21 /* Triangle.cpp in Sources */,
+				4BE928B226F54D2A009C634C /* CompressedData.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
