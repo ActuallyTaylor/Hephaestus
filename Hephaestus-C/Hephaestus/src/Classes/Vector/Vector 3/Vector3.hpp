@@ -13,6 +13,7 @@
 #include <GLFW/glfw3.h>
 
 struct Vector3 {
+    Vector3();
     Vector3(GLfloat x, GLfloat y, GLfloat z);
     GLfloat x, y, z;
     bool operator == (Vector3& rhs);

@@ -7,7 +7,7 @@
 
 #include "Triangle.hpp"
 
-Triangle::Triangle(Vector3 triangleVertices[3]) {
+Triangle::Triangle(Vertex triangleVertices[3]) {
     for(int i = 0; i < 3; i++) {
         vertices.push_back(triangleVertices[i]);
     }
@@ -16,3 +16,4 @@ Triangle::Triangle(Vector3 triangleVertices[3]) {
 int Triangle::vertexAmount() {
     return vertices.size();
 }
+

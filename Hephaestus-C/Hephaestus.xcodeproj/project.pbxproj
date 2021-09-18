@@ -21,6 +21,9 @@
 		4B74681B26EB0F0B00548E70 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B74681A26EB0F0B00548E70 /* OpenGL.framework */; };
 		4BE928AE26F4F18A009C634C /* Vector3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BE928AC26F4F18A009C634C /* Vector3.cpp */; };
 		4BE928B226F54D2A009C634C /* CompressedData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BE928B026F54D2A009C634C /* CompressedData.cpp */; };
+		4BE928B526F56F86009C634C /* Vector2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BE928B326F56F86009C634C /* Vector2.cpp */; };
+		4BE928BB26F57055009C634C /* Vertex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BE928B926F57055009C634C /* Vertex.cpp */; };
+		4BE928C026F592C5009C634C /* wall.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BE928BF26F592B8009C634C /* wall.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +47,7 @@
 			files = (
 				4B05F0A926F0521600285C21 /* shader.frag in CopyFiles */,
 				4B05F0AA26F0521600285C21 /* shader.vert in CopyFiles */,
+				4BE928C026F592C5009C634C /* wall.jpg in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,11 +69,16 @@
 		4B74681A26EB0F0B00548E70 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		4B74681C26EB0F5100548E70 /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../../usr/local/Cellar/glfw/3.3.2/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
 		4B74682026EB0F6E00548E70 /* libGLEW.2.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.2.0.dylib; path = ../../../../../usr/local/Cellar/glew/2.2.0/lib/libGLEW.2.2.0.dylib; sourceTree = "<group>"; };
-		4B86CC5426F253BE000E8FB9 /* TestImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TestImage.png; sourceTree = "<group>"; };
 		4BE928AC26F4F18A009C634C /* Vector3.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Vector3.cpp; sourceTree = "<group>"; };
 		4BE928AD26F4F18A009C634C /* Vector3.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Vector3.hpp; sourceTree = "<group>"; };
 		4BE928B026F54D2A009C634C /* CompressedData.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CompressedData.cpp; sourceTree = "<group>"; };
 		4BE928B126F54D2A009C634C /* CompressedData.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CompressedData.hpp; sourceTree = "<group>"; };
+		4BE928B326F56F86009C634C /* Vector2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Vector2.cpp; sourceTree = "<group>"; };
+		4BE928B426F56F86009C634C /* Vector2.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Vector2.hpp; sourceTree = "<group>"; };
+		4BE928B926F57055009C634C /* Vertex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Vertex.cpp; sourceTree = "<group>"; };
+		4BE928BA26F57055009C634C /* Vertex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Vertex.hpp; sourceTree = "<group>"; };
+		4BE928BD26F58B9F009C634C /* stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
+		4BE928BF26F592B8009C634C /* wall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wall.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +128,7 @@
 		4B05F09A26F033C000285C21 /* Triangle */ = {
 			isa = PBXGroup;
 			children = (
+				4BE928B826F57033009C634C /* Vertex */,
 				4B05F09B26F033CB00285C21 /* Triangle.cpp */,
 				4B05F09C26F033CB00285C21 /* Triangle.hpp */,
 			);
@@ -140,6 +150,7 @@
 			children = (
 				4B86CC5526F253C2000E8FB9 /* Images */,
 				4B05F0A726F051D300285C21 /* shader.frag */,
+				4B05F0A826F051D300285C21 /* shader.vert */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -173,9 +184,9 @@
 		4B74681826EB0EE300548E70 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				4B05F0A826F051D300285C21 /* shader.vert */,
 				4B74681026EB051000548E70 /* main.cpp */,
 				4B05F09426F029EE00285C21 /* Classes */,
+				4BE928BC26F58B82009C634C /* Third Party */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -193,7 +204,7 @@
 		4B86CC5526F253C2000E8FB9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				4B86CC5426F253BE000E8FB9 /* TestImage.png */,
+				4BE928BF26F592B8009C634C /* wall.jpg */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -201,8 +212,8 @@
 		4BE928AB26F4F12B009C634C /* Vector */ = {
 			isa = PBXGroup;
 			children = (
-				4BE928AC26F4F18A009C634C /* Vector3.cpp */,
-				4BE928AD26F4F18A009C634C /* Vector3.hpp */,
+				4BE928B726F56FAA009C634C /* Vector 2 */,
+				4BE928B626F56FA2009C634C /* Vector 3 */,
 			);
 			path = Vector;
 			sourceTree = "<group>";
@@ -214,6 +225,41 @@
 				4BE928B126F54D2A009C634C /* CompressedData.hpp */,
 			);
 			path = "Compressed Data";
+			sourceTree = "<group>";
+		};
+		4BE928B626F56FA2009C634C /* Vector 3 */ = {
+			isa = PBXGroup;
+			children = (
+				4BE928AC26F4F18A009C634C /* Vector3.cpp */,
+				4BE928AD26F4F18A009C634C /* Vector3.hpp */,
+			);
+			path = "Vector 3";
+			sourceTree = "<group>";
+		};
+		4BE928B726F56FAA009C634C /* Vector 2 */ = {
+			isa = PBXGroup;
+			children = (
+				4BE928B326F56F86009C634C /* Vector2.cpp */,
+				4BE928B426F56F86009C634C /* Vector2.hpp */,
+			);
+			path = "Vector 2";
+			sourceTree = "<group>";
+		};
+		4BE928B826F57033009C634C /* Vertex */ = {
+			isa = PBXGroup;
+			children = (
+				4BE928B926F57055009C634C /* Vertex.cpp */,
+				4BE928BA26F57055009C634C /* Vertex.hpp */,
+			);
+			path = Vertex;
+			sourceTree = "<group>";
+		};
+		4BE928BC26F58B82009C634C /* Third Party */ = {
+			isa = PBXGroup;
+			children = (
+				4BE928BD26F58B9F009C634C /* stb_image.h */,
+			);
+			path = "Third Party";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,7 +342,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B74681126EB051000548E70 /* main.cpp in Sources */,
+				4BE928B526F56F86009C634C /* Vector2.cpp in Sources */,
 				4B05F0A126F0358C00285C21 /* GeometryManager.cpp in Sources */,
+				4BE928BB26F57055009C634C /* Vertex.cpp in Sources */,
 				4B05F09926F02A9900285C21 /* Shader.cpp in Sources */,
 				4B05F09326EFF5A900285C21 /* Window.cpp in Sources */,
 				4BE928AE26F4F18A009C634C /* Vector3.cpp in Sources */,
@@ -425,6 +473,7 @@
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
 				HEADER_SEARCH_PATHS = /usr/local/include;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -442,6 +491,7 @@
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
 				HEADER_SEARCH_PATHS = /usr/local/include;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

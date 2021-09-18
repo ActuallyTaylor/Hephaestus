@@ -6,10 +6,15 @@
 
 
 #include "GeometryManager.hpp"
+#define STB_IMAGE_IMPLEMENTATION
+#include "stb_image.h"
 
 GeometryManager::GeometryManager() {}
 
 void GeometryManager::draw() {
+    glBindTexture(GL_TEXTURE_2D, texture);
+    glBindVertexArray(VAO);
+
     glDrawElements(GL_TRIANGLES, indiceCount, GL_UNSIGNED_INT, 0);
 //    glDrawArrays(GL_TRIANGLES, 0, (triangles.size() * 3));
 }
@@ -21,7 +26,6 @@ void GeometryManager::createVirtualBufferObject() {
     vector<unsigned int> indices = compressedData.indexes;
 
     // Finish setting up index based rendering. Should save some memory.
-    GLuint VBO, VAO, EBO;
     glGenBuffers(1, &VBO);
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &EBO);
@@ -30,20 +34,29 @@ void GeometryManager::createVirtualBufferObject() {
 
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
     glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(float), vertices.data(), GL_STATIC_DRAW);
-    
+     
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(unsigned int), indices.data(), GL_STATIC_DRAW);
-    
+        
+    // position attribute
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, NULL);
     
+    // color attribute
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(3 * sizeof(float)));
+    glEnableVertexAttribArray(1);
+    
+    // texture coord attribute
+    glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
+    glEnableVertexAttribArray(2);
+
+    loadTextureAtlas();
     
 //    printf("Index Count: %lu\n", indices.size());
 //
 //    for(int i = 0; i < indices.size(); i++) {
 //        printf("%d,", indices[i]);
-//        if((i + 1) % 3 == 0) {
+//        if((i + 1) % 8 == 0) {
 //            printf("\n");
 //        }
 //    }
@@ -52,7 +65,7 @@ void GeometryManager::createVirtualBufferObject() {
 //    printf("Vertex Count: %lu\n", vertices.size());
 //    for(int i = 0; i < vertices.size(); i++) {
 //        printf("%f,", vertices[i]);
-//        if((i + 1) % 3 == 0) {
+//        if((i + 1) % 8 == 0) {
 //            printf("\n");
 //        }
 //    }
@@ -63,7 +76,7 @@ void GeometryManager::createVirtualBufferObject() {
 }
 
 CompressedData GeometryManager::compressTriangleVertices() {
-    vector<Vector3> conjoinedVertices;
+    vector<Vertex> conjoinedVertices;
 
     for(int i = 0; i < triangles.size(); i++) {
         for(int n = 0; n < triangles[i].vertexAmount(); n++) {
@@ -78,7 +91,7 @@ CompressedData GeometryManager::compressTriangleVertices() {
 
     for(int i = 0; i < triangles.size(); i++) {
         for(int n = 0; n < triangles[i].vertexAmount(); n++) {
-            Vector3 vertex = triangles[i].vertices[n];
+            Vertex vertex = triangles[i].vertices[n];
             auto iter = find(conjoinedVertices.begin(), conjoinedVertices.end(), vertex);
             if (iter != conjoinedVertices.end()) {
                 int index = distance(conjoinedVertices.begin(), iter);
@@ -90,16 +103,21 @@ CompressedData GeometryManager::compressTriangleVertices() {
     vector<GLfloat> floatVertices;
 
     for(int i = 0; i < conjoinedVertices.size(); i++) {
-        floatVertices.push_back(conjoinedVertices[i].x);
-        floatVertices.push_back(conjoinedVertices[i].y);
-        floatVertices.push_back(conjoinedVertices[i].z);
+        floatVertices.push_back(conjoinedVertices[i].coordinate.x);
+        floatVertices.push_back(conjoinedVertices[i].coordinate.y);
+        floatVertices.push_back(conjoinedVertices[i].coordinate.z);
+        floatVertices.push_back(conjoinedVertices[i].color.x);
+        floatVertices.push_back(conjoinedVertices[i].color.y);
+        floatVertices.push_back(conjoinedVertices[i].color.z);
+        floatVertices.push_back(conjoinedVertices[i].texture.x);
+        floatVertices.push_back(conjoinedVertices[i].texture.y);
     }
     
     return CompressedData(floatVertices, indexes);
 }
 
 
-void GeometryManager::addTriangle(Vector3 *vertices) {
+void GeometryManager::addTriangle(Vertex *vertices) {
     Triangle holdTriangle = Triangle(vertices);
     triangles.push_back(holdTriangle);
 }
@@ -107,4 +125,27 @@ void GeometryManager::addTriangle(Vector3 *vertices) {
 
 void GeometryManager::clear() {
     triangles.clear();
+}
+
+
+void GeometryManager::loadTextureAtlas() {
+    glGenTextures(1, &texture);
+    glBindTexture(GL_TEXTURE_2D, texture);
+    
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    
+    int width, height, nrChannels;
+    unsigned char *data = stbi_load("./Resources/wall.jpg", &width, &height, &nrChannels, 0);
+    if (data) {
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+        glGenerateMipmap(GL_TEXTURE_2D);
+    } else {
+        printf("Failed to load texture");
+    }
+    stbi_image_free(data);
+
 }

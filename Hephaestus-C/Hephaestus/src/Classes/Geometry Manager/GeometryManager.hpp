@@ -5,6 +5,7 @@
 //  Created by Zachary lineman on 9/13/21.
 //
 
+
 #ifndef GeometryManager_hpp
 #define GeometryManager_hpp
 
@@ -29,8 +30,11 @@ public:
     // Function for creating vbo, and ebo
     void createVirtualBufferObject();
     
+    // Load textures
+    void loadTextureAtlas();
+    
     // Functions for adding different shapes
-    void addTriangle(Vector3 vertices[3]);
+    void addTriangle(Vertex vertices[3]);
     
     // Draw contents onto the screen
     void draw();
@@ -41,6 +45,9 @@ private:
     // Functions that handle organizing all the vertexes
     CompressedData compressTriangleVertices();
     GLint indiceCount;
+    
+    unsigned int texture;
+    GLuint VBO, VAO, EBO;
 };
 
 #endif /* GeometryManager_hpp */
