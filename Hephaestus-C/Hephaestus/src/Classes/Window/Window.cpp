@@ -7,18 +7,13 @@
 
 #include "Window.hpp"
 
-static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
-{
-    if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
-        glfwSetWindowShouldClose(window, GLFW_TRUE);
-}
-
 Window::Window(GLfloat windowWidth, GLfloat windowHeight, char* windowName, Shader *shader, GeometryManager *geometryManager, Function windowInit, Function windowDestroy, Function windowTick, Function windowUpdate, Function windowRender) {
     this->init = windowInit;
     this->destroy = windowDestroy;
     this->tick = windowTick;
     this->update = windowUpdate;
     this->render = windowRender;
+    
     
     // Initialize the library
     if (!glfwInit()) {
@@ -49,9 +44,6 @@ Window::Window(GLfloat windowWidth, GLfloat windowHeight, char* windowName, Shad
     // Start GLEW extension handler
     glewExperimental = GL_TRUE;
     glewInit();
-
-    //Add the key call
-    glfwSetKeyCallback(window, key_callback);
     
     shader->setup();
 }

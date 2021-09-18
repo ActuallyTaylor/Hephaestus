@@ -3,7 +3,7 @@
 //  Hephaestus
 //
 //  Created by Zachary lineman on 9/13/21.
-//
+
 
 #include "GeometryManager.hpp"
 
@@ -15,6 +15,7 @@ void GeometryManager::draw() {
 }
 
 void GeometryManager::createVirtualBufferObject() {
+//    printf("=== UPDATE CYCLE ===\n");
     CompressedData compressedData = compressTriangleVertices();
     vector<GLfloat> vertices = compressedData.vertices;
     vector<unsigned int> indices = compressedData.indexes;
@@ -42,16 +43,23 @@ void GeometryManager::createVirtualBufferObject() {
 //
 //    for(int i = 0; i < indices.size(); i++) {
 //        printf("%d,", indices[i]);
+//        if((i + 1) % 3 == 0) {
+//            printf("\n");
+//        }
 //    }
 //    printf("\n");
 //
 //    printf("Vertex Count: %lu\n", vertices.size());
 //    for(int i = 0; i < vertices.size(); i++) {
 //        printf("%f,", vertices[i]);
+//        if((i + 1) % 3 == 0) {
+//            printf("\n");
+//        }
 //    }
 //    printf("\n");
     
     this->indiceCount = indices.size();
+//    printf("=== END UPDATE CYCLE ===\n");
 }
 
 CompressedData GeometryManager::compressTriangleVertices() {
@@ -94,4 +102,9 @@ CompressedData GeometryManager::compressTriangleVertices() {
 void GeometryManager::addTriangle(Vector3 *vertices) {
     Triangle holdTriangle = Triangle(vertices);
     triangles.push_back(holdTriangle);
+}
+
+
+void GeometryManager::clear() {
+    triangles.clear();
 }

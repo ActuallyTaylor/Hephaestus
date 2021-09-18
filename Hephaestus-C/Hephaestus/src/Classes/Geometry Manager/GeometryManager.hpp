@@ -26,7 +26,7 @@ public:
     GeometryManager ();
     vector<Triangle> triangles = {};
 
-    // Function for creating vbo
+    // Function for creating vbo, and ebo
     void createVirtualBufferObject();
     
     // Functions for adding different shapes
@@ -34,6 +34,9 @@ public:
     
     // Draw contents onto the screen
     void draw();
+    
+    // Clear the screen
+    void clear();
 private:
     // Functions that handle organizing all the vertexes
     CompressedData compressTriangleVertices();

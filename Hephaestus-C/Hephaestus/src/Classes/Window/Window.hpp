@@ -33,13 +33,13 @@ class Window {
     GLfloat width;
     GLfloat height;
     Shader *shader;
-    GLFWwindow* window;
 
 public:
     Window (GLfloat windowWidth, GLfloat windowHeight, char* windowName, Shader *shader, GeometryManager *geometryManager, Function init, Function destroy, Function tick, Function update, Function render);
     Function init, destroy, tick, update, render;
     void windowLoop ();
-  
+    GLFWwindow* window;
+
 private:
     void _init ();
     void _destroy ();
