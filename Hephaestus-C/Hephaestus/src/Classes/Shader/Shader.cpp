@@ -63,4 +63,6 @@ void Shader::setup() {
 
     glDeleteShader(vs);
     glDeleteShader(fs);
+    
+    glUseProgram(shaderProgram);
 }

@@ -49,8 +49,6 @@ void GeometryManager::createVirtualBufferObject() {
     // texture coord attribute
     glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
     glEnableVertexAttribArray(2);
-
-    loadTextureAtlas();
     
 //    printf("Index Count: %lu\n", indices.size());
 //
@@ -78,20 +76,20 @@ void GeometryManager::createVirtualBufferObject() {
 CompressedData GeometryManager::compressTriangleVertices() {
     vector<Vertex> conjoinedVertices;
 
-    for(int i = 0; i < triangles.size(); i++) {
-        for(int n = 0; n < triangles[i].vertexAmount(); n++) {
-            auto iter = find(conjoinedVertices.begin(), conjoinedVertices.end(), triangles[i].vertices[n]);
+    for(int i = 0; i < cubes.size(); i++) {
+        for(int n = 0; n < cubes[i].vertexAmount(); n++) {
+            auto iter = find(conjoinedVertices.begin(), conjoinedVertices.end(), cubes[i].vertices[n]);
             if (iter == conjoinedVertices.end()) {
-                conjoinedVertices.push_back(triangles[i].vertices[n]);
+                conjoinedVertices.push_back(cubes[i].vertices[n]);
             }
         }
     }
     
     vector<unsigned int> indexes;
 
-    for(int i = 0; i < triangles.size(); i++) {
-        for(int n = 0; n < triangles[i].vertexAmount(); n++) {
-            Vertex vertex = triangles[i].vertices[n];
+    for(int i = 0; i < cubes.size(); i++) {
+        for(int n = 0; n < cubes[i].vertexAmount(); n++) {
+            Vertex vertex = cubes[i].vertices[n];
             auto iter = find(conjoinedVertices.begin(), conjoinedVertices.end(), vertex);
             if (iter != conjoinedVertices.end()) {
                 int index = distance(conjoinedVertices.begin(), iter);
@@ -122,24 +120,32 @@ void GeometryManager::addTriangle(Vertex *vertices) {
     triangles.push_back(holdTriangle);
 }
 
+void GeometryManager::addCube(Vertex *vertices) {
+    Cube holdTriangle = Cube(vertices);
+    cubes.push_back(holdTriangle);
+}
 
 void GeometryManager::clear() {
     triangles.clear();
 }
 
 
-void GeometryManager::loadTextureAtlas() {
+void GeometryManager::loadTextureAtlas(string atlasPath) {
+    glEnable(GL_TEXTURE_2D);
+
+    glActiveTexture(GL_TEXTURE0); // activate the texture unit first before binding texture
+
     glGenTextures(1, &texture);
     glBindTexture(GL_TEXTURE_2D, texture);
     
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
     
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     
     int width, height, nrChannels;
-    unsigned char *data = stbi_load("./Resources/wall.jpg", &width, &height, &nrChannels, 0);
+    unsigned char *data = stbi_load(atlasPath.c_str(), &width, &height, &nrChannels, 0);
     if (data) {
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
         glGenerateMipmap(GL_TEXTURE_2D);
@@ -147,5 +153,4 @@ void GeometryManager::loadTextureAtlas() {
         printf("Failed to load texture");
     }
     stbi_image_free(data);
-
 }

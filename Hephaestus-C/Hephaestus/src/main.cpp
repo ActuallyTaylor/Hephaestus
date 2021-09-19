@@ -24,6 +24,10 @@
 #include "Vector2.hpp"
 #include "Vertex.hpp"
 
+#include "glm.hpp"
+#include "matrix_transform.hpp"
+#include "type_ptr.hpp"
+
 using namespace std;
 
 // Global Geometry Manager
@@ -59,34 +63,67 @@ void init() {
     const GLubyte* version = glGetString(GL_VERSION); // version as a string
     printf("Renderer: %s\n", renderer);
     printf("OpenGL version supported %s\n", version);
-
-//    Vector3 firstTrianglePoints[] = {
-//        Vector3(-0.5f, 0.5f, 0.0f),
-//        Vector3(0.5f, -0.5f,  0.0f),
-//        Vector3(-0.5f, -0.5f,  0.0f),
+    
+    geometryManager.loadTextureAtlas("./Resources/wall.jpg");
+    
+//    Vertex firstTrianglePoints[] = {
+//        Vertex(Vector3(0.5f,  0.5f, 0.0f), Vector3(1.0f, 0.0f, 0.0f), Vector2(1.0f, 1.0f)),
+//        Vertex(Vector3(0.5f, -0.5f, 0.0f), Vector3(0.0f, 1.0f, 0.0f), Vector2(1.0f, 0.0f)),
+//        Vertex(Vector3(-0.5f,  0.5f, 0.0f), Vector3(1.0f, 1.0f, 0.0f), Vector2(0.0f, 1.0f))
 //    };
 //    geometryManager.addTriangle(firstTrianglePoints);
 //
-//    Vector3 secondTrianglePoints[] = {
-//        Vector3(-0.5, 0.5f,  0.0f),
-//        Vector3(0.5f, 0.5f,  0.0f),
-//        Vector3(0.5f, -0.5f,  0.0f),
+//    Vertex secondTrianglePoints[] = {
+//        Vertex(Vector3(0.5f, -0.5f, 0.0f), Vector3(0.0f, 1.0f, 0.0f), Vector2(1.0f, 0.0f)),
+//        Vertex(Vector3(-0.5f, -0.5f, 0.0f), Vector3(0.0f, 0.0f, 1.0f), Vector2(0.0f, 0.0f)),
+//        Vertex(Vector3(-0.5f,  0.5f, 0.0f), Vector3(1.0f, 1.0f, 0.0f), Vector2(0.0f, 1.0f))
 //    };
 //    geometryManager.addTriangle(secondTrianglePoints);
     
-    Vertex firstTrianglePoints[] = {
-        Vertex(Vector3(-0.5f,  0.5f, 0.0f), Vector3(1.0f, 1.0f, 0.0f), Vector2(0.0f, 1.0f)),
-        Vertex(Vector3(0.5f, -0.5f, 0.0f), Vector3(0.0f, 1.0f, 0.0f), Vector2(1.0f, 0.0f)),
-        Vertex(Vector3(-0.5f, -0.5f, 0.0f), Vector3(1.0f, 1.0f, 0.0f), Vector2(0.0f, 1.0f))
+    Vertex cubePoints[] = {
+        Vertex(Vector3(-0.5f, -0.5f, -0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(0.0f, 0.0f)),
+        Vertex(Vector3(0.5f, -0.5f, -0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(1.0f, 0.0f)),
+        Vertex(Vector3(0.5f,  0.5f, -0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(1.0f, 1.0f)),
+        Vertex(Vector3(0.5f,  0.5f, -0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(1.0f, 1.0f)),
+        Vertex(Vector3(-0.5f,  0.5f, -0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(0.0f, 1.0f)),
+        Vertex(Vector3(-0.5f, -0.5f, -0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(0.0f, 0.0f)),
+
+        Vertex(Vector3(-0.5f, -0.5f,  0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(0.0f, 0.0f)),
+        Vertex(Vector3(0.5f, -0.5f,  0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(1.0f, 0.0f)),
+        Vertex(Vector3(0.5f,  0.5f,  0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(1.0f, 1.0f)),
+        Vertex(Vector3(0.5f,  0.5f,  0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(1.0f, 1.0f)),
+        Vertex(Vector3(-0.5f,  0.5f,  0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(0.0f, 1.0f)),
+        Vertex(Vector3(-0.5f, -0.5f,  0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(0.0f, 0.0f)),
+
+        Vertex(Vector3(-0.5f,  0.5f,  0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(1.0f, 0.0f)),
+        Vertex(Vector3(-0.5f,  0.5f, -0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(1.0f, 1.0f)),
+        Vertex(Vector3(-0.5f, -0.5f, -0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(0.0f, 1.0f)),
+        Vertex(Vector3(-0.5f, -0.5f, -0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(0.0f, 1.0f)),
+        Vertex(Vector3(-0.5f, -0.5f,  0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(0.0f, 0.0f)),
+        Vertex(Vector3(-0.5f,  0.5f,  0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(1.0f, 0.0f)),
+
+        Vertex(Vector3(0.5f,  0.5f,  0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(1.0f, 0.0f)),
+        Vertex(Vector3(0.5f,  0.5f, -0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(1.0f, 1.0f)),
+        Vertex(Vector3(0.5f, -0.5f, -0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(0.0f, 1.0f)),
+        Vertex(Vector3(0.5f, -0.5f, -0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(0.0f, 1.0f)),
+        Vertex(Vector3(0.5f, -0.5f,  0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(0.0f, 0.0f)),
+        Vertex(Vector3(0.5f,  0.5f,  0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(1.0f, 0.0f)),
+        
+        Vertex(Vector3(-0.5f, -0.5f, -0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(0.0f, 1.0f)),
+        Vertex(Vector3(0.5f, -0.5f, -0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(1.0f, 1.0f)),
+        Vertex(Vector3(0.5f, -0.5f,  0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(1.0f, 0.0f)),
+        Vertex(Vector3(0.5f, -0.5f,  0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(1.0f, 0.0f)),
+        Vertex(Vector3(-0.5f, -0.5f,  0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(0.0f, 0.0f)),
+        Vertex(Vector3(-0.5f, -0.5f, -0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(0.0f, 1.0f)),
+
+        Vertex(Vector3(-0.5f,  0.5f, -0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(0.0f, 1.0f)),
+        Vertex(Vector3(0.5f,  0.5f, -0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(1.0f, 1.0f)),
+        Vertex(Vector3(0.5f,  0.5f,  0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(1.0f, 0.0f)),
+        Vertex(Vector3(0.5f,  0.5f,  0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(1.0f, 0.0f)),
+        Vertex(Vector3(-0.5f,  0.5f,  0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(0.0f, 0.0f)),
+        Vertex(Vector3(-0.5f,  0.5f, -0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(0.0f, 1.0f)),
     };
-    geometryManager.addTriangle(firstTrianglePoints);
-    
-    Vertex secondTrianglePoints[] = {
-        Vertex(Vector3(-0.5f,  0.5f, 0.0f), Vector3(1.0f, 1.0f, 0.0f), Vector2(0.0f, 1.0f)),
-        Vertex(Vector3(0.5f,  0.5f, 0.0f), Vector3(0.0f, 1.0f, 0.0f), Vector2(1.0f, 0.0f)),
-        Vertex(Vector3(0.5f, -0.5f, 0.0f), Vector3(0.0f, 1.0f, 0.0f), Vector2(1.0f, 0.0f))
-    };
-    geometryManager.addTriangle(secondTrianglePoints);
+    geometryManager.addCube(cubePoints);
 }
 
 void destroy() {
@@ -105,7 +142,28 @@ void render() {
 //    if (randomYesNo()) {
 //        drawRandomTriangle();
 //    }
-    glUseProgram(shader.shaderProgram);
+    // create transformations
+
+    glm::mat4 model = glm::mat4(1.0f);
+    model = glm::rotate(model, (float) glfwGetTime(), glm::vec3(1.0f, 0.0f, 1.0f));
+//    transform = glm::translate(transform, glm::vec3(0.0f, 0.0f, 0.0f));
+
+    glm::mat4 view = glm::mat4(1.0f);
+    // note that we're translating the scene in the reverse direction of where we want to move
+    view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f));
+   
+    glm::mat4 projection;
+    projection = glm::perspective(glm::radians(45.0f), 800.0f / 600.0f, 0.1f, 100.0f);
+    
+    int modelLoc = glGetUniformLocation(shader.shaderProgram, "model");
+    glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+
+    int viewLoc = glGetUniformLocation(shader.shaderProgram, "view");
+    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+
+    int projectionLoc = glGetUniformLocation(shader.shaderProgram, "projection");
+    glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, glm::value_ptr(projection));
+
     geometryManager.draw();
     
 }
@@ -121,7 +179,7 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
 }
 
 int main(int argc, const char * argv[]) {
-    Window mainWindow = Window(1280, 720, "Hephaestus Game Engine", &shader, &geometryManager, init, destroy, tick, update, render);
+    Window mainWindow = Window(720, 720, "Hephaestus Game Engine", &shader, &geometryManager, init, destroy, tick, update, render);
     
     //Add the key call
     glfwSetKeyCallback(mainWindow.window, key_callback);
