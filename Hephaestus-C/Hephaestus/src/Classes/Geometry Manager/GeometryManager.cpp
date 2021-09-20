@@ -9,10 +9,12 @@
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
 
-GeometryManager::GeometryManager() {}
+GeometryManager::GeometryManager(Shader *shader) {
+    this->shader = shader;
+}
 
 void GeometryManager::draw() {
-    glBindTexture(GL_TEXTURE_2D, texture);
+    glBindTexture(GL_TEXTURE_2D, textureAtlas);
     glBindVertexArray(VAO);
 
     glDrawElements(GL_TRIANGLES, indiceCount, GL_UNSIGNED_INT, 0);
@@ -76,23 +78,23 @@ void GeometryManager::createVirtualBufferObject() {
 CompressedData GeometryManager::compressTriangleVertices() {
     vector<Vertex> conjoinedVertices;
 
-    for(int i = 0; i < cubes.size(); i++) {
-        for(int n = 0; n < cubes[i].vertexAmount(); n++) {
-            auto iter = find(conjoinedVertices.begin(), conjoinedVertices.end(), cubes[i].vertices[n]);
+    for(int i = 0; i < triangles.size(); i++) {
+        for(int n = 0; n < triangles[i].vertexAmount(); n++) {
+            auto iter = find(conjoinedVertices.begin(), conjoinedVertices.end(), triangles[i].vertices[n]);
             if (iter == conjoinedVertices.end()) {
-                conjoinedVertices.push_back(cubes[i].vertices[n]);
+                conjoinedVertices.push_back(triangles[i].vertices[n]);
             }
         }
     }
     
     vector<unsigned int> indexes;
 
-    for(int i = 0; i < cubes.size(); i++) {
-        for(int n = 0; n < cubes[i].vertexAmount(); n++) {
-            Vertex vertex = cubes[i].vertices[n];
+    for(int i = 0; i < triangles.size(); i++) {
+        for(int n = 0; n < triangles[i].vertexAmount(); n++) {
+            Vertex vertex = triangles[i].vertices[n];
             auto iter = find(conjoinedVertices.begin(), conjoinedVertices.end(), vertex);
             if (iter != conjoinedVertices.end()) {
-                int index = distance(conjoinedVertices.begin(), iter);
+                int index = std::distance(conjoinedVertices.begin(), iter);
                 indexes.push_back(index);
             }
         }
@@ -135,8 +137,8 @@ void GeometryManager::loadTextureAtlas(string atlasPath) {
 
     glActiveTexture(GL_TEXTURE0); // activate the texture unit first before binding texture
 
-    glGenTextures(1, &texture);
-    glBindTexture(GL_TEXTURE_2D, texture);
+    glGenTextures(1, &textureAtlas);
+    glBindTexture(GL_TEXTURE_2D, textureAtlas);
     
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
@@ -153,4 +155,8 @@ void GeometryManager::loadTextureAtlas(string atlasPath) {
         printf("Failed to load texture");
     }
     stbi_image_free(data);
+}
+
+void GeometryManager::renderSprite(string texture, vec2 position, vec2 size, float rotate, vec3 color) {
+    
 }

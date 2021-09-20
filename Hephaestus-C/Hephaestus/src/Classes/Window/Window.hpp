@@ -32,13 +32,13 @@ typedef void(*Function)();
 class Window {
     GLfloat width;
     GLfloat height;
-    Shader *shader;
 
 public:
-    Window (GLfloat windowWidth, GLfloat windowHeight, char* windowName, Shader *shader, GeometryManager *geometryManager, Function init, Function destroy, Function tick, Function update, Function render);
+    Window (GLfloat windowWidth, GLfloat windowHeight, char* windowName, GeometryManager *geometryManager, Function init, Function destroy, Function tick, Function update, Function render);
     Function init, destroy, tick, update, render;
     void windowLoop ();
     GLFWwindow* window;
+    GeometryManager *geometryManager;
 
 private:
     void _init ();

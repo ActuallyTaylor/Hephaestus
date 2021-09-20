@@ -7,7 +7,7 @@
 
 #include "Vertex.hpp"
 
-Vertex::Vertex(Vector3 coordinate, Vector3 color, Vector2 texture) {
+Vertex::Vertex(glm::vec3 coordinate, glm::vec3 color, glm::vec2 texture) {
     this->coordinate = coordinate;
     this->color = color;
     this->texture = texture;

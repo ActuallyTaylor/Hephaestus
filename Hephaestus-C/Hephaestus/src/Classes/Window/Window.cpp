@@ -7,12 +7,13 @@
 
 #include "Window.hpp"
 
-Window::Window(GLfloat windowWidth, GLfloat windowHeight, char* windowName, Shader *shader, GeometryManager *geometryManager, Function windowInit, Function windowDestroy, Function windowTick, Function windowUpdate, Function windowRender) {
+Window::Window(GLfloat windowWidth, GLfloat windowHeight, char* windowName, GeometryManager *geometryManager, Function windowInit, Function windowDestroy, Function windowTick, Function windowUpdate, Function windowRender) {
     this->init = windowInit;
     this->destroy = windowDestroy;
     this->tick = windowTick;
     this->update = windowUpdate;
     this->render = windowRender;
+    this->geometryManager = geometryManager;
     
     
     // Initialize the library
@@ -22,7 +23,6 @@ Window::Window(GLfloat windowWidth, GLfloat windowHeight, char* windowName, Shad
     
     this->width = windowWidth;
     this->height = windowHeight;
-    this->shader = shader;
 
     // macOS specific flags
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -45,7 +45,7 @@ Window::Window(GLfloat windowWidth, GLfloat windowHeight, char* windowName, Shad
     glewExperimental = GL_TRUE;
     glewInit();
     
-    shader->setup();
+    geometryManager->shader->setup();
 }
 //
 //void Triangle::Draw() {
@@ -72,15 +72,28 @@ void Window::_update () {
 
 void Window::_render () {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    glUseProgram(shader->shaderProgram);
+    glUseProgram(geometryManager->shader->shaderProgram);
     render();
 }
 
 void Window::windowLoop() {
     _init();
     glEnable(GL_DEPTH_TEST);
-
+    double lastTime = glfwGetTime();
+    int nbFrames = 0;
+    
     while (!glfwWindowShouldClose(window)) {
+        double currentTime = glfwGetTime();
+        nbFrames ++;
+        
+        if(currentTime - lastTime >= 1.0) {
+            printf("======\n");
+            printf("%f ms/frame\n", 1000.0/double(nbFrames));
+            printf("%d frames per second\n", nbFrames);
+            nbFrames = 0;
+            lastTime += 1.0;
+        }
+
         _update();
         _render();
         

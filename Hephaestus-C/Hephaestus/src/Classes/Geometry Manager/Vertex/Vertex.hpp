@@ -14,11 +14,12 @@
 #include <GLFW/glfw3.h>
 #include "Vector3.hpp"
 #include "Vector2.hpp"
+#include "glm.hpp"
 
 struct Vertex {
-    Vertex(Vector3 coordinate, Vector3 color, Vector2 texture);
-    Vector3 coordinate, color;
-    Vector2 texture;
+    Vertex(glm::vec3 coordinate, glm::vec3 color, glm::vec2 texture);
+    glm::vec3 coordinate, color;
+    glm::vec2 texture;
     
     bool operator == (Vertex& rhs);
     bool operator != (Vertex& rhs);
