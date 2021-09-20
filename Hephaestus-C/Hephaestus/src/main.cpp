@@ -30,12 +30,8 @@
 
 using namespace std;
 
-//Global Shader
-Shader shader = Shader("./resources/shader.vert", "./resources/shader.frag");
-
 // Global Geometry Manager
-GeometryManager geometryManager = GeometryManager(&shader);
-
+GeometryManager geometryManager = GeometryManager();
 
 static float randomFloat() {
     float low = -1;
@@ -64,9 +60,7 @@ void init() {
     const GLubyte* version = glGetString(GL_VERSION); // version as a string
     printf("Renderer: %s\n", renderer);
     printf("OpenGL version supported %s\n", version);
-    
-    geometryManager.loadTextureAtlas("./Resources/wall.jpg");
-    
+        
     Vertex firstTrianglePoints[] = {
         Vertex(glm::vec3(0.5f,  0.5f, 0.0f), glm::vec3(1.0f, 0.0f, 0.0f), glm::vec2(1.0f, 1.0f)),
         Vertex(glm::vec3(0.5f, -0.5f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f), glm::vec2(1.0f, 0.0f)),
@@ -74,12 +68,12 @@ void init() {
     };
     geometryManager.addTriangle(firstTrianglePoints);
 
-    Vertex secondTrianglePoints[] = {
-        Vertex(glm::vec3(0.5f, -0.5f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f), glm::vec2(1.0f, 0.0f)),
-        Vertex(glm::vec3(-0.5f, -0.5f, 0.0f), glm::vec3(0.0f, 0.0f, 1.0f), glm::vec2(0.0f, 0.0f)),
-        Vertex(glm::vec3(-0.5f,  0.5f, 0.0f), glm::vec3(1.0f, 1.0f, 0.0f), glm::vec2(0.0f, 1.0f))
-    };
-    geometryManager.addTriangle(secondTrianglePoints);
+//    Vertex secondTrianglePoints[] = {
+//        Vertex(glm::vec3(0.5f, -0.5f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f), glm::vec2(1.0f, 0.0f)),
+//        Vertex(glm::vec3(-0.5f, -0.5f, 0.0f), glm::vec3(0.0f, 0.0f, 1.0f), glm::vec2(0.0f, 0.0f)),
+//        Vertex(glm::vec3(-0.5f,  0.5f, 0.0f), glm::vec3(1.0f, 1.0f, 0.0f), glm::vec2(0.0f, 1.0f))
+//    };
+//    geometryManager.addTriangle(secondTrianglePoints);
     
 //    Vertex cubePoints[] = {
 //        Vertex(Vector3(-0.5f, -0.5f, -0.5f), Vector3(0.0f, 0.0f, 0.0f), Vector2(0.0f, 0.0f)),
@@ -136,7 +130,7 @@ void tick() {
 }
 
 void update() {
-    geometryManager.createVirtualBufferObject();
+//    geometryManager.createVirtualBufferObject();
 }
 
 void render() {
@@ -145,25 +139,25 @@ void render() {
 //    }
     // create transformations
 
-    glm::mat4 model = glm::mat4(1.0f);
-    model = glm::rotate(model, (float) glfwGetTime(), glm::vec3(1.0f, 0.0, 0.0f));
-//    transform = glm::translate(transform, glm::vec3(0.0f, 0.0f, 0.0f));
-
-    glm::mat4 view = glm::mat4(1.0f);
-    // note that we're translating the scene in the reverse direction of where we want to move
-    view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f));
-   
-    glm::mat4 projection;
-    projection = glm::perspective(glm::radians(45.0f), 800.0f / 600.0f, 0.1f, 100.0f);
-    
-    int modelLoc = glGetUniformLocation(shader.shaderProgram, "model");
-    glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-
-    int viewLoc = glGetUniformLocation(shader.shaderProgram, "view");
-    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-
-    int projectionLoc = glGetUniformLocation(shader.shaderProgram, "projection");
-    glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, glm::value_ptr(projection));
+//    glm::mat4 model = glm::mat4(1.0f);
+//    model = glm::rotate(model, (float) glfwGetTime(), glm::vec3(1.0f, 0.0, 0.0f));
+////    transform = glm::translate(transform, glm::vec3(0.0f, 0.0f, 0.0f));
+//
+//    glm::mat4 view = glm::mat4(1.0f);
+//    // note that we're translating the scene in the reverse direction of where we want to move
+//    view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f));
+//
+//    glm::mat4 projection;
+//    projection = glm::perspective(glm::radians(45.0f), 800.0f / 600.0f, 0.1f, 100.0f);
+//
+//    int modelLoc = glGetUniformLocation(shader.shaderProgram, "model");
+//    glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+//
+//    int viewLoc = glGetUniformLocation(shader.shaderProgram, "view");
+//    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+//
+//    int projectionLoc = glGetUniformLocation(shader.shaderProgram, "projection");
+//    glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, glm::value_ptr(projection));
 
     geometryManager.draw();
     
@@ -175,7 +169,7 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
     } else if (key == GLFW_KEY_A && action == GLFW_PRESS) {
         drawRandomTriangle();
     } else if (key == GLFW_KEY_R && action == GLFW_PRESS) {
-        geometryManager.clear();
+//        geometryManager.clear();
     }
 }
 

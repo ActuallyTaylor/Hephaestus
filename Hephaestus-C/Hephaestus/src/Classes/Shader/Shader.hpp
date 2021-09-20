@@ -25,9 +25,11 @@ class Shader {
     const char *fragmentShader;
     
 public:
+    Shader ();
     Shader (string vertexShader, string fragmentShader);
     GLuint shaderProgram;
     void setup ();
+    void use();
 private:
 
 };

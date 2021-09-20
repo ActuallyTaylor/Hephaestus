@@ -44,8 +44,6 @@ Window::Window(GLfloat windowWidth, GLfloat windowHeight, char* windowName, Geom
     // Start GLEW extension handler
     glewExperimental = GL_TRUE;
     glewInit();
-    
-    geometryManager->shader->setup();
 }
 //
 //void Triangle::Draw() {
@@ -72,7 +70,6 @@ void Window::_update () {
 
 void Window::_render () {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    glUseProgram(geometryManager->shader->shaderProgram);
     render();
 }
 

@@ -21,6 +21,7 @@
 		4B74681B26EB0F0B00548E70 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B74681A26EB0F0B00548E70 /* OpenGL.framework */; };
 		4BDC501126F8E8140017F1B0 /* Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC500F26F8E8140017F1B0 /* Sprite.cpp */; };
 		4BDC501726F8ED820017F1B0 /* GeometryBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC501526F8ED820017F1B0 /* GeometryBuffer.cpp */; };
+		4BDC501926F915B30017F1B0 /* missing.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BDC501826F915A80017F1B0 /* missing.jpg */; };
 		4BE70DAA26F7D691000E3A6F /* Controls.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BE70DA826F7D691000E3A6F /* Controls.cpp */; };
 		4BE928AE26F4F18A009C634C /* Vector3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BE928AC26F4F18A009C634C /* Vector3.cpp */; };
 		4BE928B226F54D2A009C634C /* CompressedData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BE928B026F54D2A009C634C /* CompressedData.cpp */; };
@@ -54,6 +55,7 @@
 				4B05F0AA26F0521600285C21 /* shader.vert in CopyFiles */,
 				4BE928C026F592C5009C634C /* wall.jpg in CopyFiles */,
 				4BE928C226F66075009C634C /* white.jpg in CopyFiles */,
+				4BDC501926F915B30017F1B0 /* missing.jpg in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +81,7 @@
 		4BDC501026F8E8140017F1B0 /* Sprite.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Sprite.hpp; sourceTree = "<group>"; };
 		4BDC501526F8ED820017F1B0 /* GeometryBuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GeometryBuffer.cpp; sourceTree = "<group>"; };
 		4BDC501626F8ED820017F1B0 /* GeometryBuffer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GeometryBuffer.hpp; sourceTree = "<group>"; };
+		4BDC501826F915A80017F1B0 /* missing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = missing.jpg; sourceTree = "<group>"; };
 		4BE70DA826F7D691000E3A6F /* Controls.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Controls.cpp; sourceTree = "<group>"; };
 		4BE70DA926F7D691000E3A6F /* Controls.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Controls.hpp; sourceTree = "<group>"; };
 		4BE928AC26F4F18A009C634C /* Vector3.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Vector3.cpp; sourceTree = "<group>"; };
@@ -642,6 +645,7 @@
 		4B86CC5526F253C2000E8FB9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				4BDC501826F915A80017F1B0 /* missing.jpg */,
 				4BE928BF26F592B8009C634C /* wall.jpg */,
 				4BE928C126F66053009C634C /* white.jpg */,
 			);

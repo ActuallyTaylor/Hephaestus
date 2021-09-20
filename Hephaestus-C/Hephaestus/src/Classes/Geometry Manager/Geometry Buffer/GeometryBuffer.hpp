@@ -16,25 +16,41 @@
 #include <string>
 #include "glm.hpp"
 
-#include "Triangle.hpp"
-#include "Cube.hpp"
-#include "Vector3.hpp"
 #include "CompressedData.hpp"
 #include "Shader.hpp"
+#include "Vertex.hpp"
+
+#include "glm.hpp"
+#include "matrix_transform.hpp"
+#include "type_ptr.hpp"
 
 class GeometryBuffer {
-    vector<Triangle> triangles = {};
-    vector<Cube> cubes = {};
+    /*
+     Construction
+     */
+public:
+    GeometryBuffer(string id, vector<Vertex> vertices, Shader shader, string texturePath);
     
-    Shader *shader;
-    void createVirtualBufferObject();
+    /*
+     Arrays
+     */
+    vector<Vertex> vertices;
 
+    /*
+     Variables
+     */
+    Shader shader;
     GLuint VBO, VAO, EBO, textureAtlas;
-
     GLint indiceCount;
+    string id;
+    
+    /*
+     Functions
+     */
+    void createVirtualBufferObject();
+    void draw();
     
     CompressedData compressTriangleVertices();
-private:
 };
 
 #endif /* GeometryBuffer_hpp */

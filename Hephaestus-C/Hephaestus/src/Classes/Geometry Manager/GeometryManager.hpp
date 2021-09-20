@@ -22,6 +22,7 @@
 #include "Vector3.hpp"
 #include "CompressedData.hpp"
 #include "Shader.hpp"
+#include "GeometryBuffer.hpp"
 
 using namespace std;
 using namespace glm;
@@ -29,36 +30,19 @@ using namespace glm;
 class GeometryManager {
     
 public:
-    GeometryManager (Shader *shader);
-    vector<Triangle> triangles = {};
-    vector<Cube> cubes = {};
-    Shader *shader;
+    GeometryManager ();
+    vector<GeometryBuffer> geometryBuffers;
+    //Default Shader
+    Shader shader = Shader("./resources/shader.vert", "./resources/shader.frag");
 
-    // Function for creating vbo, and ebo
-    void createVirtualBufferObject();
-    
-    // Load te&xtures
-    void loadTextureAtlas(string atlasPath);
-    
-    // Functions for adding different shapes
+    // Create Shapes and Objects
     void addTriangle(Vertex vertices[3]);
     void addCube(Vertex vertices[36]);
-    
-    void renderSprite(string texture, vec2 position, vec2 size, float rotate, vec3 color);
 
-    // Draw contents onto the screen
+    // Functions for managing state
     void draw();
-    
-    // Clear the screen
     void clear();
-    
-    GLuint VBO, VAO, EBO, textureAtlas;
-
-    GLint indiceCount;
-
-private:
-    // Functions that handle organizing all the vertexes
-    CompressedData compressTriangleVertices();
+    void updateBuffer(string id);
 };
 
 #endif /* GeometryManager_hpp */
