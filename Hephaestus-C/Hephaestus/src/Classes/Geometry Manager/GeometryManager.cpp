@@ -29,5 +29,12 @@ void GeometryManager::addTriangle(Vertex vertices[6]) {
     geometryBuffers.push_back(buffer);
 }
 
-//void GeometryManager::addCube(Vertex *vertices) {
-//}
+void GeometryManager::addCube(Vertex *vertices) {
+    vector<Vertex> holdVertices = {};
+    for(int i = 0; i < 36; i++) {
+        holdVertices.push_back(vertices[i]);
+    }
+
+    GeometryBuffer buffer = GeometryBuffer("background", holdVertices, shader, "./resources/missing.jpg");
+    geometryBuffers.push_back(buffer);
+}

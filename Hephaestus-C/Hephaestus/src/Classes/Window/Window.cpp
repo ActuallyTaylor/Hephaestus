@@ -7,14 +7,13 @@
 
 #include "Window.hpp"
 
-Window::Window(GLfloat windowWidth, GLfloat windowHeight, char* windowName, GeometryManager *geometryManager, Function windowInit, Function windowDestroy, Function windowTick, Function windowUpdate, Function windowRender) {
+Window::Window(GLfloat windowWidth, GLfloat windowHeight, char *windowName, GeometryManager &geometryManager, Function windowInit, Function windowDestroy, Function windowTick, Function windowUpdate, Function windowRender) {
     this->init = windowInit;
     this->destroy = windowDestroy;
     this->tick = windowTick;
     this->update = windowUpdate;
     this->render = windowRender;
     this->geometryManager = geometryManager;
-    
     
     // Initialize the library
     if (!glfwInit()) {
@@ -45,11 +44,6 @@ Window::Window(GLfloat windowWidth, GLfloat windowHeight, char* windowName, Geom
     glewExperimental = GL_TRUE;
     glewInit();
 }
-//
-//void Triangle::Draw() {
-//    int vertMax = id * 3;
-//    glDrawArrays(GL_TRIANGLES, vertMax - 3, vertMax);
-//}
 
 void Window::_init () {
     init();
@@ -78,7 +72,7 @@ void Window::windowLoop() {
     glEnable(GL_DEPTH_TEST);
     double lastTime = glfwGetTime();
     int nbFrames = 0;
-    
+
     while (!glfwWindowShouldClose(window)) {
         double currentTime = glfwGetTime();
         nbFrames ++;
