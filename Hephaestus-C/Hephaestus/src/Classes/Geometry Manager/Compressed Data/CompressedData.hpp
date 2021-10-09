@@ -14,8 +14,6 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
-#include "Vector3.hpp"
-
 using namespace std;
 
 struct CompressedData {

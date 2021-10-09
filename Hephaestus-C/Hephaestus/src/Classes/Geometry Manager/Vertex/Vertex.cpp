@@ -7,14 +7,14 @@
 
 #include "Vertex.hpp"
 
-Vertex::Vertex(glm::vec3 coordinate, glm::vec3 color, glm::vec2 texture) {
+Vertex::Vertex(glm::vec3 coordinate, /*glm::vec3 color,*/ glm::vec2 texture) {
     this->coordinate = coordinate;
-    this->color = color;
+//    this->color = color;
     this->texture = texture;
 }
 
 bool Vertex::operator==(Vertex &rhs) {
-    return (this->coordinate == rhs.coordinate) && (this->color == rhs.color) && (this->texture == rhs.texture);
+    return (this->coordinate == rhs.coordinate) && /*(this->color == rhs.color) && */(this->texture == rhs.texture);
 }
 
 bool Vertex::operator!=(Vertex &rhs) {
@@ -22,7 +22,7 @@ bool Vertex::operator!=(Vertex &rhs) {
 }
 
 bool Vertex::operator==(const Vertex &rhs) {
-    return (this->coordinate == rhs.coordinate) && (this->color == rhs.color) && (this->texture == rhs.texture);
+    return (this->coordinate == rhs.coordinate) && /*(this->color == rhs.color) && */(this->texture == rhs.texture);
 }
 
 bool Vertex::operator!=(const Vertex &rhs) {

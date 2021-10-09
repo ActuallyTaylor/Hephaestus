@@ -43,6 +43,10 @@ Window::Window(GLfloat windowWidth, GLfloat windowHeight, char *windowName, Geom
     // Start GLEW extension handler
     glewExperimental = GL_TRUE;
     glewInit();
+    
+    glViewport(0, 0, width, height);
+    geometryManager.setupShader();
+    geometryManager.dimensions = vec2(width, height);
 }
 
 void Window::_init () {
@@ -95,3 +99,4 @@ void Window::windowLoop() {
 
     }
 }
+

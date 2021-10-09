@@ -14,8 +14,6 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
-#include "Vector3.hpp"
-#include "Vector2.hpp"
 #include "Vertex.hpp"
 
 using namespace std;
