@@ -30,8 +30,7 @@ class GeometryBuffer {
      */
 public:
     GeometryBuffer(string id, vector<Vertex> vertices, Shader shader, string texturePath);
-    GeometryBuffer();
-
+    
     /*
      Arrays
      */
@@ -44,11 +43,6 @@ public:
     GLuint VBO, VAO, EBO, textureAtlas;
     GLint indiceCount;
     string id;
-    
-    /*
-     Position Variables
-     */
-    
     
     /*
      Functions

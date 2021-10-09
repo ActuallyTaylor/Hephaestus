@@ -9,8 +9,6 @@
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
 
-GeometryBuffer::GeometryBuffer() { }
-
 GeometryBuffer::GeometryBuffer(string id, vector<Vertex> vertices, Shader shader, string texturePath) {
     this->id = id;
     this->vertices = vertices;
@@ -140,6 +138,25 @@ CompressedData GeometryBuffer::compressTriangleVertices() {
 
 void GeometryBuffer::draw() {
     shader.use();
+    
+    glm::mat4 model = glm::mat4(1.0f);
+    model = glm::rotate(model, (float) glfwGetTime(), glm::vec3(1.0f, 1.0, 0.0f));
+    
+    glm::mat4 view = glm::mat4(1.0f);
+    view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f));
+    
+    glm::mat4 projection;
+    projection = glm::perspective(glm::radians(45.0f), 800.0f / 600.0f, 0.1f, 100.0f);
+    
+    int modelLoc = glGetUniformLocation(shader.shaderProgram, "model");
+    glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+    
+    int viewLoc = glGetUniformLocation(shader.shaderProgram, "view");
+    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+    
+    int projectionLoc = glGetUniformLocation(shader.shaderProgram, "projection");
+    glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, glm::value_ptr(projection));
+
     glBindVertexArray(VAO);
     glBindTexture(GL_TEXTURE_2D, textureAtlas);
 

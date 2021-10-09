@@ -17,10 +17,9 @@
 		4B45369826EB8A2400B9D379 /* libglfw.3.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 4B74681C26EB0F5100548E70 /* libglfw.3.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4B45369A26EB8A4000B9D379 /* libGLEW.2.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B74682026EB0F6E00548E70 /* libGLEW.2.2.0.dylib */; };
 		4B45369B26EB8A4000B9D379 /* libGLEW.2.2.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 4B74682026EB0F6E00548E70 /* libGLEW.2.2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		4B4BA610270224BB00654BB7 /* SpriteRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BA60E270224BB00654BB7 /* SpriteRenderer.cpp */; };
-		4B4BA61427025A7200654BB7 /* Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BA61227025A7200654BB7 /* Sprite.cpp */; };
 		4B74681126EB051000548E70 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B74681026EB051000548E70 /* main.cpp */; };
 		4B74681B26EB0F0B00548E70 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B74681A26EB0F0B00548E70 /* OpenGL.framework */; };
+		4BDC501126F8E8140017F1B0 /* Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC500F26F8E8140017F1B0 /* Sprite.cpp */; };
 		4BDC501726F8ED820017F1B0 /* GeometryBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC501526F8ED820017F1B0 /* GeometryBuffer.cpp */; };
 		4BDC501926F915B30017F1B0 /* missing.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BDC501826F915A80017F1B0 /* missing.jpg */; };
 		4BE70DAA26F7D691000E3A6F /* Controls.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BE70DA826F7D691000E3A6F /* Controls.cpp */; };
@@ -73,15 +72,13 @@
 		4B05F0A026F0358C00285C21 /* GeometryManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GeometryManager.hpp; sourceTree = "<group>"; };
 		4B05F0A726F051D300285C21 /* shader.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = shader.frag; sourceTree = "<group>"; };
 		4B05F0A826F051D300285C21 /* shader.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = shader.vert; sourceTree = "<group>"; };
-		4B4BA60E270224BB00654BB7 /* SpriteRenderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SpriteRenderer.cpp; sourceTree = "<group>"; };
-		4B4BA60F270224BB00654BB7 /* SpriteRenderer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SpriteRenderer.hpp; sourceTree = "<group>"; };
-		4B4BA61227025A7200654BB7 /* Sprite.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sprite.cpp; sourceTree = "<group>"; };
-		4B4BA61327025A7200654BB7 /* Sprite.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Sprite.hpp; sourceTree = "<group>"; };
 		4B74680D26EB051000548E70 /* Hephaestus */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Hephaestus; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B74681026EB051000548E70 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4B74681A26EB0F0B00548E70 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		4B74681C26EB0F5100548E70 /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../../usr/local/Cellar/glfw/3.3.2/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
 		4B74682026EB0F6E00548E70 /* libGLEW.2.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.2.0.dylib; path = ../../../../../usr/local/Cellar/glew/2.2.0/lib/libGLEW.2.2.0.dylib; sourceTree = "<group>"; };
+		4BDC500F26F8E8140017F1B0 /* Sprite.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sprite.cpp; sourceTree = "<group>"; };
+		4BDC501026F8E8140017F1B0 /* Sprite.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Sprite.hpp; sourceTree = "<group>"; };
 		4BDC501526F8ED820017F1B0 /* GeometryBuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GeometryBuffer.cpp; sourceTree = "<group>"; };
 		4BDC501626F8ED820017F1B0 /* GeometryBuffer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GeometryBuffer.hpp; sourceTree = "<group>"; };
 		4BDC501826F915A80017F1B0 /* missing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = missing.jpg; sourceTree = "<group>"; };
@@ -578,7 +575,7 @@
 		4B05F09E26F0357F00285C21 /* Geometry Manager */ = {
 			isa = PBXGroup;
 			children = (
-				4B4BA60D270224A800654BB7 /* Sprite Renderer */,
+				4BDC500E26F8E8040017F1B0 /* Sprite */,
 				4BE9345E26F67CE3009C634C /* Shapes */,
 				4BE928B826F57033009C634C /* Vertex */,
 				4BE928AF26F54D16009C634C /* Compressed Data */,
@@ -596,25 +593,6 @@
 				4B86CC5526F253C2000E8FB9 /* Images */,
 			);
 			path = resources;
-			sourceTree = "<group>";
-		};
-		4B4BA60D270224A800654BB7 /* Sprite Renderer */ = {
-			isa = PBXGroup;
-			children = (
-				4B4BA61127025A6A00654BB7 /* Sprite */,
-				4B4BA60E270224BB00654BB7 /* SpriteRenderer.cpp */,
-				4B4BA60F270224BB00654BB7 /* SpriteRenderer.hpp */,
-			);
-			path = "Sprite Renderer";
-			sourceTree = "<group>";
-		};
-		4B4BA61127025A6A00654BB7 /* Sprite */ = {
-			isa = PBXGroup;
-			children = (
-				4B4BA61227025A7200654BB7 /* Sprite.cpp */,
-				4B4BA61327025A7200654BB7 /* Sprite.hpp */,
-			);
-			path = Sprite;
 			sourceTree = "<group>";
 		};
 		4B74680426EB051000548E70 = {
@@ -672,6 +650,15 @@
 				4BE928C126F66053009C634C /* white.jpg */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		4BDC500E26F8E8040017F1B0 /* Sprite */ = {
+			isa = PBXGroup;
+			children = (
+				4BDC500F26F8E8140017F1B0 /* Sprite.cpp */,
+				4BDC501026F8E8140017F1B0 /* Sprite.hpp */,
+			);
+			path = Sprite;
 			sourceTree = "<group>";
 		};
 		4BDC501226F8E98A0017F1B0 /* Shaders */ = {
@@ -1283,7 +1270,7 @@
 		4B74680526EB051000548E70 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1300;
+				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					4B74680C26EB051000548E70 = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -1336,6 +1323,7 @@
 			files = (
 				4B74681126EB051000548E70 /* main.cpp in Sources */,
 				4BE928B526F56F86009C634C /* Vector2.cpp in Sources */,
+				4BDC501126F8E8140017F1B0 /* Sprite.cpp in Sources */,
 				4B05F0A126F0358C00285C21 /* GeometryManager.cpp in Sources */,
 				4BE928BB26F57055009C634C /* Vertex.cpp in Sources */,
 				4BE70DAA26F7D691000E3A6F /* Controls.cpp in Sources */,
@@ -1346,8 +1334,6 @@
 				4BE928AE26F4F18A009C634C /* Vector3.cpp in Sources */,
 				4B05F09D26F033CB00285C21 /* Triangle.cpp in Sources */,
 				4BE928B226F54D2A009C634C /* CompressedData.cpp in Sources */,
-				4B4BA61427025A7200654BB7 /* Sprite.cpp in Sources */,
-				4B4BA610270224BB00654BB7 /* SpriteRenderer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1469,7 +1455,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1488,7 +1473,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
