@@ -19,13 +19,11 @@
 		4B45369B26EB8A4000B9D379 /* libGLEW.2.2.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 4B74682026EB0F6E00548E70 /* libGLEW.2.2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4B74681126EB051000548E70 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B74681026EB051000548E70 /* main.cpp */; };
 		4B74681B26EB0F0B00548E70 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B74681A26EB0F0B00548E70 /* OpenGL.framework */; };
-		4BDC501126F8E8140017F1B0 /* Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC500F26F8E8140017F1B0 /* Sprite.cpp */; };
-		4BDC501726F8ED820017F1B0 /* GeometryBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC501526F8ED820017F1B0 /* GeometryBuffer.cpp */; };
+		4BD6A2312710A6190083F608 /* Keybind.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BD6A22F2710A6190083F608 /* Keybind.cpp */; };
+		4BDC501726F8ED820017F1B0 /* Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC501526F8ED820017F1B0 /* Sprite.cpp */; };
 		4BDC501926F915B30017F1B0 /* missing.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BDC501826F915A80017F1B0 /* missing.jpg */; };
 		4BE70DAA26F7D691000E3A6F /* Controls.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BE70DA826F7D691000E3A6F /* Controls.cpp */; };
-		4BE928AE26F4F18A009C634C /* Vector3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BE928AC26F4F18A009C634C /* Vector3.cpp */; };
 		4BE928B226F54D2A009C634C /* CompressedData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BE928B026F54D2A009C634C /* CompressedData.cpp */; };
-		4BE928B526F56F86009C634C /* Vector2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BE928B326F56F86009C634C /* Vector2.cpp */; };
 		4BE928BB26F57055009C634C /* Vertex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BE928B926F57055009C634C /* Vertex.cpp */; };
 		4BE928C026F592C5009C634C /* wall.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BE928BF26F592B8009C634C /* wall.jpg */; };
 		4BE928C226F66075009C634C /* white.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BE928C126F66053009C634C /* white.jpg */; };
@@ -77,19 +75,15 @@
 		4B74681A26EB0F0B00548E70 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		4B74681C26EB0F5100548E70 /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../../usr/local/Cellar/glfw/3.3.2/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
 		4B74682026EB0F6E00548E70 /* libGLEW.2.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.2.0.dylib; path = ../../../../../usr/local/Cellar/glew/2.2.0/lib/libGLEW.2.2.0.dylib; sourceTree = "<group>"; };
-		4BDC500F26F8E8140017F1B0 /* Sprite.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sprite.cpp; sourceTree = "<group>"; };
-		4BDC501026F8E8140017F1B0 /* Sprite.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Sprite.hpp; sourceTree = "<group>"; };
-		4BDC501526F8ED820017F1B0 /* GeometryBuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GeometryBuffer.cpp; sourceTree = "<group>"; };
-		4BDC501626F8ED820017F1B0 /* GeometryBuffer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GeometryBuffer.hpp; sourceTree = "<group>"; };
+		4BD6A22F2710A6190083F608 /* Keybind.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Keybind.cpp; sourceTree = "<group>"; };
+		4BD6A2302710A6190083F608 /* Keybind.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Keybind.hpp; sourceTree = "<group>"; };
+		4BDC501526F8ED820017F1B0 /* Sprite.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sprite.cpp; sourceTree = "<group>"; };
+		4BDC501626F8ED820017F1B0 /* Sprite.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Sprite.hpp; sourceTree = "<group>"; };
 		4BDC501826F915A80017F1B0 /* missing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = missing.jpg; sourceTree = "<group>"; };
 		4BE70DA826F7D691000E3A6F /* Controls.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Controls.cpp; sourceTree = "<group>"; };
 		4BE70DA926F7D691000E3A6F /* Controls.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Controls.hpp; sourceTree = "<group>"; };
-		4BE928AC26F4F18A009C634C /* Vector3.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Vector3.cpp; sourceTree = "<group>"; };
-		4BE928AD26F4F18A009C634C /* Vector3.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Vector3.hpp; sourceTree = "<group>"; };
 		4BE928B026F54D2A009C634C /* CompressedData.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CompressedData.cpp; sourceTree = "<group>"; };
 		4BE928B126F54D2A009C634C /* CompressedData.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CompressedData.hpp; sourceTree = "<group>"; };
-		4BE928B326F56F86009C634C /* Vector2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Vector2.cpp; sourceTree = "<group>"; };
-		4BE928B426F56F86009C634C /* Vector2.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Vector2.hpp; sourceTree = "<group>"; };
 		4BE928B926F57055009C634C /* Vertex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Vertex.cpp; sourceTree = "<group>"; };
 		4BE928BA26F57055009C634C /* Vertex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Vertex.hpp; sourceTree = "<group>"; };
 		4BE928BD26F58B9F009C634C /* stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
@@ -537,7 +531,6 @@
 			isa = PBXGroup;
 			children = (
 				4BE70DA726F7D67B000E3A6F /* Controls */,
-				4BE928AB26F4F12B009C634C /* Vector */,
 				4B05F09E26F0357F00285C21 /* Geometry Manager */,
 				4B05F09626F02A5900285C21 /* Shader */,
 				4B05F09526F029F300285C21 /* Window */,
@@ -575,11 +568,10 @@
 		4B05F09E26F0357F00285C21 /* Geometry Manager */ = {
 			isa = PBXGroup;
 			children = (
-				4BDC500E26F8E8040017F1B0 /* Sprite */,
 				4BE9345E26F67CE3009C634C /* Shapes */,
 				4BE928B826F57033009C634C /* Vertex */,
 				4BE928AF26F54D16009C634C /* Compressed Data */,
-				4BDC501426F8ED660017F1B0 /* Geometry Buffer */,
+				4BDC501426F8ED660017F1B0 /* Sprite */,
 				4B05F09F26F0358C00285C21 /* GeometryManager.cpp */,
 				4B05F0A026F0358C00285C21 /* GeometryManager.hpp */,
 			);
@@ -652,13 +644,13 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		4BDC500E26F8E8040017F1B0 /* Sprite */ = {
+		4BD6A22E2710A5EC0083F608 /* Keybind */ = {
 			isa = PBXGroup;
 			children = (
-				4BDC500F26F8E8140017F1B0 /* Sprite.cpp */,
-				4BDC501026F8E8140017F1B0 /* Sprite.hpp */,
+				4BD6A22F2710A6190083F608 /* Keybind.cpp */,
+				4BD6A2302710A6190083F608 /* Keybind.hpp */,
 			);
-			path = Sprite;
+			path = Keybind;
 			sourceTree = "<group>";
 		};
 		4BDC501226F8E98A0017F1B0 /* Shaders */ = {
@@ -678,31 +670,23 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		4BDC501426F8ED660017F1B0 /* Geometry Buffer */ = {
+		4BDC501426F8ED660017F1B0 /* Sprite */ = {
 			isa = PBXGroup;
 			children = (
-				4BDC501526F8ED820017F1B0 /* GeometryBuffer.cpp */,
-				4BDC501626F8ED820017F1B0 /* GeometryBuffer.hpp */,
+				4BDC501526F8ED820017F1B0 /* Sprite.cpp */,
+				4BDC501626F8ED820017F1B0 /* Sprite.hpp */,
 			);
-			path = "Geometry Buffer";
+			path = Sprite;
 			sourceTree = "<group>";
 		};
 		4BE70DA726F7D67B000E3A6F /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				4BD6A22E2710A5EC0083F608 /* Keybind */,
 				4BE70DA826F7D691000E3A6F /* Controls.cpp */,
 				4BE70DA926F7D691000E3A6F /* Controls.hpp */,
 			);
 			path = Controls;
-			sourceTree = "<group>";
-		};
-		4BE928AB26F4F12B009C634C /* Vector */ = {
-			isa = PBXGroup;
-			children = (
-				4BE928B726F56FAA009C634C /* Vector 2 */,
-				4BE928B626F56FA2009C634C /* Vector 3 */,
-			);
-			path = Vector;
 			sourceTree = "<group>";
 		};
 		4BE928AF26F54D16009C634C /* Compressed Data */ = {
@@ -712,24 +696,6 @@
 				4BE928B126F54D2A009C634C /* CompressedData.hpp */,
 			);
 			path = "Compressed Data";
-			sourceTree = "<group>";
-		};
-		4BE928B626F56FA2009C634C /* Vector 3 */ = {
-			isa = PBXGroup;
-			children = (
-				4BE928AC26F4F18A009C634C /* Vector3.cpp */,
-				4BE928AD26F4F18A009C634C /* Vector3.hpp */,
-			);
-			path = "Vector 3";
-			sourceTree = "<group>";
-		};
-		4BE928B726F56FAA009C634C /* Vector 2 */ = {
-			isa = PBXGroup;
-			children = (
-				4BE928B326F56F86009C634C /* Vector2.cpp */,
-				4BE928B426F56F86009C634C /* Vector2.hpp */,
-			);
-			path = "Vector 2";
 			sourceTree = "<group>";
 		};
 		4BE928B826F57033009C634C /* Vertex */ = {
@@ -1321,17 +1287,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BD6A2312710A6190083F608 /* Keybind.cpp in Sources */,
 				4B74681126EB051000548E70 /* main.cpp in Sources */,
-				4BE928B526F56F86009C634C /* Vector2.cpp in Sources */,
-				4BDC501126F8E8140017F1B0 /* Sprite.cpp in Sources */,
 				4B05F0A126F0358C00285C21 /* GeometryManager.cpp in Sources */,
 				4BE928BB26F57055009C634C /* Vertex.cpp in Sources */,
 				4BE70DAA26F7D691000E3A6F /* Controls.cpp in Sources */,
 				4BE9346226F67CF8009C634C /* Cube.cpp in Sources */,
 				4B05F09926F02A9900285C21 /* Shader.cpp in Sources */,
-				4BDC501726F8ED820017F1B0 /* GeometryBuffer.cpp in Sources */,
+				4BDC501726F8ED820017F1B0 /* Sprite.cpp in Sources */,
 				4B05F09326EFF5A900285C21 /* Window.cpp in Sources */,
-				4BE928AE26F4F18A009C634C /* Vector3.cpp in Sources */,
 				4B05F09D26F033CB00285C21 /* Triangle.cpp in Sources */,
 				4BE928B226F54D2A009C634C /* CompressedData.cpp in Sources */,
 			);
@@ -1458,7 +1422,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
-				HEADER_SEARCH_PATHS = /usr/local/include;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"$SOURCE_ROOT/Hephaestus/library/**",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/include,
@@ -1476,7 +1443,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
-				HEADER_SEARCH_PATHS = /usr/local/include;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"$SOURCE_ROOT/Hephaestus/library/**",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/include,

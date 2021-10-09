@@ -39,13 +39,15 @@ public:
     void windowLoop ();
     GLFWwindow *window;
     GeometryManager geometryManager;
-
+    
 private:
     void _init ();
     void _destroy ();
     void _tick ();
     void _update ();
     void _render ();
+    
+    void windowCallback(GLFWwindow* window, int width, int height);
 };
 
 /*
