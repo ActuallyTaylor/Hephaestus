@@ -28,6 +28,8 @@
 		4BE928C026F592C5009C634C /* wall.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BE928BF26F592B8009C634C /* wall.jpg */; };
 		4BE928C226F66075009C634C /* white.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BE928C126F66053009C634C /* white.jpg */; };
 		4BE9346226F67CF8009C634C /* Cube.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BE9346026F67CF8009C634C /* Cube.cpp */; };
+		4BED46FB271DD6D000D92B40 /* WindowDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BED46F8271DD6D000D92B40 /* WindowDelegate.cpp */; };
+		4BED46FC271DD6D000D92B40 /* Hephaestus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BED46F9271DD6D000D92B40 /* Hephaestus.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -511,6 +513,10 @@
 		4BE9345D26F66E79009C634C /* type_aligned.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = type_aligned.hpp; sourceTree = "<group>"; };
 		4BE9346026F67CF8009C634C /* Cube.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Cube.cpp; sourceTree = "<group>"; };
 		4BE9346126F67CF8009C634C /* Cube.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Cube.hpp; sourceTree = "<group>"; };
+		4BED46F7271DD6D000D92B40 /* WindowDelegate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = WindowDelegate.hpp; sourceTree = "<group>"; };
+		4BED46F8271DD6D000D92B40 /* WindowDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WindowDelegate.cpp; sourceTree = "<group>"; };
+		4BED46F9271DD6D000D92B40 /* Hephaestus.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hephaestus.cpp; sourceTree = "<group>"; };
+		4BED46FA271DD6D000D92B40 /* Hephaestus.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Hephaestus.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -618,6 +624,7 @@
 			isa = PBXGroup;
 			children = (
 				4B74681026EB051000548E70 /* main.cpp */,
+				4BED46F5271DD6D000D92B40 /* API */,
 				4B05F09426F029EE00285C21 /* Classes */,
 				4BE928BC26F58B82009C634C /* Third Party */,
 			);
@@ -1208,6 +1215,25 @@
 			path = Cube;
 			sourceTree = "<group>";
 		};
+		4BED46F5271DD6D000D92B40 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				4BED46F6271DD6D000D92B40 /* WindowDelegate */,
+				4BED46F9271DD6D000D92B40 /* Hephaestus.cpp */,
+				4BED46FA271DD6D000D92B40 /* Hephaestus.hpp */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		4BED46F6271DD6D000D92B40 /* WindowDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				4BED46F7271DD6D000D92B40 /* WindowDelegate.hpp */,
+				4BED46F8271DD6D000D92B40 /* WindowDelegate.cpp */,
+			);
+			path = WindowDelegate;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1297,6 +1323,8 @@
 				4BDC501726F8ED820017F1B0 /* Sprite.cpp in Sources */,
 				4B05F09326EFF5A900285C21 /* Window.cpp in Sources */,
 				4B05F09D26F033CB00285C21 /* Triangle.cpp in Sources */,
+				4BED46FB271DD6D000D92B40 /* WindowDelegate.cpp in Sources */,
+				4BED46FC271DD6D000D92B40 /* Hephaestus.cpp in Sources */,
 				4BE928B226F54D2A009C634C /* CompressedData.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

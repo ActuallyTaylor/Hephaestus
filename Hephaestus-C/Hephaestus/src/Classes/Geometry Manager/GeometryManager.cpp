@@ -79,6 +79,8 @@ void GeometryManager::addSprite(string id, string texturePath, vec3 position = v
     sprite.rotation = rotation;
     sprite.screenDimensions = dimensions;
     sprites.push_back(sprite);
+    
+    printf("Adding Sprite: %lu\n", sprites.size());
 }
 
 void GeometryManager::moveSprite(string id, vec3 position) {

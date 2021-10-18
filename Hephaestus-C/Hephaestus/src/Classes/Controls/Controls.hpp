@@ -17,8 +17,8 @@
 #include <string>
 #include <glm/glm.hpp>
 
-#include "Keybind/Keybind.hpp"
-
+#include "Keybind.hpp"
+ 
 using namespace std;
 
 class Controls {
@@ -33,7 +33,6 @@ public:
     /*
      Functions
      */
-
     void addKeybind(Keybind keybind);
     
     void executeKeybinds(int keycode, int action);

@@ -7,7 +7,8 @@
 
 #include "Controls.hpp"
 
-Controls::Controls() { }
+Controls::Controls() {
+}
 
 void Controls::addKeybind(Keybind keybind) {
     keybindings.push_back(keybind);

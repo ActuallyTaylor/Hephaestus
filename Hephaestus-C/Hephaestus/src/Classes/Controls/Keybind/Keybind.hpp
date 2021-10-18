@@ -5,6 +5,7 @@
 //  Created by Zachary lineman on 10/8/21.
 //
 
+
 #ifndef Keybind_hpp
 #define Keybind_hpp
 
@@ -12,7 +13,7 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
-typedef void(*Function)();
+typedef void (*Function)();
 
 class Keybind {
 public:

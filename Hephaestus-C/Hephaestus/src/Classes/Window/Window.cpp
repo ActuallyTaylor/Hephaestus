@@ -7,13 +7,11 @@
 
 #include "Window.hpp"
 
-Window::Window(GLfloat windowWidth, GLfloat windowHeight, char *windowName, GeometryManager &geometryManager, Function windowInit, Function windowDestroy, Function windowTick, Function windowUpdate, Function windowRender) {
-    this->init = windowInit;
-    this->destroy = windowDestroy;
-    this->tick = windowTick;
-    this->update = windowUpdate;
-    this->render = windowRender;
-    this->geometryManager = geometryManager;
+Window::Window() { }
+
+Window::Window(GLfloat windowWidth, GLfloat windowHeight, char *windowName, GeometryManager &geometryManager, WindowDelegate &windowDelegate) {
+    this->windowDelegate = &windowDelegate;
+    this->geometryManager = &geometryManager;
     
     // Initialize the library
     if (!glfwInit()) {
@@ -50,25 +48,26 @@ Window::Window(GLfloat windowWidth, GLfloat windowHeight, char *windowName, Geom
 }
 
 void Window::_init () {
-    init();
+    windowDelegate->_init();
 }
 
 void Window::_destroy () {
-    destroy();
+    windowDelegate->_destroy();
     glfwTerminate();
 }
 
 void Window::_tick () {
-    tick();
+    windowDelegate->_tick();
 }
 
 void Window::_update () {
-    update();
+    windowDelegate->_update();
 }
 
 void Window::_render () {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    render();
+    geometryManager->draw();
+    windowDelegate->_render();
 }
 
 void Window::windowLoop() {
@@ -96,7 +95,6 @@ void Window::windowLoop() {
         glfwSwapBuffers(window);
         // Poll for and process events
         glfwPollEvents();
-
     }
 }
 

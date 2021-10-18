@@ -24,21 +24,22 @@
 
 #include "Shader.hpp"
 #include "GeometryManager.hpp"
+#include "WindowDelegate.hpp"
 
 using namespace std;
-
-typedef void(*Function)();
 
 class Window {
     GLfloat width;
     GLfloat height;
 
 public:
-    Window (GLfloat windowWidth, GLfloat windowHeight, char* windowName, GeometryManager &geometryManager, Function init, Function destroy, Function tick, Function update, Function render);
-    Function init, destroy, tick, update, render;
+    Window();
+    Window (GLfloat windowWidth, GLfloat windowHeight, char* windowName, GeometryManager &geometryManager, WindowDelegate &windowDelegate);
+
     void windowLoop ();
     GLFWwindow *window;
-    GeometryManager geometryManager;
+    GeometryManager *geometryManager;
+    WindowDelegate *windowDelegate;
     
 private:
     void _init ();

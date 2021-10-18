@@ -48,11 +48,33 @@ Shader::Shader(string vertexPath, string fragmentPath) {
     strcpy(c2, text2.c_str());
     fragmentShader = c2;
     
+//    printf("V: %s, F: %s", vertexPath.c_str(), fragmentPath.c_str());
+    std::ifstream file(vertexPath.c_str());
+
+    cout << std::__fs::filesystem::current_path() << endl;
+    if (file) {
+        std::cout << "file exists: " << vertexPath << std::endl;
+    }
+    else {
+        std::cout << "file doesn't exist: " << vertexPath << std::endl;
+    }
+    
+    std::ifstream file2(fragmentPath.c_str());
+
+    if (file2) {
+        std::cout << "file exists: " << fragmentPath << std::endl;
+    }
+    else {
+        std::cout << "file doesn't exist: " << fragmentPath << std::endl;
+    }
+
 }
 
 void Shader::setup() {
     int  success;
     char infoLog[512];
+//    printf("Vertex Shader: %s\n", vertexShader);
+//    printf("Fragment Shader: %s\n", fragmentShader);
 
     GLuint vs = glCreateShader(GL_VERTEX_SHADER);
     glShaderSource(vs, 1, &vertexShader, NULL);
