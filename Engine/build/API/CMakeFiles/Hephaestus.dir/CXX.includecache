@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/zacharylineman/GitHub/Hephaestus/Engine/API/Hephaestus.cpp
+Hephaestus.hpp
+/Users/zacharylineman/GitHub/Hephaestus/Engine/API/Hephaestus.hpp
+
+/Users/zacharylineman/GitHub/Hephaestus/Engine/API/Hephaestus.hpp
+iostream
+-
+stdio.h
+-
+stdlib.h
+-
+GL/glew.h
+-
+GLFW/glfw3.h
+-
+

@@ -1,0 +1,1 @@
+/usr/bin/clang++ -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -dynamiclib -Wl,-headerpad_max_install_names -o libHephaestus.dylib -install_name @rpath/libHephaestus.dylib CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o 
