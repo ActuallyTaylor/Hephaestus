@@ -32,6 +32,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/Cellar/cmake/3.19.1/share/cmake/Modules/Compiler/Clang.cmake"
   "/usr/local/Cellar/cmake/3.19.1/share/cmake/Modules/Compiler/GNU.cmake"
   "/usr/local/Cellar/cmake/3.19.1/share/cmake/Modules/DartConfiguration.tcl.in"
+  "/usr/local/Cellar/cmake/3.19.1/share/cmake/Modules/FindGLEW.cmake"
+  "/usr/local/Cellar/cmake/3.19.1/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+  "/usr/local/Cellar/cmake/3.19.1/share/cmake/Modules/FindPackageMessage.cmake"
   "/usr/local/Cellar/cmake/3.19.1/share/cmake/Modules/Internal/CMakeCheckCompilerFlag.cmake"
   "/usr/local/Cellar/cmake/3.19.1/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake"
   "/usr/local/Cellar/cmake/3.19.1/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake"
@@ -42,6 +45,14 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/Cellar/cmake/3.19.1/share/cmake/Modules/Platform/Darwin.cmake"
   "/usr/local/Cellar/cmake/3.19.1/share/cmake/Modules/Platform/UnixPaths.cmake"
   "/usr/local/Cellar/cmake/3.19.1/share/cmake/Templates/CPackConfig.cmake.in"
+  "/usr/local/lib/cmake/glew/CopyImportedTargetProperties.cmake"
+  "/usr/local/lib/cmake/glew/glew-config.cmake"
+  "/usr/local/lib/cmake/glew/glew-targets-release.cmake"
+  "/usr/local/lib/cmake/glew/glew-targets.cmake"
+  "/usr/local/lib/cmake/glfw3/glfw3Config.cmake"
+  "/usr/local/lib/cmake/glfw3/glfw3ConfigVersion.cmake"
+  "/usr/local/lib/cmake/glfw3/glfw3Targets-release.cmake"
+  "/usr/local/lib/cmake/glfw3/glfw3Targets.cmake"
   )
 
 # The corresponding makefile is:

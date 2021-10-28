@@ -315,17 +315,32 @@ DART_TESTING_TIMEOUT:STRING=1500
 //Path to a program.
 GITCOMMAND:FILEPATH=/usr/bin/git
 
+//The directory containing a CMake configuration file for GLEW.
+GLEW_DIR:PATH=/usr/local/lib/cmake/glew
+
 //The directory containing a CMake configuration file for GLFW3.
 GLFW3_DIR:PATH=/usr/local/lib/cmake/glfw3
 
 //The directory containing a CMake configuration file for GLM.
 GLM_DIR:PATH=/usr/local/lib/cmake/glm
 
+//Path to a file.
+GLUT_INCLUDE_DIR:PATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk/System/Library/Frameworks/GLUT.framework/Headers
+
+//Cocoa framework for OSX
+GLUT_cocoa_LIBRARY:FILEPATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk/System/Library/Frameworks/Cocoa.framework
+
+//GLUT library for OSX
+GLUT_glut_LIBRARY:FILEPATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk/System/Library/Frameworks/GLUT.framework
+
 //Path to a program.
 HGCOMMAND:FILEPATH=HGCOMMAND-NOTFOUND
 
 //Value Computed by CMake
 Hephaestus_BINARY_DIR:STATIC=/Users/zacharylineman/GitHub/Hephaestus/Engine/build/API
+
+//Dependencies for the target
+Hephaestus_LIB_DEPENDS:STATIC=general;glfw;
 
 //Value Computed by CMake
 Hephaestus_SOURCE_DIR:STATIC=/Users/zacharylineman/GitHub/Hephaestus/Engine/API
@@ -368,6 +383,9 @@ SLURM_SRUN_COMMAND:FILEPATH=SLURM_SRUN_COMMAND-NOTFOUND
 
 //Path to a program.
 SVNCOMMAND:FILEPATH=SVNCOMMAND-NOTFOUND
+
+//The directory containing a CMake configuration file for glfw3.
+glfw3_DIR:PATH=/usr/local/lib/cmake/glfw3
 
 
 ########################
@@ -565,10 +583,20 @@ CVSCOMMAND-ADVANCED:INTERNAL=1
 CVS_UPDATE_OPTIONS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
+//Details about finding GLEW
+FIND_PACKAGE_MESSAGE_DETAILS_GLEW:INTERNAL=[/usr/local/lib/cmake/glew/glew-config.cmake][v()]
+//Details about finding GLUT
+FIND_PACKAGE_MESSAGE_DETAILS_GLUT:INTERNAL=[/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk/System/Library/Frameworks/GLUT.framework][/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk/System/Library/Frameworks/GLUT.framework/Headers][v()]
 //Details about finding OpenGL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk/System/Library/Frameworks/OpenGL.framework][/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk/System/Library/Frameworks/OpenGL.framework][c ][v()]
 //ADVANCED property for variable: GITCOMMAND
 GITCOMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: GLUT_INCLUDE_DIR
+GLUT_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: GLUT_cocoa_LIBRARY
+GLUT_cocoa_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: GLUT_glut_LIBRARY
+GLUT_glut_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: HGCOMMAND
 HGCOMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MAKECOMMAND

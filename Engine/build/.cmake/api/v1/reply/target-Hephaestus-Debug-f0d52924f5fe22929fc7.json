@@ -24,7 +24,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 7,
+				"line" : 16,
 				"parent" : 0
 			}
 		]
@@ -44,6 +44,14 @@
 					"define" : "Hephaestus_EXPORTS"
 				}
 			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 1,
+					"isSystem" : true,
+					"path" : "/usr/local/include"
+				}
+			],
 			"language" : "CXX",
 			"sourceIndexes" : 
 			[
@@ -59,6 +67,11 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "/usr/local/lib/libglfw.3.3.dylib",
+				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"

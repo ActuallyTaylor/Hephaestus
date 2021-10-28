@@ -45,6 +45,14 @@
 					"fragment" : "-g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6"
 				}
 			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "/usr/local/include"
+				}
+			],
 			"language" : "CXX",
 			"sourceIndexes" : 
 			[
@@ -79,6 +87,10 @@
 			{
 				"backtrace" : 2,
 				"fragment" : "API/libHephaestus.dylib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/local/lib/libglfw.3.3.dylib",
 				"role" : "libraries"
 			}
 		],

@@ -4,3 +4,5 @@
 API/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o
  /Users/zacharylineman/GitHub/Hephaestus/Engine/API/Hephaestus.cpp
  /Users/zacharylineman/GitHub/Hephaestus/Engine/API/Hephaestus.hpp
+ /usr/local/include/GL/glew.h
+ /usr/local/include/GLFW/glfw3.h

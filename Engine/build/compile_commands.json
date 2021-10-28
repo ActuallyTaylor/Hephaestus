@@ -1,12 +1,12 @@
 [
 {
   "directory": "/Users/zacharylineman/GitHub/Hephaestus/Engine/build",
-  "command": "/usr/bin/clang++   -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -o CMakeFiles/Olympus.dir/main.cpp.o -c /Users/zacharylineman/GitHub/Hephaestus/Engine/main.cpp",
+  "command": "/usr/bin/clang++  -isystem /usr/local/include -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -o CMakeFiles/Olympus.dir/main.cpp.o -c /Users/zacharylineman/GitHub/Hephaestus/Engine/main.cpp",
   "file": "/Users/zacharylineman/GitHub/Hephaestus/Engine/main.cpp"
 },
 {
   "directory": "/Users/zacharylineman/GitHub/Hephaestus/Engine/build/API",
-  "command": "/usr/bin/clang++ -DHephaestus_EXPORTS  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -fPIC -o CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o -c /Users/zacharylineman/GitHub/Hephaestus/Engine/API/Hephaestus.cpp",
+  "command": "/usr/bin/clang++ -DHephaestus_EXPORTS -isystem /usr/local/include -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -fPIC -o CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o -c /Users/zacharylineman/GitHub/Hephaestus/Engine/API/Hephaestus.cpp",
   "file": "/Users/zacharylineman/GitHub/Hephaestus/Engine/API/Hephaestus.cpp"
 }
 ]

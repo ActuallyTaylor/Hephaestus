@@ -98,6 +98,7 @@ Hephaestus_EXTERNAL_OBJECTS =
 
 API/libHephaestus.dylib: API/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o
 API/libHephaestus.dylib: API/CMakeFiles/Hephaestus.dir/build.make
+API/libHephaestus.dylib: /usr/local/lib/libglfw.3.3.dylib
 API/libHephaestus.dylib: API/CMakeFiles/Hephaestus.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/zacharylineman/GitHub/Hephaestus/Engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library libHephaestus.dylib"
 	cd /Users/zacharylineman/GitHub/Hephaestus/Engine/build/API && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Hephaestus.dir/link.txt --verbose=$(VERBOSE)

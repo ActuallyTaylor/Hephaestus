@@ -1630,6 +1630,30 @@
 			"value" : "1500"
 		},
 		{
+			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_GLEW",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Details about finding GLEW"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "[/usr/local/lib/cmake/glew/glew-config.cmake][v()]"
+		},
+		{
+			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_GLUT",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Details about finding GLUT"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "[/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk/System/Library/Frameworks/GLUT.framework][/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk/System/Library/Frameworks/GLUT.framework/Headers][v()]"
+		},
+		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_OpenGL",
 			"properties" : 
 			[
@@ -1658,6 +1682,18 @@
 			"value" : "/usr/bin/git"
 		},
 		{
+			"name" : "GLEW_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for GLEW."
+				}
+			],
+			"type" : "PATH",
+			"value" : "/usr/local/lib/cmake/glew"
+		},
+		{
 			"name" : "GLFW3_DIR",
 			"properties" : 
 			[
@@ -1680,6 +1716,54 @@
 			],
 			"type" : "PATH",
 			"value" : "/usr/local/lib/cmake/glm"
+		},
+		{
+			"name" : "GLUT_INCLUDE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a file."
+				}
+			],
+			"type" : "PATH",
+			"value" : "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk/System/Library/Frameworks/GLUT.framework/Headers"
+		},
+		{
+			"name" : "GLUT_cocoa_LIBRARY",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Cocoa framework for OSX"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk/System/Library/Frameworks/Cocoa.framework"
+		},
+		{
+			"name" : "GLUT_glut_LIBRARY",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "GLUT library for OSX"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk/System/Library/Frameworks/GLUT.framework"
 		},
 		{
 			"name" : "HGCOMMAND",
@@ -1708,6 +1792,18 @@
 			],
 			"type" : "STATIC",
 			"value" : "/Users/zacharylineman/GitHub/Hephaestus/Engine/build/API"
+		},
+		{
+			"name" : "Hephaestus_LIB_DEPENDS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Dependencies for the target"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "general;glfw;"
 		},
 		{
 			"name" : "Hephaestus_SOURCE_DIR",
@@ -1920,6 +2016,18 @@
 			],
 			"type" : "FILEPATH",
 			"value" : "SVNCOMMAND-NOTFOUND"
+		},
+		{
+			"name" : "glfw3_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for glfw3."
+				}
+			],
+			"type" : "PATH",
+			"value" : "/usr/local/lib/cmake/glfw3"
 		}
 	],
 	"kind" : "cache",
