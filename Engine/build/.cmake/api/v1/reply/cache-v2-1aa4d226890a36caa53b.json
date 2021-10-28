@@ -1710,18 +1710,6 @@
 			"value" : "/Users/zacharylineman/GitHub/Hephaestus/Engine/build/API"
 		},
 		{
-			"name" : "Hephaestus_LIB_DEPENDS",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Dependencies for the target"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "general;glfw3;general;opengl32;general;assimp;"
-		},
-		{
 			"name" : "Hephaestus_SOURCE_DIR",
 			"properties" : 
 			[
@@ -1932,22 +1920,6 @@
 			],
 			"type" : "FILEPATH",
 			"value" : "SVNCOMMAND-NOTFOUND"
-		},
-		{
-			"name" : "glm_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "(This variable does not exist and should not be used)"
-				}
-			],
-			"type" : "UNINITIALIZED",
-			"value" : ""
 		}
 	],
 	"kind" : "cache",

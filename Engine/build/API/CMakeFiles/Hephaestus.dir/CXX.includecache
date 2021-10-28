@@ -17,8 +17,4 @@ stdio.h
 -
 stdlib.h
 -
-GL/glew.h
--
-GLFW/glfw3.h
--
 

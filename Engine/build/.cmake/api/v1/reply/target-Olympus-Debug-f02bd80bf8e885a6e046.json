@@ -80,18 +80,6 @@
 				"backtrace" : 2,
 				"fragment" : "API/libHephaestus.dylib",
 				"role" : "libraries"
-			},
-			{
-				"fragment" : "-lglfw3",
-				"role" : "libraries"
-			},
-			{
-				"fragment" : "-lopengl32",
-				"role" : "libraries"
-			},
-			{
-				"fragment" : "-lassimp",
-				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"

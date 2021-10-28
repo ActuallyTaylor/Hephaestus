@@ -10,19 +10,19 @@ add_library(Hephaestus SHARED
             )
 
 # OpenGL
-find_package(OpenGL REQUIRED)
+# find_package(OpenGL REQUIRED)
 
 # GLM
-find_package(GLM REQUIRED)
-message(STATUS "GLM included at ${GLM_INCLUDE_DIR}")
+# find_package(GLM REQUIRED)
+# message(STATUS "GLM included at ${GLM_INCLUDE_DIR}")
 
 # GLFW
-find_package(GLFW3 REQUIRED)
-message(STATUS "Found GLFW3 in ${GLFW3_INCLUDE_DIR}")
+# find_package(GLFW3 REQUIRED)
+# message(STATUS "Found GLFW3 in ${GLFW3_INCLUDE_DIR}")
 
-set(LIBS glfw3 opengl32 assimp)
+# set(LIBS glfw3)
 
-target_link_libraries(Hephaestus ${LIBS})
+# target_link_libraries(Hephaestus ${LIBS})
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})

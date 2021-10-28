@@ -32,9 +32,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/Cellar/cmake/3.19.1/share/cmake/Modules/Compiler/Clang.cmake"
   "/usr/local/Cellar/cmake/3.19.1/share/cmake/Modules/Compiler/GNU.cmake"
   "/usr/local/Cellar/cmake/3.19.1/share/cmake/Modules/DartConfiguration.tcl.in"
-  "/usr/local/Cellar/cmake/3.19.1/share/cmake/Modules/FindOpenGL.cmake"
-  "/usr/local/Cellar/cmake/3.19.1/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
-  "/usr/local/Cellar/cmake/3.19.1/share/cmake/Modules/FindPackageMessage.cmake"
   "/usr/local/Cellar/cmake/3.19.1/share/cmake/Modules/Internal/CMakeCheckCompilerFlag.cmake"
   "/usr/local/Cellar/cmake/3.19.1/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake"
   "/usr/local/Cellar/cmake/3.19.1/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake"
@@ -45,12 +42,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/Cellar/cmake/3.19.1/share/cmake/Modules/Platform/Darwin.cmake"
   "/usr/local/Cellar/cmake/3.19.1/share/cmake/Modules/Platform/UnixPaths.cmake"
   "/usr/local/Cellar/cmake/3.19.1/share/cmake/Templates/CPackConfig.cmake.in"
-  "/usr/local/lib/cmake/glfw3/GLFW3Config.cmake"
-  "/usr/local/lib/cmake/glfw3/GLFW3ConfigVersion.cmake"
-  "/usr/local/lib/cmake/glfw3/glfw3Targets-release.cmake"
-  "/usr/local/lib/cmake/glfw3/glfw3Targets.cmake"
-  "/usr/local/lib/cmake/glm/GLMConfig-version.cmake"
-  "/usr/local/lib/cmake/glm/GLMConfig.cmake"
   )
 
 # The corresponding makefile is:

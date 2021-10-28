@@ -327,9 +327,6 @@ HGCOMMAND:FILEPATH=HGCOMMAND-NOTFOUND
 //Value Computed by CMake
 Hephaestus_BINARY_DIR:STATIC=/Users/zacharylineman/GitHub/Hephaestus/Engine/build/API
 
-//Dependencies for the target
-Hephaestus_LIB_DEPENDS:STATIC=general;glfw3;general;opengl32;general;assimp;
-
 //Value Computed by CMake
 Hephaestus_SOURCE_DIR:STATIC=/Users/zacharylineman/GitHub/Hephaestus/Engine/API
 

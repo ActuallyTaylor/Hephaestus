@@ -16,8 +16,7 @@
 #include <stdlib.h>
 
 // Include GLEW & GLFW headers
-#include <GL/glew.h>
-#include <GLFW/glfw3.h>
+// #include <GL/glew.r3.h>
 
 class Hephaestus
 {
