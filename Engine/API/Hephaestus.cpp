@@ -11,5 +11,5 @@
 #include "Hephaestus.hpp"
 
 Hephaestus::Hephaestus() {
-
+    std::cout << "Hello World!";
 };

@@ -204,6 +204,33 @@ Hephaestus.cpp.s:
 	cd /Users/zacharylineman/GitHub/Hephaestus/Engine/build && $(MAKE) $(MAKESILENT) -f API/CMakeFiles/Hephaestus.dir/build.make API/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.s
 .PHONY : Hephaestus.cpp.s
 
+Window/Window.o: Window/Window.cpp.o
+
+.PHONY : Window/Window.o
+
+# target to build an object file
+Window/Window.cpp.o:
+	cd /Users/zacharylineman/GitHub/Hephaestus/Engine/build && $(MAKE) $(MAKESILENT) -f API/CMakeFiles/Hephaestus.dir/build.make API/CMakeFiles/Hephaestus.dir/Window/Window.cpp.o
+.PHONY : Window/Window.cpp.o
+
+Window/Window.i: Window/Window.cpp.i
+
+.PHONY : Window/Window.i
+
+# target to preprocess a source file
+Window/Window.cpp.i:
+	cd /Users/zacharylineman/GitHub/Hephaestus/Engine/build && $(MAKE) $(MAKESILENT) -f API/CMakeFiles/Hephaestus.dir/build.make API/CMakeFiles/Hephaestus.dir/Window/Window.cpp.i
+.PHONY : Window/Window.cpp.i
+
+Window/Window.s: Window/Window.cpp.s
+
+.PHONY : Window/Window.s
+
+# target to generate assembly for a file
+Window/Window.cpp.s:
+	cd /Users/zacharylineman/GitHub/Hephaestus/Engine/build && $(MAKE) $(MAKESILENT) -f API/CMakeFiles/Hephaestus.dir/build.make API/CMakeFiles/Hephaestus.dir/Window/Window.cpp.s
+.PHONY : Window/Window.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -219,6 +246,9 @@ help:
 	@echo "... Hephaestus.o"
 	@echo "... Hephaestus.i"
 	@echo "... Hephaestus.s"
+	@echo "... Window/Window.o"
+	@echo "... Window/Window.i"
+	@echo "... Window/Window.s"
 .PHONY : help
 
 

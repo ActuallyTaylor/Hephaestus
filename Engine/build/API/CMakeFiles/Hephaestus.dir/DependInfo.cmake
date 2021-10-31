@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/zacharylineman/GitHub/Hephaestus/Engine/API/Hephaestus.cpp" "/Users/zacharylineman/GitHub/Hephaestus/Engine/build/API/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o"
+  "/Users/zacharylineman/GitHub/Hephaestus/Engine/API/Window/Window.cpp" "/Users/zacharylineman/GitHub/Hephaestus/Engine/build/API/CMakeFiles/Hephaestus.dir/Window/Window.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

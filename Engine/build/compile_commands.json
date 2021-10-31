@@ -8,5 +8,10 @@
   "directory": "/Users/zacharylineman/GitHub/Hephaestus/Engine/build/API",
   "command": "/usr/bin/clang++ -DHephaestus_EXPORTS -isystem /usr/local/include -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -fPIC -o CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o -c /Users/zacharylineman/GitHub/Hephaestus/Engine/API/Hephaestus.cpp",
   "file": "/Users/zacharylineman/GitHub/Hephaestus/Engine/API/Hephaestus.cpp"
+},
+{
+  "directory": "/Users/zacharylineman/GitHub/Hephaestus/Engine/build/API",
+  "command": "/usr/bin/clang++ -DHephaestus_EXPORTS -isystem /usr/local/include -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -fPIC -o CMakeFiles/Hephaestus.dir/Window/Window.cpp.o -c /Users/zacharylineman/GitHub/Hephaestus/Engine/API/Window/Window.cpp",
+  "file": "/Users/zacharylineman/GitHub/Hephaestus/Engine/API/Window/Window.cpp"
 }
 ]

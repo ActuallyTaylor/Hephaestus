@@ -3,6 +3,12 @@
 
 API/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o: ../API/Hephaestus.cpp
 API/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o: ../API/Hephaestus.hpp
+API/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o: ../API/Window/Window.hpp
 API/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o: /usr/local/include/GL/glew.h
 API/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o: /usr/local/include/GLFW/glfw3.h
+
+API/CMakeFiles/Hephaestus.dir/Window/Window.cpp.o: ../API/Window/Window.cpp
+API/CMakeFiles/Hephaestus.dir/Window/Window.cpp.o: ../API/Window/Window.hpp
+API/CMakeFiles/Hephaestus.dir/Window/Window.cpp.o: /usr/local/include/GL/glew.h
+API/CMakeFiles/Hephaestus.dir/Window/Window.cpp.o: /usr/local/include/GLFW/glfw3.h
 

@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o"
+  "CMakeFiles/Hephaestus.dir/Window/Window.cpp.o"
   "libHephaestus.dylib"
   "libHephaestus.pdb"
 )

@@ -21,6 +21,20 @@ GL/glew.h
 -
 GLFW/glfw3.h
 -
+Window/Window.hpp
+/Users/zacharylineman/GitHub/Hephaestus/Engine/API/Window/Window.hpp
+
+/Users/zacharylineman/GitHub/Hephaestus/Engine/API/Window/Window.hpp
+iostream
+-
+stdio.h
+-
+stdlib.h
+-
+GL/glew.h
+-
+GLFW/glfw3.h
+-
 
 /usr/local/include/GL/glew.h
 cstddef

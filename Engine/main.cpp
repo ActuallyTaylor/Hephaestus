@@ -1,5 +1,7 @@
 #include <iostream>
+#include "API/Hephaestus.hpp"
 
 int main(int, char**) {
-    std::cout << "Hello, world!\n";
+    Hephaestus engine = Hephaestus();
+    
 }

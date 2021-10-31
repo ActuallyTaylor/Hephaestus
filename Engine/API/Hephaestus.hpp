@@ -19,8 +19,15 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
+// Include internal classes
+#include "Window/Window.hpp"
+
 class Hephaestus
 {
+private:
+    GLFWwindow *window;
+
+public:
     Hephaestus();
 };
 
