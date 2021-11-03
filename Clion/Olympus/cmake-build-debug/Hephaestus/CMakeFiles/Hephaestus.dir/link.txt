@@ -1,0 +1,2 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libHephaestus.a CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o CMakeFiles/Hephaestus.dir/Window/Window.cpp.o CMakeFiles/Hephaestus.dir/Shader/Shader.cpp.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libHephaestus.a
