@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/Hephaestus/Hephaestus.cpp" "/Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o"
   "/Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/Hephaestus/Shader/Shader.cpp" "/Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Shader/Shader.cpp.o"
+  "/Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/Hephaestus/Sprite/Sprite.cpp" "/Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Sprite/Sprite.cpp.o"
   "/Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/Hephaestus/Window/Window.cpp" "/Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Window/Window.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

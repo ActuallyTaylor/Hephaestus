@@ -9,6 +9,8 @@
 /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/Hephaestus/Hephaestus.cpp
 Hephaestus.hpp
 /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/Hephaestus/Hephaestus.hpp
+utility
+-
 
 /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/Hephaestus/Hephaestus.hpp
 iostream
@@ -23,10 +25,42 @@ vector
 -
 Window/Window.hpp
 /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/Hephaestus/Window/Window.hpp
-
-/Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/Hephaestus/Shader/Shader.cpp
-Shader.hpp
+Shader/Shader.hpp
 /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/Hephaestus/Shader/Shader.hpp
+Sprite/Sprite.hpp
+/Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/Hephaestus/Sprite/Sprite.hpp
+
+/Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/Hephaestus/Library/stb_image.hpp
+stb_image.h
+/Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/Hephaestus/Library/stb_image.h
+stdio.h
+-
+stdlib.h
+-
+stdarg.h
+-
+stddef.h
+-
+stdlib.h
+-
+string.h
+-
+limits.h
+-
+math.h
+-
+stdio.h
+-
+assert.h
+-
+stdint.h
+-
+emmintrin.h
+-
+intrin.h
+-
+arm_neon.h
+-
 
 /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/Hephaestus/Shader/Shader.hpp
 iostream
@@ -43,6 +77,12 @@ glm/glm.hpp
 /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/Hephaestus/Shader/glm/glm.hpp
 glm/gtc/type_ptr.hpp
 -
+
+/Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/Hephaestus/Sprite/Sprite.hpp
+../Shader/Shader.hpp
+/Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/Hephaestus/Shader/Shader.hpp
+../Library/stb_image.hpp
+/Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/Hephaestus/Library/stb_image.hpp
 
 /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/Hephaestus/Window/Window.cpp
 Window.hpp

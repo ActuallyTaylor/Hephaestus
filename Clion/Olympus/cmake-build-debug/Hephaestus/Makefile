@@ -178,6 +178,30 @@ Shader/Shader.cpp.s:
 	cd /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Shader/Shader.cpp.s
 .PHONY : Shader/Shader.cpp.s
 
+Sprite/Sprite.o: Sprite/Sprite.cpp.o
+.PHONY : Sprite/Sprite.o
+
+# target to build an object file
+Sprite/Sprite.cpp.o:
+	cd /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Sprite/Sprite.cpp.o
+.PHONY : Sprite/Sprite.cpp.o
+
+Sprite/Sprite.i: Sprite/Sprite.cpp.i
+.PHONY : Sprite/Sprite.i
+
+# target to preprocess a source file
+Sprite/Sprite.cpp.i:
+	cd /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Sprite/Sprite.cpp.i
+.PHONY : Sprite/Sprite.cpp.i
+
+Sprite/Sprite.s: Sprite/Sprite.cpp.s
+.PHONY : Sprite/Sprite.s
+
+# target to generate assembly for a file
+Sprite/Sprite.cpp.s:
+	cd /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Sprite/Sprite.cpp.s
+.PHONY : Sprite/Sprite.cpp.s
+
 Window/Window.o: Window/Window.cpp.o
 .PHONY : Window/Window.o
 
@@ -217,6 +241,9 @@ help:
 	@echo "... Shader/Shader.o"
 	@echo "... Shader/Shader.i"
 	@echo "... Shader/Shader.s"
+	@echo "... Sprite/Sprite.o"
+	@echo "... Sprite/Sprite.i"
+	@echo "... Sprite/Sprite.s"
 	@echo "... Window/Window.o"
 	@echo "... Window/Window.i"
 	@echo "... Window/Window.s"

@@ -31,8 +31,9 @@ class Shader {
     const char *fragmentShader;
 
 public:
-    Shader (string vertexPath, string fragmentPath);
-    void setup ();
+    Shader();
+    Shader(string vertexPath, string fragmentPath);
+    void setup();
     void use();
 
     void setFloat (const char *name, float value, bool useShader = false);

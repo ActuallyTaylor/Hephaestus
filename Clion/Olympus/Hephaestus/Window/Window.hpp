@@ -1,6 +1,12 @@
-//
-// Created by Zachary lineman on 11/1/21.
-//
+/*
+    Window.hpp
+    Zachary lineman
+    11/1/21
+
+    =================
+    DESCRIPTION
+    =================
+*/
 
 #ifndef OLYMPUS_WINDOW_HPP
 #define OLYMPUS_WINDOW_HPP
@@ -12,17 +18,30 @@
 #include <string>
 #include <vector>
 
+typedef void (*Function)();
+
 class Window {
 private:
     std::string windowName;
-    int width {720};
+    int width { 720 };
     int height { 720 };
 
     GLFWwindow *window;
+
+    void _init ();
+    void _destroy ();
+    void _tick ();
+    void _update ();
+    void _render ();
+
+//    void windowCallback(GLFWwindow* window, int width, int height);
 public:
+    Window();
     Window(std::string windowName, int width, int height);
 
     void windowLoop();
+
+    Function init, destroy, tick, update, render;
 };
 
 #endif //OLYMPUS_WINDOW_HPP

@@ -66,10 +66,19 @@
 		<Unit filename="/Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/Hephaestus/Hephaestus.hpp">
 			<Option target="Hephaestus"/>
 		</Unit>
+		<Unit filename="/Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/Hephaestus/Library/stb_image.hpp">
+			<Option target="Hephaestus"/>
+		</Unit>
 		<Unit filename="/Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/Hephaestus/Shader/Shader.cpp">
 			<Option target="Hephaestus"/>
 		</Unit>
 		<Unit filename="/Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/Hephaestus/Shader/Shader.hpp">
+			<Option target="Hephaestus"/>
+		</Unit>
+		<Unit filename="/Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/Hephaestus/Sprite/Sprite.cpp">
+			<Option target="Hephaestus"/>
+		</Unit>
+		<Unit filename="/Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/Hephaestus/Sprite/Sprite.hpp">
 			<Option target="Hephaestus"/>
 		</Unit>
 		<Unit filename="/Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/Hephaestus/Window/Window.cpp">

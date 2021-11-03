@@ -10,6 +10,27 @@
 
 #include "Shader.hpp"
 
+Shader::Shader() {
+    // Build Shaders
+    string line,text;
+    ifstream in("./shader.frag");
+    while(getline(in, line)) {
+        text += line + "\n";
+    }
+    char* c = new char[text.length() + 1];
+    strcpy(c, text.c_str());
+    vertexShader = c;
+
+    string line2,text2;
+    ifstream in2("./shader.vert");
+    while(getline(in2, line2)) {
+        text2 += line2 + "\n";
+    }
+    char* c2 = new char[text.length() + 1];
+    strcpy(c2, text2.c_str());
+    fragmentShader = c2;
+}
+
 Shader::Shader(string vertexPath, string fragmentPath) {
     // Build Shaders
     string line,text;

@@ -1,8 +1,15 @@
-//
-// Created by Zachary lineman on 11/1/21.
-//
+/*
+    Window.cpp
+    Zachary lineman
+    11/1/21
 
+    =================
+    DESCRIPTION
+    =================
+*/
 #include "Window.hpp"
+
+Window::Window() { }
 
 Window::Window(std::string sentWindowName, int sentWidth, int sentHeight) {
     windowName = sentWindowName;
@@ -39,6 +46,7 @@ Window::Window(std::string sentWindowName, int sentWidth, int sentHeight) {
 }
 
 void Window::windowLoop() {
+    _init();
     glEnable(GL_DEPTH_TEST);
     double lastTime = glfwGetTime();
     int nbFrames = 0;
@@ -55,9 +63,42 @@ void Window::windowLoop() {
             lastTime += 1.0;
         }
 
+        _update();
+        _render();
+
         // Swap front and back buffers
         glfwSwapBuffers(window);
         // Poll for and process events
         glfwPollEvents();
+    }
+}
+
+void Window::_init() {
+    if (init != NULL) {
+        init();
+    }
+}
+
+void Window::_destroy() {
+    if (destroy != NULL) {
+        destroy();
+    }
+}
+
+void Window::_tick() {
+    if (tick != NULL) {
+        tick();
+    }
+}
+
+void Window::_update() {
+    if (update != NULL) {
+        update();
+    }
+}
+
+void Window::_render() {
+    if (render != NULL) {
+        render();
     }
 }

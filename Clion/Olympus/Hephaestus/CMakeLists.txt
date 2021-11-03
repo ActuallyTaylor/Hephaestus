@@ -3,7 +3,7 @@ project(Hephaestus)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_library(Hephaestus Hephaestus.cpp Hephaestus.cpp Hephaestus.hpp Window/Window.cpp Window/Window.hpp Shader/Shader.cpp Shader/Shader.hpp)
+add_library(Hephaestus Hephaestus.cpp Hephaestus.cpp Hephaestus.hpp Window/Window.cpp Window/Window.hpp Shader/Shader.cpp Shader/Shader.hpp Sprite/Sprite.cpp Sprite/Sprite.hpp Library/stb_image.hpp)
 
 find_package(glfw3 3.3 REQUIRED)
 target_link_libraries(Hephaestus glfw)
