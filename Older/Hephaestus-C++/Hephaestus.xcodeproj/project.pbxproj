@@ -13,12 +13,12 @@
 		4B05F0A126F0358C00285C21 /* GeometryManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B05F09F26F0358C00285C21 /* GeometryManager.cpp */; };
 		4B05F0A926F0521600285C21 /* shader.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4B05F0A726F051D300285C21 /* shader.frag */; };
 		4B05F0AA26F0521600285C21 /* shader.vert in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4B05F0A826F051D300285C21 /* shader.vert */; };
-		4B45369726EB8A2400B9D379 /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B74681C26EB0F5100548E70 /* libglfw.3.3.dylib */; };
-		4B45369826EB8A2400B9D379 /* libglfw.3.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 4B74681C26EB0F5100548E70 /* libglfw.3.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		4B45369A26EB8A4000B9D379 /* libGLEW.2.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B74682026EB0F6E00548E70 /* libGLEW.2.2.0.dylib */; };
-		4B45369B26EB8A4000B9D379 /* libGLEW.2.2.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 4B74682026EB0F6E00548E70 /* libGLEW.2.2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4B74681126EB051000548E70 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B74681026EB051000548E70 /* main.cpp */; };
 		4B74681B26EB0F0B00548E70 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B74681A26EB0F0B00548E70 /* OpenGL.framework */; };
+		4B86F0762734C3BF00412CFB /* libGLEW.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B86F0752734C3BF00412CFB /* libGLEW.dylib */; };
+		4B86F0772734C3BF00412CFB /* libGLEW.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 4B86F0752734C3BF00412CFB /* libGLEW.dylib */; };
+		4B86F0792734C3CD00412CFB /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B86F0782734C3CD00412CFB /* libglfw.dylib */; };
+		4B86F07A2734C3CD00412CFB /* libglfw.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 4B86F0782734C3CD00412CFB /* libglfw.dylib */; };
 		4BD6A2312710A6190083F608 /* Keybind.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BD6A22F2710A6190083F608 /* Keybind.cpp */; };
 		4BDC501726F8ED820017F1B0 /* Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC501526F8ED820017F1B0 /* Sprite.cpp */; };
 		4BDC501926F915B30017F1B0 /* missing.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BDC501826F915A80017F1B0 /* missing.jpg */; };
@@ -39,8 +39,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4B45369826EB8A2400B9D379 /* libglfw.3.3.dylib in Embed Libraries */,
-				4B45369B26EB8A4000B9D379 /* libGLEW.2.2.0.dylib in Embed Libraries */,
+				4B86F07A2734C3CD00412CFB /* libglfw.dylib in Embed Libraries */,
+				4B86F0772734C3BF00412CFB /* libGLEW.dylib in Embed Libraries */,
 			);
 			name = "Embed Libraries";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,6 +77,8 @@
 		4B74681A26EB0F0B00548E70 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		4B74681C26EB0F5100548E70 /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../../usr/local/Cellar/glfw/3.3.2/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
 		4B74682026EB0F6E00548E70 /* libGLEW.2.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.2.0.dylib; path = ../../../../../usr/local/Cellar/glew/2.2.0/lib/libGLEW.2.2.0.dylib; sourceTree = "<group>"; };
+		4B86F0752734C3BF00412CFB /* libGLEW.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.dylib; path = ../../../../../../usr/local/Cellar/glew/2.2.0/lib/libGLEW.dylib; sourceTree = "<group>"; };
+		4B86F0782734C3CD00412CFB /* libglfw.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.dylib; path = ../../../../../../usr/local/Cellar/glfw/3.3.2/lib/libglfw.dylib; sourceTree = "<group>"; };
 		4BD6A22F2710A6190083F608 /* Keybind.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Keybind.cpp; sourceTree = "<group>"; };
 		4BD6A2302710A6190083F608 /* Keybind.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Keybind.hpp; sourceTree = "<group>"; };
 		4BDC501526F8ED820017F1B0 /* Sprite.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sprite.cpp; sourceTree = "<group>"; };
@@ -524,9 +526,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B45369726EB8A2400B9D379 /* libglfw.3.3.dylib in Frameworks */,
-				4B45369A26EB8A4000B9D379 /* libGLEW.2.2.0.dylib in Frameworks */,
+				4B86F0762734C3BF00412CFB /* libGLEW.dylib in Frameworks */,
 				4B74681B26EB0F0B00548E70 /* OpenGL.framework in Frameworks */,
+				4B86F0792734C3CD00412CFB /* libglfw.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,6 +636,8 @@
 		4B74681926EB0F0B00548E70 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4B86F0782734C3CD00412CFB /* libglfw.dylib */,
+				4B86F0752734C3BF00412CFB /* libGLEW.dylib */,
 				4B74682026EB0F6E00548E70 /* libGLEW.2.2.0.dylib */,
 				4B74681C26EB0F5100548E70 /* libglfw.3.3.dylib */,
 				4B74681A26EB0F0B00548E70 /* OpenGL.framework */,

@@ -24,12 +24,10 @@
 // Custom Classes
 #include "Window/Window.hpp"
 #include "Shader/Shader.hpp"
-#include "Sprite/Sprite.hpp"
 
 class Hephaestus {
 private:
     Window window;
-    vector<Sprite> sprites;
     std::string name;
 
 public:
@@ -41,7 +39,7 @@ public:
     Sprite* createSprite(Shader shader, std::string texturePath);
     Sprite* createSprite(Shader shader, std::string texturePath, GLfloat x, GLfloat y, GLfloat z);
 
-    // Set Hephaestus Callbakc Functions
+    // Set Hephaestus Callback Functions
     void setInit(Function function1);
     void setDestroy(Function function1);
     void setTick(Function function1);

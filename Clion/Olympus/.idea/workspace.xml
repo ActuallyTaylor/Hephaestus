@@ -12,44 +12,68 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f22769bb-d6a0-46e4-a0f3-ebdc8ac76c3d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/stb_image.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hephaestus/Sprite/Sprite.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hephaestus/Sprite/Sprite.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Images/missing.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Images/wall.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Images/white.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Shaders/Common/shader.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Shaders/Common/shader.vert" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hephaestus/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hephaestus/Hephaestus.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Hephaestus.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hephaestus/Hephaestus.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Hephaestus.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hephaestus/Shader/Shader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Shader/Shader.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hephaestus/Shader/Shader.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Shader/Shader.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Sprite/Sprite.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Sprite/Sprite.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Sprite/Sprite.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Sprite/Sprite.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hephaestus/Window/Window.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Window/Window.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hephaestus/Window/Window.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Window/Window.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Shader/Shader.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Shader/Shader.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Sprite/Sprite.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Sprite/Sprite.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Window/Window.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Window/Window.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/cmake_clean.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/Hephaestus.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/Hephaestus.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/libHephaestus.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/libHephaestus.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Olympus" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Olympus" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Olympus.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Olympus.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Older/Hephaestus-C++/Hephaestus.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../Older/Hephaestus-C++/Hephaestus.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Older/Hephaestus-C++/Hephaestus.xcodeproj/project.xcworkspace/xcuserdata/zacharylineman.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../../Older/Hephaestus-C++/Hephaestus.xcodeproj/project.xcworkspace/xcuserdata/zacharylineman.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Older/Hephaestus-C++/Hephaestus/src/API/Hephaestus.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/API/Hephaestus.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Older/Hephaestus-C++/Hephaestus/src/API/Hephaestus.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/API/Hephaestus.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Older/Hephaestus-C++/Hephaestus/src/API/WindowDelegate/WindowDelegate.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/API/WindowDelegate/WindowDelegate.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Older/Hephaestus-C++/Hephaestus/src/API/WindowDelegate/WindowDelegate.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/API/WindowDelegate/WindowDelegate.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Older/Hephaestus-C++/Hephaestus/src/Classes/Controls/Controls.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/Classes/Controls/Controls.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Older/Hephaestus-C++/Hephaestus/src/Classes/Controls/Controls.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/Classes/Controls/Controls.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Older/Hephaestus-C++/Hephaestus/src/Classes/Controls/Keybind/Keybind.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/Classes/Controls/Keybind/Keybind.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Older/Hephaestus-C++/Hephaestus/src/Classes/Controls/Keybind/Keybind.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/Classes/Controls/Keybind/Keybind.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Older/Hephaestus-C++/Hephaestus/src/Classes/CustomNamespace.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/Classes/CustomNamespace.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Older/Hephaestus-C++/Hephaestus/src/Classes/CustomNamespace.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/Classes/CustomNamespace.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Older/Hephaestus-C++/Hephaestus/src/Classes/Geometry Manager/Compressed Data/CompressedData.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/Classes/Geometry Manager/Compressed Data/CompressedData.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Older/Hephaestus-C++/Hephaestus/src/Classes/Geometry Manager/Compressed Data/CompressedData.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/Classes/Geometry Manager/Compressed Data/CompressedData.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Older/Hephaestus-C++/Hephaestus/src/Classes/Geometry Manager/GeometryManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/Classes/Geometry Manager/GeometryManager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Older/Hephaestus-C++/Hephaestus/src/Classes/Geometry Manager/GeometryManager.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/Classes/Geometry Manager/GeometryManager.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Older/Hephaestus-C++/Hephaestus/src/Classes/Geometry Manager/Shapes/Cube/Cube.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/Classes/Geometry Manager/Shapes/Cube/Cube.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Older/Hephaestus-C++/Hephaestus/src/Classes/Geometry Manager/Shapes/Cube/Cube.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/Classes/Geometry Manager/Shapes/Cube/Cube.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Older/Hephaestus-C++/Hephaestus/src/Classes/Geometry Manager/Shapes/Triangle/Triangle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/Classes/Geometry Manager/Shapes/Triangle/Triangle.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Older/Hephaestus-C++/Hephaestus/src/Classes/Geometry Manager/Shapes/Triangle/Triangle.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/Classes/Geometry Manager/Shapes/Triangle/Triangle.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Older/Hephaestus-C++/Hephaestus/src/Classes/Geometry Manager/Sprite/Sprite.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/Classes/Geometry Manager/Sprite/Sprite.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Older/Hephaestus-C++/Hephaestus/src/Classes/Geometry Manager/Sprite/Sprite.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/Classes/Geometry Manager/Sprite/Sprite.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Older/Hephaestus-C++/Hephaestus/src/Classes/Geometry Manager/Vertex/Vertex.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/Classes/Geometry Manager/Vertex/Vertex.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Older/Hephaestus-C++/Hephaestus/src/Classes/Geometry Manager/Vertex/Vertex.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/Classes/Geometry Manager/Vertex/Vertex.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Older/Hephaestus-C++/Hephaestus/src/Classes/Shader/Shader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/Classes/Shader/Shader.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Older/Hephaestus-C++/Hephaestus/src/Classes/Shader/Shader.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/Classes/Shader/Shader.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Older/Hephaestus-C++/Hephaestus/src/Classes/Vector/Vector 2/Vector2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/Classes/Vector/Vector 2/Vector2.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Older/Hephaestus-C++/Hephaestus/src/Classes/Vector/Vector 2/Vector2.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/Classes/Vector/Vector 2/Vector2.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Older/Hephaestus-C++/Hephaestus/src/Classes/Vector/Vector 3/Vector3.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/Classes/Vector/Vector 3/Vector3.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Older/Hephaestus-C++/Hephaestus/src/Classes/Vector/Vector 3/Vector3.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/Classes/Vector/Vector 3/Vector3.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Older/Hephaestus-C++/Hephaestus/src/Classes/Window/Window.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/Classes/Window/Window.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Older/Hephaestus-C++/Hephaestus/src/Classes/Window/Window.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/Classes/Window/Window.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Older/Hephaestus-C++/Hephaestus/src/Third Party/stb_image.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/Third Party/stb_image.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Older/Hephaestus-C++/Hephaestus/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,11 +138,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -141,6 +160,9 @@
       <workItem from="1635789700915" duration="780000" />
       <workItem from="1635868409949" duration="2633000" />
       <workItem from="1635942969427" duration="10739000" />
+      <workItem from="1636070391549" duration="5582000" />
+      <workItem from="1636076395243" duration="1786000" />
+      <workItem from="1636078268938" duration="1000" />
     </task>
     <servers />
   </component>

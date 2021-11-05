@@ -111,11 +111,14 @@ CMakeFiles/Olympus.dir/main.cpp.o
  /usr/local/include/glm/ext/matrix_projection.hpp
  /usr/local/include/glm/ext/matrix_projection.inl
  /usr/local/include/glm/ext/matrix_transform.hpp
+ /usr/local/include/glm/ext/matrix_transform.inl
  /usr/local/include/glm/ext/quaternion_common.hpp
  /usr/local/include/glm/ext/quaternion_common.inl
  /usr/local/include/glm/ext/quaternion_common_simd.inl
  /usr/local/include/glm/ext/quaternion_double.hpp
  /usr/local/include/glm/ext/quaternion_double_precision.hpp
+ /usr/local/include/glm/ext/quaternion_exponential.hpp
+ /usr/local/include/glm/ext/quaternion_exponential.inl
  /usr/local/include/glm/ext/quaternion_float.hpp
  /usr/local/include/glm/ext/quaternion_float_precision.hpp
  /usr/local/include/glm/ext/quaternion_geometric.hpp
@@ -180,13 +183,17 @@ CMakeFiles/Olympus.dir/main.cpp.o
  /usr/local/include/glm/gtc/epsilon.hpp
  /usr/local/include/glm/gtc/epsilon.inl
  /usr/local/include/glm/gtc/matrix_transform.hpp
- /usr/local/include/glm/gtc/matrix_transform.inl
  /usr/local/include/glm/gtc/quaternion.hpp
  /usr/local/include/glm/gtc/quaternion.inl
  /usr/local/include/glm/gtc/quaternion_simd.inl
  /usr/local/include/glm/gtc/type_ptr.hpp
  /usr/local/include/glm/gtc/type_ptr.inl
  /usr/local/include/glm/gtc/vec1.hpp
+ /usr/local/include/glm/gtx/component_wise.hpp
+ /usr/local/include/glm/gtx/component_wise.inl
+ /usr/local/include/glm/gtx/norm.hpp
+ /usr/local/include/glm/gtx/norm.inl
+ /usr/local/include/glm/gtx/quaternion.hpp
  /usr/local/include/glm/integer.hpp
  /usr/local/include/glm/mat2x2.hpp
  /usr/local/include/glm/mat2x3.hpp

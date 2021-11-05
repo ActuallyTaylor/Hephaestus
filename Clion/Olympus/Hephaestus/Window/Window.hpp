@@ -8,6 +8,9 @@
     =================
 */
 
+// Parent
+#include "../Hephaestus.hpp"
+
 #ifndef OLYMPUS_WINDOW_HPP
 #define OLYMPUS_WINDOW_HPP
 // OpenGL
@@ -17,6 +20,9 @@
 // C++ Classes
 #include <string>
 #include <vector>
+
+// Custom Classes
+#include "../Sprite/Sprite.hpp"
 
 typedef void (*Function)();
 
@@ -42,6 +48,8 @@ public:
     void windowLoop();
 
     Function init, destroy, tick, update, render;
+
+    vector<Sprite> sprites;
 };
 
 #endif //OLYMPUS_WINDOW_HPP

@@ -9,6 +9,9 @@ void init() {
     const GLubyte* version = glGetString(GL_VERSION); // version as a string
     printf("Renderer: %s\n", renderer);
     printf("OpenGL version supported %s\n", version);
+
+    Shader shader = engine.createShader("./Shaders/Common/shader.vert", "./Shaders/Common/shader.frag");
+    Sprite* mainSprite = engine.createSprite(shader, "./Images/missing.jpg");
 }
 
 void destroy() {

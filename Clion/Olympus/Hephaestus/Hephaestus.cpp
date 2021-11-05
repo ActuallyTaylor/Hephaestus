@@ -10,8 +10,6 @@
 
 #include "Hephaestus.hpp"
 
-#include <utility>
-
 Hephaestus::Hephaestus(const std::string name) {
     this->name = name;
     this->window = Window{name, 720, 720};
@@ -22,23 +20,24 @@ void Hephaestus::startWindowLoop() {
 }
 
 Shader Hephaestus::createShader(std::string vertexPath, std::string fragmentPath) {
-    return  Shader{std::move(vertexPath), std::move(fragmentPath)};
+    Shader shader = Shader{std::move(vertexPath), std::move(fragmentPath)};
+    shader.setup();
+    return shader;
 }
 
 Sprite* Hephaestus::createSprite(Shader shader, std::string texturePath) {
     Sprite sprite = Sprite{shader, std::move(texturePath)};
-    sprites.push_back(sprite);
-    return &sprites.back();
+    window.sprites.push_back(sprite);
+    return &window.sprites.back();
 }
 
 Sprite* Hephaestus::createSprite(Shader shader, std::string texturePath, GLfloat x, GLfloat y, GLfloat z) {
     Sprite sprite = Sprite{shader, std::move(texturePath), x, y, z};
-    sprites.push_back(sprite);
-    return &sprites.back();
+    window.sprites.push_back(sprite);
+    return &window.sprites.back();
 }
 
 void Hephaestus::setInit(Function function1) {
-//    this->window
     this->window.init = function1;
 }
 
@@ -57,4 +56,3 @@ void Hephaestus::setUpdate(Function function1) {
 void Hephaestus::setRender(Function function1) {
     this->window.render = function1;
 }
-

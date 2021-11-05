@@ -83,6 +83,7 @@ void Window::_destroy() {
     if (destroy != NULL) {
         destroy();
     }
+    glfwTerminate();
 }
 
 void Window::_tick() {
@@ -98,6 +99,11 @@ void Window::_update() {
 }
 
 void Window::_render() {
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    for(int i = 0; i < sprites.size(); i++) {
+        sprites[i].draw();
+    }
+
     if (render != NULL) {
         render();
     }

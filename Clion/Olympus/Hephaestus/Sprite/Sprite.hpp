@@ -13,13 +13,23 @@
 #include "../Shader/Shader.hpp"
 #include "../Library/stb_image.hpp"
 
+// GLM Math
+#include <glm/glm.hpp>
+#include <glm/ext/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+#include <glm/gtc/quaternion.hpp>
+#include <glm/gtx/quaternion.hpp>
+
+
 class Sprite {
 private:
-    GLfloat x { 0 };
-    GLfloat y { 0 };
-    GLfloat z { 0 };
+    glm::vec3 position = glm::vec3(300.0f, 300.0f, 0.0f);
+    glm::vec2 size = glm::vec2(50.0f, 50.0f);
+    //                    x  ,  y  ,  z
+    glm::vec3 rotation = glm::vec3(0.0f, 0.0f, 0.0f);
 
     void createTexture(std::string texturePath);
+    void createVirtualBufferObject();
 
     Shader shader;
     GLuint VBO, VAO, EBO, textureAtlas;
@@ -27,7 +37,8 @@ private:
 public:
     Sprite(Shader shader, std::string texturePath);
     Sprite(Shader shader, std::string texturePath, GLfloat x, GLfloat y, GLfloat z);
-//    Sprite(GLfloat x, GLfloat y);
+
+    void draw();
 
     // Mess with X coordinate
     void setX(GLfloat xValue);
