@@ -57,10 +57,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus
+CMAKE_SOURCE_DIR = /Users/zacharylineman/GitHub/Hephaestus/Olympus
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/cmake-build-debug/CMakeFiles /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/cmake-build-debug/Hephaestus//CMakeFiles/progress.marks
-	cd /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Hephaestus/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/cmake-build-debug/CMakeFiles 0
+	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug/Hephaestus//CMakeFiles/progress.marks
+	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Hephaestus/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Hephaestus/clean
+	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Hephaestus/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Hephaestus/preinstall
+	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Hephaestus/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Hephaestus/preinstall
+	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Hephaestus/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 Hephaestus/CMakeFiles/Hephaestus.dir/rule:
-	cd /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Hephaestus/CMakeFiles/Hephaestus.dir/rule
+	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Hephaestus/CMakeFiles/Hephaestus.dir/rule
 .PHONY : Hephaestus/CMakeFiles/Hephaestus.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ Hephaestus: Hephaestus/CMakeFiles/Hephaestus.dir/rule
 
 # fast build rule for target.
 Hephaestus/fast:
-	cd /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/build
+	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/build
 .PHONY : Hephaestus/fast
 
 Hephaestus.o: Hephaestus.cpp.o
@@ -135,7 +135,7 @@ Hephaestus.o: Hephaestus.cpp.o
 
 # target to build an object file
 Hephaestus.cpp.o:
-	cd /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o
+	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o
 .PHONY : Hephaestus.cpp.o
 
 Hephaestus.i: Hephaestus.cpp.i
@@ -143,7 +143,7 @@ Hephaestus.i: Hephaestus.cpp.i
 
 # target to preprocess a source file
 Hephaestus.cpp.i:
-	cd /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.i
+	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.i
 .PHONY : Hephaestus.cpp.i
 
 Hephaestus.s: Hephaestus.cpp.s
@@ -151,7 +151,7 @@ Hephaestus.s: Hephaestus.cpp.s
 
 # target to generate assembly for a file
 Hephaestus.cpp.s:
-	cd /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.s
+	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.s
 .PHONY : Hephaestus.cpp.s
 
 Shader/Shader.o: Shader/Shader.cpp.o
@@ -159,7 +159,7 @@ Shader/Shader.o: Shader/Shader.cpp.o
 
 # target to build an object file
 Shader/Shader.cpp.o:
-	cd /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Shader/Shader.cpp.o
+	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Shader/Shader.cpp.o
 .PHONY : Shader/Shader.cpp.o
 
 Shader/Shader.i: Shader/Shader.cpp.i
@@ -167,7 +167,7 @@ Shader/Shader.i: Shader/Shader.cpp.i
 
 # target to preprocess a source file
 Shader/Shader.cpp.i:
-	cd /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Shader/Shader.cpp.i
+	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Shader/Shader.cpp.i
 .PHONY : Shader/Shader.cpp.i
 
 Shader/Shader.s: Shader/Shader.cpp.s
@@ -175,7 +175,7 @@ Shader/Shader.s: Shader/Shader.cpp.s
 
 # target to generate assembly for a file
 Shader/Shader.cpp.s:
-	cd /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Shader/Shader.cpp.s
+	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Shader/Shader.cpp.s
 .PHONY : Shader/Shader.cpp.s
 
 Sprite/Sprite.o: Sprite/Sprite.cpp.o
@@ -183,7 +183,7 @@ Sprite/Sprite.o: Sprite/Sprite.cpp.o
 
 # target to build an object file
 Sprite/Sprite.cpp.o:
-	cd /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Sprite/Sprite.cpp.o
+	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Sprite/Sprite.cpp.o
 .PHONY : Sprite/Sprite.cpp.o
 
 Sprite/Sprite.i: Sprite/Sprite.cpp.i
@@ -191,7 +191,7 @@ Sprite/Sprite.i: Sprite/Sprite.cpp.i
 
 # target to preprocess a source file
 Sprite/Sprite.cpp.i:
-	cd /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Sprite/Sprite.cpp.i
+	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Sprite/Sprite.cpp.i
 .PHONY : Sprite/Sprite.cpp.i
 
 Sprite/Sprite.s: Sprite/Sprite.cpp.s
@@ -199,7 +199,7 @@ Sprite/Sprite.s: Sprite/Sprite.cpp.s
 
 # target to generate assembly for a file
 Sprite/Sprite.cpp.s:
-	cd /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Sprite/Sprite.cpp.s
+	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Sprite/Sprite.cpp.s
 .PHONY : Sprite/Sprite.cpp.s
 
 Window/Window.o: Window/Window.cpp.o
@@ -207,7 +207,7 @@ Window/Window.o: Window/Window.cpp.o
 
 # target to build an object file
 Window/Window.cpp.o:
-	cd /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Window.cpp.o
+	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Window.cpp.o
 .PHONY : Window/Window.cpp.o
 
 Window/Window.i: Window/Window.cpp.i
@@ -215,7 +215,7 @@ Window/Window.i: Window/Window.cpp.i
 
 # target to preprocess a source file
 Window/Window.cpp.i:
-	cd /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Window.cpp.i
+	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Window.cpp.i
 .PHONY : Window/Window.cpp.i
 
 Window/Window.s: Window/Window.cpp.s
@@ -223,7 +223,7 @@ Window/Window.s: Window/Window.cpp.s
 
 # target to generate assembly for a file
 Window/Window.cpp.s:
-	cd /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Window.cpp.s
+	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Window.cpp.s
 .PHONY : Window/Window.cpp.s
 
 # Help Target
@@ -258,6 +258,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/zacharylineman/GitHub/Hephaestus/Clion/Olympus/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
