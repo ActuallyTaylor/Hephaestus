@@ -100,6 +100,8 @@ void Window::_update() {
 
 void Window::_render() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+    // Draw all of the sprites onto screen.
     for(int i = 0; i < sprites.size(); i++) {
         sprites[i].draw();
     }

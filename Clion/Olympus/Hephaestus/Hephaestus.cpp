@@ -25,17 +25,17 @@ Shader Hephaestus::createShader(std::string vertexPath, std::string fragmentPath
     return shader;
 }
 
-Sprite* Hephaestus::createSprite(Shader shader, std::string texturePath) {
-    Sprite sprite = Sprite{shader, std::move(texturePath)};
+Sprite* Hephaestus::createSprite(Shader shader, std::string texturePath, glm::vec3 position, glm::vec2 size, glm::vec3 rotation) {
+    Sprite sprite = Sprite{shader, std::move(texturePath), position, size, rotation};
     window.sprites.push_back(sprite);
     return &window.sprites.back();
 }
 
-Sprite* Hephaestus::createSprite(Shader shader, std::string texturePath, GLfloat x, GLfloat y, GLfloat z) {
-    Sprite sprite = Sprite{shader, std::move(texturePath), x, y, z};
-    window.sprites.push_back(sprite);
-    return &window.sprites.back();
-}
+//Sprite* Hephaestus::createSprite(Shader shader, std::string texturePath, GLfloat x, GLfloat y, GLfloat z) {
+//    Sprite sprite = Sprite{shader, std::move(texturePath), x, y, z};
+//    window.sprites.push_back(sprite);
+//    return &window.sprites.back();
+//}
 
 void Hephaestus::setInit(Function function1) {
     this->window.init = function1;

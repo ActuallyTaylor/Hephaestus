@@ -36,8 +36,11 @@ public:
     void startWindowLoop();
 
     Shader createShader(std::string vertexPath, std::string fragmentPath);
-    Sprite* createSprite(Shader shader, std::string texturePath);
-    Sprite* createSprite(Shader shader, std::string texturePath, GLfloat x, GLfloat y, GLfloat z);
+    Sprite* createSprite(Shader shader, std::string texturePath,
+                         glm::vec3 position = glm::vec3(300.0f, 300.0f, 0.0f),
+                         glm::vec2 size = glm::vec2(50.0f, 50.0f),
+                         glm::vec3 rotation = glm::vec3(0.0f, 0.0f, 0.0f));
+//    Sprite* createSprite(Shader shader, std::string texturePath, GLfloat x, GLfloat y, GLfloat z);
 
     // Set Hephaestus Callback Functions
     void setInit(Function function1);

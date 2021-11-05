@@ -12,17 +12,13 @@
 
 #include "Sprite.hpp"
 
-Sprite::Sprite(Shader sentShader, std::string texturePath) {
-    shader = sentShader;
-    createTexture(texturePath);
-    createVirtualBufferObject();
-}
 
-Sprite::Sprite(Shader sentShader, std::string texturePath, GLfloat inX, GLfloat inY, GLfloat inZ) {
-    shader = sentShader;
-    position.x = inX;
-    position.y = inY;
-    position.z = inZ;
+Sprite::Sprite(Shader inShader, std::string texturePath, glm::vec3 inPosition, glm::vec2 inSize, glm::vec3 inRotation) {
+    shader = inShader;
+    position = inPosition;
+    size = inSize;
+    rotation = inRotation;
+
     createTexture(texturePath);
     createVirtualBufferObject();
 }
@@ -57,10 +53,10 @@ void Sprite::createTexture(std::string texturePath) {
 
 void Sprite::createVirtualBufferObject() {
     float vertices[] = {
-            0.5f,  0.5f, 0.0f,  // top right
-            0.5f, -0.5f, 0.0f,  // bottom right
-            -0.5f, -0.5f, 0.0f,  // bottom left
-            -0.5f,  0.5f, 0.0f   // top left
+            0.5f,  0.5f, 0.0f, 1.0f, 1.0f,  // top right
+            0.5f, -0.5f, 0.0f, 1.0f, 0.0f, // bottom right
+            -0.5f, -0.5f, 0.0f, 0.0f, 0.0f, // bottom left
+            -0.5f,  0.5f, 0.0f, 0.0f, 1.0f   // top left
     };
     unsigned int indices[] = {  // note that we start from 0!
             0, 1, 3,   // first triangle
@@ -86,31 +82,6 @@ void Sprite::createVirtualBufferObject() {
     // texture coord attribute
     glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(3 * sizeof(float)));
     glEnableVertexAttribArray(1);
-
-}
-
-void Sprite::setX(GLfloat xValue) {
-    position.x = xValue;
-}
-
-GLfloat Sprite::getX() {
-    return position.x;
-}
-
-void Sprite::setY(GLfloat yValue) {
-    position.y = yValue;
-}
-
-GLfloat Sprite::getY() {
-    return position.y;
-}
-
-void Sprite::setZ(GLfloat zValue) {
-    position.z = zValue;
-}
-
-GLfloat Sprite::getZ() {
-    return position.z;
 }
 
 void Sprite::draw() {
@@ -141,4 +112,32 @@ void Sprite::draw() {
     glBindTexture(GL_TEXTURE_2D, textureAtlas);
 
     glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+}
+
+void Sprite::setPosition(glm::vec3 inPosition) {
+    position = inPosition;
+}
+
+float Sprite::getX() {
+    return position.x;
+}
+
+void Sprite::setX(GLfloat xValue) {
+    position.x = xValue;
+}
+
+float Sprite::getY() {
+    return position.y;
+}
+
+void Sprite::setY(GLfloat yValue) {
+    position.y = yValue;
+}
+
+float Sprite::getZ() {
+    return position.z;
+}
+
+void Sprite::setZ(GLfloat zValue) {
+    position.z = zValue;
 }

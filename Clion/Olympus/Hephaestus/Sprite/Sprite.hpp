@@ -23,10 +23,9 @@
 
 class Sprite {
 private:
-    glm::vec3 position = glm::vec3(300.0f, 300.0f, 0.0f);
-    glm::vec2 size = glm::vec2(50.0f, 50.0f);
-    //                    x  ,  y  ,  z
-    glm::vec3 rotation = glm::vec3(0.0f, 0.0f, 0.0f);
+    glm::vec3 position { };
+    glm::vec2 size { };
+    glm::vec3 rotation { };
 
     void createTexture(std::string texturePath);
     void createVirtualBufferObject();
@@ -35,22 +34,27 @@ private:
     GLuint VBO, VAO, EBO, textureAtlas;
 
 public:
-    Sprite(Shader shader, std::string texturePath);
-    Sprite(Shader shader, std::string texturePath, GLfloat x, GLfloat y, GLfloat z);
+    Sprite(Shader shader, std::string texturePath,
+           glm::vec3 position = glm::vec3(300.0f, 300.0f, 0.0f),
+           glm::vec2 size = glm::vec2(50.0f, 50.0f),
+           glm::vec3 rotation = glm::vec3(0.0f, 0.0f, 0.0f));
 
     void draw();
 
-    // Mess with X coordinate
-    void setX(GLfloat xValue);
-    GLfloat getX();
+    // MARK: Sprite Position
+    void setPosition(glm::vec3 position);
 
-    // Mess with Y coordinate
-    void setY(GLfloat yValue);
-    GLfloat getY();
+    // X coordinate
+    float getX();
+    void setX(GLfloat x);
 
-    //M Mess with Z coordinate
-    void setZ(GLfloat zValue);
-    GLfloat getZ();
+    // Y coordinate
+    float getY();
+    void setY(GLfloat y);
+
+    // Z coordinate
+    float getZ();
+    void setZ(GLfloat z);
 };
 
 #endif //OLYMPUS_SPRITE_HPP
