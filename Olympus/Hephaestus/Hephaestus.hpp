@@ -35,12 +35,16 @@ public:
 
     void startWindowLoop();
 
-    Shader createShader(std::string vertexPath, std::string fragmentPath);
-    Sprite* createSprite(Shader shader, std::string texturePath,
-                         glm::vec3 position = glm::vec3(300.0f, 300.0f, 0.0f),
-                         glm::vec2 size = glm::vec2(50.0f, 50.0f),
-                         glm::vec3 rotation = glm::vec3(0.0f, 0.0f, 0.0f));
-//    Sprite* createSprite(Shader shader, std::string texturePath, GLfloat x, GLfloat y, GLfloat z);
+    static Shader createShader(std::string vertexPath, std::string fragmentPath);
+
+    /*
+     * Create Dynamic Data
+     */
+    Sprite* addSprite(Shader shader, std::string texturePath,
+                      glm::vec3 position = glm::vec3(300.0f, 300.0f, 0.0f),
+                      glm::vec2 size = glm::vec2(50.0f, 50.0f),
+                      glm::vec3 rotation = glm::vec3(0.0f, 0.0f, 0.0f));
+    void addKeybind(int keyCode, int action, Function executionFunction);
 
     // Set Hephaestus Callback Functions
     void setInit(Function function1);
@@ -48,6 +52,7 @@ public:
     void setTick(Function function1);
     void setUpdate(Function function1);
     void setRender(Function function1);
+
 };
 
 #endif //OLYMPUS_HEPHAESTUS_HPP

@@ -202,6 +202,54 @@ Sprite/Sprite.cpp.s:
 	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Sprite/Sprite.cpp.s
 .PHONY : Sprite/Sprite.cpp.s
 
+Window/Controls/ControlManager.o: Window/Controls/ControlManager.cpp.o
+.PHONY : Window/Controls/ControlManager.o
+
+# target to build an object file
+Window/Controls/ControlManager.cpp.o:
+	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/ControlManager.cpp.o
+.PHONY : Window/Controls/ControlManager.cpp.o
+
+Window/Controls/ControlManager.i: Window/Controls/ControlManager.cpp.i
+.PHONY : Window/Controls/ControlManager.i
+
+# target to preprocess a source file
+Window/Controls/ControlManager.cpp.i:
+	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/ControlManager.cpp.i
+.PHONY : Window/Controls/ControlManager.cpp.i
+
+Window/Controls/ControlManager.s: Window/Controls/ControlManager.cpp.s
+.PHONY : Window/Controls/ControlManager.s
+
+# target to generate assembly for a file
+Window/Controls/ControlManager.cpp.s:
+	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/ControlManager.cpp.s
+.PHONY : Window/Controls/ControlManager.cpp.s
+
+Window/Controls/Keybind/Keybind.o: Window/Controls/Keybind/Keybind.cpp.o
+.PHONY : Window/Controls/Keybind/Keybind.o
+
+# target to build an object file
+Window/Controls/Keybind/Keybind.cpp.o:
+	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/Keybind/Keybind.cpp.o
+.PHONY : Window/Controls/Keybind/Keybind.cpp.o
+
+Window/Controls/Keybind/Keybind.i: Window/Controls/Keybind/Keybind.cpp.i
+.PHONY : Window/Controls/Keybind/Keybind.i
+
+# target to preprocess a source file
+Window/Controls/Keybind/Keybind.cpp.i:
+	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/Keybind/Keybind.cpp.i
+.PHONY : Window/Controls/Keybind/Keybind.cpp.i
+
+Window/Controls/Keybind/Keybind.s: Window/Controls/Keybind/Keybind.cpp.s
+.PHONY : Window/Controls/Keybind/Keybind.s
+
+# target to generate assembly for a file
+Window/Controls/Keybind/Keybind.cpp.s:
+	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/Keybind/Keybind.cpp.s
+.PHONY : Window/Controls/Keybind/Keybind.cpp.s
+
 Window/Window.o: Window/Window.cpp.o
 .PHONY : Window/Window.o
 
@@ -244,6 +292,12 @@ help:
 	@echo "... Sprite/Sprite.o"
 	@echo "... Sprite/Sprite.i"
 	@echo "... Sprite/Sprite.s"
+	@echo "... Window/Controls/ControlManager.o"
+	@echo "... Window/Controls/ControlManager.i"
+	@echo "... Window/Controls/ControlManager.s"
+	@echo "... Window/Controls/Keybind/Keybind.o"
+	@echo "... Window/Controls/Keybind/Keybind.i"
+	@echo "... Window/Controls/Keybind/Keybind.s"
 	@echo "... Window/Window.o"
 	@echo "... Window/Window.i"
 	@echo "... Window/Window.s"

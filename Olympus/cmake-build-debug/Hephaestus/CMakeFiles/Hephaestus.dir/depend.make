@@ -7,6 +7,8 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o: \
  ../Hephaestus/Library/stb_image.hpp \
  ../Hephaestus/Shader/Shader.hpp \
  ../Hephaestus/Sprite/Sprite.hpp \
+ ../Hephaestus/Window/Controls/ControlManager.hpp \
+ ../Hephaestus/Window/Controls/Keybind/Keybind.hpp \
  ../Hephaestus/Window/Window.hpp \
  /usr/local/include/GL/glew.h \
  /usr/local/include/GLFW/glfw3.h \
@@ -639,11 +641,20 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Sprite/Sprite.cpp.o: \
  /usr/local/include/glm/vec3.hpp \
  /usr/local/include/glm/vec4.hpp \
  /usr/local/include/glm/vector_relational.hpp
+Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/ControlManager.cpp.o: \
+ ../Hephaestus/Window/Controls/ControlManager.cpp \
+ ../Hephaestus/Window/Controls/ControlManager.hpp \
+ ../Hephaestus/Window/Controls/Keybind/Keybind.hpp
+Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/Keybind/Keybind.cpp.o: \
+ ../Hephaestus/Window/Controls/Keybind/Keybind.cpp \
+ ../Hephaestus/Window/Controls/Keybind/Keybind.hpp
 Hephaestus/CMakeFiles/Hephaestus.dir/Window/Window.cpp.o: \
  ../Hephaestus/Hephaestus.hpp \
  ../Hephaestus/Library/stb_image.hpp \
  ../Hephaestus/Shader/Shader.hpp \
  ../Hephaestus/Sprite/Sprite.hpp \
+ ../Hephaestus/Window/Controls/ControlManager.hpp \
+ ../Hephaestus/Window/Controls/Keybind/Keybind.hpp \
  ../Hephaestus/Window/Window.cpp \
  ../Hephaestus/Window/Window.hpp \
  /usr/local/include/GL/glew.h \

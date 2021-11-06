@@ -118,12 +118,40 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Sprite/Sprite.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Hephaestus.dir/Sprite/Sprite.cpp.s"
 	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug/Hephaestus && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zacharylineman/GitHub/Hephaestus/Olympus/Hephaestus/Sprite/Sprite.cpp -o CMakeFiles/Hephaestus.dir/Sprite/Sprite.cpp.s
 
+Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/ControlManager.cpp.o: Hephaestus/CMakeFiles/Hephaestus.dir/flags.make
+Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/ControlManager.cpp.o: ../Hephaestus/Window/Controls/ControlManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/ControlManager.cpp.o"
+	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug/Hephaestus && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Hephaestus.dir/Window/Controls/ControlManager.cpp.o -c /Users/zacharylineman/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/ControlManager.cpp
+
+Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/ControlManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Hephaestus.dir/Window/Controls/ControlManager.cpp.i"
+	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug/Hephaestus && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/zacharylineman/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/ControlManager.cpp > CMakeFiles/Hephaestus.dir/Window/Controls/ControlManager.cpp.i
+
+Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/ControlManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Hephaestus.dir/Window/Controls/ControlManager.cpp.s"
+	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug/Hephaestus && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zacharylineman/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/ControlManager.cpp -o CMakeFiles/Hephaestus.dir/Window/Controls/ControlManager.cpp.s
+
+Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/Keybind/Keybind.cpp.o: Hephaestus/CMakeFiles/Hephaestus.dir/flags.make
+Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/Keybind/Keybind.cpp.o: ../Hephaestus/Window/Controls/Keybind/Keybind.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/Keybind/Keybind.cpp.o"
+	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug/Hephaestus && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Hephaestus.dir/Window/Controls/Keybind/Keybind.cpp.o -c /Users/zacharylineman/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/Keybind/Keybind.cpp
+
+Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/Keybind/Keybind.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Hephaestus.dir/Window/Controls/Keybind/Keybind.cpp.i"
+	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug/Hephaestus && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/zacharylineman/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/Keybind/Keybind.cpp > CMakeFiles/Hephaestus.dir/Window/Controls/Keybind/Keybind.cpp.i
+
+Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/Keybind/Keybind.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Hephaestus.dir/Window/Controls/Keybind/Keybind.cpp.s"
+	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug/Hephaestus && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zacharylineman/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/Keybind/Keybind.cpp -o CMakeFiles/Hephaestus.dir/Window/Controls/Keybind/Keybind.cpp.s
+
 # Object files for target Hephaestus
 Hephaestus_OBJECTS = \
 "CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o" \
 "CMakeFiles/Hephaestus.dir/Window/Window.cpp.o" \
 "CMakeFiles/Hephaestus.dir/Shader/Shader.cpp.o" \
-"CMakeFiles/Hephaestus.dir/Sprite/Sprite.cpp.o"
+"CMakeFiles/Hephaestus.dir/Sprite/Sprite.cpp.o" \
+"CMakeFiles/Hephaestus.dir/Window/Controls/ControlManager.cpp.o" \
+"CMakeFiles/Hephaestus.dir/Window/Controls/Keybind/Keybind.cpp.o"
 
 # External object files for target Hephaestus
 Hephaestus_EXTERNAL_OBJECTS =
@@ -132,9 +160,11 @@ Hephaestus/libHephaestus.a: Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.
 Hephaestus/libHephaestus.a: Hephaestus/CMakeFiles/Hephaestus.dir/Window/Window.cpp.o
 Hephaestus/libHephaestus.a: Hephaestus/CMakeFiles/Hephaestus.dir/Shader/Shader.cpp.o
 Hephaestus/libHephaestus.a: Hephaestus/CMakeFiles/Hephaestus.dir/Sprite/Sprite.cpp.o
+Hephaestus/libHephaestus.a: Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/ControlManager.cpp.o
+Hephaestus/libHephaestus.a: Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/Keybind/Keybind.cpp.o
 Hephaestus/libHephaestus.a: Hephaestus/CMakeFiles/Hephaestus.dir/build.make
 Hephaestus/libHephaestus.a: Hephaestus/CMakeFiles/Hephaestus.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libHephaestus.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libHephaestus.a"
 	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug/Hephaestus && $(CMAKE_COMMAND) -P CMakeFiles/Hephaestus.dir/cmake_clean_target.cmake
 	cd /Users/zacharylineman/GitHub/Hephaestus/Olympus/cmake-build-debug/Hephaestus && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Hephaestus.dir/link.txt --verbose=$(VERBOSE)
 

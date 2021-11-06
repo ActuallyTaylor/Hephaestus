@@ -27,6 +27,8 @@ private:
     glm::vec2 size { };
     glm::vec3 rotation { };
 
+    glm::vec2 screenSize { };
+
     void createTexture(std::string texturePath);
     void createVirtualBufferObject();
 
@@ -39,9 +41,11 @@ public:
            glm::vec2 size = glm::vec2(50.0f, 50.0f),
            glm::vec3 rotation = glm::vec3(0.0f, 0.0f, 0.0f));
 
-    void draw();
 
-    // MARK: Sprite Position
+
+    /*
+     * Sprite Position
+     */
     void setPosition(glm::vec3 position);
 
     // X coordinate
@@ -55,6 +59,44 @@ public:
     // Z coordinate
     float getZ();
     void setZ(GLfloat z);
+
+    /*
+     * Sprite Rotation
+     */
+    void setRotation(glm::vec3 rotation);
+
+    // X coordinate
+    float getRoll();
+    void setRoll(GLfloat roll);
+
+    // Y coordinate
+    float getPitch();
+    void setPitch(GLfloat pitch);
+
+    // Z coordinate
+    float getYaw();
+    void setYaw(GLfloat z);
+
+    /*
+     * Sprite Size
+     */
+    void setSize(glm::vec2 scale);
+
+    // X coordinate
+    float getWidth();
+    void setWidth(GLfloat width);
+
+    // Y coordinate
+    float getHeight();
+    void setHeight(GLfloat height);
+
+    // MARK: Drawing Functions
+    void draw();
+
+    void setTexture(std::string texturePath);
+
+    void updateScreenDimensions(int width, int height);
+
 };
 
 #endif //OLYMPUS_SPRITE_HPP

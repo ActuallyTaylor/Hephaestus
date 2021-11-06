@@ -81,6 +81,18 @@
 		<Unit filename="/Users/zacharylineman/GitHub/Hephaestus/Olympus/Hephaestus/Sprite/Sprite.hpp">
 			<Option target="Hephaestus"/>
 		</Unit>
+		<Unit filename="/Users/zacharylineman/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/ControlManager.cpp">
+			<Option target="Hephaestus"/>
+		</Unit>
+		<Unit filename="/Users/zacharylineman/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/ControlManager.hpp">
+			<Option target="Hephaestus"/>
+		</Unit>
+		<Unit filename="/Users/zacharylineman/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/Keybind/Keybind.cpp">
+			<Option target="Hephaestus"/>
+		</Unit>
+		<Unit filename="/Users/zacharylineman/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/Keybind/Keybind.hpp">
+			<Option target="Hephaestus"/>
+		</Unit>
 		<Unit filename="/Users/zacharylineman/GitHub/Hephaestus/Olympus/Hephaestus/Window/Window.cpp">
 			<Option target="Hephaestus"/>
 		</Unit>

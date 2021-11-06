@@ -100,7 +100,7 @@ void Sprite::draw() {
     view = translate(view, glm::vec3(0.0f, 0.0f, 3.0f));
 
     glm::mat4 projection;
-    projection = glm::ortho(0.0f, static_cast<float>(720), static_cast<float>(720), 0.0f, -1000.0f, 1000.0f);
+    projection = glm::ortho(0.0f, static_cast<float>(screenSize.x), static_cast<float>(screenSize.y), 0.0f, -1000.0f, 1000.0f);
 
     shader.setMatrix4("model", model);
 
@@ -140,4 +140,62 @@ float Sprite::getZ() {
 
 void Sprite::setZ(GLfloat zValue) {
     position.z = zValue;
+}
+
+void Sprite::setTexture(std::string texturePath) {
+    createTexture(texturePath);
+}
+
+void Sprite::updateScreenDimensions(int width, int height) {
+    printf("Update Dimensions %d, %d\n", width, height);
+    screenSize = glm::vec2(width, height);
+    createVirtualBufferObject();
+}
+
+void Sprite::setRotation(glm::vec3 inRotation) {
+    rotation = inRotation;
+}
+
+float Sprite::getRoll() {
+    return rotation.x;
+}
+
+void Sprite::setRoll(GLfloat roll) {
+    rotation.x = roll;
+}
+
+float Sprite::getPitch() {
+    return rotation.y;
+}
+
+void Sprite::setPitch(GLfloat pitch) {
+    rotation.y = pitch;
+}
+
+float Sprite::getYaw() {
+    return rotation.z;
+}
+
+void Sprite::setYaw(GLfloat yaw) {
+    rotation.z = yaw;
+}
+
+void Sprite::setSize(glm::vec2 inSize) {
+    size = inSize;
+}
+
+float Sprite::getWidth() {
+    return size.x;
+}
+
+void Sprite::setWidth(GLfloat width) {
+    size.x = width;
+}
+
+float Sprite::getHeight() {
+    return size.y;
+}
+
+void Sprite::setHeight(GLfloat height) {
+    size.y = height;
 }
