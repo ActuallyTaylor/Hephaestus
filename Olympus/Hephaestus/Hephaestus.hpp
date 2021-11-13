@@ -49,23 +49,13 @@ public:
 
     /// Creates a camera object
     /// \return A reference to the created camera
-    Camera* createCamera();
+    void addCamera(Camera* camera);
 
     /*
      * Create Dynamic Data
      *  - Used to create objects and data that you use in your games
      */
-    /// Adds a sprite onto the screen
-    /// \param shader The shader that should be used to render the sprite
-    /// \param texturePath The path to the texture that the sprite should dispaly
-    /// \param position The vector3 coordinates of the sprite (x, y, z). X: Left -> Right, Y: Top -> Bottom, Z: Into Screen -> Out of Screen
-    /// \param size A vector2 that describes the size of the sprite (x, y). X: Width, Y: Height.
-    /// \param rotation A vector3 that describes the rotation of the sprite (x, y, z). X: Roll, Y: Pitch, Z: Yaw
-    /// \return
-    Sprite* addSprite(Shader shader, std::string texturePath,
-                      glm::vec3 position = glm::vec3(300.0f, 300.0f, 0.0f),
-                      glm::vec2 size = glm::vec2(50.0f, 50.0f),
-                      glm::vec3 rotation = glm::vec3(0.0f, 0.0f, 0.0f));
+    void addSprite(Sprite* sprite);
 
     /// Registers a keybind to the engine. Any keybind registered here will be checked whenever a key press is detected.
     /// \param keyCode The GLFW key code for the key. Ex: GLFW_KEY_UP

@@ -117,8 +117,8 @@ void Window::_render() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     // Draw all sprites into the screen.
-    for(Sprite & sprite : sprites) {
-        sprite.draw();
+    for(Sprite *sprite : sprites) {
+        sprite->draw();
     }
 
     if (render != nullptr) {
@@ -139,16 +139,15 @@ void Window::windowCallback(GLFWwindow *window, int width, int height) {
     self->width = width;
     self->height = height;
 
-    for (Sprite &sprite: self->sprites) {
-        sprite.updateScreenDimensions(width, height);
+    for (Sprite *sprite: self->sprites) {
+        sprite->updateScreenDimensions(width, height);
     }
 }
 
-Sprite* Window::addSprite(Sprite sprite) {
-    sprite.updateScreenDimensions(width, height);
-    sprite.updateCamera(currentCamera);
+void Window::addSprite(Sprite *sprite) {
+    sprite->updateScreenDimensions(width, height);
+    sprite->updateCamera(currentCamera);
     sprites.push_back(sprite);
-    return &sprites.back();
 }
 
 void Window::addKeybind(Keybind keybind) {
@@ -168,19 +167,13 @@ void Window::cameraTargetChanged() {
 
 }
 
-Camera* Window::addCamera(Camera inCamera) {
-    Camera camera = move(inCamera);
+void Window::addCamera(Camera* inCamera) {
+    inCamera->setUpdatePositionCallback(cameraPositionChanged);
+    inCamera->setUpdateRotationCallback(cameraRotationChanged);
+    inCamera->setUpdateRotationCallback(cameraTargetChanged);
+    cameras.push_back(inCamera);
 
-    camera.setUpdatePositionCallback(cameraPositionChanged);
-    camera.setUpdateRotationCallback(cameraRotationChanged);
-    camera.setUpdateRotationCallback(cameraTargetChanged);
-
-    cameras.push_back(camera);
-    currentCamera = &cameras.back();
-
-    for (Sprite &sprite: sprites) {
-        sprite.updateCamera(currentCamera);
+    for (Sprite *sprite: sprites) {
+        sprite->updateCamera(currentCamera);
     }
-
-    return &cameras.back();
 }

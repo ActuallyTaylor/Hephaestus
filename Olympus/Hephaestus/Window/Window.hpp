@@ -105,7 +105,7 @@ public:
     /// Adds a sprite into the window
     /// \param sprite The sprite that should be added into the window. The given sprite is copied into the sprites vector.
     /// \return A pointer to the spite located in the sprites vector.
-    Sprite* addSprite(Sprite sprite);
+    void addSprite(Sprite *sprite);
 
     /// Adds a keybind to the window's control manager
     /// \param keybind The keybind that should be added to the control manager.
@@ -113,7 +113,7 @@ public:
 
     /// Adds a keybind to the window's control manager
     /// \param keybind The keybind that should be added to the control manager.
-    Camera* addCamera(Camera camera);
+    void addCamera(Camera *camera);
 
     /*
      * Variables
@@ -122,9 +122,9 @@ public:
     Function init, destroy, tick, update, render;
 
     /// An array of all of the sprites that managed by the window.
-    vector<Sprite> sprites;
+    vector<Sprite*> sprites;
 
-    vector<Camera> cameras;
+    vector<Camera*> cameras;
 };
 
 #endif //OLYMPUS_WINDOW_HPP

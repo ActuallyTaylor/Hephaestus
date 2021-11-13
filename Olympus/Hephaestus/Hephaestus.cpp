@@ -25,13 +25,12 @@ Shader Hephaestus::createShader(std::string vertexPath, std::string fragmentPath
     return shader;
 }
 
-Camera* Hephaestus::createCamera() {
-    return window.addCamera(Camera());
+void Hephaestus::addCamera(Camera *camera) {
+    window.addCamera(camera);
 }
 
-Sprite* Hephaestus::addSprite(Shader shader, std::string texturePath, glm::vec3 position, glm::vec2 size, glm::vec3 rotation) {
-    Sprite sprite = Sprite{shader, std::move(texturePath), position, size, rotation};
-    return window.addSprite(sprite);
+void Hephaestus::addSprite(Sprite *sprite) {
+    window.addSprite(sprite);
 }
 
 void Hephaestus::setInit(Function function1) {
