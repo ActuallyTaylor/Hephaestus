@@ -171,6 +171,7 @@ void Window::addCamera(Camera* inCamera) {
     inCamera->setUpdatePositionCallback(cameraPositionChanged);
     inCamera->setUpdateRotationCallback(cameraRotationChanged);
     inCamera->setUpdateRotationCallback(cameraTargetChanged);
+    currentCamera = inCamera;
     cameras.push_back(inCamera);
 
     for (Sprite *sprite: sprites) {

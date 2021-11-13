@@ -10,19 +10,24 @@ Sprite secondarySprite = Sprite(shader, "./Images/wall.jpg", glm::vec3(720/2,720
 
 Camera mainCamera = Camera();
 
-void moveSpriteUp()
+void moveSpriteUp() {
+
 }
 
 void moveSpriteDown() {
+
 }
 
 void moveSpriteRight() {
+
 }
 
 void moveSpriteLeft() {
+
 }
 
 void moveSpriteRotateNegative() {
+
 }
 
 void moveSpriteRotatePositive() {
@@ -35,10 +40,10 @@ void init() {
     printf("Renderer: %s\n", renderer);
     printf("OpenGL version supported %s\n", version);
 
+    engine.addCamera(&mainCamera);
+
     engine.addSprite(&mainSprite);
     engine.addSprite(&secondarySprite);
-
-    engine.addCamera(&mainCamera);
 
     engine.addKeybind(GLFW_KEY_UP, GLFW_PRESS, moveSpriteUp);
     engine.addKeybind(GLFW_KEY_UP, GLFW_REPEAT, moveSpriteUp);
@@ -57,8 +62,6 @@ void init() {
 
     engine.addKeybind(46, GLFW_PRESS, moveSpriteRotatePositive);
     engine.addKeybind(46, GLFW_REPEAT, moveSpriteRotatePositive);
-
-
 }
 
 void destroy() {
@@ -71,8 +74,8 @@ void tick() {
 
 bool hitBottom = false;
 void update() {
-    glm::vec3 position = mainCamera->getPosition();
-    mainCamera->setPosition({position.x, position.y , position.z});
+//    glm::vec3 position = mainCamera.getPosition();
+//    mainCamera.setPosition({position.x, position.y , position.z});
 
     mainSprite.setRotation(glm::vec3(glfwGetTime() * 100, glfwGetTime()  * 100, 0));
     secondarySprite.setRotation(glm::vec3(-(glfwGetTime() * 10), -(glfwGetTime()  * 10), 0));
