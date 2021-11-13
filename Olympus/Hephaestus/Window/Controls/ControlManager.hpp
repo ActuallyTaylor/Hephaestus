@@ -4,7 +4,8 @@
     11/5/21
     
     =================
-    DESCRIPTION
+    Control Manager Header Class
+    Contains all the logic for executing and storing keybinds.
     =================
 */
 

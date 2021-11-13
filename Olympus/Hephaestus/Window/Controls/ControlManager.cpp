@@ -4,7 +4,7 @@
     11/5/21
     
     =================
-    DESCRIPTION
+    Implementations for the ControlManager.hpp class functions
     =================
 */
 

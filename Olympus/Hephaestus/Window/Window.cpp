@@ -4,7 +4,7 @@
     11/1/21
 
     =================
-    DESCRIPTION
+    Implementations for all the Window.hpp class functions
     =================
 */
 #include "Window.hpp"
@@ -14,16 +14,17 @@ Window* self;
 Window::Window() { }
 
 Window::Window(std::string sentWindowName, int sentWidth, int sentHeight) {
+    // Set unset class variables
     windowName = sentWindowName;
     width = sentWidth;
     height = sentHeight;
 
-    // Initialize the library
+    // Initialize GLFW library
     if (!glfwInit()) {
         exit(-9);
     }
 
-    // macOS specific flags
+    // Set macOS specific flags
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 2);
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
@@ -40,12 +41,14 @@ Window::Window(std::string sentWindowName, int sentWidth, int sentHeight) {
     // Make the window's context current
     glfwMakeContextCurrent(window);
 
-    // Start GLEW extension handler
     glewExperimental = GL_TRUE;
+
+    // Start GLEW extension handler
     glewInit();
 
     glViewport(0, 0, width, height);
 
+    // Set GLFW key callbacks
     glfwSetKeyCallback(window, keyCallback);
     glfwSetWindowSizeCallback(window, windowCallback);
 }
@@ -53,22 +56,27 @@ Window::Window(std::string sentWindowName, int sentWidth, int sentHeight) {
 void Window::windowLoop() {
     _init();
     glEnable(GL_DEPTH_TEST);
+    // Holds the last frame time + the current amount of frames that have in a second.
     double lastTime = glfwGetTime();
-    int nbFrames = 0;
+    int framesThisSecond = 0;
 
     self = this;
     while (!glfwWindowShouldClose(window)) {
         double currentTime = glfwGetTime();
-        nbFrames ++;
 
-//        if(currentTime - lastTime >= 1.0) {
-//            printf("======\n");
-//            printf("%f ms/frame\n", 1000.0/double(nbFrames));
-//            printf("%d frames per second\n", nbFrames);
-//            nbFrames = 0;
-//            lastTime += 1.0;
-//        }
+        if (printFrames) {
+            framesThisSecond ++;
 
+            if(currentTime - lastTime >= 1.0) {
+                printf("======\n");
+                printf("%f ms/frame\n", 1000.0/double(framesThisSecond));
+                printf("%d frames per second\n", framesThisSecond);
+                framesThisSecond = 0;
+                lastTime += 1.0;
+            }
+        }
+
+        // Call user-defined callback functions
         _update();
         _render();
 
@@ -105,9 +113,10 @@ void Window::_update() {
 }
 
 void Window::_render() {
+    // Clear the screen
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-    // Draw all of the sprites onto screen.
+    // Draw all sprites into the screen.
     for(Sprite & sprite : sprites) {
         sprite.draw();
     }
@@ -118,6 +127,7 @@ void Window::_render() {
 }
 
 void Window::keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods) {
+//    printf("KeyCode: %d, ScanCode: %d, Action: %d, Mods: %d\n", key, scancode, action, mods);
     if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
         glfwSetWindowShouldClose(window, GLFW_TRUE);
     } else {
@@ -128,6 +138,7 @@ void Window::keyCallback(GLFWwindow *window, int key, int scancode, int action, 
 void Window::windowCallback(GLFWwindow *window, int width, int height) {
     self->width = width;
     self->height = height;
+
     for (Sprite &sprite: self->sprites) {
         sprite.updateScreenDimensions(width, height);
     }
@@ -135,10 +146,41 @@ void Window::windowCallback(GLFWwindow *window, int width, int height) {
 
 Sprite* Window::addSprite(Sprite sprite) {
     sprite.updateScreenDimensions(width, height);
+    sprite.updateCamera(currentCamera);
     sprites.push_back(sprite);
     return &sprites.back();
 }
 
 void Window::addKeybind(Keybind keybind) {
     controlManager.addKeybind(keybind);
+}
+
+void Window::cameraPositionChanged() {
+
+}
+
+void Window::cameraRotationChanged() {
+
+}
+
+
+void Window::cameraTargetChanged() {
+
+}
+
+Camera* Window::addCamera(Camera inCamera) {
+    Camera camera = move(inCamera);
+
+    camera.setUpdatePositionCallback(cameraPositionChanged);
+    camera.setUpdateRotationCallback(cameraRotationChanged);
+    camera.setUpdateRotationCallback(cameraTargetChanged);
+
+    cameras.push_back(camera);
+    currentCamera = &cameras.back();
+
+    for (Sprite &sprite: sprites) {
+        sprite.updateCamera(currentCamera);
+    }
+
+    return &cameras.back();
 }

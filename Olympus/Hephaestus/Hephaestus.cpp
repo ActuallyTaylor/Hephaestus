@@ -4,7 +4,7 @@
     11/1/21
 
     =================
-    DESCRIPTION
+    Implementations for all the Hephaestus.hpp class functions
     =================
 */
 
@@ -23,6 +23,10 @@ Shader Hephaestus::createShader(std::string vertexPath, std::string fragmentPath
     Shader shader = Shader{std::move(vertexPath), std::move(fragmentPath)};
     shader.setup();
     return shader;
+}
+
+Camera* Hephaestus::createCamera() {
+    return window.addCamera(Camera());
 }
 
 Sprite* Hephaestus::addSprite(Shader shader, std::string texturePath, glm::vec3 position, glm::vec2 size, glm::vec3 rotation) {

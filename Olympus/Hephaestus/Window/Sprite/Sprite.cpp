@@ -4,7 +4,7 @@
     11/3/21
     
     =================
-    DESCRIPTION
+    Implementations for the Sprite.hpp class.
     =================
 */
 #define STB_IMAGE_IMPLEMENTATION
@@ -87,20 +87,18 @@ void Sprite::createVirtualBufferObject() {
 void Sprite::draw() {
     shader.use();
 
-    glm::mat4 model = glm::mat4(1.0f);
-    model = translate(model, position);
+    glm::mat4 model = translate(glm::mat4(1.0f), position);
 
+    // Apply the rotation of the sprite
     model = rotate(model, glm::radians(rotation.x), glm::vec3(1.0f, 0.0f, 0.0f));
     model = rotate(model, glm::radians(rotation.y), glm::vec3(0.0f, 1.0f, 0.0f));
     model = rotate(model, glm::radians(rotation.z), glm::vec3(0.0f, 0.0f, 1.0f));
 
     model = scale(model, glm::vec3(size, 1.0f));
 
-    glm::mat4 view = glm::mat4(1.0f);
-    view = translate(view, glm::vec3(0.0f, 0.0f, 3.0f));
+    glm::mat4 view = camera->getView();
 
-    glm::mat4 projection;
-    projection = glm::ortho(0.0f, static_cast<float>(screenSize.x), static_cast<float>(screenSize.y), 0.0f, -1000.0f, 1000.0f);
+    glm::mat4 projection = glm::ortho(0.0f, static_cast<float>(screenSize.x), static_cast<float>(screenSize.y), 0.0f, -1000.0f, 1000.0f);
 
     shader.setMatrix4("model", model);
 
@@ -198,4 +196,8 @@ float Sprite::getHeight() {
 
 void Sprite::setHeight(GLfloat height) {
     size.y = height;
+}
+
+void Sprite::updateCamera(Camera* newCamera) {
+    camera = newCamera;
 }

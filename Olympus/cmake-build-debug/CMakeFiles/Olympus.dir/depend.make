@@ -5,9 +5,10 @@ CMakeFiles/Olympus.dir/main.cpp.o: \
  ../Hephaestus/Hephaestus.hpp \
  ../Hephaestus/Library/stb_image.hpp \
  ../Hephaestus/Shader/Shader.hpp \
- ../Hephaestus/Sprite/Sprite.hpp \
+ ../Hephaestus/Window/Camera/Camera.hpp \
  ../Hephaestus/Window/Controls/ControlManager.hpp \
  ../Hephaestus/Window/Controls/Keybind/Keybind.hpp \
+ ../Hephaestus/Window/Sprite/Sprite.hpp \
  ../Hephaestus/Window/Window.hpp \
  ../main.cpp \
  /usr/local/include/GL/glew.h \
