@@ -43,7 +43,7 @@ void Sprite::createTexture(std::string texturePath) {
     int width, height, nrChannels;
     unsigned char *data = stbi_load(texturePath.c_str(), &width, &height, &nrChannels, 0);
     if (data) {
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
         glGenerateMipmap(GL_TEXTURE_2D);
     } else {
         printf("Failed to load texture");
@@ -86,7 +86,6 @@ void Sprite::createVirtualBufferObject() {
 
 void Sprite::draw() {
     shader.use();
-
     glm::mat4 model = translate(glm::mat4(1.0f), position);
 
     // Apply the rotation of the sprite
@@ -107,8 +106,8 @@ void Sprite::draw() {
     shader.setMatrix4("projection", projection);
 
     glBindVertexArray(VAO);
-    glBindTexture(GL_TEXTURE_2D, textureAtlas);
 
+    glBindTexture(GL_TEXTURE_2D, textureAtlas);
     glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 }
 
@@ -149,6 +148,11 @@ void Sprite::updateScreenDimensions(int width, int height) {
     screenSize = glm::vec2(width, height);
     createVirtualBufferObject();
 }
+
+glm::vec3 Sprite::getPosition() {
+    return position;
+}
+
 
 void Sprite::setRotation(glm::vec3 inRotation) {
     rotation = inRotation;
@@ -200,4 +204,20 @@ void Sprite::setHeight(GLfloat height) {
 
 void Sprite::updateCamera(Camera* newCamera) {
     camera = newCamera;
+}
+
+void Sprite::setShape(Sprite::Shape shape) {
+    spriteShape = shape;
+}
+
+Sprite::Shape Sprite::getShape() {
+    return spriteShape;
+}
+
+void Sprite::move(float deltaTime) {
+
+}
+
+float Sprite::getRadius() {
+    return size.x / 2;
 }

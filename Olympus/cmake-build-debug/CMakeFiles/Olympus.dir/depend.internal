@@ -8,6 +8,7 @@ CMakeFiles/Olympus.dir/main.cpp.o
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Camera/Camera.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/ControlManager.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/Keybind/Keybind.hpp
+ /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/Sprite.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Window.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/main.cpp
@@ -189,14 +190,20 @@ CMakeFiles/Olympus.dir/main.cpp.o
  /usr/local/include/glm/gtc/quaternion.hpp
  /usr/local/include/glm/gtc/quaternion.inl
  /usr/local/include/glm/gtc/quaternion_simd.inl
+ /usr/local/include/glm/gtc/type_precision.hpp
+ /usr/local/include/glm/gtc/type_precision.inl
  /usr/local/include/glm/gtc/type_ptr.hpp
  /usr/local/include/glm/gtc/type_ptr.inl
  /usr/local/include/glm/gtc/vec1.hpp
  /usr/local/include/glm/gtx/component_wise.hpp
  /usr/local/include/glm/gtx/component_wise.inl
+ /usr/local/include/glm/gtx/dual_quaternion.hpp
+ /usr/local/include/glm/gtx/dual_quaternion.inl
  /usr/local/include/glm/gtx/norm.hpp
  /usr/local/include/glm/gtx/norm.inl
  /usr/local/include/glm/gtx/quaternion.hpp
+ /usr/local/include/glm/gtx/string_cast.hpp
+ /usr/local/include/glm/gtx/string_cast.inl
  /usr/local/include/glm/integer.hpp
  /usr/local/include/glm/mat2x2.hpp
  /usr/local/include/glm/mat2x3.hpp

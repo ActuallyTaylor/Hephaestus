@@ -250,6 +250,30 @@ Window/Controls/Keybind/Keybind.cpp.s:
 	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/Keybind/Keybind.cpp.s
 .PHONY : Window/Controls/Keybind/Keybind.cpp.s
 
+Window/Sprite/PhysicsSprite/PhysicsSprite.o: Window/Sprite/PhysicsSprite/PhysicsSprite.cpp.o
+.PHONY : Window/Sprite/PhysicsSprite/PhysicsSprite.o
+
+# target to build an object file
+Window/Sprite/PhysicsSprite/PhysicsSprite.cpp.o:
+	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp.o
+.PHONY : Window/Sprite/PhysicsSprite/PhysicsSprite.cpp.o
+
+Window/Sprite/PhysicsSprite/PhysicsSprite.i: Window/Sprite/PhysicsSprite/PhysicsSprite.cpp.i
+.PHONY : Window/Sprite/PhysicsSprite/PhysicsSprite.i
+
+# target to preprocess a source file
+Window/Sprite/PhysicsSprite/PhysicsSprite.cpp.i:
+	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp.i
+.PHONY : Window/Sprite/PhysicsSprite/PhysicsSprite.cpp.i
+
+Window/Sprite/PhysicsSprite/PhysicsSprite.s: Window/Sprite/PhysicsSprite/PhysicsSprite.cpp.s
+.PHONY : Window/Sprite/PhysicsSprite/PhysicsSprite.s
+
+# target to generate assembly for a file
+Window/Sprite/PhysicsSprite/PhysicsSprite.cpp.s:
+	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp.s
+.PHONY : Window/Sprite/PhysicsSprite/PhysicsSprite.cpp.s
+
 Window/Sprite/Sprite.o: Window/Sprite/Sprite.cpp.o
 .PHONY : Window/Sprite/Sprite.o
 
@@ -322,6 +346,9 @@ help:
 	@echo "... Window/Controls/Keybind/Keybind.o"
 	@echo "... Window/Controls/Keybind/Keybind.i"
 	@echo "... Window/Controls/Keybind/Keybind.s"
+	@echo "... Window/Sprite/PhysicsSprite/PhysicsSprite.o"
+	@echo "... Window/Sprite/PhysicsSprite/PhysicsSprite.i"
+	@echo "... Window/Sprite/PhysicsSprite/PhysicsSprite.s"
 	@echo "... Window/Sprite/Sprite.o"
 	@echo "... Window/Sprite/Sprite.i"
 	@echo "... Window/Sprite/Sprite.s"

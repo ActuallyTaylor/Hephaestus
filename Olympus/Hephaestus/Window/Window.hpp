@@ -17,6 +17,7 @@
 // OpenGL
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
+#include <glm/gtx/string_cast.hpp>
 
 // C++ Classes
 #include <string>
@@ -24,8 +25,11 @@
 
 // Custom Classes
 #include "./Sprite/Sprite.hpp"
+#include "./Sprite/PhysicsSprite/PhysicsSprite.hpp"
 #include "./Controls/ControlManager.hpp"
 #include "./Camera/Camera.hpp"
+
+typedef std::tuple<bool, glm::vec3> Collision;
 
 class Window {
 private:
@@ -37,6 +41,8 @@ private:
     int height { 720 };
 
     bool printFrames { true };
+
+    double deltaTime;
 
     /// The GLFW window that this class wraps.
     GLFWwindow *window;
@@ -116,6 +122,11 @@ public:
     void addCamera(Camera *camera);
 
     /*
+     * Collision Checking
+     */
+    void checkCollisions();
+
+    /*
      * Variables
      */
     /// A set of function variables that are set when the user sets a user-defined callback.
@@ -125,6 +136,9 @@ public:
     vector<Sprite*> sprites;
 
     vector<Camera*> cameras;
+
+    Collision checkCollision(Sprite *one, Sprite *two);
+    PhysicsSprite::Direction VectorDirection(glm::vec2 target);
 };
 
 #endif //OLYMPUS_WINDOW_HPP

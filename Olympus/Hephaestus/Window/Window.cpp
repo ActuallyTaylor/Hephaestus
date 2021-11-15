@@ -57,24 +57,27 @@ void Window::windowLoop() {
     _init();
     glEnable(GL_DEPTH_TEST);
     // Holds the last frame time + the current amount of frames that have in a second.
-    double lastTime = glfwGetTime();
+    double currentFrame = glfwGetTime();
+    double lastFrame = currentFrame;
     int framesThisSecond = 0;
 
     self = this;
     while (!glfwWindowShouldClose(window)) {
-        double currentTime = glfwGetTime();
-
         if (printFrames) {
             framesThisSecond ++;
 
-            if(currentTime - lastTime >= 1.0) {
+            if(currentFrame - lastFrame >= 1.0) {
                 printf("======\n");
                 printf("%f ms/frame\n", 1000.0/double(framesThisSecond));
                 printf("%d frames per second\n", framesThisSecond);
                 framesThisSecond = 0;
-                lastTime += 1.0;
+//                lastFrame += 1.0;
             }
         }
+
+        currentFrame = glfwGetTime();
+        deltaTime = currentFrame - lastFrame;
+        lastFrame = currentFrame;
 
         // Call user-defined callback functions
         _update();
@@ -107,6 +110,11 @@ void Window::_tick() {
 }
 
 void Window::_update() {
+    for (Sprite* sprite: sprites) {
+        sprite->move(deltaTime);
+    }
+
+    checkCollisions();
     if (update != nullptr) {
         update();
     }
@@ -114,12 +122,16 @@ void Window::_update() {
 
 void Window::_render() {
     // Clear the screen
+    glClearColor(0, 0, 0, 0);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     // Draw all sprites into the screen.
     for(Sprite *sprite : sprites) {
         sprite->draw();
     }
+    glDisable(GL_BLEND);
 
     if (render != nullptr) {
         render();
@@ -162,7 +174,6 @@ void Window::cameraRotationChanged() {
 
 }
 
-
 void Window::cameraTargetChanged() {
 
 }
@@ -177,4 +188,65 @@ void Window::addCamera(Camera* inCamera) {
     for (Sprite *sprite: sprites) {
         sprite->updateCamera(currentCamera);
     }
+}
+
+void Window::checkCollisions() {
+    for (int x = 0; x < sprites.size(); ++x) {
+        for (int y = x+1; y < sprites.size(); ++y) {
+            Sprite* sprite = sprites[x];
+            Sprite* checkSprite = sprites[y];
+
+            Collision result { checkCollision(sprite, checkSprite) };
+            if(std::get<0>(result)) {
+                PhysicsSprite* pSprite = dynamic_cast<PhysicsSprite *>(sprite);
+                PhysicsSprite* cpSprite = dynamic_cast<PhysicsSprite *>(checkSprite);
+
+                if (pSprite != nullptr && checkSprite != nullptr) {
+                    pSprite->collide(cpSprite, std::get<1>(result));
+                }
+            }
+        }
+    }
+}
+
+// https://learnopengl.com/In-Practice/2D-Game/Collisions/Collision-resolution
+Collision Window::checkCollision(Sprite *one, Sprite *two) {
+    if (one != two) {
+        if(one->getShape() == Sprite::sphere && two->getShape() == Sprite::sphere) {
+            // Calculate collision for sphere & sphere
+            float combinedRadius = one->getRadius() + two->getRadius();
+            glm::vec3 delta = one->getPosition() - two->getPosition();
+            float deltaLength = glm::length(delta);
+            if (deltaLength <= combinedRadius) {
+                float penetration = (combinedRadius - deltaLength);
+                glm::vec3 normal = glm::normalize(delta);
+//                    glm::vec3 localA = normal * one->getRadius();
+//                    glm::vec3 localB = -normal * two->getRadius();
+
+                return Collision(true, normal);
+            }
+        }
+    }
+    return Collision(false, 0);
+}
+
+PhysicsSprite::Direction Window::VectorDirection(glm::vec2 target) {
+    glm::vec2 compass[] = {
+            glm::vec2(0.0f, 1.0f),	// up
+            glm::vec2(1.0f, 0.0f),	// right
+            glm::vec2(0.0f, -1.0f),	// down
+            glm::vec2(-1.0f, 0.0f)	// left
+    };
+    float max = 0.0f;
+    unsigned int best_match = -1;
+    for (unsigned int i = 0; i < 4; i++)
+    {
+        float dot_product = glm::dot(glm::normalize(target), compass[i]);
+        if (dot_product > max)
+        {
+            max = dot_product;
+            best_match = i;
+        }
+    }
+    return (PhysicsSprite::Direction)best_match;
 }

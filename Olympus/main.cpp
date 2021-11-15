@@ -5,9 +5,6 @@
 Hephaestus engine = Hephaestus("Hephaestus Engine");
 
 Shader shader = engine.createShader("./Shaders/Common/shader.vert", "./Shaders/Common/shader.frag");
-Sprite mainSprite = Sprite(shader, "./Images/wall.jpg", glm::vec3(720/2,720/2, 0.0));
-Sprite secondarySprite = Sprite(shader, "./Images/wall.jpg", glm::vec3(720/2,720/3, 0.0));
-
 Camera mainCamera = Camera();
 
 void moveSpriteUp() {
@@ -42,9 +39,6 @@ void init() {
 
     engine.addCamera(&mainCamera);
 
-    engine.addSprite(&mainSprite);
-    engine.addSprite(&secondarySprite);
-
     engine.addKeybind(GLFW_KEY_UP, GLFW_PRESS, moveSpriteUp);
     engine.addKeybind(GLFW_KEY_UP, GLFW_REPEAT, moveSpriteUp);
 
@@ -77,8 +71,9 @@ void update() {
 //    glm::vec3 position = mainCamera.getPosition();
 //    mainCamera.setPosition({position.x, position.y , position.z});
 
-    mainSprite.setRotation(glm::vec3(glfwGetTime() * 100, glfwGetTime()  * 100, 0));
-    secondarySprite.setRotation(glm::vec3(-(glfwGetTime() * 10), -(glfwGetTime()  * 10), 0));
+//    mainSprite.setY(mainSprite.getY() - 0.1);
+//    mainSprite.setRotation(glm::vec3(glfwGetTime() * 100, glfwGetTime()  * 100, 0));
+//    secondarySprite.setRotation(glm::vec3(-(glfwGetTime() * 10), -(glfwGetTime()  * 10), 0));
 }
 
 void render() {
@@ -86,6 +81,28 @@ void render() {
 }
 
 int main() {
+//    vector<PhysicsSprite> sprites { };
+//
+//    for(int n = 0; n <= 2; n++) {
+//        float x = rand() % 720;
+//        float y = rand() % 720;
+//
+//        PhysicsSprite sprite = PhysicsSprite(shader, "./Images/circle.png", glm::vec3(x,y, 0.0));
+//        sprite.setVelocity({0.0, 0.0, 0.0});
+//        sprites.push_back(sprite);
+//    }
+//
+//    for(Sprite &sprite : sprites) {
+//        engine.addSprite(&sprite);
+//    }
+    PhysicsSprite sprite = PhysicsSprite(shader, "./Images/circle.png", glm::vec3(100,720/2 + 25, 0.0));
+    sprite.setVelocity({1.0, 0.0, 0.0});
+    engine.addSprite(&sprite);
+
+    PhysicsSprite secondSprite = PhysicsSprite(shader, "./Images/circle.png", glm::vec3(600,720/2, 0.0));
+    secondSprite.setVelocity({-1.0, 0.0, 0.0});
+    engine.addSprite(&secondSprite);
+
     engine.setInit(init);
     engine.setDestroy(destroy);
     engine.setTick(tick);

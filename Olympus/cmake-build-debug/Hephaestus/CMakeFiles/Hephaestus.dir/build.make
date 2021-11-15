@@ -157,6 +157,19 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Window/Camera/Camera.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Hephaestus.dir/Window/Camera/Camera.cpp.s"
 	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/Hephaestus && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Camera/Camera.cpp -o CMakeFiles/Hephaestus.dir/Window/Camera/Camera.cpp.s
 
+Hephaestus/CMakeFiles/Hephaestus.dir/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp.o: Hephaestus/CMakeFiles/Hephaestus.dir/flags.make
+Hephaestus/CMakeFiles/Hephaestus.dir/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp.o: ../Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object Hephaestus/CMakeFiles/Hephaestus.dir/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp.o"
+	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/Hephaestus && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Hephaestus.dir/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp
+
+Hephaestus/CMakeFiles/Hephaestus.dir/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Hephaestus.dir/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp.i"
+	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/Hephaestus && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp > CMakeFiles/Hephaestus.dir/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp.i
+
+Hephaestus/CMakeFiles/Hephaestus.dir/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Hephaestus.dir/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp.s"
+	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/Hephaestus && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp -o CMakeFiles/Hephaestus.dir/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp.s
+
 # Object files for target Hephaestus
 Hephaestus_OBJECTS = \
 "CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o" \
@@ -165,7 +178,8 @@ Hephaestus_OBJECTS = \
 "CMakeFiles/Hephaestus.dir/Window/Sprite/Sprite.cpp.o" \
 "CMakeFiles/Hephaestus.dir/Window/Controls/ControlManager.cpp.o" \
 "CMakeFiles/Hephaestus.dir/Window/Controls/Keybind/Keybind.cpp.o" \
-"CMakeFiles/Hephaestus.dir/Window/Camera/Camera.cpp.o"
+"CMakeFiles/Hephaestus.dir/Window/Camera/Camera.cpp.o" \
+"CMakeFiles/Hephaestus.dir/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp.o"
 
 # External object files for target Hephaestus
 Hephaestus_EXTERNAL_OBJECTS =
@@ -177,9 +191,10 @@ Hephaestus/libHephaestus.a: Hephaestus/CMakeFiles/Hephaestus.dir/Window/Sprite/S
 Hephaestus/libHephaestus.a: Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/ControlManager.cpp.o
 Hephaestus/libHephaestus.a: Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/Keybind/Keybind.cpp.o
 Hephaestus/libHephaestus.a: Hephaestus/CMakeFiles/Hephaestus.dir/Window/Camera/Camera.cpp.o
+Hephaestus/libHephaestus.a: Hephaestus/CMakeFiles/Hephaestus.dir/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp.o
 Hephaestus/libHephaestus.a: Hephaestus/CMakeFiles/Hephaestus.dir/build.make
 Hephaestus/libHephaestus.a: Hephaestus/CMakeFiles/Hephaestus.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libHephaestus.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX static library libHephaestus.a"
 	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/Hephaestus && $(CMAKE_COMMAND) -P CMakeFiles/Hephaestus.dir/cmake_clean_target.cmake
 	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/Hephaestus && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Hephaestus.dir/link.txt --verbose=$(VERBOSE)
 

@@ -24,22 +24,14 @@
 #include <glm/gtx/quaternion.hpp>
 
 class Sprite {
-private:
-    glm::vec3 position { };
-    glm::vec2 size { };
-    glm::vec3 rotation { };
-
-    glm::vec2 screenSize { };
-
-    Camera* camera;
-
-    void createTexture(std::string texturePath);
-    void createVirtualBufferObject();
-
-    Shader shader;
-    GLuint VBO, VAO, EBO, textureAtlas;
-
 public:
+    enum Shape {
+        sphere,
+        square
+    };
+
+
+
     Sprite(Shader shader, std::string texturePath,
            glm::vec3 position = glm::vec3(300.0f, 300.0f, 0.0f),
            glm::vec2 size = glm::vec2(50.0f, 50.0f),
@@ -48,6 +40,7 @@ public:
     /*
      * Sprite Position
      */
+    glm::vec3 getPosition();
     void setPosition(glm::vec3 position);
 
     /// Get & Set the current X coordinate
@@ -92,8 +85,19 @@ public:
     float getHeight();
     void setHeight(GLfloat height);
 
+    /// Get the sprite radius
+    float getRadius();
+
+    /*
+     * Sprite Shape
+     */
+    void setShape(Shape shape);
+    Shape getShape();
+
     // MARK: Drawing Functions
     void draw();
+
+    virtual void move(float deltaTime);
 
     void setTexture(std::string texturePath);
 
@@ -101,6 +105,24 @@ public:
 
     void updateCamera(Camera* newCamera);
 
+protected:
+    glm::vec3 position { };
+    glm::vec2 size { };
+    glm::vec3 rotation { };
+
+    glm::vec2 screenSize { };
+
+    Camera* camera;
+
+    void createTexture(std::string texturePath);
+    void createVirtualBufferObject();
+
+    Shader shader;
+    GLuint VBO, VAO, EBO, textureAtlas;
+
+    bool hasCollision = true;
+
+    Shape spriteShape = sphere;
 };
 
 #endif //OLYMPUS_SPRITE_HPP
