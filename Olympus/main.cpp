@@ -99,7 +99,7 @@ int main() {
     sprite.setVelocity({1.0, 0.0, 0.0});
     engine.addSprite(&sprite);
 
-    PhysicsSprite secondSprite = PhysicsSprite(shader, "./Images/circle.png", glm::vec3(600,720/2, 0.0));
+    PhysicsSprite secondSprite = PhysicsSprite(shader, "./Images/circle.png", glm::vec3(720/2,720/2, 0.0));
     secondSprite.setVelocity({-1.0, 0.0, 0.0});
     engine.addSprite(&secondSprite);
 

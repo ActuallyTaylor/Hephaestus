@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Hephaestus.dir/Window/Camera/Camera.cpp.o"
   "CMakeFiles/Hephaestus.dir/Window/Controls/ControlManager.cpp.o"
   "CMakeFiles/Hephaestus.dir/Window/Controls/Keybind/Keybind.cpp.o"
+  "CMakeFiles/Hephaestus.dir/Window/Sprite/PhysicsSprite/Collision/Collision.cpp.o"
   "CMakeFiles/Hephaestus.dir/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp.o"
   "CMakeFiles/Hephaestus.dir/Window/Sprite/Sprite.cpp.o"
   "CMakeFiles/Hephaestus.dir/Window/Window.cpp.o"

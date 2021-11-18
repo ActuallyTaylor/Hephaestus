@@ -30,7 +30,10 @@ public:
         square
     };
 
-
+    glm::vec3 position { };
+    glm::vec2 size { };
+    glm::vec3 rotation { };
+    glm::mat4 projection { };
 
     Sprite(Shader shader, std::string texturePath,
            glm::vec3 position = glm::vec3(300.0f, 300.0f, 0.0f),
@@ -106,10 +109,6 @@ public:
     void updateCamera(Camera* newCamera);
 
 protected:
-    glm::vec3 position { };
-    glm::vec2 size { };
-    glm::vec3 rotation { };
-
     glm::vec2 screenSize { };
 
     Camera* camera;

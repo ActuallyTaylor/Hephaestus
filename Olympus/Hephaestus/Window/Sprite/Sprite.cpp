@@ -12,12 +12,12 @@
 
 #include "Sprite.hpp"
 
-
 Sprite::Sprite(Shader inShader, std::string texturePath, glm::vec3 inPosition, glm::vec2 inSize, glm::vec3 inRotation) {
     shader = inShader;
     position = inPosition;
     size = inSize;
     rotation = inRotation;
+    projection = glm::ortho(0.0f, screenSize.x, screenSize.y, 0.0f, -1000.0f, 1000.0f);
 
     createTexture(texturePath);
     createVirtualBufferObject();
@@ -62,7 +62,6 @@ void Sprite::createVirtualBufferObject() {
             0, 1, 3,   // first triangle
             1, 2, 3    // second triangle
     };
-
     glGenBuffers(1, &VBO);
     glGenBuffers(1, &EBO);
 
@@ -97,12 +96,8 @@ void Sprite::draw() {
 
     glm::mat4 view = camera->getView();
 
-    glm::mat4 projection = glm::ortho(0.0f, static_cast<float>(screenSize.x), static_cast<float>(screenSize.y), 0.0f, -1000.0f, 1000.0f);
-
     shader.setMatrix4("model", model);
-
     shader.setMatrix4("view", view);
-
     shader.setMatrix4("projection", projection);
 
     glBindVertexArray(VAO);
@@ -146,6 +141,7 @@ void Sprite::setTexture(std::string texturePath) {
 void Sprite::updateScreenDimensions(int width, int height) {
     printf("Update Dimensions %d, %d\n", width, height);
     screenSize = glm::vec2(width, height);
+    projection = glm::ortho(0.0f, screenSize.x, screenSize.y, 0.0f, -1000.0f, 1000.0f);
     createVirtualBufferObject();
 }
 

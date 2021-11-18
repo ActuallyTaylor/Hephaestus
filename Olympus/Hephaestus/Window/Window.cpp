@@ -62,6 +62,7 @@ void Window::windowLoop() {
     int framesThisSecond = 0;
 
     self = this;
+
     while (!glfwWindowShouldClose(window)) {
         if (printFrames) {
             framesThisSecond ++;
@@ -127,15 +128,15 @@ void Window::_render() {
 
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-    // Draw all sprites into the screen.
+
     for(Sprite *sprite : sprites) {
         sprite->draw();
     }
-    glDisable(GL_BLEND);
 
     if (render != nullptr) {
         render();
     }
+    glDisable(GL_BLEND);
 }
 
 void Window::keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods) {
@@ -150,6 +151,8 @@ void Window::keyCallback(GLFWwindow *window, int key, int scancode, int action, 
 void Window::windowCallback(GLFWwindow *window, int width, int height) {
     self->width = width;
     self->height = height;
+    glViewport(0, 0, width, height);
+    glOrtho(0.0f, width, height, 0.0f, -1000.0f, 1000.0f );
 
     for (Sprite *sprite: self->sprites) {
         sprite->updateScreenDimensions(width, height);
@@ -196,14 +199,9 @@ void Window::checkCollisions() {
             Sprite* sprite = sprites[x];
             Sprite* checkSprite = sprites[y];
 
-            Collision result { checkCollision(sprite, checkSprite) };
-            if(std::get<0>(result)) {
-                PhysicsSprite* pSprite = dynamic_cast<PhysicsSprite *>(sprite);
-                PhysicsSprite* cpSprite = dynamic_cast<PhysicsSprite *>(checkSprite);
-
-                if (pSprite != nullptr && checkSprite != nullptr) {
-                    pSprite->collide(cpSprite, std::get<1>(result));
-                }
+            Collision collision { checkCollision(sprite, checkSprite) };
+            if(collision.successful) {
+                collision.perform();
             }
         }
     }
@@ -215,38 +213,35 @@ Collision Window::checkCollision(Sprite *one, Sprite *two) {
         if(one->getShape() == Sprite::sphere && two->getShape() == Sprite::sphere) {
             // Calculate collision for sphere & sphere
             float combinedRadius = one->getRadius() + two->getRadius();
-            glm::vec3 delta = one->getPosition() - two->getPosition();
+            glm::vec3 delta = { two->getX() - one->getX(), two->getY() - one->getY(), 0.0 };
             float deltaLength = glm::length(delta);
             if (deltaLength <= combinedRadius) {
                 float penetration = (combinedRadius - deltaLength);
-                glm::vec3 normal = glm::normalize(delta);
-//                    glm::vec3 localA = normal * one->getRadius();
-//                    glm::vec3 localB = -normal * two->getRadius();
 
-                return Collision(true, normal);
+                return Collision(true, one, two, delta, penetration);
             }
         }
     }
-    return Collision(false, 0);
+    return Collision(false, nullptr, nullptr, glm::vec3 (1.0f), 0);
 }
 
-PhysicsSprite::Direction Window::VectorDirection(glm::vec2 target) {
-    glm::vec2 compass[] = {
-            glm::vec2(0.0f, 1.0f),	// up
-            glm::vec2(1.0f, 0.0f),	// right
-            glm::vec2(0.0f, -1.0f),	// down
-            glm::vec2(-1.0f, 0.0f)	// left
-    };
-    float max = 0.0f;
-    unsigned int best_match = -1;
-    for (unsigned int i = 0; i < 4; i++)
-    {
-        float dot_product = glm::dot(glm::normalize(target), compass[i]);
-        if (dot_product > max)
-        {
-            max = dot_product;
-            best_match = i;
-        }
-    }
-    return (PhysicsSprite::Direction)best_match;
-}
+//PhysicsSprite::Direction Window::VectorDirection(glm::vec2 target) {
+//    glm::vec2 compass[] = {
+//            glm::vec2(0.0f, 1.0f),	// up
+//            glm::vec2(1.0f, 0.0f),	// right
+//            glm::vec2(0.0f, -1.0f),	// down
+//            glm::vec2(-1.0f, 0.0f)	// left
+//    };
+//    float max = 0.0f;
+//    unsigned int best_match = -1;
+//    for (unsigned int i = 0; i < 4; i++)
+//    {
+//        float dot_product = glm::dot(glm::normalize(target), compass[i]);
+//        if (dot_product > max)
+//        {
+//            max = dot_product;
+//            best_match = i;
+//        }
+//    }
+//    return (PhysicsSprite::Direction)best_match;
+//}

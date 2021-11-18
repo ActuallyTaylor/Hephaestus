@@ -12,6 +12,7 @@
 #define OLYMPUS_PHYSICSSPRITE_HPP
 
 #include "../Sprite.hpp"
+#include "Collision/Collision.hpp"
 
 class PhysicsSprite: public Sprite {
 protected:
@@ -33,7 +34,7 @@ public:
 
     void move(float deltaTime) override;
 
-    void collide(PhysicsSprite* sprite, glm::vec3 normal);
+    void collide(Collision collision);
 
     void setVelocity(glm::vec3 inVelocity);
     glm::vec3 getVelocity();

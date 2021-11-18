@@ -50,21 +50,9 @@ glm::vec3 PhysicsSprite::getVelocity() {
 /*
  * 𝐽= 𝑛⋅(𝑣𝑖−𝑣𝑗) / 1𝑚𝑖+1𝑚𝑗
  */
-void PhysicsSprite::collide(PhysicsSprite* sprite, glm::vec3 normal) {
-    float m1 = mass;
-    float m2 = sprite->mass;
-
-    glm::vec3 u1 = velocity;
-    glm::vec3 u2 = sprite->velocity;
-
-    glm::vec3 newVelocity = (((m1 - m2) / (m1 + m2)) * u1) + (((2 * m2) / (m1 + m2)) * u2);
-    glm::vec3 otherNewVelocity = (((2 * m1) / (m1 + m2)) * u1) + (((m2 - m1) / (m1 + m2)) * u2);
-
-    velocity = newVelocity;
-    sprite->velocity = otherNewVelocity;
-    printf("Velocities: %s, %s\n", glm::to_string(getVelocity()).c_str(), glm::to_string(sprite->getVelocity()).c_str());
-
+void PhysicsSprite::collide(Collision collision) {
 }
 /*
- *
+    glm::vec3 newVelocity = (((m1 - m2) / (m1 + m2)) * u1) + (((2 * m2) / (m1 + m2)) * u2);
+    glm::vec3 otherNewVelocity = (((2 * m1) / (m1 + m2)) * u1) + (((m2 - m1) / (m1 + m2)) * u2);
  */

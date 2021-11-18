@@ -29,8 +29,6 @@
 #include "./Controls/ControlManager.hpp"
 #include "./Camera/Camera.hpp"
 
-typedef std::tuple<bool, glm::vec3> Collision;
-
 class Window {
 private:
     /// The name of the window.

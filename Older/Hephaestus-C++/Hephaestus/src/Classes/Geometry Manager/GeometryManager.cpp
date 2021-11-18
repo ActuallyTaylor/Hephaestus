@@ -15,7 +15,13 @@ void GeometryManager::setupShader() {
 
 void GeometryManager::draw() {
     for(int i = 0; i < sprites.size(); i++) {
+        glPolygonMode(GL_FRONT, GL_LINE);
+        glPolygonMode(GL_BACK, GL_LINE);
+
         sprites[i].draw();
+        
+        glPolygonMode(GL_FRONT, GL_FILL);
+        glPolygonMode(GL_BACK, GL_FILL);
     }
 }
 
