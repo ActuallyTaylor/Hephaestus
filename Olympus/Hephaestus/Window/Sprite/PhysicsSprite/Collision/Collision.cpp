@@ -36,18 +36,29 @@ void Collision::perform() {
         glm::vec3 p1 = one->position;
         glm::vec3 p2 = two->position;
 
-        float j = glm::dot(normal, (v2 - v1)) / ((1/ m1) + (1 / m2));
+//        float j = glm::dot(normal, (v2 - v1)) / ((1/ m1) + (1 / m2));
+//
+//        float magnitude = glm::sqrt(glm::pow(delta.x, 2) + glm::pow(delta.y, 2) + glm::pow(delta.z, 2));
+//        glm::vec3 normal = delta / magnitude;
+//
+//        glm::vec3 vf1 = 1/m1 * (j * normal);
+//        glm::vec3 vf2 = - (1/m2 * (j * normal));
+//
+//        glm::vec3 positionOffset = normal * penetration;
+        glm::vec3 delt = p1 - p2;
+        float dot = glm::dot((v1 - v2), delt);
+        float magnitude = glm::pow(glm::sqrt(glm::pow(delt.x, 2) + glm::pow(delt.y, 2) + glm::pow(delt.z, 2)), 2);
 
-        float magnitude = glm::sqrt(glm::pow(delta.x, 2) + glm::pow(delta.y, 2) + glm::pow(delta.z, 2));
-        glm::vec3 normal = delta / magnitude;
+        glm::vec3 vf1 = v1 - ((2 * m2 )/(m1 + m2)) * (dot / magnitude) * (delt);
 
-        glm::vec3 vf1 = 1/m1 * (j * normal);
-        glm::vec3 vf2 = - (1/m2 * (j * normal));
+        delt = p2 - p1;
+        dot = glm::dot((v2 - v1), delt);
+        magnitude = glm::pow(glm::sqrt(glm::pow(delt.x, 2) + glm::pow(delt.y, 2) + glm::pow(delt.z, 2)), 2);
 
-        glm::vec3 positionOffset = normal * penetration;
+        glm::vec3 vf2 = v2 - ((2 * m1 )/(m1 + m2)) * (dot / magnitude) * (delt);
 
-        one->position -= positionOffset;
-        two->position += positionOffset;
+//        one->position -= positionOffset;
+//        two->position += positionOffset;
 
         one->velocity = vf1;
         two->velocity = vf2;
@@ -57,3 +68,19 @@ void Collision::perform() {
 
     }
 }
+
+/*
+
+        glm::vec3 delt = p1 - p2;
+        float dot = glm::dot((v1 - v2), delt);
+        float magnitude = glm::sqrt(glm::pow(delt.x, 2) + glm::pow(delt.y, 2) + glm::pow(delt.z, 2));
+
+        glm::vec3 vf1 = v1 - ((2 * m2 )/(m1 + m2)) * (dot / magnitude) * (delt);
+
+        delt = p2 - p1;
+        dot = glm::dot((v2 - v1), delt);
+        magnitude = glm::sqrt(glm::pow(delt.x, 2) + glm::pow(delt.y, 2) + glm::pow(delt.z, 2));
+
+        glm::vec3 vf2 = v2 - ((2 * m1 )/(m1 + m2)) * (dot / magnitude) * (delt);
+
+ */
