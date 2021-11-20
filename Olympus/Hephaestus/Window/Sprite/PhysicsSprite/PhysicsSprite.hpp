@@ -28,7 +28,6 @@ public:
 
     bool effectedByGravity { false };
     float mass { 1.0f };
-    float restitution { 1.0f };
 
     using Sprite::Sprite;
 

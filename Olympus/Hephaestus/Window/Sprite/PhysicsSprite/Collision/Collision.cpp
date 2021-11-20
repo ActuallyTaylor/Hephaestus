@@ -23,35 +23,37 @@ Collision::Collision(bool success, Sprite* one, Sprite* two, glm::vec3 delta, fl
 void Collision::perform() {
     PhysicsSprite* one = dynamic_cast<PhysicsSprite *>(this->one);
     PhysicsSprite* two = dynamic_cast<PhysicsSprite *>(this->two);
+    if (one != nullptr && two != nullptr) {
+        // Normalized vector of the difference between the two positions
+        this->normal = glm::normalize(delta);
 
-    // Normalized vector of the difference between the two positions
-    this->normal = glm::normalize(delta);
+        float m1 = one->mass;
+        float m2 = two->mass;
 
-    float m1 = one->mass;
-    float m2 = two->mass;
+        glm::vec3 v1 = one->velocity;
+        glm::vec3 v2 = two->velocity;
 
-    glm::vec3 v1 = one->velocity;
-    glm::vec3 v2 = two->velocity;
+        glm::vec3 p1 = one->position;
+        glm::vec3 p2 = two->position;
 
-    glm::vec3 p1 = one->position;
-    glm::vec3 p2 = two->position;
+        float j = glm::dot(normal, (v2 - v1)) / ((1/ m1) + (1 / m2));
 
-    float dotProduct = glm::dot(v1 - v2, p1 - p2);
-    float lengthS = pow(glm::length(p1 - p2), 2);
+        float magnitude = glm::sqrt(glm::pow(delta.x, 2) + glm::pow(delta.y, 2) + glm::pow(delta.z, 2));
+        glm::vec3 normal = delta / magnitude;
 
-    glm::vec3 vf1 = v1 - ( 2 * m2 / m1 + m2 ) * (dotProduct / lengthS ) * ( p1 - p2 );
+        glm::vec3 vf1 = 1/m1 * (j * normal);
+        glm::vec3 vf2 = - (1/m2 * (j * normal));
 
-    dotProduct = glm::dot(v2 - v1, p2 - p1);
-    lengthS = pow(glm::length(p2 - p1), 2);
-    glm::vec3 vf2 = v2 - ( 2 * m1 / m1 + m2 ) * (dotProduct / lengthS ) * ( p2 - p1 );
-    // Take the normal vector and multiply it by the penetration to find the angle that we need to offset the spheres so that they do not collide
-    glm::vec3 positionOffset = normal * penetration;
+        glm::vec3 positionOffset = normal * penetration;
 
-    one->position -= positionOffset;
-    two->position += positionOffset;
+        one->position -= positionOffset;
+        two->position += positionOffset;
 
-    one->velocity += vf1 * normal;
-    two->velocity += vf2 * normal;
-    printf("Velocities: %s, %s\n", glm::to_string(one->getVelocity()).c_str(), glm::to_string(two->getVelocity()).c_str());
+        one->velocity = vf1;
+        two->velocity = vf2;
 
+        printf("Velocities: %s, %s\n", glm::to_string((m1 * v1) + (m1 * v2)).c_str(), glm::to_string((m1 * vf1) + (m1 * vf2)).c_str());
+    } else if (one != nullptr) {
+
+    }
 }

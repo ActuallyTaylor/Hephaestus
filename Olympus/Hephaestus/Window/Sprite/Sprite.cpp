@@ -93,6 +93,7 @@ void Sprite::draw() {
     model = rotate(model, glm::radians(rotation.z), glm::vec3(0.0f, 0.0f, 1.0f));
 
     model = scale(model, glm::vec3(size, 1.0f));
+//    model = glm::translate(model, glm::vec3(-0.5f, -0.5f, 0.0f));
 
     glm::mat4 view = camera->getView();
 
