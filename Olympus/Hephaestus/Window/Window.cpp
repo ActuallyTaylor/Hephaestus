@@ -220,8 +220,19 @@ Collision Window::checkCollision(Sprite *one, Sprite *two) {
 
                 return Collision(true, one, two, delta, penetration);
             }
+        } else if((one->getShape() == Sprite::sphere && two->getShape() == Sprite::square) || (one->getShape() == Sprite::square && two->getShape() == Sprite::sphere)) {
+            //Fix AABB Collissions
+            if(one->getX() < two->getX() + two->getWidth() &&
+               one->getX() + one->getWidth() > two->getX() &&
+               one->getY() < two->getY() + two->getHeight() &&
+               one->getY() + one->getHeight() > two->getHeight())
+            {
+                printf("Colliding\n");
+                return Collision(true, one, two, glm::vec3 (1.0f), 0);
+            }
         }
-    }
+
+        }
     return Collision(false, nullptr, nullptr, glm::vec3 (1.0f), 0);
 }
 

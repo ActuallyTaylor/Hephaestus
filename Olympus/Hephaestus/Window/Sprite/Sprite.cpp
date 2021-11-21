@@ -43,7 +43,11 @@ void Sprite::createTexture(std::string texturePath) {
     int width, height, nrChannels;
     unsigned char *data = stbi_load(texturePath.c_str(), &width, &height, &nrChannels, 0);
     if (data) {
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
+        if (nrChannels == 3) {
+            glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+        } else if (nrChannels == 4) {
+            glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
+        }
         glGenerateMipmap(GL_TEXTURE_2D);
     } else {
         printf("Failed to load texture");
@@ -93,7 +97,7 @@ void Sprite::draw() {
     model = rotate(model, glm::radians(rotation.z), glm::vec3(0.0f, 0.0f, 1.0f));
 
     model = scale(model, glm::vec3(size, 1.0f));
-//    model = glm::translate(model, glm::vec3(-0.5f, -0.5f, 0.0f));
+    model = glm::translate(model, glm::vec3(0.5f, 0.5f, 0.0f));
 
     glm::mat4 view = camera->getView();
 
@@ -105,6 +109,21 @@ void Sprite::draw() {
 
     glBindTexture(GL_TEXTURE_2D, textureAtlas);
     glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+}
+
+void Sprite::setTexture(std::string texturePath) {
+    createTexture(texturePath);
+}
+
+void Sprite::updateScreenDimensions(int width, int height) {
+    printf("Update Dimensions %d, %d\n", width, height);
+    screenSize = glm::vec2(width, height);
+    projection = glm::ortho(0.0f, screenSize.x, screenSize.y, 0.0f, -1000.0f, 1000.0f);
+    createVirtualBufferObject();
+}
+
+glm::vec3 Sprite::getPosition() {
+    return position;
 }
 
 void Sprite::setPosition(glm::vec3 inPosition) {
@@ -135,21 +154,9 @@ void Sprite::setZ(GLfloat zValue) {
     position.z = zValue;
 }
 
-void Sprite::setTexture(std::string texturePath) {
-    createTexture(texturePath);
+glm::vec3 Sprite::getRotation() {
+    return rotation;
 }
-
-void Sprite::updateScreenDimensions(int width, int height) {
-    printf("Update Dimensions %d, %d\n", width, height);
-    screenSize = glm::vec2(width, height);
-    projection = glm::ortho(0.0f, screenSize.x, screenSize.y, 0.0f, -1000.0f, 1000.0f);
-    createVirtualBufferObject();
-}
-
-glm::vec3 Sprite::getPosition() {
-    return position;
-}
-
 
 void Sprite::setRotation(glm::vec3 inRotation) {
     rotation = inRotation;
@@ -177,6 +184,10 @@ float Sprite::getYaw() {
 
 void Sprite::setYaw(GLfloat yaw) {
     rotation.z = yaw;
+}
+
+glm::vec2 Sprite::getSize() {
+    return size;
 }
 
 void Sprite::setSize(glm::vec2 inSize) {

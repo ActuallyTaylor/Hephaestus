@@ -95,15 +95,19 @@ int main() {
 //    for(Sprite &sprite : sprites) {
 //        engine.addSprite(&sprite);
 //    }
-    PhysicsSprite sprite = PhysicsSprite(shader, "./Images/circle.png", glm::vec3(100,720/2 + 25 , 0.0));
-    sprite.setVelocity({1.0, 0.0, 0.0});
+    PhysicsSprite sprite = PhysicsSprite(shader, "./Images/circle.png", glm::vec3(100,720/2 , 0.0));
+    sprite.setVelocity({-1.0, 0.0, 0.0});
 //    sprite.mass = 1.0;
     engine.addSprite(&sprite);
 
-    PhysicsSprite secondSprite = PhysicsSprite(shader, "./Images/circle.png", glm::vec3(720/2,720/2, 0.0));
-    secondSprite.setVelocity({-1.0, 0.0, 0.0});
-//    secondSprite.mass = 1.0;
-    engine.addSprite(&secondSprite);
+//    PhysicsSprite secondSprite = PhysicsSprite(shader, "./Images/circle.png", glm::vec3(720/2,720/2, 0.0));
+//    secondSprite.setVelocity({-1.0, 0.0, 0.0});
+//    secondSprite.mass = 10000000000.0;
+//    engine.addSprite(&secondSprite);
+
+//    Sprite stationarySprite = Sprite(shader, "./Images/wall.jpg", glm::vec3(0,710, 0.0), glm::vec2(720, 20));
+//    secondSprite.mass = 10000000000.0;
+//    engine.addSprite(&stationarySprite);
 
     engine.setInit(init);
     engine.setDestroy(destroy);

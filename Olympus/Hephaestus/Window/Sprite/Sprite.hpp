@@ -30,15 +30,7 @@ public:
         square
     };
 
-    glm::vec3 position { };
-    glm::vec2 size { };
-    glm::vec3 rotation { };
-    glm::mat4 projection { };
-
-    Sprite(Shader shader, std::string texturePath,
-           glm::vec3 position = glm::vec3(300.0f, 300.0f, 0.0f),
-           glm::vec2 size = glm::vec2(50.0f, 50.0f),
-           glm::vec3 rotation = glm::vec3(0.0f, 0.0f, 0.0f));
+    Sprite(Shader shader, std::string texturePath, glm::vec3 position = glm::vec3(300.0f, 300.0f, 0.0f), glm::vec2 size = glm::vec2(50.0f, 50.0f), glm::vec3 rotation = glm::vec3(0.0f, 0.0f, 0.0f));
 
     /*
      * Sprite Position
@@ -61,6 +53,7 @@ public:
     /*
      * Sprite Rotation
      */
+    glm::vec3 getRotation();
     void setRotation(glm::vec3 rotation);
 
     // Get & Set the current roll / X coordinate
@@ -78,6 +71,7 @@ public:
     /*
      * Sprite Size
      */
+    glm::vec2 getSize();
     void setSize(glm::vec2 scale);
 
     /// Get & Set the width / X coordinate
@@ -95,7 +89,7 @@ public:
      * Sprite Shape
      */
     void setShape(Shape shape);
-    Shape getShape();
+    virtual Shape getShape();
 
     // MARK: Drawing Functions
     void draw();
@@ -109,6 +103,10 @@ public:
     void updateCamera(Camera* newCamera);
 
 protected:
+    glm::vec3 position { };
+    glm::vec2 size { };
+    glm::vec3 rotation { };
+    glm::mat4 projection { };
     glm::vec2 screenSize { };
 
     Camera* camera;
@@ -121,7 +119,7 @@ protected:
 
     bool hasCollision = true;
 
-    Shape spriteShape = sphere;
+    Shape spriteShape = square;
 };
 
 #endif //OLYMPUS_SPRITE_HPP

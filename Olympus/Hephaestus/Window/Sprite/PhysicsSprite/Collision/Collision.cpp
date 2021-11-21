@@ -21,30 +21,23 @@ Collision::Collision(bool success, Sprite* one, Sprite* two, glm::vec3 delta, fl
 }
 
 void Collision::perform() {
-    PhysicsSprite* one = dynamic_cast<PhysicsSprite *>(this->one);
-    PhysicsSprite* two = dynamic_cast<PhysicsSprite *>(this->two);
-    if (one != nullptr && two != nullptr) {
-        // Normalized vector of the difference between the two positions
+    PhysicsSprite* pOne = dynamic_cast<PhysicsSprite *>(this->one);
+    PhysicsSprite* pTwo = dynamic_cast<PhysicsSprite *>(this->two);
+    if (pOne != nullptr && pTwo != nullptr) {
+        // Normalized vector of the difference between the pTwo positions
         this->normal = glm::normalize(delta);
 
-        float m1 = one->mass;
-        float m2 = two->mass;
+        float m1 = pOne->getMass();
+        float m2 = pTwo->getMass();
 
-        glm::vec3 v1 = one->velocity;
-        glm::vec3 v2 = two->velocity;
+        glm::vec3 v1 = pOne->getVelocity();
+        glm::vec3 v2 = pTwo->getVelocity();
 
-        glm::vec3 p1 = one->position;
-        glm::vec3 p2 = two->position;
+        glm::vec3 p1 = pOne->getPosition();
+        glm::vec3 p2 = pTwo->getPosition();
 
-//        float j = glm::dot(normal, (v2 - v1)) / ((1/ m1) + (1 / m2));
-//
-//        float magnitude = glm::sqrt(glm::pow(delta.x, 2) + glm::pow(delta.y, 2) + glm::pow(delta.z, 2));
-//        glm::vec3 normal = delta / magnitude;
-//
-//        glm::vec3 vf1 = 1/m1 * (j * normal);
-//        glm::vec3 vf2 = - (1/m2 * (j * normal));
-//
-//        glm::vec3 positionOffset = normal * penetration;
+        glm::vec3 positionOffset = normal * penetration;
+
         glm::vec3 delt = p1 - p2;
         float dot = glm::dot((v1 - v2), delt);
         float magnitude = glm::pow(glm::sqrt(glm::pow(delt.x, 2) + glm::pow(delt.y, 2) + glm::pow(delt.z, 2)), 2);
@@ -57,14 +50,18 @@ void Collision::perform() {
 
         glm::vec3 vf2 = v2 - ((2 * m1 )/(m1 + m2)) * (dot / magnitude) * (delt);
 
-//        one->position -= positionOffset;
-//        two->position += positionOffset;
+        pOne->setPosition(pOne->getPosition() - positionOffset);
+        pTwo->setPosition(pTwo->getPosition() + positionOffset);
 
-        one->velocity = vf1;
-        two->velocity = vf2;
+        pOne->setVelocity(vf1);
+        pTwo->setVelocity(vf2);
 
-        printf("Velocities: %s, %s\n", glm::to_string((m1 * v1) + (m1 * v2)).c_str(), glm::to_string((m1 * vf1) + (m1 * vf2)).c_str());
-    } else if (one != nullptr) {
+        printf("Velocities: %s, %s\n", glm::to_string(vf1).c_str(), glm::to_string(vf2).c_str());
+    } else if (pOne == nullptr && pTwo != nullptr) {
+        // One is not a physics sprite but two is.
+
+    } else if (pOne != nullptr && pTwo == nullptr) {
+        // Two is not a physics sprite but one is.
 
     }
 }

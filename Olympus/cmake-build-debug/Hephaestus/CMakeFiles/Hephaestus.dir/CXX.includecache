@@ -68,23 +68,23 @@ glm/gtc/quaternion.hpp
 glm/gtx/quaternion.hpp
 -
 
-/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/Collision/Collision.cpp
-glm/gtx/string_cast.hpp
--
-Collision.hpp
-/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/Collision/Collision.hpp
-../PhysicsSprite.hpp
-/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.hpp
-
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/Collision/Collision.hpp
 ../../Sprite.hpp
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/Sprite.hpp
+
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp
+PhysicsSprite.hpp
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.hpp
+glm/gtx/string_cast.hpp
+-
 
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.hpp
 ../Sprite.hpp
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/Sprite.hpp
 Collision/Collision.hpp
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/Collision/Collision.hpp
+../../../Shader/Shader.hpp
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Shader/Shader.hpp
 
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/Sprite.hpp
 ../../Shader/Shader.hpp
@@ -778,6 +778,8 @@ matrix_projection.inl
 matrix_transform.inl
 /usr/local/include/glm/ext/matrix_transform.inl
 
+/usr/local/include/glm/ext/matrix_transform.inl
+
 /usr/local/include/glm/ext/quaternion_common.hpp
 ../ext/scalar_constants.hpp
 /usr/local/include/glm/ext/scalar_constants.hpp
@@ -1201,14 +1203,6 @@ epsilon.inl
 /usr/local/include/glm/ext/matrix_transform.hpp
 matrix_transform.inl
 /usr/local/include/glm/gtc/matrix_transform.inl
-
-/usr/local/include/glm/gtc/matrix_transform.inl
-../geometric.hpp
-/usr/local/include/glm/geometric.hpp
-../trigonometric.hpp
-/usr/local/include/glm/trigonometric.hpp
-../matrix.hpp
-/usr/local/include/glm/matrix.hpp
 
 /usr/local/include/glm/gtc/quaternion.hpp
 ../gtc/constants.hpp
