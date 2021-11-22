@@ -23,18 +23,10 @@ protected:
 
     glm::vec3 velocity { 0.0, 0.0, 0.0 };
 
-    bool effectedByGravity {false  };
+    bool effectedByGravity { true };
     float mass { 1.0f };
 
 public:
-    enum Direction {
-        UP,
-        RIGHT,
-        DOWN,
-        LEFT
-    };
-
-
     using Sprite::Sprite;
 
     // Override Functions
@@ -44,6 +36,10 @@ public:
     // Getters & Setters
     void setVelocity(glm::vec3 inVelocity);
     glm::vec3 getVelocity();
+
+    void setXVelocity(float x);
+    void setYVelocity(float y);
+    void setZVelocity(float z);
 
     void setMass(float inMass);
     float getMass();

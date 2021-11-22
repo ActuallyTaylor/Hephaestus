@@ -24,22 +24,18 @@ void PhysicsSprite::move(float deltaTime) {
     position += velocity;
 
     if (position.x  <= 0.0f) {
-        printf("Collided With Left Wall!\n");
-        velocity.x = -velocity.x;
+        velocity.x = -velocity.x * 0.065;
         position.x = 0;
     } else if (position.x + size.x >= screenSize.x) {
-        printf("Collided With Right Wall!\n");
-        velocity.x = -velocity.x;
+        velocity.x = -velocity.x * 0.065;
         position.x = screenSize.x - size.x;
     }
 
     if (position.y <= 0.0f) {
-        printf("Collided With Top Wall!\n");
-        velocity.y = -velocity.y;
-        position.y = size.y;
+        velocity.y = -velocity.y * 0.065;
+        position.y = 0;
     } else if (position.y + size.y >= screenSize.y) {
-        printf("Collided With Bottom Wall!\n");
-        velocity.y = -velocity.y;
+        velocity.y = -velocity.y * 0.065;
         position.y = screenSize.y - size.y;
     }
 }
@@ -58,4 +54,16 @@ void PhysicsSprite::setMass(float inMass) {
 
 float PhysicsSprite::getMass() {
     return mass;
+}
+
+void PhysicsSprite::setXVelocity(float x) {
+    velocity.x = x;
+}
+
+void PhysicsSprite::setYVelocity(float y) {
+    velocity.y = y;
+}
+
+void PhysicsSprite::setZVelocity(float z) {
+    velocity.z = z;
 }

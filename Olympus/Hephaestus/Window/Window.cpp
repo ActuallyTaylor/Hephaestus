@@ -179,6 +179,7 @@ void Window::cameraRotationChanged() {
 
 void Window::cameraTargetChanged() {
 
+
 }
 
 void Window::addCamera(Camera* inCamera) {
@@ -191,6 +192,10 @@ void Window::addCamera(Camera* inCamera) {
     for (Sprite *sprite: sprites) {
         sprite->updateCamera(currentCamera);
     }
+}
+
+float clamp(float value, float min, float max) {
+    return std::max(min, std::min(max, value));
 }
 
 void Window::checkCollisions() {
@@ -210,49 +215,53 @@ void Window::checkCollisions() {
 // https://learnopengl.com/In-Practice/2D-Game/Collisions/Collision-resolution
 Collision Window::checkCollision(Sprite *one, Sprite *two) {
     if (one != two) {
-        if(one->getShape() == Sprite::sphere && two->getShape() == Sprite::sphere) {
+        if (one->getShape() == Sprite::sphere && two->getShape() == Sprite::sphere) {
             // Calculate collision for sphere & sphere
             float combinedRadius = one->getRadius() + two->getRadius();
-            glm::vec3 delta = { two->getX() - one->getX(), two->getY() - one->getY(), 0.0 };
+            glm::vec3 delta = {two->getX() - one->getX(), two->getY() - one->getY(), 0.0};
             float deltaLength = glm::length(delta);
             if (deltaLength <= combinedRadius) {
                 float penetration = (combinedRadius - deltaLength);
 
-                return Collision(true, one, two, delta, penetration);
+                return {true, one, two, delta, glm::vec3(penetration, 0.0, 0.0)};
             }
-        } else if((one->getShape() == Sprite::sphere && two->getShape() == Sprite::square) || (one->getShape() == Sprite::square && two->getShape() == Sprite::sphere)) {
-            //Fix AABB Collissions
-            if(one->getX() < two->getX() + two->getWidth() &&
-               one->getX() + one->getWidth() > two->getX() &&
-               one->getY() < two->getY() + two->getHeight() &&
-               one->getY() + one->getHeight() > two->getHeight())
-            {
-                printf("Colliding\n");
-                return Collision(true, one, two, glm::vec3 (1.0f), 0);
+        } else if (one->getShape() == Sprite::sphere && two->getShape() == Sprite::square) {
+            // Sphere - AABB collision
+            return checkAABBSphereCollision(two, one);
+        } else if (one->getShape() == Sprite::square && two->getShape() == Sprite::sphere) {
+            // AABB - Sphere collision
+            return checkAABBSphereCollision(one, two);
+        } else if (one->getShape() == Sprite::square && two->getShape() == Sprite::square) {
+            // AABB collision
+            if ((one->getX() <= two->getX() + two->getWidth() && one->getX() + one->getWidth() >= two->getX()) &&
+                (one->getY() <= two->getY() + two->getHeight() && one->getY() + one->getHeight() >= two->getY()) &&
+                (one->getZ() <= two->getZ() && one->getZ() + 0 >= two->getZ())) {
+                return {true, one, two, glm::vec3(1.0f), glm::vec3(1.0f)};
             }
         }
-
-        }
-    return Collision(false, nullptr, nullptr, glm::vec3 (1.0f), 0);
+        return {false, nullptr, nullptr, glm::vec3(1.0f), glm::vec3(1.0f)};
+    }
+    return {false, nullptr, nullptr, glm::vec3(1.0f), glm::vec3(1.0f)};
 }
 
-//PhysicsSprite::Direction Window::VectorDirection(glm::vec2 target) {
-//    glm::vec2 compass[] = {
-//            glm::vec2(0.0f, 1.0f),	// up
-//            glm::vec2(1.0f, 0.0f),	// right
-//            glm::vec2(0.0f, -1.0f),	// down
-//            glm::vec2(-1.0f, 0.0f)	// left
-//    };
-//    float max = 0.0f;
-//    unsigned int best_match = -1;
-//    for (unsigned int i = 0; i < 4; i++)
-//    {
-//        float dot_product = glm::dot(glm::normalize(target), compass[i]);
-//        if (dot_product > max)
-//        {
-//            max = dot_product;
-//            best_match = i;
-//        }
-//    }
-//    return (PhysicsSprite::Direction)best_match;
-//}
+// https://learnopengl.com/In-Practice/2D-Game/Collisions/Collision-detection
+Collision Window::checkAABBSphereCollision(Sprite* aabb, Sprite* sphere) {
+    glm::vec2 center {sphere->getPosition() + sphere->getRadius()};
+    // calculate AABB info (center, half-extents)
+    glm::vec2 aabb_half_extents {aabb->getWidth() / 2.0f, aabb->getHeight() / 2.0f};
+    glm::vec2 aabb_center(
+            aabb->getX() + aabb_half_extents.x,
+            aabb->getY() + aabb_half_extents.y
+//            aabb->getZ() + aabb_half_extents.z
+    );
+    // get difference vector between both centers
+    glm::vec2 difference = center - aabb_center;
+    glm::vec2 clamped = glm::clamp(difference, -aabb_half_extents, aabb_half_extents);
+    // add clamped value to AABB_center and we get the value of box closest to circle
+    glm::vec2 closest = aabb_center + clamped;
+    // retrieve vector between center circle and closest point AABB and check if length <= radius
+    difference = closest - center;
+
+    return Collision(glm::length(difference) < sphere->getRadius(), aabb, sphere, {difference, 0.0}, {difference, 0.0});
+}
+

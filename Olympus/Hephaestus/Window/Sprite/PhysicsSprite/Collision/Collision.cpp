@@ -12,7 +12,7 @@
 #include "Collision.hpp"
 #include "../PhysicsSprite.hpp"
 
-Collision::Collision(bool success, Sprite* one, Sprite* two, glm::vec3 delta, float penetration) {
+Collision::Collision(bool success, Sprite* one, Sprite* two, glm::vec3 delta, glm::vec3 penetration) {
     this->successful = success;
     this->one = one;
     this->two = two;
@@ -36,7 +36,7 @@ void Collision::perform() {
         glm::vec3 p1 = pOne->getPosition();
         glm::vec3 p2 = pTwo->getPosition();
 
-        glm::vec3 positionOffset = normal * penetration;
+        glm::vec3 positionOffset = normal * penetration.x;
 
         glm::vec3 delt = p1 - p2;
         float dot = glm::dot((v1 - v2), delt);
@@ -57,27 +57,58 @@ void Collision::perform() {
         pTwo->setVelocity(vf2);
 
         printf("Velocities: %s, %s\n", glm::to_string(vf1).c_str(), glm::to_string(vf2).c_str());
-    } else if (pOne == nullptr && pTwo != nullptr) {
-        // One is not a physics sprite but two is.
-
     } else if (pOne != nullptr && pTwo == nullptr) {
         // Two is not a physics sprite but one is.
-
+        handleSolidCollision(two, pOne);
+    } else if (pOne == nullptr && pTwo != nullptr) {
+        // One is not a physics sprite but two is.
+        handleSolidCollision(one, pTwo);
     }
 }
 
-/*
 
-        glm::vec3 delt = p1 - p2;
-        float dot = glm::dot((v1 - v2), delt);
-        float magnitude = glm::sqrt(glm::pow(delt.x, 2) + glm::pow(delt.y, 2) + glm::pow(delt.z, 2));
+Collision::Direction Collision::VectorDirection(glm::vec2 target) {
+    glm::vec2 compass[] = {
+            glm::vec2(0.0f, 1.0f),	// up
+            glm::vec2(1.0f, 0.0f),	// right
+            glm::vec2(0.0f, -1.0f),	// down
+            glm::vec2(-1.0f, 0.0f)	// left
+    };
+    float max = 0.0f;
+    unsigned int best_match = -1;
+    for (unsigned int i = 0; i < 4; i++)
+    {
+        float dot_product = glm::dot(glm::normalize(target), compass[i]);
+        if (dot_product > max)
+        {
+            max = dot_product;
+            best_match = i;
+        }
+    }
+    return (Collision::Direction)best_match;
+}
 
-        glm::vec3 vf1 = v1 - ((2 * m2 )/(m1 + m2)) * (dot / magnitude) * (delt);
+void Collision::handleSolidCollision(Sprite* nonPhysicsSprite, Sprite* _physicsSprite) {
+    PhysicsSprite* physicsSprite = dynamic_cast<PhysicsSprite *>(_physicsSprite);
+    Direction direction = VectorDirection(delta);
 
-        delt = p2 - p1;
-        dot = glm::dot((v2 - v1), delt);
-        magnitude = glm::sqrt(glm::pow(delt.x, 2) + glm::pow(delt.y, 2) + glm::pow(delt.z, 2));
-
-        glm::vec3 vf2 = v2 - ((2 * m1 )/(m1 + m2)) * (dot / magnitude) * (delt);
-
- */
+    if(direction == UP || direction == DOWN) {
+        physicsSprite->setYVelocity(-physicsSprite->getVelocity().y);
+        if(direction == UP) {
+            // The non physics sprite is below. This is because the vector from the nps is pointing upwards to the ps.
+            physicsSprite->setY(nonPhysicsSprite->getY() - physicsSprite->getHeight());
+        } else {
+            // The non physics sprite is above. This is because the vector from the nps is pointing downwards to the ps.
+            physicsSprite->setY(nonPhysicsSprite->getY() + nonPhysicsSprite->getHeight());
+        }
+    } else if (direction == LEFT || direction == RIGHT) {
+        physicsSprite->setXVelocity(-physicsSprite->getVelocity().x);
+        if(direction == RIGHT) {
+            // The non physics sprite is to the right. This is because the vector from the nps is pointing left towards the ps.
+            physicsSprite->setX(nonPhysicsSprite->getX() - physicsSprite->getWidth());
+        } else {
+            // The non physics sprite is to the left. This is because the vector from the nps is pointing right towards the ps.
+            physicsSprite->setX(nonPhysicsSprite->getX() + nonPhysicsSprite->getWidth());
+        }
+    }
+}

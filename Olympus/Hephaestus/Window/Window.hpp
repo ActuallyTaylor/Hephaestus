@@ -136,7 +136,7 @@ public:
     vector<Camera*> cameras;
 
     Collision checkCollision(Sprite *one, Sprite *two);
-    PhysicsSprite::Direction VectorDirection(glm::vec2 target);
+    Collision checkAABBSphereCollision(Sprite* aabb, Sprite* sphere);
 };
 
 #endif //OLYMPUS_WINDOW_HPP

@@ -14,20 +14,30 @@
 #include "../../Sprite.hpp"
 
 struct Collision {
-    Collision(bool success, Sprite *one, Sprite *two, glm::vec3 delta, float penetration);
+    enum Direction {
+        UP,
+        RIGHT,
+        DOWN,
+        LEFT
+    };
+
+    Collision(bool success, Sprite *one, Sprite *two, glm::vec3 delta, glm::vec3 penetration);
 
     Sprite* one;
     Sprite* two;
 
     bool successful;
 
-    float penetration;
+    glm::vec3 penetration;
 
     glm::vec3 delta;
     glm::vec3 normal;
 
     void perform();
 
+    void handleSolidCollision(Sprite* nonPhysicsSprite, Sprite* physicsSprite);
+
+    Direction VectorDirection(glm::vec2 target);
 };
 
 
