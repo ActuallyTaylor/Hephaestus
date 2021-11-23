@@ -56,13 +56,48 @@ void Collision::perform() {
         pOne->setVelocity(vf1);
         pTwo->setVelocity(vf2);
 
-        printf("Velocities: %s, %s\n", glm::to_string(vf1).c_str(), glm::to_string(vf2).c_str());
-    } else if (pOne != nullptr && pTwo == nullptr) {
+    } else if (pOne != nullptr) {
         // Two is not a physics sprite but one is.
         handleSolidCollision(two, pOne);
-    } else if (pOne == nullptr && pTwo != nullptr) {
+    } else if (pTwo != nullptr) {
         // One is not a physics sprite but two is.
         handleSolidCollision(one, pTwo);
+    } else {
+        Direction direction = VectorDirection(delta);
+
+        if(direction == UP || direction == DOWN) {
+            if(direction == UP) {
+                // The non physics sprite is below. This is because the vector from the nps is pointing upwards to the ps.
+                one->setY(two->getY() + two->getHeight());
+            } else {
+                // The non physics sprite is above. This is because the vector from the nps is pointing downwards to the ps.
+                one->setY(two->getY() - one->getHeight());
+            }
+        } else if (direction == LEFT || direction == RIGHT) {
+            if(direction == RIGHT) {
+                // The non physics sprite is to the right. This is because the vector from the nps is pointing left towards the ps.
+                one->setX(two->getX() + two->getWidth());
+            } else {
+                // The non physics sprite is to the left. This is because the vector from the nps is pointing right towards the ps.
+                one->setX(two->getX() - two->getWidth());
+            }
+        }
+
+//        if (position.x  <= 0.0f) {
+//            velocity.x = -velocity.x * friction;
+//            position.x = 0;
+//        } else if (position.x + size.x >= screenSize.x) {
+//            velocity.x = -velocity.x * friction;
+//            position.x = screenSize.x - size.x;
+//        }
+//
+//        if (position.y <= 0.0f) {
+//            velocity.y = -velocity.y * friction;
+//            position.y = 0;
+//        } else if (position.y + size.y >= screenSize.y) {
+//            velocity.y = -velocity.y * friction;
+//            position.y = screenSize.y - size.y;
+//        }
     }
 }
 

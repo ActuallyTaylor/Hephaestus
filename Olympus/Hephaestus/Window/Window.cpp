@@ -55,7 +55,8 @@ Window::Window(std::string sentWindowName, int sentWidth, int sentHeight) {
 
 void Window::windowLoop() {
     _init();
-    glEnable(GL_DEPTH_TEST);
+    // Disabled to allow
+//    glEnable(GL_DEPTH_TEST);
     // Holds the last frame time + the current amount of frames that have in a second.
     double currentFrame = glfwGetTime();
     double lastFrame = currentFrame;
@@ -236,7 +237,8 @@ Collision Window::checkCollision(Sprite *one, Sprite *two) {
             if ((one->getX() <= two->getX() + two->getWidth() && one->getX() + one->getWidth() >= two->getX()) &&
                 (one->getY() <= two->getY() + two->getHeight() && one->getY() + one->getHeight() >= two->getY()) &&
                 (one->getZ() <= two->getZ() && one->getZ() + 0 >= two->getZ())) {
-                return {true, one, two, glm::vec3(1.0f), glm::vec3(1.0f)};
+                glm::vec3 delta = one->getPosition() - two->getPosition();
+                return {true, one, two, delta, glm::vec3(1.0f)};
             }
         }
         return {false, nullptr, nullptr, glm::vec3(1.0f), glm::vec3(1.0f)};
