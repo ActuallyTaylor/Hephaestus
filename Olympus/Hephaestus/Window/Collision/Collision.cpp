@@ -10,7 +10,7 @@
 
 #include <glm/gtx/string_cast.hpp>
 #include "Collision.hpp"
-#include "../PhysicsSprite.hpp"
+#include "../Sprite/PhysicsSprite/PhysicsSprite.hpp"
 
 Collision::Collision(bool success, Sprite* one, Sprite* two, glm::vec3 delta, glm::vec3 penetration) {
     this->successful = success;

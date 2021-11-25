@@ -11,7 +11,7 @@
 #ifndef OLYMPUS_COLLISION_HPP
 #define OLYMPUS_COLLISION_HPP
 
-#include "../../Sprite.hpp"
+#include "../Sprite/Sprite.hpp"
 
 struct Collision {
     enum Direction {

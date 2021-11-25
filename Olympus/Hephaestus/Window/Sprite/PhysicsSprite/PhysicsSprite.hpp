@@ -12,7 +12,7 @@
 #define OLYMPUS_PHYSICSSPRITE_HPP
 
 #include "../Sprite.hpp"
-#include "Collision/Collision.hpp"
+#include "../../Collision/Collision.hpp"
 #include "../../../Shader/Shader.hpp"
 
 class PhysicsSprite: public Sprite {

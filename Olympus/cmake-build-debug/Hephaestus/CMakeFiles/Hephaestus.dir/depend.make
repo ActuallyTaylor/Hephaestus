@@ -7,9 +7,9 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o: \
  ../Hephaestus/Library/stb_image.hpp \
  ../Hephaestus/Shader/Shader.hpp \
  ../Hephaestus/Window/Camera/Camera.hpp \
+ ../Hephaestus/Window/Collision/Collision.hpp \
  ../Hephaestus/Window/Controls/ControlManager.hpp \
  ../Hephaestus/Window/Controls/Keybind/Keybind.hpp \
- ../Hephaestus/Window/Sprite/PhysicsSprite/Collision/Collision.hpp \
  ../Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.hpp \
  ../Hephaestus/Window/Sprite/Sprite.hpp \
  ../Hephaestus/Window/Window.hpp \
@@ -652,19 +652,12 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Window/Camera/Camera.cpp.o: \
  /usr/local/include/glm/vec3.hpp \
  /usr/local/include/glm/vec4.hpp \
  /usr/local/include/glm/vector_relational.hpp
-Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/ControlManager.cpp.o: \
- ../Hephaestus/Window/Controls/ControlManager.cpp \
- ../Hephaestus/Window/Controls/ControlManager.hpp \
- ../Hephaestus/Window/Controls/Keybind/Keybind.hpp
-Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/Keybind/Keybind.cpp.o: \
- ../Hephaestus/Window/Controls/Keybind/Keybind.cpp \
- ../Hephaestus/Window/Controls/Keybind/Keybind.hpp
-Hephaestus/CMakeFiles/Hephaestus.dir/Window/Sprite/PhysicsSprite/Collision/Collision.cpp.o: \
+Hephaestus/CMakeFiles/Hephaestus.dir/Window/Collision/Collision.cpp.o: \
  ../Hephaestus/Library/stb_image.hpp \
  ../Hephaestus/Shader/Shader.hpp \
  ../Hephaestus/Window/Camera/Camera.hpp \
- ../Hephaestus/Window/Sprite/PhysicsSprite/Collision/Collision.cpp \
- ../Hephaestus/Window/Sprite/PhysicsSprite/Collision/Collision.hpp \
+ ../Hephaestus/Window/Collision/Collision.cpp \
+ ../Hephaestus/Window/Collision/Collision.hpp \
  ../Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.hpp \
  ../Hephaestus/Window/Sprite/Sprite.hpp \
  /usr/local/include/GL/glew.h \
@@ -883,11 +876,18 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Window/Sprite/PhysicsSprite/Collision/Colli
  /usr/local/include/glm/vec3.hpp \
  /usr/local/include/glm/vec4.hpp \
  /usr/local/include/glm/vector_relational.hpp
+Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/ControlManager.cpp.o: \
+ ../Hephaestus/Window/Controls/ControlManager.cpp \
+ ../Hephaestus/Window/Controls/ControlManager.hpp \
+ ../Hephaestus/Window/Controls/Keybind/Keybind.hpp
+Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/Keybind/Keybind.cpp.o: \
+ ../Hephaestus/Window/Controls/Keybind/Keybind.cpp \
+ ../Hephaestus/Window/Controls/Keybind/Keybind.hpp
 Hephaestus/CMakeFiles/Hephaestus.dir/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp.o: \
  ../Hephaestus/Library/stb_image.hpp \
  ../Hephaestus/Shader/Shader.hpp \
  ../Hephaestus/Window/Camera/Camera.hpp \
- ../Hephaestus/Window/Sprite/PhysicsSprite/Collision/Collision.hpp \
+ ../Hephaestus/Window/Collision/Collision.hpp \
  ../Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp \
  ../Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.hpp \
  ../Hephaestus/Window/Sprite/Sprite.hpp \
@@ -1328,9 +1328,9 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Window/Window.cpp.o: \
  ../Hephaestus/Library/stb_image.hpp \
  ../Hephaestus/Shader/Shader.hpp \
  ../Hephaestus/Window/Camera/Camera.hpp \
+ ../Hephaestus/Window/Collision/Collision.hpp \
  ../Hephaestus/Window/Controls/ControlManager.hpp \
  ../Hephaestus/Window/Controls/Keybind/Keybind.hpp \
- ../Hephaestus/Window/Sprite/PhysicsSprite/Collision/Collision.hpp \
  ../Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.hpp \
  ../Hephaestus/Window/Sprite/Sprite.hpp \
  ../Hephaestus/Window/Window.cpp \

@@ -202,6 +202,30 @@ Window/Camera/Camera.cpp.s:
 	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Camera/Camera.cpp.s
 .PHONY : Window/Camera/Camera.cpp.s
 
+Window/Collision/Collision.o: Window/Collision/Collision.cpp.o
+.PHONY : Window/Collision/Collision.o
+
+# target to build an object file
+Window/Collision/Collision.cpp.o:
+	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Collision/Collision.cpp.o
+.PHONY : Window/Collision/Collision.cpp.o
+
+Window/Collision/Collision.i: Window/Collision/Collision.cpp.i
+.PHONY : Window/Collision/Collision.i
+
+# target to preprocess a source file
+Window/Collision/Collision.cpp.i:
+	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Collision/Collision.cpp.i
+.PHONY : Window/Collision/Collision.cpp.i
+
+Window/Collision/Collision.s: Window/Collision/Collision.cpp.s
+.PHONY : Window/Collision/Collision.s
+
+# target to generate assembly for a file
+Window/Collision/Collision.cpp.s:
+	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Collision/Collision.cpp.s
+.PHONY : Window/Collision/Collision.cpp.s
+
 Window/Controls/ControlManager.o: Window/Controls/ControlManager.cpp.o
 .PHONY : Window/Controls/ControlManager.o
 
@@ -249,30 +273,6 @@ Window/Controls/Keybind/Keybind.s: Window/Controls/Keybind/Keybind.cpp.s
 Window/Controls/Keybind/Keybind.cpp.s:
 	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/Keybind/Keybind.cpp.s
 .PHONY : Window/Controls/Keybind/Keybind.cpp.s
-
-Window/Sprite/PhysicsSprite/Collision/Collision.o: Window/Sprite/PhysicsSprite/Collision/Collision.cpp.o
-.PHONY : Window/Sprite/PhysicsSprite/Collision/Collision.o
-
-# target to build an object file
-Window/Sprite/PhysicsSprite/Collision/Collision.cpp.o:
-	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Sprite/PhysicsSprite/Collision/Collision.cpp.o
-.PHONY : Window/Sprite/PhysicsSprite/Collision/Collision.cpp.o
-
-Window/Sprite/PhysicsSprite/Collision/Collision.i: Window/Sprite/PhysicsSprite/Collision/Collision.cpp.i
-.PHONY : Window/Sprite/PhysicsSprite/Collision/Collision.i
-
-# target to preprocess a source file
-Window/Sprite/PhysicsSprite/Collision/Collision.cpp.i:
-	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Sprite/PhysicsSprite/Collision/Collision.cpp.i
-.PHONY : Window/Sprite/PhysicsSprite/Collision/Collision.cpp.i
-
-Window/Sprite/PhysicsSprite/Collision/Collision.s: Window/Sprite/PhysicsSprite/Collision/Collision.cpp.s
-.PHONY : Window/Sprite/PhysicsSprite/Collision/Collision.s
-
-# target to generate assembly for a file
-Window/Sprite/PhysicsSprite/Collision/Collision.cpp.s:
-	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Sprite/PhysicsSprite/Collision/Collision.cpp.s
-.PHONY : Window/Sprite/PhysicsSprite/Collision/Collision.cpp.s
 
 Window/Sprite/PhysicsSprite/PhysicsSprite.o: Window/Sprite/PhysicsSprite/PhysicsSprite.cpp.o
 .PHONY : Window/Sprite/PhysicsSprite/PhysicsSprite.o
@@ -364,15 +364,15 @@ help:
 	@echo "... Window/Camera/Camera.o"
 	@echo "... Window/Camera/Camera.i"
 	@echo "... Window/Camera/Camera.s"
+	@echo "... Window/Collision/Collision.o"
+	@echo "... Window/Collision/Collision.i"
+	@echo "... Window/Collision/Collision.s"
 	@echo "... Window/Controls/ControlManager.o"
 	@echo "... Window/Controls/ControlManager.i"
 	@echo "... Window/Controls/ControlManager.s"
 	@echo "... Window/Controls/Keybind/Keybind.o"
 	@echo "... Window/Controls/Keybind/Keybind.i"
 	@echo "... Window/Controls/Keybind/Keybind.s"
-	@echo "... Window/Sprite/PhysicsSprite/Collision/Collision.o"
-	@echo "... Window/Sprite/PhysicsSprite/Collision/Collision.i"
-	@echo "... Window/Sprite/PhysicsSprite/Collision/Collision.s"
 	@echo "... Window/Sprite/PhysicsSprite/PhysicsSprite.o"
 	@echo "... Window/Sprite/PhysicsSprite/PhysicsSprite.i"
 	@echo "... Window/Sprite/PhysicsSprite/PhysicsSprite.s"

@@ -6,9 +6,9 @@ CMakeFiles/Olympus.dir/main.cpp.o
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/stb_image.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Shader/Shader.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Camera/Camera.hpp
+ /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Collision/Collision.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/ControlManager.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/Keybind/Keybind.hpp
- /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/Collision/Collision.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/Sprite.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Window.hpp

@@ -84,6 +84,10 @@ glm/gtc/quaternion.hpp
 glm/gtx/quaternion.hpp
 -
 
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Collision/Collision.hpp
+../Sprite/Sprite.hpp
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/Sprite.hpp
+
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/ControlManager.hpp
 vector
 -
@@ -92,15 +96,11 @@ vector
 
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/Keybind/Keybind.hpp
 
-/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/Collision/Collision.hpp
-../../Sprite.hpp
-/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/Sprite.hpp
-
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.hpp
 ../Sprite.hpp
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/Sprite.hpp
-Collision/Collision.hpp
-/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/Collision/Collision.hpp
+../../Collision/Collision.hpp
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Collision/Collision.hpp
 ../../../Shader/Shader.hpp
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Shader/Shader.hpp
 

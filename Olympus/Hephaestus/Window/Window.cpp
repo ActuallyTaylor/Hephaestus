@@ -73,7 +73,7 @@ void Window::windowLoop() {
                 printf("%f ms/frame\n", 1000.0/double(framesThisSecond));
                 printf("%d frames per second\n", framesThisSecond);
                 framesThisSecond = 0;
-//                lastFrame += 1.0;
+                lastFrame += 1.0;
             }
         }
 
@@ -153,7 +153,7 @@ void Window::windowCallback(GLFWwindow *window, int width, int height) {
     self->width = width;
     self->height = height;
     glViewport(0, 0, width, height);
-    glOrtho(0.0f, width, height, 0.0f, -1000.0f, 1000.0f );
+//    glOrtho(0.0f, width, height, 0.0f, -1000.0f, 1000.0f );
 
     for (Sprite *sprite: self->sprites) {
         sprite->updateScreenDimensions(width, height);

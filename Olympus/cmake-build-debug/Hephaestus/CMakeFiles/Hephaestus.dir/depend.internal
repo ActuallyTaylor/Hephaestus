@@ -7,9 +7,9 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/stb_image.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Shader/Shader.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Camera/Camera.hpp
+ /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Collision/Collision.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/ControlManager.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/Keybind/Keybind.hpp
- /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/Collision/Collision.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/Sprite.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Window.hpp
@@ -652,19 +652,12 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Window/Camera/Camera.cpp.o
  /usr/local/include/glm/vec3.hpp
  /usr/local/include/glm/vec4.hpp
  /usr/local/include/glm/vector_relational.hpp
-Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/ControlManager.cpp.o
- /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/ControlManager.cpp
- /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/ControlManager.hpp
- /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/Keybind/Keybind.hpp
-Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/Keybind/Keybind.cpp.o
- /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/Keybind/Keybind.cpp
- /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/Keybind/Keybind.hpp
-Hephaestus/CMakeFiles/Hephaestus.dir/Window/Sprite/PhysicsSprite/Collision/Collision.cpp.o
+Hephaestus/CMakeFiles/Hephaestus.dir/Window/Collision/Collision.cpp.o
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/stb_image.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Shader/Shader.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Camera/Camera.hpp
- /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/Collision/Collision.cpp
- /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/Collision/Collision.hpp
+ /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Collision/Collision.cpp
+ /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Collision/Collision.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/Sprite.hpp
  /usr/local/include/GL/glew.h
@@ -883,11 +876,18 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Window/Sprite/PhysicsSprite/Collision/Colli
  /usr/local/include/glm/vec3.hpp
  /usr/local/include/glm/vec4.hpp
  /usr/local/include/glm/vector_relational.hpp
+Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/ControlManager.cpp.o
+ /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/ControlManager.cpp
+ /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/ControlManager.hpp
+ /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/Keybind/Keybind.hpp
+Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/Keybind/Keybind.cpp.o
+ /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/Keybind/Keybind.cpp
+ /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/Keybind/Keybind.hpp
 Hephaestus/CMakeFiles/Hephaestus.dir/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp.o
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/stb_image.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Shader/Shader.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Camera/Camera.hpp
- /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/Collision/Collision.hpp
+ /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Collision/Collision.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/Sprite.hpp
@@ -1328,9 +1328,9 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Window/Window.cpp.o
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/stb_image.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Shader/Shader.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Camera/Camera.hpp
+ /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Collision/Collision.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/ControlManager.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/Keybind/Keybind.hpp
- /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/Collision/Collision.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/Sprite.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Window.cpp

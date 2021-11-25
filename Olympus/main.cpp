@@ -7,23 +7,20 @@ Hephaestus engine = Hephaestus("Hephaestus Engine");
 Shader shader = engine.createShader("./Shaders/Common/shader.vert", "./Shaders/Common/shader.frag");
 Camera mainCamera = Camera();
 
-Sprite stationarySprite = Sprite(shader, "./Images/wall.jpg", glm::vec3(720/2,500, 0.0));
-Sprite stationarySprite2 = Sprite(shader, "./Images/wall.jpg", glm::vec3(720/2,720/2, 0.0));
-
 void moveSpriteUp() {
-    stationarySprite.setY(stationarySprite.getPosition().y - 5);
+
 }
 
 void moveSpriteDown() {
-    stationarySprite.setY(stationarySprite.getPosition().y + 5);
+
 }
 
 void moveSpriteRight() {
-    stationarySprite.setX(stationarySprite.getPosition().x + 5);
+
 }
 
 void moveSpriteLeft() {
-    stationarySprite.setX(stationarySprite.getPosition().x - 5);
+
 }
 
 void moveSpriteRotateNegative() {
@@ -84,40 +81,20 @@ void render() {
 }
 
 int main() {
-    engine.addSprite(&stationarySprite);
-    engine.addSprite(&stationarySprite2);
-//    vector<PhysicsSprite> sprites { };
+    vector<PhysicsSprite> sprites { };
 //
-//    for(int n = 0; n <= 20; n++) {
-//        float x = rand() % 720;
-//        float y = rand() % 720;
-//
-//        PhysicsSprite sprite = PhysicsSprite(shader, "./Images/circle.png", glm::vec3(x,y, 0.0));
-//        sprite.setVelocity({0.0, 0.0, 0.0});
-//        sprites.push_back(sprite);
-//    }
-//
-//    for(Sprite &sprite : sprites) {
-//        engine.addSprite(&sprite);
-//    }
-//    PhysicsSprite sprite = PhysicsSprite(shader, "./Images/circle.png", glm::vec3(250,600 , 0.0));
-//    sprite.setVelocity({-1.0, 0.0, 0.0});
-//    engine.addSprite(&sprite);
-//
-//    PhysicsSprite sprite2 = PhysicsSprite(shader, "./Images/circle.png", glm::vec3(50,600 , 0.0));
-//    sprite2.setVelocity({-1.0, 0.0, 0.0});
-//    engine.addSprite(&sprite2);
+    for(int n = 0; n <= 20; n++) {
+        float x = rand() % 720;
+        float y = rand() % 720;
 
-//    PhysicsSprite secondSprite = PhysicsSprite(shader, "./Images/circle.png", glm::vec3(720/2,720/2, 0.0));
-//    secondSprite.setVelocity({-1.0, 0.0, 0.0});
-//    secondSprite.mass = 10000000000.0;
-//    engine.addSprite(&secondSprite);
+        PhysicsSprite sprite = PhysicsSprite(shader, "./Images/circle.png", glm::vec3(x,y, 0.0));
+        sprite.setVelocity({0.0, 0.0, 0.0});
+        sprites.push_back(sprite);
+    }
 
-//    Sprite stationarySprite = Sprite(shader, "./Images/wall.jpg", glm::vec3(0,710, 0.0), glm::vec2(720, 20));
-//    engine.addSprite(&stationarySprite);
-//
-//    Sprite stationarySprite2 = Sprite(shader, "./Images/wall.jpg", glm::vec3(200,200, 0.0), glm::vec2(20, 500));
-//    engine.addSprite(&stationarySprite2);
+    for(Sprite &sprite : sprites) {
+        engine.addSprite(&sprite);
+    }
 
     engine.setInit(init);
     engine.setDestroy(destroy);
