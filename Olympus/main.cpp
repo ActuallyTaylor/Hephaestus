@@ -62,18 +62,25 @@ void destroy() {
 
 }
 
-void tick() {
+vector<PhysicsSprite> sprites { };
+int numb = 0;
 
+void tick() {
+//    sprites.push_back(sprite);
+    if(numb % 5 == 0) {
+        int randDiff = rand() % 10;;
+        auto* sprite = new PhysicsSprite(shader, "./Images/circle.png", glm::vec3(720/2 - randDiff,5, 0.0), glm::vec2(10,10));
+        sprite->setMass(1);
+
+        if (!sprite->getRegistered()) {
+            engine.addSprite(sprite);
+        }
+    }
+    numb ++;
 }
 
-bool hitBottom = false;
 void update() {
-//    glm::vec3 position = mainCamera.getPosition();
-//    mainCamera.setPosition({position.x, position.y , position.z});
 
-//    mainSprite.setY(mainSprite.getY() - 0.1);
-//    mainSprite.setRotation(glm::vec3(glfwGetTime() * 100, glfwGetTime()  * 100, 0));
-//    secondarySprite.setRotation(glm::vec3(-(glfwGetTime() * 10), -(glfwGetTime()  * 10), 0));
 }
 
 void render() {
@@ -81,21 +88,6 @@ void render() {
 }
 
 int main() {
-    vector<PhysicsSprite> sprites { };
-//
-    for(int n = 0; n <= 20; n++) {
-        float x = rand() % 720;
-        float y = rand() % 720;
-
-        PhysicsSprite sprite = PhysicsSprite(shader, "./Images/circle.png", glm::vec3(x,y, 0.0));
-        sprite.setVelocity({0.0, 0.0, 0.0});
-        sprites.push_back(sprite);
-    }
-
-    for(Sprite &sprite : sprites) {
-        engine.addSprite(&sprite);
-    }
-
     engine.setInit(init);
     engine.setDestroy(destroy);
     engine.setTick(tick);

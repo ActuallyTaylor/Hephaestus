@@ -6,6 +6,22 @@
 
 #IncludeRegexTransform: 
 
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Hephaestus.hpp
+iostream
+-
+GL/glew.h
+-
+GLFW/glfw3.h
+-
+string
+-
+vector
+-
+Window/Window.hpp
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Window.hpp
+Shader/Shader.hpp
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Shader/Shader.hpp
+
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/stb_image.hpp
 stb_image.h
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/stb_image.h
@@ -80,6 +96,14 @@ Collision.hpp
 ../Sprite/Sprite.hpp
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/Sprite.hpp
 
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/ControlManager.hpp
+vector
+-
+./Keybind/Keybind.hpp
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/Keybind/Keybind.hpp
+
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/Keybind/Keybind.hpp
+
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.hpp
 ../Sprite.hpp
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/Sprite.hpp
@@ -105,6 +129,32 @@ glm/gtc/quaternion.hpp
 -
 glm/gtx/quaternion.hpp
 -
+
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Window.cpp
+Window.hpp
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Window.hpp
+
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Window.hpp
+../Hephaestus.hpp
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Hephaestus.hpp
+GL/glew.h
+-
+GLFW/glfw3.h
+-
+glm/gtx/string_cast.hpp
+-
+string
+-
+vector
+-
+./Sprite/Sprite.hpp
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/Sprite.hpp
+./Sprite/PhysicsSprite/PhysicsSprite.hpp
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.hpp
+./Controls/ControlManager.hpp
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/ControlManager.hpp
+./Camera/Camera.hpp
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Camera/Camera.hpp
 
 /usr/local/include/GL/glew.h
 cstddef
@@ -778,6 +828,8 @@ matrix_projection.inl
 ../matrix.hpp
 /usr/local/include/glm/matrix.hpp
 matrix_transform.inl
+/usr/local/include/glm/ext/matrix_transform.inl
+
 /usr/local/include/glm/ext/matrix_transform.inl
 
 /usr/local/include/glm/ext/quaternion_common.hpp

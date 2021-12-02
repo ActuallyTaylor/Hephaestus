@@ -58,30 +58,33 @@ void Window::windowLoop() {
     // Disabled to allow
 //    glEnable(GL_DEPTH_TEST);
     // Holds the last frame time + the current amount of frames that have in a second.
-    double currentFrame = glfwGetTime();
-    double lastFrame = currentFrame;
-    int framesThisSecond = 0;
+    double currentTime = glfwGetTime();
+    double lastTime = glfwGetTime();
+    double lastFrameCountTime = glfwGetTime();
 
+    int framesThisSecond = 0;
     self = this;
 
     while (!glfwWindowShouldClose(window)) {
+
         if (printFrames) {
             framesThisSecond ++;
 
-            if(currentFrame - lastFrame >= 1.0) {
+            if(currentTime - lastFrameCountTime >= 1.0) {
                 printf("======\n");
                 printf("%f ms/frame\n", 1000.0/double(framesThisSecond));
                 printf("%d frames per second\n", framesThisSecond);
                 framesThisSecond = 0;
-                lastFrame += 1.0;
+                lastFrameCountTime += 1.0;
             }
         }
 
-        currentFrame = glfwGetTime();
-        deltaTime = currentFrame - lastFrame;
-        lastFrame = currentFrame;
+        currentTime = glfwGetTime();
+        deltaTime = currentTime - lastTime;
+        lastTime = currentTime;
 
         // Call user-defined callback functions
+        _tick();
         _update();
         _render();
 
@@ -115,8 +118,8 @@ void Window::_update() {
     for (Sprite* sprite: sprites) {
         sprite->move(deltaTime);
     }
-
     checkCollisions();
+
     if (update != nullptr) {
         update();
     }
@@ -163,6 +166,7 @@ void Window::windowCallback(GLFWwindow *window, int width, int height) {
 void Window::addSprite(Sprite *sprite) {
     sprite->updateScreenDimensions(width, height);
     sprite->updateCamera(currentCamera);
+    sprite->registerSprite();
     sprites.push_back(sprite);
 }
 

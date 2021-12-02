@@ -23,6 +23,10 @@ Sprite::Sprite(Shader inShader, std::string texturePath, glm::vec3 inPosition, g
     createVirtualBufferObject();
 }
 
+Sprite::~Sprite() {
+    printf("Destroyed Sprite\n");
+}
+
 void Sprite::createTexture(std::string texturePath) {
     /*
      Create Texture
@@ -116,7 +120,6 @@ void Sprite::setTexture(std::string texturePath) {
 }
 
 void Sprite::updateScreenDimensions(int width, int height) {
-    printf("Update Dimensions %d, %d\n", width, height);
     screenSize = glm::vec2(width, height);
     projection = glm::ortho(0.0f, screenSize.x, screenSize.y, 0.0f, -1000.0f, 1000.0f);
     createVirtualBufferObject();
@@ -222,10 +225,18 @@ Sprite::Shape Sprite::getShape() {
     return spriteShape;
 }
 
-void Sprite::move(float deltaTime) {
+void Sprite::move(double deltaTime) {
 
 }
 
 float Sprite::getRadius() {
     return size.x / 2;
+}
+
+void Sprite::registerSprite() {
+    registered = true;
+}
+
+bool Sprite::getRegistered() {
+    return registered;
 }

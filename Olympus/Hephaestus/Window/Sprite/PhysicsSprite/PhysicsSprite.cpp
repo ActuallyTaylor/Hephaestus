@@ -11,19 +11,18 @@
 #include "PhysicsSprite.hpp"
 #include <glm/gtx/string_cast.hpp>
 
-float friction = 0.065;
+float friction = 0.2;
 
 Sprite::Shape PhysicsSprite::getShape() {
     return this->spriteShape;
 }
 
-void PhysicsSprite::move(float deltaTime) {
-//    time += timeStep;//timeStep * (velocity + timeStep * gravitationalAcceleration.y / 2);
+void PhysicsSprite::move(double deltaTime) {
     if (effectedByGravity) {
-        velocity += (mass * gravitationalAcceleration) * deltaTime;
+        velocity += (mass * gravitationalAcceleration);
     }
 
-    position += velocity;
+    position += velocity * float(deltaTime);
 
     if (position.x  <= 0.0f) {
         velocity.x = -velocity.x * friction;

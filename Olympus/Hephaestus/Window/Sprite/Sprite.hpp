@@ -31,7 +31,7 @@ public:
     };
 
     Sprite(Shader shader, std::string texturePath, glm::vec3 position = glm::vec3(300.0f, 300.0f, 0.0f), glm::vec2 size = glm::vec2(50.0f, 50.0f), glm::vec3 rotation = glm::vec3(0.0f, 0.0f, 0.0f));
-
+    ~Sprite();
     /*
      * Sprite Position
      */
@@ -91,10 +91,16 @@ public:
     void setShape(Shape shape);
     virtual Shape getShape();
 
+    /*
+     * Register Sprite
+     */
+    void registerSprite();
+    bool getRegistered();
+
     // MARK: Drawing Functions
     void draw();
 
-    virtual void move(float deltaTime);
+    virtual void move(double deltaTime);
 
     void setTexture(std::string texturePath);
 
@@ -118,6 +124,7 @@ protected:
     GLuint VBO, VAO, EBO, textureAtlas;
 
     bool hasCollision = true;
+    bool registered;
 
     Shape spriteShape = square;
 };

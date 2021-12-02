@@ -28,10 +28,10 @@ struct Collision {
 
     bool successful;
 
-    glm::vec3 penetration;
+    glm::vec3 penetration{};
 
-    glm::vec3 delta;
-    glm::vec3 normal;
+    glm::vec3 delta{};
+    glm::vec3 normal{};
 
     void perform();
 

@@ -30,7 +30,7 @@ public:
     using Sprite::Sprite;
 
     // Override Functions
-    void move(float deltaTime) override;
+    void move(double deltaTime) override;
     Sprite::Shape getShape() override;
 
     // Getters & Setters
@@ -43,7 +43,6 @@ public:
 
     void setMass(float inMass);
     float getMass();
-
 };
 
 

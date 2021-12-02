@@ -21,8 +21,8 @@ Collision::Collision(bool success, Sprite* one, Sprite* two, glm::vec3 delta, gl
 }
 
 void Collision::perform() {
-    PhysicsSprite* pOne = dynamic_cast<PhysicsSprite *>(this->one);
-    PhysicsSprite* pTwo = dynamic_cast<PhysicsSprite *>(this->two);
+    auto* pOne = dynamic_cast<PhysicsSprite *>(this->one);
+    auto* pTwo = dynamic_cast<PhysicsSprite *>(this->two);
     if (pOne != nullptr && pTwo != nullptr) {
         // Normalized vector of the difference between the pTwo positions
         this->normal = glm::normalize(delta);
@@ -84,22 +84,6 @@ void Collision::perform() {
                 one->setX(two->getX() - two->getWidth());
             }
         }
-
-//        if (position.x  <= 0.0f) {
-//            velocity.x = -velocity.x * friction;
-//            position.x = 0;
-//        } else if (position.x + size.x >= screenSize.x) {
-//            velocity.x = -velocity.x * friction;
-//            position.x = screenSize.x - size.x;
-//        }
-//
-//        if (position.y <= 0.0f) {
-//            velocity.y = -velocity.y * friction;
-//            position.y = 0;
-//        } else if (position.y + size.y >= screenSize.y) {
-//            velocity.y = -velocity.y * friction;
-//            position.y = screenSize.y - size.y;
-//        }
     }
 }
 
