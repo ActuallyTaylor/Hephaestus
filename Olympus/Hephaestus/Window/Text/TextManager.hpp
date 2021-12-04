@@ -30,12 +30,15 @@ class TextManager {
     };
 
     Shader textShader = Shader("./Hephaestus/Shaders/font.vert", "./Hephaestus/Shaders/font.frag");
-    GLuint VBO, VAO, EBO, textureAtlas;
+    GLuint VBO {};
+    GLuint VAO {};
 
     std::map<char, Character> Characters;
     glm::mat4 projection;
 public:
     TextManager();
+    void setup();
+
     int loadFont(std::string filePath);
     void renderText(std::string text, float x, float y, float scale, glm::vec3 color);
 };

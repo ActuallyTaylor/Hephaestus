@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/Library/Frameworks/Mono.framework/Headers/ft2build.h
+freetype/config/ftheader.h
+-
+
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Hephaestus.cpp
 Hephaestus.hpp
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Hephaestus.hpp
@@ -126,6 +130,26 @@ glm/gtc/quaternion.hpp
 glm/gtx/quaternion.hpp
 -
 
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Text/TextManager.cpp
+iostream
+-
+TextManager.hpp
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Text/TextManager.hpp
+
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Text/TextManager.hpp
+glm/glm.hpp
+-
+map
+-
+GL/glew.h
+-
+GLFW/glfw3.h
+-
+ft2build.h
+-
+../../Shader/Shader.hpp
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Shader/Shader.hpp
+
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Window.cpp
 Window.hpp
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Window.hpp
@@ -151,6 +175,8 @@ vector
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/ControlManager.hpp
 ./Camera/Camera.hpp
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Camera/Camera.hpp
+Text/TextManager.hpp
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Text/TextManager.hpp
 
 /usr/local/include/GL/glew.h
 cstddef
@@ -219,6 +245,8 @@ GL/glext.h
 -
 GL/glu.h
 -
+
+/usr/local/include/freetype2/freetype/config/ftheader.h
 
 /usr/local/include/glm/common.hpp
 detail/qualifier.hpp
@@ -1251,6 +1279,14 @@ epsilon.inl
 /usr/local/include/glm/ext/matrix_transform.hpp
 matrix_transform.inl
 /usr/local/include/glm/gtc/matrix_transform.inl
+
+/usr/local/include/glm/gtc/matrix_transform.inl
+../geometric.hpp
+/usr/local/include/glm/geometric.hpp
+../trigonometric.hpp
+/usr/local/include/glm/trigonometric.hpp
+../matrix.hpp
+/usr/local/include/glm/matrix.hpp
 
 /usr/local/include/glm/gtc/quaternion.hpp
 ../gtc/constants.hpp

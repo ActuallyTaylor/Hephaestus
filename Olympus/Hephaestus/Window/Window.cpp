@@ -11,7 +11,9 @@
 
 Window* self;
 
-Window::Window() { }
+Window::Window() {
+    manager = TextManager();
+}
 
 Window::Window(std::string sentWindowName, int sentWidth, int sentHeight) {
     // Set unset class variables
@@ -51,6 +53,10 @@ Window::Window(std::string sentWindowName, int sentWidth, int sentHeight) {
     // Set GLFW key callbacks
     glfwSetKeyCallback(window, keyCallback);
     glfwSetWindowSizeCallback(window, windowCallback);
+
+    printf("Go");
+    manager = TextManager();
+    manager.setup();
 }
 
 void Window::windowLoop() {
@@ -271,3 +277,10 @@ Collision Window::checkAABBSphereCollision(Sprite* aabb, Sprite* sphere) {
     return Collision(glm::length(difference) < sphere->getRadius(), aabb, sphere, {difference, 0.0}, {difference, 0.0});
 }
 
+void Window::renderText(std::string text, float x, float y, float scale, glm::vec3 color) {
+    manager.renderText(text, x, y, scale, color);
+}
+
+void Window::loadFont(std::string fontPath) {
+    manager.loadFont(fontPath);
+}

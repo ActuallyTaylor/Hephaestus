@@ -54,23 +54,21 @@ void update() {
 
 }
 
-TextManager manager = TextManager();
 void render() {
     int fps = engine.getFPS();
     std::string fpsText = "FPS: " + std::to_string(fps) + ", Frametime: " + std::to_string(1000.0 / double(fps));
-    manager.renderText(fpsText, 25.0f, 720 - 25.0f, 1.0f, glm::vec3(0.5, 0.8f, 0.2f));
+    engine.renderText(fpsText, 25.0f, 720 - 25.0f, 1.0f, glm::vec3(0.5, 0.8f, 0.2f));
 
     int spriteCount = engine.getNumberOfSprites();
     std::string spriteText = "Sprites: " + std::to_string(spriteCount);
-    manager.renderText(spriteText, 25.0f, 720 - 50.0f, 1.0f, glm::vec3(0.5, 0.8f, 0.2f));
-
+    engine.renderText(spriteText, 25.0f, 720 - 50.0f, 1.0f, glm::vec3(0.5, 0.8f, 0.2f));
 }
 
 int main() {
 //    Sprite mainSprite = Sprite(shader, "./Images/wall.jpg", glm::vec3(720/2, 0, 0));
 //    engine.addSprite(&mainSprite);
 
-    manager.loadFont("./Fonts/SFNSRounded.ttf");
+    engine.loadFont("./Fonts/SFNSRounded.ttf");
 
     engine.setInit(init);
     engine.setDestroy(destroy);

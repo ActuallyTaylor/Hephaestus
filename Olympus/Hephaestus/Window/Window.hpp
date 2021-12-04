@@ -28,6 +28,7 @@
 #include "./Sprite/PhysicsSprite/PhysicsSprite.hpp"
 #include "./Controls/ControlManager.hpp"
 #include "./Camera/Camera.hpp"
+#include "Text/TextManager.hpp"
 
 class Window {
 private:
@@ -46,6 +47,9 @@ private:
     GLFWwindow *window;
     /// The control manager of the window.
     ControlManager controlManager = ControlManager();
+
+    /// Manages all text displayed on the screen
+    TextManager manager { };
 
     /// The current camera
     Camera* currentCamera;
@@ -118,6 +122,9 @@ public:
     /// Adds a keybind to the window's control manager
     /// \param keybind The keybind that should be added to the control manager.
     void addCamera(Camera *camera);
+
+    void renderText(std::string text, float x, float y, float scale, glm::vec3 color);
+    void loadFont(std::string fontPath);
 
     /*
      * Collision Checking

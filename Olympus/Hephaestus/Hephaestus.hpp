@@ -87,6 +87,9 @@ public:
     /// \param function1 The void function pointer that will be called when render is called.
     void setRender(Function function1);
 
+    void renderText(std::string text, float x, float y, float scale, glm::vec3 color);
+    void loadFont(std::string fontPath);
+
     /// Returns the current active window frames per second.
     int getFPS();
 
