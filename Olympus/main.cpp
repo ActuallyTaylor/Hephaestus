@@ -1,34 +1,23 @@
 #include <iostream>
 #include <thread>
 #include "Hephaestus/Hephaestus.hpp"
+#include "Hephaestus/Window/Text/TextManager.hpp"
 
 Hephaestus engine = Hephaestus("Hephaestus Engine");
 
 Shader shader = engine.createShader("./Shaders/Common/shader.vert", "./Shaders/Common/shader.frag");
 Camera mainCamera = Camera();
 
-void moveSpriteUp() {
+vector<PhysicsSprite> sprites { };
+bool shouldSpawn = false;
+int numb = 0;
 
-}
-
-void moveSpriteDown() {
-
-}
-
-void moveSpriteRight() {
-
-}
-
-void moveSpriteLeft() {
-
-}
-
-void moveSpriteRotateNegative() {
-
-}
-
-void moveSpriteRotatePositive() {
-
+void stopSpawning() {
+    if(shouldSpawn) {
+        shouldSpawn = false;
+    } else {
+        shouldSpawn = true;
+    }
 }
 
 void init() {
@@ -39,37 +28,19 @@ void init() {
 
     engine.addCamera(&mainCamera);
 
-    engine.addKeybind(GLFW_KEY_UP, GLFW_PRESS, moveSpriteUp);
-    engine.addKeybind(GLFW_KEY_UP, GLFW_REPEAT, moveSpriteUp);
-
-    engine.addKeybind(GLFW_KEY_DOWN, GLFW_PRESS, moveSpriteDown);
-    engine.addKeybind(GLFW_KEY_DOWN, GLFW_REPEAT, moveSpriteDown);
-
-    engine.addKeybind(GLFW_KEY_RIGHT, GLFW_PRESS, moveSpriteRight);
-    engine.addKeybind(GLFW_KEY_RIGHT, GLFW_REPEAT, moveSpriteRight);
-
-    engine.addKeybind(GLFW_KEY_LEFT, GLFW_PRESS, moveSpriteLeft);
-    engine.addKeybind(GLFW_KEY_LEFT, GLFW_REPEAT, moveSpriteLeft);
-
-    engine.addKeybind(44, GLFW_PRESS, moveSpriteRotateNegative);
-    engine.addKeybind(44, GLFW_REPEAT, moveSpriteRotateNegative);
-
-    engine.addKeybind(46, GLFW_PRESS, moveSpriteRotatePositive);
-    engine.addKeybind(46, GLFW_REPEAT, moveSpriteRotatePositive);
+    engine.addKeybind(GLFW_KEY_A, GLFW_PRESS, stopSpawning);
 }
 
 void destroy() {
 
 }
 
-vector<PhysicsSprite> sprites { };
-int numb = 0;
-
 void tick() {
 //    sprites.push_back(sprite);
-    if(numb % 5 == 0) {
-        int randDiff = rand() % 10;;
-        auto* sprite = new PhysicsSprite(shader, "./Images/circle.png", glm::vec3(720/2 - randDiff,5, 0.0), glm::vec2(10,10));
+    if(numb % 5 == 0 && shouldSpawn) {
+        int randDiff = rand() % 10;
+        int size = 10;//(rand() % 25) + 5;
+        auto* sprite = new PhysicsSprite(shader, "./Images/circle.png", glm::vec3(720/2 - randDiff,5, 0.0), glm::vec2(size,size));
         sprite->setMass(1);
 
         if (!sprite->getRegistered()) {
@@ -83,11 +54,14 @@ void update() {
 
 }
 
+TextManager manager = TextManager();
 void render() {
-
+    manager.renderText("This is sample text", 25.0f, 25.0f, 1.0f, glm::vec3(0.5, 0.8f, 0.2f));
 }
 
 int main() {
+    manager.loadFont("./Fonts/SFNSRounded.ttf");
+
     engine.setInit(init);
     engine.setDestroy(destroy);
     engine.setTick(tick);

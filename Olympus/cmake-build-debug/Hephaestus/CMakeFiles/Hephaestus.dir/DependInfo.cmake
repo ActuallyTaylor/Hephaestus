@@ -16,6 +16,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/Keybind/Keybind.cpp" "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/Keybind/Keybind.cpp.o"
   "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp" "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp.o"
   "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/Sprite.cpp" "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Window/Sprite/Sprite.cpp.o"
+  "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Text/TextManager.cpp" "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Window/Text/TextManager.cpp.o"
   "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Window.cpp" "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Window/Window.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
@@ -23,6 +24,8 @@ set(CMAKE_CXX_COMPILER_ID "AppleClang")
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/local/include"
+  "/Library/Frameworks/Mono.framework/Headers"
+  "/usr/local/include/freetype2"
   )
 
 # The set of dependency files which are needed:

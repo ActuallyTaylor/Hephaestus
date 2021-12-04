@@ -13,7 +13,7 @@
 #include <glm/gtx/string_cast.hpp>
 
 Camera::Camera() {
-    std::cout << glm::to_string(position) << std::endl;
+//    std::cout << glm::to_string(position) << std::endl;
 }
 
 void Camera::setPosition(glm::vec3 newPosition) {

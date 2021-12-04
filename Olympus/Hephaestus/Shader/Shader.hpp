@@ -27,9 +27,6 @@
 using namespace std;
 
 class Shader {
-    const char *vertexShader;
-    const char *fragmentShader;
-
 public:
     Shader();
     Shader(string vertexPath, string fragmentPath);
@@ -47,6 +44,8 @@ public:
     void setMatrix4 (const char *name, const glm::mat4 &matrix, bool useShader = false);
 
 private:
+    const char *vertexShader;
+    const char *fragmentShader;
     GLuint shaderProgram;
 
 };

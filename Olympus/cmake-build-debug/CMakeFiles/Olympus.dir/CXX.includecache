@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/Library/Frameworks/Mono.framework/Headers/ft2build.h
+freetype/config/ftheader.h
+-
+
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Hephaestus.hpp
 iostream
 -
@@ -122,6 +126,20 @@ glm/gtc/quaternion.hpp
 glm/gtx/quaternion.hpp
 -
 
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Text/TextManager.hpp
+glm/glm.hpp
+-
+map
+-
+GL/glew.h
+-
+GLFW/glfw3.h
+-
+ft2build.h
+-
+../../Shader/Shader.hpp
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Shader/Shader.hpp
+
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Window.hpp
 ../Hephaestus.hpp
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Hephaestus.hpp
@@ -151,6 +169,8 @@ thread
 -
 Hephaestus/Hephaestus.hpp
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Hephaestus.hpp
+Hephaestus/Window/Text/TextManager.hpp
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Text/TextManager.hpp
 
 /usr/local/include/GL/glew.h
 cstddef
@@ -219,6 +239,8 @@ GL/glext.h
 -
 GL/glu.h
 -
+
+/usr/local/include/freetype2/freetype/config/ftheader.h
 
 /usr/local/include/glm/common.hpp
 detail/qualifier.hpp

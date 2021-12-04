@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Hephaestus.dir/Window/Controls/Keybind/Keybind.cpp.o"
   "CMakeFiles/Hephaestus.dir/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp.o"
   "CMakeFiles/Hephaestus.dir/Window/Sprite/Sprite.cpp.o"
+  "CMakeFiles/Hephaestus.dir/Window/Text/TextManager.cpp.o"
   "CMakeFiles/Hephaestus.dir/Window/Window.cpp.o"
   "libHephaestus.a"
   "libHephaestus.pdb"

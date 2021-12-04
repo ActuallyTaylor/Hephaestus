@@ -322,6 +322,30 @@ Window/Sprite/Sprite.cpp.s:
 	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Sprite/Sprite.cpp.s
 .PHONY : Window/Sprite/Sprite.cpp.s
 
+Window/Text/TextManager.o: Window/Text/TextManager.cpp.o
+.PHONY : Window/Text/TextManager.o
+
+# target to build an object file
+Window/Text/TextManager.cpp.o:
+	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Text/TextManager.cpp.o
+.PHONY : Window/Text/TextManager.cpp.o
+
+Window/Text/TextManager.i: Window/Text/TextManager.cpp.i
+.PHONY : Window/Text/TextManager.i
+
+# target to preprocess a source file
+Window/Text/TextManager.cpp.i:
+	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Text/TextManager.cpp.i
+.PHONY : Window/Text/TextManager.cpp.i
+
+Window/Text/TextManager.s: Window/Text/TextManager.cpp.s
+.PHONY : Window/Text/TextManager.s
+
+# target to generate assembly for a file
+Window/Text/TextManager.cpp.s:
+	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Text/TextManager.cpp.s
+.PHONY : Window/Text/TextManager.cpp.s
+
 Window/Window.o: Window/Window.cpp.o
 .PHONY : Window/Window.o
 
@@ -379,6 +403,9 @@ help:
 	@echo "... Window/Sprite/Sprite.o"
 	@echo "... Window/Sprite/Sprite.i"
 	@echo "... Window/Sprite/Sprite.s"
+	@echo "... Window/Text/TextManager.o"
+	@echo "... Window/Text/TextManager.i"
+	@echo "... Window/Text/TextManager.s"
 	@echo "... Window/Window.o"
 	@echo "... Window/Window.i"
 	@echo "... Window/Window.s"

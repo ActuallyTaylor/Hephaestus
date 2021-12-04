@@ -55,9 +55,11 @@ void Collision::perform() {
         pOne->setPosition(pOne->getPosition() - positionOffset);
         pTwo->setPosition(pTwo->getPosition() + positionOffset);
 
+//        pOne->setVelocity({0.0, 0.0,0.0});
+//        pTwo->setVelocity({0.0, 0.0,0.0});
+
         pOne->setVelocity(vf1);
         pTwo->setVelocity(vf2);
-
     } else if (pOne != nullptr) {
         // Two is not a physics sprite but one is.
         handleSolidCollision(two, pOne);
