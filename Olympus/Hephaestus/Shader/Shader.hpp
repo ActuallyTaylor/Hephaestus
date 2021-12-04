@@ -48,6 +48,8 @@ private:
     const char *fragmentShader;
     GLuint shaderProgram;
 
+    bool isSetup = false;
+
 };
 
 #endif //OLYMPUS_SHADER_HPP

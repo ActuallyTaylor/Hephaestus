@@ -29,7 +29,6 @@ Shader::Shader() {
     char* c2 = new char[text.length() + 1];
     strcpy(c2, text2.c_str());
     fragmentShader = c2;
-    setup();
 }
 
 Shader::Shader(string vertexPath, string fragmentPath) {
@@ -70,10 +69,10 @@ Shader::Shader(string vertexPath, string fragmentPath) {
     else {
         std::cout << "file doesn't exist: " << fragmentPath << std::endl;
     }
-    setup();
 }
 
 void Shader::setup() {
+    isSetup = true;
     int  success;
     char infoLog[512];
 
@@ -121,6 +120,9 @@ void Shader::setup() {
 }
 
 void Shader::use() {
+    if(!isSetup) {
+        std::cout << "Shader Not Setup" << std::endl;
+    }
     glUseProgram(shaderProgram);
 }
 

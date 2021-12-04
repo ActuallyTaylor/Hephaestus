@@ -40,7 +40,7 @@ void tick() {
     if(numb % 5 == 0 && shouldSpawn) {
         int randDiff = rand() % 10;
         int size = 10;//(rand() % 25) + 5;
-        auto* sprite = new PhysicsSprite(shader, "./Images/circle.png", glm::vec3(720/2 - randDiff,5, 0.0), glm::vec2(size,size));
+        auto* sprite = new PhysicsSprite(shader, "./Images/circle.png", glm::vec3(720/2 - randDiff,710, 0.0), glm::vec2(size,size));
         sprite->setMass(1);
 
         if (!sprite->getRegistered()) {
@@ -56,10 +56,20 @@ void update() {
 
 TextManager manager = TextManager();
 void render() {
-    manager.renderText("This is sample text", 25.0f, 25.0f, 1.0f, glm::vec3(0.5, 0.8f, 0.2f));
+    int fps = engine.getFPS();
+    std::string fpsText = "FPS: " + std::to_string(fps) + ", Frametime: " + std::to_string(1000.0 / double(fps));
+    manager.renderText(fpsText, 25.0f, 720 - 25.0f, 1.0f, glm::vec3(0.5, 0.8f, 0.2f));
+
+    int spriteCount = engine.getNumberOfSprites();
+    std::string spriteText = "Sprites: " + std::to_string(spriteCount);
+    manager.renderText(spriteText, 25.0f, 720 - 50.0f, 1.0f, glm::vec3(0.5, 0.8f, 0.2f));
+
 }
 
 int main() {
+//    Sprite mainSprite = Sprite(shader, "./Images/wall.jpg", glm::vec3(720/2, 0, 0));
+//    engine.addSprite(&mainSprite);
+
     manager.loadFont("./Fonts/SFNSRounded.ttf");
 
     engine.setInit(init);

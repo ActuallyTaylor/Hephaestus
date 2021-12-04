@@ -19,10 +19,10 @@ Sprite::Shape PhysicsSprite::getShape() {
 
 void PhysicsSprite::move(double deltaTime) {
     if (effectedByGravity) {
-        velocity += (mass * gravitationalAcceleration);
+        velocity -= (mass * gravitationalAcceleration);
     }
 
-    position += velocity * float(deltaTime);
+    position -= velocity * float(deltaTime);
 
     if (position.x  < 0.0f) {
         velocity.x = -velocity.x * friction;

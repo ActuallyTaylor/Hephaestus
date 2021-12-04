@@ -21,7 +21,7 @@ void Hephaestus::startWindowLoop() {
 
 Shader Hephaestus::createShader(std::string vertexPath, std::string fragmentPath) {
     Shader shader = Shader{std::move(vertexPath), std::move(fragmentPath)};
-//    shader.setup();
+    shader.setup();
     return shader;
 }
 
@@ -56,4 +56,12 @@ void Hephaestus::setRender(Function function1) {
 void Hephaestus::addKeybind(int inKeyCode, int inAction, Function inExecutionFunction) {
     Keybind keybind = Keybind{inKeyCode, inAction, inExecutionFunction};
     this->window.addKeybind(keybind);
+}
+
+int Hephaestus::getFPS() {
+    return this->window.framesPerSecond;
+}
+
+int Hephaestus::getNumberOfSprites() {
+    return this->window.sprites.size();
 }

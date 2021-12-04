@@ -87,6 +87,10 @@ public:
     /// \param function1 The void function pointer that will be called when render is called.
     void setRender(Function function1);
 
+    /// Returns the current active window frames per second.
+    int getFPS();
+
+    int getNumberOfSprites();
 };
 
 #endif //OLYMPUS_HEPHAESTUS_HPP

@@ -17,7 +17,7 @@ Sprite::Sprite(Shader inShader, std::string texturePath, glm::vec3 inPosition, g
     position = inPosition;
     size = inSize;
     rotation = inRotation;
-    projection = glm::ortho(0.0f, screenSize.x, screenSize.y, 0.0f, -1000.0f, 1000.0f);
+    projection = glm::ortho(0.0f, screenSize.x, 0.0f, screenSize.y, -1000.0f, 1000.0f);
 
     createTexture(texturePath);
     createVirtualBufferObject();
@@ -121,7 +121,7 @@ void Sprite::setTexture(std::string texturePath) {
 
 void Sprite::updateScreenDimensions(int width, int height) {
     screenSize = glm::vec2(width, height);
-    projection = glm::ortho(0.0f, screenSize.x, screenSize.y, 0.0f, -1000.0f, 1000.0f);
+    projection = glm::ortho(0.0f, screenSize.x, 0.0f, screenSize.y, -1000.0f, 1000.0f);
     createVirtualBufferObject();
 }
 

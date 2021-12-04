@@ -38,7 +38,7 @@ private:
     /// The pixel height of the window.
     int height { 720 };
 
-    bool printFrames { true };
+    bool printFrames { false };
 
     double deltaTime;
 
@@ -137,6 +137,8 @@ public:
 
     Collision checkCollision(Sprite *one, Sprite *two);
     Collision checkAABBSphereCollision(Sprite* aabb, Sprite* sphere);
+
+    int framesPerSecond { };
 };
 
 #endif //OLYMPUS_WINDOW_HPP

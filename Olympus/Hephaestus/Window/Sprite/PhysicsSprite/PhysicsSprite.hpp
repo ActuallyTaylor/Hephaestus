@@ -17,7 +17,7 @@
 
 class PhysicsSprite: public Sprite {
 protected:
-    glm::vec3 gravitationalAcceleration { 0.0, 9.8, 0.0 };
+    glm::vec3 gravitationalAcceleration { 0.0, -9.8, 0.0 };
 
     Shape spriteShape = sphere;
 

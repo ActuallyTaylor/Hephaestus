@@ -25,6 +25,7 @@ TextManager::TextManager() {
     glMatrixMode (GL_PROJECTION);
     projection = glm::ortho(0.0f, 720.0f, 0.0f, 720.0f, -1000.0f, 1000.0f);
     textShader.setMatrix4("projection", projection);
+    textShader.setup();
 }
 
 int TextManager::loadFont(std::string filePath) {

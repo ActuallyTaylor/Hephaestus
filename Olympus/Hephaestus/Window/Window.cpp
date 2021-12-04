@@ -66,17 +66,17 @@ void Window::windowLoop() {
     self = this;
 
     while (!glfwWindowShouldClose(window)) {
+        framesThisSecond ++;
 
-        if (printFrames) {
-            framesThisSecond ++;
-
-            if(currentTime - lastFrameCountTime >= 1.0) {
+        if(currentTime - lastFrameCountTime >= 1.0) {
+            if (printFrames) {
                 printf("======\n");
-                printf("%f ms/frame\n", 1000.0/double(framesThisSecond));
+                printf("%f ms/frame\n", 1000.0 / double(framesThisSecond));
                 printf("%d frames per second\n", framesThisSecond);
-                framesThisSecond = 0;
-                lastFrameCountTime += 1.0;
             }
+            framesPerSecond = framesThisSecond;
+            framesThisSecond = 0;
+            lastFrameCountTime += 1.0;
         }
 
         currentTime = glfwGetTime();
