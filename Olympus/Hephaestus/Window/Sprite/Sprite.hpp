@@ -15,6 +15,7 @@
 #include "../../Shader/Shader.hpp"
 #include "../../Library/stb_image.hpp"
 #include "../Camera/Camera.hpp"
+#include "../Renderer/RenderObject.hpp"
 
 // GLM Math
 #include <glm/glm.hpp>
@@ -23,21 +24,18 @@
 #include <glm/gtc/quaternion.hpp>
 #include <glm/gtx/quaternion.hpp>
 
-class Sprite {
+class Sprite: public RenderObject {
 public:
     enum Shape {
         sphere,
         square
     };
 
-    Sprite(Shader shader, std::string texturePath, glm::vec3 position = glm::vec3(300.0f, 300.0f, 0.0f), glm::vec2 size = glm::vec2(50.0f, 50.0f), glm::vec3 rotation = glm::vec3(0.0f, 0.0f, 0.0f));
-    ~Sprite();
+    using RenderObject::RenderObject;
 
     /*
      * Sprite Position
      */
-    glm::vec3 position { };
-
     glm::vec3 getPosition();
     void setPosition(glm::vec3 position);
 
@@ -56,8 +54,6 @@ public:
     /*
      * Sprite Rotation
      */
-    glm::vec2 size { };
-
     glm::vec3 getRotation();
     void setRotation(glm::vec3 rotation);
 
@@ -76,10 +72,8 @@ public:
     /*
      * Sprite Size
      */
-    glm::vec3 rotation { };
-
     glm::vec2 getSize();
-    void setSize(glm::vec2 scale);
+    void setSize(glm::vec2 _dimensions);
 
     /// Get & Set the width / X coordinate
     float getWidth();
@@ -102,28 +96,12 @@ public:
      * Register Sprite
      */
     void registerSprite();
-    bool getRegistered();
+    bool getRegistered() const;
 
     // MARK: Drawing Functions
-    void draw();
-
     virtual void move(double deltaTime);
-
-    void setTexture(std::string texturePath);
-
-    void updateScreenDimensions(int width, int height);
-
     void updateCamera(Camera* newCamera);
-
 protected:
-    glm::mat4 projection { };
-    glm::vec2 screenSize { };
-
-    Camera* camera;
-
-    void createTexture(std::string texturePath);
-    void createVirtualBufferObject();
-
     Shader shader;
     GLuint VBO, VAO, EBO, textureAtlas;
 

@@ -100,6 +100,34 @@ vector
 
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/Keybind/Keybind.hpp
 
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Renderer/RenderObject.hpp
+string
+-
+vector
+-
+../../Library/stb_image.hpp
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/stb_image.hpp
+GL/glew.h
+-
+GLFW/glfw3.h
+-
+../../Shader/Shader.hpp
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Shader/Shader.hpp
+../Camera/Camera.hpp
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Camera/Camera.hpp
+glm/glm.hpp
+-
+glm/ext/matrix_transform.hpp
+-
+glm/gtc/type_ptr.hpp
+-
+glm/gtc/quaternion.hpp
+-
+glm/gtx/quaternion.hpp
+-
+glm/gtx/string_cast.hpp
+-
+
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.hpp
 ../Sprite.hpp
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/Sprite.hpp
@@ -115,6 +143,8 @@ vector
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/stb_image.hpp
 ../Camera/Camera.hpp
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Camera/Camera.hpp
+../Renderer/RenderObject.hpp
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Renderer/RenderObject.hpp
 glm/glm.hpp
 -
 glm/ext/matrix_transform.hpp

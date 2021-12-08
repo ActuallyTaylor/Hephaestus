@@ -11,6 +11,7 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o: \
  ../Hephaestus/Window/Collision/Collision.hpp \
  ../Hephaestus/Window/Controls/ControlManager.hpp \
  ../Hephaestus/Window/Controls/Keybind/Keybind.hpp \
+ ../Hephaestus/Window/Renderer/RenderObject.hpp \
  ../Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.hpp \
  ../Hephaestus/Window/Sprite/Sprite.hpp \
  ../Hephaestus/Window/Text/Text.hpp \
@@ -662,6 +663,7 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Window/Collision/Collision.cpp.o: \
  ../Hephaestus/Window/Camera/Camera.hpp \
  ../Hephaestus/Window/Collision/Collision.cpp \
  ../Hephaestus/Window/Collision/Collision.hpp \
+ ../Hephaestus/Window/Renderer/RenderObject.hpp \
  ../Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.hpp \
  ../Hephaestus/Window/Sprite/Sprite.hpp \
  /usr/local/include/GL/glew.h \
@@ -1114,6 +1116,7 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Window/Sprite/PhysicsSprite/PhysicsSprite.c
  ../Hephaestus/Shader/Shader.hpp \
  ../Hephaestus/Window/Camera/Camera.hpp \
  ../Hephaestus/Window/Collision/Collision.hpp \
+ ../Hephaestus/Window/Renderer/RenderObject.hpp \
  ../Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp \
  ../Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.hpp \
  ../Hephaestus/Window/Sprite/Sprite.hpp \
@@ -1337,6 +1340,7 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Window/Sprite/Sprite.cpp.o: \
  ../Hephaestus/Library/stb_image.hpp \
  ../Hephaestus/Shader/Shader.hpp \
  ../Hephaestus/Window/Camera/Camera.hpp \
+ ../Hephaestus/Window/Renderer/RenderObject.hpp \
  ../Hephaestus/Window/Sprite/Sprite.cpp \
  ../Hephaestus/Window/Sprite/Sprite.hpp \
  /usr/local/include/GL/glew.h \
@@ -1517,14 +1521,20 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Window/Sprite/Sprite.cpp.o: \
  /usr/local/include/glm/gtc/quaternion.hpp \
  /usr/local/include/glm/gtc/quaternion.inl \
  /usr/local/include/glm/gtc/quaternion_simd.inl \
+ /usr/local/include/glm/gtc/type_precision.hpp \
+ /usr/local/include/glm/gtc/type_precision.inl \
  /usr/local/include/glm/gtc/type_ptr.hpp \
  /usr/local/include/glm/gtc/type_ptr.inl \
  /usr/local/include/glm/gtc/vec1.hpp \
  /usr/local/include/glm/gtx/component_wise.hpp \
  /usr/local/include/glm/gtx/component_wise.inl \
+ /usr/local/include/glm/gtx/dual_quaternion.hpp \
+ /usr/local/include/glm/gtx/dual_quaternion.inl \
  /usr/local/include/glm/gtx/norm.hpp \
  /usr/local/include/glm/gtx/norm.inl \
  /usr/local/include/glm/gtx/quaternion.hpp \
+ /usr/local/include/glm/gtx/string_cast.hpp \
+ /usr/local/include/glm/gtx/string_cast.inl \
  /usr/local/include/glm/integer.hpp \
  /usr/local/include/glm/mat2x2.hpp \
  /usr/local/include/glm/mat2x3.hpp \
@@ -2005,6 +2015,7 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Window/Window.cpp.o: \
  ../Hephaestus/Window/Collision/Collision.hpp \
  ../Hephaestus/Window/Controls/ControlManager.hpp \
  ../Hephaestus/Window/Controls/Keybind/Keybind.hpp \
+ ../Hephaestus/Window/Renderer/RenderObject.hpp \
  ../Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.hpp \
  ../Hephaestus/Window/Sprite/Sprite.hpp \
  ../Hephaestus/Window/Text/Text.hpp \

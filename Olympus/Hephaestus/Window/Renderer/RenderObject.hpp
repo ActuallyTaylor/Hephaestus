@@ -39,6 +39,9 @@ protected:
     void createTexture(std::string texturePath);
     void createVirtualBufferObject();
 public:
+    RenderObject(Shader shader, std::string texturePath, glm::vec3 position = glm::vec3(300.0f, 300.0f, 0.0f), glm::vec2 dimensions = glm::vec2(50.0f, 50.0f), glm::vec3 rotation = glm::vec3(0.0f, 0.0f, 0.0f));
+    ~RenderObject();
+
     glm::vec3 position { };
     glm::vec3 rotation { };
     glm::vec2 dimensions { };
@@ -50,11 +53,8 @@ public:
 
     // MARK: Drawing Functions
     void draw();
-
     void setTexture(std::string texturePath);
-
     void updateScreenDimensions(int width, int height);
-
 };
 
 

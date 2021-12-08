@@ -55,19 +55,19 @@ Shader::Shader(string vertexPath, string fragmentPath) {
 
     cout << std::__fs::filesystem::current_path() << endl;
     if (file) {
-        std::cout << "file exists: " << vertexPath << std::endl;
+//        std::cout << "file exists: " << vertexPath << std::endl;
     }
     else {
-        std::cout << "file doesn't exist: " << vertexPath << std::endl;
+//        std::cout << "file doesn't exist: " << vertexPath << std::endl;
     }
 
     std::ifstream file2(fragmentPath.c_str());
 
     if (file2) {
-        std::cout << "file exists: " << fragmentPath << std::endl;
+//        std::cout << "file exists: " << fragmentPath << std::endl;
     }
     else {
-        std::cout << "file doesn't exist: " << fragmentPath << std::endl;
+//        std::cout << "file doesn't exist: " << fragmentPath << std::endl;
     }
 }
 
@@ -86,7 +86,7 @@ void Shader::setup() {
         glGetShaderInfoLog(vs, 512, NULL, infoLog);
         std::cout << "ERROR::SHADER::VERTEX::COMPILATION_FAILED\n" << infoLog << std::endl;
     } else {
-        std::cout << "Successfully Compiled Vertex Shader" << std::endl;
+//        std::cout << "Successfully Compiled Vertex Shader" << std::endl;
     }
 
     GLuint fs = glCreateShader(GL_FRAGMENT_SHADER);
@@ -98,7 +98,7 @@ void Shader::setup() {
         glGetShaderInfoLog(vs, 512, NULL, infoLog);
         std::cout << "ERROR::SHADER::FRAGMENT::COMPILATION_FAILED\n" << infoLog << std::endl;
     } else {
-        std::cout << "Successfully Compiled Fragment Shader" << std::endl;
+//        std::cout << "Successfully Compiled Fragment Shader" << std::endl;
     }
 
     // Combine into a GPU shader program
@@ -112,7 +112,7 @@ void Shader::setup() {
         glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
         std::cout << "ERROR::SHADER::PROGRAM::COMPILATION_FAILED\n" << infoLog << std::endl;
     } else {
-        std::cout << "Successfully Compiled Shader Program" << std::endl;
+//        std::cout << "Successfully Compiled Shader Program" << std::endl;
     }
 
     glDeleteShader(vs);
