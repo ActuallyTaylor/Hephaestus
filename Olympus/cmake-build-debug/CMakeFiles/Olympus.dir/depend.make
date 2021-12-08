@@ -10,7 +10,6 @@ CMakeFiles/Olympus.dir/main.cpp.o: \
  ../Hephaestus/Window/Collision/Collision.hpp \
  ../Hephaestus/Window/Controls/ControlManager.hpp \
  ../Hephaestus/Window/Controls/Keybind/Keybind.hpp \
- ../Hephaestus/Window/Renderer/RenderObject.hpp \
  ../Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.hpp \
  ../Hephaestus/Window/Sprite/Sprite.hpp \
  ../Hephaestus/Window/Text/Text.hpp \

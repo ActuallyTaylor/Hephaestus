@@ -11,7 +11,6 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Collision/Collision.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/ControlManager.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/Keybind/Keybind.hpp
- /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Renderer/RenderObject.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/Sprite.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Text/Text.hpp
@@ -663,7 +662,6 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Window/Collision/Collision.cpp.o
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Camera/Camera.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Collision/Collision.cpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Collision/Collision.hpp
- /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Renderer/RenderObject.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/Sprite.hpp
  /usr/local/include/GL/glew.h
@@ -1116,7 +1114,6 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Window/Sprite/PhysicsSprite/PhysicsSprite.c
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Shader/Shader.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Camera/Camera.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Collision/Collision.hpp
- /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Renderer/RenderObject.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/Sprite.hpp
@@ -1340,7 +1337,6 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Window/Sprite/Sprite.cpp.o
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/stb_image.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Shader/Shader.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Camera/Camera.hpp
- /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Renderer/RenderObject.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/Sprite.cpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/Sprite.hpp
  /usr/local/include/GL/glew.h
@@ -1521,20 +1517,14 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Window/Sprite/Sprite.cpp.o
  /usr/local/include/glm/gtc/quaternion.hpp
  /usr/local/include/glm/gtc/quaternion.inl
  /usr/local/include/glm/gtc/quaternion_simd.inl
- /usr/local/include/glm/gtc/type_precision.hpp
- /usr/local/include/glm/gtc/type_precision.inl
  /usr/local/include/glm/gtc/type_ptr.hpp
  /usr/local/include/glm/gtc/type_ptr.inl
  /usr/local/include/glm/gtc/vec1.hpp
  /usr/local/include/glm/gtx/component_wise.hpp
  /usr/local/include/glm/gtx/component_wise.inl
- /usr/local/include/glm/gtx/dual_quaternion.hpp
- /usr/local/include/glm/gtx/dual_quaternion.inl
  /usr/local/include/glm/gtx/norm.hpp
  /usr/local/include/glm/gtx/norm.inl
  /usr/local/include/glm/gtx/quaternion.hpp
- /usr/local/include/glm/gtx/string_cast.hpp
- /usr/local/include/glm/gtx/string_cast.inl
  /usr/local/include/glm/integer.hpp
  /usr/local/include/glm/mat2x2.hpp
  /usr/local/include/glm/mat2x3.hpp
@@ -2017,7 +2007,6 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Window/Window.cpp.o
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Collision/Collision.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/ControlManager.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/Keybind/Keybind.hpp
- /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Renderer/RenderObject.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/Sprite.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Text/Text.hpp

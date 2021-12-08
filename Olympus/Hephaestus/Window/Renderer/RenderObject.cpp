@@ -13,19 +13,16 @@
 
 #include "RenderObject.hpp"
 
-RenderObject::RenderObject(Shader shader, std::string texturePath, glm::vec3 position, glm::vec2 dimensions,
-                           glm::vec3 rotation) {
-    this->shader = shader;
-    this->position = position;
-    this->dimensions = dimensions;
-    this->rotation = rotation;
-    this->projection = glm::ortho(0.0f, screenSize.x, 0.0f, screenSize.y, -1000.0f, 1000.0f);
-
-    createTexture(texturePath);
-    createVirtualBufferObject();
-}
-
-RenderObject::~RenderObject() = default;
+//Sprite::Sprite(Shader inShader, std::string texturePath, glm::vec3 inPosition, glm::vec2 inSize, glm::vec3 inRotation) {
+//    shader = inShader;
+//    position = inPosition;
+//    size = inSize;
+//    rotation = inRotation;
+//    projection = glm::ortho(0.0f, screenSize.x, 0.0f, screenSize.y, -1000.0f, 1000.0f);
+//
+//    createTexture(texturePath);
+//    createVirtualBufferObject();
+//}
 
 void RenderObject::createVirtualBufferObject() {
     float vertices[] = {
