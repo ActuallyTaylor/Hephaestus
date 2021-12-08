@@ -41,18 +41,18 @@ private:
 
     bool printFrames { false };
 
-    double deltaTime;
+    double deltaTime{};
 
     /// The GLFW window that this class wraps.
     GLFWwindow *window;
-    /// The control manager of the window.
+    /// The control textManager of the window.
     ControlManager controlManager = ControlManager();
 
     /// Manages all text displayed on the screen
-    TextManager manager { };
+    TextManager textManager { };
 
     /// The current camera
-    Camera* currentCamera;
+    Camera* currentCamera{};
 
     /*
      * Runtime Functions
@@ -115,12 +115,12 @@ public:
     /// \return A pointer to the spite located in the sprites vector.
     void addSprite(Sprite *sprite);
 
-    /// Adds a keybind to the window's control manager
-    /// \param keybind The keybind that should be added to the control manager.
+    /// Adds a keybind to the window's control textManager
+    /// \param keybind The keybind that should be added to the control textManager.
     void addKeybind(Keybind keybind);
 
-    /// Adds a keybind to the window's control manager
-    /// \param keybind The keybind that should be added to the control manager.
+    /// Adds a keybind to the window's control textManager
+    /// \param keybind The keybind that should be added to the control textManager.
     void addCamera(Camera *camera);
 
     void addText(Text* text);
@@ -135,7 +135,7 @@ public:
      * Variables
      */
     /// A set of function variables that are set when the user sets a user-defined callback.
-    Function init, destroy, tick, update, render;
+    Function init{}, destroy{}, tick{}, update{}, render{};
 
     /// An array of all of the sprites that managed by the window.
     vector<Sprite*> sprites;

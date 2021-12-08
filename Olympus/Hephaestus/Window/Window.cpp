@@ -12,7 +12,8 @@
 Window* self;
 
 Window::Window() {
-    manager = TextManager();
+    textManager = TextManager();
+
 }
 
 Window::Window(std::string sentWindowName, int sentWidth, int sentHeight) {
@@ -55,9 +56,8 @@ Window::Window(std::string sentWindowName, int sentWidth, int sentHeight) {
     glfwSetKeyCallback(window, keyCallback);
     glfwSetWindowSizeCallback(window, windowCallback);
 
-    printf("Go");
-    manager = TextManager();
-    manager.setup();
+    textManager = TextManager();
+    textManager.setup();
 }
 
 void Window::windowLoop() {
@@ -74,6 +74,9 @@ void Window::windowLoop() {
     // Uncomment this to delimit framerate. Currently, limited because physics breaks.
 //    glfwMakeContextCurrent(window);
 //    glfwSwapInterval(0);
+
+    Text renderingText = Text("", "./fonts/SFNSRounded.ttf", glm::vec2(10, 645), glm::vec4(1.0,1.0,1.0,1.0));
+    textManager.addText(&renderingText);
 
     while (!glfwWindowShouldClose(window)) {
         framesThisSecond ++;
@@ -94,9 +97,12 @@ void Window::windowLoop() {
         lastTime = currentTime;
 
         // Call user-defined callback functions
+        const std::chrono::time_point<std::chrono::system_clock> start = std::chrono::system_clock::now();
         _tick();
         _update();
         _render();
+        const std::chrono::time_point<std::chrono::system_clock> end = std::chrono::system_clock::now();
+        renderingText.text = "Frame Calculations " + std::to_string(std::chrono::duration_cast<std::chrono::microseconds>(end - start).count()) + "µs ≈ " + std::to_string((end - start) / 1ms) + "ms ≈ " + std::to_string((end - start) / 1s) + "s.";
 
         // Swap front and back buffers
         glfwSwapBuffers(window);
@@ -147,7 +153,7 @@ void Window::_render() {
         sprite->draw();
     }
 
-    manager.draw();
+    textManager.draw();
 
     if (render != nullptr) {
         render();
@@ -284,9 +290,9 @@ Collision Window::checkAABBSphereCollision(Sprite* aabb, Sprite* sphere) {
 }
 
 void Window::addText(Text* text) {
-    manager.addText(text);
+    textManager.addText(text);
 }
 
 void Window::loadFont(std::string fontPath) {
-    manager.loadFont(fontPath);
+    textManager.loadFont(fontPath);
 }

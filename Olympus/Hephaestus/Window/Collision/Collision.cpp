@@ -55,9 +55,6 @@ void Collision::perform(double deltaTime) {
         pOne->setPosition(pOne->getPosition() - positionOffset);
         pTwo->setPosition(pTwo->getPosition() + positionOffset);
 
-//        pOne->setVelocity({0.0, 0.0,0.0});
-//        pTwo->setVelocity({0.0, 0.0,0.0});
-
         pOne->setVelocity(vf1);
         pTwo->setVelocity(vf2);
     } else if (pOne != nullptr) {

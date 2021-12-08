@@ -53,8 +53,9 @@ void tick() {
 void update() {
 
 }
-Text fpsTextObject = { "Hello World", "./fonts/SFNSRounded.ttf", {25.0f, 720 - 25.0f }, { 0.5, 0.8f, 0.2f, 1.0f } };
-Text spriteCountObject = { "Hello World", "./fonts/SFNSRounded.ttf", {25.0f, 720 - 50.0f }, { 0.5, 0.8f, 0.2f, 1.0f } };
+
+Text fpsTextObject = { "Hello World", "./fonts/SFNSRounded.ttf", {10.0f, 695.0f }, { 0.5, 0.8f, 0.2f, 1.0f } };
+Text spriteCountObject = { "Hello World", "./fonts/SFNSRounded.ttf", {10.0f, 670.0f }, { 0.5, 0.8f, 0.2f, 1.0f } };
 
 void render() {
     int fps = engine.getFPS();
@@ -68,6 +69,7 @@ void render() {
 
 int main() {
     engine.loadFont("./fonts/SFNSRounded.ttf");
+
     engine.addText(&spriteCountObject);
     engine.addText(&fpsTextObject);
 

@@ -22,17 +22,17 @@ Text::Text(std::string text, std::string fontPath, glm::vec2 position, glm::vec4
 
 }
 
-void Text::assign(Shader* shader, GLuint* vbo, GLuint* vao, glm::mat4* projection, std::map<char, Character> characters) {
+void Text::assign(Shader* shader, GLuint* vbo, GLuint* vao, glm::mat4* _projection, std::map<char, Character> _characters) {
     this->textShader = shader;
     this->VBO = vbo;
     this->VAO = vao;
-    this->projection = projection;
-    this->characters = characters;
+    this->projection = _projection;
+    this->characters = _characters;
 
 }
 
 void Text::draw() {
-    glm::vec2 position = this->position;
+    glm::vec2 _position = this->position;
     textShader->use();
     textShader->setVector3f("textColor", color.x, color.y, color.z);
     textShader->setMatrix4("projection", *projection);
@@ -43,8 +43,8 @@ void Text::draw() {
     for(char c: text) {
         Character ch = characters[c];
 
-        float xpos = position.x + ch.Bearing.x * scale;
-        float ypos = position.y - (ch.Size.y - ch.Bearing.y) * scale;
+        float xpos = _position.x + ch.Bearing.x * scale;
+        float ypos = _position.y - (ch.Size.y - ch.Bearing.y) * scale;
 
         float w = ch.Size.x * scale;
         float h = ch.Size.y * scale;
@@ -69,7 +69,7 @@ void Text::draw() {
         // render quad
         glDrawArrays(GL_TRIANGLES, 0, 6);
         // now advance cursors for next glyph (note that advance is number of 1/64 pixels)
-        position.x += (ch.Advance >> 6) * scale; // bitshift by 6 to get value in pixels (2^6 = 64)
+        _position.x += (ch.Advance >> 6) * scale; // bitshift by 6 to get value in pixels (2^6 = 64)
     }
     glBindVertexArray(0);
     glBindTexture(GL_TEXTURE_2D, 0);
