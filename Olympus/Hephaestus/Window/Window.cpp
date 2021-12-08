@@ -32,6 +32,7 @@ Window::Window(std::string sentWindowName, int sentWidth, int sentHeight) {
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     glfwWindowHint(GLFW_SAMPLES, 4);
+//    glfwWindowHint(GLFW_DOUBLEBUFFER, GLFW_FALSE);
 
     // Create a windowed mode window and its OpenGL context
     window = glfwCreateWindow(width, height, windowName.c_str(), NULL, NULL);
@@ -63,13 +64,16 @@ void Window::windowLoop() {
     _init();
     // Disabled to allow
 //    glEnable(GL_DEPTH_TEST);
-    // Holds the last frame time + the current amount of frames that have in a second.
+
     double currentTime = glfwGetTime();
     double lastTime = glfwGetTime();
     double lastFrameCountTime = glfwGetTime();
 
     int framesThisSecond = 0;
     self = this;
+    // Uncomment this to delimit framerate. Currently, limited because physics breaks.
+//    glfwMakeContextCurrent(window);
+//    glfwSwapInterval(0);
 
     while (!glfwWindowShouldClose(window)) {
         framesThisSecond ++;
@@ -142,6 +146,8 @@ void Window::_render() {
     for(Sprite *sprite : sprites) {
         sprite->draw();
     }
+
+    manager.draw();
 
     if (render != nullptr) {
         render();
@@ -217,7 +223,7 @@ void Window::checkCollisions() {
 
             Collision collision { checkCollision(sprite, checkSprite) };
             if(collision.successful) {
-                collision.perform();
+                collision.perform(deltaTime);
             }
         }
     }
@@ -277,8 +283,8 @@ Collision Window::checkAABBSphereCollision(Sprite* aabb, Sprite* sphere) {
     return Collision(glm::length(difference) < sphere->getRadius(), aabb, sphere, {difference, 0.0}, {difference, 0.0});
 }
 
-void Window::renderText(std::string text, float x, float y, float scale, glm::vec3 color) {
-    manager.renderText(text, x, y, scale, color);
+void Window::addText(Text* text) {
+    manager.addText(text);
 }
 
 void Window::loadFont(std::string fontPath) {

@@ -126,7 +126,9 @@ glm/gtc/quaternion.hpp
 glm/gtx/quaternion.hpp
 -
 
-/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Text/TextManager.hpp
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Text/Text.hpp
+iostream
+-
 glm/glm.hpp
 -
 map
@@ -139,6 +141,24 @@ ft2build.h
 -
 ../../Shader/Shader.hpp
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Shader/Shader.hpp
+
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Text/TextManager.hpp
+glm/glm.hpp
+-
+map
+-
+GL/glew.h
+-
+GLFW/glfw3.h
+-
+vector
+-
+ft2build.h
+-
+../../Shader/Shader.hpp
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Shader/Shader.hpp
+Text.hpp
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Text/Text.hpp
 
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Window.hpp
 ../Hephaestus.hpp

@@ -53,22 +53,23 @@ void tick() {
 void update() {
 
 }
+Text fpsTextObject = { "Hello World", "./fonts/SFNSRounded.ttf", {25.0f, 720 - 25.0f }, { 0.5, 0.8f, 0.2f, 1.0f } };
+Text spriteCountObject = { "Hello World", "./fonts/SFNSRounded.ttf", {25.0f, 720 - 50.0f }, { 0.5, 0.8f, 0.2f, 1.0f } };
 
 void render() {
     int fps = engine.getFPS();
     std::string fpsText = "FPS: " + std::to_string(fps) + ", Frametime: " + std::to_string(1000.0 / double(fps));
-    engine.renderText(fpsText, 25.0f, 720 - 25.0f, 1.0f, glm::vec3(0.5, 0.8f, 0.2f));
+    fpsTextObject.text = fpsText;
 
     int spriteCount = engine.getNumberOfSprites();
     std::string spriteText = "Sprites: " + std::to_string(spriteCount);
-    engine.renderText(spriteText, 25.0f, 720 - 50.0f, 1.0f, glm::vec3(0.5, 0.8f, 0.2f));
+    spriteCountObject.text = spriteText;
 }
 
 int main() {
-//    Sprite mainSprite = Sprite(shader, "./Images/wall.jpg", glm::vec3(720/2, 0, 0));
-//    engine.addSprite(&mainSprite);
-
-    engine.loadFont("./Fonts/SFNSRounded.ttf");
+    engine.loadFont("./fonts/SFNSRounded.ttf");
+    engine.addText(&spriteCountObject);
+    engine.addText(&fpsTextObject);
 
     engine.setInit(init);
     engine.setDestroy(destroy);

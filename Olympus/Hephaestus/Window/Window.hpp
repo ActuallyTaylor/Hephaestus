@@ -123,7 +123,7 @@ public:
     /// \param keybind The keybind that should be added to the control manager.
     void addCamera(Camera *camera);
 
-    void renderText(std::string text, float x, float y, float scale, glm::vec3 color);
+    void addText(Text* text);
     void loadFont(std::string fontPath);
 
     /*

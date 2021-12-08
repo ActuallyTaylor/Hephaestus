@@ -181,6 +181,12 @@
 		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/Sprite.hpp">
 			<Option target="Hephaestus"/>
 		</Unit>
+		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Text/Text.cpp">
+			<Option target="Hephaestus"/>
+		</Unit>
+		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Text/Text.hpp">
+			<Option target="Hephaestus"/>
+		</Unit>
 		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Text/TextManager.cpp">
 			<Option target="Hephaestus"/>
 		</Unit>

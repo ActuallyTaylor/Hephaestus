@@ -2,7 +2,7 @@
     Text.cpp
     Zachary lineman
     12/3/21
-    
+
     =================
     DESCRIPTION
     =================
@@ -50,6 +50,7 @@ int TextManager::loadFont(std::string filePath) {
     glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
 
     // load first 128 characters of ASCII set
+    std::map<char, Text::Character> fontCharacters;
     for (unsigned char c = 0; c < 128; c++)
     {
         // Load character glyph
@@ -81,14 +82,15 @@ int TextManager::loadFont(std::string filePath) {
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
         // now store character for later use
-        Character character = {
+        Text::Character character = {
                 texture,
                 glm::ivec2(face->glyph->bitmap.width, face->glyph->bitmap.rows),
                 glm::ivec2(face->glyph->bitmap_left, face->glyph->bitmap_top),
                 static_cast<unsigned int>(face->glyph->advance.x)
         };
-        Characters.insert(std::pair<char, Character>(c, character));
+        fontCharacters.insert(std::pair<char, Text::Character>(c, character));
     }
+    fonts.insert(std::pair<std::string, std::map<char, Text::Character>>(filePath, fontCharacters));
 
     FT_Done_Face(face);
     FT_Done_FreeType(ft);
@@ -96,45 +98,13 @@ int TextManager::loadFont(std::string filePath) {
     return 0;
 }
 
-void TextManager::renderText(std::string text, float x, float y, float scale, glm::vec3 color) {
-    textShader.use();
-    textShader.setVector3f("textColor", color.x, color.y, color.z);
-    textShader.setMatrix4("projection", projection);
-
-    glActiveTexture(GL_TEXTURE0);
-    glBindVertexArray(VAO);
-
-    for(char c: text) {
-        Character ch = Characters[c];
-
-        float xpos = x + ch.Bearing.x * scale;
-        float ypos = y - (ch.Size.y - ch.Bearing.y) * scale;
-
-        float w = ch.Size.x * scale;
-        float h = ch.Size.y * scale;
-//        printf("X: %f, Y: %f, W: %f, HL: %f", xpos, ypos, w, h);
-        // update VBO for each character
-        float vertices[6][4] = {
-                { xpos,     ypos + h,   0.0f, 0.0f },
-                { xpos,     ypos,       0.0f, 1.0f },
-                { xpos + w, ypos,       1.0f, 1.0f },
-
-                { xpos,     ypos + h,   0.0f, 0.0f },
-                { xpos + w, ypos,       1.0f, 1.0f },
-                { xpos + w, ypos + h,   1.0f, 0.0f }
-        };
-
-        // render glyph texture over quad
-        glBindTexture(GL_TEXTURE_2D, ch.TextureID);
-        // update content of VBO memory
-        glBindBuffer(GL_ARRAY_BUFFER, VBO);
-        glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(vertices), vertices);
-        glBindBuffer(GL_ARRAY_BUFFER, 0);
-        // render quad
-        glDrawArrays(GL_TRIANGLES, 0, 6);
-        // now advance cursors for next glyph (note that advance is number of 1/64 pixels)
-        x += (ch.Advance >> 6) * scale; // bitshift by 6 to get value in pixels (2^6 = 64)
+void TextManager::draw() {
+    for( Text *text : textObjects) {
+        text->draw();
     }
-    glBindVertexArray(0);
-    glBindTexture(GL_TEXTURE_2D, 0);
+}
+
+void TextManager::addText(Text *text) {
+    text->assign(&textShader, &VBO, &VAO, &projection, fonts[text->fontPath]);
+    textObjects.push_back(text);
 }

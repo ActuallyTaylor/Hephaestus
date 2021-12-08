@@ -66,8 +66,8 @@ int Hephaestus::getNumberOfSprites() {
     return this->window.sprites.size();
 }
 
-void Hephaestus::renderText(std::string text, float x, float y, float scale, glm::vec3 color) {
-    this->window.renderText(text, x, y, scale, color);
+void Hephaestus::addText(Text* text) {
+    this->window.addText(text);
 }
 
 void Hephaestus::loadFont(std::string fontPath) {
