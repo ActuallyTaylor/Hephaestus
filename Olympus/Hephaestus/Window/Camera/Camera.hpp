@@ -33,6 +33,8 @@ private:
 public:
     Camera();
 
+    bool isUICamera = false;
+
     void setPosition(glm::vec3 newPosition);
     glm::vec3 getPosition();
 

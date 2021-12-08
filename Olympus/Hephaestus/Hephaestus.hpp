@@ -87,6 +87,9 @@ public:
     /// \param function1 The void function pointer that will be called when render is called.
     void setRender(Function function1);
 
+    //// Get the current mouse position
+    glm::vec2 getMousePosition();
+
     void addText(Text* text);
     void loadFont(std::string fontPath);
 

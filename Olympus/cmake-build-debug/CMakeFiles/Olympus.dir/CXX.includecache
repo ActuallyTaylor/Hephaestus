@@ -181,7 +181,7 @@ vector
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/ControlManager.hpp
 ./Camera/Camera.hpp
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Camera/Camera.hpp
-Text/TextManager.hpp
+./Text/TextManager.hpp
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Text/TextManager.hpp
 
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/main.cpp

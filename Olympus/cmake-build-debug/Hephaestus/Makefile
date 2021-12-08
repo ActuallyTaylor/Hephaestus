@@ -274,6 +274,30 @@ Window/Controls/Keybind/Keybind.cpp.s:
 	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/Keybind/Keybind.cpp.s
 .PHONY : Window/Controls/Keybind/Keybind.cpp.s
 
+Window/Renderer/RenderObject.o: Window/Renderer/RenderObject.cpp.o
+.PHONY : Window/Renderer/RenderObject.o
+
+# target to build an object file
+Window/Renderer/RenderObject.cpp.o:
+	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Renderer/RenderObject.cpp.o
+.PHONY : Window/Renderer/RenderObject.cpp.o
+
+Window/Renderer/RenderObject.i: Window/Renderer/RenderObject.cpp.i
+.PHONY : Window/Renderer/RenderObject.i
+
+# target to preprocess a source file
+Window/Renderer/RenderObject.cpp.i:
+	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Renderer/RenderObject.cpp.i
+.PHONY : Window/Renderer/RenderObject.cpp.i
+
+Window/Renderer/RenderObject.s: Window/Renderer/RenderObject.cpp.s
+.PHONY : Window/Renderer/RenderObject.s
+
+# target to generate assembly for a file
+Window/Renderer/RenderObject.cpp.s:
+	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Renderer/RenderObject.cpp.s
+.PHONY : Window/Renderer/RenderObject.cpp.s
+
 Window/Sprite/PhysicsSprite/PhysicsSprite.o: Window/Sprite/PhysicsSprite/PhysicsSprite.cpp.o
 .PHONY : Window/Sprite/PhysicsSprite/PhysicsSprite.o
 
@@ -370,6 +394,54 @@ Window/Text/TextManager.cpp.s:
 	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Text/TextManager.cpp.s
 .PHONY : Window/Text/TextManager.cpp.s
 
+Window/UI/Button/Button.o: Window/UI/Button/Button.cpp.o
+.PHONY : Window/UI/Button/Button.o
+
+# target to build an object file
+Window/UI/Button/Button.cpp.o:
+	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/UI/Button/Button.cpp.o
+.PHONY : Window/UI/Button/Button.cpp.o
+
+Window/UI/Button/Button.i: Window/UI/Button/Button.cpp.i
+.PHONY : Window/UI/Button/Button.i
+
+# target to preprocess a source file
+Window/UI/Button/Button.cpp.i:
+	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/UI/Button/Button.cpp.i
+.PHONY : Window/UI/Button/Button.cpp.i
+
+Window/UI/Button/Button.s: Window/UI/Button/Button.cpp.s
+.PHONY : Window/UI/Button/Button.s
+
+# target to generate assembly for a file
+Window/UI/Button/Button.cpp.s:
+	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/UI/Button/Button.cpp.s
+.PHONY : Window/UI/Button/Button.cpp.s
+
+Window/UI/UIElement.o: Window/UI/UIElement.cpp.o
+.PHONY : Window/UI/UIElement.o
+
+# target to build an object file
+Window/UI/UIElement.cpp.o:
+	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/UI/UIElement.cpp.o
+.PHONY : Window/UI/UIElement.cpp.o
+
+Window/UI/UIElement.i: Window/UI/UIElement.cpp.i
+.PHONY : Window/UI/UIElement.i
+
+# target to preprocess a source file
+Window/UI/UIElement.cpp.i:
+	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/UI/UIElement.cpp.i
+.PHONY : Window/UI/UIElement.cpp.i
+
+Window/UI/UIElement.s: Window/UI/UIElement.cpp.s
+.PHONY : Window/UI/UIElement.s
+
+# target to generate assembly for a file
+Window/UI/UIElement.cpp.s:
+	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/UI/UIElement.cpp.s
+.PHONY : Window/UI/UIElement.cpp.s
+
 Window/Window.o: Window/Window.cpp.o
 .PHONY : Window/Window.o
 
@@ -421,6 +493,9 @@ help:
 	@echo "... Window/Controls/Keybind/Keybind.o"
 	@echo "... Window/Controls/Keybind/Keybind.i"
 	@echo "... Window/Controls/Keybind/Keybind.s"
+	@echo "... Window/Renderer/RenderObject.o"
+	@echo "... Window/Renderer/RenderObject.i"
+	@echo "... Window/Renderer/RenderObject.s"
 	@echo "... Window/Sprite/PhysicsSprite/PhysicsSprite.o"
 	@echo "... Window/Sprite/PhysicsSprite/PhysicsSprite.i"
 	@echo "... Window/Sprite/PhysicsSprite/PhysicsSprite.s"
@@ -433,6 +508,12 @@ help:
 	@echo "... Window/Text/TextManager.o"
 	@echo "... Window/Text/TextManager.i"
 	@echo "... Window/Text/TextManager.s"
+	@echo "... Window/UI/Button/Button.o"
+	@echo "... Window/UI/Button/Button.i"
+	@echo "... Window/UI/Button/Button.s"
+	@echo "... Window/UI/UIElement.o"
+	@echo "... Window/UI/UIElement.i"
+	@echo "... Window/UI/UIElement.s"
 	@echo "... Window/Window.o"
 	@echo "... Window/Window.i"
 	@echo "... Window/Window.s"

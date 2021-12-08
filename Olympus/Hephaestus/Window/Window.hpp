@@ -28,7 +28,7 @@
 #include "./Sprite/PhysicsSprite/PhysicsSprite.hpp"
 #include "./Controls/ControlManager.hpp"
 #include "./Camera/Camera.hpp"
-#include "Text/TextManager.hpp"
+#include "./Text/TextManager.hpp"
 
 class Window {
 private:
@@ -82,6 +82,9 @@ private:
     /// GLFW Window resize callback. Used to update the internal window size tracking.
     static void windowCallback(GLFWwindow* window, int width, int height);
 
+    /// GLFW Mouse button callback
+    static void mouseButtonCallback(GLFWwindow* window, int button, int action, int mods);
+
     /*
      * Static Camera Callbacks
      */
@@ -124,7 +127,11 @@ public:
     void addCamera(Camera *camera);
 
     void addText(Text* text);
+
     void loadFont(std::string fontPath);
+
+    //// Get the current mouse position
+    glm::vec2 getMousePosition();
 
     /*
      * Collision Checking

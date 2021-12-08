@@ -73,3 +73,7 @@ void Hephaestus::addText(Text* text) {
 void Hephaestus::loadFont(std::string fontPath) {
     this->window.loadFont(fontPath);
 }
+
+glm::vec2 Hephaestus::getMousePosition() {
+    return this->window.getMousePosition();
+}

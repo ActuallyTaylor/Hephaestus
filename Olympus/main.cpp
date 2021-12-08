@@ -67,7 +67,13 @@ void render() {
     spriteCountObject.text = spriteText;
 }
 
+void clickButton() {
+    std::cout << "Position: " << glm::to_string(engine.getMousePosition()) << std::endl;
+}
+
+
 int main() {
+    engine.addKeybind(GLFW_MOUSE_BUTTON_LEFT, GLFW_PRESS, clickButton);
     engine.loadFont("./fonts/SFNSRounded.ttf");
 
     engine.addText(&spriteCountObject);

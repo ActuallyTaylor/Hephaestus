@@ -52,8 +52,8 @@ void Collision::perform(double deltaTime) {
 
         glm::vec3 vf2 = v2 - ((2 * m1 )/(m1 + m2)) * (dot / magnitude) * (delt);
 
-        pOne->setPosition(pOne->getPosition() - positionOffset);
-        pTwo->setPosition(pTwo->getPosition() + positionOffset);
+        pOne->position -= positionOffset;
+        pTwo->position += positionOffset;
 
         pOne->setVelocity(vf1);
         pTwo->setVelocity(vf2);

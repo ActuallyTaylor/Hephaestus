@@ -107,8 +107,10 @@ void TextManager::draw() {
 void TextManager::addText(Text *text) {
     std::map<char, Text::Character> font = fonts[text->fontPath];
     if (fonts.find(text->fontPath) != fonts.end()) {
-        std::cout << "Unable to find font" << text->fontPath << std::endl;
+        text->assign(&textShader, &VBO, &VAO, &projection, font);
+        textObjects.push_back(text);
+    } else {
+        loadFont(text->fontPath);
+//        std::cout << "Unable to find font" << text->fontPath << ". Please Register the font, or double check your path" << std::endl;
     }
-    text->assign(&textShader, &VBO, &VAO, &projection, font);
-    textObjects.push_back(text);
 }

@@ -55,6 +55,7 @@ Window::Window(std::string sentWindowName, int sentWidth, int sentHeight) {
     // Set GLFW key callbacks
     glfwSetKeyCallback(window, keyCallback);
     glfwSetWindowSizeCallback(window, windowCallback);
+    glfwSetMouseButtonCallback(window, mouseButtonCallback);
 
     textManager = TextManager();
     textManager.setup();
@@ -168,6 +169,7 @@ void Window::keyCallback(GLFWwindow *window, int key, int scancode, int action, 
     } else {
         self->controlManager.executeKeybinds(key, action);
     }
+
 }
 
 void Window::windowCallback(GLFWwindow *window, int width, int height) {
@@ -179,6 +181,10 @@ void Window::windowCallback(GLFWwindow *window, int width, int height) {
     for (Sprite *sprite: self->sprites) {
         sprite->updateScreenDimensions(width, height);
     }
+}
+
+void Window::mouseButtonCallback(GLFWwindow* window, int button, int action, int mods) {
+    self->controlManager.executeKeybinds(button, action);
 }
 
 void Window::addSprite(Sprite *sprite) {
@@ -201,7 +207,6 @@ void Window::cameraRotationChanged() {
 }
 
 void Window::cameraTargetChanged() {
-
 
 }
 
@@ -295,4 +300,10 @@ void Window::addText(Text* text) {
 
 void Window::loadFont(std::string fontPath) {
     textManager.loadFont(fontPath);
+}
+
+glm::vec2 Window::getMousePosition() {
+    double xpos, ypos;
+    glfwGetCursorPos(window, &xpos, &ypos);
+    return { xpos, ypos };
 }

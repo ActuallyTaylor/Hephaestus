@@ -32,9 +32,12 @@ public:
 
     Sprite(Shader shader, std::string texturePath, glm::vec3 position = glm::vec3(300.0f, 300.0f, 0.0f), glm::vec2 size = glm::vec2(50.0f, 50.0f), glm::vec3 rotation = glm::vec3(0.0f, 0.0f, 0.0f));
     ~Sprite();
+
     /*
      * Sprite Position
      */
+    glm::vec3 position { };
+
     glm::vec3 getPosition();
     void setPosition(glm::vec3 position);
 
@@ -53,6 +56,8 @@ public:
     /*
      * Sprite Rotation
      */
+    glm::vec2 size { };
+
     glm::vec3 getRotation();
     void setRotation(glm::vec3 rotation);
 
@@ -71,6 +76,8 @@ public:
     /*
      * Sprite Size
      */
+    glm::vec3 rotation { };
+
     glm::vec2 getSize();
     void setSize(glm::vec2 scale);
 
@@ -109,9 +116,6 @@ public:
     void updateCamera(Camera* newCamera);
 
 protected:
-    glm::vec3 position { };
-    glm::vec2 size { };
-    glm::vec3 rotation { };
     glm::mat4 projection { };
     glm::vec2 screenSize { };
 
