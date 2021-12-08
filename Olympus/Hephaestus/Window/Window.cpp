@@ -156,6 +156,11 @@ void Window::_render() {
 
     textManager.draw();
 
+    for (UIElement *element: uielements) {
+        printf("Drawing Element");
+        element->draw();
+    }
+
     if (render != nullptr) {
         render();
     }
@@ -196,6 +201,18 @@ void Window::addSprite(Sprite *sprite) {
 
 void Window::addKeybind(Keybind keybind) {
     controlManager.addKeybind(keybind);
+}
+
+void Window::addText(Text* text) {
+    textManager.addText(text);
+}
+
+void Window::addUIElement(UIElement* element) {
+    uielements.push_back(element);
+}
+
+void Window::loadFont(std::string fontPath) {
+    textManager.loadFont(fontPath);
 }
 
 void Window::cameraPositionChanged() {
@@ -292,14 +309,6 @@ Collision Window::checkAABBSphereCollision(Sprite* aabb, Sprite* sphere) {
     difference = closest - center;
 
     return Collision(glm::length(difference) < sphere->getRadius(), aabb, sphere, {difference, 0.0}, {difference, 0.0});
-}
-
-void Window::addText(Text* text) {
-    textManager.addText(text);
-}
-
-void Window::loadFont(std::string fontPath) {
-    textManager.loadFont(fontPath);
 }
 
 glm::vec2 Window::getMousePosition() {

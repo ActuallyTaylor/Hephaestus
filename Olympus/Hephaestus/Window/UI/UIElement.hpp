@@ -27,8 +27,10 @@
 typedef void (*Function)();
 
 class UIElement: public RenderObject {
-    Function onClick;
-    Function onHover;
+    using RenderObject::RenderObject;
+    void updateCamera(Camera* newCamera) override;
+
+    Camera camera = Camera();
 };
 
 

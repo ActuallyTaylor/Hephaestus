@@ -16,6 +16,8 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o: \
  ../Hephaestus/Window/Sprite/Sprite.hpp \
  ../Hephaestus/Window/Text/Text.hpp \
  ../Hephaestus/Window/Text/TextManager.hpp \
+ ../Hephaestus/Window/UI/Button/Button.hpp \
+ ../Hephaestus/Window/UI/UIElement.hpp \
  ../Hephaestus/Window/Window.hpp \
  /usr/local/include/GL/glew.h \
  /usr/local/include/GLFW/glfw3.h \
@@ -2020,6 +2022,8 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Window/Window.cpp.o: \
  ../Hephaestus/Window/Sprite/Sprite.hpp \
  ../Hephaestus/Window/Text/Text.hpp \
  ../Hephaestus/Window/Text/TextManager.hpp \
+ ../Hephaestus/Window/UI/Button/Button.hpp \
+ ../Hephaestus/Window/UI/UIElement.hpp \
  ../Hephaestus/Window/Window.cpp \
  ../Hephaestus/Window/Window.hpp \
  /usr/local/include/GL/glew.h \

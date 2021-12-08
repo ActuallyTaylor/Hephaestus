@@ -97,10 +97,6 @@ void Sprite::setHeight(GLfloat height) {
     dimensions.y = height;
 }
 
-void Sprite::updateCamera(Camera* newCamera) {
-    camera = newCamera;
-}
-
 void Sprite::setShape(Sprite::Shape shape) {
     spriteShape = shape;
 }

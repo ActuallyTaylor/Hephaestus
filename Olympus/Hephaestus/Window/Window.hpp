@@ -14,6 +14,7 @@
 
 #ifndef OLYMPUS_WINDOW_HPP
 #define OLYMPUS_WINDOW_HPP
+
 // OpenGL
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
@@ -29,6 +30,7 @@
 #include "./Controls/ControlManager.hpp"
 #include "./Camera/Camera.hpp"
 #include "./Text/TextManager.hpp"
+#include "./UI/Button/Button.hpp"
 
 class Window {
 private:
@@ -128,6 +130,8 @@ public:
 
     void addText(Text* text);
 
+    void addUIElement(UIElement* element);
+
     void loadFont(std::string fontPath);
 
     //// Get the current mouse position
@@ -146,6 +150,8 @@ public:
 
     /// An array of all of the sprites that managed by the window.
     vector<Sprite*> sprites;
+
+    vector<UIElement*> uielements;
 
     vector<Camera*> cameras;
 

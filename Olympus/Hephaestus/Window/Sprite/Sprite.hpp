@@ -100,7 +100,6 @@ public:
 
     // MARK: Drawing Functions
     virtual void move(double deltaTime);
-    void updateCamera(Camera* newCamera);
 protected:
     Shader shader;
     GLuint VBO, VAO, EBO, textureAtlas;

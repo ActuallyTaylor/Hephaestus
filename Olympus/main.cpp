@@ -1,7 +1,6 @@
 #include <iostream>
 #include <thread>
 #include "Hephaestus/Hephaestus.hpp"
-#include "Hephaestus/Window/Text/TextManager.hpp"
 
 Hephaestus engine = Hephaestus("Hephaestus Engine");
 
@@ -56,6 +55,7 @@ void update() {
 
 Text fpsTextObject = { "Hello World", "./fonts/SFNSRounded.ttf", {10.0f, 695.0f }, { 0.5, 0.8f, 0.2f, 1.0f } };
 Text spriteCountObject = { "Hello World", "./fonts/SFNSRounded.ttf", {10.0f, 670.0f }, { 0.5, 0.8f, 0.2f, 1.0f } };
+Button* button = new Button(shader, "./Images/wall.png", glm::vec3(720/2,710, 0.0), glm::vec2(100,20));
 
 void render() {
     int fps = engine.getFPS();

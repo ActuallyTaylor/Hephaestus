@@ -15,8 +15,10 @@
 #include "../UIElement.hpp"
 
 class Button: public UIElement {
+    using UIElement::UIElement;
 
+    Function onClick;
+    Function onHover;
 };
-
 
 #endif //OLYMPUS_BUTTON_HPP

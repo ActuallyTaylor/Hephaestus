@@ -10,4 +10,6 @@
 
 #include "UIElement.hpp"
 
+void UIElement::updateCamera(Camera* newCamera) {
 
+}

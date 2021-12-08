@@ -27,6 +27,7 @@ typedef void (*Function)();
 // Custom Classes
 #include "Window/Window.hpp"
 #include "Shader/Shader.hpp"
+#include "Window/UI/Button/Button.hpp"
 
 class Hephaestus {
 private:
@@ -92,6 +93,8 @@ public:
 
     void addText(Text* text);
     void loadFont(std::string fontPath);
+
+    void addUIElement(UIElement* element);
 
     /// Returns the current active window frames per second.
     int getFPS();

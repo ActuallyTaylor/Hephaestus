@@ -55,6 +55,7 @@ public:
     void draw();
     void setTexture(std::string texturePath);
     void updateScreenDimensions(int width, int height);
+    virtual void updateCamera(Camera* newCamera);
 };
 
 
