@@ -5,7 +5,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/Hephaestus.dir/Window/Collision/Collision.cpp.o"
   "CMakeFiles/Hephaestus.dir/Window/Controls/ControlManager.cpp.o"
   "CMakeFiles/Hephaestus.dir/Window/Controls/Keybind/Keybind.cpp.o"
-  "CMakeFiles/Hephaestus.dir/Window/Renderer/RenderObject.cpp.o"
   "CMakeFiles/Hephaestus.dir/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp.o"
   "CMakeFiles/Hephaestus.dir/Window/Sprite/Sprite.cpp.o"
   "CMakeFiles/Hephaestus.dir/Window/Text/Text.cpp.o"

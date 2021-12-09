@@ -14,6 +14,8 @@ CMakeFiles/Olympus.dir/main.cpp.o
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/Sprite.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Text/Text.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Text/TextManager.hpp
+ /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/UI/Button/Button.hpp
+ /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/UI/UIElement.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Window.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/main.cpp
  /usr/local/include/GL/glew.h

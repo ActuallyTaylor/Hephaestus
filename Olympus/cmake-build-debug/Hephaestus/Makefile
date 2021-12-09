@@ -274,30 +274,6 @@ Window/Controls/Keybind/Keybind.cpp.s:
 	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/Keybind/Keybind.cpp.s
 .PHONY : Window/Controls/Keybind/Keybind.cpp.s
 
-Window/Renderer/RenderObject.o: Window/Renderer/RenderObject.cpp.o
-.PHONY : Window/Renderer/RenderObject.o
-
-# target to build an object file
-Window/Renderer/RenderObject.cpp.o:
-	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Renderer/RenderObject.cpp.o
-.PHONY : Window/Renderer/RenderObject.cpp.o
-
-Window/Renderer/RenderObject.i: Window/Renderer/RenderObject.cpp.i
-.PHONY : Window/Renderer/RenderObject.i
-
-# target to preprocess a source file
-Window/Renderer/RenderObject.cpp.i:
-	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Renderer/RenderObject.cpp.i
-.PHONY : Window/Renderer/RenderObject.cpp.i
-
-Window/Renderer/RenderObject.s: Window/Renderer/RenderObject.cpp.s
-.PHONY : Window/Renderer/RenderObject.s
-
-# target to generate assembly for a file
-Window/Renderer/RenderObject.cpp.s:
-	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Window/Renderer/RenderObject.cpp.s
-.PHONY : Window/Renderer/RenderObject.cpp.s
-
 Window/Sprite/PhysicsSprite/PhysicsSprite.o: Window/Sprite/PhysicsSprite/PhysicsSprite.cpp.o
 .PHONY : Window/Sprite/PhysicsSprite/PhysicsSprite.o
 
@@ -493,9 +469,6 @@ help:
 	@echo "... Window/Controls/Keybind/Keybind.o"
 	@echo "... Window/Controls/Keybind/Keybind.i"
 	@echo "... Window/Controls/Keybind/Keybind.s"
-	@echo "... Window/Renderer/RenderObject.o"
-	@echo "... Window/Renderer/RenderObject.i"
-	@echo "... Window/Renderer/RenderObject.s"
 	@echo "... Window/Sprite/PhysicsSprite/PhysicsSprite.o"
 	@echo "... Window/Sprite/PhysicsSprite/PhysicsSprite.i"
 	@echo "... Window/Sprite/PhysicsSprite/PhysicsSprite.s"

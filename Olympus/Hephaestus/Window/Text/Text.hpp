@@ -35,6 +35,7 @@ public:
     std::string fontPath { };
     glm::vec2 position { 0.0, 0.0 };
     glm::vec4 color { 0.0, 0.0, 0.0, 0.0 };
+
     std::map<char, Character> characters;
     float scale = 1.0f;
 

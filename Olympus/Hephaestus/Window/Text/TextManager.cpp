@@ -25,7 +25,7 @@ void TextManager::setup() {
     glBindVertexArray(0);
     glMatrixMode (GL_PROJECTION);
 
-    projection = glm::ortho(0.0f, 720.0f, 0.0f, 720.0f, -1000.0f, 1000.0f);
+    projection = glm::ortho(0.0f, screenSize.x, 0.0f, screenSize.y, -1000.0f, 1000.0f);
     textShader.setMatrix4("projection", projection);
     textShader.setup();
 }
@@ -43,7 +43,7 @@ int TextManager::loadFont(std::string filePath) {
         return -1;
     }
 
-    // set size to load glyphs as
+    // set dimensions to load glyphs as
     FT_Set_Pixel_Sizes(face, 0, 24);
 
     // disable byte-alignment restriction
@@ -113,4 +113,9 @@ void TextManager::addText(Text *text) {
         loadFont(text->fontPath);
 //        std::cout << "Unable to find font" << text->fontPath << ". Please Register the font, or double check your path" << std::endl;
     }
+}
+
+void TextManager::updateScreenDimensions(int width, int height) {
+    screenSize = glm::vec2(width, height);
+    projection = glm::ortho(0.0f, screenSize.x, 0.0f, screenSize.y, -1000.0f, 1000.0f);
 }

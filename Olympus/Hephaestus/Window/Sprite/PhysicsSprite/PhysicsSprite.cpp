@@ -27,17 +27,17 @@ void PhysicsSprite::move(double deltaTime) {
     if (position.x  < 0.0f) {
         velocity.x = (-velocity.x * friction);
         position.x = 0;
-    } else if (position.x + size.x > screenSize.x) {
+    } else if (position.x + dimensions.x > screenSize.x) {
         velocity.x = (-velocity.x * friction);
-        position.x = screenSize.x - size.x;
+        position.x = screenSize.x - dimensions.x;
     }
 
     if (position.y < 0.0f) {
         velocity.y = (-velocity.y * friction);
         position.y = 0;
-    } else if (position.y + size.y > screenSize.y) {
+    } else if (position.y + dimensions.y > screenSize.y) {
         velocity.y = (-velocity.y * friction);
-        position.y = screenSize.y - size.y;
+        position.y = screenSize.y - dimensions.y;
     }
 }
 

@@ -29,6 +29,7 @@
 #include "./Controls/ControlManager.hpp"
 #include "./Camera/Camera.hpp"
 #include "./Text/TextManager.hpp"
+#include "./UI/UIElement.hpp"
 
 class Window {
 private:
@@ -53,6 +54,9 @@ private:
 
     /// The current camera
     Camera* currentCamera{};
+
+    Shader defaultSpriteShader = Shader("./Hephaestus/Shaders/shader.vert", "./Hephaestus/Shaders/shader.frag");
+    Shader defaultUIShader = Shader("./Hephaestus/Shaders/shader.vert", "./Hephaestus/Shaders/shader.frag");
 
     /*
      * Runtime Functions
@@ -79,7 +83,7 @@ private:
     /// \param mods
     static void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
 
-    /// GLFW Window resize callback. Used to update the internal window size tracking.
+    /// GLFW Window resize callback. Used to update the internal window dimensions tracking.
     static void windowCallback(GLFWwindow* window, int width, int height);
 
     /// GLFW Mouse button callback
@@ -94,6 +98,14 @@ private:
     static void cameraRotationChanged();
     /// Gets called when the cameras target changes
     static void cameraTargetChanged();
+
+    /*
+     * Class Functions
+     */
+    Collision checkCollision(Sprite *one, Sprite *two);
+    Collision checkAABBSphereCollision(Sprite* aabb, Sprite* sphere);
+
+    void checkUIClicks();
 public:
     /*
      * Initializers
@@ -130,6 +142,8 @@ public:
 
     void loadFont(std::string fontPath);
 
+    void addUIElement(UIElement *element);
+
     //// Get the current mouse position
     glm::vec2 getMousePosition();
 
@@ -149,8 +163,7 @@ public:
 
     vector<Camera*> cameras;
 
-    Collision checkCollision(Sprite *one, Sprite *two);
-    Collision checkAABBSphereCollision(Sprite* aabb, Sprite* sphere);
+    vector<UIElement*> uiElements;
 
     int framesPerSecond { };
 };

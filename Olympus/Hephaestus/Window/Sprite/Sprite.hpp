@@ -5,7 +5,7 @@
     
     =================
     Sprite Header Class
-    Represents a sprite that is displayed on the screen. Sprites have their own shader, position, size, rotation and texture.
+    Represents a sprite that is displayed on the screen. Sprites have their own shader, position, dimensions, rotation and texture.
     These all effect how the sprite is displayed.
     =================
 */
@@ -30,7 +30,7 @@ public:
         square
     };
 
-    Sprite(Shader shader, std::string texturePath, glm::vec3 position = glm::vec3(300.0f, 300.0f, 0.0f), glm::vec2 size = glm::vec2(50.0f, 50.0f), glm::vec3 rotation = glm::vec3(0.0f, 0.0f, 0.0f));
+    Sprite(std::string texturePath, glm::vec3 position = {300.0f, 300.0f, 0.0f}, glm::vec2 dimensions = {50.0f, 50.0f}, glm::vec3 rotation = {0.0f, 0.0f, 0.0f});
     ~Sprite();
 
     /*
@@ -56,7 +56,7 @@ public:
     /*
      * Sprite Rotation
      */
-    glm::vec2 size { };
+    glm::vec3 rotation { };
 
     glm::vec3 getRotation();
     void setRotation(glm::vec3 rotation);
@@ -76,10 +76,10 @@ public:
     /*
      * Sprite Size
      */
-    glm::vec3 rotation { };
+    glm::vec2 dimensions { };
 
-    glm::vec2 getSize();
-    void setSize(glm::vec2 scale);
+    glm::vec2 getDimensions();
+    void setSize(glm::vec2 dimension);
 
     /// Get & Set the width / X coordinate
     float getWidth();
@@ -99,6 +99,11 @@ public:
     virtual Shape getShape();
 
     /*
+     * Sprite Tint Color
+     */
+    glm::vec4 tintColor { 1.0, 1.0, 1.0, 1.0};
+
+    /*
      * Register Sprite
      */
     void registerSprite();
@@ -115,16 +120,16 @@ public:
 
     void updateCamera(Camera* newCamera);
 
+    Shader shader;
 protected:
     glm::mat4 projection { };
     glm::vec2 screenSize { };
 
     Camera* camera;
 
-    void createTexture(std::string texturePath);
+    void createTexture(const std::string& texturePath);
     void createVirtualBufferObject();
 
-    Shader shader;
     GLuint VBO, VAO, EBO, textureAtlas;
 
     bool hasCollision = true;

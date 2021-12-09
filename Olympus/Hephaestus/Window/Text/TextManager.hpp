@@ -26,9 +26,10 @@
 class TextManager {
     GLuint VBO;
     GLuint VAO;
-    Shader textShader = Shader("./Hephaestus/Shaders/font.vert", "./Hephaestus/Shaders/font.frag");
+    Shader textShader = Shader("./Hephaestus/Shaders/Font.vert", "./Hephaestus/Shaders/Font.frag");
 
     glm::mat4 projection;
+    glm::vec2 screenSize { 0.0, 0.0 };
 
     std::map<std::string, std::map<char, Text::Character>> fonts;
 
@@ -40,6 +41,7 @@ public:
     int loadFont(std::string filePath);
     void addText(Text *text);
     void draw();
+    void updateScreenDimensions(int width, int height);
 };
 
 #endif //OLYMPUS_TEXTMANAGER_HPP

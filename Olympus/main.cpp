@@ -4,8 +4,6 @@
 #include "Hephaestus/Window/Text/TextManager.hpp"
 
 Hephaestus engine = Hephaestus("Hephaestus Engine");
-
-Shader shader = engine.createShader("./Shaders/Common/shader.vert", "./Shaders/Common/shader.frag");
 Camera mainCamera = Camera();
 
 vector<PhysicsSprite> sprites { };
@@ -40,7 +38,7 @@ void tick() {
     if(numb % 5 == 0 && shouldSpawn) {
         int randDiff = rand() % 10;
         int size = 10;//(rand() % 25) + 5;
-        auto* sprite = new PhysicsSprite(shader, "./Images/circle.png", glm::vec3(720/2 - randDiff,710, 0.0), glm::vec2(size,size));
+        auto* sprite = new PhysicsSprite("./Images/circle.png", glm::vec3(720/2 - randDiff,710, 0.0), glm::vec2(size,size));
         sprite->setMass(1);
 
         if (!sprite->getRegistered()) {
@@ -73,6 +71,10 @@ void clickButton() {
 
 
 int main() {
+    Button startButton = Button("./Images/wall.jpg", glm::vec3(720/2,720/2, 0.0), glm::vec2(100,100));
+    startButton.setOnClick(stopSpawning);
+    engine.addUIElement(&startButton);
+
     engine.addKeybind(GLFW_MOUSE_BUTTON_LEFT, GLFW_PRESS, clickButton);
     engine.loadFont("./fonts/SFNSRounded.ttf");
 

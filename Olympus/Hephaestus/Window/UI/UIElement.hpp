@@ -22,13 +22,32 @@
 
 // Hephaestus
 #include "../../Shader/Shader.hpp"
-#include "../Renderer/RenderObject.hpp"
 
-typedef void (*Function)();
+class UIElement {
+public:
+    UIElement(std::string _texturePath, glm::vec3 _position = {0.0f, 0.0f, 0.0f}, glm::vec2 _dimensions = {100.0f, 100.0f}, glm::vec3 _rotation = {0.0f, 0.0f, 0.0f});
 
-class UIElement: public RenderObject {
-    Function onClick;
-    Function onHover;
+    glm::vec3 position { 0.0, 0.0, 0.0 };
+    glm::vec2 dimensions { 0.0, 0.0 };
+    glm::vec3 rotation { 0.0, 0.0, 0.0 };
+
+    glm::vec4 tintColor { 0.0, 0.0, 0.0, 1.0 };
+
+    Shader shader;
+
+    void draw();
+    void updateScreenDimensions(int width, int height);
+    void setTexture(std::string texturePath);
+
+    virtual void primaryFunction();
+protected:
+    glm::mat4 projection { };
+    glm::vec2 screenSize { };
+
+    GLuint VBO, VAO, EBO, textureAtlas;
+
+    void createTexture(const std::string& texturePath);
+    void createVirtualBufferObject();
 };
 
 

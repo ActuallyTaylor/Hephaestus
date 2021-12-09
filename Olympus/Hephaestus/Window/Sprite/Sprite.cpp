@@ -12,14 +12,14 @@
 
 #include "Sprite.hpp"
 
-Sprite::Sprite(Shader inShader, std::string texturePath, glm::vec3 inPosition, glm::vec2 inSize, glm::vec3 inRotation) {
-    shader = inShader;
-    position = inPosition;
-    size = inSize;
-    rotation = inRotation;
+Sprite::Sprite(std::string _texturePath, glm::vec3 _position, glm::vec2 _dimensions, glm::vec3 _rotation) {
+//    shader = _shader;
+    position = _position;
+    dimensions = _dimensions;
+    rotation = _rotation;
     projection = glm::ortho(0.0f, screenSize.x, 0.0f, screenSize.y, -1000.0f, 1000.0f);
 
-    createTexture(texturePath);
+    createTexture(_texturePath);
     createVirtualBufferObject();
 }
 
@@ -27,7 +27,7 @@ Sprite::~Sprite() {
     printf("Destroyed Sprite\n");
 }
 
-void Sprite::createTexture(std::string texturePath) {
+void Sprite::createTexture(const std::string& texturePath) {
     /*
      Create Texture
      */
@@ -100,7 +100,7 @@ void Sprite::draw() {
     model = rotate(model, glm::radians(rotation.y), glm::vec3(0.0f, 1.0f, 0.0f));
     model = rotate(model, glm::radians(rotation.z), glm::vec3(0.0f, 0.0f, 1.0f));
 
-    model = scale(model, glm::vec3(size, 1.0f));
+    model = scale(model, glm::vec3(dimensions, 1.0f));
     model = glm::translate(model, glm::vec3(0.5f, 0.5f, 0.0f));
 
     glm::mat4 view = camera->getView();
@@ -108,6 +108,7 @@ void Sprite::draw() {
     shader.setMatrix4("model", model);
     shader.setMatrix4("view", view);
     shader.setMatrix4("projection", projection);
+//    textShader->setVector3f("tintColor", tintColor);
 
     glBindVertexArray(VAO);
 
@@ -116,7 +117,7 @@ void Sprite::draw() {
 }
 
 void Sprite::setTexture(std::string texturePath) {
-    createTexture(texturePath);
+    createTexture(std::move(texturePath));
 }
 
 void Sprite::updateScreenDimensions(int width, int height) {
@@ -189,28 +190,28 @@ void Sprite::setYaw(GLfloat yaw) {
     rotation.z = yaw;
 }
 
-glm::vec2 Sprite::getSize() {
-    return size;
+glm::vec2 Sprite::getDimensions() {
+    return dimensions;
 }
 
-void Sprite::setSize(glm::vec2 inSize) {
-    size = inSize;
+void Sprite::setSize(glm::vec2 dimension) {
+    dimensions = dimension;
 }
 
 float Sprite::getWidth() {
-    return size.x;
+    return dimensions.x;
 }
 
 void Sprite::setWidth(GLfloat width) {
-    size.x = width;
+    dimensions.x = width;
 }
 
 float Sprite::getHeight() {
-    return size.y;
+    return dimensions.y;
 }
 
 void Sprite::setHeight(GLfloat height) {
-    size.y = height;
+    dimensions.y = height;
 }
 
 void Sprite::updateCamera(Camera* newCamera) {
@@ -230,7 +231,7 @@ void Sprite::move(double deltaTime) {
 }
 
 float Sprite::getRadius() {
-    return size.x / 2;
+    return dimensions.x / 2;
 }
 
 void Sprite::registerSprite() {

@@ -59,6 +59,9 @@ Window::Window(std::string sentWindowName, int sentWidth, int sentHeight) {
 
     textManager = TextManager();
     textManager.setup();
+
+    defaultSpriteShader.setup();
+    defaultUIShader.setup();
 }
 
 void Window::windowLoop() {
@@ -76,6 +79,10 @@ void Window::windowLoop() {
 //    glfwMakeContextCurrent(window);
 //    glfwSwapInterval(0);
 
+    textManager.updateScreenDimensions(width, height);
+    for(UIElement *element: uiElements) {
+        element->updateScreenDimensions(width, height);
+    }
     Text renderingText = Text("", "./fonts/SFNSRounded.ttf", glm::vec2(10, 645), glm::vec4(1.0,1.0,1.0,1.0));
     textManager.addText(&renderingText);
 
@@ -156,6 +163,10 @@ void Window::_render() {
 
     textManager.draw();
 
+    for(UIElement *element: uiElements) {
+        element->draw();
+    }
+
     if (render != nullptr) {
         render();
     }
@@ -181,9 +192,17 @@ void Window::windowCallback(GLFWwindow *window, int width, int height) {
     for (Sprite *sprite: self->sprites) {
         sprite->updateScreenDimensions(width, height);
     }
+    self->textManager.updateScreenDimensions(width, height);
+
+    for (UIElement *element: self->uiElements) {
+        element->updateScreenDimensions(width, height);
+    }
 }
 
 void Window::mouseButtonCallback(GLFWwindow* window, int button, int action, int mods) {
+    if(button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS) {
+        self->checkUIClicks();
+    }
     self->controlManager.executeKeybinds(button, action);
 }
 
@@ -191,6 +210,7 @@ void Window::addSprite(Sprite *sprite) {
     sprite->updateScreenDimensions(width, height);
     sprite->updateCamera(currentCamera);
     sprite->registerSprite();
+    sprite->shader = defaultSpriteShader;
     sprites.push_back(sprite);
 }
 
@@ -220,6 +240,11 @@ void Window::addCamera(Camera* inCamera) {
     for (Sprite *sprite: sprites) {
         sprite->updateCamera(currentCamera);
     }
+}
+
+void Window::addUIElement(UIElement *element) {
+    element->shader = defaultUIShader;
+    uiElements.push_back(element);
 }
 
 float clamp(float value, float min, float max) {
@@ -305,5 +330,20 @@ void Window::loadFont(std::string fontPath) {
 glm::vec2 Window::getMousePosition() {
     double xpos, ypos;
     glfwGetCursorPos(window, &xpos, &ypos);
-    return { xpos, ypos };
+    return { xpos, height - ypos };
 }
+
+void Window::checkUIClicks() {
+    glm::vec2 clickPosition = getMousePosition();
+
+    for(UIElement *element: uiElements) {
+        if ((element->position.x + element->dimensions.x >= clickPosition.x && element->position.x <= clickPosition.x) &&
+            (element->position.y + element->dimensions.y >= clickPosition.y && element->position.y <= clickPosition.y)) {
+            element->primaryFunction();
+        }
+    }
+}
+/*
+ one->getX() <= two->getX() + two->getWidth() && one->getX() + one->getWidth() >= two->getX()) &&
+                (one->getY() <= two->getY() + two->getHeight() && one->getY() + one->getHeight() >= two->getY())
+ */

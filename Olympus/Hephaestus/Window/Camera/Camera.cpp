@@ -60,7 +60,7 @@ void Camera::setUpdateTargetCallback(Function callback) {
 
 glm::mat4 Camera::getView() {
     if(isUICamera) {
-        return glm::ortho(0.0f, 720.0f, 0.0f, 720.0f, -1000.0f, 1000.0f);
+        return glm::mat4(1.0f);
     }
     glm::mat4 view = glm::mat4(1.0f);
     view = glm::translate(view, position);
