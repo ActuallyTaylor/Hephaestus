@@ -38,6 +38,7 @@ public:
 
     std::map<char, Character> characters;
     float scale = 1.0f;
+    bool registered = false;
 
     Text(std::string text, std::string fontPath, glm::vec2 position, glm::vec4 color);
 

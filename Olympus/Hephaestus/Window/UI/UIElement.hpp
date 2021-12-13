@@ -22,10 +22,12 @@
 
 // Hephaestus
 #include "../../Shader/Shader.hpp"
+#include "../Text/TextManager.hpp"
 
 class UIElement {
 public:
     UIElement(std::string _texturePath, glm::vec3 _position = {0.0f, 0.0f, 0.0f}, glm::vec2 _dimensions = {100.0f, 100.0f}, glm::vec3 _rotation = {0.0f, 0.0f, 0.0f});
+
 
     glm::vec3 position { 0.0, 0.0, 0.0 };
     glm::vec2 dimensions { 0.0, 0.0 };
@@ -33,13 +35,19 @@ public:
 
     glm::vec4 tintColor { 0.0, 0.0, 0.0, 1.0 };
 
+    bool isClicked = false;
+
     Shader shader;
 
     void draw();
     void updateScreenDimensions(int width, int height);
     void setTexture(std::string texturePath);
+    void setTextManager(TextManager *_textManager);
 
     virtual void primaryFunction();
+
+    TextManager *textManager;
+    virtual void refresh();
 protected:
     glm::mat4 projection { };
     glm::vec2 screenSize { };

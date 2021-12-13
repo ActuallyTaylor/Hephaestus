@@ -21,10 +21,16 @@ public:
     ControlManager();
 
     std::vector<Keybind> keybindings;
+    std::vector<Keybind> dragBindings;
+
+    bool leftDown = false;
+    bool rightDown = false;
 
     void addKeybind(Keybind keybind);
+    void addDrag(Keybind keybind);
 
     void executeKeybinds(int keycode, int action);
+    void executeDragging();
 };
 
 

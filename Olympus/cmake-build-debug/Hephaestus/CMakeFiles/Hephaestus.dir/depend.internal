@@ -886,6 +886,8 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/ControlManager.cpp.o
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/ControlManager.cpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/ControlManager.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/Keybind/Keybind.hpp
+ /usr/local/include/GL/glew.h
+ /usr/local/include/GLFW/glfw3.h
 Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/Keybind/Keybind.cpp.o
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/Keybind/Keybind.cpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/Keybind/Keybind.hpp
@@ -1332,13 +1334,17 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Window/Sprite/Sprite.cpp.o
 Hephaestus/CMakeFiles/Hephaestus.dir/Window/Text/Text.cpp.o
 Hephaestus/CMakeFiles/Hephaestus.dir/Window/Text/TextManager.cpp.o
 Hephaestus/CMakeFiles/Hephaestus.dir/Window/UI/Button/Button.cpp.o
+ /Library/Frameworks/Mono.framework/Headers/ft2build.h
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/stb_image.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Shader/Shader.hpp
+ /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Text/Text.hpp
+ /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Text/TextManager.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/UI/Button/Button.cpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/UI/Button/Button.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/UI/UIElement.hpp
  /usr/local/include/GL/glew.h
  /usr/local/include/GLFW/glfw3.h
+ /usr/local/include/freetype2/freetype/config/ftheader.h
  /usr/local/include/glm/common.hpp
  /usr/local/include/glm/detail/_fixes.hpp
  /usr/local/include/glm/detail/_swizzle.hpp
@@ -1547,12 +1553,16 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Window/UI/Button/Button.cpp.o
  /usr/local/include/glm/vec4.hpp
  /usr/local/include/glm/vector_relational.hpp
 Hephaestus/CMakeFiles/Hephaestus.dir/Window/UI/UIElement.cpp.o
+ /Library/Frameworks/Mono.framework/Headers/ft2build.h
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/stb_image.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Shader/Shader.hpp
+ /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Text/Text.hpp
+ /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Text/TextManager.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/UI/UIElement.cpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/UI/UIElement.hpp
  /usr/local/include/GL/glew.h
  /usr/local/include/GLFW/glfw3.h
+ /usr/local/include/freetype2/freetype/config/ftheader.h
  /usr/local/include/glm/common.hpp
  /usr/local/include/glm/detail/_fixes.hpp
  /usr/local/include/glm/detail/_swizzle.hpp

@@ -6,15 +6,18 @@
 Hephaestus engine = Hephaestus("Hephaestus Engine");
 Camera mainCamera = Camera();
 
-vector<PhysicsSprite> sprites { };
 bool shouldSpawn = false;
 int numb = 0;
+
+Button startButton = Button("./Images/StartButton.png", glm::vec3(25,520, 0.0), glm::vec2(300,100));
 
 void stopSpawning() {
     if(shouldSpawn) {
         shouldSpawn = false;
+        startButton.setBackgroundColor(glm::vec4(125, 223, 100, 127.5));
     } else {
         shouldSpawn = true;
+        startButton.setBackgroundColor(glm::vec4(235, 96, 98, 127.5));
     }
 }
 
@@ -38,7 +41,7 @@ void tick() {
     if(numb % 5 == 0 && shouldSpawn) {
         int randDiff = rand() % 10;
         int size = 10;//(rand() % 25) + 5;
-        auto* sprite = new PhysicsSprite("./Images/circle.png", glm::vec3(720/2 - randDiff,710, 0.0), glm::vec2(size,size));
+        auto* sprite = new PhysicsSprite("./Images/Smiley.png", glm::vec3(720/2 - randDiff,710, 0.0), glm::vec2(size,size));
         sprite->setMass(1);
 
         if (!sprite->getRegistered()) {
@@ -69,13 +72,26 @@ void clickButton() {
     std::cout << "Position: " << glm::to_string(engine.getMousePosition()) << std::endl;
 }
 
+void spawnOnCursor() {
+    int randDiff = rand() % 10;
+    int size = 10;//(rand() % 25) + 5;
+    glm::vec2 cursorPosition = engine.getMousePosition();
+    auto* sprite = new PhysicsSprite("./Images/Smiley.png", glm::vec3(cursorPosition.x - randDiff,cursorPosition.y, 0.0), glm::vec2(size,size));
+    sprite->setMass(1);
+
+    if (!sprite->getRegistered()) {
+        engine.addSprite(sprite);
+    }
+}
 
 int main() {
-    Button startButton = Button("./Images/wall.jpg", glm::vec3(720/2,720/2, 0.0), glm::vec2(100,100));
+    startButton.setBackgroundColor(glm::vec4(125, 223, 100, 127.5));
     startButton.setOnClick(stopSpawning);
+    startButton.setNormalText("Hello World", "./fonts/SFNSRounded.ttf", { 0.4, 0.3, 0.4, 1.0});
     engine.addUIElement(&startButton);
 
     engine.addKeybind(GLFW_MOUSE_BUTTON_LEFT, GLFW_PRESS, clickButton);
+//    engine.addDrag(GLFW_MOUSE_BUTTON_LEFT, spawnOnCursor);
     engine.loadFont("./fonts/SFNSRounded.ttf");
 
     engine.addText(&spriteCountObject);

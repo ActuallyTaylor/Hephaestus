@@ -142,6 +142,7 @@ void Window::_update() {
     for (Sprite* sprite: sprites) {
         sprite->move(deltaTime);
     }
+    this->controlManager.executeDragging();
     checkCollisions();
 
     if (update != nullptr) {
@@ -200,10 +201,22 @@ void Window::windowCallback(GLFWwindow *window, int width, int height) {
 }
 
 void Window::mouseButtonCallback(GLFWwindow* window, int button, int action, int mods) {
-    if(button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS) {
-        self->checkUIClicks();
+    if(button == GLFW_MOUSE_BUTTON_LEFT) {
+        if(GLFW_PRESS == action) {
+            self->checkUIClicks();
+            self->controlManager.leftDown = true;
+        } else if(GLFW_RELEASE == action) {
+            self->controlManager.leftDown = false;
+        }
+    } else if (button == GLFW_MOUSE_BUTTON_RIGHT) {
+        if(GLFW_PRESS == action) {
+            self->checkUIClicks();
+            self->controlManager.rightDown = true;
+        }
+        else if(GLFW_RELEASE == action) {
+            self->controlManager.rightDown = false;
+        }
     }
-    self->controlManager.executeKeybinds(button, action);
 }
 
 void Window::addSprite(Sprite *sprite) {
@@ -216,6 +229,10 @@ void Window::addSprite(Sprite *sprite) {
 
 void Window::addKeybind(Keybind keybind) {
     controlManager.addKeybind(keybind);
+}
+
+void Window::addDrag(Keybind keybind) {
+    controlManager.addDrag(keybind);
 }
 
 void Window::cameraPositionChanged() {
@@ -244,6 +261,8 @@ void Window::addCamera(Camera* inCamera) {
 
 void Window::addUIElement(UIElement *element) {
     element->shader = defaultUIShader;
+//    element->textManager = &textManager;
+//    element->refresh();
     uiElements.push_back(element);
 }
 
@@ -339,7 +358,10 @@ void Window::checkUIClicks() {
     for(UIElement *element: uiElements) {
         if ((element->position.x + element->dimensions.x >= clickPosition.x && element->position.x <= clickPosition.x) &&
             (element->position.y + element->dimensions.y >= clickPosition.y && element->position.y <= clickPosition.y)) {
+            element->isClicked = true;
             element->primaryFunction();
+        } else {
+            element->isClicked = false;
         }
     }
 }

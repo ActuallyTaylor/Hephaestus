@@ -66,6 +66,8 @@ public:
     /// \param executionFunction A pointer to the void function that will be executed when the key is pressed.
     void addKeybind(int keyCode, int action, Function executionFunction);
 
+    void addDrag(int keyCode, Function executionFunction);
+
     /*
      * Set Hephaestus Callback Functions
      *  - You do not need to set all of these. They are just there if you need them.

@@ -31,6 +31,8 @@ void Sprite::createTexture(const std::string& texturePath) {
     /*
      Create Texture
      */
+    stbi_set_flip_vertically_on_load(true);
+
     glEnable(GL_TEXTURE_2D);
 
     glActiveTexture(GL_TEXTURE0); // activate the texture unit first before binding texture

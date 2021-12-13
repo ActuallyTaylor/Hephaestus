@@ -133,7 +133,8 @@ public:
     /// Adds a keybind to the window's control textManager
     /// \param keybind The keybind that should be added to the control textManager.
     void addKeybind(Keybind keybind);
-
+    void addDrag(Keybind keybind);
+    
     /// Adds a keybind to the window's control textManager
     /// \param keybind The keybind that should be added to the control textManager.
     void addCamera(Camera *camera);

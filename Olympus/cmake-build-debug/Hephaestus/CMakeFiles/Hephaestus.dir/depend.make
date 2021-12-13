@@ -885,7 +885,9 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Window/Collision/Collision.cpp.o: \
 Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/ControlManager.cpp.o: \
  ../Hephaestus/Window/Controls/ControlManager.cpp \
  ../Hephaestus/Window/Controls/ControlManager.hpp \
- ../Hephaestus/Window/Controls/Keybind/Keybind.hpp
+ ../Hephaestus/Window/Controls/Keybind/Keybind.hpp \
+ /usr/local/include/GL/glew.h \
+ /usr/local/include/GLFW/glfw3.h
 Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/Keybind/Keybind.cpp.o: \
  ../Hephaestus/Window/Controls/Keybind/Keybind.cpp \
  ../Hephaestus/Window/Controls/Keybind/Keybind.hpp
@@ -1330,13 +1332,17 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Window/Sprite/Sprite.cpp.o: \
  /usr/local/include/glm/vec4.hpp \
  /usr/local/include/glm/vector_relational.hpp
 Hephaestus/CMakeFiles/Hephaestus.dir/Window/UI/Button/Button.cpp.o: \
+ /Library/Frameworks/Mono.framework/Headers/ft2build.h \
  ../Hephaestus/Library/stb_image.hpp \
  ../Hephaestus/Shader/Shader.hpp \
+ ../Hephaestus/Window/Text/Text.hpp \
+ ../Hephaestus/Window/Text/TextManager.hpp \
  ../Hephaestus/Window/UI/Button/Button.cpp \
  ../Hephaestus/Window/UI/Button/Button.hpp \
  ../Hephaestus/Window/UI/UIElement.hpp \
  /usr/local/include/GL/glew.h \
  /usr/local/include/GLFW/glfw3.h \
+ /usr/local/include/freetype2/freetype/config/ftheader.h \
  /usr/local/include/glm/common.hpp \
  /usr/local/include/glm/detail/_fixes.hpp \
  /usr/local/include/glm/detail/_swizzle.hpp \
@@ -1545,12 +1551,16 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Window/UI/Button/Button.cpp.o: \
  /usr/local/include/glm/vec4.hpp \
  /usr/local/include/glm/vector_relational.hpp
 Hephaestus/CMakeFiles/Hephaestus.dir/Window/UI/UIElement.cpp.o: \
+ /Library/Frameworks/Mono.framework/Headers/ft2build.h \
  ../Hephaestus/Library/stb_image.hpp \
  ../Hephaestus/Shader/Shader.hpp \
+ ../Hephaestus/Window/Text/Text.hpp \
+ ../Hephaestus/Window/Text/TextManager.hpp \
  ../Hephaestus/Window/UI/UIElement.cpp \
  ../Hephaestus/Window/UI/UIElement.hpp \
  /usr/local/include/GL/glew.h \
  /usr/local/include/GLFW/glfw3.h \
+ /usr/local/include/freetype2/freetype/config/ftheader.h \
  /usr/local/include/glm/common.hpp \
  /usr/local/include/glm/detail/_fixes.hpp \
  /usr/local/include/glm/detail/_swizzle.hpp \

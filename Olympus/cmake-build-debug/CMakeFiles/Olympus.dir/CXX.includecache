@@ -165,6 +165,8 @@ Text.hpp
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/UI/Button/Button.hpp
 ../UIElement.hpp
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/UI/UIElement.hpp
+../../Text/TextManager.hpp
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Text/TextManager.hpp
 
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/UI/UIElement.hpp
 string
@@ -181,6 +183,8 @@ glm/gtx/string_cast.hpp
 -
 ../../Shader/Shader.hpp
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Shader/Shader.hpp
+../Text/TextManager.hpp
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Text/TextManager.hpp
 
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Window.hpp
 ../Hephaestus.hpp

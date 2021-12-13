@@ -58,6 +58,11 @@ void Hephaestus::addKeybind(int inKeyCode, int inAction, Function inExecutionFun
     this->window.addKeybind(keybind);
 }
 
+void Hephaestus::addDrag(int keyCode, Function executionFunction) {
+    Keybind keybind = Keybind{keyCode, GLFW_PRESS, executionFunction};
+    this->window.addDrag(keybind);
+}
+
 int Hephaestus::getFPS() {
     return this->window.framesPerSecond;
 }
