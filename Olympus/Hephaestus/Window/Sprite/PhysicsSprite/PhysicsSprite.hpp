@@ -30,7 +30,7 @@ public:
     using Sprite::Sprite;
 
     // Override Functions
-    void move(double deltaTime) override;
+    void move(float deltaTime) override;
     Sprite::Shape getShape() override;
 
     // Getters & Setters
@@ -42,6 +42,7 @@ public:
     void setZVelocity(float z);
 
     void setMass(float inMass);
+    void addForce(glm::vec3 force);
     float getMass();
 };
 

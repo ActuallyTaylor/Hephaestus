@@ -130,6 +130,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Game/Player.cpp">
+			<Option target="Olympus"/>
+		</Unit>
+		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Game/Player.hpp">
+			<Option target="Olympus"/>
+		</Unit>
 		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Hephaestus.cpp">
 			<Option target="Hephaestus"/>
 		</Unit>

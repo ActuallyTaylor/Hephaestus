@@ -17,12 +17,12 @@ Sprite::Shape PhysicsSprite::getShape() {
     return this->spriteShape;
 }
 
-void PhysicsSprite::move(double deltaTime) {
+void PhysicsSprite::move(float deltaTime) {
     if (effectedByGravity) {
         velocity += (mass * gravitationalAcceleration);
     }
 
-    position += (1.0f * float(deltaTime)) * velocity;
+    position += velocity * deltaTime;
 
     if (position.x  < 0.0f) {
         velocity.x = (-velocity.x * friction);
@@ -67,4 +67,8 @@ void PhysicsSprite::setYVelocity(float y) {
 
 void PhysicsSprite::setZVelocity(float z) {
     velocity.z = z;
+}
+
+void PhysicsSprite::addForce(glm::vec3 _velocity) {
+    velocity += _velocity;
 }

@@ -20,7 +20,7 @@ Collision::Collision(bool success, Sprite* one, Sprite* two, glm::vec3 delta, gl
     this->delta = delta;
 }
 
-void Collision::perform(double deltaTime) {
+void Collision::perform(float deltaTime) {
     auto* pOne = dynamic_cast<PhysicsSprite *>(this->one);
     auto* pTwo = dynamic_cast<PhysicsSprite *>(this->two);
     if (pOne != nullptr && pTwo != nullptr) {

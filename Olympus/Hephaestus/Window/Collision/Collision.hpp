@@ -33,7 +33,7 @@ struct Collision {
     glm::vec3 delta{};
     glm::vec3 normal{};
 
-    void perform(double deltaTime);
+    void perform(float deltaTime);
 
     void handleSolidCollision(Sprite* nonPhysicsSprite, Sprite* physicsSprite);
 

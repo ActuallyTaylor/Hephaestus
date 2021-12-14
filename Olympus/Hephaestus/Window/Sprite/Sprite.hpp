@@ -112,7 +112,7 @@ public:
     // MARK: Drawing Functions
     void draw();
 
-    virtual void move(double deltaTime);
+    virtual void move(float deltaTime);
 
     void setTexture(std::string texturePath);
 

@@ -142,6 +142,30 @@ Hephaestus/fast:
 	$(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/build
 .PHONY : Hephaestus/fast
 
+Game/Player.o: Game/Player.cpp.o
+.PHONY : Game/Player.o
+
+# target to build an object file
+Game/Player.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Olympus.dir/build.make CMakeFiles/Olympus.dir/Game/Player.cpp.o
+.PHONY : Game/Player.cpp.o
+
+Game/Player.i: Game/Player.cpp.i
+.PHONY : Game/Player.i
+
+# target to preprocess a source file
+Game/Player.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Olympus.dir/build.make CMakeFiles/Olympus.dir/Game/Player.cpp.i
+.PHONY : Game/Player.cpp.i
+
+Game/Player.s: Game/Player.cpp.s
+.PHONY : Game/Player.s
+
+# target to generate assembly for a file
+Game/Player.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Olympus.dir/build.make CMakeFiles/Olympus.dir/Game/Player.cpp.s
+.PHONY : Game/Player.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -176,6 +200,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Hephaestus"
 	@echo "... Olympus"
+	@echo "... Game/Player.o"
+	@echo "... Game/Player.i"
+	@echo "... Game/Player.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

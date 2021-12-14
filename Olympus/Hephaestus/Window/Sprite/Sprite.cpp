@@ -228,7 +228,7 @@ Sprite::Shape Sprite::getShape() {
     return spriteShape;
 }
 
-void Sprite::move(double deltaTime) {
+void Sprite::move(float deltaTime) {
 
 }
 

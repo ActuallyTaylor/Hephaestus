@@ -13,7 +13,6 @@ Window* self;
 
 Window::Window() {
     textManager = TextManager();
-
 }
 
 Window::Window(std::string sentWindowName, int sentWidth, int sentHeight) {
@@ -76,8 +75,7 @@ void Window::windowLoop() {
     int framesThisSecond = 0;
     self = this;
     // Uncomment this to delimit framerate. Currently, limited because physics breaks.
-//    glfwMakeContextCurrent(window);
-//    glfwSwapInterval(0);
+    glfwSwapInterval(0);
 
     textManager.updateScreenDimensions(width, height);
     for(UIElement *element: uiElements) {
@@ -102,15 +100,16 @@ void Window::windowLoop() {
 
         currentTime = glfwGetTime();
         deltaTime = currentTime - lastTime;
+        renderingText.text = "Delta Time: " + std::to_string(deltaTime) + " Current Time: " + std::to_string(currentTime) + " Last Time: " + std::to_string(lastTime);
         lastTime = currentTime;
+        //"Frame Calculations " + std::to_string(std::chrono::duration_cast<std::chrono::microseconds>(end - start).count()) + "µs ≈ " + std::to_string((end - start) / 1ms) + "ms ≈ " + std::to_string((end - start) / 1s) + "s.";
 
         // Call user-defined callback functions
-        const std::chrono::time_point<std::chrono::system_clock> start = std::chrono::system_clock::now();
+//        const std::chrono::time_point<std::chrono::system_clock> start = std::chrono::system_clock::now();
         _tick();
         _update();
         _render();
-        const std::chrono::time_point<std::chrono::system_clock> end = std::chrono::system_clock::now();
-        renderingText.text = "Frame Calculations " + std::to_string(std::chrono::duration_cast<std::chrono::microseconds>(end - start).count()) + "µs ≈ " + std::to_string((end - start) / 1ms) + "ms ≈ " + std::to_string((end - start) / 1s) + "s.";
+//        const std::chrono::time_point<std::chrono::system_clock> end = std::chrono::system_clock::now();
 
         // Swap front and back buffers
         glfwSwapBuffers(window);
