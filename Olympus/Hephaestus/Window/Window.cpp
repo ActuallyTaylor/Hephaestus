@@ -75,14 +75,14 @@ void Window::windowLoop() {
     int framesThisSecond = 0;
     self = this;
     // Uncomment this to delimit framerate. Currently, limited because physics breaks.
-    glfwSwapInterval(0);
+//    glfwSwapInterval(0);
 
     textManager.updateScreenDimensions(width, height);
     for(UIElement *element: uiElements) {
         element->updateScreenDimensions(width, height);
     }
-    Text renderingText = Text("", "./fonts/SFNSRounded.ttf", glm::vec2(10, 645), glm::vec4(1.0,1.0,1.0,1.0));
-    textManager.addText(&renderingText);
+//    Text renderingText = Text("", "./fonts/SFNSRounded.ttf", glm::vec2(10, 645), glm::vec4(1.0,1.0,1.0,1.0));
+//    textManager.addText(&renderingText);
 
     while (!glfwWindowShouldClose(window)) {
         framesThisSecond ++;
@@ -100,7 +100,7 @@ void Window::windowLoop() {
 
         currentTime = glfwGetTime();
         deltaTime = currentTime - lastTime;
-        renderingText.text = "Delta Time: " + std::to_string(deltaTime) + " Current Time: " + std::to_string(currentTime) + " Last Time: " + std::to_string(lastTime);
+//        renderingText.text = "Delta Time: " + std::to_string(deltaTime) + " Current Time: " + std::to_string(currentTime) + " Last Time: " + std::to_string(lastTime);
         lastTime = currentTime;
         //"Frame Calculations " + std::to_string(std::chrono::duration_cast<std::chrono::microseconds>(end - start).count()) + "µs ≈ " + std::to_string((end - start) / 1ms) + "ms ≈ " + std::to_string((end - start) / 1s) + "s.";
 

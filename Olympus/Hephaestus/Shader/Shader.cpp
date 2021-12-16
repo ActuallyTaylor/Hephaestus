@@ -71,6 +71,11 @@ Shader::Shader(string vertexPath, string fragmentPath) {
     }
 }
 
+Shader::Shader(const char * _vertexShader, const char * _fragmentShader) {
+    vertexShader = _vertexShader;
+    fragmentShader = _fragmentShader;
+}
+
 void Shader::setup() {
     isSetup = true;
     int  success;

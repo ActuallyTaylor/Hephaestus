@@ -55,8 +55,39 @@ private:
     /// The current camera
     Camera* currentCamera{};
 
-    Shader defaultSpriteShader = Shader("./Hephaestus/Shaders/shader.vert", "./Hephaestus/Shaders/shader.frag");
-    Shader defaultUIShader = Shader("./Hephaestus/Shaders/shader.vert", "./Hephaestus/Shaders/shader.frag");
+   const char *defaultVertexShader = R""""(
+#version 330 core
+layout (location = 0) in vec3 position;
+layout (location = 1) in vec2 texturePosition;
+
+out vec2 TexCoord;
+
+uniform mat4 model;
+uniform mat4 projection;
+uniform mat4 view;
+
+void main()
+{
+    gl_Position = projection * view * model * vec4(position, 1.0);
+    TexCoord = texturePosition;
+}
+)"""";
+
+    const char *defaultFragmentShader = R""""(
+#version 330 core
+out vec4 FragColor;
+
+in vec2 TexCoord;
+
+uniform sampler2D ourTexture;
+
+void main()
+{
+    FragColor = texture(ourTexture, TexCoord);
+}
+)"""";
+    Shader defaultSpriteShader = Shader(defaultVertexShader, defaultFragmentShader);
+    Shader defaultUIShader = Shader(defaultVertexShader, defaultFragmentShader);
 
     /*
      * Runtime Functions

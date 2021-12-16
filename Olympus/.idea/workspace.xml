@@ -3,67 +3,522 @@
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
       <config projectName="Olympus" targetName="Olympus" />
+      <config projectName="Olympus" targetName="Hephaestus" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
       <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+      <configuration PROFILE_NAME="Release" ENABLED="true" CONFIG_NAME="Release" />
     </configurations>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f22769bb-d6a0-46e4-a0f3-ebdc8ac76c3d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Game/Player.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Game/Player.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Images/characterImage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/.idea/GameOfLife.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/3.20.2/CMakeCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/3.20.2/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/3.20.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/3.20.2/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/3.20.2/CMakeSystem.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/3.20.2/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/3.20.2/CompilerIdC/CMakeCCompilerId.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/3.20.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/3.20.2/CompilerIdCXX/CMakeCXXCompilerId.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/GameOfLife.dir/CXX.includecache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/GameOfLife.dir/DependInfo.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/GameOfLife.dir/build.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/GameOfLife.dir/cmake_clean.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/GameOfLife.dir/depend.internal" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/GameOfLife.dir/depend.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/GameOfLife.dir/flags.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/GameOfLife.dir/link.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/GameOfLife.dir/main.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/GameOfLife.dir/progress.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/TestApp.dir/DependInfo.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/TestApp.dir/build.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/TestApp.dir/cmake_clean.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/TestApp.dir/depend.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/TestApp.dir/flags.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/TestApp.dir/link.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/TestApp.dir/progress.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/GameOfLife" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/GameOfLife.cbp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/Shaders/Font.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/Shaders/Font.vert" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/Shaders/shader.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/Shaders/shader.vert" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/common.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/_features.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/_fixes.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/_noise.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/_swizzle.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/_swizzle_func.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/_vectorize.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/compute_common.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/compute_vector_relational.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/func_common.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/func_common_simd.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/func_exponential.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/func_exponential_simd.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/func_geometric.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/func_geometric_simd.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/func_integer.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/func_integer_simd.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/func_matrix.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/func_matrix_simd.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/func_packing.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/func_packing_simd.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/func_trigonometric.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/func_trigonometric_simd.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/func_vector_relational.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/func_vector_relational_simd.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/glm.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/qualifier.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/setup.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/type_float.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/type_half.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/type_half.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/type_mat2x2.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/type_mat2x2.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/type_mat2x3.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/type_mat2x3.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/type_mat2x4.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/type_mat2x4.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/type_mat3x2.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/type_mat3x2.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/type_mat3x3.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/type_mat3x3.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/type_mat3x4.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/type_mat3x4.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/type_mat4x2.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/type_mat4x2.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/type_mat4x3.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/type_mat4x3.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/type_mat4x4.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/type_mat4x4.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/type_mat4x4_simd.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/type_quat.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/type_quat.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/type_quat_simd.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/type_vec1.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/type_vec1.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/type_vec2.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/type_vec2.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/type_vec3.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/type_vec3.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/type_vec4.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/type_vec4.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/detail/type_vec4_simd.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/exponential.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_clip_space.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_clip_space.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_common.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_common.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_double2x2.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_double2x2_precision.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_double2x3.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_double2x3_precision.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_double2x4.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_double2x4_precision.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_double3x2.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_double3x2_precision.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_double3x3.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_double3x3_precision.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_double3x4.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_double3x4_precision.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_double4x2.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_double4x2_precision.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_double4x3.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_double4x3_precision.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_double4x4.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_double4x4_precision.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_float2x2.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_float2x2_precision.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_float2x3.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_float2x3_precision.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_float2x4.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_float2x4_precision.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_float3x2.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_float3x2_precision.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_float3x3.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_float3x3_precision.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_float3x4.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_float3x4_precision.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_float4x2.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_float4x2_precision.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_float4x3.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_float4x3_precision.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_float4x4.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_float4x4_precision.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_int2x2.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_int2x2_sized.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_int2x3.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_int2x3_sized.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_int2x4.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_int2x4_sized.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_int3x2.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_int3x2_sized.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_int3x3.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_int3x3_sized.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_int3x4.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_int3x4_sized.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_int4x2.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_int4x2_sized.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_int4x3.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_int4x3_sized.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_int4x4.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_int4x4_sized.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_projection.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_projection.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_relational.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_relational.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_transform.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_transform.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_uint2x2.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_uint2x2_sized.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_uint2x3.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_uint2x3_sized.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_uint2x4.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_uint2x4_sized.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_uint3x2.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_uint3x2_sized.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_uint3x3.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_uint3x3_sized.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_uint3x4.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_uint3x4_sized.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_uint4x2.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_uint4x2_sized.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_uint4x3.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_uint4x3_sized.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_uint4x4.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/matrix_uint4x4_sized.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/quaternion_common.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/quaternion_common.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/quaternion_common_simd.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/quaternion_double.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/quaternion_double_precision.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/quaternion_exponential.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/quaternion_exponential.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/quaternion_float.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/quaternion_float_precision.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/quaternion_geometric.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/quaternion_geometric.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/quaternion_relational.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/quaternion_relational.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/quaternion_transform.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/quaternion_transform.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/quaternion_trigonometric.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/quaternion_trigonometric.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/scalar_common.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/scalar_common.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/scalar_constants.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/scalar_constants.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/scalar_int_sized.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/scalar_integer.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/scalar_integer.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/scalar_packing.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/scalar_packing.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/scalar_relational.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/scalar_relational.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/scalar_uint_sized.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/scalar_ulp.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/scalar_ulp.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_bool1.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_bool1_precision.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_bool2.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_bool2_precision.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_bool3.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_bool3_precision.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_bool4.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_bool4_precision.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_common.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_common.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_double1.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_double1_precision.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_double2.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_double2_precision.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_double3.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_double3_precision.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_double4.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_double4_precision.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_float1.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_float1_precision.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_float2.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_float2_precision.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_float3.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_float3_precision.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_float4.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_float4_precision.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_int1.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_int1_sized.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_int2.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_int2_sized.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_int3.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_int3_sized.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_int4.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_int4_sized.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_integer.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_integer.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_packing.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_packing.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_relational.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_relational.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_uint1.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_uint1_sized.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_uint2.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_uint2_sized.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_uint3.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_uint3_sized.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_uint4.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_uint4_sized.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_ulp.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/ext/vector_ulp.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/fwd.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/geometric.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/glm.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/bitfield.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/bitfield.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/color_space.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/color_space.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/constants.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/constants.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/epsilon.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/epsilon.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/integer.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/integer.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/matrix_access.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/matrix_access.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/matrix_integer.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/matrix_inverse.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/matrix_inverse.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/matrix_transform.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/matrix_transform.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/noise.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/noise.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/packing.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/packing.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/quaternion.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/quaternion.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/quaternion_simd.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/random.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/random.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/reciprocal.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/reciprocal.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/round.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/round.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/type_aligned.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/type_precision.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/type_precision.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/type_ptr.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/type_ptr.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/ulp.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/ulp.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtc/vec1.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/associated_min_max.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/associated_min_max.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/bit.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/bit.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/closest_point.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/closest_point.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/color_encoding.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/color_encoding.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/color_space.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/color_space.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/color_space_YCoCg.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/color_space_YCoCg.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/common.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/common.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/compatibility.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/compatibility.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/component_wise.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/component_wise.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/dual_quaternion.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/dual_quaternion.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/easing.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/easing.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/euler_angles.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/euler_angles.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/extend.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/extend.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/extended_min_max.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/extended_min_max.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/exterior_product.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/exterior_product.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/fast_exponential.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/fast_exponential.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/fast_square_root.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/fast_square_root.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/fast_trigonometry.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/fast_trigonometry.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/float_notmalize.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/functions.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/functions.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/gradient_paint.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/gradient_paint.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/handed_coordinate_space.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/handed_coordinate_space.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/hash.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/hash.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/integer.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/integer.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/intersect.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/intersect.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/io.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/io.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/log_base.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/log_base.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/matrix_cross_product.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/matrix_cross_product.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/matrix_decompose.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/matrix_decompose.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/matrix_factorisation.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/matrix_factorisation.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/matrix_interpolation.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/matrix_interpolation.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/matrix_major_storage.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/matrix_major_storage.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/matrix_operation.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/matrix_operation.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/matrix_query.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/matrix_query.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/matrix_transform_2d.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/matrix_transform_2d.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/mixed_product.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/mixed_product.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/norm.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/norm.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/normal.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/normal.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/normalize_dot.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/normalize_dot.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/number_precision.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/number_precision.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/optimum_pow.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/optimum_pow.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/orthonormalize.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/orthonormalize.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/perpendicular.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/perpendicular.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/polar_coordinates.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/polar_coordinates.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/projection.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/projection.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/quaternion.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/quaternion.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/range.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/raw_data.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/raw_data.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/rotate_normalized_axis.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/rotate_normalized_axis.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/rotate_vector.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/rotate_vector.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/scalar_multiplication.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/scalar_relational.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/scalar_relational.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/spline.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/spline.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/std_based_type.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/std_based_type.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/string_cast.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/string_cast.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/texture.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/texture.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/transform.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/transform.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/transform2.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/transform2.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/type_aligned.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/type_aligned.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/type_trait.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/type_trait.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/vec_swizzle.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/vector_angle.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/vector_angle.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/vector_query.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/vector_query.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/wrap.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/gtx/wrap.inl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/integer.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/mat2x2.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/mat2x3.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/mat2x4.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/mat3x2.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/mat3x3.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/mat3x4.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/mat4x2.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/mat4x3.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/mat4x4.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/matrix.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/packing.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/simd/common.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/simd/exponential.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/simd/geometric.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/simd/integer.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/simd/matrix.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/simd/neon.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/simd/packing.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/simd/platform.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/simd/trigonometric.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/simd/vector_relational.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/trigonometric.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/vec2.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/vec3.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/vec4.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/glm/vector_relational.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/stb_image.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Shader/Shader.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Window/Camera/Camera.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Window/Collision/Collision.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Window/Controls/ControlManager.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Window/Controls/Keybind/Keybind.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Window/Controls/Keybind/Keybind.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Window/Sprite/PhysicsSprite/PhysicsSprite.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Window/Sprite/Sprite.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Window/Text/Text.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Window/Text/TextManager.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Window/UI/Button/Button.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Window/UI/UIElement.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Window/Window.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hephaestus/Window/Collision/Collision.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Window/Collision/Collision.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hephaestus/Window/Collision/Collision.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Window/Collision/Collision.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hephaestus/Window/Sprite/Sprite.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Window/Sprite/Sprite.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hephaestus/Window/Sprite/Sprite.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Window/Sprite/Sprite.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hephaestus/Window/Text/TextManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Window/Text/TextManager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Shader/Shader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Shader/Shader.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Shader/Shader.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Shader/Shader.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Window/Text/TextManager.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Window/Text/TextManager.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hephaestus/Window/Window.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Window/Window.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.20.2/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.20.2/CMakeCCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.20.2/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.20.2/CMakeCXXCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.20.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.20.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.20.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.20.2/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Window/Window.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Window/Window.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Shader/Shader.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Shader/Shader.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Window/Camera/Camera.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Window/Camera/Camera.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Window/Collision/Collision.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Window/Collision/Collision.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/ControlManager.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/ControlManager.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/Keybind/Keybind.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/Keybind/Keybind.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Window/Sprite/Sprite.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Window/Sprite/Sprite.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Window/Window.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Window/Window.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/libHephaestus.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/libHephaestus.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/libHephaestus.a" beforeDir="false" afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/lib/libHephaestus.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Olympus" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Olympus" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Olympus.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Olympus.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,9 +547,6 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="OCResolveContextSettings">
-    <option name="configuration" value="0-Debug-Hephaestus" />
-  </component>
   <component name="ProjectId" id="20KCL6BxFflAbGZyf9BMoLUeJZC" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -114,7 +566,7 @@
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -126,12 +578,17 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.Olympus">
-    <configuration name="Hephaestus" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Olympus" TARGET_NAME="Olympus" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Olympus" RUN_TARGET_NAME="Olympus">
+    <configuration name="Hephaestus" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Olympus" TARGET_NAME="Hephaestus" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="Olympus" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Olympus" RUN_TARGET_NAME="Olympus" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -199,6 +656,12 @@
       <workItem from="1639414353466" duration="538000" />
       <workItem from="1639490423078" duration="2329000" />
       <workItem from="1639500974191" duration="776000" />
+      <workItem from="1639517717728" duration="947000" />
+      <workItem from="1639587493580" duration="3000" />
+      <workItem from="1639587504714" duration="707000" />
+      <workItem from="1639588244421" duration="1747000" />
+      <workItem from="1639603930675" duration="2356000" />
+      <workItem from="1639672659481" duration="1602000" />
     </task>
     <servers />
   </component>

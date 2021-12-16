@@ -30,6 +30,8 @@ class Shader {
 public:
     Shader();
     Shader(string vertexPath, string fragmentPath);
+    Shader(const char * _vertexShader, const char * _fragmentShader);
+
     void setup();
     void use();
 

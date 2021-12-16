@@ -12,7 +12,6 @@ find_package(GLEW REQUIRED)
 target_link_libraries(Olympus GLEW::GLEW)
 
 add_subdirectory(Hephaestus)
-
 target_link_libraries(Olympus Hephaestus)
 
 add_custom_command(TARGET Olympus PRE_BUILD
