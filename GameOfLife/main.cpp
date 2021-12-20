@@ -1,21 +1,136 @@
 #include <iostream>
 #include "./lib/hephaestus/include/Hephaestus.hpp"
+#include <vector>
 
-Hephaestus engine = Hephaestus("Hephaestus Engine");
+Hephaestus engine = Hephaestus("Conways game of life");
 Camera mainCamera = Camera();
 
-bool shouldSpawn = false;
-int numb = 0;
+const int gameFieldSize = 36;
+const int spriteSize = 20;
+Sprite spriteBoard[gameFieldSize][gameFieldSize];
 
-Button startButton = Button("./Images/StartButton.png", glm::vec3(25,520, 0.0), glm::vec2(300,100));
+struct Cell {
+    int x { 0 };
+    int y { 0 };
+    int lastChangedTime { 0 };
 
-void stopSpawning() {
-    if(shouldSpawn) {
-        shouldSpawn = false;
-        startButton.setBackgroundColor(glm::vec4(125, 223, 100, 127.5));
+    bool alive = false;
+
+    Cell() = default;
+
+    void updatePosition(glm::vec2 boardPosition) const {
+        spriteBoard[x][y].setPosition({boardPosition, 0.0});
+    }
+
+    void updateDisplay() const {
+        spriteBoard[x][y].hidden = !alive;
+    }
+};
+
+Cell gameField[gameFieldSize][gameFieldSize];
+
+static int roundTo10(int n) {
+    int a = (n / 10) * 10;
+    return a;
+}
+
+int lastChangedX { -1 }, lastChangedY { -1 };
+void clickMouse() {
+    glm::vec2 mousePosition = engine.getMousePosition();
+    glm::ivec2 boardPosition = { roundTo10(int(mousePosition.x)), roundTo10(int(mousePosition.y)) };
+    glm::ivec2 arrayPosition = { boardPosition.x / spriteSize, boardPosition.y / spriteSize };
+
+    if(!(arrayPosition.x >= 0 && arrayPosition.x <= gameFieldSize) && !(arrayPosition.y >= 0 && arrayPosition.y <= gameFieldSize)) return;
+
+    if(!gameField[arrayPosition.x][arrayPosition.y].alive) {
+        gameField[arrayPosition.x][arrayPosition.y].alive = true;
+        gameField[arrayPosition.x][arrayPosition.y].updateDisplay();
     } else {
-        shouldSpawn = true;
-        startButton.setBackgroundColor(glm::vec4(235, 96, 98, 127.5));
+        gameField[arrayPosition.x][arrayPosition.y].alive = false;
+        gameField[arrayPosition.x][arrayPosition.y].updateDisplay();
+    }
+    gameField[arrayPosition.x][arrayPosition.y].lastChangedTime = glfwGetTime();
+    lastChangedX = arrayPosition.x;
+    lastChangedY = arrayPosition.y;
+}
+
+void dragMouse() {
+    glm::vec2 mousePosition = engine.getMousePosition();
+    glm::ivec2 boardPosition = { roundTo10(int(mousePosition.x)), roundTo10(int(mousePosition.y)) };
+    glm::ivec2 arrayPosition = { boardPosition.x / spriteSize, boardPosition.y / spriteSize };
+
+    if (lastChangedX == arrayPosition.x && lastChangedY == arrayPosition.y) return;
+    if(!gameField[arrayPosition.x][arrayPosition.y].alive) {
+        gameField[arrayPosition.x][arrayPosition.y].alive = true;
+        gameField[arrayPosition.x][arrayPosition.y].updateDisplay();
+    } else {
+        gameField[arrayPosition.x][arrayPosition.y].alive = false;
+        gameField[arrayPosition.x][arrayPosition.y].updateDisplay();
+    }
+    lastChangedX = arrayPosition.x;
+    lastChangedY = arrayPosition.y;
+}
+
+
+void simulateGame() {
+    Cell nextGameField[gameFieldSize][gameFieldSize];
+
+    for(int x = 0; x < gameFieldSize; x++) {
+        for(int y = 0;  y < gameFieldSize; y++) {
+            Cell thisCell = gameField[x][y];
+
+            int neighbors = 0;
+
+            if ((x - 1 >= 0 && y + 1 < gameFieldSize) && gameField[x - 1][y + 1].alive) {
+                neighbors += 1;
+            }
+
+            if ((x - 1 >= 0) && gameField[x - 1][y].alive) {
+                neighbors += 1;
+            }
+
+            if ((x - 1 >= 0 && y - 1 >= 0) && gameField[x - 1][y - 1].alive) {
+                neighbors += 1;
+            }
+
+            if ((y - 1 >= 0) && gameField[x][y - 1].alive) {
+                neighbors += 1;
+            }
+
+            if ((y + 1 < gameFieldSize) && gameField[x][y + 1].alive) {
+                neighbors += 1;
+            }
+
+            if ((x + 1 < gameFieldSize && y - 1 >= 0) && gameField[x + 1][y - 1].alive) {
+                neighbors += 1;
+            }
+
+            if ((x + 1 < gameFieldSize) && gameField[x + 1][y].alive) {
+                neighbors += 1;
+            }
+
+            if ((x + 1 < gameFieldSize && y + 1 < gameFieldSize) && gameField[x + 1][y + 1].alive) {
+                neighbors += 1;
+            }
+
+
+            if (!thisCell.alive && neighbors == 3) {
+                thisCell.alive = true;
+            } else if(neighbors == 2 || neighbors == 3) {
+                // Cell survives, do nothing
+//                thisCell.alive = true
+            } else {
+                thisCell.alive = false;
+            }
+            nextGameField[x][y] = thisCell;
+        }
+    }
+
+    for(int x = 0; x < gameFieldSize; x++) {
+        for (int y = 0; y < gameFieldSize; y++) {
+            gameField[x][y] = nextGameField[x][y];
+            gameField[x][y].updateDisplay();
+        }
     }
 }
 
@@ -26,8 +141,6 @@ void init() {
     printf("OpenGL version supported %s\n", version);
 
     engine.addCamera(&mainCamera);
-
-    engine.addKeybind(GLFW_KEY_A, GLFW_PRESS, stopSpawning);
 }
 
 void destroy() {
@@ -35,65 +148,58 @@ void destroy() {
 }
 
 void tick() {
-//    sprites.push_back(sprite);
-    if(numb % 5 == 0 && shouldSpawn) {
-        int randDiff = rand() % 10;
-        int size = 10;//(rand() % 25) + 5;
-        auto* sprite = new PhysicsSprite("./Images/Smiley.png", glm::vec3(720/2 - randDiff,710, 0.0), glm::vec2(size,size));
-        sprite->setMass(1);
 
-        if (!sprite->getRegistered()) {
-            engine.addSprite(sprite);
-        }
-    }
-    numb ++;
 }
+
+int interval = 0;
+int updateCount = 0;
+bool shouldUpdate = false;
+
+Text simulatingText = { "Simulating: False", "./fonts/SFNSRounded.ttf", {10.0f, 10.0f }, { 0.5, 0.8f, 0.2f, 1.0f } };
+//Text timeLeft = { "Time until next sim: ", "./fonts/SFNSRounded.ttf", {10.0f, 30.0f }, { 0.5, 0.8f, 0.2f, 1.0f } };
 
 void update() {
-
+    if(updateCount != interval) {
+        updateCount ++;
+    } else {
+        updateCount = 0;
+        if (shouldUpdate) {
+            simulateGame();
+        }
+    }
+//    timeLeft.text = "Time until next sim: " + std::to_string(interval - updateCount);
 }
-
-Text fpsTextObject = { "Hello World", "./fonts/SFNSRounded.ttf", {10.0f, 695.0f }, { 0.5, 0.8f, 0.2f, 1.0f } };
-Text spriteCountObject = { "Hello World", "./fonts/SFNSRounded.ttf", {10.0f, 670.0f }, { 0.5, 0.8f, 0.2f, 1.0f } };
 
 void render() {
-    int fps = engine.getFPS();
-    std::string fpsText = "FPS: " + std::to_string(fps) + ", Frametime: " + std::to_string(1000.0 / double(fps));
-    fpsTextObject.text = fpsText;
 
-    int spriteCount = engine.getNumberOfSprites();
-    std::string spriteText = "Sprites: " + std::to_string(spriteCount);
-    spriteCountObject.text = spriteText;
 }
 
-void clickButton() {
-    std::cout << "Position: " << glm::to_string(engine.getMousePosition()) << std::endl;
-}
-
-void spawnOnCursor() {
-    int randDiff = rand() % 10;
-    int size = 10;//(rand() % 25) + 5;
-    glm::vec2 cursorPosition = engine.getMousePosition();
-    auto* sprite = new PhysicsSprite("./Images/Smiley.png", glm::vec3(cursorPosition.x - randDiff,cursorPosition.y, 0.0), glm::vec2(size,size));
-    sprite->setMass(1);
-
-    if (!sprite->getRegistered()) {
-        engine.addSprite(sprite);
-    }
+void toggleUpdate() {
+    shouldUpdate = !shouldUpdate;
+    std::string tf = shouldUpdate ? "True" : "False";
+    simulatingText.text = "Simulating: " + tf;
 }
 
 int main() {
-    startButton.setBackgroundColor(glm::vec4(125, 223, 100, 127.5));
-    startButton.setOnClick(stopSpawning);
-    startButton.setNormalText("Hello World", "./fonts/SFNSRounded.ttf", { 0.4, 0.3, 0.4, 1.0});
-    engine.addUIElement(&startButton);
+    for(int x = 0; x < gameFieldSize; x++) {
+        for (int y = 0; y < gameFieldSize; y++) {
+            gameField[x][y].alive = false;
+            gameField[x][y].x = x;
+            gameField[x][y].y = y;
 
-    engine.addKeybind(GLFW_MOUSE_BUTTON_LEFT, GLFW_PRESS, clickButton);
-//    engine.addDrag(GLFW_MOUSE_BUTTON_LEFT, spawnOnCursor);
+            spriteBoard[x][y] = Sprite{ "./Images/Piece2.png", glm::vec3(x * spriteSize, y * spriteSize, 0.0), glm::vec2(spriteSize,spriteSize)};
+            spriteBoard[x][y].hidden = true;
+            engine.addSprite(&spriteBoard[x][y]);
+        }
+    }
+
     engine.loadFont("./fonts/SFNSRounded.ttf");
 
-    engine.addText(&spriteCountObject);
-    engine.addText(&fpsTextObject);
+    engine.addDrag(GLFW_MOUSE_BUTTON_LEFT, dragMouse);
+    engine.addKeybind(GLFW_MOUSE_BUTTON_LEFT, GLFW_PRESS, clickMouse);
+    engine.addKeybind(GLFW_KEY_SPACE, GLFW_PRESS, toggleUpdate);
+    engine.addText(&simulatingText);
+//    engine.addText(&timeLeft);
 
     engine.setInit(init);
     engine.setDestroy(destroy);

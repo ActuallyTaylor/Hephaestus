@@ -86,3 +86,11 @@ glm::vec2 Hephaestus::getMousePosition() {
 void Hephaestus::addUIElement(UIElement *element) {
     this->window.addUIElement(element);
 }
+
+int Hephaestus::windowWidth() {
+    return this->window.width;
+}
+
+int Hephaestus::windowHeight() {
+    return this->window.height;
+}

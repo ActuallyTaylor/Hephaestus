@@ -12,6 +12,12 @@
 
 #include "Sprite.hpp"
 
+Sprite::Sprite() {
+    position = {300.0f, 300.0f, 0.0f};
+    dimensions = {50.0f, 50.0f};
+    rotation = {0.0f, 0.0f, 0.0f};
+}
+
 Sprite::Sprite(std::string _texturePath, glm::vec3 _position, glm::vec2 _dimensions, glm::vec3 _rotation) {
 //    shader = _shader;
     position = _position;
@@ -24,7 +30,7 @@ Sprite::Sprite(std::string _texturePath, glm::vec3 _position, glm::vec2 _dimensi
 }
 
 Sprite::~Sprite() {
-    printf("Destroyed Sprite\n");
+//    printf("Destroyed Sprite\n");
 }
 
 void Sprite::createTexture(const std::string& texturePath) {
@@ -94,6 +100,10 @@ void Sprite::createVirtualBufferObject() {
 }
 
 void Sprite::draw() {
+    if(hidden) {
+        return;
+    }
+
     shader.use();
     glm::mat4 model = translate(glm::mat4(1.0f), position);
 

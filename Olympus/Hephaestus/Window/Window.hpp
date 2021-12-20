@@ -35,11 +35,6 @@ class Window {
 private:
     /// The name of the window.
     std::string windowName;
-    /// The pixel width of the window.
-    int width { 720 };
-    /// The pixel height of the window.
-    int height { 720 };
-
     bool printFrames { false };
 
     double deltaTime{};
@@ -198,6 +193,11 @@ public:
     vector<UIElement*> uiElements;
 
     int framesPerSecond { };
+
+    /// The pixel width of the window.
+    int width { 720 };
+    /// The pixel height of the window.
+    int height { 720 };
 };
 
 #endif //OLYMPUS_WINDOW_HPP

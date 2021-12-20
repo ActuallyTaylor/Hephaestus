@@ -104,6 +104,9 @@ public:
     int getFPS();
 
     int getNumberOfSprites();
+
+    int windowWidth();
+    int windowHeight();
 };
 
 #endif //OLYMPUS_HEPHAESTUS_HPP

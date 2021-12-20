@@ -19,3 +19,6 @@ target_link_libraries(GameOfLife GLEW::GLEW)
 find_package(Freetype REQUIRED)
 target_link_libraries(GameOfLife Freetype::Freetype)
 
+add_custom_command(TARGET GameOfLife PRE_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_directory
+        ${CMAKE_SOURCE_DIR}/Resources $<TARGET_FILE_DIR:GameOfLife>)

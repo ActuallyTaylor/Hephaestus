@@ -100,7 +100,6 @@ void Window::windowLoop() {
 
         currentTime = glfwGetTime();
         deltaTime = currentTime - lastTime;
-//        renderingText.text = "Delta Time: " + std::to_string(deltaTime) + " Current Time: " + std::to_string(currentTime) + " Last Time: " + std::to_string(lastTime);
         lastTime = currentTime;
         //"Frame Calculations " + std::to_string(std::chrono::duration_cast<std::chrono::microseconds>(end - start).count()) + "µs ≈ " + std::to_string((end - start) / 1ms) + "ms ≈ " + std::to_string((end - start) / 1s) + "s.";
 
@@ -110,6 +109,7 @@ void Window::windowLoop() {
         _update();
         _render();
 //        const std::chrono::time_point<std::chrono::system_clock> end = std::chrono::system_clock::now();
+//        renderingText.text = "Speed: " +  std::to_string(float(end. - start));
 
         // Swap front and back buffers
         glfwSwapBuffers(window);
@@ -186,7 +186,7 @@ void Window::keyCallback(GLFWwindow *window, int key, int scancode, int action, 
 void Window::windowCallback(GLFWwindow *window, int width, int height) {
     self->width = width;
     self->height = height;
-    glViewport(0, 0, width, height);
+//    glViewport(0, 0, width, height);
 //    glOrtho(0.0f, width, height, 0.0f, -1000.0f, 1000.0f );
 
     for (Sprite *sprite: self->sprites) {
@@ -200,6 +200,7 @@ void Window::windowCallback(GLFWwindow *window, int width, int height) {
 }
 
 void Window::mouseButtonCallback(GLFWwindow* window, int button, int action, int mods) {
+    self->controlManager.executeKeybinds(button, action);
     if(button == GLFW_MOUSE_BUTTON_LEFT) {
         if(GLFW_PRESS == action) {
             self->checkUIClicks();
