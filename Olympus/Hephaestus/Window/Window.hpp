@@ -178,6 +178,7 @@ public:
      * Collision Checking
      */
     void checkCollisions();
+    bool shouldCheckCollisions = true;
 
     /*
      * Variables

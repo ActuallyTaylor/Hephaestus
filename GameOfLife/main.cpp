@@ -170,8 +170,17 @@ void update() {
 //    timeLeft.text = "Time until next sim: " + std::to_string(interval - updateCount);
 }
 
-void render() {
+//Text fpsTextObject = { "Hello World", "./fonts/SFNSRounded.ttf", {10.0f, 695.0f }, { 0.5, 0.8f, 0.2f, 1.0f } };
+//Text spriteCountObject = { "Hello World", "./fonts/SFNSRounded.ttf", {10.0f, 670.0f }, { 0.5, 0.8f, 0.2f, 1.0f } };
 
+void render() {
+//    int fps = engine.getFPS();
+//    std::string fpsText = "FPS: " + std::to_string(fps) + ", Frametime: " + std::to_string(1000.0 / double(fps));
+//    fpsTextObject.text = fpsText;
+//
+//    int spriteCount = engine.getNumberOfSprites();
+//    std::string spriteText = "Sprites: " + std::to_string(spriteCount);
+//    spriteCountObject.text = spriteText;
 }
 
 void toggleUpdate() {
@@ -193,12 +202,17 @@ int main() {
         }
     }
 
+    engine.setWindowShouldCheckCollision(false);
     engine.loadFont("./fonts/SFNSRounded.ttf");
 
     engine.addDrag(GLFW_MOUSE_BUTTON_LEFT, dragMouse);
     engine.addKeybind(GLFW_MOUSE_BUTTON_LEFT, GLFW_PRESS, clickMouse);
     engine.addKeybind(GLFW_KEY_SPACE, GLFW_PRESS, toggleUpdate);
+
     engine.addText(&simulatingText);
+//    engine.addText(&spriteCountObject);
+//    engine.addText(&fpsTextObject);
+
 //    engine.addText(&timeLeft);
 
     engine.setInit(init);

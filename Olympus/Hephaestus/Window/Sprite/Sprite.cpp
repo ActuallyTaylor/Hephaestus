@@ -238,9 +238,7 @@ Sprite::Shape Sprite::getShape() {
     return spriteShape;
 }
 
-void Sprite::move(float deltaTime) {
-
-}
+void Sprite::move(float deltaTime) { }
 
 float Sprite::getRadius() {
     return dimensions.x / 2;
@@ -252,4 +250,8 @@ void Sprite::registerSprite() {
 
 bool Sprite::getRegistered() {
     return registered;
+}
+
+bool Sprite::collidable() {
+    return false;
 }

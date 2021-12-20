@@ -94,12 +94,6 @@ public:
     float getRadius();
 
     /*
-     * Sprite Shape
-     */
-    void setShape(Shape shape);
-    virtual Shape getShape();
-
-    /*
      * Sprite Tint Color
      */
     glm::vec4 tintColor { 1.0, 1.0, 1.0, 1.0};
@@ -110,7 +104,18 @@ public:
     void registerSprite();
     bool getRegistered();
 
-    // MARK: Drawing Functions
+    /*
+     * Collision
+     */
+    virtual bool collidable();
+
+    // Shape
+    void setShape(Shape shape);
+    virtual Shape getShape();
+
+    /*
+     * Drawing Functions
+     */
     void draw();
 
     virtual void move(float deltaTime);
@@ -135,7 +140,6 @@ protected:
 
     GLuint VBO, VAO, EBO, textureAtlas;
 
-    bool hasCollision = true;
     bool registered;
 
     Shape spriteShape = square;

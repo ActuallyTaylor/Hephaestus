@@ -44,6 +44,8 @@ public:
     void setMass(float inMass);
     void addForce(glm::vec3 force);
     float getMass();
+
+    bool collidable() override;
 };
 
 

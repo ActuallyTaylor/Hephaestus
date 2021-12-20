@@ -63,6 +63,8 @@ Window::Window(std::string sentWindowName, int sentWidth, int sentHeight) {
     defaultUIShader.setup();
 }
 
+Text renderingText = Text("", "./fonts/SFNSRounded.ttf", glm::vec2(10, 645), glm::vec4(1.0,1.0,1.0,1.0));
+
 void Window::windowLoop() {
     _init();
     // Disabled to allow
@@ -81,8 +83,7 @@ void Window::windowLoop() {
     for(UIElement *element: uiElements) {
         element->updateScreenDimensions(width, height);
     }
-//    Text renderingText = Text("", "./fonts/SFNSRounded.ttf", glm::vec2(10, 645), glm::vec4(1.0,1.0,1.0,1.0));
-//    textManager.addText(&renderingText);
+    textManager.addText(&renderingText);
 
     while (!glfwWindowShouldClose(window)) {
         framesThisSecond ++;
@@ -101,15 +102,14 @@ void Window::windowLoop() {
         currentTime = glfwGetTime();
         deltaTime = currentTime - lastTime;
         lastTime = currentTime;
-        //"Frame Calculations " + std::to_string(std::chrono::duration_cast<std::chrono::microseconds>(end - start).count()) + "µs ≈ " + std::to_string((end - start) / 1ms) + "ms ≈ " + std::to_string((end - start) / 1s) + "s.";
 
         // Call user-defined callback functions
-//        const std::chrono::time_point<std::chrono::system_clock> start = std::chrono::system_clock::now();
+        const std::chrono::time_point<std::chrono::system_clock> start = std::chrono::system_clock::now();
+        const std::chrono::time_point<std::chrono::system_clock> end = std::chrono::system_clock::now();
         _tick();
         _update();
         _render();
-//        const std::chrono::time_point<std::chrono::system_clock> end = std::chrono::system_clock::now();
-//        renderingText.text = "Speed: " +  std::to_string(float(end. - start));
+        renderingText.text = "Frame Calculations: " + std::to_string(std::chrono::duration_cast<std::chrono::microseconds>(end - start).count()) + "mcs = " + std::to_string((end - start) / 1ms) + "ms = " + std::to_string((end - start) / 1s) + "s.";
 
         // Swap front and back buffers
         glfwSwapBuffers(window);
@@ -138,12 +138,13 @@ void Window::_tick() {
 }
 
 void Window::_update() {
+    // TODO: Some improvments could be made here. Maybe check to see if we even need to call move.
     for (Sprite* sprite: sprites) {
         sprite->move(deltaTime);
     }
+
     this->controlManager.executeDragging();
     checkCollisions();
-
     if (update != nullptr) {
         update();
     }
@@ -271,14 +272,20 @@ float clamp(float value, float min, float max) {
 }
 
 void Window::checkCollisions() {
-    for (int x = 0; x < sprites.size(); ++x) {
-        for (int y = x+1; y < sprites.size(); ++y) {
-            Sprite* sprite = sprites[x];
-            Sprite* checkSprite = sprites[y];
+    if(shouldCheckCollisions) {
+        for (int x = 0; x < sprites.size(); ++x) {
+            Sprite *sprite = sprites[x];
 
-            Collision collision { checkCollision(sprite, checkSprite) };
-            if(collision.successful) {
-                collision.perform(deltaTime);
+            if(sprite->collidable()) {
+                for (int y = x+1; y < sprites.size(); ++y) {
+                    Sprite *checkSprite = sprites[y];
+                    if (checkSprite->collidable()) {
+                        Collision collision { checkCollision(sprite, checkSprite) };
+                        if(collision.successful) {
+                            collision.perform(deltaTime);
+                        }
+                    }
+                }
             }
         }
     }
@@ -365,7 +372,3 @@ void Window::checkUIClicks() {
         }
     }
 }
-/*
- one->getX() <= two->getX() + two->getWidth() && one->getX() + one->getWidth() >= two->getX()) &&
-                (one->getY() <= two->getY() + two->getHeight() && one->getY() + one->getHeight() >= two->getY())
- */

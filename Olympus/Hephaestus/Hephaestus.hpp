@@ -100,6 +100,8 @@ public:
 
     void addUIElement(UIElement* element);
 
+    void setWindowShouldCheckCollision(bool _collision);
+
     /// Returns the current active window frames per second.
     int getFPS();
 

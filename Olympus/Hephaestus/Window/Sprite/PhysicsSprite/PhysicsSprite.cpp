@@ -72,3 +72,7 @@ void PhysicsSprite::setZVelocity(float z) {
 void PhysicsSprite::addForce(glm::vec3 _velocity) {
     velocity += _velocity;
 }
+
+bool PhysicsSprite::collidable() {
+    return true;
+}

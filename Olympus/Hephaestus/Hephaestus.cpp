@@ -94,3 +94,7 @@ int Hephaestus::windowWidth() {
 int Hephaestus::windowHeight() {
     return this->window.height;
 }
+
+void Hephaestus::setWindowShouldCheckCollision(bool _collision) {
+    window.shouldCheckCollisions = _collision;
+}
