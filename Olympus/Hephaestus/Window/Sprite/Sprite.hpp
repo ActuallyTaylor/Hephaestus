@@ -108,6 +108,7 @@ public:
      * Collision
      */
     virtual bool collidable();
+    void setCollidable(bool _collidable);
 
     // Shape
     void setShape(Shape shape);
@@ -129,6 +130,8 @@ public:
     Shader shader;
 
     bool hidden = false;
+
+    virtual bool canMove();
 protected:
     glm::mat4 projection { };
     glm::vec2 screenSize { };
@@ -143,6 +146,8 @@ protected:
     bool registered;
 
     Shape spriteShape = square;
+
+    bool isCollidable = false;
 };
 
 #endif //OLYMPUS_SPRITE_HPP

@@ -253,5 +253,13 @@ bool Sprite::getRegistered() {
 }
 
 bool Sprite::collidable() {
+    return isCollidable;
+}
+
+void Sprite::setCollidable(bool _collidable) {
+    isCollidable = _collidable;
+}
+
+bool Sprite::canMove() {
     return false;
 }

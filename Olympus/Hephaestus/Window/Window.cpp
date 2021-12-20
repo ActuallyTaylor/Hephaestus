@@ -105,10 +105,10 @@ void Window::windowLoop() {
 
         // Call user-defined callback functions
         const std::chrono::time_point<std::chrono::system_clock> start = std::chrono::system_clock::now();
-        const std::chrono::time_point<std::chrono::system_clock> end = std::chrono::system_clock::now();
         _tick();
         _update();
         _render();
+        const std::chrono::time_point<std::chrono::system_clock> end = std::chrono::system_clock::now();
         renderingText.text = "Frame Calculations: " + std::to_string(std::chrono::duration_cast<std::chrono::microseconds>(end - start).count()) + "mcs = " + std::to_string((end - start) / 1ms) + "ms = " + std::to_string((end - start) / 1s) + "s.";
 
         // Swap front and back buffers
@@ -140,7 +140,9 @@ void Window::_tick() {
 void Window::_update() {
     // TODO: Some improvments could be made here. Maybe check to see if we even need to call move.
     for (Sprite* sprite: sprites) {
-        sprite->move(deltaTime);
+         if(sprite->canMove()) {
+             sprite->move(deltaTime);
+         }
     }
 
     this->controlManager.executeDragging();

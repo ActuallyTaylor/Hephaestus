@@ -46,6 +46,8 @@ public:
     float getMass();
 
     bool collidable() override;
+
+    bool canMove() override;
 };
 
 

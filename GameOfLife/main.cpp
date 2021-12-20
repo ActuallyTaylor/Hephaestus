@@ -5,8 +5,8 @@
 Hephaestus engine = Hephaestus("Conways game of life");
 Camera mainCamera = Camera();
 
-const int gameFieldSize = 36;
-const int spriteSize = 20;
+const int gameFieldSize = 72;
+const int spriteSize = 10;
 Sprite spriteBoard[gameFieldSize][gameFieldSize];
 
 struct Cell {
@@ -40,7 +40,7 @@ void clickMouse() {
     glm::ivec2 boardPosition = { roundTo10(int(mousePosition.x)), roundTo10(int(mousePosition.y)) };
     glm::ivec2 arrayPosition = { boardPosition.x / spriteSize, boardPosition.y / spriteSize };
 
-    if(!(arrayPosition.x >= 0 && arrayPosition.x <= gameFieldSize) && !(arrayPosition.y >= 0 && arrayPosition.y <= gameFieldSize)) return;
+    if((arrayPosition.x < 0 || arrayPosition.x >= gameFieldSize) || (arrayPosition.y < 0 || arrayPosition.y >= gameFieldSize)) return;
 
     if(!gameField[arrayPosition.x][arrayPosition.y].alive) {
         gameField[arrayPosition.x][arrayPosition.y].alive = true;
@@ -59,6 +59,8 @@ void dragMouse() {
     glm::ivec2 boardPosition = { roundTo10(int(mousePosition.x)), roundTo10(int(mousePosition.y)) };
     glm::ivec2 arrayPosition = { boardPosition.x / spriteSize, boardPosition.y / spriteSize };
 
+    if((arrayPosition.x < 0 || arrayPosition.x >= gameFieldSize) || (arrayPosition.y < 0 || arrayPosition.y >= gameFieldSize)) return;
+
     if (lastChangedX == arrayPosition.x && lastChangedY == arrayPosition.y) return;
     if(!gameField[arrayPosition.x][arrayPosition.y].alive) {
         gameField[arrayPosition.x][arrayPosition.y].alive = true;
@@ -70,7 +72,6 @@ void dragMouse() {
     lastChangedX = arrayPosition.x;
     lastChangedY = arrayPosition.y;
 }
-
 
 void simulateGame() {
     Cell nextGameField[gameFieldSize][gameFieldSize];
@@ -156,7 +157,6 @@ int updateCount = 0;
 bool shouldUpdate = false;
 
 Text simulatingText = { "Simulating: False", "./fonts/SFNSRounded.ttf", {10.0f, 10.0f }, { 0.5, 0.8f, 0.2f, 1.0f } };
-//Text timeLeft = { "Time until next sim: ", "./fonts/SFNSRounded.ttf", {10.0f, 30.0f }, { 0.5, 0.8f, 0.2f, 1.0f } };
 
 void update() {
     if(updateCount != interval) {
@@ -170,17 +170,17 @@ void update() {
 //    timeLeft.text = "Time until next sim: " + std::to_string(interval - updateCount);
 }
 
-//Text fpsTextObject = { "Hello World", "./fonts/SFNSRounded.ttf", {10.0f, 695.0f }, { 0.5, 0.8f, 0.2f, 1.0f } };
-//Text spriteCountObject = { "Hello World", "./fonts/SFNSRounded.ttf", {10.0f, 670.0f }, { 0.5, 0.8f, 0.2f, 1.0f } };
+Text fpsTextObject = { "Hello World", "./fonts/SFNSRounded.ttf", {10.0f, 695.0f }, { 0.5, 0.8f, 0.2f, 1.0f } };
+Text spriteCountObject = { "Hello World", "./fonts/SFNSRounded.ttf", {10.0f, 670.0f }, { 0.5, 0.8f, 0.2f, 1.0f } };
 
 void render() {
-//    int fps = engine.getFPS();
-//    std::string fpsText = "FPS: " + std::to_string(fps) + ", Frametime: " + std::to_string(1000.0 / double(fps));
-//    fpsTextObject.text = fpsText;
-//
-//    int spriteCount = engine.getNumberOfSprites();
-//    std::string spriteText = "Sprites: " + std::to_string(spriteCount);
-//    spriteCountObject.text = spriteText;
+    int fps = engine.getFPS();
+    std::string fpsText = "FPS: " + std::to_string(fps) + ", Frametime: " + std::to_string(1000.0 / double(fps));
+    fpsTextObject.text = fpsText;
+
+    int spriteCount = engine.getNumberOfSprites();
+    std::string spriteText = "Sprites: " + std::to_string(spriteCount);
+    spriteCountObject.text = spriteText;
 }
 
 void toggleUpdate() {
@@ -210,10 +210,8 @@ int main() {
     engine.addKeybind(GLFW_KEY_SPACE, GLFW_PRESS, toggleUpdate);
 
     engine.addText(&simulatingText);
-//    engine.addText(&spriteCountObject);
-//    engine.addText(&fpsTextObject);
-
-//    engine.addText(&timeLeft);
+    engine.addText(&spriteCountObject);
+    engine.addText(&fpsTextObject);
 
     engine.setInit(init);
     engine.setDestroy(destroy);

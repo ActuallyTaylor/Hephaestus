@@ -76,3 +76,7 @@ void PhysicsSprite::addForce(glm::vec3 _velocity) {
 bool PhysicsSprite::collidable() {
     return true;
 }
+
+bool PhysicsSprite::canMove() {
+    return true;
+}
