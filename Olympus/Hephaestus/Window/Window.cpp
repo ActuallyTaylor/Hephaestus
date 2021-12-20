@@ -81,8 +81,8 @@ void Window::windowLoop() {
     for(UIElement *element: uiElements) {
         element->updateScreenDimensions(width, height);
     }
-//    Text renderingText = Text("", "./fonts/SFNSRounded.ttf", glm::vec2(10, 645), glm::vec4(1.0,1.0,1.0,1.0));
-//    textManager.addText(&renderingText);
+    Text renderingText = Text("", "./fonts/SFNSRounded.ttf", glm::vec2(10, 645), glm::vec4(1.0,1.0,1.0,1.0));
+    textManager.addText(&renderingText);
 
     while (!glfwWindowShouldClose(window)) {
         framesThisSecond ++;
@@ -101,15 +101,15 @@ void Window::windowLoop() {
         currentTime = glfwGetTime();
         deltaTime = currentTime - lastTime;
         lastTime = currentTime;
-        //"Frame Calculations " + std::to_string(std::chrono::duration_cast<std::chrono::microseconds>(end - start).count()) + "µs ≈ " + std::to_string((end - start) / 1ms) + "ms ≈ " + std::to_string((end - start) / 1s) + "s.";
+        //
 
         // Call user-defined callback functions
-//        const std::chrono::time_point<std::chrono::system_clock> start = std::chrono::system_clock::now();
+        const std::chrono::time_point<std::chrono::system_clock> start = std::chrono::system_clock::now();
         _tick();
         _update();
         _render();
-//        const std::chrono::time_point<std::chrono::system_clock> end = std::chrono::system_clock::now();
-//        renderingText.text = "Speed: " +  std::to_string(float(end. - start));
+        const std::chrono::time_point<std::chrono::system_clock> end = std::chrono::system_clock::now();
+        renderingText.text = "Frame Calculations " + std::to_string(std::chrono::duration_cast<std::chrono::microseconds>(end - start).count()) + "µs ≈ " + std::to_string((end - start) / 1ms) + "ms ≈ " + std::to_string((end - start) / 1s) + "s.";
 
         // Swap front and back buffers
         glfwSwapBuffers(window);

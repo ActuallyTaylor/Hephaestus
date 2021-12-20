@@ -220,16 +220,6 @@ vector
 ./UI/UIElement.hpp
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/UI/UIElement.hpp
 
-/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/main.cpp
-iostream
--
-thread
--
-Hephaestus/Hephaestus.hpp
-/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Hephaestus.hpp
-Hephaestus/Window/Text/TextManager.hpp
-/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Text/TextManager.hpp
-
 /usr/local/include/GL/glew.h
 cstddef
 -
