@@ -11,7 +11,7 @@
 #include "PhysicsSprite.hpp"
 #include <glm/gtx/string_cast.hpp>
 
-float friction = 0.1;
+float elasticity = 0.1;
 
 Sprite::Shape PhysicsSprite::getShape() {
     return this->spriteShape;
@@ -25,18 +25,18 @@ void PhysicsSprite::move(float deltaTime) {
     position += velocity * deltaTime;
 
     if (position.x  < 0.0f) {
-        velocity.x = (-velocity.x * friction);
+        velocity.x = (-velocity.x * elasticity);
         position.x = 0;
     } else if (position.x + dimensions.x > screenSize.x) {
-        velocity.x = (-velocity.x * friction);
+        velocity.x = (-velocity.x * elasticity);
         position.x = screenSize.x - dimensions.x;
     }
 
     if (position.y < 0.0f) {
-        velocity.y = (-velocity.y * friction);
+        velocity.y = (-velocity.y * elasticity);
         position.y = 0;
     } else if (position.y + dimensions.y > screenSize.y) {
-        velocity.y = (-velocity.y * friction);
+        velocity.y = (-velocity.y * elasticity);
         position.y = screenSize.y - dimensions.y;
     }
 }

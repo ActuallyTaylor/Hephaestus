@@ -107,8 +107,8 @@ public:
 
     int getNumberOfSprites();
 
-    int windowWidth();
-    int windowHeight();
+    int windowWidth() const;
+    int windowHeight() const;
 };
 
 #endif //OLYMPUS_HEPHAESTUS_HPP

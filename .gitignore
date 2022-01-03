@@ -1,3 +1,4 @@
 .DS_Store
 Olympus/cmake-build-debug/
 *.log
+GameOfLife/cmake-build-debug/GameOfLife

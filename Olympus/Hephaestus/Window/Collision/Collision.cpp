@@ -12,6 +12,10 @@
 #include "Collision.hpp"
 #include "../Sprite/PhysicsSprite/PhysicsSprite.hpp"
 
+// Inspiration taken from
+// https://github.com/phetsims/collision-lab/blob/02daa56b42da682c85cc2c1828f9a95364d9bfde/js/common/model/CollisionEngine.js#L384
+//
+
 Collision::Collision(bool success, Sprite* one, Sprite* two, glm::vec3 delta, glm::vec3 penetration) {
     this->successful = success;
     this->one = one;

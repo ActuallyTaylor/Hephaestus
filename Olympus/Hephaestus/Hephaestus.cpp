@@ -87,11 +87,11 @@ void Hephaestus::addUIElement(UIElement *element) {
     this->window.addUIElement(element);
 }
 
-int Hephaestus::windowWidth() {
+int Hephaestus::windowWidth() const {
     return this->window.width;
 }
 
-int Hephaestus::windowHeight() {
+int Hephaestus::windowHeight() const {
     return this->window.height;
 }
 
