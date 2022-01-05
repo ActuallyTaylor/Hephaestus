@@ -8,11 +8,12 @@
     =================
 */
 #include "Window.hpp"
+#include "../Scene/Scene.hpp"
 
 Window* self;
 
 Window::Window() {
-    textManager = TextManager();
+//    textManager = TextManager();
 }
 
 Window::Window(std::string sentWindowName, int sentWidth, int sentHeight) {
@@ -20,6 +21,7 @@ Window::Window(std::string sentWindowName, int sentWidth, int sentHeight) {
     windowName = sentWindowName;
     width = sentWidth;
     height = sentHeight;
+    self = this;
 
     // Initialize GLFW library
     if (!glfwInit()) {
@@ -52,38 +54,27 @@ Window::Window(std::string sentWindowName, int sentWidth, int sentHeight) {
     glViewport(0, 0, width, height);
 
     // Set GLFW key callbacks
-    glfwSetKeyCallback(window, keyCallback);
     glfwSetWindowSizeCallback(window, windowCallback);
-    glfwSetMouseButtonCallback(window, mouseButtonCallback);
-
-    textManager = TextManager();
-    textManager.setup();
-
-    defaultSpriteShader.setup();
-    defaultUIShader.setup();
 }
 
 Text renderingText = Text("", "./fonts/SFNSRounded.ttf", glm::vec2(10, 645), glm::vec4(1.0,1.0,1.0,1.0));
 
 void Window::windowLoop() {
     _init();
-    // Disabled to allow
-//    glEnable(GL_DEPTH_TEST);
 
     double currentTime = glfwGetTime();
     double lastTime = glfwGetTime();
     double lastFrameCountTime = glfwGetTime();
 
     int framesThisSecond = 0;
-    self = this;
     // Uncomment this to delimit framerate. Currently, limited because physics breaks.
 //    glfwSwapInterval(0);
 
-    textManager.updateScreenDimensions(width, height);
-    for(UIElement *element: uiElements) {
-        element->updateScreenDimensions(width, height);
-    }
-    textManager.addText(&renderingText);
+//    textManager.updateScreenDimensions(width, height);
+//    for(UIElement *element: uiElements) {
+//        element->updateScreenDimensions(width, height);
+//    }
+//    textManager.addText(&renderingText);
 
     while (!glfwWindowShouldClose(window)) {
         framesThisSecond ++;
@@ -102,6 +93,7 @@ void Window::windowLoop() {
         currentTime = glfwGetTime();
         deltaTime = currentTime - lastTime;
         lastTime = currentTime;
+        currentScene->deltaTime = deltaTime;
 
         // Call user-defined callback functions
         const std::chrono::time_point<std::chrono::system_clock> start = std::chrono::system_clock::now();
@@ -118,41 +110,34 @@ void Window::windowLoop() {
     }
 }
 
-void Window::_init() {
-    if (init != nullptr) {
-        init();
+void Window::_init() const {
+    if (currentScene->init != nullptr) {
+        currentScene->init();
     }
 }
 
-void Window::_destroy() {
-    if (destroy != nullptr) {
-        destroy();
+void Window::_destroy() const {
+    if (currentScene->destroy != nullptr) {
+        currentScene->destroy();
     }
     glfwTerminate();
 }
 
-void Window::_tick() {
-    if (tick != nullptr) {
-        tick();
+void Window::_tick() const {
+    if (currentScene->tick != nullptr) {
+        currentScene->tick();
     }
 }
 
-void Window::_update() {
+void Window::_update() const {
     // TODO: Some improvments could be made here. Maybe check to see if we even need to call move.
-    for (Sprite* sprite: sprites) {
-         if(sprite->canMove()) {
-             sprite->move(deltaTime);
-         }
-    }
-
-    this->controlManager.executeDragging();
-    checkCollisions();
-    if (update != nullptr) {
-        update();
+    currentScene->updateScene();
+    if (currentScene->update != nullptr) {
+        currentScene->update();
     }
 }
 
-void Window::_render() {
+void Window::_render() const {
     // Clear the screen
     glClearColor(0, 0, 0, 0);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -160,30 +145,12 @@ void Window::_render() {
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-    for(Sprite *sprite : sprites) {
-        sprite->draw();
-    }
+    currentScene->drawScene();
 
-    textManager.draw();
-
-    for(UIElement *element: uiElements) {
-        element->draw();
-    }
-
-    if (render != nullptr) {
-        render();
+    if (currentScene->render != nullptr) {
+        currentScene->render();
     }
     glDisable(GL_BLEND);
-}
-
-void Window::keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods) {
-//    printf("KeyCode: %d, ScanCode: %d, Action: %d, Mods: %d\n", key, scancode, action, mods);
-    if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
-        glfwSetWindowShouldClose(window, GLFW_TRUE);
-    } else {
-        self->controlManager.executeKeybinds(key, action);
-    }
-
 }
 
 void Window::windowCallback(GLFWwindow *window, int width, int height) {
@@ -192,51 +159,16 @@ void Window::windowCallback(GLFWwindow *window, int width, int height) {
 //    glViewport(0, 0, width, height);
 //    glOrtho(0.0f, width, height, 0.0f, -1000.0f, 1000.0f );
 
-    for (Sprite *sprite: self->sprites) {
-        sprite->updateScreenDimensions(width, height);
-    }
-    self->textManager.updateScreenDimensions(width, height);
+//    for (Sprite *sprite: self->sprites) {
+//        sprite->updateScreenDimensions(width, height);
+//    }
+//    self->textManager.updateScreenDimensions(width, height);
 
-    for (UIElement *element: self->uiElements) {
-        element->updateScreenDimensions(width, height);
-    }
+//    for (UIElement *element: self->uiElements) {
+//        element->updateScreenDimensions(width, height);
+//    }
 }
 
-void Window::mouseButtonCallback(GLFWwindow* window, int button, int action, int mods) {
-    self->controlManager.executeKeybinds(button, action);
-    if(button == GLFW_MOUSE_BUTTON_LEFT) {
-        if(GLFW_PRESS == action) {
-            self->checkUIClicks();
-            self->controlManager.leftDown = true;
-        } else if(GLFW_RELEASE == action) {
-            self->controlManager.leftDown = false;
-        }
-    } else if (button == GLFW_MOUSE_BUTTON_RIGHT) {
-        if(GLFW_PRESS == action) {
-            self->checkUIClicks();
-            self->controlManager.rightDown = true;
-        }
-        else if(GLFW_RELEASE == action) {
-            self->controlManager.rightDown = false;
-        }
-    }
-}
-
-void Window::addSprite(Sprite *sprite) {
-    sprite->updateScreenDimensions(width, height);
-    sprite->updateCamera(currentCamera);
-    sprite->registerSprite();
-    sprite->shader = defaultSpriteShader;
-    sprites.push_back(sprite);
-}
-
-void Window::addKeybind(Keybind keybind) {
-    controlManager.addKeybind(keybind);
-}
-
-void Window::addDrag(Keybind keybind) {
-    controlManager.addDrag(keybind);
-}
 
 void Window::cameraPositionChanged() {
 
@@ -250,127 +182,15 @@ void Window::cameraTargetChanged() {
 
 }
 
-void Window::addCamera(Camera* inCamera) {
-    inCamera->setUpdatePositionCallback(cameraPositionChanged);
-    inCamera->setUpdateRotationCallback(cameraRotationChanged);
-    inCamera->setUpdateRotationCallback(cameraTargetChanged);
-    currentCamera = inCamera;
-    cameras.push_back(inCamera);
-
-    for (Sprite *sprite: sprites) {
-        sprite->updateCamera(currentCamera);
-    }
-}
-
-void Window::addUIElement(UIElement *element) {
-    element->shader = defaultUIShader;
-//    element->textManager = &textManager;
-//    element->refresh();
-    uiElements.push_back(element);
-}
-
-float clamp(float value, float min, float max) {
-    return std::max(min, std::min(max, value));
-}
-
-void Window::checkCollisions() {
-    if(shouldCheckCollisions) {
-        for (int x = 0; x < sprites.size(); ++x) {
-            Sprite *sprite = sprites[x];
-
-            if(sprite->collidable()) {
-                for (int y = x+1; y < sprites.size(); ++y) {
-                    Sprite *checkSprite = sprites[y];
-                    if (checkSprite->collidable()) {
-                        Collision collision { checkCollision(sprite, checkSprite) };
-                        if(collision.successful) {
-                            collision.perform(deltaTime);
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-// https://learnopengl.com/In-Practice/2D-Game/Collisions/Collision-resolution
-Collision Window::checkCollision(Sprite *one, Sprite *two) {
-    if (one != two) {
-        if (one->getShape() == Sprite::sphere && two->getShape() == Sprite::sphere) {
-            // Calculate collision for sphere & sphere
-            float combinedRadius = one->getRadius() + two->getRadius();
-            glm::vec3 delta = {two->getX() - one->getX(), two->getY() - one->getY(), 0.0};
-            float deltaLength = glm::length(delta);
-            if (deltaLength <= combinedRadius) {
-                float penetration = (combinedRadius - deltaLength);
-
-                return {true, one, two, delta, glm::vec3(penetration, 0.0, 0.0)};
-            }
-        } else if (one->getShape() == Sprite::sphere && two->getShape() == Sprite::square) {
-            // Sphere - AABB collision
-            return checkAABBSphereCollision(two, one);
-        } else if (one->getShape() == Sprite::square && two->getShape() == Sprite::sphere) {
-            // AABB - Sphere collision
-            return checkAABBSphereCollision(one, two);
-        } else if (one->getShape() == Sprite::square && two->getShape() == Sprite::square) {
-            // AABB collision
-            if ((one->getX() <= two->getX() + two->getWidth() && one->getX() + one->getWidth() >= two->getX()) &&
-                (one->getY() <= two->getY() + two->getHeight() && one->getY() + one->getHeight() >= two->getY()) &&
-                (one->getZ() <= two->getZ() && one->getZ() + 0 >= two->getZ())) {
-                glm::vec3 delta = one->getPosition() - two->getPosition();
-                return {true, one, two, delta, glm::vec3(1.0f)};
-            }
-        }
-        return {false, nullptr, nullptr, glm::vec3(1.0f), glm::vec3(1.0f)};
-    }
-    return {false, nullptr, nullptr, glm::vec3(1.0f), glm::vec3(1.0f)};
-}
-
-// https://learnopengl.com/In-Practice/2D-Game/Collisions/Collision-detection
-Collision Window::checkAABBSphereCollision(Sprite* aabb, Sprite* sphere) {
-    glm::vec2 center {sphere->getPosition() + sphere->getRadius()};
-    // calculate AABB info (center, half-extents)
-    glm::vec2 aabb_half_extents {aabb->getWidth() / 2.0f, aabb->getHeight() / 2.0f};
-    glm::vec2 aabb_center(
-            aabb->getX() + aabb_half_extents.x,
-            aabb->getY() + aabb_half_extents.y
-//            aabb->getZ() + aabb_half_extents.z
-    );
-    // get difference vector between both centers
-    glm::vec2 difference = center - aabb_center;
-    glm::vec2 clamped = glm::clamp(difference, -aabb_half_extents, aabb_half_extents);
-    // add clamped value to AABB_center and we get the value of box closest to circle
-    glm::vec2 closest = aabb_center + clamped;
-    // retrieve vector between center circle and closest point AABB and check if length <= radius
-    difference = closest - center;
-
-    return Collision(glm::length(difference) < sphere->getRadius(), aabb, sphere, {difference, 0.0}, {difference, 0.0});
-}
-
-void Window::addText(Text* text) {
-    textManager.addText(text);
-}
-
-void Window::loadFont(std::string fontPath) {
-    textManager.loadFont(fontPath);
-}
-
-glm::vec2 Window::getMousePosition() {
+glm::vec2 Window::getMousePosition() const {
     double xpos, ypos;
     glfwGetCursorPos(window, &xpos, &ypos);
     return { xpos, height - ypos };
 }
 
-void Window::checkUIClicks() {
-    glm::vec2 clickPosition = getMousePosition();
-
-    for(UIElement *element: uiElements) {
-        if ((element->position.x + element->dimensions.x >= clickPosition.x && element->position.x <= clickPosition.x) &&
-            (element->position.y + element->dimensions.y >= clickPosition.y && element->position.y <= clickPosition.y)) {
-            element->isClicked = true;
-            element->primaryFunction();
-        } else {
-            element->isClicked = false;
-        }
-    }
+void Window::openScene(Scene *scene) {
+    scene->setupScene(window);
+    glfwSetKeyCallback(window, scene->keyCallback);
+    glfwSetMouseButtonCallback(window, scene->mouseButtonCallback);
+    currentScene = scene;
 }

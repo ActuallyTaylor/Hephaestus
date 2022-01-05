@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o"
+  "CMakeFiles/Hephaestus.dir/Scene/Scene.cpp.o"
   "CMakeFiles/Hephaestus.dir/Shader/Shader.cpp.o"
   "CMakeFiles/Hephaestus.dir/Window/Camera/Camera.cpp.o"
   "CMakeFiles/Hephaestus.dir/Window/Collision/Collision.cpp.o"

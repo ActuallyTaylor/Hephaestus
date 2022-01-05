@@ -20,8 +20,8 @@ class ControlManager {
 public:
     ControlManager();
 
-    std::vector<Keybind> keybindings;
-    std::vector<Keybind> dragBindings;
+    std::vector<Keybind> keybindings { };
+    std::vector<Keybind> dragBindings { };
 
     bool leftDown = false;
     bool rightDown = false;

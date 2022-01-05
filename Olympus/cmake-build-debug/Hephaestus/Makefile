@@ -154,6 +154,30 @@ Hephaestus.cpp.s:
 	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.s
 .PHONY : Hephaestus.cpp.s
 
+Scene/Scene.o: Scene/Scene.cpp.o
+.PHONY : Scene/Scene.o
+
+# target to build an object file
+Scene/Scene.cpp.o:
+	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Scene/Scene.cpp.o
+.PHONY : Scene/Scene.cpp.o
+
+Scene/Scene.i: Scene/Scene.cpp.i
+.PHONY : Scene/Scene.i
+
+# target to preprocess a source file
+Scene/Scene.cpp.i:
+	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Scene/Scene.cpp.i
+.PHONY : Scene/Scene.cpp.i
+
+Scene/Scene.s: Scene/Scene.cpp.s
+.PHONY : Scene/Scene.s
+
+# target to generate assembly for a file
+Scene/Scene.cpp.s:
+	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/Scene/Scene.cpp.s
+.PHONY : Scene/Scene.cpp.s
+
 Shader/Shader.o: Shader/Shader.cpp.o
 .PHONY : Shader/Shader.o
 
@@ -454,6 +478,9 @@ help:
 	@echo "... Hephaestus.o"
 	@echo "... Hephaestus.i"
 	@echo "... Hephaestus.s"
+	@echo "... Scene/Scene.o"
+	@echo "... Scene/Scene.i"
+	@echo "... Scene/Scene.s"
 	@echo "... Shader/Shader.o"
 	@echo "... Shader/Shader.i"
 	@echo "... Shader/Shader.s"

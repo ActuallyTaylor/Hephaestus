@@ -25,66 +25,12 @@ Shader Hephaestus::createShader(std::string vertexPath, std::string fragmentPath
     return shader;
 }
 
-void Hephaestus::addCamera(Camera *camera) {
-    window.addCamera(camera);
-}
-
-void Hephaestus::addSprite(Sprite *sprite) {
-    window.addSprite(sprite);
-}
-
-void Hephaestus::setInit(Function function1) {
-    this->window.init = function1;
-}
-
-void Hephaestus::setDestroy(Function function1) {
-    this->window.destroy = function1;
-}
-
-void Hephaestus::setTick(Function function1) {
-    this->window.tick = function1;
-}
-
-void Hephaestus::setUpdate(Function function1) {
-    this->window.update = function1;
-}
-
-void Hephaestus::setRender(Function function1) {
-    this->window.render = function1;
-}
-
-void Hephaestus::addKeybind(int inKeyCode, int inAction, Function inExecutionFunction) {
-    Keybind keybind = Keybind{inKeyCode, inAction, inExecutionFunction};
-    this->window.addKeybind(keybind);
-}
-
-void Hephaestus::addDrag(int keyCode, Function executionFunction) {
-    Keybind keybind = Keybind{keyCode, GLFW_PRESS, executionFunction};
-    this->window.addDrag(keybind);
-}
-
-int Hephaestus::getFPS() {
+int Hephaestus::getFPS() const {
     return this->window.framesPerSecond;
-}
-
-int Hephaestus::getNumberOfSprites() {
-    return this->window.sprites.size();
-}
-
-void Hephaestus::addText(Text* text) {
-    this->window.addText(text);
-}
-
-void Hephaestus::loadFont(std::string fontPath) {
-    this->window.loadFont(fontPath);
 }
 
 glm::vec2 Hephaestus::getMousePosition() {
     return this->window.getMousePosition();
-}
-
-void Hephaestus::addUIElement(UIElement *element) {
-    this->window.addUIElement(element);
 }
 
 int Hephaestus::windowWidth() const {
@@ -95,6 +41,6 @@ int Hephaestus::windowHeight() const {
     return this->window.height;
 }
 
-void Hephaestus::setWindowShouldCheckCollision(bool _collision) {
-    window.shouldCheckCollisions = _collision;
+void Hephaestus::openScene(Scene *scene) {
+    window.openScene(scene);
 }

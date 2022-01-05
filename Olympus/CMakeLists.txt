@@ -3,7 +3,7 @@ project(Olympus)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Olympus main.cpp ${someResources} Game/Player.cpp Game/Player.hpp)
+add_executable(Olympus main.cpp ${someResources})
 
 find_package(glfw3 3.3 REQUIRED)
 target_link_libraries(Olympus glfw)

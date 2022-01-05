@@ -79,36 +79,21 @@ CMakeFiles/Olympus.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Olympus.dir/main.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/main.cpp -o CMakeFiles/Olympus.dir/main.cpp.s
 
-CMakeFiles/Olympus.dir/Game/Player.cpp.o: CMakeFiles/Olympus.dir/flags.make
-CMakeFiles/Olympus.dir/Game/Player.cpp.o: ../Game/Player.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Olympus.dir/Game/Player.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Olympus.dir/Game/Player.cpp.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Game/Player.cpp
-
-CMakeFiles/Olympus.dir/Game/Player.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Olympus.dir/Game/Player.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Game/Player.cpp > CMakeFiles/Olympus.dir/Game/Player.cpp.i
-
-CMakeFiles/Olympus.dir/Game/Player.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Olympus.dir/Game/Player.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Game/Player.cpp -o CMakeFiles/Olympus.dir/Game/Player.cpp.s
-
 # Object files for target Olympus
 Olympus_OBJECTS = \
-"CMakeFiles/Olympus.dir/main.cpp.o" \
-"CMakeFiles/Olympus.dir/Game/Player.cpp.o"
+"CMakeFiles/Olympus.dir/main.cpp.o"
 
 # External object files for target Olympus
 Olympus_EXTERNAL_OBJECTS =
 
 Olympus: CMakeFiles/Olympus.dir/main.cpp.o
-Olympus: CMakeFiles/Olympus.dir/Game/Player.cpp.o
 Olympus: CMakeFiles/Olympus.dir/build.make
 Olympus: Hephaestus/libHephaestus.a
 Olympus: /usr/local/lib/libglfw.3.3.dylib
 Olympus: /usr/local/lib/libGLEW.2.2.0.dylib
 Olympus: /usr/local/lib/libfreetype.dylib
 Olympus: CMakeFiles/Olympus.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Olympus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Olympus"
 	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E copy_directory /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Resources /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Olympus.dir/link.txt --verbose=$(VERBOSE)
 

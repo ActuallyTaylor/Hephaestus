@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Olympus.dir/Game/Player.cpp.o"
   "CMakeFiles/Olympus.dir/main.cpp.o"
   "Olympus"
   "Olympus.pdb"

@@ -1,9 +1,11 @@
 #include <iostream>
 #include <thread>
 #include "Hephaestus/Hephaestus.hpp"
-#include "Hephaestus/Window/Text/TextManager.hpp"
+#include "Hephaestus/Scene/Scene.hpp"
+#include "Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.hpp"
 
 Hephaestus engine = Hephaestus("Hephaestus Engine");
+Scene mainScene = Scene();
 Camera mainCamera = Camera();
 
 bool shouldSpawn = false;
@@ -27,9 +29,8 @@ void init() {
     printf("Renderer: %s\n", renderer);
     printf("OpenGL version supported %s\n", version);
 
-    engine.addCamera(&mainCamera);
-
-    engine.addKeybind(GLFW_KEY_A, GLFW_PRESS, stopSpawning);
+    mainScene.addCamera(&mainCamera, true);
+    mainScene.addKeybind(GLFW_KEY_A, GLFW_PRESS, stopSpawning);
 }
 
 void destroy() {
@@ -37,7 +38,6 @@ void destroy() {
 }
 
 void tick() {
-//    sprites.push_back(sprite);
     if(numb % 5 == 0 && shouldSpawn) {
         int randDiff = rand() % 10;
         int size = 10;//(rand() % 25) + 5;
@@ -45,7 +45,7 @@ void tick() {
         sprite->setMass(1);
 
         if (!sprite->getRegistered()) {
-            engine.addSprite(sprite);
+            mainScene.addSprite(sprite);
         }
     }
     numb ++;
@@ -63,13 +63,9 @@ void render() {
     std::string fpsText = "FPS: " + std::to_string(fps) + ", Frametime: " + std::to_string(1000.0 / double(fps));
     fpsTextObject.text = fpsText;
 
-    int spriteCount = engine.getNumberOfSprites();
-    std::string spriteText = "Sprites: " + std::to_string(spriteCount);
-    spriteCountObject.text = spriteText;
-}
-
-void clickButton() {
-    std::cout << "Position: " << glm::to_string(engine.getMousePosition()) << std::endl;
+//    int spriteCount = engine.getNumberOfSprites();
+//    std::string spriteText = "Sprites: " + std::to_string(spriteCount);
+//    spriteCountObject.text = spriteText;
 }
 
 void spawnOnCursor() {
@@ -80,7 +76,7 @@ void spawnOnCursor() {
     sprite->setMass(1);
 
     if (!sprite->getRegistered()) {
-        engine.addSprite(sprite);
+        mainScene.addSprite(sprite);
     }
 }
 
@@ -88,20 +84,21 @@ int main() {
     startButton.setBackgroundColor(glm::vec4(125, 223, 100, 127.5));
     startButton.setOnClick(stopSpawning);
 //    startButton.setNormalText("Hello World", "./fonts/SFNSRounded.ttf", { 0.4, 0.3, 0.4, 1.0});
-    engine.addUIElement(&startButton);
+    mainScene.addUIElement(&startButton);
 
-    engine.addKeybind(GLFW_MOUSE_BUTTON_LEFT, GLFW_PRESS, clickButton);
-//    engine.addDrag(GLFW_MOUSE_BUTTON_LEFT, spawnOnCursor);
-    engine.loadFont("./fonts/SFNSRounded.ttf");
+    mainScene.addDrag(GLFW_MOUSE_BUTTON_LEFT, spawnOnCursor);
+    mainScene.loadFont("./fonts/SFNSRounded.ttf");
 
-    engine.addText(&spriteCountObject);
-    engine.addText(&fpsTextObject);
+    mainScene.addText(&spriteCountObject);
+    mainScene.addText(&fpsTextObject);
 
-    engine.setInit(init);
-    engine.setDestroy(destroy);
-    engine.setTick(tick);
-    engine.setUpdate(update);
-    engine.setRender(render);
+    engine.openScene(&mainScene);
+
+    mainScene.setInit(init);
+    mainScene.setDestroy(destroy);
+    mainScene.setTick(tick);
+    mainScene.setUpdate(update);
+    mainScene.setRender(render);
 
     engine.startWindowLoop();
 

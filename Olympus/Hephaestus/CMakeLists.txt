@@ -3,7 +3,7 @@ project(Hephaestus)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_library(Hephaestus Hephaestus.cpp Hephaestus.cpp Hephaestus.hpp Window/Window.cpp Window/Window.hpp Shader/Shader.cpp Shader/Shader.hpp Window/Sprite/Sprite.cpp Window/Sprite/Sprite.hpp Library/stb_image.hpp Window/Controls/ControlManager.cpp Window/Controls/ControlManager.hpp Window/Controls/Keybind/Keybind.cpp Window/Controls/Keybind/Keybind.hpp Window/Camera/Camera.cpp Window/Camera/Camera.hpp Window/Sprite/PhysicsSprite/PhysicsSprite.cpp Window/Sprite/PhysicsSprite/PhysicsSprite.hpp Window/Collision/Collision.cpp Window/Collision/Collision.hpp Window/Text/TextManager.cpp Window/Text/TextManager.hpp Window/Text/Text.cpp Window/Text/Text.hpp Window/UI/Button/Button.cpp Window/UI/Button/Button.hpp Window/UI/UIElement.cpp Window/UI/UIElement.hpp)
+add_library(Hephaestus Hephaestus.cpp Hephaestus.cpp Hephaestus.hpp Window/Window.cpp Window/Window.hpp Shader/Shader.cpp Shader/Shader.hpp Window/Sprite/Sprite.cpp Window/Sprite/Sprite.hpp Library/stb_image.hpp Window/Controls/ControlManager.cpp Window/Controls/ControlManager.hpp Window/Controls/Keybind/Keybind.cpp Window/Controls/Keybind/Keybind.hpp Window/Camera/Camera.cpp Window/Camera/Camera.hpp Window/Sprite/PhysicsSprite/PhysicsSprite.cpp Window/Sprite/PhysicsSprite/PhysicsSprite.hpp Window/Collision/Collision.cpp Window/Collision/Collision.hpp Window/Text/TextManager.cpp Window/Text/TextManager.hpp Window/Text/Text.cpp Window/Text/Text.hpp Window/UI/Button/Button.cpp Window/UI/Button/Button.hpp Window/UI/UIElement.cpp Window/UI/UIElement.hpp Scene/Scene.cpp Scene/Scene.hpp)
 
 find_package(glfw3 3.3 REQUIRED)
 target_link_libraries(Hephaestus PRIVATE glfw)
