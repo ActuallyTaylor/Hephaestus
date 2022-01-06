@@ -56,7 +56,7 @@ void main()
 }
 )"""";
 
-    Shader textShader = Shader(defaultVertexShader, defaultFragmentShader);
+    Shader textShader = Shader("Text Manager Shader", defaultVertexShader, defaultFragmentShader);
 
     glm::mat4 projection;
     glm::vec2 screenSize { 0.0, 0.0 };

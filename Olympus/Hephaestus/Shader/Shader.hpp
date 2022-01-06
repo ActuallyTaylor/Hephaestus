@@ -29,8 +29,9 @@ using namespace std;
 class Shader {
 public:
     Shader();
-    Shader(string vertexPath, string fragmentPath);
-    Shader(const char * _vertexShader, const char * _fragmentShader);
+    Shader(string identifier);
+    Shader(string identifier, string vertexPath, string fragmentPath);
+    Shader(string identifier, const char * _vertexShader, const char * _fragmentShader);
 
     void setup();
     void use();
@@ -48,6 +49,7 @@ public:
 private:
     const char *vertexShader;
     const char *fragmentShader;
+    string identifier { };
     GLuint shaderProgram;
 
     bool isSetup = false;

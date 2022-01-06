@@ -19,11 +19,9 @@ Scene::Scene() {
     textManager.setup();
     self_scene = this;
 
-    printf("Setup 2\n");
-    defaultSpriteShader = Shader(defaultVertexShader, defaultFragmentShader);
+    printf("Setup 1\n");
     defaultSpriteShader.setup();
 
-    defaultUIShader = Shader(defaultVertexShader, defaultFragmentShader);
     printf("Setup 2\n");
     defaultUIShader.setup();
 }
@@ -62,7 +60,7 @@ void Scene::loadFont(std::string fontPath) {
 }
 
 void Scene::addUIElement(UIElement *element) {
-    element->shader = defaultUIShader;
+    element->addShader(defaultUIShader);
     uiElements.push_back(element);
 }
 

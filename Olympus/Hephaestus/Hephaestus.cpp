@@ -19,8 +19,8 @@ void Hephaestus::startWindowLoop() {
     window.windowLoop();
 }
 
-Shader Hephaestus::createShader(std::string vertexPath, std::string fragmentPath) {
-    Shader shader = Shader{std::move(vertexPath), std::move(fragmentPath)};
+Shader Hephaestus::createShader(std::string identifier, std::string vertexPath, std::string fragmentPath) {
+    Shader shader = Shader{identifier, std::move(vertexPath), std::move(fragmentPath)};
     shader.setup();
     return shader;
 }

@@ -78,9 +78,8 @@ void main()
     FragColor = texture(ourTexture, TexCoord);
 }
 )"""";
-
-    Shader defaultSpriteShader;
-    Shader defaultUIShader;
+    Shader defaultSpriteShader = Shader("Scene Sprite Shader", defaultVertexShader, defaultFragmentShader);
+    Shader defaultUIShader = Shader("Scene UIr Shader", defaultVertexShader, defaultFragmentShader);
 
     GLFWwindow* parentWindow;
 

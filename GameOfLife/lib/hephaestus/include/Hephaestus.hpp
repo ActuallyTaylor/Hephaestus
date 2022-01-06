@@ -50,7 +50,7 @@ public:
     /// \param vertexPath The string path to the vertex shader
     /// \param fragmentPath The string path to the fragment shader
     /// \return A new setup shader with the speicifed vertex and fragment shader
-    static Shader createShader(std::string vertexPath, std::string fragmentPath);
+    static Shader createShader(std::string identifier, std::string vertexPath, std::string fragmentPath);
 
     //// Get the current mouse position
     glm::vec2 getMousePosition();

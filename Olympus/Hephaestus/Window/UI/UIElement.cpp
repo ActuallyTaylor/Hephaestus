@@ -14,13 +14,11 @@ UIElement::UIElement(std::string _texturePath, glm::vec3 _position, glm::vec2 _d
     position = _position;
     dimensions = _dimensions;
     rotation = _rotation;
-    projection = glm::ortho(0.0f, screenSize.x, 0.0f, screenSize.y, -1000.0f, 1000.0f);
-    shader.setMatrix4("projection", projection);
-    shader.setup();
 
     createTexture(_texturePath);
-    createVirtualBufferObject();
 }
+
+
 
 void UIElement::createTexture(const std::string& texturePath) {
     /*
@@ -128,3 +126,12 @@ void UIElement::setTextManager(TextManager *_textManager) {
 }
 
 void UIElement::refresh() {}
+
+void UIElement::addShader(Shader _shader) {
+    shader = _shader;
+    projection = glm::ortho(0.0f, screenSize.x, 0.0f, screenSize.y, -1000.0f, 1000.0f);
+    shader.setMatrix4("projection", projection);
+    shader.setup();
+
+    createVirtualBufferObject();
+}

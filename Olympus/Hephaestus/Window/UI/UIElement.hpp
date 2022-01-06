@@ -27,7 +27,7 @@
 class UIElement {
 public:
     UIElement(std::string _texturePath, glm::vec3 _position = {0.0f, 0.0f, 0.0f}, glm::vec2 _dimensions = {100.0f, 100.0f}, glm::vec3 _rotation = {0.0f, 0.0f, 0.0f});
-
+    void addShader(Shader shader);
 
     glm::vec3 position { 0.0, 0.0, 0.0 };
     glm::vec2 dimensions { 0.0, 0.0 };
@@ -37,7 +37,7 @@ public:
 
     bool isClicked = false;
 
-    Shader shader;
+    Shader shader { "Hold UIManager Shader" };
 
     void draw();
     void updateScreenDimensions(int width, int height);

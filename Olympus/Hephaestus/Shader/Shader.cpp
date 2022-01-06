@@ -9,8 +9,8 @@
 */
 
 #include "Shader.hpp"
-
 Shader::Shader() {
+    identifier = "__NULL SHADER__";
     // Build Shaders
     string line,text;
     ifstream in("./shader.frag");
@@ -31,7 +31,30 @@ Shader::Shader() {
     fragmentShader = c2;
 }
 
-Shader::Shader(string vertexPath, string fragmentPath) {
+Shader::Shader(string _identifier) {
+    identifier = _identifier;
+    // Build Shaders
+    string line,text;
+    ifstream in("./shader.frag");
+    while(getline(in, line)) {
+        text += line + "\n";
+    }
+    char* c = new char[text.length() + 1];
+    strcpy(c, text.c_str());
+    vertexShader = c;
+
+    string line2,text2;
+    ifstream in2("./shader.vert");
+    while(getline(in2, line2)) {
+        text2 += line2 + "\n";
+    }
+    char* c2 = new char[text.length() + 1];
+    strcpy(c2, text2.c_str());
+    fragmentShader = c2;
+}
+
+Shader::Shader(string _identifier, string vertexPath, string fragmentPath) {
+    identifier = _identifier;
     // Build Shaders
     string line,text;
     ifstream in(vertexPath);
@@ -71,7 +94,8 @@ Shader::Shader(string vertexPath, string fragmentPath) {
     }
 }
 
-Shader::Shader(const char * _vertexShader, const char * _fragmentShader) {
+Shader::Shader(string _identifier, const char * _vertexShader, const char * _fragmentShader) {
+    identifier = _identifier;
     vertexShader = _vertexShader;
     fragmentShader = _fragmentShader;
 }
@@ -89,19 +113,21 @@ void Shader::setup() {
     if(!success)
     {
         glGetShaderInfoLog(vs, 512, NULL, infoLog);
-        std::cout << "ERROR::SHADER::VERTEX::COMPILATION_FAILED\n" << infoLog << std::endl;
+        std::cout << "ERROR: Vertex Shader Compilation Failed: " << identifier.c_str() << "\n" << infoLog << std::endl;
     } else {
 //        std::cout << "Successfully Compiled Vertex Shader" << std::endl;
     }
 
+    int  success2;
+    char infoLog2[512];
     GLuint fs = glCreateShader(GL_FRAGMENT_SHADER);
     glShaderSource(fs, 1, &fragmentShader, NULL);
     glCompileShader(fs);
-    glGetShaderiv(fs, GL_COMPILE_STATUS, &success);
+    glGetShaderiv(fs, GL_COMPILE_STATUS, &success2);
     if(!success)
     {
-        glGetShaderInfoLog(vs, 512, NULL, infoLog);
-        std::cout << "ERROR::SHADER::FRAGMENT::COMPILATION_FAILED\n" << infoLog << std::endl;
+        glGetShaderInfoLog(vs, 512, NULL, infoLog2);
+        std::cout << "ERROR: Fragment Shader Compilation Failed: " << identifier.c_str() << "\n" << infoLog2 << std::endl;
     } else {
 //        std::cout << "Successfully Compiled Fragment Shader" << std::endl;
     }
@@ -112,10 +138,12 @@ void Shader::setup() {
     glAttachShader(shaderProgram, vs);
     glLinkProgram(shaderProgram);
 
-    glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
+    int  success3;
+    char infoLog3[512];
+    glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success3);
     if(!success) {
-        glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
-        std::cout << "ERROR::SHADER::PROGRAM::COMPILATION_FAILED\n" << infoLog << std::endl;
+        glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog3);
+        std::cout << "ERROR::SHADER::PROGRAM::COMPILATION_FAILED\n" << infoLog3 << std::endl;
     } else {
 //        std::cout << "Successfully Compiled Shader Program" << std::endl;
     }
@@ -126,7 +154,7 @@ void Shader::setup() {
 
 void Shader::use() {
     if(!isSetup) {
-        std::cout << "Shader Not Setup" << std::endl;
+        std::cout << "Shader Not Setup:" << identifier.c_str() << std::endl;
     }
     glUseProgram(shaderProgram);
 }
@@ -194,4 +222,3 @@ void Shader::setMatrix4(const char *name, const glm::mat4 &matrix, bool useShade
     }
     glUniformMatrix4fv(glGetUniformLocation(shaderProgram, name), 1, false, glm::value_ptr(matrix));
 }
-
