@@ -57,7 +57,7 @@ Window::Window(std::string sentWindowName, int sentWidth, int sentHeight) {
     glfwSetWindowSizeCallback(window, windowCallback);
 }
 
-Text renderingText = Text("", "./fonts/SFNSRounded.ttf", glm::vec2(10, 645), glm::vec4(1.0,1.0,1.0,1.0));
+Text renderingText = Text("", "./fonts/SFNSRounded.ttf", glm::vec2(10, 10), glm::vec4(1.0,1.0,1.0,1.0));
 
 void Window::windowLoop() {
     _init();
@@ -69,12 +69,8 @@ void Window::windowLoop() {
     int framesThisSecond = 0;
     // Uncomment this to delimit framerate. Currently, limited because physics breaks.
 //    glfwSwapInterval(0);
-
-//    textManager.updateScreenDimensions(width, height);
-//    for(UIElement *element: uiElements) {
-//        element->updateScreenDimensions(width, height);
-//    }
-//    textManager.addText(&renderingText);
+    currentScene->addText(&renderingText);
+    currentScene->updateSceneDimensions(width, height);
 
     while (!glfwWindowShouldClose(window)) {
         framesThisSecond ++;
@@ -159,14 +155,7 @@ void Window::windowCallback(GLFWwindow *window, int width, int height) {
 //    glViewport(0, 0, width, height);
 //    glOrtho(0.0f, width, height, 0.0f, -1000.0f, 1000.0f );
 
-//    for (Sprite *sprite: self->sprites) {
-//        sprite->updateScreenDimensions(width, height);
-//    }
-//    self->textManager.updateScreenDimensions(width, height);
-
-//    for (UIElement *element: self->uiElements) {
-//        element->updateScreenDimensions(width, height);
-//    }
+    self->currentScene->updateSceneDimensions(width, height);
 }
 
 

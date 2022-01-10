@@ -19,10 +19,7 @@ Scene::Scene() {
     textManager.setup();
     self_scene = this;
 
-    printf("Setup 1\n");
     defaultSpriteShader.setup();
-
-    printf("Setup 2\n");
     defaultUIShader.setup();
 }
 
@@ -261,6 +258,20 @@ void Scene::updateScene() {
 
 void Scene::pollDragging() {
     this->controlManager.executeDragging();
+}
+
+void Scene::updateSceneDimensions(int _width, int _height) {
+    width = _width;
+    height = _height;
+
+    for (Sprite *sprite: sprites) {
+        sprite->updateScreenDimensions(width, height);
+    }
+    textManager.updateScreenDimensions(width, height);
+
+    for (UIElement *element: uiElements) {
+        element->updateScreenDimensions(width, height);
+    }
 }
 
 

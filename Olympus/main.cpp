@@ -56,16 +56,11 @@ void update() {
 }
 
 Text fpsTextObject = { "Hello World", "./fonts/SFNSRounded.ttf", {10.0f, 695.0f }, { 0.5, 0.8f, 0.2f, 1.0f } };
-Text spriteCountObject = { "Hello World", "./fonts/SFNSRounded.ttf", {10.0f, 670.0f }, { 0.5, 0.8f, 0.2f, 1.0f } };
 
 void render() {
     int fps = engine.getFPS();
     std::string fpsText = "FPS: " + std::to_string(fps) + ", Frametime: " + std::to_string(1000.0 / double(fps));
     fpsTextObject.text = fpsText;
-
-//    int spriteCount = engine.getNumberOfSprites();
-//    std::string spriteText = "Sprites: " + std::to_string(spriteCount);
-//    spriteCountObject.text = spriteText;
 }
 
 void spawnOnCursor() {
@@ -89,7 +84,6 @@ int main() {
     mainScene.addDrag(GLFW_MOUSE_BUTTON_LEFT, spawnOnCursor);
     mainScene.loadFont("./fonts/SFNSRounded.ttf");
 
-    mainScene.addText(&spriteCountObject);
     mainScene.addText(&fpsTextObject);
 
     engine.openScene(&mainScene);

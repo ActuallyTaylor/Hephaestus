@@ -102,6 +102,8 @@ public:
 
     void drawScene();
     void updateScene();
+
+    void updateSceneDimensions(int _width, int _height);
     /*
      * Set Scene Callback Functions
      *  - You do not need to set all of these. They are just there if you need them.

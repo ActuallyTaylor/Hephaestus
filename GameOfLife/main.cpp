@@ -1,14 +1,19 @@
 #include <iostream>
+#include "./lib/hephaestus/include/Window/Sprite/Sprite.hpp"
 #include "./lib/hephaestus/include/Hephaestus.hpp"
+#include "./lib/hephaestus/include/Window/Text/Text.hpp"
+#include "./lib/hephaestus/include/Scene/Scene.hpp"
 #include <vector>
 
 Hephaestus engine = Hephaestus("Conways game of life");
 Camera mainCamera = Camera();
+Scene mainScene = Scene();
 
 glm::ivec2 movement { 0.0, 0.0};
 const int gameFieldSize = 72;
 const int spriteSize = 10;
 Sprite spriteBoard[gameFieldSize][gameFieldSize];
+
 int interval = 0;
 int updateCount = 0;
 bool shouldUpdate = false;
@@ -151,7 +156,7 @@ void init() {
     printf("Renderer: %s\n", renderer);
     printf("OpenGL version supported %s\n", version);
 
-    engine.addCamera(&mainCamera);
+    mainScene.addCamera(&mainCamera, true);
 }
 
 void destroy() {
@@ -176,13 +181,13 @@ void update() {
 
 
 void render() {
-    int fps = engine.getFPS();
-    std::string fpsText = "FPS: " + std::to_string(fps) + ", Frametime: " + std::to_string(1000.0 / double(fps));
-    fpsTextObject.text = fpsText;
-
-    int spriteCount = engine.getNumberOfSprites();
-    std::string spriteText = "Sprites: " + std::to_string(spriteCount);
-    spriteCountObject.text = spriteText;
+//    int fps = engine.getFPS();
+//    std::string fpsText = "FPS: " + std::to_string(fps) + ", Frametime: " + std::to_string(1000.0 / double(fps));
+//    fpsTextObject.text = fpsText;
+//
+//    int spriteCount = mainScene.getNumberOfSprites();
+//    std::string spriteText = "Sprites: " + std::to_string(spriteCount);
+//    spriteCountObject.text = spriteText;
 }
 
 void toggleUpdate() {
@@ -220,32 +225,32 @@ int main() {
 
             spriteBoard[x][y] = Sprite{ "./Images/Piece2.png", glm::vec3(x * spriteSize, y * spriteSize, 0.0), glm::vec2(spriteSize,spriteSize)};
             spriteBoard[x][y].hidden = true;
-            engine.addSprite(&spriteBoard[x][y]);
+            mainScene.addSprite(&spriteBoard[x][y]);
         }
     }
 
-    engine.setWindowShouldCheckCollision(false);
-    engine.loadFont("./Fonts/SFNSRounded.ttf");
+    mainScene.setShouldCheckCollision(false);
+    mainScene.loadFont("./Fonts/SFNSRounded.ttf");
 
-    engine.addKeybind(GLFW_KEY_RIGHT, GLFW_PRESS, moveRight);
-    engine.addKeybind(GLFW_KEY_LEFT, GLFW_PRESS, moveLeft);
-    engine.addKeybind(GLFW_KEY_UP, GLFW_PRESS, moveUp);
-    engine.addKeybind(GLFW_KEY_DOWN, GLFW_PRESS, moveDown);
+    mainScene.addKeybind(GLFW_KEY_RIGHT, GLFW_PRESS, moveRight);
+    mainScene.addKeybind(GLFW_KEY_LEFT, GLFW_PRESS, moveLeft);
+    mainScene.addKeybind(GLFW_KEY_UP, GLFW_PRESS, moveUp);
+    mainScene.addKeybind(GLFW_KEY_DOWN, GLFW_PRESS, moveDown);
 
 
-    engine.addDrag(GLFW_MOUSE_BUTTON_LEFT, dragMouse);
-    engine.addKeybind(GLFW_MOUSE_BUTTON_LEFT, GLFW_PRESS, clickMouse);
-    engine.addKeybind(GLFW_KEY_SPACE, GLFW_PRESS, toggleUpdate);
+    mainScene.addDrag(GLFW_MOUSE_BUTTON_LEFT, dragMouse);
+    mainScene.addKeybind(GLFW_MOUSE_BUTTON_LEFT, GLFW_PRESS, clickMouse);
+    mainScene.addKeybind(GLFW_KEY_SPACE, GLFW_PRESS, toggleUpdate);
 
-    engine.addText(&simulatingText);
-    engine.addText(&spriteCountObject);
-    engine.addText(&fpsTextObject);
+    mainScene.addText(&simulatingText);
+    mainScene.addText(&spriteCountObject);
+    mainScene.addText(&fpsTextObject);
 
-    engine.setInit(init);
-    engine.setDestroy(destroy);
-    engine.setTick(tick);
-    engine.setUpdate(update);
-    engine.setRender(render);
+    mainScene.setInit(init);
+    mainScene.setDestroy(destroy);
+    mainScene.setTick(tick);
+    mainScene.setUpdate(update);
+    mainScene.setRender(render);
 
     engine.startWindowLoop();
 
