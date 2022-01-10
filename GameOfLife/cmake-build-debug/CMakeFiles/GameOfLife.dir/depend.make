@@ -5,12 +5,12 @@ CMakeFiles/GameOfLife.dir/main.cpp.o: \
  /Library/Frameworks/Mono.framework/Headers/ft2build.h \
  ../lib/hephaestus/include/Hephaestus.hpp \
  ../lib/hephaestus/include/Library/stb_image.hpp \
+ ../lib/hephaestus/include/Scene/Scene.hpp \
  ../lib/hephaestus/include/Shader/Shader.hpp \
  ../lib/hephaestus/include/Window/Camera/Camera.hpp \
  ../lib/hephaestus/include/Window/Collision/Collision.hpp \
  ../lib/hephaestus/include/Window/Controls/ControlManager.hpp \
  ../lib/hephaestus/include/Window/Controls/Keybind/Keybind.hpp \
- ../lib/hephaestus/include/Window/Sprite/PhysicsSprite/PhysicsSprite.hpp \
  ../lib/hephaestus/include/Window/Sprite/Sprite.hpp \
  ../lib/hephaestus/include/Window/Text/Text.hpp \
  ../lib/hephaestus/include/Window/Text/TextManager.hpp \

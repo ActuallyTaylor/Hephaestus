@@ -89,6 +89,7 @@ public:
 
     void addSprite(Sprite *sprite);
     void setShouldCheckCollision(bool _collision);
+    int getNumberOfSprites();
 
     void addText(Text *text);
     void loadFont(std::string fontPath);

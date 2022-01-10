@@ -89,6 +89,7 @@ public:
 
     void addSprite(Sprite *sprite);
     void setShouldCheckCollision(bool _collision);
+    int getNumberOfSprites();
 
     void addText(Text *text);
     void loadFont(std::string fontPath);
@@ -102,6 +103,8 @@ public:
 
     void drawScene();
     void updateScene();
+
+    void updateSceneDimensions(int _width, int _height);
     /*
      * Set Scene Callback Functions
      *  - You do not need to set all of these. They are just there if you need them.

@@ -274,4 +274,6 @@ void Scene::updateSceneDimensions(int _width, int _height) {
     }
 }
 
-
+int Scene::getNumberOfSprites() {
+    return sprites.size();
+}

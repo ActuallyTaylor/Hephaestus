@@ -60,6 +60,12 @@ intrin.h
 arm_neon.h
 -
 
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Scene/Scene.cpp
+Scene.hpp
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Scene/Scene.hpp
+../Window/Window.hpp
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Window.hpp
+
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Scene/Scene.hpp
 string
 -

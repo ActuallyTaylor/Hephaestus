@@ -53,7 +53,7 @@ void clickMouse() {
     glm::ivec2 boardPosition = { roundTo10(int(mousePosition.x)) + movement.x, roundTo10(int(mousePosition.y)) + movement.y};
     glm::ivec2 arrayPosition = { boardPosition.x / spriteSize, boardPosition.y / spriteSize };
 
-    printf("Board Position: %s - Movement: %s\n", glm::to_string(boardPosition).c_str(), glm::to_string(movement).c_str());
+    printf("Board Position: %s - Array Position: %s\n", glm::to_string(boardPosition).c_str(), glm::to_string(arrayPosition).c_str());
 
     if((arrayPosition.x < 0 || arrayPosition.x >= gameFieldSize) || (arrayPosition.y < 0 || arrayPosition.y >= gameFieldSize)) return;
 
@@ -181,13 +181,13 @@ void update() {
 
 
 void render() {
-//    int fps = engine.getFPS();
-//    std::string fpsText = "FPS: " + std::to_string(fps) + ", Frametime: " + std::to_string(1000.0 / double(fps));
-//    fpsTextObject.text = fpsText;
-//
-//    int spriteCount = mainScene.getNumberOfSprites();
-//    std::string spriteText = "Sprites: " + std::to_string(spriteCount);
-//    spriteCountObject.text = spriteText;
+    int fps = engine.getFPS();
+    std::string fpsText = "FPS: " + std::to_string(fps) + ", Frametime: " + std::to_string(1000.0 / double(fps));
+    fpsTextObject.text = fpsText;
+
+    int spriteCount = mainScene.getNumberOfSprites();
+    std::string spriteText = "Sprites: " + std::to_string(spriteCount);
+    spriteCountObject.text = spriteText;
 }
 
 void toggleUpdate() {
@@ -251,6 +251,8 @@ int main() {
     mainScene.setTick(tick);
     mainScene.setUpdate(update);
     mainScene.setRender(render);
+
+    engine.openScene(&mainScene);
 
     engine.startWindowLoop();
 
