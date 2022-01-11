@@ -15,20 +15,79 @@
   <component name="ChangeListManager">
     <list default="true" id="f22769bb-d6a0-46e4-a0f3-ebdc8ac76c3d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/GameOfLife.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/GameOfLife.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/GameOfLife.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/GameOfLife.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/GameOfLife.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/GameOfLife.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/GameOfLife.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/GameOfLife.dir/main.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/GameOfLife" beforeDir="false" afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/GameOfLife" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Scene/Scene.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Scene/Scene.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/lib/libHephaestus.a" beforeDir="false" afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/lib/libHephaestus.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GameOfLife/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../GameOfLife/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Hephaestus.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Hephaestus.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Hephaestus.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Hephaestus.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Scene/Scene.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Scene/Scene.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hephaestus/Scene/Scene.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Scene/Scene.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Window/Camera/Camera.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Camera/Camera.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Window/Camera/Camera.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Camera/Camera.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Window/Collision/Collision.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Collision/Collision.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Window/Collision/Collision.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Collision/Collision.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Window/Controls/ControlManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Controls/ControlManager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Window/Controls/ControlManager.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Controls/ControlManager.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Window/Controls/Keybind/Keybind.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Controls/Keybind/Keybind.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Window/Controls/Keybind/Keybind.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Controls/Keybind/Keybind.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Sprite/PhysicsSprite/PhysicsSprite.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Sprite/PhysicsSprite/PhysicsSprite.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Window/Sprite/Sprite.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Sprite/Sprite.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Window/Sprite/Sprite.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Sprite/Sprite.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Window/Text/Text.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Text/Text.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Window/Text/Text.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Text/Text.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Window/Text/TextManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Text/TextManager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Window/Text/TextManager.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Text/TextManager.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Window/UI/Button/Button.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/UI/Button/Button.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Window/UI/Button/Button.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/UI/Button/Button.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Window/UI/UIElement.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/UI/UIElement.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Window/UI/UIElement.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/UI/UIElement.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Window/Window.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Window/Window.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Window/Window.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Window/Window.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Olympus" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Olympus" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Window/Camera/Camera.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Window/Collision/Collision.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/ControlManager.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Window/Controls/Keybind/Keybind.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Window/Sprite/Sprite.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Window/Window.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/Hephaestus.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/Hephaestus.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Olympus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Olympus.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Olympus.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/Olympus.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/Olympus.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/Hephaestus/CMakeFiles/Hephaestus.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/Hephaestus/CMakeFiles/Hephaestus.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/Hephaestus/CMakeFiles/Hephaestus.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/Hephaestus/CMakeFiles/Hephaestus.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/Hephaestus/CMakeFiles/Hephaestus.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/Hephaestus/CMakeFiles/Hephaestus.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/Hephaestus/CMakeFiles/Hephaestus.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/Hephaestus/CMakeFiles/Hephaestus.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/Hephaestus/CMakeFiles/Hephaestus.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/Hephaestus/CMakeFiles/Hephaestus.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/Hephaestus/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/Hephaestus/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/Hephaestus/Hephaestus.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/Hephaestus/Hephaestus.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/Hephaestus/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/Hephaestus/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/Olympus.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/Olympus.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,18 +140,18 @@
     <property name="cmake.loaded.for.project" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs.jest.jest_package" value="" />
-    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="ReaderModeSettings">
     <option name="enabled" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Hephaestus" />
       <recent name="$PROJECT_DIR$/Resources/Images" />
       <recent name="$PROJECT_DIR$/Hephaestus/Resources/Shaders" />
       <recent name="$PROJECT_DIR$/Hephaestus/Window" />
       <recent name="$PROJECT_DIR$/Hephaestus/Window/UI" />
-      <recent name="$PROJECT_DIR$/Hephaestus/Library/Microbench" />
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.Olympus">
@@ -108,6 +167,11 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="RunConfigurationTask" enabled="true" run_configuration_name="Copy Directory" run_configuration_type="ShConfigurationType" />
         <option name="RunConfigurationTask" enabled="true" run_configuration_name="Copy .a" run_configuration_type="ShConfigurationType" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
@@ -259,16 +323,5 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/../.." />
     </ignored-roots>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Hephaestus/Window/Window.hpp</url>
-          <line>17</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

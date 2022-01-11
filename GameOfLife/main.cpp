@@ -1,7 +1,6 @@
 #include <iostream>
-#include "./lib/hephaestus/include/Window/Sprite/Sprite.hpp"
 #include "./lib/hephaestus/include/Hephaestus.hpp"
-#include "./lib/hephaestus/include/Window/Text/Text.hpp"
+#include "./lib/hephaestus/include/Window/Sprite/Sprite.hpp"
 #include "./lib/hephaestus/include/Scene/Scene.hpp"
 #include <vector>
 
@@ -9,31 +8,16 @@ Hephaestus engine = Hephaestus("Conways game of life");
 Camera mainCamera = Camera();
 Scene mainScene = Scene();
 
-glm::ivec2 movement { 0.0, 0.0};
 const int gameFieldSize = 72;
 const int spriteSize = 10;
 Sprite spriteBoard[gameFieldSize][gameFieldSize];
 
-int interval = 0;
-int updateCount = 0;
-bool shouldUpdate = false;
-
-Text simulatingText = { "Simulating: False", "./Fonts/SFNSRounded.ttf", {10.0f, 10.0f }, { 0.5, 0.8f, 0.2f, 1.0f } };
-Text fpsTextObject = { "Hello World", "./Fonts/SFNSRounded.ttf", {10.0f, 695.0f }, { 0.5, 0.8f, 0.2f, 1.0f } };
-Text spriteCountObject = { "Hello World", "./Fonts/SFNSRounded.ttf", {10.0f, 670.0f }, { 0.5, 0.8f, 0.2f, 1.0f } };
-
 struct Cell {
     int x { 0 };
     int y { 0 };
-    int lastChangedTime { 0 };
-
     bool alive = false;
 
     Cell() = default;
-
-    void updatePosition(glm::vec2 boardPosition) const {
-        spriteBoard[x][y].setPosition({boardPosition, 0.0});
-    }
 
     void updateDisplay() const {
         spriteBoard[x][y].hidden = !alive;
@@ -49,11 +33,9 @@ static int roundTo10(int n) {
 
 int lastChangedX { -1 }, lastChangedY { -1 };
 void clickMouse() {
-    glm::vec2 mousePosition = engine.getMousePosition();
-    glm::ivec2 boardPosition = { roundTo10(int(mousePosition.x)) + movement.x, roundTo10(int(mousePosition.y)) + movement.y};
+    glm::vec2 mousePosition = mainScene.getMousePosition();
+    glm::ivec2 boardPosition = { roundTo10(int(mousePosition.x)), roundTo10(int(mousePosition.y)) };
     glm::ivec2 arrayPosition = { boardPosition.x / spriteSize, boardPosition.y / spriteSize };
-
-    printf("Board Position: %s - Array Position: %s\n", glm::to_string(boardPosition).c_str(), glm::to_string(arrayPosition).c_str());
 
     if((arrayPosition.x < 0 || arrayPosition.x >= gameFieldSize) || (arrayPosition.y < 0 || arrayPosition.y >= gameFieldSize)) return;
 
@@ -64,14 +46,14 @@ void clickMouse() {
         gameField[arrayPosition.x][arrayPosition.y].alive = false;
         gameField[arrayPosition.x][arrayPosition.y].updateDisplay();
     }
-    gameField[arrayPosition.x][arrayPosition.y].lastChangedTime = glfwGetTime();
+//    gameField[arrayPosition.x][arrayPosition.y].lastChangedTime = glfwGetTime();
     lastChangedX = arrayPosition.x;
     lastChangedY = arrayPosition.y;
 }
 
 void dragMouse() {
-    glm::vec2 mousePosition = engine.getMousePosition();
-    glm::ivec2 boardPosition = { roundTo10(int(mousePosition.x)) + movement.x, roundTo10(int(mousePosition.y)) + movement.y};
+    glm::vec2 mousePosition = mainScene.getMousePosition();
+    glm::ivec2 boardPosition = { roundTo10(int(mousePosition.x)), roundTo10(int(mousePosition.y)) };
     glm::ivec2 arrayPosition = { boardPosition.x / spriteSize, boardPosition.y / spriteSize };
 
     if((arrayPosition.x < 0 || arrayPosition.x >= gameFieldSize) || (arrayPosition.y < 0 || arrayPosition.y >= gameFieldSize)) return;
@@ -167,6 +149,12 @@ void tick() {
 
 }
 
+int interval = 0;
+int updateCount = 0;
+bool shouldUpdate = false;
+
+Text simulatingText = { "Simulating: False", "./fonts/SFNSRounded.ttf", {10.0f, 10.0f }, { 0.5, 0.8f, 0.2f, 1.0f } };
+
 void update() {
     if(updateCount != interval) {
         updateCount ++;
@@ -179,6 +167,8 @@ void update() {
 //    timeLeft.text = "Time until next sim: " + std::to_string(interval - updateCount);
 }
 
+Text fpsTextObject = { "Hello World", "./fonts/SFNSRounded.ttf", {10.0f, 695.0f }, { 0.5, 0.8f, 0.2f, 1.0f } };
+Text spriteCountObject = { "Hello World", "./fonts/SFNSRounded.ttf", {10.0f, 670.0f }, { 0.5, 0.8f, 0.2f, 1.0f } };
 
 void render() {
     int fps = engine.getFPS();
@@ -196,26 +186,6 @@ void toggleUpdate() {
     simulatingText.text = "Simulating: " + tf;
 }
 
-void moveRight() {
-    mainCamera.position = { mainCamera.position.x + 10, mainCamera.position.y, mainCamera.position.z };
-    movement.x -= 10;
-}
-
-void moveLeft() {
-    mainCamera.position = { mainCamera.position.x - 10, mainCamera.position.y, mainCamera.position.z };
-    movement.x += 10;
-}
-
-void moveUp() {
-    mainCamera.position = { mainCamera.position.x, mainCamera.position.y + 10, mainCamera.position.z };
-    movement.y -= 10;
-}
-
-void moveDown() {
-    mainCamera.position = { mainCamera.position.x, mainCamera.position.y - 10, mainCamera.position.z };
-    movement.y += 10;
-}
-
 int main() {
     for(int x = 0; x < gameFieldSize; x++) {
         for (int y = 0; y < gameFieldSize; y++) {
@@ -230,13 +200,7 @@ int main() {
     }
 
     mainScene.setShouldCheckCollision(false);
-    mainScene.loadFont("./Fonts/SFNSRounded.ttf");
-
-    mainScene.addKeybind(GLFW_KEY_RIGHT, GLFW_PRESS, moveRight);
-    mainScene.addKeybind(GLFW_KEY_LEFT, GLFW_PRESS, moveLeft);
-    mainScene.addKeybind(GLFW_KEY_UP, GLFW_PRESS, moveUp);
-    mainScene.addKeybind(GLFW_KEY_DOWN, GLFW_PRESS, moveDown);
-
+    mainScene.loadFont("./fonts/SFNSRounded.ttf");
 
     mainScene.addDrag(GLFW_MOUSE_BUTTON_LEFT, dragMouse);
     mainScene.addKeybind(GLFW_MOUSE_BUTTON_LEFT, GLFW_PRESS, clickMouse);
@@ -253,7 +217,6 @@ int main() {
     mainScene.setRender(render);
 
     engine.openScene(&mainScene);
-
     engine.startWindowLoop();
 
     return 0;

@@ -25,17 +25,46 @@ typedef void (*Function)();
 #include <vector>
 
 // Custom Classes
-#include "Window/Window.hpp"
 #include "Shader/Shader.hpp"
-
-// UI Elements
-#include "Window/UI/Button/Button.hpp"
+#include "Scene/Scene.hpp"
 
 class Hephaestus {
 private:
-    Window window;
     std::string name;
 
+    /// The GLFW window that this class wraps.
+    GLFWwindow *window;
+    /// The pixel width of the window.
+    int width { 720 };
+    /// The pixel height of the window.
+    int height { 720 };
+
+    bool printFrames { false };
+
+    Scene* currentScene;
+
+    double deltaTime{};
+    int framesPerSecond { };
+
+    /*
+     * Runtime Functions
+     */
+    /// Calls the user-defined init callback.
+    void _init () const;
+    /// Calls the user-defined destroy callback along with doing behind the scenes cleanup.
+    void _destroy () const;
+    /// Calls the user-defined tick callback.
+    void _tick () const;
+    /// Calls the user-defined update callback.
+    void _update () const;
+    /// Calls the user-defined render callback.
+    void _render () const;
+
+    /*
+     * Static GLFW callbacks
+     */
+    /// GLFW Window resize callback. Used to update the internal window dimensions tracking.
+    static void windowCallback(GLFWwindow* window, int width, int height);
 public:
     /// Initializer for the Hephaestus class
     /// \param name The name of the window that will be created.
@@ -52,16 +81,11 @@ public:
     /// \return A new setup shader with the speicifed vertex and fragment shader
     static Shader createShader(std::string identifier, std::string vertexPath, std::string fragmentPath);
 
-    //// Get the current mouse position
-    glm::vec2 getMousePosition();
-
-    void setWindowShouldCheckCollision(bool _collision);
-
     /// Returns the current active window frames per second.
-    int getFPS() const;
+    [[nodiscard]] int getFPS() const;
 
-    int windowWidth() const;
-    int windowHeight() const;
+    [[nodiscard]] int windowWidth() const;
+    [[nodiscard]] int windowHeight() const;
 };
 
 #endif //OLYMPUS_HEPHAESTUS_HPP

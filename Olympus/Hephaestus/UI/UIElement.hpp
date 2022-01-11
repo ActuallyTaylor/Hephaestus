@@ -13,7 +13,7 @@
 
 #include <string>
 #include <vector>
-#include "../../Library/stb_image.hpp"
+#include "../Library/stb_image.hpp"
 
 // OpenGL
 #include <GL/glew.h>
@@ -21,7 +21,7 @@
 #include <glm/gtx/string_cast.hpp>
 
 // Hephaestus
-#include "../../Shader/Shader.hpp"
+#include "../Shader/Shader.hpp"
 #include "../Text/TextManager.hpp"
 
 class UIElement {

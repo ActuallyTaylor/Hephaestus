@@ -12,8 +12,8 @@
 
 #ifndef OLYMPUS_SPRITE_HPP
 #define OLYMPUS_SPRITE_HPP
-#include "../../Shader/Shader.hpp"
-#include "../../Library/stb_image.hpp"
+#include "../Shader/Shader.hpp"
+#include "../Library/stb_image.hpp"
 #include "../Camera/Camera.hpp"
 
 // GLM Math

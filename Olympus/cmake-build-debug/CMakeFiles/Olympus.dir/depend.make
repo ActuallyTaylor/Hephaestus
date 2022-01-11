@@ -3,21 +3,20 @@
 
 CMakeFiles/Olympus.dir/main.cpp.o: \
  /Library/Frameworks/Mono.framework/Headers/ft2build.h \
+ ../Hephaestus/Camera/Camera.hpp \
+ ../Hephaestus/Collision/Collision.hpp \
+ ../Hephaestus/Controls/ControlManager.hpp \
+ ../Hephaestus/Controls/Keybind/Keybind.hpp \
  ../Hephaestus/Hephaestus.hpp \
  ../Hephaestus/Library/stb_image.hpp \
  ../Hephaestus/Scene/Scene.hpp \
  ../Hephaestus/Shader/Shader.hpp \
- ../Hephaestus/Window/Camera/Camera.hpp \
- ../Hephaestus/Window/Collision/Collision.hpp \
- ../Hephaestus/Window/Controls/ControlManager.hpp \
- ../Hephaestus/Window/Controls/Keybind/Keybind.hpp \
- ../Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.hpp \
- ../Hephaestus/Window/Sprite/Sprite.hpp \
- ../Hephaestus/Window/Text/Text.hpp \
- ../Hephaestus/Window/Text/TextManager.hpp \
- ../Hephaestus/Window/UI/Button/Button.hpp \
- ../Hephaestus/Window/UI/UIElement.hpp \
- ../Hephaestus/Window/Window.hpp \
+ ../Hephaestus/Sprite/PhysicsSprite/PhysicsSprite.hpp \
+ ../Hephaestus/Sprite/Sprite.hpp \
+ ../Hephaestus/Text/Text.hpp \
+ ../Hephaestus/Text/TextManager.hpp \
+ ../Hephaestus/UI/Button/Button.hpp \
+ ../Hephaestus/UI/UIElement.hpp \
  ../main.cpp \
  /usr/local/include/GL/glew.h \
  /usr/local/include/GLFW/glfw3.h \

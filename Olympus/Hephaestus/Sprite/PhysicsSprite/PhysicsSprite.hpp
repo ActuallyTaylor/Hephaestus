@@ -13,7 +13,7 @@
 
 #include "../Sprite.hpp"
 #include "../../Collision/Collision.hpp"
-#include "../../../Shader/Shader.hpp"
+#include "../../Shader/Shader.hpp"
 
 class PhysicsSprite: public Sprite {
 protected:

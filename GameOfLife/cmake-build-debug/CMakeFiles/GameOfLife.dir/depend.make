@@ -3,20 +3,19 @@
 
 CMakeFiles/GameOfLife.dir/main.cpp.o: \
  /Library/Frameworks/Mono.framework/Headers/ft2build.h \
+ ../lib/hephaestus/include/Collision/Collision.hpp \
+ ../lib/hephaestus/include/Controls/ControlManager.hpp \
+ ../lib/hephaestus/include/Controls/Keybind/Keybind.hpp \
  ../lib/hephaestus/include/Hephaestus.hpp \
  ../lib/hephaestus/include/Library/stb_image.hpp \
  ../lib/hephaestus/include/Scene/Scene.hpp \
  ../lib/hephaestus/include/Shader/Shader.hpp \
+ ../lib/hephaestus/include/Sprite/Sprite.hpp \
+ ../lib/hephaestus/include/Text/Text.hpp \
+ ../lib/hephaestus/include/Text/TextManager.hpp \
+ ../lib/hephaestus/include/UI/UIElement.hpp \
  ../lib/hephaestus/include/Window/Camera/Camera.hpp \
- ../lib/hephaestus/include/Window/Collision/Collision.hpp \
- ../lib/hephaestus/include/Window/Controls/ControlManager.hpp \
- ../lib/hephaestus/include/Window/Controls/Keybind/Keybind.hpp \
  ../lib/hephaestus/include/Window/Sprite/Sprite.hpp \
- ../lib/hephaestus/include/Window/Text/Text.hpp \
- ../lib/hephaestus/include/Window/Text/TextManager.hpp \
- ../lib/hephaestus/include/Window/UI/Button/Button.hpp \
- ../lib/hephaestus/include/Window/UI/UIElement.hpp \
- ../lib/hephaestus/include/Window/Window.hpp \
  ../main.cpp \
  /usr/local/include/GL/glew.h \
  /usr/local/include/GLFW/glfw3.h \

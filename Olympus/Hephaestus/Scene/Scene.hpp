@@ -14,12 +14,12 @@
 #include <string>
 #include <vector>
 
-#include "../Window/Sprite/Sprite.hpp"
-#include "../Window/Text/TextManager.hpp"
-#include "../Window/UI/UIElement.hpp"
-#include "../Window/Controls/Keybind/Keybind.hpp"
-#include "../Window/Controls/ControlManager.hpp"
-#include "../Window/Collision/Collision.hpp"
+#include "../Sprite/Sprite.hpp"
+#include "../Text/TextManager.hpp"
+#include "../UI/UIElement.hpp"
+#include "../Controls/Keybind/Keybind.hpp"
+#include "../Controls/ControlManager.hpp"
+#include "../Collision/Collision.hpp"
 
 class Scene {
     /// An array of all of the sprites that managed by the window.
@@ -36,7 +36,6 @@ class Scene {
     vector<UIElement*> uiElements;
     void drawUI();
     void checkUIClicks();
-    glm::vec2 getMousePosition();
     void pollDragging();
 
     vector<Camera*> cameras;
@@ -83,6 +82,16 @@ void main()
 
     GLFWwindow* parentWindow;
 
+    /*
+     * Static Camera Callbacks
+     */
+    /// Gets called when the cameras position changes
+    static void cameraPositionChanged();
+    /// Gets called when the cameras rotation changes
+    static void cameraRotationChanged();
+    /// Gets called when the cameras target changes
+    static void cameraTargetChanged();
+
 public:
     Scene();
     double deltaTime{};
@@ -100,6 +109,7 @@ public:
 
     void addKeybind(int inKeyCode, int inAction, Function inExecutionFunction);
     void addDrag(int keyCode, Function executionFunction);
+    glm::vec2 getMousePosition();
 
     void drawScene();
     void updateScene();

@@ -9,7 +9,6 @@
 */
 
 #include "Scene.hpp"
-#include "../Window/Window.hpp"
 
 Scene* self_scene;
 
@@ -68,9 +67,9 @@ glm::vec2 Scene::getMousePosition() {
 }
 
 void Scene::addCamera(Camera *camera, bool setDefault) {
-//    camera->setUpdatePositionCallback(cameraPositionChanged);
-//    camera->setUpdateRotationCallback(cameraRotationChanged);
-//    camera->setUpdateRotationCallback(cameraTargetChanged);
+    camera->setUpdatePositionCallback(cameraPositionChanged);
+    camera->setUpdateRotationCallback(cameraRotationChanged);
+    camera->setUpdateRotationCallback(cameraTargetChanged);
     cameras.push_back(camera);
 
     if(setDefault) {
@@ -276,4 +275,16 @@ void Scene::updateSceneDimensions(int _width, int _height) {
 
 int Scene::getNumberOfSprites() {
     return sprites.size();
+}
+
+void Scene::cameraPositionChanged() {
+
+}
+
+void Scene::cameraRotationChanged() {
+
+}
+
+void Scene::cameraTargetChanged() {
+
 }

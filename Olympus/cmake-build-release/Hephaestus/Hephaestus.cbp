@@ -64,6 +64,30 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Camera/Camera.cpp">
+			<Option target="Hephaestus"/>
+		</Unit>
+		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Camera/Camera.hpp">
+			<Option target="Hephaestus"/>
+		</Unit>
+		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Collision/Collision.cpp">
+			<Option target="Hephaestus"/>
+		</Unit>
+		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Collision/Collision.hpp">
+			<Option target="Hephaestus"/>
+		</Unit>
+		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Controls/ControlManager.cpp">
+			<Option target="Hephaestus"/>
+		</Unit>
+		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Controls/ControlManager.hpp">
+			<Option target="Hephaestus"/>
+		</Unit>
+		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Controls/Keybind/Keybind.cpp">
+			<Option target="Hephaestus"/>
+		</Unit>
+		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Controls/Keybind/Keybind.hpp">
+			<Option target="Hephaestus"/>
+		</Unit>
 		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Hephaestus.cpp">
 			<Option target="Hephaestus"/>
 		</Unit>
@@ -85,70 +109,40 @@
 		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Shader/Shader.hpp">
 			<Option target="Hephaestus"/>
 		</Unit>
-		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Camera/Camera.cpp">
+		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Sprite/PhysicsSprite/PhysicsSprite.cpp">
 			<Option target="Hephaestus"/>
 		</Unit>
-		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Camera/Camera.hpp">
+		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Sprite/PhysicsSprite/PhysicsSprite.hpp">
 			<Option target="Hephaestus"/>
 		</Unit>
-		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Collision/Collision.cpp">
+		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Sprite/Sprite.cpp">
 			<Option target="Hephaestus"/>
 		</Unit>
-		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Collision/Collision.hpp">
+		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Sprite/Sprite.hpp">
 			<Option target="Hephaestus"/>
 		</Unit>
-		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/ControlManager.cpp">
+		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Text/Text.cpp">
 			<Option target="Hephaestus"/>
 		</Unit>
-		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/ControlManager.hpp">
+		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Text/Text.hpp">
 			<Option target="Hephaestus"/>
 		</Unit>
-		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/Keybind/Keybind.cpp">
+		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Text/TextManager.cpp">
 			<Option target="Hephaestus"/>
 		</Unit>
-		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Controls/Keybind/Keybind.hpp">
+		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Text/TextManager.hpp">
 			<Option target="Hephaestus"/>
 		</Unit>
-		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.cpp">
+		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/UI/Button/Button.cpp">
 			<Option target="Hephaestus"/>
 		</Unit>
-		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.hpp">
+		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/UI/Button/Button.hpp">
 			<Option target="Hephaestus"/>
 		</Unit>
-		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/Sprite.cpp">
+		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/UI/UIElement.cpp">
 			<Option target="Hephaestus"/>
 		</Unit>
-		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Sprite/Sprite.hpp">
-			<Option target="Hephaestus"/>
-		</Unit>
-		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Text/Text.cpp">
-			<Option target="Hephaestus"/>
-		</Unit>
-		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Text/Text.hpp">
-			<Option target="Hephaestus"/>
-		</Unit>
-		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Text/TextManager.cpp">
-			<Option target="Hephaestus"/>
-		</Unit>
-		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Text/TextManager.hpp">
-			<Option target="Hephaestus"/>
-		</Unit>
-		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/UI/Button/Button.cpp">
-			<Option target="Hephaestus"/>
-		</Unit>
-		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/UI/Button/Button.hpp">
-			<Option target="Hephaestus"/>
-		</Unit>
-		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/UI/UIElement.cpp">
-			<Option target="Hephaestus"/>
-		</Unit>
-		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/UI/UIElement.hpp">
-			<Option target="Hephaestus"/>
-		</Unit>
-		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Window.cpp">
-			<Option target="Hephaestus"/>
-		</Unit>
-		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Window/Window.hpp">
+		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/UI/UIElement.hpp">
 			<Option target="Hephaestus"/>
 		</Unit>
 		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/CMakeLists.txt">

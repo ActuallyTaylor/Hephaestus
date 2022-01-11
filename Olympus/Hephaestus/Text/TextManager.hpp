@@ -16,7 +16,7 @@
 
 #include <ft2build.h>
 #include FT_FREETYPE_H
-#include "../../Shader/Shader.hpp"
+#include "../Shader/Shader.hpp"
 #include "Text.hpp"
 
 #ifndef OLYMPUS_TEXTMANAGER_HPP

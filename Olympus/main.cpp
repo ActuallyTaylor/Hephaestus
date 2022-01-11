@@ -2,7 +2,8 @@
 #include <thread>
 #include "Hephaestus/Hephaestus.hpp"
 #include "Hephaestus/Scene/Scene.hpp"
-#include "Hephaestus/Window/Sprite/PhysicsSprite/PhysicsSprite.hpp"
+#include "Hephaestus/Sprite/PhysicsSprite/PhysicsSprite.hpp"
+#include "Hephaestus/UI/Button/Button.hpp"
 
 Hephaestus engine = Hephaestus("Hephaestus Engine");
 Scene mainScene = Scene();
@@ -66,7 +67,7 @@ void render() {
 void spawnOnCursor() {
     int randDiff = rand() % 10;
     int size = 10;//(rand() % 25) + 5;
-    glm::vec2 cursorPosition = engine.getMousePosition();
+    glm::vec2 cursorPosition = mainScene.getMousePosition();
     auto* sprite = new PhysicsSprite("./Images/Smiley.png", glm::vec3(cursorPosition.x - randDiff,cursorPosition.y, 0.0), glm::vec2(size,size));
     sprite->setMass(1);
 
