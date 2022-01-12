@@ -87,6 +87,12 @@
 		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/main.cpp">
 			<Option target="GameOfLife"/>
 		</Unit>
+		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/mainLevelScene.cpp">
+			<Option target="GameOfLife"/>
+		</Unit>
+		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/mainLevelScene.hpp">
+			<Option target="GameOfLife"/>
+		</Unit>
 		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

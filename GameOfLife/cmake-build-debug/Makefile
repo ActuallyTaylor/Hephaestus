@@ -153,6 +153,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameOfLife.dir/build.make CMakeFiles/GameOfLife.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+mainLevelScene.o: mainLevelScene.cpp.o
+.PHONY : mainLevelScene.o
+
+# target to build an object file
+mainLevelScene.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameOfLife.dir/build.make CMakeFiles/GameOfLife.dir/mainLevelScene.cpp.o
+.PHONY : mainLevelScene.cpp.o
+
+mainLevelScene.i: mainLevelScene.cpp.i
+.PHONY : mainLevelScene.i
+
+# target to preprocess a source file
+mainLevelScene.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameOfLife.dir/build.make CMakeFiles/GameOfLife.dir/mainLevelScene.cpp.i
+.PHONY : mainLevelScene.cpp.i
+
+mainLevelScene.s: mainLevelScene.cpp.s
+.PHONY : mainLevelScene.s
+
+# target to generate assembly for a file
+mainLevelScene.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameOfLife.dir/build.make CMakeFiles/GameOfLife.dir/mainLevelScene.cpp.s
+.PHONY : mainLevelScene.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -165,6 +189,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... mainLevelScene.o"
+	@echo "... mainLevelScene.i"
+	@echo "... mainLevelScene.s"
 .PHONY : help
 
 

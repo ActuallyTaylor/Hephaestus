@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/GameOfLife.dir/main.cpp.o"
+  "CMakeFiles/GameOfLife.dir/mainLevelScene.cpp.o"
   "GameOfLife"
   "GameOfLife.pdb"
 )

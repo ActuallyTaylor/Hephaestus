@@ -52,6 +52,7 @@ void clickMouse() {
 }
 
 void dragMouse() {
+    printf("Dragging");
     glm::vec2 mousePosition = mainScene.getMousePosition();
     glm::ivec2 boardPosition = { roundTo10(int(mousePosition.x)), roundTo10(int(mousePosition.y)) };
     glm::ivec2 arrayPosition = { boardPosition.x / spriteSize, boardPosition.y / spriteSize };

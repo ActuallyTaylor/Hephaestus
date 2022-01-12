@@ -15,15 +15,11 @@
 ControlManager::ControlManager() = default;
 
 void ControlManager::executeKeybinds(int keycode, int action) {
-
-    if(!keybindings.empty()) {
-        for(Keybind & keybinding : keybindings) {
-            if (keybinding.keyCode == keycode && keybinding.action == action) {
-                keybinding.execute();
-            }
+    for(Keybind & keybinding : keybindings) {
+        if (keybinding.keyCode == keycode && keybinding.action == action) {
+            keybinding.execute();
         }
-    }
-}
+    }}
 
 void ControlManager::addKeybind(Keybind keybind) {
     keybindings.push_back(keybind);

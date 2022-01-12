@@ -159,8 +159,6 @@ void Hephaestus::windowCallback(GLFWwindow *window, int width, int height) {
 
 void Hephaestus::openScene(Scene *scene) {
     scene->setupScene(window);
-    glfwSetKeyCallback(window, Scene::keyCallback);
-    glfwSetMouseButtonCallback(window, Scene::mouseButtonCallback);
     currentScene = scene;
 }
 

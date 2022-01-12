@@ -79,21 +79,36 @@ CMakeFiles/GameOfLife.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameOfLife.dir/main.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/main.cpp -o CMakeFiles/GameOfLife.dir/main.cpp.s
 
+CMakeFiles/GameOfLife.dir/mainLevelScene.cpp.o: CMakeFiles/GameOfLife.dir/flags.make
+CMakeFiles/GameOfLife.dir/mainLevelScene.cpp.o: ../mainLevelScene.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/GameOfLife.dir/mainLevelScene.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GameOfLife.dir/mainLevelScene.cpp.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/mainLevelScene.cpp
+
+CMakeFiles/GameOfLife.dir/mainLevelScene.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameOfLife.dir/mainLevelScene.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/mainLevelScene.cpp > CMakeFiles/GameOfLife.dir/mainLevelScene.cpp.i
+
+CMakeFiles/GameOfLife.dir/mainLevelScene.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameOfLife.dir/mainLevelScene.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/mainLevelScene.cpp -o CMakeFiles/GameOfLife.dir/mainLevelScene.cpp.s
+
 # Object files for target GameOfLife
 GameOfLife_OBJECTS = \
-"CMakeFiles/GameOfLife.dir/main.cpp.o"
+"CMakeFiles/GameOfLife.dir/main.cpp.o" \
+"CMakeFiles/GameOfLife.dir/mainLevelScene.cpp.o"
 
 # External object files for target GameOfLife
 GameOfLife_EXTERNAL_OBJECTS =
 
 GameOfLife: CMakeFiles/GameOfLife.dir/main.cpp.o
+GameOfLife: CMakeFiles/GameOfLife.dir/mainLevelScene.cpp.o
 GameOfLife: CMakeFiles/GameOfLife.dir/build.make
 GameOfLife: //Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/lib/libHephaestus.a
 GameOfLife: /usr/local/lib/libglfw.3.3.dylib
 GameOfLife: /usr/local/lib/libGLEW.2.2.0.dylib
 GameOfLife: /usr/local/lib/libfreetype.dylib
 GameOfLife: CMakeFiles/GameOfLife.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable GameOfLife"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable GameOfLife"
 	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E copy_directory /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/Resources /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/cmake-build-debug
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GameOfLife.dir/link.txt --verbose=$(VERBOSE)
 

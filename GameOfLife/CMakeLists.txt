@@ -6,7 +6,7 @@ set(CMAKE_FIND_LIBRARY_SUFFIXES ".a")
 set(BUILD_SHARED_LIBS OFF)
 #set(CMAKE_EXE_LINKER_FLAGS "-static")
 
-add_executable(GameOfLife main.cpp)
+add_executable(GameOfLife main.cpp mainLevelScene.cpp mainLevelScene.hpp)
 
 add_library(hephaestus STATIC IMPORTED)
 set_property(TARGET hephaestus PROPERTY IMPORTED_LOCATION "/${CMAKE_SOURCE_DIR}/lib/hephaestus/lib/libHephaestus.a")

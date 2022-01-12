@@ -24,6 +24,10 @@ Scene::Scene() {
 
 void Scene::setupScene(GLFWwindow *parent) {
     parentWindow = parent;
+    self_scene = this;
+    glfwSetKeyCallback(parent, keyCallback);
+    glfwSetMouseButtonCallback(parent, mouseButtonCallback);
+
 }
 
 void Scene::drawSprites() {
@@ -107,7 +111,7 @@ void Scene::addKeybind(int inKeyCode, int inAction, Function inExecutionFunction
 
 void Scene::addDrag(int keyCode, Function executionFunction) {
     Keybind keybind = Keybind{keyCode, GLFW_PRESS, executionFunction};
-    controlManager.addKeybind(keybind);
+    controlManager.addDrag(keybind);
 }
 
 void Scene::keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods) {
@@ -121,7 +125,6 @@ void Scene::keyCallback(GLFWwindow *window, int key, int scancode, int action, i
 
 void Scene::mouseButtonCallback(GLFWwindow* window, int button, int action, int mods) {
     self_scene->controlManager.executeKeybinds(button, action);
-
     if(button == GLFW_MOUSE_BUTTON_LEFT) {
         if(GLFW_PRESS == action) {
             self_scene->checkUIClicks();
