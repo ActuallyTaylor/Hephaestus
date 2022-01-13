@@ -23,6 +23,8 @@ glm/gtc/quaternion.hpp
 -
 glm/gtx/quaternion.hpp
 -
+../Function.hpp
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Function.hpp
 
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Collision/Collision.hpp
 ../Sprite/Sprite.hpp
@@ -35,6 +37,12 @@ vector
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Controls/Keybind/Keybind.hpp
 
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Controls/Keybind/Keybind.hpp
+../../Function.hpp
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Function.hpp
+
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Function.hpp
+functional
+-
 
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Hephaestus.hpp
 iostream
@@ -101,6 +109,8 @@ vector
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Controls/ControlManager.hpp
 ../Collision/Collision.hpp
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Collision/Collision.hpp
+../Function.hpp
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Function.hpp
 
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Shader/Shader.hpp
 iostream
@@ -183,6 +193,8 @@ Text.hpp
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/UI/UIElement.hpp
 ../../Text/TextManager.hpp
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Text/TextManager.hpp
+../../Function.hpp
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Function.hpp
 
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/UI/UIElement.hpp
 string

@@ -10,6 +10,7 @@
 //typedef void (*Function)();
 
 #include "Camera.hpp"
+#include "../Hephaestus.hpp"
 #include <glm/gtx/string_cast.hpp>
 
 Camera::Camera() {

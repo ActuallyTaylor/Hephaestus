@@ -154,6 +154,9 @@
 		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Controls/Keybind/Keybind.hpp">
 			<Option target="Hephaestus"/>
 		</Unit>
+		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Function.hpp">
+			<Option target="Hephaestus"/>
+		</Unit>
 		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Hephaestus.cpp">
 			<Option target="Hephaestus"/>
 		</Unit>

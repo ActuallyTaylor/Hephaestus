@@ -19,7 +19,7 @@
 #include <glm/gtc/type_ptr.hpp>
 #include <glm/gtc/quaternion.hpp>
 #include <glm/gtx/quaternion.hpp>
-typedef void (*Function)();
+#include "../Function.hpp"
 
 class Camera {
 private:

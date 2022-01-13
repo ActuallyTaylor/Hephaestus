@@ -9,7 +9,6 @@
     here, along with adding keybinds to register keypresses with the engine.
     =================
 */
-typedef void (*Function)();
 
 #include <iostream>
 

@@ -13,8 +13,7 @@
 
 #include "../UIElement.hpp"
 #include "../../Text/TextManager.hpp"
-
-typedef void (*Function)();
+#include "../../Function.hpp"
 
 class Button: public UIElement {
 public:

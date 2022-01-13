@@ -20,7 +20,7 @@
 #include "../Controls/Keybind/Keybind.hpp"
 #include "../Controls/ControlManager.hpp"
 #include "../Collision/Collision.hpp"
-
+#include "../Function.hpp"
 class Scene {
     /// An array of all of the sprites that managed by the window.
     vector<Sprite*> sprites;

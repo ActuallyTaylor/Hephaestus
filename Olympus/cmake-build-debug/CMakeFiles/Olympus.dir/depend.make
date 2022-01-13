@@ -7,6 +7,7 @@ CMakeFiles/Olympus.dir/main.cpp.o: \
  ../Hephaestus/Collision/Collision.hpp \
  ../Hephaestus/Controls/ControlManager.hpp \
  ../Hephaestus/Controls/Keybind/Keybind.hpp \
+ ../Hephaestus/Function.hpp \
  ../Hephaestus/Hephaestus.hpp \
  ../Hephaestus/Library/stb_image.hpp \
  ../Hephaestus/Scene/Scene.hpp \
