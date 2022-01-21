@@ -24,6 +24,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/irrKlang"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Frameworks/Mono.framework/Headers"/>
 					<Add directory="/usr/local/include/freetype2"/>
@@ -47,6 +48,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/irrKlang"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Frameworks/Mono.framework/Headers"/>
 					<Add directory="/usr/local/include/freetype2"/>
@@ -64,6 +66,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/AudioEngine/AudioEngine.cpp">
+			<Option target="Hephaestus"/>
+		</Unit>
+		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/AudioEngine/AudioEngine.hpp">
+			<Option target="Hephaestus"/>
+		</Unit>
 		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Camera/Camera.cpp">
 			<Option target="Hephaestus"/>
 		</Unit>

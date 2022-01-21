@@ -130,6 +130,30 @@ Hephaestus/fast:
 	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/build
 .PHONY : Hephaestus/fast
 
+AudioEngine/AudioEngine.o: AudioEngine/AudioEngine.cpp.o
+.PHONY : AudioEngine/AudioEngine.o
+
+# target to build an object file
+AudioEngine/AudioEngine.cpp.o:
+	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/AudioEngine/AudioEngine.cpp.o
+.PHONY : AudioEngine/AudioEngine.cpp.o
+
+AudioEngine/AudioEngine.i: AudioEngine/AudioEngine.cpp.i
+.PHONY : AudioEngine/AudioEngine.i
+
+# target to preprocess a source file
+AudioEngine/AudioEngine.cpp.i:
+	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/AudioEngine/AudioEngine.cpp.i
+.PHONY : AudioEngine/AudioEngine.cpp.i
+
+AudioEngine/AudioEngine.s: AudioEngine/AudioEngine.cpp.s
+.PHONY : AudioEngine/AudioEngine.s
+
+# target to generate assembly for a file
+AudioEngine/AudioEngine.cpp.s:
+	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/AudioEngine/AudioEngine.cpp.s
+.PHONY : AudioEngine/AudioEngine.cpp.s
+
 Camera/Camera.o: Camera/Camera.cpp.o
 .PHONY : Camera/Camera.o
 
@@ -451,6 +475,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Hephaestus"
+	@echo "... AudioEngine/AudioEngine.o"
+	@echo "... AudioEngine/AudioEngine.i"
+	@echo "... AudioEngine/AudioEngine.s"
 	@echo "... Camera/Camera.o"
 	@echo "... Camera/Camera.i"
 	@echo "... Camera/Camera.s"

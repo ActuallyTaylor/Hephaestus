@@ -235,6 +235,19 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Scene/Scene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Hephaestus.dir/Scene/Scene.cpp.s"
 	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release/Hephaestus && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Scene/Scene.cpp -o CMakeFiles/Hephaestus.dir/Scene/Scene.cpp.s
 
+Hephaestus/CMakeFiles/Hephaestus.dir/AudioEngine/AudioEngine.cpp.o: Hephaestus/CMakeFiles/Hephaestus.dir/flags.make
+Hephaestus/CMakeFiles/Hephaestus.dir/AudioEngine/AudioEngine.cpp.o: ../Hephaestus/AudioEngine/AudioEngine.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object Hephaestus/CMakeFiles/Hephaestus.dir/AudioEngine/AudioEngine.cpp.o"
+	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release/Hephaestus && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Hephaestus.dir/AudioEngine/AudioEngine.cpp.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/AudioEngine/AudioEngine.cpp
+
+Hephaestus/CMakeFiles/Hephaestus.dir/AudioEngine/AudioEngine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Hephaestus.dir/AudioEngine/AudioEngine.cpp.i"
+	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release/Hephaestus && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/AudioEngine/AudioEngine.cpp > CMakeFiles/Hephaestus.dir/AudioEngine/AudioEngine.cpp.i
+
+Hephaestus/CMakeFiles/Hephaestus.dir/AudioEngine/AudioEngine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Hephaestus.dir/AudioEngine/AudioEngine.cpp.s"
+	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release/Hephaestus && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/AudioEngine/AudioEngine.cpp -o CMakeFiles/Hephaestus.dir/AudioEngine/AudioEngine.cpp.s
+
 # Object files for target Hephaestus
 Hephaestus_OBJECTS = \
 "CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o" \
@@ -249,7 +262,8 @@ Hephaestus_OBJECTS = \
 "CMakeFiles/Hephaestus.dir/Text/Text.cpp.o" \
 "CMakeFiles/Hephaestus.dir/UI/Button/Button.cpp.o" \
 "CMakeFiles/Hephaestus.dir/UI/UIElement.cpp.o" \
-"CMakeFiles/Hephaestus.dir/Scene/Scene.cpp.o"
+"CMakeFiles/Hephaestus.dir/Scene/Scene.cpp.o" \
+"CMakeFiles/Hephaestus.dir/AudioEngine/AudioEngine.cpp.o"
 
 # External object files for target Hephaestus
 Hephaestus_EXTERNAL_OBJECTS =
@@ -267,9 +281,10 @@ Hephaestus/libHephaestus.a: Hephaestus/CMakeFiles/Hephaestus.dir/Text/Text.cpp.o
 Hephaestus/libHephaestus.a: Hephaestus/CMakeFiles/Hephaestus.dir/UI/Button/Button.cpp.o
 Hephaestus/libHephaestus.a: Hephaestus/CMakeFiles/Hephaestus.dir/UI/UIElement.cpp.o
 Hephaestus/libHephaestus.a: Hephaestus/CMakeFiles/Hephaestus.dir/Scene/Scene.cpp.o
+Hephaestus/libHephaestus.a: Hephaestus/CMakeFiles/Hephaestus.dir/AudioEngine/AudioEngine.cpp.o
 Hephaestus/libHephaestus.a: Hephaestus/CMakeFiles/Hephaestus.dir/build.make
 Hephaestus/libHephaestus.a: Hephaestus/CMakeFiles/Hephaestus.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX static library libHephaestus.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX static library libHephaestus.a"
 	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release/Hephaestus && $(CMAKE_COMMAND) -P CMakeFiles/Hephaestus.dir/cmake_clean_target.cmake
 	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release/Hephaestus && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E copy_directory /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Resources/ /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release/Hephaestus
 	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release/Hephaestus && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Hephaestus.dir/link.txt --verbose=$(VERBOSE)

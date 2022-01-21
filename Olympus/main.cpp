@@ -4,11 +4,13 @@
 #include "Hephaestus/Scene/Scene.hpp"
 #include "Hephaestus/Sprite/PhysicsSprite/PhysicsSprite.hpp"
 #include "Hephaestus/UI/Button/Button.hpp"
+#include "Hephaestus/AudioEngine/AudioEngine.hpp"
 
 Hephaestus engine = Hephaestus("Hephaestus Engine");
 //std::bind(&B::MyFun, this)
 
 struct PhysicsSim {
+    AudioEngine audioEngine = AudioEngine();
 
     PhysicsSim() {
         startButton.setBackgroundColor(glm::vec4(125, 223, 100, 127.5));
@@ -20,14 +22,12 @@ struct PhysicsSim {
         mainScene.loadFont("./fonts/SFNSRounded.ttf");
 
         mainScene.addText(&fpsTextObject);
-
-        engine.openScene(&mainScene);
-
         mainScene.setInit(std::bind(&PhysicsSim::init, this));
         mainScene.setDestroy(std::bind(&PhysicsSim::destroy, this));
         mainScene.setTick(std::bind(&PhysicsSim::tick, this));
         mainScene.setUpdate(std::bind(&PhysicsSim::update, this));
         mainScene.setRender(std::bind(&PhysicsSim::render, this));
+        audioEngine.play2D("./Audio/bell.wav");
     }
 
     Scene mainScene = Scene();
@@ -103,7 +103,8 @@ struct PhysicsSim {
 
 int main() {
     PhysicsSim sim = PhysicsSim();
+    engine.openScene(&sim.mainScene);
     engine.startWindowLoop();
-
+    
     return 0;
 }

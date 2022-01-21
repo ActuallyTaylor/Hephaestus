@@ -9,6 +9,7 @@
 */
 
 #include "Hephaestus.hpp"
+
 Hephaestus* self;
 
 Hephaestus::Hephaestus(const std::string _name) {

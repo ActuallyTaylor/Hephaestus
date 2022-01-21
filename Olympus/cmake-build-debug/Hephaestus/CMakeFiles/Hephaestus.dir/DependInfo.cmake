@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/AudioEngine/AudioEngine.cpp" "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/AudioEngine/AudioEngine.cpp.o"
   "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Camera/Camera.cpp" "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Camera/Camera.cpp.o"
   "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Collision/Collision.cpp" "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Collision/Collision.cpp.o"
   "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Controls/ControlManager.cpp" "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Controls/ControlManager.cpp.o"
@@ -26,6 +27,7 @@ set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../Hephaestus/Library/irrKlang"
   "/usr/local/include"
   "/Library/Frameworks/Mono.framework/Headers"
   "/usr/local/include/freetype2"
