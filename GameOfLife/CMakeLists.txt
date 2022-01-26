@@ -22,6 +22,8 @@ target_link_libraries(GameOfLife GLEW::GLEW)
 find_package(Freetype REQUIRED)
 target_link_libraries(GameOfLife Freetype::Freetype)
 
+target_link_libraries(GameOfLife ${CMAKE_SOURCE_DIR}/lib/hephaestus/include/Library/irrKlang/lib/libirrklang.dylib)
+
 add_custom_command(TARGET GameOfLife PRE_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy_directory
         ${CMAKE_SOURCE_DIR}/Resources $<TARGET_FILE_DIR:GameOfLife>)

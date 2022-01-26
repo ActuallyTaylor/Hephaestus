@@ -107,6 +107,7 @@ GameOfLife: //Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/he
 GameOfLife: /usr/local/lib/libglfw.3.3.dylib
 GameOfLife: /usr/local/lib/libGLEW.2.2.0.dylib
 GameOfLife: /usr/local/lib/libfreetype.dylib
+GameOfLife: ../lib/hephaestus/include/Library/irrKlang/lib/libirrklang.dylib
 GameOfLife: CMakeFiles/GameOfLife.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable GameOfLife"
 	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E copy_directory /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/Resources /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/cmake-build-debug

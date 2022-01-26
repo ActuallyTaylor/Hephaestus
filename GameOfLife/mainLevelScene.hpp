@@ -14,6 +14,7 @@
 #include "./lib/hephaestus/include/Sprite/Sprite.hpp"
 #include "./lib/hephaestus/include/Scene/Scene.hpp"
 #include "./lib/hephaestus/include/Hephaestus.hpp"
+#include "./lib/hephaestus/include/AudioEngine/AudioEngine.hpp"
 
 struct Cell {
     int x { 0 };
@@ -25,6 +26,7 @@ struct Cell {
 
 class MainLevelScene {
     Hephaestus* engine;
+    AudioEngine audioEngine = AudioEngine();
     static const int gameFieldSize = 72;
     const int spriteSize = 10;
     Sprite spriteBoard[gameFieldSize][gameFieldSize];

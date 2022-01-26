@@ -27,7 +27,6 @@ struct PhysicsSim {
         mainScene.setTick(std::bind(&PhysicsSim::tick, this));
         mainScene.setUpdate(std::bind(&PhysicsSim::update, this));
         mainScene.setRender(std::bind(&PhysicsSim::render, this));
-        audioEngine.play2D("./Audio/bell.wav");
     }
 
     Scene mainScene = Scene();

@@ -13,6 +13,7 @@
 #include <iostream>
 #include <string>
 #include "../Library/irrKlang/include/irrKlang.h"
+#pragma comment(lib, "irrKlang.lib") // link with irrKlang.dll
 
 class AudioEngine {
 private:

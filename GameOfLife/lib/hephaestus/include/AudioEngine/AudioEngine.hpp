@@ -13,7 +13,7 @@
 #include <iostream>
 #include <string>
 #include "../Library/irrKlang/include/irrKlang.h"
-#pragma comment(lib, "../Library/irrKlang/lib/Winx64-visualStudio/irrKlang.lib") // link with irrKlang.dll
+#pragma comment(lib, "irrKlang.lib") // link with irrKlang.dll
 
 class AudioEngine {
 private:
@@ -21,7 +21,7 @@ private:
 public:
     AudioEngine();
     ~AudioEngine();
-//    irrklang::ISoundEngine* source = irrklang::createIrrKlangDevice();
+    irrklang::ISoundEngine* source = irrklang::createIrrKlangDevice();
 
     void play2D(std::string path);
 };

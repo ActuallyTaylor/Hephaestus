@@ -242,11 +242,23 @@ Hephaestus_BINARY_DIR:STATIC=/Users/zacharylineman/Developer/GitHub/Hephaestus/O
 //Value Computed by CMake
 Hephaestus_SOURCE_DIR:STATIC=/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus
 
+//Path to a library.
+IRRKLANG:FILEPATH=IRRKLANG-NOTFOUND
+
+//Path to a library.
+IRRKLANG_LIBRARY:FILEPATH=/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/irrKlang/lib/libirrklang.dylib
+
+//The directory containing a CMake configuration file for IRRKLANG_LIBRARY.
+IRRKLANG_LIBRARY_DIR:PATH=IRRKLANG_LIBRARY_DIR-NOTFOUND
+
 //Value Computed by CMake
 Olympus_BINARY_DIR:STATIC=/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug
 
 //Value Computed by CMake
 Olympus_SOURCE_DIR:STATIC=/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus
+
+//Path to a library.
+PYTHON_3:FILEPATH=PYTHON_3-NOTFOUND
 
 //Path to a program.
 ProcessorCount_cmd_sysctl:FILEPATH=/usr/sbin/sysctl

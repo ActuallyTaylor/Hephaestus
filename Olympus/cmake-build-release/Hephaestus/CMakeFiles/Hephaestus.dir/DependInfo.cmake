@@ -27,7 +27,6 @@ set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../Hephaestus/Library/irrKlang"
   "/usr/local/include"
   "/Library/Frameworks/Mono.framework/Headers"
   "/usr/local/include/freetype2"

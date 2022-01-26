@@ -24,7 +24,6 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/irrKlang"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Frameworks/Mono.framework/Headers"/>
 					<Add directory="/usr/local/include/freetype2"/>
@@ -48,7 +47,6 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/irrKlang"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Frameworks/Mono.framework/Headers"/>
 					<Add directory="/usr/local/include/freetype2"/>

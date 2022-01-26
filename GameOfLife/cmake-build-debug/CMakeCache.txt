@@ -251,6 +251,21 @@ HEPHAESTUS:FILEPATH=/Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife
 //Path to a library.
 Hephaestus:FILEPATH=/Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/lib/libHephaestus.a
 
+//The directory containing a CMake configuration file for IRRKLANG.
+IRRKLANG_DIR:PATH=IRRKLANG_DIR-NOTFOUND
+
+//Path to a file.
+IRRKLANG_INCLUDE_DIR:PATH=IRRKLANG_INCLUDE_DIR-NOTFOUND
+
+//Path to a library.
+IRRKLANG_LIBRARY:FILEPATH=IRRKLANG_LIBRARY-NOTFOUND
+
+//Path to a library.
+IrrKlang:FILEPATH=IrrKlang-NOTFOUND
+
+//The directory containing a CMake configuration file for IrrKlang.
+IrrKlang_DIR:PATH=IrrKlang_DIR-NOTFOUND
+
 //Path to a program.
 ProcessorCount_cmd_sysctl:FILEPATH=/usr/sbin/sysctl
 

@@ -9,19 +9,18 @@
 */
 
 #include "AudioEngine.hpp"
-#pragma comment(lib, "irrKlang.lib") // link with irrKlang.dll
 
 AudioEngine::AudioEngine() {
-//    if (!source) {
-//        std::cout << "Error Initliazing Audio Engine" << std::endl;
-//    }
+    if (!source) {
+        std::cout << "Error Initliazing Audio Engine" << std::endl;
+    }
 }
 
 AudioEngine::~AudioEngine() {
-//    source->drop();
+    source->drop();
 }
 
 void AudioEngine::play2D(std::string path) {
-//    source->play2D(path.c_str());
+    source->play2D(path.c_str());
 }
 
