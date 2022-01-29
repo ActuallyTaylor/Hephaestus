@@ -21,7 +21,7 @@
 #include <GLFW/glfw3.h>
 
 // GLM
-#include "glm/glm.hpp"
+#include <glm/glm.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
 using namespace std;
