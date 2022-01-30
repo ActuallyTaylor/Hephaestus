@@ -9,6 +9,7 @@
 */
 
 #include "Hephaestus.hpp"
+#include <chrono>
 
 Hephaestus* self;
 
