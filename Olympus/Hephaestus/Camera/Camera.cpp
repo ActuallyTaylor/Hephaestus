@@ -17,9 +17,7 @@ Camera::Camera() {
 }
 
 void Camera::setPosition(glm::vec3 newPosition) {
-    glm::to_string(position);
     position = newPosition;
-    glm::to_string(position);
     if (updatePositionCallback != nullptr) {
         updatePositionCallback();
     }

@@ -13,11 +13,11 @@ if(APPLE)
 else()
     if(UNIX AND NOT APPLE)
         target_link_libraries(Hephaestus PRIVATE ${CMAKE_SOURCE_DIR}/Hephaestus/Library/irrKlang/lib/libirrklang.so)
+
+        find_package(OpenGL REQUIRED)
+        target_link_libraries(Hephaestus PRIVATE OpenGL)
     endif()
 endif()
-
-find_package(OpenGL REQUIRED)
-target_link_libraries(Hephaestus PRIVATE OpenGL)
 
 find_package(glfw3 REQUIRED)
 target_link_libraries(Hephaestus PRIVATE glfw)

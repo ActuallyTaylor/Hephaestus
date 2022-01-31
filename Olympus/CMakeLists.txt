@@ -5,8 +5,10 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(Olympus main.cpp ${someResources})
 
-find_package(OpenGL REQUIRED)
-target_link_libraries(Olympus OpenGL)
+if(UNIX AND NOT APPLE)
+    find_package(OpenGL REQUIRED)
+    target_link_libraries(Hephaestus PRIVATE OpenGL)
+endif()
 
 find_package(glfw3 REQUIRED)
 target_link_libraries(Olympus glfw)

@@ -220,20 +220,14 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Camera/Camera.cpp.o
  /usr/local/include/glm/gtc/quaternion.hpp
  /usr/local/include/glm/gtc/quaternion.inl
  /usr/local/include/glm/gtc/quaternion_simd.inl
- /usr/local/include/glm/gtc/type_precision.hpp
- /usr/local/include/glm/gtc/type_precision.inl
  /usr/local/include/glm/gtc/type_ptr.hpp
  /usr/local/include/glm/gtc/type_ptr.inl
  /usr/local/include/glm/gtc/vec1.hpp
  /usr/local/include/glm/gtx/component_wise.hpp
  /usr/local/include/glm/gtx/component_wise.inl
- /usr/local/include/glm/gtx/dual_quaternion.hpp
- /usr/local/include/glm/gtx/dual_quaternion.inl
  /usr/local/include/glm/gtx/norm.hpp
  /usr/local/include/glm/gtx/norm.inl
  /usr/local/include/glm/gtx/quaternion.hpp
- /usr/local/include/glm/gtx/string_cast.hpp
- /usr/local/include/glm/gtx/string_cast.inl
  /usr/local/include/glm/integer.hpp
  /usr/local/include/glm/mat2x2.hpp
  /usr/local/include/glm/mat2x3.hpp
@@ -370,6 +364,7 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Collision/Collision.cpp.o
  /usr/local/include/glm/ext/matrix_projection.hpp
  /usr/local/include/glm/ext/matrix_projection.inl
  /usr/local/include/glm/ext/matrix_transform.hpp
+ /usr/local/include/glm/ext/matrix_transform.inl
  /usr/local/include/glm/ext/quaternion_common.hpp
  /usr/local/include/glm/ext/quaternion_common.inl
  /usr/local/include/glm/ext/quaternion_common_simd.inl
@@ -441,24 +436,17 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Collision/Collision.cpp.o
  /usr/local/include/glm/gtc/epsilon.hpp
  /usr/local/include/glm/gtc/epsilon.inl
  /usr/local/include/glm/gtc/matrix_transform.hpp
- /usr/local/include/glm/gtc/matrix_transform.inl
  /usr/local/include/glm/gtc/quaternion.hpp
  /usr/local/include/glm/gtc/quaternion.inl
  /usr/local/include/glm/gtc/quaternion_simd.inl
- /usr/local/include/glm/gtc/type_precision.hpp
- /usr/local/include/glm/gtc/type_precision.inl
  /usr/local/include/glm/gtc/type_ptr.hpp
  /usr/local/include/glm/gtc/type_ptr.inl
  /usr/local/include/glm/gtc/vec1.hpp
  /usr/local/include/glm/gtx/component_wise.hpp
  /usr/local/include/glm/gtx/component_wise.inl
- /usr/local/include/glm/gtx/dual_quaternion.hpp
- /usr/local/include/glm/gtx/dual_quaternion.inl
  /usr/local/include/glm/gtx/norm.hpp
  /usr/local/include/glm/gtx/norm.inl
  /usr/local/include/glm/gtx/quaternion.hpp
- /usr/local/include/glm/gtx/string_cast.hpp
- /usr/local/include/glm/gtx/string_cast.inl
  /usr/local/include/glm/integer.hpp
  /usr/local/include/glm/mat2x2.hpp
  /usr/local/include/glm/mat2x3.hpp
@@ -689,20 +677,14 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o
  /usr/local/include/glm/gtc/quaternion.hpp
  /usr/local/include/glm/gtc/quaternion.inl
  /usr/local/include/glm/gtc/quaternion_simd.inl
- /usr/local/include/glm/gtc/type_precision.hpp
- /usr/local/include/glm/gtc/type_precision.inl
  /usr/local/include/glm/gtc/type_ptr.hpp
  /usr/local/include/glm/gtc/type_ptr.inl
  /usr/local/include/glm/gtc/vec1.hpp
  /usr/local/include/glm/gtx/component_wise.hpp
  /usr/local/include/glm/gtx/component_wise.inl
- /usr/local/include/glm/gtx/dual_quaternion.hpp
- /usr/local/include/glm/gtx/dual_quaternion.inl
  /usr/local/include/glm/gtx/norm.hpp
  /usr/local/include/glm/gtx/norm.inl
  /usr/local/include/glm/gtx/quaternion.hpp
- /usr/local/include/glm/gtx/string_cast.hpp
- /usr/local/include/glm/gtx/string_cast.inl
  /usr/local/include/glm/integer.hpp
  /usr/local/include/glm/mat2x2.hpp
  /usr/local/include/glm/mat2x3.hpp
@@ -921,20 +903,14 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Scene/Scene.cpp.o
  /usr/local/include/glm/gtc/quaternion.hpp
  /usr/local/include/glm/gtc/quaternion.inl
  /usr/local/include/glm/gtc/quaternion_simd.inl
- /usr/local/include/glm/gtc/type_precision.hpp
- /usr/local/include/glm/gtc/type_precision.inl
  /usr/local/include/glm/gtc/type_ptr.hpp
  /usr/local/include/glm/gtc/type_ptr.inl
  /usr/local/include/glm/gtc/vec1.hpp
  /usr/local/include/glm/gtx/component_wise.hpp
  /usr/local/include/glm/gtx/component_wise.inl
- /usr/local/include/glm/gtx/dual_quaternion.hpp
- /usr/local/include/glm/gtx/dual_quaternion.inl
  /usr/local/include/glm/gtx/norm.hpp
  /usr/local/include/glm/gtx/norm.inl
  /usr/local/include/glm/gtx/quaternion.hpp
- /usr/local/include/glm/gtx/string_cast.hpp
- /usr/local/include/glm/gtx/string_cast.inl
  /usr/local/include/glm/integer.hpp
  /usr/local/include/glm/mat2x2.hpp
  /usr/local/include/glm/mat2x3.hpp
@@ -1352,20 +1328,14 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Sprite/PhysicsSprite/PhysicsSprite.cpp.o
  /usr/local/include/glm/gtc/quaternion.hpp
  /usr/local/include/glm/gtc/quaternion.inl
  /usr/local/include/glm/gtc/quaternion_simd.inl
- /usr/local/include/glm/gtc/type_precision.hpp
- /usr/local/include/glm/gtc/type_precision.inl
  /usr/local/include/glm/gtc/type_ptr.hpp
  /usr/local/include/glm/gtc/type_ptr.inl
  /usr/local/include/glm/gtc/vec1.hpp
  /usr/local/include/glm/gtx/component_wise.hpp
  /usr/local/include/glm/gtx/component_wise.inl
- /usr/local/include/glm/gtx/dual_quaternion.hpp
- /usr/local/include/glm/gtx/dual_quaternion.inl
  /usr/local/include/glm/gtx/norm.hpp
  /usr/local/include/glm/gtx/norm.inl
  /usr/local/include/glm/gtx/quaternion.hpp
- /usr/local/include/glm/gtx/string_cast.hpp
- /usr/local/include/glm/gtx/string_cast.inl
  /usr/local/include/glm/integer.hpp
  /usr/local/include/glm/mat2x2.hpp
  /usr/local/include/glm/mat2x3.hpp
@@ -1789,15 +1759,9 @@ Hephaestus/CMakeFiles/Hephaestus.dir/Text/Text.cpp.o
  /usr/local/include/glm/gtc/quaternion.hpp
  /usr/local/include/glm/gtc/quaternion.inl
  /usr/local/include/glm/gtc/quaternion_simd.inl
- /usr/local/include/glm/gtc/type_precision.hpp
- /usr/local/include/glm/gtc/type_precision.inl
  /usr/local/include/glm/gtc/type_ptr.hpp
  /usr/local/include/glm/gtc/type_ptr.inl
  /usr/local/include/glm/gtc/vec1.hpp
- /usr/local/include/glm/gtx/dual_quaternion.hpp
- /usr/local/include/glm/gtx/dual_quaternion.inl
- /usr/local/include/glm/gtx/string_cast.hpp
- /usr/local/include/glm/gtx/string_cast.inl
  /usr/local/include/glm/integer.hpp
  /usr/local/include/glm/mat2x2.hpp
  /usr/local/include/glm/mat2x3.hpp
@@ -2219,15 +2183,9 @@ Hephaestus/CMakeFiles/Hephaestus.dir/UI/Button/Button.cpp.o
  /usr/local/include/glm/gtc/quaternion.hpp
  /usr/local/include/glm/gtc/quaternion.inl
  /usr/local/include/glm/gtc/quaternion_simd.inl
- /usr/local/include/glm/gtc/type_precision.hpp
- /usr/local/include/glm/gtc/type_precision.inl
  /usr/local/include/glm/gtc/type_ptr.hpp
  /usr/local/include/glm/gtc/type_ptr.inl
  /usr/local/include/glm/gtc/vec1.hpp
- /usr/local/include/glm/gtx/dual_quaternion.hpp
- /usr/local/include/glm/gtx/dual_quaternion.inl
- /usr/local/include/glm/gtx/string_cast.hpp
- /usr/local/include/glm/gtx/string_cast.inl
  /usr/local/include/glm/integer.hpp
  /usr/local/include/glm/mat2x2.hpp
  /usr/local/include/glm/mat2x3.hpp
@@ -2437,15 +2395,9 @@ Hephaestus/CMakeFiles/Hephaestus.dir/UI/UIElement.cpp.o
  /usr/local/include/glm/gtc/quaternion.hpp
  /usr/local/include/glm/gtc/quaternion.inl
  /usr/local/include/glm/gtc/quaternion_simd.inl
- /usr/local/include/glm/gtc/type_precision.hpp
- /usr/local/include/glm/gtc/type_precision.inl
  /usr/local/include/glm/gtc/type_ptr.hpp
  /usr/local/include/glm/gtc/type_ptr.inl
  /usr/local/include/glm/gtc/vec1.hpp
- /usr/local/include/glm/gtx/dual_quaternion.hpp
- /usr/local/include/glm/gtx/dual_quaternion.inl
- /usr/local/include/glm/gtx/string_cast.hpp
- /usr/local/include/glm/gtx/string_cast.inl
  /usr/local/include/glm/integer.hpp
  /usr/local/include/glm/mat2x2.hpp
  /usr/local/include/glm/mat2x3.hpp

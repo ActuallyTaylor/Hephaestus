@@ -19,7 +19,7 @@ struct PhysicsSim {
         mainScene.addUIElement(&startButton);
 
         mainScene.addDrag(GLFW_MOUSE_BUTTON_LEFT, std::bind(&PhysicsSim::spawnOnCursor, this));
-        mainScene.loadFont("./fonts/SFNSRounded.ttf");
+        mainScene.loadFont("./Fonts/SFNSRounded.ttf");
 
         mainScene.addText(&fpsTextObject);
         mainScene.setInit(std::bind(&PhysicsSim::init, this));
@@ -79,7 +79,7 @@ struct PhysicsSim {
 
     }
 
-    Text fpsTextObject = { "Hello World", "./fonts/SFNSRounded.ttf", {10.0f, 695.0f }, { 0.5, 0.8f, 0.2f, 1.0f } };
+    Text fpsTextObject = { "Hello World", "./Fonts/SFNSRounded.ttf", {10.0f, 695.0f }, { 0.5, 0.8f, 0.2f, 1.0f } };
 
     void render() {
         int fps = engine.getFPS();

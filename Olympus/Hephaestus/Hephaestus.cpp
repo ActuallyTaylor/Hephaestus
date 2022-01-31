@@ -60,10 +60,12 @@ Shader Hephaestus::createShader(std::string identifier, std::string vertexPath, 
     return shader;
 }
 
-Text renderingText = Text("", "./fonts/SFNSRounded.ttf", glm::vec2(10, 10), glm::vec4(1.0,1.0,1.0,1.0));
+Text renderingText = Text("", "./Fonts/SFNSRounded.ttf", glm::vec2(10, 10), glm::vec4(1.0,1.0,1.0,1.0));
 
 void Hephaestus::startWindowLoop() {
     _init();
+
+    glfwGetWindowSize(window, &width, &height);
 
     double currentTime = glfwGetTime();
     double lastTime = glfwGetTime();
