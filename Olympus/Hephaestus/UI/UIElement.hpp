@@ -18,7 +18,6 @@
 // OpenGL
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
-#include <glm/gtx/string_cast.hpp>
 
 // Hephaestus
 #include "../Shader/Shader.hpp"

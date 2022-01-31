@@ -17,11 +17,20 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hephaestus/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hephaestus/Camera/Camera.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Camera/Camera.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hephaestus/Hephaestus.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Hephaestus.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Camera/Camera.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Camera/Camera.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Collision/Collision.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Collision/Collision.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Collision/Collision.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Collision/Collision.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Sprite/PhysicsSprite/PhysicsSprite.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Sprite/PhysicsSprite/PhysicsSprite.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Text/Text.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Text/Text.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/UI/Button/Button.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/UI/Button/Button.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/UI/UIElement.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/UI/UIElement.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/Olympus.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/Olympus.dir/link.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,7 +259,7 @@
       <workItem from="1643215058904" duration="1994000" />
       <workItem from="1643339079816" duration="469000" />
       <workItem from="1643467651288" duration="294000" />
-      <workItem from="1643478654810" duration="1284000" />
+      <workItem from="1643478654810" duration="3801000" />
     </task>
     <servers />
   </component>

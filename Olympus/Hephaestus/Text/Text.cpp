@@ -9,8 +9,6 @@
 */
 
 #include "Text.hpp"
-#include <glm/gtx/string_cast.hpp>
-
 #include <utility>
 
 Text::Text(std::string text, std::string fontPath, glm::vec2 position, glm::vec4 color) {

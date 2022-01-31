@@ -9,7 +9,6 @@
 */
 
 #include "Button.hpp"
-
 #include <utility>
 
 void Button::setBackgroundColor(glm::vec4 color) {

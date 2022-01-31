@@ -8,7 +8,6 @@
     =================
 */
 
-#include <glm/gtx/string_cast.hpp>
 #include "Collision.hpp"
 #include "../Sprite/PhysicsSprite/PhysicsSprite.hpp"
 

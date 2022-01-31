@@ -11,7 +11,6 @@
 
 #include "Camera.hpp"
 #include "../Hephaestus.hpp"
-#include <glm/gtx/string_cast.hpp>
 
 Camera::Camera() {
 //    std::cout << glm::to_string(position) << std::endl;

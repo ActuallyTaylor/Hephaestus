@@ -9,7 +9,6 @@
 */
 
 #include "PhysicsSprite.hpp"
-#include <glm/gtx/string_cast.hpp>
 
 float elasticity = 0.1;
 

@@ -11,6 +11,7 @@
 #ifndef OLYMPUS_COLLISION_HPP
 #define OLYMPUS_COLLISION_HPP
 
+#define GLM_ENABLE_EXPERIMENTAL
 #include "../Sprite/Sprite.hpp"
 
 struct Collision {
