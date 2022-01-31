@@ -66,6 +66,7 @@ void Hephaestus::startWindowLoop() {
     _init();
 
     glfwGetWindowSize(window, &width, &height);
+    self->currentScene->updateSceneDimensions(width, height);
 
     double currentTime = glfwGetTime();
     double lastTime = glfwGetTime();
