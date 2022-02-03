@@ -76,7 +76,7 @@ Shader::Shader(string _identifier, string vertexPath, string fragmentPath) {
 
     std::ifstream file(vertexPath.c_str());
 
-    cout << std::__fs::filesystem::current_path() << endl;
+//    cout << std::__fs::filesystem::current_path() << endl;
     if (file) {
 //        std::cout << "file exists: " << vertexPath << std::endl;
     }

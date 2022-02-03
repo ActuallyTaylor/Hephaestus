@@ -7,7 +7,7 @@ add_executable(Olympus main.cpp ${someResources})
 
 if(UNIX AND NOT APPLE)
     find_package(OpenGL REQUIRED)
-    target_link_libraries(Hephaestus PRIVATE OpenGL)
+    target_link_libraries(Olympus OpenGL)
 endif()
 
 find_package(glfw3 REQUIRED)
