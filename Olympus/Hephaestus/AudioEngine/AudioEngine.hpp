@@ -12,8 +12,6 @@
 #define OLYMPUS_AUDIOENGINE_HPP
 #include <iostream>
 #include <string>
-#include "../Library/irrKlang/include/irrKlang.h"
-#pragma comment(lib, "irrKlang.lib") // link with irrKlang.dll
 
 class AudioEngine {
 private:
@@ -21,7 +19,6 @@ private:
 public:
     AudioEngine();
     ~AudioEngine();
-    irrklang::ISoundEngine* source = irrklang::createIrrKlangDevice();
 
     void play2D(std::string path);
 };

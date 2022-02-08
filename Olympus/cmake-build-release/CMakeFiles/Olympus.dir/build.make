@@ -91,7 +91,6 @@ Olympus: CMakeFiles/Olympus.dir/build.make
 Olympus: Hephaestus/libHephaestus.a
 Olympus: /usr/local/lib/libglfw.3.3.dylib
 Olympus: /usr/local/lib/libGLEW.2.2.0.dylib
-Olympus: ../Hephaestus/Library/irrKlang/lib/libirrklang.dylib
 Olympus: /usr/local/lib/libfreetype.dylib
 Olympus: CMakeFiles/Olympus.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Olympus"
