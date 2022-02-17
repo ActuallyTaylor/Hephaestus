@@ -10,27 +10,9 @@ CMakeFiles/Olympus.dir/main.cpp.o: \
  ../Hephaestus/Controls/Keybind/Keybind.hpp \
  ../Hephaestus/Function.hpp \
  ../Hephaestus/Hephaestus.hpp \
- ../Hephaestus/Library/irrKlang/include/ik_ESoundEngineOptions.h \
- ../Hephaestus/Library/irrKlang/include/ik_ESoundOutputDrivers.h \
- ../Hephaestus/Library/irrKlang/include/ik_EStreamModes.h \
- ../Hephaestus/Library/irrKlang/include/ik_IAudioRecorder.h \
- ../Hephaestus/Library/irrKlang/include/ik_IAudioStream.h \
- ../Hephaestus/Library/irrKlang/include/ik_IAudioStreamLoader.h \
- ../Hephaestus/Library/irrKlang/include/ik_IFileFactory.h \
- ../Hephaestus/Library/irrKlang/include/ik_IFileReader.h \
- ../Hephaestus/Library/irrKlang/include/ik_IRefCounted.h \
- ../Hephaestus/Library/irrKlang/include/ik_ISound.h \
- ../Hephaestus/Library/irrKlang/include/ik_ISoundDeviceList.h \
- ../Hephaestus/Library/irrKlang/include/ik_ISoundEffectControl.h \
- ../Hephaestus/Library/irrKlang/include/ik_ISoundEngine.h \
- ../Hephaestus/Library/irrKlang/include/ik_ISoundMixedOutputReceiver.h \
- ../Hephaestus/Library/irrKlang/include/ik_ISoundSource.h \
- ../Hephaestus/Library/irrKlang/include/ik_ISoundStopEventReceiver.h \
- ../Hephaestus/Library/irrKlang/include/ik_IVirtualRefCounted.h \
- ../Hephaestus/Library/irrKlang/include/ik_SAudioStreamFormat.h \
- ../Hephaestus/Library/irrKlang/include/ik_irrKlangTypes.h \
- ../Hephaestus/Library/irrKlang/include/ik_vec3d.h \
- ../Hephaestus/Library/irrKlang/include/irrKlang.h \
+ ../Hephaestus/Library/AL/al.h \
+ ../Hephaestus/Library/AL/alc.h \
+ ../Hephaestus/Library/AudioFile.h \
  ../Hephaestus/Library/stb_image.hpp \
  ../Hephaestus/Scene/Scene.hpp \
  ../Hephaestus/Shader/Shader.hpp \

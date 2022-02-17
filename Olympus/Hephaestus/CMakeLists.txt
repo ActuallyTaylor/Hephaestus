@@ -13,14 +13,17 @@ if(UNIX AND NOT APPLE)
     target_link_libraries(Hephaestus PRIVATE OpenGL)
 endif()
 
+add_subdirectory(Library/openal-soft/)
+target_link_libraries(Olympus OpenAL)
+
 find_package(glfw3 REQUIRED)
-target_link_libraries(Hephaestus PRIVATE glfw)
+target_link_libraries(Hephaestus glfw)
 
 find_package(GLEW REQUIRED)
-target_link_libraries(Hephaestus PRIVATE GLEW::GLEW)
+target_link_libraries(Hephaestus GLEW::GLEW)
 
 find_package(Freetype REQUIRED)
-target_link_libraries(Hephaestus PUBLIC Freetype::Freetype)
+target_link_libraries(Hephaestus Freetype::Freetype)
 
 add_custom_command(TARGET Hephaestus PRE_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy_directory

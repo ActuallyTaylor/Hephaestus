@@ -2,8 +2,11 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="Olympus" targetName="Hephaestus" />
       <config projectName="Olympus" targetName="Olympus" />
+      <config projectName="Olympus" targetName="Hephaestus" />
+      <config projectName="Olympus" targetName="common" />
+      <config projectName="Olympus" targetName="openal-info" />
+      <config projectName="Olympus" targetName="OpenAL" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -14,11 +17,322 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f22769bb-d6a0-46e4-a0f3-ebdc8ac76c3d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/Library/AudioFile.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/AudioFile.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/BSD-3Clause" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/COPYING" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/XCompile-Android.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/XCompile.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/al/auxeffectslot.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/al/auxeffectslot.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/al/buffer.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/al/buffer.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/al/effect.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/al/effect.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/al/effects/autowah.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/al/effects/chorus.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/al/effects/compressor.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/al/effects/convolution.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/al/effects/dedicated.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/al/effects/distortion.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/al/effects/echo.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/al/effects/effects.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/al/effects/equalizer.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/al/effects/fshifter.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/al/effects/modulator.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/al/effects/null.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/al/effects/pshifter.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/al/effects/reverb.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/al/effects/vmorpher.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/al/error.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/al/event.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/al/event.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/al/extension.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/al/filter.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/al/filter.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/al/listener.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/al/listener.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/al/source.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/al/source.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/al/state.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/alc.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/alcmain.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/alconfig.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/alconfig.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/alcontext.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/alu.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/alu.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/async_event.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/backends/alsa.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/backends/alsa.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/backends/base.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/backends/base.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/backends/coreaudio.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/backends/coreaudio.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/backends/dsound.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/backends/dsound.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/backends/jack.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/backends/jack.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/backends/loopback.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/backends/loopback.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/backends/null.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/backends/null.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/backends/oboe.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/backends/oboe.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/backends/opensl.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/backends/opensl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/backends/oss.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/backends/oss.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/backends/portaudio.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/backends/portaudio.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/backends/pulseaudio.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/backends/pulseaudio.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/backends/sdl2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/backends/sdl2.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/backends/sndio.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/backends/sndio.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/backends/solaris.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/backends/solaris.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/backends/wasapi.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/backends/wasapi.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/backends/wave.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/backends/wave.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/backends/winmm.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/backends/winmm.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/bformatdec.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/bformatdec.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/buffer_storage.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/buffer_storage.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/compat.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/converter.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/converter.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/effects/autowah.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/effects/base.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/effects/chorus.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/effects/compressor.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/effects/convolution.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/effects/dedicated.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/effects/distortion.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/effects/echo.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/effects/equalizer.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/effects/fshifter.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/effects/modulator.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/effects/null.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/effects/pshifter.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/effects/reverb.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/effects/vmorpher.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/effectslot.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/effectslot.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/front_stablizer.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/helpers.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/hrtf.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/hrtf.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/inprogext.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/panning.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/uiddefs.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/voice.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/voice.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alc/voice_change.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/alsoftrc.sample" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/cmake/FindALSA.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/cmake/FindAudioIO.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/cmake/FindFFmpeg.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/cmake/FindJACK.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/cmake/FindMySOFA.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/cmake/FindOSS.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/cmake/FindOboe.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/cmake/FindOpenSL.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/cmake/FindPortAudio.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/cmake/FindPulseAudio.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/cmake/FindSDL2.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/cmake/FindSndFile.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/cmake/FindSoundIO.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/cmake/bin2h.script.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/common/albit.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/common/albyte.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/common/alcomplex.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/common/alcomplex.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/common/aldeque.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/common/alfstream.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/common/alfstream.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/common/almalloc.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/common/almalloc.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/common/alnumeric.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/common/aloptional.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/common/alspan.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/common/alstring.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/common/alstring.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/common/atomic.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/common/dynload.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/common/dynload.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/common/intrusive_ptr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/common/math_defs.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/common/opthelpers.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/common/polyphase_resampler.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/common/polyphase_resampler.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/common/pragmadefs.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/common/ringbuffer.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/common/ringbuffer.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/common/strutils.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/common/strutils.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/common/threads.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/common/threads.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/common/vecmat.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/common/vector.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/common/win_main_utf8.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/config.h.in" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/ambdec.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/ambdec.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/ambidefs.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/bs2b.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/bs2b.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/bsinc_defs.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/bsinc_tables.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/bsinc_tables.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/bufferline.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/cpu_caps.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/cpu_caps.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/devformat.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/devformat.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/except.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/except.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/filters/biquad.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/filters/biquad.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/filters/nfc.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/filters/nfc.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/filters/splitter.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/filters/splitter.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/fmt_traits.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/fmt_traits.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/fpu_ctrl.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/fpu_ctrl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/logging.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/logging.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/mastering.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/mastering.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/mixer/defs.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/mixer/hrtfbase.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/mixer/hrtfdefs.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/mixer/mixer_c.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/mixer/mixer_neon.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/mixer/mixer_sse.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/mixer/mixer_sse2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/mixer/mixer_sse3.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/mixer/mixer_sse41.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/uhjfilter.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/core/uhjfilter.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/hrtf/Default HRTF.mhr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/include/AL/al.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/include/AL/alc.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/include/AL/alext.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/include/AL/efx-creative.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/include/AL/efx-presets.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/include/AL/efx.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/openal.pc.in" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/presets/3D7.1.ambdec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/presets/hexagon.ambdec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/presets/itu5.1-nocenter.ambdec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/presets/itu5.1.ambdec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/presets/presets.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/presets/rectangle.ambdec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/presets/square.ambdec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/resources/openal32.rc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/resources/resource.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/resources/router.rc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/resources/soft_oal.rc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/router/al.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/router/alc.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/router/router.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/router/router.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/utils/CIAIR.def" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/utils/IRC_1005.def" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/utils/MIT_KEMAR.def" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/utils/MIT_KEMAR_sofa.def" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/utils/SCUT_KEMAR.def" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/utils/alsoft-config/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/utils/alsoft-config/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/utils/alsoft-config/mainwindow.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/utils/alsoft-config/mainwindow.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/utils/alsoft-config/mainwindow.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/utils/alsoft-config/verstr.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/utils/alsoft-config/verstr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/utils/getopt.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/utils/getopt.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/utils/makemhr/loaddef.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/utils/makemhr/loaddef.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/utils/makemhr/loadsofa.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/utils/makemhr/loadsofa.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/utils/makemhr/makemhr.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/utils/makemhr/makemhr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/utils/openal-info.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/utils/sofa-info.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/utils/sofa-support.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/utils/sofa-support.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/version.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hephaestus/Library/openal-soft/version.h.in" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Audio/test.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/GameOfLife.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/GameOfLife.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/GameOfLife.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/GameOfLife.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/GameOfLife.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/GameOfLife.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/GameOfLife.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/CMakeFiles/GameOfLife.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameOfLife/cmake-build-debug/GameOfLife" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/AudioEngine/AudioEngine.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/AudioEngine/AudioEngine.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/lib/libHephaestus.a" beforeDir="false" afterPath="$PROJECT_DIR$/../GameOfLife/lib/hephaestus/lib/libHephaestus.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hephaestus/AudioEngine/AudioEngine.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/AudioEngine/AudioEngine.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hephaestus/AudioEngine/AudioEngine.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/AudioEngine/AudioEngine.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hephaestus/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeError.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeError.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/Hephaestus.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/Hephaestus.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Olympus.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Olympus.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/Olympus.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/Olympus.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/Olympus.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/Olympus.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/Olympus.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/Olympus.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/Olympus.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/Olympus.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/Olympus.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/Olympus.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/Hephaestus/CMakeFiles/Hephaestus.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/Hephaestus/CMakeFiles/Hephaestus.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/Hephaestus/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/Hephaestus/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/Hephaestus/Hephaestus.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/Hephaestus/Hephaestus.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/Hephaestus/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/Hephaestus/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/Hephaestus/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/Hephaestus/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/Olympus.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/Olympus.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +363,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/vector" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/__string" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="20KCL6BxFflAbGZyf9BMoLUeJZC" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -72,7 +387,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/cmake-build-debug" />
     <property name="nodejs.jest.jest_package" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
   </component>
   <component name="ReaderModeSettings">
     <option name="enabled" value="false" />
@@ -83,28 +398,39 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Resources/Audio" />
+      <recent name="$PROJECT_DIR$/Hephaestus/Library/AL" />
+      <recent name="$PROJECT_DIR$/Hephaestus/Library/freealut" />
+      <recent name="$PROJECT_DIR$/Hephaestus/Library" />
       <recent name="$PROJECT_DIR$/Hephaestus/Library/irrKlang/lib" />
-      <recent name="$PROJECT_DIR$/Hephaestus" />
-      <recent name="$PROJECT_DIR$/Hephaestus/Library/irrKlang" />
-      <recent name="$PROJECT_DIR$/Hephaestus/AudioEngine" />
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.Olympus">
-    <configuration name="Hephaestus" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Olympus" TARGET_NAME="Hephaestus" CONFIG_NAME="Debug">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Hephaestus" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Olympus" TARGET_NAME="Hephaestus" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Olympus" RUN_TARGET_NAME="Olympus">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-        <option name="RunConfigurationTask" enabled="true" run_configuration_name="Copy Directory" run_configuration_type="ShConfigurationType" />
-        <option name="RunConfigurationTask" enabled="true" run_configuration_name="Copy .a" run_configuration_type="ShConfigurationType" />
       </method>
     </configuration>
     <configuration name="Olympus" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Olympus" RUN_TARGET_NAME="Olympus" EXPLICIT_BUILD_TARGET_NAME="all">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-        <option name="RunConfigurationTask" enabled="true" run_configuration_name="Copy Directory" run_configuration_type="ShConfigurationType" />
-        <option name="RunConfigurationTask" enabled="true" run_configuration_name="Copy .a" run_configuration_type="ShConfigurationType" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="OpenAL" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Olympus" TARGET_NAME="OpenAL" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="common" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Olympus" TARGET_NAME="common" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="openal-info" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Olympus" TARGET_NAME="openal-info" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Olympus" RUN_TARGET_NAME="openal-info">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -147,6 +473,9 @@
     <list>
       <item itemvalue="CMake Application.Olympus" />
       <item itemvalue="CMake Application.Hephaestus" />
+      <item itemvalue="CMake Application.common" />
+      <item itemvalue="CMake Application.OpenAL" />
+      <item itemvalue="CMake Application.openal-info" />
       <item itemvalue="Shell Script.Copy Directory" />
       <item itemvalue="Shell Script.Copy .a" />
     </list>
@@ -251,7 +580,16 @@
       <workItem from="1643648280470" duration="995000" />
       <workItem from="1643661156878" duration="614000" />
       <workItem from="1643855308693" duration="18000" />
-      <workItem from="1644340629821" duration="176000" />
+      <workItem from="1644340629821" duration="1232000" />
+      <workItem from="1644597566770" duration="2697000" />
+      <workItem from="1644634736978" duration="95000" />
+      <workItem from="1644856819694" duration="666000" />
+      <workItem from="1644858230108" duration="1140000" />
+      <workItem from="1644859395151" duration="192000" />
+      <workItem from="1644944158451" duration="2231000" />
+      <workItem from="1645029526178" duration="4227000" />
+      <workItem from="1645055653490" duration="541000" />
+      <workItem from="1645116274170" duration="5626000" />
     </task>
     <servers />
   </component>
@@ -275,5 +613,9 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/../.." />
     </ignored-roots>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -1,4 +1,46 @@
 /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus
+-- Could NOT find ALSA (missing: ALSA_LIBRARY ALSA_INCLUDE_DIR) 
+-- Could NOT find OSS (missing: OSS_INCLUDE_DIR) 
+-- Could NOT find AudioIO (missing: AUDIOIO_INCLUDE_DIR) 
+-- Could NOT find SoundIO (missing: SOUNDIO_LIBRARY SOUNDIO_INCLUDE_DIR) 
+-- Could NOT find PortAudio (missing: PORTAUDIO_LIBRARY PORTAUDIO_INCLUDE_DIR) 
+-- Could NOT find PulseAudio (missing: PULSEAUDIO_LIBRARY PULSEAUDIO_INCLUDE_DIR) 
+-- Could NOT find JACK (missing: JACK_LIBRARY JACK_INCLUDE_DIR) 
+-- Could NOT find OpenSL (missing: OPENSL_LIBRARY OPENSL_INCLUDE_DIR OPENSL_ANDROID_INCLUDE_DIR) 
+CMake Warning at Hephaestus/Library/openal-soft/CMakeLists.txt:1152 (find_package):
+  By not providing "FindQt5Widgets.cmake" in CMAKE_MODULE_PATH this project
+  has asked CMake to find a package configuration file provided by
+  "Qt5Widgets", but CMake did not find one.
+
+  Could not find a package configuration file provided by "Qt5Widgets" with
+  any of the following names:
+
+    Qt5WidgetsConfig.cmake
+    qt5widgets-config.cmake
+
+  Add the installation prefix of "Qt5Widgets" to CMAKE_PREFIX_PATH or set
+  "Qt5Widgets_DIR" to a directory containing one of the above files.  If
+  "Qt5Widgets" provides a separate development package or SDK, be sure it has
+  been installed.
+
+
+-- 
+Building OpenAL with support for the following backends:
+     CoreAudio, WaveFile, Null
+
+Building with support for CPU extensions:
+    Default, SSE, SSE2, SSE3, SSE4.1
+
+-- Embedding HRTF datasets
+
+-- Installing library and headers
+-- Installing sample configuration
+-- Installing HRTF data files
+-- Installing AmbDec presets
+-- 
+-- Could NOT find MySOFA (missing: MYSOFA_LIBRARY MYSOFA_INCLUDE_DIR) 
+-- Building utility programs
+-- 
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release

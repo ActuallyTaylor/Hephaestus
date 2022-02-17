@@ -14,6 +14,7 @@ set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../Hephaestus/Library/openal-soft/include"
   "/usr/local/include"
   "/Library/Frameworks/Mono.framework/Headers"
   "/usr/local/include/freetype2"
@@ -25,6 +26,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/DependInfo.cmake"
   "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/DependInfo.cmake"
   )
 

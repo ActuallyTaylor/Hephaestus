@@ -12,16 +12,26 @@
 #define OLYMPUS_AUDIOENGINE_HPP
 #include <iostream>
 #include <string>
-#include "../Library/irrKlang/include/irrKlang.h"
-#pragma comment(lib, "irrKlang.lib") // link with irrKlang.dll
+#include "../Library/AL/al.h"
+#include "../Library/AL/alc.h"
+#include "../Library/AudioFile.h"
 
+// Currently, only allows for one audio stream playback at a time.
+// Multiple buffers will be needed for multiple layer audio streaming.
 class AudioEngine {
 private:
+    ALCdevice *device;
+    ALCcontext *context;
+    ALuint source;
+    ALuint buffer;
+    AudioFile<double> audioFile;
+
+    char* loadWaveFile(std::string path, int& chan, int& sampleRate, int& bps, int& dataSize);
+    bool checkOpenALError(std::string caller);
 
 public:
     AudioEngine();
     ~AudioEngine();
-    irrklang::ISoundEngine* source = irrklang::createIrrKlangDevice();
 
     void play2D(std::string path);
 };

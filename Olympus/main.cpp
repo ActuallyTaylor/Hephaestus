@@ -53,6 +53,7 @@ struct PhysicsSim {
         printf("Renderer: %s\n", renderer);
         printf("OpenGL version supported %s\n", version);
 
+        audioEngine.play2D("./Audio/bell.wav");
         mainScene.addCamera(&mainCamera, true);
         mainScene.addKeybind(GLFW_KEY_A, GLFW_PRESS, std::bind(&PhysicsSim::stopSpawning, this));
     }

@@ -10,27 +10,8 @@ CMakeFiles/GameOfLife.dir/main.cpp.o
  /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Controls/Keybind/Keybind.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Function.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Hephaestus.hpp
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_ESoundEngineOptions.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_ESoundOutputDrivers.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_EStreamModes.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_IAudioRecorder.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_IAudioStream.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_IAudioStreamLoader.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_IFileFactory.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_IFileReader.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_IRefCounted.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_ISound.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_ISoundDeviceList.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_ISoundEffectControl.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_ISoundEngine.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_ISoundMixedOutputReceiver.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_ISoundSource.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_ISoundStopEventReceiver.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_IVirtualRefCounted.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_SAudioStreamFormat.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_irrKlangTypes.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_vec3d.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/irrKlang.h
+ /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/AL/al.h
+ /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/AL/alc.h
  /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/stb_image.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Scene/Scene.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Shader/Shader.hpp
@@ -219,20 +200,14 @@ CMakeFiles/GameOfLife.dir/main.cpp.o
  /usr/local/include/glm/gtc/quaternion.hpp
  /usr/local/include/glm/gtc/quaternion.inl
  /usr/local/include/glm/gtc/quaternion_simd.inl
- /usr/local/include/glm/gtc/type_precision.hpp
- /usr/local/include/glm/gtc/type_precision.inl
  /usr/local/include/glm/gtc/type_ptr.hpp
  /usr/local/include/glm/gtc/type_ptr.inl
  /usr/local/include/glm/gtc/vec1.hpp
  /usr/local/include/glm/gtx/component_wise.hpp
  /usr/local/include/glm/gtx/component_wise.inl
- /usr/local/include/glm/gtx/dual_quaternion.hpp
- /usr/local/include/glm/gtx/dual_quaternion.inl
  /usr/local/include/glm/gtx/norm.hpp
  /usr/local/include/glm/gtx/norm.inl
  /usr/local/include/glm/gtx/quaternion.hpp
- /usr/local/include/glm/gtx/string_cast.hpp
- /usr/local/include/glm/gtx/string_cast.inl
  /usr/local/include/glm/integer.hpp
  /usr/local/include/glm/mat2x2.hpp
  /usr/local/include/glm/mat2x3.hpp
@@ -266,27 +241,8 @@ CMakeFiles/GameOfLife.dir/mainLevelScene.cpp.o
  /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Controls/Keybind/Keybind.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Function.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Hephaestus.hpp
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_ESoundEngineOptions.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_ESoundOutputDrivers.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_EStreamModes.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_IAudioRecorder.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_IAudioStream.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_IAudioStreamLoader.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_IFileFactory.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_IFileReader.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_IRefCounted.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_ISound.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_ISoundDeviceList.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_ISoundEffectControl.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_ISoundEngine.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_ISoundMixedOutputReceiver.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_ISoundSource.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_ISoundStopEventReceiver.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_IVirtualRefCounted.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_SAudioStreamFormat.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_irrKlangTypes.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/ik_vec3d.h
- /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/irrKlang/include/irrKlang.h
+ /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/AL/al.h
+ /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/AL/alc.h
  /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Library/stb_image.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Scene/Scene.hpp
  /Users/zacharylineman/Developer/GitHub/Hephaestus/GameOfLife/lib/hephaestus/include/Shader/Shader.hpp
@@ -475,20 +431,14 @@ CMakeFiles/GameOfLife.dir/mainLevelScene.cpp.o
  /usr/local/include/glm/gtc/quaternion.hpp
  /usr/local/include/glm/gtc/quaternion.inl
  /usr/local/include/glm/gtc/quaternion_simd.inl
- /usr/local/include/glm/gtc/type_precision.hpp
- /usr/local/include/glm/gtc/type_precision.inl
  /usr/local/include/glm/gtc/type_ptr.hpp
  /usr/local/include/glm/gtc/type_ptr.inl
  /usr/local/include/glm/gtc/vec1.hpp
  /usr/local/include/glm/gtx/component_wise.hpp
  /usr/local/include/glm/gtx/component_wise.inl
- /usr/local/include/glm/gtx/dual_quaternion.hpp
- /usr/local/include/glm/gtx/dual_quaternion.inl
  /usr/local/include/glm/gtx/norm.hpp
  /usr/local/include/glm/gtx/norm.inl
  /usr/local/include/glm/gtx/quaternion.hpp
- /usr/local/include/glm/gtx/string_cast.hpp
- /usr/local/include/glm/gtx/string_cast.inl
  /usr/local/include/glm/integer.hpp
  /usr/local/include/glm/mat2x2.hpp
  /usr/local/include/glm/mat2x3.hpp
