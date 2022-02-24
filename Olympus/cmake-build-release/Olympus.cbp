@@ -332,6 +332,12 @@
 		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/AudioEngine/AudioEngine.hpp">
 			<Option target="Hephaestus"/>
 		</Unit>
+		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/AudioEngine/AudioSnippet.cpp">
+			<Option target="Hephaestus"/>
+		</Unit>
+		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/AudioEngine/AudioSnippet.hpp">
+			<Option target="Hephaestus"/>
+		</Unit>
 		<Unit filename="/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Camera/Camera.cpp">
 			<Option target="Hephaestus"/>
 		</Unit>

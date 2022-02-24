@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Hephaestus.dir/AudioEngine/AudioEngine.cpp.o"
+  "CMakeFiles/Hephaestus.dir/AudioEngine/AudioSnippet.cpp.o"
   "CMakeFiles/Hephaestus.dir/Camera/Camera.cpp.o"
   "CMakeFiles/Hephaestus.dir/Collision/Collision.cpp.o"
   "CMakeFiles/Hephaestus.dir/Controls/ControlManager.cpp.o"

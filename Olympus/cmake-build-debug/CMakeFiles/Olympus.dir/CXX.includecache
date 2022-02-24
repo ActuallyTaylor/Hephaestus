@@ -11,16 +11,6 @@ freetype/config/ftheader.h
 -
 
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/AudioEngine/AudioEngine.hpp
-iostream
--
-string
--
-../Library/AL/al.h
-/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/AL/al.h
-../Library/AL/alc.h
-/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/AL/alc.h
-../Library/AudioFile.h
-/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/AudioFile.h
 
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Camera/Camera.hpp
 iostream
@@ -71,32 +61,6 @@ Shader/Shader.hpp
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Shader/Shader.hpp
 Scene/Scene.hpp
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Scene/Scene.hpp
-
-/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/AL/al.h
-
-/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/AL/alc.h
-
-/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/AudioFile.h
-iostream
--
-vector
--
-cassert
--
-string
--
-cstring
--
-fstream
--
-unordered_map
--
-iterator
--
-algorithm
--
-limits
--
 
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/stb_image.hpp
 stb_image.h

@@ -199,6 +199,30 @@ AudioEngine/AudioEngine.cpp.s:
 	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/AudioEngine/AudioEngine.cpp.s
 .PHONY : AudioEngine/AudioEngine.cpp.s
 
+AudioEngine/AudioSnippet.o: AudioEngine/AudioSnippet.cpp.o
+.PHONY : AudioEngine/AudioSnippet.o
+
+# target to build an object file
+AudioEngine/AudioSnippet.cpp.o:
+	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/AudioEngine/AudioSnippet.cpp.o
+.PHONY : AudioEngine/AudioSnippet.cpp.o
+
+AudioEngine/AudioSnippet.i: AudioEngine/AudioSnippet.cpp.i
+.PHONY : AudioEngine/AudioSnippet.i
+
+# target to preprocess a source file
+AudioEngine/AudioSnippet.cpp.i:
+	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/AudioEngine/AudioSnippet.cpp.i
+.PHONY : AudioEngine/AudioSnippet.cpp.i
+
+AudioEngine/AudioSnippet.s: AudioEngine/AudioSnippet.cpp.s
+.PHONY : AudioEngine/AudioSnippet.s
+
+# target to generate assembly for a file
+AudioEngine/AudioSnippet.cpp.s:
+	cd /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release && $(MAKE) $(MAKESILENT) -f Hephaestus/CMakeFiles/Hephaestus.dir/build.make Hephaestus/CMakeFiles/Hephaestus.dir/AudioEngine/AudioSnippet.cpp.s
+.PHONY : AudioEngine/AudioSnippet.cpp.s
+
 Camera/Camera.o: Camera/Camera.cpp.o
 .PHONY : Camera/Camera.o
 
@@ -527,6 +551,9 @@ help:
 	@echo "... AudioEngine/AudioEngine.o"
 	@echo "... AudioEngine/AudioEngine.i"
 	@echo "... AudioEngine/AudioEngine.s"
+	@echo "... AudioEngine/AudioSnippet.o"
+	@echo "... AudioEngine/AudioSnippet.i"
+	@echo "... AudioEngine/AudioSnippet.s"
 	@echo "... Camera/Camera.o"
 	@echo "... Camera/Camera.i"
 	@echo "... Camera/Camera.s"

@@ -37,11 +37,18 @@ struct PhysicsSim {
 
     Button startButton = Button("./Images/StartButton.png", glm::vec3(25,520, 0.0), glm::vec2(300,100));
 
+    AudioSnippet bellSound = audioEngine.createAudioSnippet("./Audio/bell.wav");
+    AudioSnippet testSound = audioEngine.createAudioSnippet("./Audio/test.wav");
+
     void stopSpawning() {
         if(shouldSpawn) {
+//            testSound.pause();
+            bellSound.play();
             shouldSpawn = false;
             startButton.setBackgroundColor(glm::vec4(125, 223, 100, 127.5));
         } else {
+            bellSound.pause();
+//            testSound.play();
             shouldSpawn = true;
             startButton.setBackgroundColor(glm::vec4(235, 96, 98, 127.5));
         }
@@ -53,7 +60,6 @@ struct PhysicsSim {
         printf("Renderer: %s\n", renderer);
         printf("OpenGL version supported %s\n", version);
 
-        audioEngine.play2D("./Audio/bell.wav");
         mainScene.addCamera(&mainCamera, true);
         mainScene.addKeybind(GLFW_KEY_A, GLFW_PRESS, std::bind(&PhysicsSim::stopSpawning, this));
     }

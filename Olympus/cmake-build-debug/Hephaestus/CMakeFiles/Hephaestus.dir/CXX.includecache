@@ -6,45 +6,27 @@
 
 #IncludeRegexTransform: 
 
-/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/AudioEngine/AudioEngine.cpp
-AudioEngine.hpp
-/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/AudioEngine/AudioEngine.hpp
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/AudioEngine/AudioSnippet.cpp
+AudioSnippet.hpp
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/AudioEngine/AudioSnippet.hpp
 
-/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/AudioEngine/AudioEngine.hpp
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/AudioEngine/AudioSnippet.hpp
 iostream
 -
 string
+-
+fstream
+-
+map
+-
+thread
 -
 ../Library/AL/al.h
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/AL/al.h
 ../Library/AL/alc.h
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/AL/alc.h
-../Library/AudioFile.h
-/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/AudioFile.h
 
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/AL/al.h
 
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/AL/alc.h
-
-/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/AudioFile.h
-iostream
--
-vector
--
-cassert
--
-string
--
-cstring
--
-fstream
--
-unordered_map
--
-iterator
--
-algorithm
--
-limits
--
 

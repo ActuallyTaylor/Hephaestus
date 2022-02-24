@@ -10,9 +10,6 @@ CMakeFiles/Olympus.dir/main.cpp.o: \
  ../Hephaestus/Controls/Keybind/Keybind.hpp \
  ../Hephaestus/Function.hpp \
  ../Hephaestus/Hephaestus.hpp \
- ../Hephaestus/Library/AL/al.h \
- ../Hephaestus/Library/AL/alc.h \
- ../Hephaestus/Library/AudioFile.h \
  ../Hephaestus/Library/stb_image.hpp \
  ../Hephaestus/Scene/Scene.hpp \
  ../Hephaestus/Shader/Shader.hpp \

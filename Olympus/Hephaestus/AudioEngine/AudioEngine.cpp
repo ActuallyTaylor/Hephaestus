@@ -36,7 +36,6 @@ int convertToInt(char* buffer, int len) {
 }
 
 AudioEngine::AudioEngine() {
-
     device = alcOpenDevice(NULL);
     if (!device) {
         printf("Error Opening AL Device\n");
@@ -48,42 +47,26 @@ AudioEngine::AudioEngine() {
         printf("Error Opening AL Context\n");
     }
     checkOpenALError("AL create context");
-
-    alGenSources((ALuint)1, &sourceID);
-    checkOpenALError("AL_GenSources");
-
-    alSourcef(sourceID, AL_PITCH, 1);
-    checkOpenALError("AL_Pitch");
-
-    alSourcef(sourceID, AL_GAIN, 1);
-    checkOpenALError("AL_Gain");
-
-    alSource3f(sourceID, AL_POSITION, 0, 0, 0);
-    checkOpenALError("AL_Position");
-
-    alSource3f(sourceID, AL_VELOCITY, 0, 0, 0);
-    checkOpenALError("AL_Velocity");
-
-    alSourcei(sourceID, AL_LOOPING, AL_FALSE);
-    checkOpenALError("alSourcei");
-
-    alGenBuffers((ALuint)1, &bufferID);
-    checkOpenALError("alGenBuffers");
 }
 
-AudioEngine::~AudioEngine() {
-}
+AudioEngine::~AudioEngine() { }
 
+AudioSnippet AudioEngine::createAudioSnippet(std::string path) {
+    if (loadedAudioData.count(path) > 0) {
+        std::cout << "Using cached audio data" << std::endl;
+        AudioSnippet::AudioFile audio = loadedAudioData.at(path);
+        return { audio, device, context };
+    } else {
+        std::cout << "Loading Audio File" << std::endl;
+        int chan, sampleRate, bitsPerSample, dataSize;
+        unsigned int format;
+        char* data;
 
-void AudioEngine::play2D(std::string path) {
-    int chan, sampleRate, bitsPerSample, dataSize, format;
-    char* data = loadWaveFile(path, chan, sampleRate, bitsPerSample, dataSize, format);
-
-    alGenBuffers(1, &bufferID);
-
-    alBufferData(bufferID, format, data, dataSize, sampleRate);
-    alSourcei(sourceID, AL_BUFFER, bufferID);
-    alSourcePlay(sourceID);
+        data = loadWaveFile(path, chan, sampleRate, bitsPerSample, dataSize, format);
+        AudioSnippet::AudioFile audio = AudioSnippet::AudioFile(chan, sampleRate, bitsPerSample, dataSize, format, data);
+        loadedAudioData.insert(std::pair<std::string, AudioSnippet::AudioFile>(path, audio));
+        return { audio, device, context };
+    }
 }
 
 bool AudioEngine::checkOpenALError(std::string caller) {
@@ -119,7 +102,7 @@ bool AudioEngine::checkOpenALError(std::string caller) {
     return true;
 }
 
-char *AudioEngine::loadWaveFile(std::string path, int& chan, int& sampleRate, int& bitsPerSample, int& dataSize, int format) {
+char *AudioEngine::loadWaveFile(std::string path, int& chan, int& sampleRate, int& bitsPerSample, int& dataSize, unsigned int& format) {
     char buffer[4];
     std::ifstream fileStream {path.c_str(), std::ios::binary};
 
@@ -218,3 +201,17 @@ char *AudioEngine::loadWaveFile(std::string path, int& chan, int& sampleRate, in
 
     return data;
 }
+
+void AudioEngine::removeAudioFile(std::string path) {
+    loadedAudioData.erase(path);
+}
+
+void AudioEngine::loadAudioFile(std::string path) {
+    int chan, sampleRate, bitsPerSample, dataSize;
+    unsigned int format;
+    char* data = loadWaveFile(path, chan, sampleRate, bitsPerSample, dataSize, format);
+
+    AudioSnippet::AudioFile audio = AudioSnippet::AudioFile(chan, sampleRate, bitsPerSample, dataSize, format, data);
+    loadedAudioData.insert(std::pair<std::string, AudioSnippet::AudioFile>(path, audio));
+}
+

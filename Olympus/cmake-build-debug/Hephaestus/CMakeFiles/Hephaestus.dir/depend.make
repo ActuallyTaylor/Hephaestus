@@ -3,10 +3,12 @@
 
 Hephaestus/CMakeFiles/Hephaestus.dir/AudioEngine/AudioEngine.cpp.o: \
  ../Hephaestus/AudioEngine/AudioEngine.cpp \
- ../Hephaestus/AudioEngine/AudioEngine.hpp \
+ ../Hephaestus/AudioEngine/AudioEngine.hpp
+Hephaestus/CMakeFiles/Hephaestus.dir/AudioEngine/AudioSnippet.cpp.o: \
+ ../Hephaestus/AudioEngine/AudioSnippet.cpp \
+ ../Hephaestus/AudioEngine/AudioSnippet.hpp \
  ../Hephaestus/Library/AL/al.h \
- ../Hephaestus/Library/AL/alc.h \
- ../Hephaestus/Library/AudioFile.h
+ ../Hephaestus/Library/AL/alc.h
 Hephaestus/CMakeFiles/Hephaestus.dir/Camera/Camera.cpp.o: \
  /Library/Frameworks/Mono.framework/Headers/ft2build.h \
  ../Hephaestus/Camera/Camera.cpp \

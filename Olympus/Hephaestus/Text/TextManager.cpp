@@ -108,7 +108,7 @@ void TextManager::addText(Text *text) {
     if(text->registered) { return; }
     std::map<char, Text::Character> font = fonts[text->fontPath];
 
-    if (fonts.find(text->fontPath) != fonts.end() && fonts.size() > 0) {
+    if (fonts.find(text->fontPath) != fonts.end() && !fonts.empty()) {
         text->assign(&textShader, &VBO, &VAO, &projection, font);
         text->registered = true;
         textObjects.push_back(text);
