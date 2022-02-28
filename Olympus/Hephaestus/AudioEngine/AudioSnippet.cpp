@@ -56,8 +56,8 @@ void AudioSnippet::play() {
         alSource3f(sourceID, AL_VELOCITY, 0, 0, 0);
         checkOpenALError("AL_Velocity");
 
-        alSourcei(sourceID, AL_LOOPING, AL_FALSE);
-        checkOpenALError("alSourcei");
+        alSourcei(sourceID, AL_LOOPING, AL_TRUE);
+        checkOpenALError("AL_LOOPING");
 
         alGenBuffers((ALuint)1, &bufferID);
         checkOpenALError("alGenBuffers");
@@ -75,9 +75,11 @@ void AudioSnippet::play() {
 
 
 void AudioSnippet::pause() {
-    isPaused = true;
-    alSourcePause(sourceID);
-    checkOpenALError("alSourcePause");
+    if (hasBeenCreated) {
+        isPaused = true;
+        alSourcePause(sourceID);
+        checkOpenALError("alSourcePause");
+    }
 }
 
 void AudioSnippet::close() {
@@ -85,26 +87,9 @@ void AudioSnippet::close() {
     alDeleteBuffers(1, &bufferID);
 
     device = alcGetContextsDevice(context);
-    alcMakeContextCurrent(NULL);
+    alcMakeContextCurrent(nullptr);
     alcDestroyContext(context);
     alcCloseDevice(device);
-
-//    // Dispatch a thread that will delete the audio once it is done playing
-//    std::thread audioStateThread { [=](){
-//        std::cout << "Open Thread" << std::endl;
-//        int sourceState {};
-//
-//        alGetSourcei(sourceID, AL_SOURCE_STATE, &sourceState);
-////        while (sourceState == AL_PLAYING) {
-////            alGetSourcei(sourceState, AL_SOURCE_STATE, &sourceState);
-////        }
-//
-//        std::cout << "Worker Thread Completed" << std::endl;
-//
-//    }};
-//
-//    audioStateThread.detach();
-
 }
 
 bool AudioSnippet::checkOpenALError(std::string caller) {
@@ -138,5 +123,20 @@ bool AudioSnippet::checkOpenALError(std::string caller) {
     // Clear the error stack
     alGetError();
     return true;
+}
+
+/*
+ * Positive X: Right
+ * Negative X: Left
+ *
+ * Positive Y: Forward
+ * Negative Y: Backwards
+ *
+ * Positive Z: Above
+ * Negative z: Below
+ */
+void AudioSnippet::changePosition(glm::vec3 position) {
+    alSource3f(sourceID, AL_POSITION, position.x, position.y, position.z);
+    checkOpenALError("AL_Position");
 }
 

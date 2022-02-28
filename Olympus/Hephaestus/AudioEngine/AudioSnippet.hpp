@@ -15,6 +15,7 @@
 #include <fstream>
 #include <map>
 #include <thread>
+#include <glm/glm.hpp>
 
 #include "../Library/AL/al.h"
 #include "../Library/AL/alc.h"
@@ -34,6 +35,8 @@ public:
     void play();
     void pause();
     void close();
+
+    void changePosition(glm::vec3 position);
 private:
     std::map<std::string, AudioFile> *loadedAudioData { };
 
@@ -50,7 +53,7 @@ private:
     bool isPaused { false };
     bool hasBeenCreated { false };
 
-    bool checkOpenALError(std::string caller);
+    static bool checkOpenALError(std::string caller);
 };
 
 

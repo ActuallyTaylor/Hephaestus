@@ -7,7 +7,6 @@
 #include "Hephaestus/AudioEngine/AudioEngine.hpp"
 
 Hephaestus engine = Hephaestus("Hephaestus Engine");
-//std::bind(&B::MyFun, this)
 
 struct PhysicsSim {
     AudioEngine audioEngine = AudioEngine();
@@ -37,18 +36,13 @@ struct PhysicsSim {
 
     Button startButton = Button("./Images/StartButton.png", glm::vec3(25,520, 0.0), glm::vec2(300,100));
 
-    AudioSnippet bellSound = audioEngine.createAudioSnippet("./Audio/bell.wav");
-    AudioSnippet testSound = audioEngine.createAudioSnippet("./Audio/test.wav");
+    AudioSnippet songSound = audioEngine.createAudioSnippet("./Audio/mono_bounce.wav");
 
     void stopSpawning() {
         if(shouldSpawn) {
-//            testSound.pause();
-            bellSound.play();
             shouldSpawn = false;
             startButton.setBackgroundColor(glm::vec4(125, 223, 100, 127.5));
         } else {
-            bellSound.pause();
-//            testSound.play();
             shouldSpawn = true;
             startButton.setBackgroundColor(glm::vec4(235, 96, 98, 127.5));
         }
@@ -62,6 +56,8 @@ struct PhysicsSim {
 
         mainScene.addCamera(&mainCamera, true);
         mainScene.addKeybind(GLFW_KEY_A, GLFW_PRESS, std::bind(&PhysicsSim::stopSpawning, this));
+//        songSound.play();
+//        songSound.changePosition({0,0,-10});
     }
 
     void destroy() {

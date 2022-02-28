@@ -147,14 +147,18 @@ char *AudioEngine::loadWaveFile(std::string path, int& chan, int& sampleRate, in
     if (chan == 1) {
         if (bitsPerSample == 8) {
             format = AL_FORMAT_MONO8;
+            std::cout << "Valid WAVE file: Mono 8" << std::endl;
         } else {
             format = AL_FORMAT_MONO16;
+            std::cout << "Valid WAVE file: Mono 16" << std::endl;
         }
     } else {
         if (bitsPerSample == 8) {
             format = AL_FORMAT_STEREO8;
+            std::cout << "Valid WAVE file: Stereo 8" << std::endl;
         } else {
             format = AL_FORMAT_STEREO16;
+            std::cout << "Valid WAVE file: Stereo 16" << std::endl;
         }
     }
 
