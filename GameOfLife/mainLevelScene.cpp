@@ -64,7 +64,7 @@ void MainLevelScene::clickMouse() {
 
     lastChangedX = arrayPosition.x;
     lastChangedY = arrayPosition.y;
-    audioEngine.play2D("./Audio/pop.wav");
+    clickSound.play();
 }
 
 void MainLevelScene::dragMouse() {

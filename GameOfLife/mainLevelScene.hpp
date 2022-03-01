@@ -41,6 +41,8 @@ class MainLevelScene {
     Text fpsTextObject = { "Hello World", "./fonts/SFNSRounded.ttf", {10.0f, 695.0f }, { 0.5, 0.8f, 0.2f, 1.0f } };
     Text spriteCountObject = { "Hello World", "./fonts/SFNSRounded.ttf", {10.0f, 670.0f }, { 0.5, 0.8f, 0.2f, 1.0f } };
 
+    AudioSnippet clickSound = audioEngine.createAudioSnippet("./audio/pop.wav");
+
     Camera camera = Camera();
 
     void clickMouse();

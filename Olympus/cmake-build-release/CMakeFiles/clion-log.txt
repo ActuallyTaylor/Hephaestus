@@ -1,4 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus
+"/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6777.58/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - Unix Makefiles" /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus
 -- Could NOT find ALSA (missing: ALSA_LIBRARY ALSA_INCLUDE_DIR) 
 -- Could NOT find OSS (missing: OSS_INCLUDE_DIR) 
 -- Could NOT find AudioIO (missing: AUDIOIO_INCLUDE_DIR) 

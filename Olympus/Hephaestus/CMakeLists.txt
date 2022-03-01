@@ -10,20 +10,20 @@ add_library(Hephaestus Hephaestus.cpp Hephaestus.cpp Hephaestus.hpp Shader/Shade
 
 if(UNIX AND NOT APPLE)
     find_package(OpenGL REQUIRED)
-    target_link_libraries(Hephaestus PRIVATE OpenGL)
+    target_link_libraries(Hephaestus PUBLIC OpenGL)
 endif()
 
 add_subdirectory(Library/openal-soft/)
-target_link_libraries(Olympus OpenAL)
+target_link_libraries(Hephaestus PUBLIC OpenAL)
 
 find_package(glfw3 REQUIRED)
-target_link_libraries(Hephaestus glfw)
+target_link_libraries(Hephaestus PUBLIC glfw)
 
 find_package(GLEW REQUIRED)
-target_link_libraries(Hephaestus GLEW::GLEW)
+target_link_libraries(Hephaestus PUBLIC GLEW::GLEW)
 
 find_package(Freetype REQUIRED)
-target_link_libraries(Hephaestus Freetype::Freetype)
+target_link_libraries(Hephaestus PUBLIC Freetype::Freetype)
 
 add_custom_command(TARGET Hephaestus PRE_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy_directory
