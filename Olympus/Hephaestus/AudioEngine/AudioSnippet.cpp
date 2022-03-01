@@ -136,6 +136,10 @@ bool AudioSnippet::checkOpenALError(std::string caller) {
  * Negative z: Below
  */
 void AudioSnippet::changePosition(glm::vec3 position) {
+    if (format != AL_FORMAT_MONO8 || format != AL_FORMAT_MONO16) {
+        std::cerr << "Change position only works with Mono sound" << std::endl;
+        return;
+    }
     alSource3f(sourceID, AL_POSITION, position.x, position.y, position.z);
     checkOpenALError("AL_Position");
 }

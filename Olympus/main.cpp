@@ -36,8 +36,6 @@ struct PhysicsSim {
 
     Button startButton = Button("./Images/StartButton.png", glm::vec3(25,520, 0.0), glm::vec2(300,100));
 
-    AudioSnippet songSound = audioEngine.createAudioSnippet("./Audio/mono_bounce.wav");
-
     void stopSpawning() {
         if(shouldSpawn) {
             shouldSpawn = false;
@@ -56,8 +54,6 @@ struct PhysicsSim {
 
         mainScene.addCamera(&mainCamera, true);
         mainScene.addKeybind(GLFW_KEY_A, GLFW_PRESS, std::bind(&PhysicsSim::stopSpawning, this));
-//        songSound.play();
-//        songSound.changePosition({0,0,-10});
     }
 
     void destroy() {
