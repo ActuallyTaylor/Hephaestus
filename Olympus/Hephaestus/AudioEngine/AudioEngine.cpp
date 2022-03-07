@@ -138,7 +138,7 @@ char *AudioEngine::loadWaveFile(std::string path, int& chan, int& sampleRate, in
         std::cout << "Invalid WAVE file: AudioFormat, audio is compressed - " << buffer << std::endl;
         return NULL;
     } else {
-        std::cout << "Valid WAVE file: AudioFormat " << std::endl;
+        std::cout << "Valid WAVE file: AudioFormat " << convertToInt(buffer, 2) << std::endl;
     }
 
     fileStream.read(buffer, 2); // NumChannels: Mono = 1, Stereo = 2, etc.
@@ -175,7 +175,7 @@ char *AudioEngine::loadWaveFile(std::string path, int& chan, int& sampleRate, in
     if (strncmp(buffer, "data", 4) != 0) {
         if (strncmp(buffer, "fact", 4) != 0) {
             std::cout << "Unknown next chunk |" << buffer << "|" << std::endl;
-            return NULL;
+            return nullptr;
         } else {
             fileStream.read(buffer, 4); // NumberOfSamples
             fileStream.read(buffer, 4); // Data
@@ -187,7 +187,7 @@ char *AudioEngine::loadWaveFile(std::string path, int& chan, int& sampleRate, in
 
         if (strncmp(buffer, "data", 4) != 0) {
             std::cout << "Invalid WAVE file: data |" << buffer << "|" << std::endl;
-            return NULL;
+            return nullptr;
         } else {
             std::cout << "Valid WAVE file: data" << std::endl;
         }
@@ -197,9 +197,18 @@ char *AudioEngine::loadWaveFile(std::string path, int& chan, int& sampleRate, in
 
     fileStream.read(buffer, 4); // SubChunk2Size: Size of the data chunk
     dataSize = convertToInt(buffer, 4);
+    std::cout << "Data Size: " << dataSize << std::endl;
 
     char* data = new char[dataSize];
     fileStream.read(data, dataSize);
+
+    char* restOfFile = new char[1];
+    while (!fileStream.eof()) {
+        fileStream.read(restOfFile, 1);
+        std::cout << restOfFile;
+    }
+    std::cout << std::endl;
+
 
     std::cout << "Finished Reading WAVE file - size: " << dataSize << std::endl;
 

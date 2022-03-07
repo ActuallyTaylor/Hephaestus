@@ -56,7 +56,7 @@ void AudioSnippet::play() {
         alSource3f(sourceID, AL_VELOCITY, 0, 0, 0);
         checkOpenALError("AL_Velocity");
 
-        alSourcei(sourceID, AL_LOOPING, AL_TRUE);
+        alSourcei(sourceID, AL_LOOPING, AL_FALSE);
         checkOpenALError("AL_LOOPING");
 
         alGenBuffers((ALuint)1, &bufferID);

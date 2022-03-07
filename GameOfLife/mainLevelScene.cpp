@@ -64,7 +64,6 @@ void MainLevelScene::clickMouse() {
 
     lastChangedX = arrayPosition.x;
     lastChangedY = arrayPosition.y;
-    clickSound.play();
 }
 
 void MainLevelScene::dragMouse() {

@@ -1,31 +1,3 @@
-#cmake_minimum_required(VERSION 3.20)
-#project(GameOfLife)
-#
-#set(CMAKE_CXX_STANDARD 17)
-#set(CMAKE_FIND_LIBRARY_SUFFIXES ".a")
-#
-#add_executable(GameOfLife main.cpp mainLevelScene.cpp mainLevelScene.hpp)
-#
-##add_library(hephaestus STATIC IMPORTED)
-##set_property(TARGET hephaestus PROPERTY IMPORTED_LOCATION "/${CMAKE_SOURCE_DIR}/lib/hephaestus/lib/libHephaestus.a")
-#
-##find_package(glfw3 3.3 REQUIRED)
-##target_link_libraries(GameOfLife glfw)
-##
-##find_package(GLEW REQUIRED)
-##target_link_libraries(GameOfLife GLEW::GLEW)
-##
-##find_package(Freetype REQUIRED)
-##target_link_libraries(GameOfLife Freetype::Freetype)
-#
-#add_subdirectory(../Olympus/Hephaestus ../Olympus/cmake-build-debug)
-#target_link_libraries(GameOfLife Hephaestus)
-#
-#add_custom_command(TARGET GameOfLife PRE_BUILD
-#        COMMAND ${CMAKE_COMMAND} -E copy_directory
-#        ${CMAKE_SOURCE_DIR}/Resources $<TARGET_FILE_DIR:GameOfLife>)
-#
-
 cmake_minimum_required(VERSION 3.13)
 project(GameOfLife)
 

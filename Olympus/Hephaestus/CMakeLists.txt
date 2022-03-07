@@ -27,4 +27,4 @@ target_link_libraries(Hephaestus PUBLIC Freetype::Freetype)
 
 add_custom_command(TARGET Hephaestus PRE_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy_directory
-        ${CMAKE_SOURCE_DIR}/Hephaestus/Resources/ $<TARGET_FILE_DIR:Hephaestus>)
+        ${PROJECT_SOURCE_DIR}/Resources/ $<TARGET_FILE_DIR:Hephaestus>)
