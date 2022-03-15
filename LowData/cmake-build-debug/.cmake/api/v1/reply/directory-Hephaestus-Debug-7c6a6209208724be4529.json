@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "Hephaestus",
+		"source" : "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus"
+	}
+}

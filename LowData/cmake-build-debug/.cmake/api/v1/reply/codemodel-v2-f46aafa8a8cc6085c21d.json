@@ -1,0 +1,156 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "Hephaestus",
+					"childIndexes" : 
+					[
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-Hephaestus-Debug-7c6a6209208724be4529.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "Hephaestus/Library/openal-soft",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-Hephaestus.Library.openal-soft-Debug-1d359aefed073e83ccb8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.2"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 2,
+					"source" : "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/openal-soft",
+					"targetIndexes" : 
+					[
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "LowData",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2
+					],
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "Hephaestus",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "OpenAL",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "Hephaestus::@f8bc02338586082e7361",
+					"jsonFile" : "target-Hephaestus-Debug-172383f5cd5ff379755c.json",
+					"name" : "Hephaestus",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LowData::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LowData-Debug-ca7562df46ffcc5bf54b.json",
+					"name" : "LowData",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "OpenAL::@310c50f5be078a9748a4",
+					"jsonFile" : "target-OpenAL-Debug-d14da16c926780fd0aed.json",
+					"name" : "OpenAL",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "common::@310c50f5be078a9748a4",
+					"jsonFile" : "target-common-Debug-517c9f6cfa7b0c7f4dc8.json",
+					"name" : "common",
+					"projectIndex" : 2
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/zacharylineman/Developer/GitHub/Hephaestus/LowData/cmake-build-debug",
+		"source" : "/Users/zacharylineman/Developer/GitHub/Hephaestus/LowData"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

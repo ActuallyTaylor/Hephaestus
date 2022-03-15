@@ -1,0 +1,27 @@
+"/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6777.58/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6777.58/CLion.app/Contents/bin/ninja/mac/ninja" -G Ninja /Users/zacharylineman/Developer/GitHub/Hephaestus/LowData
+-- Could NOT find ALSA (missing: ALSA_LIBRARY ALSA_INCLUDE_DIR) 
+-- Could NOT find OSS (missing: OSS_INCLUDE_DIR) 
+-- Could NOT find AudioIO (missing: AUDIOIO_INCLUDE_DIR) 
+-- Could NOT find SoundIO (missing: SOUNDIO_LIBRARY SOUNDIO_INCLUDE_DIR) 
+-- Could NOT find PortAudio (missing: PORTAUDIO_LIBRARY PORTAUDIO_INCLUDE_DIR) 
+-- Could NOT find PulseAudio (missing: PULSEAUDIO_LIBRARY PULSEAUDIO_INCLUDE_DIR) 
+-- Could NOT find JACK (missing: JACK_LIBRARY JACK_INCLUDE_DIR) 
+-- Could NOT find OpenSL (missing: OPENSL_LIBRARY OPENSL_INCLUDE_DIR OPENSL_ANDROID_INCLUDE_DIR) 
+-- 
+Building OpenAL with support for the following backends:
+     CoreAudio, WaveFile, Null
+
+Building with support for CPU extensions:
+    Default, SSE, SSE2, SSE3, SSE4.1
+
+-- Embedding HRTF datasets
+
+-- Installing library and headers
+-- 
+CMake Error at CMakeLists.txt:11 (add_custom_command):
+  No TARGET 'GameOfLife' has been created in this directory.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/Users/zacharylineman/Developer/GitHub/Hephaestus/LowData/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "/Users/zacharylineman/Developer/GitHub/Hephaestus/LowData/cmake-build-debug/CMakeFiles/CMakeError.log".
