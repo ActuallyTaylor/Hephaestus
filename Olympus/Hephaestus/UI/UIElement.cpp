@@ -10,15 +10,24 @@
 
 #include "UIElement.hpp"
 
+#include <utility>
+
 UIElement::UIElement(std::string _texturePath, glm::vec3 _position, glm::vec2 _dimensions, glm::vec3 _rotation) {
     position = _position;
     dimensions = _dimensions;
     rotation = _rotation;
 
     createTexture(_texturePath);
+    updateAnchorPosition();
 }
 
+UIElement::UIElement(glm::vec3 _position, glm::vec2 _dimensions, glm::vec3 _rotation) {
+    position = _position;
+    dimensions = _dimensions;
+    rotation = _rotation;
 
+    updateAnchorPosition();
+}
 
 void UIElement::createTexture(const std::string& texturePath) {
     /*
@@ -87,7 +96,14 @@ void UIElement::createVirtualBufferObject() {
 
 void UIElement::draw() {
     shader.use();
-    glm::mat4 model = translate(glm::mat4(1.0f), position);
+    glm::vec3 _position = this->position;
+
+    if(positionType == relative) {
+        // Get the calculated relative position and add the offset specific by the user.
+        _position = anchorPositionBeforeOffset + relativePositionOffset;
+    }
+
+    glm::mat4 model = translate(glm::mat4(1.0f), _position);
 
     // Apply the rotation of the sprite
     model = rotate(model, glm::radians(rotation.x), glm::vec3(1.0f, 0.0f, 0.0f));
@@ -112,6 +128,7 @@ void UIElement::updateScreenDimensions(int width, int height) {
     screenSize = glm::vec2(width, height);
     projection = glm::ortho(0.0f, screenSize.x, 0.0f, screenSize.y, -1000.0f, 1000.0f);
     createVirtualBufferObject();
+    updateAnchorPosition();
 }
 
 void UIElement::setTexture(std::string texturePath) {
@@ -128,10 +145,88 @@ void UIElement::setTextManager(TextManager *_textManager) {
 void UIElement::refresh() {}
 
 void UIElement::addShader(Shader _shader) {
-    shader = _shader;
+    shader = std::move(_shader);
     projection = glm::ortho(0.0f, screenSize.x, 0.0f, screenSize.y, -1000.0f, 1000.0f);
     shader.setMatrix4("projection", projection);
     shader.setup();
 
     createVirtualBufferObject();
+}
+
+void UIElement::setAnchorPoint(AnchorPoint anchorPoint) {
+    if (this->positionType == absolute) {
+        std::cout << "Warning: Make sure to set positionType to relative for anchor position to be used";
+    }
+    this->anchorPoint = anchorPoint;
+    updateAnchorPosition();
+}
+
+void UIElement::setAnchorPosition(UIElement::ScreenAnchor anchorPosition) {
+    if (this->positionType == absolute) {
+        std::cout << "Warning: Make sure to set positionType to relative for anchor position to be used";
+    }
+    this->anchorPosition = anchorPosition;
+    updateAnchorPosition();
+}
+
+void UIElement::updateAnchorPosition() {
+    switch(this->anchorPosition) {
+        case topLeft:
+            anchorPositionBeforeOffset = { 0, screenSize.y, 0};
+            break;
+        case topCenter:
+            anchorPositionBeforeOffset = { screenSize.x / 2, screenSize.y, 0};
+            break;
+        case topRight:
+            anchorPositionBeforeOffset = { screenSize.x, screenSize.y / 2, 0};
+            break;
+        case centerLeft:
+            anchorPositionBeforeOffset = { 0, screenSize.y / 2, 0};
+            break;
+        case center:
+            anchorPositionBeforeOffset = { screenSize.x / 2, screenSize.y / 2, 0};
+            break;
+        case centerRight:
+            anchorPositionBeforeOffset = { screenSize.x, screenSize.y / 2, 0};
+            break;
+        case bottomLeft:
+            anchorPositionBeforeOffset = { 0, 0, 0};
+            break;
+        case bottomCenter:
+            anchorPositionBeforeOffset = { screenSize.x / 2, 0, 0};
+            break;
+        case bottomRight:
+            anchorPositionBeforeOffset = { screenSize.x, 0, 0};
+            break;
+    }
+
+    switch(this->anchorPoint) {
+        case pointTopLeft:
+            anchorPositionBeforeOffset = { anchorPositionBeforeOffset.x, anchorPositionBeforeOffset.y  - dimensions.y, anchorPositionBeforeOffset.z };
+            break;
+        case pointTopCenter:
+            anchorPositionBeforeOffset = { anchorPositionBeforeOffset.x  - (dimensions.x / 2), anchorPositionBeforeOffset.y - dimensions.y, anchorPositionBeforeOffset.z };
+            break;
+        case pointTopRight:
+            anchorPositionBeforeOffset = { anchorPositionBeforeOffset.x - dimensions.x, anchorPositionBeforeOffset.y - dimensions.y, anchorPositionBeforeOffset.z };
+            break;
+        case pointCenterLeft:
+            anchorPositionBeforeOffset = { anchorPositionBeforeOffset.x, anchorPositionBeforeOffset.y - (dimensions.y / 2), anchorPositionBeforeOffset.z };
+            break;
+        case pointCenter:
+            anchorPositionBeforeOffset = { anchorPositionBeforeOffset.x  - (dimensions.x / 2), anchorPositionBeforeOffset.y - (dimensions.y / 2), anchorPositionBeforeOffset.z };
+            break;
+        case pointCenterRight:
+            anchorPositionBeforeOffset = { anchorPositionBeforeOffset.x - dimensions.x, anchorPositionBeforeOffset.y - (dimensions.y / 2), anchorPositionBeforeOffset.z };
+            break;
+        case pointBottomLeft:
+            anchorPositionBeforeOffset = { anchorPositionBeforeOffset.x, anchorPositionBeforeOffset.y, anchorPositionBeforeOffset.z };
+            break;
+        case pointBottomCenter:
+            anchorPositionBeforeOffset = { anchorPositionBeforeOffset.x  - (dimensions.x / 2), anchorPositionBeforeOffset.y, anchorPositionBeforeOffset.z };
+            break;
+        case pointBottomRight:
+            anchorPositionBeforeOffset = { anchorPositionBeforeOffset.x - dimensions.x, anchorPositionBeforeOffset.y, anchorPositionBeforeOffset.z };
+            break;
+    }
 }

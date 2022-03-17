@@ -23,16 +23,15 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)
 Performing C++ SOURCE FILE Test HAVE_LIBATOMIC failed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_20170/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_20170.dir/build.make CMakeFiles/cmTC_20170.dir/build
-Building CXX object CMakeFiles/cmTC_20170.dir/src.cxx.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DHAVE_LIBATOMIC  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -MD -MT CMakeFiles/cmTC_20170.dir/src.cxx.o -MF CMakeFiles/cmTC_20170.dir/src.cxx.o.d -o CMakeFiles/cmTC_20170.dir/src.cxx.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_df3d0 && [1/2] Building CXX object CMakeFiles/cmTC_df3d0.dir/src.cxx.o
+FAILED: CMakeFiles/cmTC_df3d0.dir/src.cxx.o 
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DHAVE_LIBATOMIC  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2 -MD -MT CMakeFiles/cmTC_df3d0.dir/src.cxx.o -MF CMakeFiles/cmTC_df3d0.dir/src.cxx.o.d -o CMakeFiles/cmTC_df3d0.dir/src.cxx.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx:2:21: error: expected ';' after top level declarator
 std::atomic<int> foo{0};
                     ^
                     ;
 1 error generated.
-make[1]: *** [CMakeFiles/cmTC_20170.dir/src.cxx.o] Error 1
-make: *** [cmTC_20170/fast] Error 2
+ninja: build stopped: subcommand failed.
 
 
 Source file was:
@@ -42,83 +41,27 @@ int main() { return foo.fetch_add(2); }
 Determining if the function __android_log_print exists in the log failed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_5bc59/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_5bc59.dir/build.make CMakeFiles/cmTC_5bc59.dir/build
-Building C object CMakeFiles/cmTC_5bc59.dir/CheckFunctionExists.c.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=__android_log_print -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -MD -MT CMakeFiles/cmTC_5bc59.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_5bc59.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_5bc59.dir/CheckFunctionExists.c.o -c /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.20/Modules/CheckFunctionExists.c
-Linking C executable cmTC_5bc59
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5bc59.dir/link.txt --verbose=1
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=__android_log_print -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_5bc59.dir/CheckFunctionExists.c.o -o cmTC_5bc59  -llog 
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_c36ca && [1/2] Building C object CMakeFiles/cmTC_c36ca.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_c36ca
+FAILED: cmTC_c36ca 
+: && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -DCHECK_FUNCTION_EXISTS=__android_log_print -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/cmTC_c36ca.dir/CheckFunctionExists.c.o -o cmTC_c36ca  -llog && :
 ld: library not found for -llog
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
-make[1]: *** [cmTC_5bc59] Error 1
-make: *** [cmTC_5bc59/fast] Error 2
+ninja: build stopped: subcommand failed.
 
 
 
 Performing C SOURCE FILE Test HAVE_GCC_PROTECTED_VISIBILITY failed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_42aac/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_42aac.dir/build.make CMakeFiles/cmTC_42aac.dir/build
-Building C object CMakeFiles/cmTC_42aac.dir/src.c.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -DHAVE_GCC_PROTECTED_VISIBILITY  -Wattributes -Werror -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -MD -MT CMakeFiles/cmTC_42aac.dir/src.c.o -MF CMakeFiles/cmTC_42aac.dir/src.c.o.d -o CMakeFiles/cmTC_42aac.dir/src.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_afb5e && [1/2] Building C object CMakeFiles/cmTC_afb5e.dir/src.c.o
+FAILED: CMakeFiles/cmTC_afb5e.dir/src.c.o 
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -DHAVE_GCC_PROTECTED_VISIBILITY  -Wattributes -Werror -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2 -MD -MT CMakeFiles/cmTC_afb5e.dir/src.c.o -MF CMakeFiles/cmTC_afb5e.dir/src.c.o.d -o CMakeFiles/cmTC_afb5e.dir/src.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/src.c:1:26: error: target does not support 'protected' visibility; using 'default' [-Werror,-Wunsupported-visibility]
 int foo() __attribute__((visibility("protected")));
                          ^
 1 error generated.
-make[1]: *** [CMakeFiles/cmTC_42aac.dir/src.c.o] Error 1
-make: *** [cmTC_42aac/fast] Error 2
-
-
-Source file was:
-int foo() __attribute__((visibility("protected")));
-                             int main() {return 0;}
-Performing C++ SOURCE FILE Test HAVE_LIBATOMIC failed with the following output:
-Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_cce9d/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_cce9d.dir/build.make CMakeFiles/cmTC_cce9d.dir/build
-Building CXX object CMakeFiles/cmTC_cce9d.dir/src.cxx.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DHAVE_LIBATOMIC  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -MD -MT CMakeFiles/cmTC_cce9d.dir/src.cxx.o -MF CMakeFiles/cmTC_cce9d.dir/src.cxx.o.d -o CMakeFiles/cmTC_cce9d.dir/src.cxx.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
-/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx:2:21: error: expected ';' after top level declarator
-std::atomic<int> foo{0};
-                    ^
-                    ;
-1 error generated.
-make[1]: *** [CMakeFiles/cmTC_cce9d.dir/src.cxx.o] Error 1
-make: *** [cmTC_cce9d/fast] Error 2
-
-
-Source file was:
-#include <atomic>
-std::atomic<int> foo{0};
-int main() { return foo.fetch_add(2); }
-Determining if the function __android_log_print exists in the log failed with the following output:
-Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_09dd3/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_09dd3.dir/build.make CMakeFiles/cmTC_09dd3.dir/build
-Building C object CMakeFiles/cmTC_09dd3.dir/CheckFunctionExists.c.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=__android_log_print -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -MD -MT CMakeFiles/cmTC_09dd3.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_09dd3.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_09dd3.dir/CheckFunctionExists.c.o -c /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.20/Modules/CheckFunctionExists.c
-Linking C executable cmTC_09dd3
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_09dd3.dir/link.txt --verbose=1
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=__android_log_print -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_09dd3.dir/CheckFunctionExists.c.o -o cmTC_09dd3  -llog 
-ld: library not found for -llog
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
-make[1]: *** [cmTC_09dd3] Error 1
-make: *** [cmTC_09dd3/fast] Error 2
-
-
-
-Performing C SOURCE FILE Test HAVE_GCC_PROTECTED_VISIBILITY failed with the following output:
-Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_31215/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_31215.dir/build.make CMakeFiles/cmTC_31215.dir/build
-Building C object CMakeFiles/cmTC_31215.dir/src.c.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -DHAVE_GCC_PROTECTED_VISIBILITY  -Wattributes -Werror -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -MD -MT CMakeFiles/cmTC_31215.dir/src.c.o -MF CMakeFiles/cmTC_31215.dir/src.c.o.d -o CMakeFiles/cmTC_31215.dir/src.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
-/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/src.c:1:26: error: target does not support 'protected' visibility; using 'default' [-Werror,-Wunsupported-visibility]
-int foo() __attribute__((visibility("protected")));
-                         ^
-1 error generated.
-make[1]: *** [CMakeFiles/cmTC_31215.dir/src.c.o] Error 1
-make: *** [cmTC_31215/fast] Error 2
+ninja: build stopped: subcommand failed.
 
 
 Source file was:
@@ -127,108 +70,99 @@ int foo() __attribute__((visibility("protected")));
 Determining if the include file arm_neon.h exists failed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_7d3f5/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_7d3f5.dir/build.make CMakeFiles/cmTC_7d3f5.dir/build
-Building C object CMakeFiles/cmTC_7d3f5.dir/CheckIncludeFile.c.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -MD -MT CMakeFiles/cmTC_7d3f5.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_7d3f5.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_7d3f5.dir/CheckIncludeFile.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_69f30 && [1/2] Building C object CMakeFiles/cmTC_69f30.dir/CheckIncludeFile.c.o
+FAILED: CMakeFiles/cmTC_69f30.dir/CheckIncludeFile.c.o 
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2 -MD -MT CMakeFiles/cmTC_69f30.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_69f30.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_69f30.dir/CheckIncludeFile.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
 In file included from /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include/arm_neon.h:28:2: error: "NEON intrinsics not available with the soft-float ABI. Please use -mfloat-abi=softfp or -mfloat-abi=hard"
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include/arm_neon.h:28:2: error: "NEON intrinsics not available with the soft-float ABI. Please use -mfloat-abi=softfp or -mfloat-abi=hard"
 #error "NEON intrinsics not available with the soft-float ABI. Please use -mfloat-abi=softfp or -mfloat-abi=hard"
  ^
 1 error generated.
-make[1]: *** [CMakeFiles/cmTC_7d3f5.dir/CheckIncludeFile.c.o] Error 1
-make: *** [cmTC_7d3f5/fast] Error 2
+ninja: build stopped: subcommand failed.
 
 
 
 Determining if the include file malloc.h exists failed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_269d6/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_269d6.dir/build.make CMakeFiles/cmTC_269d6.dir/build
-Building C object CMakeFiles/cmTC_269d6.dir/CheckIncludeFile.c.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -MD -MT CMakeFiles/cmTC_269d6.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_269d6.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_269d6.dir/CheckIncludeFile.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_8c764 && [1/2] Building C object CMakeFiles/cmTC_8c764.dir/CheckIncludeFile.c.o
+FAILED: CMakeFiles/cmTC_8c764.dir/CheckIncludeFile.c.o 
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2 -MD -MT CMakeFiles/cmTC_8c764.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_8c764.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_8c764.dir/CheckIncludeFile.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: 'malloc.h' file not found
 #include <malloc.h>
          ^~~~~~~~~~
 1 error generated.
-make[1]: *** [CMakeFiles/cmTC_269d6.dir/CheckIncludeFile.c.o] Error 1
-make: *** [cmTC_269d6/fast] Error 2
+ninja: build stopped: subcommand failed.
 
 
 
 Determining if the include file intrin.h exists failed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_8d972/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_8d972.dir/build.make CMakeFiles/cmTC_8d972.dir/build
-Building C object CMakeFiles/cmTC_8d972.dir/CheckIncludeFile.c.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -MD -MT CMakeFiles/cmTC_8d972.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_8d972.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_8d972.dir/CheckIncludeFile.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_bae0e && [1/2] Building C object CMakeFiles/cmTC_bae0e.dir/CheckIncludeFile.c.o
+FAILED: CMakeFiles/cmTC_bae0e.dir/CheckIncludeFile.c.o 
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2 -MD -MT CMakeFiles/cmTC_bae0e.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_bae0e.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_bae0e.dir/CheckIncludeFile.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
 In file included from /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include/intrin.h:12:15: fatal error: 'intrin.h' file not found
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include/intrin.h:12:15: fatal error: 'intrin.h' file not found
 #include_next <intrin.h>
               ^~~~~~~~~~
 1 error generated.
-make[1]: *** [CMakeFiles/cmTC_8d972.dir/CheckIncludeFile.c.o] Error 1
-make: *** [cmTC_8d972/fast] Error 2
+ninja: build stopped: subcommand failed.
 
 
 
 Determining if the include file guiddef.h exists failed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_a930b/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_a930b.dir/build.make CMakeFiles/cmTC_a930b.dir/build
-Building C object CMakeFiles/cmTC_a930b.dir/CheckIncludeFile.c.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -MD -MT CMakeFiles/cmTC_a930b.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_a930b.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_a930b.dir/CheckIncludeFile.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_78488 && [1/2] Building C object CMakeFiles/cmTC_78488.dir/CheckIncludeFile.c.o
+FAILED: CMakeFiles/cmTC_78488.dir/CheckIncludeFile.c.o 
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2 -MD -MT CMakeFiles/cmTC_78488.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_78488.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_78488.dir/CheckIncludeFile.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: 'guiddef.h' file not found
 #include <guiddef.h>
          ^~~~~~~~~~~
 1 error generated.
-make[1]: *** [CMakeFiles/cmTC_a930b.dir/CheckIncludeFile.c.o] Error 1
-make: *** [cmTC_a930b/fast] Error 2
+ninja: build stopped: subcommand failed.
 
 
 
 Determining if the include file initguid.h exists failed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_bcb02/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_bcb02.dir/build.make CMakeFiles/cmTC_bcb02.dir/build
-Building C object CMakeFiles/cmTC_bcb02.dir/CheckIncludeFile.c.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -MD -MT CMakeFiles/cmTC_bcb02.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_bcb02.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_bcb02.dir/CheckIncludeFile.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_0e979 && [1/2] Building C object CMakeFiles/cmTC_0e979.dir/CheckIncludeFile.c.o
+FAILED: CMakeFiles/cmTC_0e979.dir/CheckIncludeFile.c.o 
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2 -MD -MT CMakeFiles/cmTC_0e979.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_0e979.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_0e979.dir/CheckIncludeFile.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: 'initguid.h' file not found
 #include <initguid.h>
          ^~~~~~~~~~~~
 1 error generated.
-make[1]: *** [CMakeFiles/cmTC_bcb02.dir/CheckIncludeFile.c.o] Error 1
-make: *** [cmTC_bcb02/fast] Error 2
+ninja: build stopped: subcommand failed.
 
 
 
 Determining if the function clock_gettime exists in the rt failed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_c001e/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_c001e.dir/build.make CMakeFiles/cmTC_c001e.dir/build
-Building C object CMakeFiles/cmTC_c001e.dir/CheckFunctionExists.c.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=clock_gettime -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -MD -MT CMakeFiles/cmTC_c001e.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_c001e.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_c001e.dir/CheckFunctionExists.c.o -c /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.20/Modules/CheckFunctionExists.c
-Linking C executable cmTC_c001e
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c001e.dir/link.txt --verbose=1
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=clock_gettime -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_c001e.dir/CheckFunctionExists.c.o -o cmTC_c001e  -lrt -lm 
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_8effd && [1/2] Building C object CMakeFiles/cmTC_8effd.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_8effd
+FAILED: cmTC_8effd 
+: && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -DCHECK_FUNCTION_EXISTS=clock_gettime -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/cmTC_8effd.dir/CheckFunctionExists.c.o -o cmTC_8effd  -lrt  -lm && :
 ld: library not found for -lrt
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
-make[1]: *** [cmTC_c001e] Error 1
-make: *** [cmTC_c001e/fast] Error 2
+ninja: build stopped: subcommand failed.
 
 
 
 Determining if the _aligned_malloc exist failed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_07688/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_07688.dir/build.make CMakeFiles/cmTC_07688.dir/build
-Building C object CMakeFiles/cmTC_07688.dir/CheckSymbolExists.c.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -MD -MT CMakeFiles/cmTC_07688.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_07688.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_07688.dir/CheckSymbolExists.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_e38c8 && [1/2] Building C object CMakeFiles/cmTC_e38c8.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_e38c8.dir/CheckSymbolExists.c.o 
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2 -MD -MT CMakeFiles/cmTC_e38c8.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_e38c8.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_e38c8.dir/CheckSymbolExists.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:2:10: fatal error: 'malloc.h' file not found
 #include <malloc.h>
          ^~~~~~~~~~
 1 error generated.
-make[1]: *** [CMakeFiles/cmTC_07688.dir/CheckSymbolExists.c.o] Error 1
-make: *** [cmTC_07688/fast] Error 2
+ninja: build stopped: subcommand failed.
 
 
 File /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -248,15 +182,14 @@ int main(int argc, char** argv)
 Determining if files pthread.h;pthread_np.h exist failed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_020e3/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_020e3.dir/build.make CMakeFiles/cmTC_020e3.dir/build
-Building C object CMakeFiles/cmTC_020e3.dir/HAVE_PTHREAD_NP_H.c.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -pthread -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -MD -MT CMakeFiles/cmTC_020e3.dir/HAVE_PTHREAD_NP_H.c.o -MF CMakeFiles/cmTC_020e3.dir/HAVE_PTHREAD_NP_H.c.o.d -o CMakeFiles/cmTC_020e3.dir/HAVE_PTHREAD_NP_H.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CheckIncludeFiles/HAVE_PTHREAD_NP_H.c
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_4c9fb && [1/2] Building C object CMakeFiles/cmTC_4c9fb.dir/HAVE_PTHREAD_NP_H.c.o
+FAILED: CMakeFiles/cmTC_4c9fb.dir/HAVE_PTHREAD_NP_H.c.o 
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -pthread -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2 -MD -MT CMakeFiles/cmTC_4c9fb.dir/HAVE_PTHREAD_NP_H.c.o -MF CMakeFiles/cmTC_4c9fb.dir/HAVE_PTHREAD_NP_H.c.o.d -o CMakeFiles/cmTC_4c9fb.dir/HAVE_PTHREAD_NP_H.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CheckIncludeFiles/HAVE_PTHREAD_NP_H.c
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CheckIncludeFiles/HAVE_PTHREAD_NP_H.c:3:10: fatal error: 'pthread_np.h' file not found
 #include <pthread_np.h>
          ^~~~~~~~~~~~~~
 1 error generated.
-make[1]: *** [CMakeFiles/cmTC_020e3.dir/HAVE_PTHREAD_NP_H.c.o] Error 1
-make: *** [cmTC_020e3/fast] Error 2
+ninja: build stopped: subcommand failed.
 
 
 Source:
@@ -270,18 +203,17 @@ int main(void){return 0;}
 Performing C SOURCE FILE Test PTHREAD_SETNAME_NP_THREE_PARAMS failed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_846c8/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_846c8.dir/build.make CMakeFiles/cmTC_846c8.dir/build
-Building C object CMakeFiles/cmTC_846c8.dir/src.c.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -DPTHREAD_SETNAME_NP_THREE_PARAMS  -pthread -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -MD -MT CMakeFiles/cmTC_846c8.dir/src.c.o -MF CMakeFiles/cmTC_846c8.dir/src.c.o.d -o CMakeFiles/cmTC_846c8.dir/src.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_4c663 && [1/2] Building C object CMakeFiles/cmTC_4c663.dir/src.c.o
+FAILED: CMakeFiles/cmTC_4c663.dir/src.c.o 
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -DPTHREAD_SETNAME_NP_THREE_PARAMS  -pthread -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2 -MD -MT CMakeFiles/cmTC_4c663.dir/src.c.o -MF CMakeFiles/cmTC_4c663.dir/src.c.o.d -o CMakeFiles/cmTC_4c663.dir/src.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/src.c:5:40: error: too many arguments to function call, expected 1, have 3
     pthread_setname_np(pthread_self(), "%s", "testname");
     ~~~~~~~~~~~~~~~~~~                 ^~~~~~~~~~~~~~~~
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include/pthread.h:510:5: note: 'pthread_setname_np' declared here
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/pthread.h:510:5: note: 'pthread_setname_np' declared here
 int     pthread_setname_np(const char*);
         ^
 1 error generated.
-make[1]: *** [CMakeFiles/cmTC_846c8.dir/src.c.o] Error 1
-make: *** [cmTC_846c8/fast] Error 2
+ninja: build stopped: subcommand failed.
 
 
 Source file was:
@@ -292,84 +224,3 @@ int main()
     pthread_setname_np(pthread_self(), "%s", "testname");
     return 0;
 }
-Determining if the include file windows.h exists failed with the following output:
-Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_a18f1/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_a18f1.dir/build.make CMakeFiles/cmTC_a18f1.dir/build
-Building C object CMakeFiles/cmTC_a18f1.dir/CheckIncludeFile.c.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -MD -MT CMakeFiles/cmTC_a18f1.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_a18f1.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_a18f1.dir/CheckIncludeFile.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: 'windows.h' file not found
-#include <windows.h>
-         ^~~~~~~~~~~
-1 error generated.
-make[1]: *** [CMakeFiles/cmTC_a18f1.dir/CheckIncludeFile.c.o] Error 1
-make: *** [cmTC_a18f1/fast] Error 2
-
-
-
-Determining if the include file features.h exists failed with the following output:
-Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_cdd2e/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_cdd2e.dir/build.make CMakeFiles/cmTC_cdd2e.dir/build
-Building C object CMakeFiles/cmTC_cdd2e.dir/CheckIncludeFile.c.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -MD -MT CMakeFiles/cmTC_cdd2e.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_cdd2e.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_cdd2e.dir/CheckIncludeFile.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: 'features.h' file not found
-#include <features.h>
-         ^~~~~~~~~~~~
-1 error generated.
-make[1]: *** [CMakeFiles/cmTC_cdd2e.dir/CheckIncludeFile.c.o] Error 1
-make: *** [cmTC_cdd2e/fast] Error 2
-
-
-
-Determining if the _stat exist failed with the following output:
-Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_e53bd/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_e53bd.dir/build.make CMakeFiles/cmTC_e53bd.dir/build
-Building C object CMakeFiles/cmTC_e53bd.dir/CheckSymbolExists.c.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -MD -MT CMakeFiles/cmTC_e53bd.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_e53bd.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_e53bd.dir/CheckSymbolExists.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:9:19: error: use of undeclared identifier '_stat'
-  return ((int*)(&_stat))[argc];
-                  ^
-1 error generated.
-make[1]: *** [CMakeFiles/cmTC_e53bd.dir/CheckSymbolExists.c.o] Error 1
-make: *** [cmTC_e53bd/fast] Error 2
-
-
-File /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
-/* */
-#include <sys/types.h>
-#include <sys/stat.h>
-
-int main(int argc, char** argv)
-{
-  (void)argv;
-#ifndef _stat
-  return ((int*)(&_stat))[argc];
-#else
-  (void)argc;
-  return 0;
-#endif
-}
-Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
-Compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc 
-Build flags: 
-Id flags:  
-
-The output was:
-1
-ld: library not found for -lSystem
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ 
-Build flags: 
-Id flags:  
-
-The output was:
-1
-ld: library not found for -lc++
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
-
-

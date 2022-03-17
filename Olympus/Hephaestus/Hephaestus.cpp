@@ -13,7 +13,7 @@
 
 Hephaestus* self;
 
-Hephaestus::Hephaestus(const std::string _name) {
+Hephaestus::Hephaestus(const std::string& _name) {
     name = _name;
     self = this;
 

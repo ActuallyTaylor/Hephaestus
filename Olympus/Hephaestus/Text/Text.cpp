@@ -28,7 +28,6 @@ void Text::assign(Shader* shader, GLuint* vbo, GLuint* vao, glm::mat4* _projecti
     this->characters = std::move(_characters);
     this->screenSize = screenSize;
     updateAnchorPosition();
-    updateTextOffset();
 }
 
 void Text::draw() {
@@ -39,7 +38,7 @@ void Text::draw() {
         _position = anchorPositionBeforeOffset + relativePositionOffset;
     }
 
-    _position = { _position.x + this->textAlignmentOffset, _position.y };
+//    _position = { _position.x + this->textAlignmentOffset, _position.y };
 
     textShader->use();
     textShader->setVector3f("textColor", color.x, color.y, color.z);
@@ -121,31 +120,57 @@ void Text::updateAnchorPosition() {
             anchorPositionBeforeOffset = { screenSize.x, 0};
             break;
     }
-}
 
-void Text::setTextAlignment(TextAlignment alignment) {
-    this->textAlignment = alignment;
-    updateTextOffset();
-}
-
-void Text::updateTextOffset() {
+    float maxH = 0.0;
+    float totalW = 0.0;
     for(char c: text) {
         Character ch = characters[c];
         float w = ch.Size.x * scale;
-        totalWidth += w;
+        float h = ch.Size.y * scale;
+        if (h > maxH) {
+            maxH = h;
+        }
+        totalW += w;
     }
+    dimensions = { totalW, maxH };
 
-    switch(this->textAlignment) {
-        case alignLeft:
-            textAlignmentOffset = 0;
+    switch(this->anchorPoint) {
+        case pointTopLeft:
+            anchorPositionBeforeOffset = { anchorPositionBeforeOffset.x, anchorPositionBeforeOffset.y  - dimensions.y };
             break;
-        case alignCenter:
-            textAlignmentOffset = -(totalWidth / 2);
+        case pointTopCenter:
+            anchorPositionBeforeOffset = { anchorPositionBeforeOffset.x  - (dimensions.x / 2), anchorPositionBeforeOffset.y - dimensions.y };
             break;
-        case alignRight:
-            textAlignmentOffset = 0;
+        case pointTopRight:
+            anchorPositionBeforeOffset = { anchorPositionBeforeOffset.x - dimensions.x, anchorPositionBeforeOffset.y - dimensions.y};
+            break;
+        case pointCenterLeft:
+            anchorPositionBeforeOffset = { anchorPositionBeforeOffset.x, anchorPositionBeforeOffset.y - (dimensions.y / 2) };
+            break;
+        case pointCenter:
+            anchorPositionBeforeOffset = { anchorPositionBeforeOffset.x  - (dimensions.x / 2), anchorPositionBeforeOffset.y - (dimensions.y / 2) };
+            break;
+        case pointCenterRight:
+            anchorPositionBeforeOffset = { anchorPositionBeforeOffset.x - dimensions.x, anchorPositionBeforeOffset.y - (dimensions.y / 2) };
+            break;
+        case pointBottomLeft:
+            anchorPositionBeforeOffset = { anchorPositionBeforeOffset.x, anchorPositionBeforeOffset.y };
+            break;
+        case pointBottomCenter:
+            anchorPositionBeforeOffset = { anchorPositionBeforeOffset.x  - (dimensions.x / 2), anchorPositionBeforeOffset.y };
+            break;
+        case pointBottomRight:
+            anchorPositionBeforeOffset = { anchorPositionBeforeOffset.x - dimensions.x, anchorPositionBeforeOffset.y };
             break;
     }
+}
+
+void Text::setAnchorPoint(AnchorPoint anchorPoint) {
+    if (this->positionType == absolute) {
+        std::cout << "Warning: Make sure to set positionType to relative for anchor position to be used";
+    }
+    this->anchorPoint = anchorPoint;
+    updateAnchorPosition();
 }
 
 void Text::updateScreenSize(glm::vec2 screenSize) {

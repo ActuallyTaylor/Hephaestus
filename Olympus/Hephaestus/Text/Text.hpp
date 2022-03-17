@@ -27,13 +27,11 @@ public:
     /* Positioning */
     enum ScreenAnchor { topLeft, topCenter, topRight, centerLeft, center, centerRight, bottomLeft, bottomCenter, bottomRight };
     enum PositioningType { absolute, relative };
-    enum TextAlignment { alignLeft, alignCenter, alignRight };
+    enum AnchorPoint { pointTopLeft, pointTopCenter, pointTopRight, pointCenterLeft, pointCenter, pointCenterRight, pointBottomLeft, pointBottomCenter, pointBottomRight };
 
     glm::vec2 position { 0.0, 0.0 };
     glm::vec2 relativePositionOffset { 0.0, 0.0 };
     PositioningType positionType = absolute;
-
-    glm::vec2 screenSize { 0.0, 0.0 };
 
     struct Character {
         unsigned int TextureID;  // ID handle of the glyph texture
@@ -46,7 +44,7 @@ public:
     float scale = 1.0f;
     int pixelHeight = 24;
 
-    float totalWidth { 0 };
+    glm::vec2 dimensions { 0, 0 };
     float textAlignmentOffset { 0 };
 
     std::string text { };
@@ -63,7 +61,7 @@ public:
 
     // Call functions are needed because we need to recalculate the position when this changes
     void setAnchorPosition(ScreenAnchor anchorPosition);
-    void setTextAlignment(TextAlignment alignment);
+    void setAnchorPoint(AnchorPoint anchorPoint);
 
     void assign(Shader* shader, GLuint* vbo, GLuint* vao, glm::mat4* projection, glm::vec2 screenSize, std::map<char, Character> characters);
     void updateScreenSize(glm::vec2 screenSize);
@@ -73,13 +71,12 @@ private:
     GLuint* VBO;
     GLuint* VAO;
 
-    TextAlignment textAlignment = alignLeft;
+    AnchorPoint anchorPoint { pointBottomLeft };
 
+    glm::vec2 screenSize { 0.0, 0.0 };
     ScreenAnchor anchorPosition { center };
     glm::vec2 anchorPositionBeforeOffset { 0.0, 0.0 };
     void updateAnchorPosition();
-    void updateTextOffset();
-
 };
 
 

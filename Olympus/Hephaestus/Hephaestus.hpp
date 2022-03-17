@@ -67,7 +67,7 @@ private:
 public:
     /// Initializer for the Hephaestus class
     /// \param name The name of the window that will be created.
-    explicit Hephaestus(std::string name);
+    explicit Hephaestus(const std::string& name);
     explicit Hephaestus(std::string name, int width, int height);
 
     /// Called to start the window loop. This will display the window onto screen.

@@ -15,15 +15,8 @@
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release/Hephaestus/Library/openal-soft/CMakeFiles/install/local.dir
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release/Hephaestus/Library/openal-soft/CMakeFiles/install/strip.dir
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release/Hephaestus/Library/openal-soft/CMakeFiles/install.dir
-/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release/Hephaestus/Library/openal-soft/CMakeFiles/list_install_components.dir
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release/Hephaestus/Library/openal-soft/CMakeFiles/rebuild_cache.dir
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release/Hephaestus/Library/openal-soft/CMakeFiles/edit_cache.dir
-/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release/Hephaestus/Library/openal-soft/CMakeFiles/openal-info.dir
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir
+/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release/Hephaestus/Library/openal-soft/CMakeFiles/list_install_components.dir
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release/Hephaestus/Library/openal-soft/CMakeFiles/common.dir
-/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release/Hephaestus/Library/openal-soft/utils/alsoft-config/CMakeFiles/install/local.dir
-/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release/Hephaestus/Library/openal-soft/utils/alsoft-config/CMakeFiles/install/strip.dir
-/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release/Hephaestus/Library/openal-soft/utils/alsoft-config/CMakeFiles/install.dir
-/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release/Hephaestus/Library/openal-soft/utils/alsoft-config/CMakeFiles/list_install_components.dir
-/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release/Hephaestus/Library/openal-soft/utils/alsoft-config/CMakeFiles/rebuild_cache.dir
-/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-release/Hephaestus/Library/openal-soft/utils/alsoft-config/CMakeFiles/edit_cache.dir

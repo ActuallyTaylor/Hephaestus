@@ -78,7 +78,7 @@ void main()
 }
 )"""";
     Shader defaultSpriteShader = Shader("Scene Sprite Shader", defaultVertexShader, defaultFragmentShader);
-    Shader defaultUIShader = Shader("Scene UIr Shader", defaultVertexShader, defaultFragmentShader);
+    Shader defaultUIShader = Shader("Scene UI Shader", defaultVertexShader, defaultFragmentShader);
 
     GLFWwindow* parentWindow;
 
