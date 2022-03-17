@@ -25,7 +25,7 @@ MainLevelScene::MainLevelScene(Hephaestus* _engine) {
     }
 
     scene.setShouldCheckCollision(false);
-    scene.loadFont("./fonts/SFNSRounded.ttf");
+    scene.loadFont("./fonts/SFNSRounded.ttf", 32);
 
     using namespace std::placeholders;
 

@@ -11,11 +11,13 @@
 #include "Text.hpp"
 #include <utility>
 
-Text::Text(std::string text, std::string fontPath, glm::vec2 position, glm::vec4 color) {
+Text::Text(std::string text, std::string fontPath, glm::vec2 position, glm::vec4 color, int pixelHeight) {
     this->text = std::move(text);
     this->position = position;
     this->color = color;
     this->fontPath = std::move(fontPath);
+    this->pixelHeight = pixelHeight;
+    this->fontID = this->fontPath + "(" + std::to_string(this->pixelHeight) + ")";
 }
 
 void Text::assign(Shader* shader, GLuint* vbo, GLuint* vao, glm::mat4* _projection, std::map<char, Character> _characters) {
@@ -23,7 +25,7 @@ void Text::assign(Shader* shader, GLuint* vbo, GLuint* vao, glm::mat4* _projecti
     this->VBO = vbo;
     this->VAO = vao;
     this->projection = _projection;
-    this->characters = _characters;
+    this->characters = std::move(_characters);
 }
 
 void Text::draw() {

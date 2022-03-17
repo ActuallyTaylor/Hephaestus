@@ -35,8 +35,10 @@ struct PhysicsSim {
     int numb = 0;
 
     Button startButton = Button("./Images/StartButton.png", glm::vec3(25,520, 0.0), glm::vec2(300,100));
+    AudioSnippet audioSnippet = audioEngine.createAudioSnippet("./Audio/bell.wav");
 
     void stopSpawning() {
+        audioSnippet.play();
         if(shouldSpawn) {
             shouldSpawn = false;
             startButton.setBackgroundColor(glm::vec4(125, 223, 100, 127.5));

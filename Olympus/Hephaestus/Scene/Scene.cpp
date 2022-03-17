@@ -55,8 +55,8 @@ void Scene::addText(Text *text) {
     textManager.addText(text);
 }
 
-void Scene::loadFont(std::string fontPath) {
-    textManager.loadFont(fontPath);
+void Scene::loadFont(std::string fontPath, int pixelHeight) {
+    textManager.loadFont(fontPath, pixelHeight);
 }
 
 void Scene::addUIElement(UIElement *element) {

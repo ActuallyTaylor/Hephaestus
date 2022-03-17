@@ -15,8 +15,47 @@ Hephaestus* self;
 
 Hephaestus::Hephaestus(const std::string _name) {
     name = _name;
-    width = 720;
-    height = 720;
+    self = this;
+
+    // Initialize GLFW library
+    if (!glfwInit()) {
+        exit(-9);
+    }
+
+    // Set macOS specific flags
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 2);
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    glfwWindowHint(GLFW_SAMPLES, 4);
+//    glfwWindowHint(GLFW_DOUBLEBUFFER, GLFW_FALSE);
+
+    // Create a windowed mode window and its OpenGL context
+    window = glfwCreateWindow(width, height, name.c_str(), NULL, NULL);
+
+    if (!window) {
+        glfwTerminate();
+    }
+
+    // Make the window's context current
+    glfwMakeContextCurrent(window);
+
+    glewExperimental = GL_TRUE;
+
+    // Start GLEW extension handler
+    glewInit();
+
+    glViewport(0, 0, width, height);
+
+    // Set GLFW key callbacks
+    glfwSetWindowSizeCallback(window, windowCallback);
+}
+
+Hephaestus::Hephaestus(std::string name, int width, int height) {
+    this->name = name;
+    this->width = width;
+    this->height = height;
+
     self = this;
 
     // Initialize GLFW library
@@ -54,18 +93,22 @@ Hephaestus::Hephaestus(const std::string _name) {
 
 }
 
+
 Shader Hephaestus::createShader(std::string identifier, std::string vertexPath, std::string fragmentPath) {
     Shader shader = Shader{identifier, std::move(vertexPath), std::move(fragmentPath)};
     shader.setup();
     return shader;
 }
 
-Text renderingText = Text("", "./Fonts/SFNSRounded.ttf", glm::vec2(10, 10), glm::vec4(1.0,1.0,1.0,1.0));
-
 void Hephaestus::startWindowLoop() {
+    if(self->currentScene == nullptr) {
+        std::cerr << "No scene set, terminating window loop" << std::endl;
+        return;
+    }
     _init();
 
     glfwGetWindowSize(window, &width, &height);
+
     self->currentScene->updateSceneDimensions(width, height);
 
     double currentTime = glfwGetTime();

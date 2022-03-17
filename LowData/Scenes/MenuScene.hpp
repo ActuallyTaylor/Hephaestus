@@ -34,7 +34,7 @@ class MenuScene {
     /*
      * Scene Variables
      */
-    Text welcomeText = { "Low Data", "./fonts/SFNSRounded.ttf", {360, 360 }, { 1.0f, 1.0f, 1.0f, 1.0f }, 24};
+    Text welcomeText = { "Low Data", "./fonts/SFNSRounded.ttf", {10, 40 }, { 1.0f, 1.0f, 1.0f, 1.0f }, 32};
 
     /*
      * Scene Functions

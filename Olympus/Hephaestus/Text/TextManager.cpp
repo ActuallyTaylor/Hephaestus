@@ -30,7 +30,7 @@ void TextManager::setup() {
     textShader.setup();
 }
 
-int TextManager::loadFont(std::string filePath) {
+int TextManager::loadFont(std::string filePath, int pixelHeight) {
     FT_Library ft;
     if (FT_Init_FreeType(&ft)) {
         std::cout << "ERROR::FREETYPE: Could not init FreeType Library" << std::endl;
@@ -44,7 +44,7 @@ int TextManager::loadFont(std::string filePath) {
     }
 
     // set dimensions to load glyphs as
-    FT_Set_Pixel_Sizes(face, 0, 24);
+    FT_Set_Pixel_Sizes(face, 0, pixelHeight);
 
     // disable byte-alignment restriction
     glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
@@ -90,7 +90,8 @@ int TextManager::loadFont(std::string filePath) {
         };
         fontCharacters.insert(std::pair<char, Text::Character>(c, character));
     }
-    fonts.insert(std::pair<std::string, std::map<char, Text::Character>>(filePath, fontCharacters));
+    std::string fontID = filePath + "(" + std::to_string(pixelHeight) + ")";
+    fonts.insert(std::pair<std::string, std::map<char, Text::Character>>(fontID, fontCharacters));
 
     FT_Done_Face(face);
     FT_Done_FreeType(ft);
@@ -106,15 +107,15 @@ void TextManager::draw() {
 
 void TextManager::addText(Text *text) {
     if(text->registered) { return; }
-    std::map<char, Text::Character> font = fonts[text->fontPath];
+    std::map<char, Text::Character> font = fonts[text->fontID];
 
-    if (fonts.find(text->fontPath) != fonts.end() && !fonts.empty()) {
+    if (fonts.find(text->fontID) != fonts.end() && !fonts.empty()) {
         text->assign(&textShader, &VBO, &VAO, &projection, font);
         text->registered = true;
         textObjects.push_back(text);
     } else {
-        loadFont(text->fontPath);
-        font = fonts[text->fontPath];
+        loadFont(text->fontPath, text->pixelHeight);
+        font = fonts[text->fontID];
 
         text->assign(&textShader, &VBO, &VAO, &projection, font);
         text->registered = true;

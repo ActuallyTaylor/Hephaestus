@@ -22,6 +22,7 @@ MenuScene::MenuScene(Hephaestus* _engine) {
     scene.setUpdate(std::bind(&MenuScene::update, this));
     scene.setRender(std::bind(&MenuScene::render, this));
 
+    scene.loadFont("./fonts/SFNSRounded.ttf", 32);
     scene.addText(&welcomeText);
 }
 

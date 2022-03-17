@@ -101,7 +101,7 @@ public:
     int getNumberOfSprites();
 
     void addText(Text *text);
-    void loadFont(std::string fontPath);
+    void loadFont(std::string fontPath, int pixelHeight = 24);
 
     void addUIElement(UIElement *element);
 

@@ -29,7 +29,7 @@ public:
 protected:
     Function onClick;
     Function onHover;
-    Text buttonText = {"", "", {0,0}, {0,0,0,0}};
+    Text buttonText = {"", "", {0,0}, {0,0,0,0}, 24};
 
     GLubyte backgroundColorImage[128][128][4];
 
