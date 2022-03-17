@@ -110,14 +110,14 @@ void TextManager::addText(Text *text) {
     std::map<char, Text::Character> font = fonts[text->fontID];
 
     if (fonts.find(text->fontID) != fonts.end() && !fonts.empty()) {
-        text->assign(&textShader, &VBO, &VAO, &projection, font);
+        text->assign(&textShader, &VBO, &VAO, &projection, screenSize, font);
         text->registered = true;
         textObjects.push_back(text);
     } else {
         loadFont(text->fontPath, text->pixelHeight);
         font = fonts[text->fontID];
 
-        text->assign(&textShader, &VBO, &VAO, &projection, font);
+        text->assign(&textShader, &VBO, &VAO, &projection, screenSize, font);
         text->registered = true;
         textObjects.push_back(text);
     }
@@ -126,4 +126,7 @@ void TextManager::addText(Text *text) {
 void TextManager::updateScreenDimensions(int width, int height) {
     screenSize = glm::vec2(width, height);
     projection = glm::ortho(0.0f, screenSize.x, 0.0f, screenSize.y, -1000.0f, 1000.0f);
+    for (Text *text: textObjects) {
+        text->updateScreenSize(screenSize);
+    }
 }
