@@ -20,10 +20,11 @@ UIElement::UIElement(glm::vec3 _position, glm::vec2 _dimensions, glm::vec3 _rota
     updateAnchorPosition();
 }
 
-UIElement::UIElement(ScreenAnchor anchor, glm::vec3 anchorOffset, glm::vec2 _dimensions, glm::vec3 _rotation) {
+UIElement::UIElement(ScreenAnchor _anchor, glm::vec3 _anchorOffset, AnchorPoint _anchorPoint, glm::vec2 _dimensions, glm::vec3 _rotation) {
     positionType = relative;
-    anchorPosition = anchor;
-    relativePositionOffset = anchorOffset;
+    anchorPosition = _anchor;
+    relativePositionOffset = _anchorOffset;
+    anchorPoint = _anchorPoint;
     dimensions = _dimensions;
     rotation = _rotation;
 

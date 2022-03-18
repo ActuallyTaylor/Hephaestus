@@ -15,6 +15,7 @@
 #include "../../Olympus/Hephaestus/Scene/Scene.hpp"
 #include "../../Olympus/Hephaestus/UI/Image/Image.hpp"
 #include "../../Olympus/Hephaestus/HephaestusEnums.hpp"
+#include "../../Olympus/Hephaestus/Sprite/PhysicsSprite/PhysicsSprite.hpp"
 
 class MenuScene {
     /*
@@ -35,8 +36,8 @@ class MenuScene {
     /*
      * Scene Variables
      */
-//    Text welcomeText = { "Low Data", "./fonts/SFNSRounded.ttf", {10, 40 }, { 1.0f, 1.0f, 1.0f, 1.0f }, 32};
-    Image titleImage = Image("./images/Title_Artwork.png", nearest, {0, 0, 0}, {64 * 10, 15 * 10}, {0,0,0});
+    Text welcomeText = { "Press Any Key To Start", "./fonts/NewHiScore.ttf", { 1.0f, 1.0f, 1.0f, 1.0f }, center, {0, 0}, pointCenter, 32};
+    Image titleImage = Image("./images/Title_Artwork.png", nearest, topCenter, {0,-10,0}, pointTopCenter, {64 * 5, 15 * 5}, {0,0,0});
 
     /*
      * Scene Functions

@@ -20,11 +20,12 @@ Image::Image(std::string imagePath, SamplingType _sampleType, glm::vec3 _positio
     createTexture(imagePath, sampleType);
 }
 
-Image::Image(std::string imagePath, SamplingType _sampleType, ScreenAnchor anchor, glm::vec3 anchorOffset, glm::vec2 _dimensions,
+Image::Image(std::string imagePath, SamplingType _sampleType, ScreenAnchor _anchor, glm::vec3 _anchorOffset, AnchorPoint _anchorPoint, glm::vec2 _dimensions,
              glm::vec3 _rotation) {
     positionType = relative;
-    anchorPosition = anchor;
-    relativePositionOffset = anchorOffset;
+    anchorPosition = _anchor;
+    relativePositionOffset = _anchorOffset;
+    anchorPoint = _anchorPoint;
     dimensions = _dimensions;
     rotation = _rotation;
     sampleType = _sampleType;

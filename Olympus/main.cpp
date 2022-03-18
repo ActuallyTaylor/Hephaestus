@@ -66,7 +66,7 @@ struct PhysicsSim {
         if(numb % 5 == 0 && shouldSpawn) {
             int randDiff = rand() % 10;
             int size = 10;//(rand() % 25) + 5;
-            auto* sprite = new PhysicsSprite("./Images/Smiley.png", glm::vec3(engine.windowWidth()/2 - randDiff,engine.windowHeight() - 25, 0.0), glm::vec2(size,size));
+            auto* sprite = new PhysicsSprite("./Images/Smiley.png", nearest, glm::vec3(engine.windowWidth()/2 - randDiff,engine.windowHeight() - 25, 0.0), glm::vec2(size,size));
             sprite->setMass(1);
 
             if (!sprite->getRegistered()) {
@@ -92,7 +92,7 @@ struct PhysicsSim {
         int randDiff = rand() % 10;
         int size = 10;//(rand() % 25) + 5;
         glm::vec2 cursorPosition = mainScene.getMousePosition();
-        auto* sprite = new PhysicsSprite("./Images/Smiley.png", glm::vec3(cursorPosition.x - randDiff,cursorPosition.y, 0.0), glm::vec2(size,size));
+        auto* sprite = new PhysicsSprite("./Images/Smiley.png", nearest, glm::vec3(cursorPosition.x - randDiff,cursorPosition.y, 0.0), glm::vec2(size,size));
         sprite->setMass(1);
 
         if (!sprite->getRegistered()) {

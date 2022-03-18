@@ -175,7 +175,7 @@ void Hephaestus::_tick() const {
 }
 
 void Hephaestus::_update() const {
-    // TODO: Some improvments could be made here. Maybe check to see if we even need to call move.
+    // TODO: Some improvements could be made here. Maybe check to see if we even need to call move.
     currentScene->updateScene();
     if (currentScene->update != nullptr) {
         currentScene->update();

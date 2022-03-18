@@ -30,7 +30,7 @@ public:
     PositioningType positionType = absolute;
 
     explicit UIElement(glm::vec3 _position = {0.0f, 0.0f, 0.0f}, glm::vec2 _dimensions = {100.0f, 100.0f}, glm::vec3 _rotation = {0.0f, 0.0f, 0.0f});
-    explicit UIElement(ScreenAnchor anchor, glm::vec3 anchorOffset, glm::vec2 _dimensions = {100.0f, 100.0f}, glm::vec3 _rotation = {0.0f, 0.0f, 0.0f});
+    explicit UIElement(ScreenAnchor anchor, glm::vec3 anchorOffset, AnchorPoint _anchorPoint, glm::vec2 _dimensions = {100.0f, 100.0f}, glm::vec3 _rotation = {0.0f, 0.0f, 0.0f});
 
     void addShader(Shader shader);
 

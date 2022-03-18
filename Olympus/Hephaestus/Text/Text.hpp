@@ -25,6 +25,9 @@
 
 class Text {
 public:
+    Text(std::string text, std::string fontPath, glm::vec2 position, glm::vec4 color, int pixelHeight = 24);
+    Text(std::string text, std::string fontPath, glm::vec4 color, ScreenAnchor _anchor, glm::vec2 _anchorOffset, AnchorPoint _anchorPoint, int pixelHeight = 24);
+
     /* Positioning */
     glm::vec2 position { 0.0, 0.0 };
     glm::vec2 relativePositionOffset { 0.0, 0.0 };
@@ -50,8 +53,6 @@ public:
 
     glm::vec4 color { 0.0, 0.0, 0.0, 0.0 };
     bool registered = false;
-
-    Text(std::string text, std::string fontPath, glm::vec2 position, glm::vec4 color, int pixelHeight = 24);
 
     void draw();
 

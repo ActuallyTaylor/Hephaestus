@@ -20,11 +20,11 @@ Button::Button(std::string backgroundImagePath, glm::vec3 _position, glm::vec2 _
     createTexture(backgroundImagePath);
 }
 
-Button::Button(std::string backgroundImagePath, ScreenAnchor anchor, glm::vec3 anchorOffset,
-               glm::vec2 _dimensions, glm::vec3 _rotation) {
+Button::Button(std::string backgroundImagePath, ScreenAnchor _anchor, glm::vec3 _anchorOffset, AnchorPoint _anchorPoint, glm::vec2 _dimensions, glm::vec3 _rotation) {
     positionType = relative;
-    anchorPosition = anchor;
-    relativePositionOffset = anchorOffset;
+    anchorPosition = _anchor;
+    relativePositionOffset = _anchorOffset;
+    anchorPoint = _anchorPoint;
     dimensions = _dimensions;
     rotation = _rotation;
 
@@ -41,11 +41,10 @@ Button::Button(glm::vec4 backgroundColor, glm::vec3 _position, glm::vec2 _dimens
     setBackgroundColor(backgroundColor);
 }
 
-Button::Button(glm::vec4 backgroundColor, ScreenAnchor anchor, glm::vec3 anchorOffset, glm::vec2 _dimensions,
-               glm::vec3 _rotation) {
-    positionType = relative;
-    anchorPosition = anchor;
-    relativePositionOffset = anchorOffset;
+Button::Button(glm::vec4 backgroundColor, ScreenAnchor _anchor, glm::vec3 _anchorOffset, AnchorPoint _anchorPoint, glm::vec2 _dimensions, glm::vec3 _rotation) {
+    anchorPosition = _anchor;
+    relativePositionOffset = _anchorOffset;
+    anchorPoint = _anchorPoint;
     dimensions = _dimensions;
     rotation = _rotation;
 

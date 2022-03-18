@@ -2,7 +2,7 @@
     Text.cpp
     Zachary lineman
     12/7/21
-    
+
     =================
     DESCRIPTION
     =================
@@ -20,6 +20,22 @@ Text::Text(std::string text, std::string fontPath, glm::vec2 position, glm::vec4
     this->fontID = this->fontPath + "(" + std::to_string(this->pixelHeight) + ")";
 }
 
+Text::Text(std::string text, std::string fontPath, glm::vec4 color, ScreenAnchor _anchor, glm::vec2 _anchorOffset, AnchorPoint _anchorPoint, int pixelHeight) {
+    this->text = std::move(text);
+    this->color = color;
+    this->fontPath = std::move(fontPath);
+    this->pixelHeight = pixelHeight;
+    this->fontID = this->fontPath + "(" + std::to_string(this->pixelHeight) + ")";
+
+    this->positionType = relative;
+    this->anchorPosition = _anchor;
+    this->anchorPositionBeforeOffset = _anchorOffset;
+    this->anchorPoint = _anchorPoint;
+    updateAnchorPosition();
+}
+
+
+
 void Text::assign(Shader* shader, GLuint* vbo, GLuint* vao, glm::mat4* _projection, glm::vec2 screenSize, std::map<char, Character> _characters) {
     this->textShader = shader;
     this->VBO = vbo;
@@ -31,6 +47,7 @@ void Text::assign(Shader* shader, GLuint* vbo, GLuint* vao, glm::mat4* _projecti
 }
 
 void Text::draw() {
+    glDisable(GL_BLEND);
     glm::vec2 _position = this->position;
 
     if(positionType == relative) {
@@ -80,6 +97,7 @@ void Text::draw() {
     }
     glBindVertexArray(0);
     glBindTexture(GL_TEXTURE_2D, 0);
+    glEnable(GL_BLEND);
 }
 
 void Text::setAnchorPosition(ScreenAnchor anchorPosition) {
@@ -121,16 +139,16 @@ void Text::updateAnchorPosition() {
             break;
     }
 
-    float maxH = 0.0;
-    float totalW = 0.0;
+    int maxH = 0;
+    int totalW = 0;
     for(char c: text) {
-        Character ch = characters[c];
-        float w = ch.Size.x * scale;
-        float h = ch.Size.y * scale;
+        // Calculates the width of the text by adding up how long position needs to be moved between each letter draw call.
+        totalW += (characters[c].Advance >> 6) * scale; // bitshift by 6 to get value in pixels (2^6 = 64)
+
+        int h = characters[c].Size.y * scale;
         if (h > maxH) {
             maxH = h;
         }
-        totalW += w;
     }
     dimensions = { totalW, maxH };
 

@@ -10,7 +10,6 @@
 
 #include "MenuScene.hpp"
 
-
 MenuScene::MenuScene(Hephaestus* _engine) {
     engine = _engine;
 
@@ -23,11 +22,8 @@ MenuScene::MenuScene(Hephaestus* _engine) {
     scene.setUpdate(std::bind(&MenuScene::update, this));
     scene.setRender(std::bind(&MenuScene::render, this));
 
-//    welcomeText.positionType = Text::relative;
-//    welcomeText.setAnchorPoint(Text::pointCenter);
-//    welcomeText.setAnchorPosition(Text::center);
-//    scene.loadFont("./fonts/SFNSRounded.ttf", 32);
-//    scene.addText(&welcomeText);
+    scene.loadFont("./fonts/NewHiScore.ttf", 32);
+    scene.addText(&welcomeText);
     scene.addUIElement(&titleImage);
 
 }
