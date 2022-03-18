@@ -17,7 +17,11 @@
 
 class Button: public UIElement {
 public:
-    using UIElement::UIElement;
+    explicit Button(std::string backgroundImagePath, glm::vec3 _position = {0.0f, 0.0f, 0.0f}, glm::vec2 _dimensions = {100.0f, 100.0f}, glm::vec3 _rotation = {0.0f, 0.0f, 0.0f});
+    explicit Button(std::string backgroundImagePath, ScreenAnchor anchor, glm::vec3 anchorOffset, glm::vec2 _dimensions = {100.0f, 100.0f}, glm::vec3 _rotation = {0.0f, 0.0f, 0.0f});
+
+    explicit Button(glm::vec4 backgroundColor, glm::vec3 _position = {0.0f, 0.0f, 0.0f}, glm::vec2 _dimensions = {100.0f, 100.0f}, glm::vec3 _rotation = {0.0f, 0.0f, 0.0f});
+    explicit Button(glm::vec4 backgroundColor, ScreenAnchor anchor, glm::vec3 anchorOffset, glm::vec2 _dimensions = {100.0f, 100.0f}, glm::vec3 _rotation = {0.0f, 0.0f, 0.0f});
 
     void setOnClick(Function _onClick);
     void setOnHover(Function _onHover);

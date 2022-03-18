@@ -30,7 +30,7 @@ void TextManager::setup() {
     textShader.setup();
 }
 
-int TextManager::loadFont(std::string filePath, int pixelHeight) {
+int TextManager::loadFont(std::string filePath, int pixelHeight, SamplingType samplingType) {
     FT_Library ft;
     if (FT_Init_FreeType(&ft)) {
         std::cout << "ERROR::FREETYPE: Could not init FreeType Library" << std::endl;
@@ -78,8 +78,8 @@ int TextManager::loadFont(std::string filePath, int pixelHeight) {
         // set texture options
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, translateSamplingType(samplingType));
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, translateSamplingType(samplingType));
 
         // now store character for later use
         Text::Character character = {

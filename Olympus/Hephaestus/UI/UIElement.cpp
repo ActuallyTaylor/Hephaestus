@@ -12,15 +12,6 @@
 
 #include <utility>
 
-UIElement::UIElement(std::string _texturePath, glm::vec3 _position, glm::vec2 _dimensions, glm::vec3 _rotation) {
-    position = _position;
-    dimensions = _dimensions;
-    rotation = _rotation;
-
-    createTexture(_texturePath);
-    updateAnchorPosition();
-}
-
 UIElement::UIElement(glm::vec3 _position, glm::vec2 _dimensions, glm::vec3 _rotation) {
     position = _position;
     dimensions = _dimensions;
@@ -29,38 +20,16 @@ UIElement::UIElement(glm::vec3 _position, glm::vec2 _dimensions, glm::vec3 _rota
     updateAnchorPosition();
 }
 
-void UIElement::createTexture(const std::string& texturePath) {
-    /*
-     Create Texture
-     */
-    stbi_set_flip_vertically_on_load(true);
-    glEnable(GL_TEXTURE_2D);
+UIElement::UIElement(ScreenAnchor anchor, glm::vec3 anchorOffset, glm::vec2 _dimensions, glm::vec3 _rotation) {
+    positionType = relative;
+    anchorPosition = anchor;
+    relativePositionOffset = anchorOffset;
+    dimensions = _dimensions;
+    rotation = _rotation;
 
-    glActiveTexture(GL_TEXTURE0); // activate the texture unit first before binding texture
-
-    glGenTextures(1, &textureAtlas);
-    glBindTexture(GL_TEXTURE_2D, textureAtlas);
-
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-
-    int width, height, nrChannels;
-    unsigned char *data = stbi_load(texturePath.c_str(), &width, &height, &nrChannels, 0);
-    if (data) {
-        if (nrChannels == 3) {
-            glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
-        } else if (nrChannels == 4) {
-            glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
-        }
-        glGenerateMipmap(GL_TEXTURE_2D);
-    } else {
-        printf("Failed to load texture");
-    }
-    stbi_image_free(data);
+    updateAnchorPosition();
 }
+
 
 void UIElement::createVirtualBufferObject() {
     float vertices[] = {
@@ -107,7 +76,7 @@ void UIElement::draw() {
 
     // Apply the rotation of the sprite
     model = rotate(model, glm::radians(rotation.x), glm::vec3(1.0f, 0.0f, 0.0f));
-    model = rotate(model, glm::radians(rotation.y), glm::vec3(0.0f, 1.0f, 0.0f));
+    model = rotate(model, glm::radians( rotation.y), glm::vec3(0.0f, 1.0f, 0.0f));
     model = rotate(model, glm::radians(rotation.z), glm::vec3(0.0f, 0.0f, 1.0f));
 
     model = scale(model, glm::vec3(dimensions, 1.0f));
@@ -124,15 +93,44 @@ void UIElement::draw() {
     glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 }
 
+void UIElement::createTexture(const std::string& texturePath, SamplingType samplingType) {
+    /*
+     Create Texture
+     */
+    stbi_set_flip_vertically_on_load(true);
+    glEnable(GL_TEXTURE_2D);
+
+    glActiveTexture(GL_TEXTURE0); // activate the texture unit first before binding texture
+
+    glGenTextures(1, &textureAtlas);
+    glBindTexture(GL_TEXTURE_2D, textureAtlas);
+
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, translateSamplingType(samplingType));
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, translateSamplingType(samplingType));
+
+    int width, height, nrChannels;
+    unsigned char *data = stbi_load(texturePath.c_str(), &width, &height, &nrChannels, 0);
+    if (data) {
+        if (nrChannels == 3) {
+            glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+        } else if (nrChannels == 4) {
+            glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
+        }
+        glGenerateMipmap(GL_TEXTURE_2D);
+    } else {
+        printf("Failed to load texture");
+    }
+    stbi_image_free(data);
+}
+
 void UIElement::updateScreenDimensions(int width, int height) {
     screenSize = glm::vec2(width, height);
     projection = glm::ortho(0.0f, screenSize.x, 0.0f, screenSize.y, -1000.0f, 1000.0f);
     createVirtualBufferObject();
     updateAnchorPosition();
-}
-
-void UIElement::setTexture(std::string texturePath) {
-    createTexture(texturePath);
 }
 
 void UIElement::primaryFunction() {}
@@ -161,7 +159,7 @@ void UIElement::setAnchorPoint(AnchorPoint anchorPoint) {
     updateAnchorPosition();
 }
 
-void UIElement::setAnchorPosition(UIElement::ScreenAnchor anchorPosition) {
+void UIElement::setAnchorPosition(ScreenAnchor anchorPosition) {
     if (this->positionType == absolute) {
         std::cout << "Warning: Make sure to set positionType to relative for anchor position to be used";
     }

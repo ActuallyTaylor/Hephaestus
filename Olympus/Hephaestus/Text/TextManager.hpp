@@ -68,7 +68,7 @@ public:
     TextManager();
     void setup();
 
-    int loadFont(std::string filePath, int pixelHeight);
+    int loadFont(std::string filePath, int pixelHeight, SamplingType samplingType = linear);
     void addText(Text *text);
     void draw();
     void updateScreenDimensions(int width, int height);

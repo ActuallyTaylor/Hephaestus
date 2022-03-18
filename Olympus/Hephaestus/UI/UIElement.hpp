@@ -25,19 +25,12 @@
 
 class UIElement {
 public:
-    enum ScreenAnchor { topLeft, topCenter, topRight, centerLeft, center, centerRight, bottomLeft, bottomCenter, bottomRight };
-    enum PositioningType { absolute, relative };
-    enum AnchorPoint { pointTopLeft, pointTopCenter, pointTopRight, pointCenterLeft, pointCenter, pointCenterRight, pointBottomLeft, pointBottomCenter, pointBottomRight };
-
     glm::vec3 position { 0.0, 0.0, 0.0 };
     glm::vec3 relativePositionOffset { 0.0, 0.0, 0.0 };
     PositioningType positionType = absolute;
 
-    UIElement(std::string _texturePath, glm::vec3 _position = {0.0f, 0.0f, 0.0f}, glm::vec2 _dimensions = {100.0f, 100.0f}, glm::vec3 _rotation = {0.0f, 0.0f, 0.0f});
-    UIElement(glm::vec3 _position = {0.0f, 0.0f, 0.0f}, glm::vec2 _dimensions = {100.0f, 100.0f}, glm::vec3 _rotation = {0.0f, 0.0f, 0.0f});
-
-    UIElement(ScreenAnchor anchor, glm::vec3 anchorOffset, std::string _texturePath, glm::vec2 _dimensions = {100.0f, 100.0f}, glm::vec3 _rotation = {0.0f, 0.0f, 0.0f});
-    UIElement(ScreenAnchor anchor, glm::vec3 anchorOffset, glm::vec2 _dimensions = {100.0f, 100.0f}, glm::vec3 _rotation = {0.0f, 0.0f, 0.0f});
+    explicit UIElement(glm::vec3 _position = {0.0f, 0.0f, 0.0f}, glm::vec2 _dimensions = {100.0f, 100.0f}, glm::vec3 _rotation = {0.0f, 0.0f, 0.0f});
+    explicit UIElement(ScreenAnchor anchor, glm::vec3 anchorOffset, glm::vec2 _dimensions = {100.0f, 100.0f}, glm::vec3 _rotation = {0.0f, 0.0f, 0.0f});
 
     void addShader(Shader shader);
 
@@ -52,7 +45,6 @@ public:
 
     void draw();
     void updateScreenDimensions(int width, int height);
-    void setTexture(std::string texturePath);
     void setTextManager(TextManager *_textManager);
 
     // Call functions are needed because we need to recalculate the position when this changes
@@ -69,14 +61,14 @@ protected:
 
     GLuint VBO, VAO, EBO, textureAtlas;
 
-    void createTexture(const std::string& texturePath);
     void createVirtualBufferObject();
+
+    void createTexture(const std::string& texturePath, SamplingType samplingType = linear);
 
     ScreenAnchor anchorPosition { center };
     AnchorPoint anchorPoint { pointBottomLeft };
     glm::vec3 anchorPositionBeforeOffset { 0.0, 0.0, 0.0 };
     void updateAnchorPosition();
-    void updateTextOffset();
 };
 
 

@@ -11,6 +11,48 @@
 #include "Button.hpp"
 #include <utility>
 
+Button::Button(std::string backgroundImagePath, glm::vec3 _position, glm::vec2 _dimensions, glm::vec3 _rotation) {
+    positionType = relative;
+    dimensions = _dimensions;
+    rotation = _rotation;
+
+    updateAnchorPosition();
+    createTexture(backgroundImagePath);
+}
+
+Button::Button(std::string backgroundImagePath, ScreenAnchor anchor, glm::vec3 anchorOffset,
+               glm::vec2 _dimensions, glm::vec3 _rotation) {
+    positionType = relative;
+    anchorPosition = anchor;
+    relativePositionOffset = anchorOffset;
+    dimensions = _dimensions;
+    rotation = _rotation;
+
+    updateAnchorPosition();
+    createTexture(backgroundImagePath);
+}
+
+Button::Button(glm::vec4 backgroundColor, glm::vec3 _position, glm::vec2 _dimensions, glm::vec3 _rotation) {
+    positionType = relative;
+    dimensions = _dimensions;
+    rotation = _rotation;
+
+    updateAnchorPosition();
+    setBackgroundColor(backgroundColor);
+}
+
+Button::Button(glm::vec4 backgroundColor, ScreenAnchor anchor, glm::vec3 anchorOffset, glm::vec2 _dimensions,
+               glm::vec3 _rotation) {
+    positionType = relative;
+    anchorPosition = anchor;
+    relativePositionOffset = anchorOffset;
+    dimensions = _dimensions;
+    rotation = _rotation;
+
+    updateAnchorPosition();
+    setBackgroundColor(backgroundColor);
+}
+
 void Button::setBackgroundColor(glm::vec4 color) {
     if (tintColor != color) {
         tintColor = color;
@@ -70,4 +112,3 @@ void Button::refresh() {
         textManager->addText(&buttonText);
     }
 }
-

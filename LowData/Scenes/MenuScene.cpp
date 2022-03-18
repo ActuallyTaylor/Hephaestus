@@ -23,18 +23,13 @@ MenuScene::MenuScene(Hephaestus* _engine) {
     scene.setUpdate(std::bind(&MenuScene::update, this));
     scene.setRender(std::bind(&MenuScene::render, this));
 
-    startButton.positionType = UIElement::relative;
-    startButton.setAnchorPosition(UIElement::center);
-    startButton.setBackgroundColor(glm::vec4(125, 223, 100, 127.5));
-    startButton.setAnchorPoint(UIElement::pointCenter);
+//    welcomeText.positionType = Text::relative;
+//    welcomeText.setAnchorPoint(Text::pointCenter);
+//    welcomeText.setAnchorPosition(Text::center);
+//    scene.loadFont("./fonts/SFNSRounded.ttf", 32);
+//    scene.addText(&welcomeText);
+    scene.addUIElement(&titleImage);
 
-    scene.addUIElement(&startButton);
-
-    welcomeText.positionType = Text::relative;
-    welcomeText.setAnchorPoint(Text::pointCenter);
-    welcomeText.setAnchorPosition(Text::center);
-    scene.loadFont("./fonts/SFNSRounded.ttf", 32);
-    scene.addText(&welcomeText);
 }
 
 void MenuScene::init() {

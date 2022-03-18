@@ -23,6 +23,7 @@
 #define GLM_ENABLE_EXPERIMENTAL
 #include <glm/gtc/quaternion.hpp>
 #include <glm/gtx/quaternion.hpp>
+#include "../HephaestusEnums.hpp"
 
 class Sprite {
 public:
@@ -31,7 +32,7 @@ public:
         square
     };
 
-    Sprite(std::string texturePath, glm::vec3 position = {300.0f, 300.0f, 0.0f}, glm::vec2 dimensions = {50.0f, 50.0f}, glm::vec3 rotation = {0.0f, 0.0f, 0.0f});
+    Sprite(std::string texturePath, SamplingType samplingType, glm::vec3 position = {300.0f, 300.0f, 0.0f}, glm::vec2 dimensions = {50.0f, 50.0f}, glm::vec3 rotation = {0.0f, 0.0f, 0.0f});
     Sprite();
     ~Sprite();
 
@@ -123,6 +124,7 @@ public:
     virtual void move(float deltaTime);
 
     void setTexture(std::string texturePath);
+    SamplingType samplingType = linear;
 
     void updateScreenDimensions(int width, int height);
 
@@ -133,13 +135,14 @@ public:
     bool hidden = false;
 
     virtual bool canMove();
+
 protected:
     glm::mat4 projection { };
     glm::vec2 screenSize { };
 
     Camera* camera;
 
-    void createTexture(const std::string& texturePath);
+    void createTexture(const std::string& texturePath, SamplingType samplingType);
     void createVirtualBufferObject();
 
     GLuint VBO, VAO, EBO, textureAtlas;

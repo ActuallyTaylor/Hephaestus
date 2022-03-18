@@ -82,7 +82,7 @@ void Text::draw() {
     glBindTexture(GL_TEXTURE_2D, 0);
 }
 
-void Text::setAnchorPosition(Text::ScreenAnchor anchorPosition) {
+void Text::setAnchorPosition(ScreenAnchor anchorPosition) {
     if (this->positionType == absolute) {
         std::cout << "Warning: Make sure to set positionType to relative for anchor position to be used";
     }

@@ -18,14 +18,15 @@ Sprite::Sprite() {
     rotation = {0.0f, 0.0f, 0.0f};
 }
 
-Sprite::Sprite(std::string _texturePath, glm::vec3 _position, glm::vec2 _dimensions, glm::vec3 _rotation) {
+Sprite::Sprite(std::string _texturePath, SamplingType _samplingType, glm::vec3 _position, glm::vec2 _dimensions, glm::vec3 _rotation) {
 //    shader = _shader;
     position = _position;
     dimensions = _dimensions;
     rotation = _rotation;
     projection = glm::ortho(0.0f, screenSize.x, 0.0f, screenSize.y, -1000.0f, 1000.0f);
+    samplingType = _samplingType;
 
-    createTexture(_texturePath);
+    createTexture(_texturePath, samplingType);
     createVirtualBufferObject();
 }
 
@@ -33,7 +34,7 @@ Sprite::~Sprite() {
 //    printf("Destroyed Sprite\n");
 }
 
-void Sprite::createTexture(const std::string& texturePath) {
+void Sprite::createTexture(const std::string& texturePath, SamplingType samplingType) {
     /*
      Create Texture
      */
@@ -49,8 +50,8 @@ void Sprite::createTexture(const std::string& texturePath) {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, translateSamplingType(samplingType));
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, translateSamplingType(samplingType));
 
     int width, height, nrChannels;
     unsigned char *data = stbi_load(texturePath.c_str(), &width, &height, &nrChannels, 0);
@@ -129,7 +130,7 @@ void Sprite::draw() {
 }
 
 void Sprite::setTexture(std::string texturePath) {
-    createTexture(std::move(texturePath));
+    createTexture(std::move(texturePath), samplingType);
 }
 
 void Sprite::updateScreenDimensions(int width, int height) {

@@ -18,6 +18,7 @@
 #include <ft2build.h>
 #include FT_FREETYPE_H
 #include "../Shader/Shader.hpp"
+#include "../HephaestusEnums.hpp"
 
 #ifndef OLYMPUS_TEXT_HPP
 #define OLYMPUS_TEXT_HPP
@@ -25,10 +26,6 @@
 class Text {
 public:
     /* Positioning */
-    enum ScreenAnchor { topLeft, topCenter, topRight, centerLeft, center, centerRight, bottomLeft, bottomCenter, bottomRight };
-    enum PositioningType { absolute, relative };
-    enum AnchorPoint { pointTopLeft, pointTopCenter, pointTopRight, pointCenterLeft, pointCenter, pointCenterRight, pointBottomLeft, pointBottomCenter, pointBottomRight };
-
     glm::vec2 position { 0.0, 0.0 };
     glm::vec2 relativePositionOffset { 0.0, 0.0 };
     PositioningType positionType = absolute;
@@ -55,7 +52,6 @@ public:
     bool registered = false;
 
     Text(std::string text, std::string fontPath, glm::vec2 position, glm::vec4 color, int pixelHeight = 24);
-
 
     void draw();
 
