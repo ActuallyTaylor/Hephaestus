@@ -7,6 +7,7 @@
     DESCRIPTION
     =================
 */
+#pragma once
 
 #ifndef LOWDATA_MENUSCENE_HPP
 #define LOWDATA_MENUSCENE_HPP
@@ -16,12 +17,15 @@
 #include "../../Olympus/Hephaestus/UI/Image/Image.hpp"
 #include "../../Olympus/Hephaestus/HephaestusEnums.hpp"
 #include "../../Olympus/Hephaestus/Sprite/PhysicsSprite/PhysicsSprite.hpp"
+#include "../../Olympus/Hephaestus/Function.hpp"
 
 class MenuScene {
     /*
      * Hephaestus Variables
      */
     Hephaestus* engine;
+    Function continueFunction;
+
     Camera camera = Camera();
 
     /*
@@ -42,8 +46,11 @@ class MenuScene {
     /*
      * Scene Functions
      */
+    void startGame();
 public:
-    MenuScene(Hephaestus* engine);
+    MenuScene(Hephaestus* engine, Function continueFunction);
+
+    void setupScene();
 
     Scene scene = Scene();
 };

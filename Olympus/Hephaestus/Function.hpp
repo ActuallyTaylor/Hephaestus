@@ -7,11 +7,12 @@
     DESCRIPTION
     =================
 */
+#pragma once
 #include <functional>
-
 
 #ifndef OLYMPUS_FUNCTION_HPP
 #define OLYMPUS_FUNCTION_HPP
+
 typedef std::function<void()> Function;
 
 //template<typename T>

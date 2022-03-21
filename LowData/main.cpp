@@ -1,13 +1,7 @@
 #include <iostream>
-#include "../Olympus/Hephaestus/Hephaestus.hpp"
-#include "Scenes/MenuScene.hpp"
-
-Hephaestus engine = Hephaestus("Low Data");
+#include "LowDataGame.hpp"
 
 int main() {
-    MenuScene menuScene = MenuScene(&engine);
-
-    engine.openScene(&menuScene.scene);
-    engine.startWindowLoop();
+    LowDataGame game = LowDataGame();
     return 0;
 }

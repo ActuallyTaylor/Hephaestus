@@ -9,6 +9,7 @@
     here, along with adding keybinds to register keypresses with the engine.
     =================
 */
+#pragma once
 
 #include <iostream>
 

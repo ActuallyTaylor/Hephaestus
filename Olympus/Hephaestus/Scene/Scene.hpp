@@ -21,6 +21,7 @@
 #include "../Controls/ControlManager.hpp"
 #include "../Collision/Collision.hpp"
 #include "../Function.hpp"
+
 class Scene {
     /// An array of all of the sprites that managed by the window.
     vector<Sprite*> sprites;
@@ -36,7 +37,7 @@ class Scene {
     vector<UIElement*> uiElements;
     void drawUI();
     void checkUIClicks();
-    void pollDragging();
+    void pollKeybinds();
 
     vector<Camera*> cameras;
     Camera* currentCamera{};

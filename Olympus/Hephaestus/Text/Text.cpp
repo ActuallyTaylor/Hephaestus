@@ -47,7 +47,6 @@ void Text::assign(Shader* shader, GLuint* vbo, GLuint* vao, glm::mat4* _projecti
 }
 
 void Text::draw() {
-    glDisable(GL_BLEND);
     glm::vec2 _position = this->position;
 
     if(positionType == relative) {
@@ -97,7 +96,6 @@ void Text::draw() {
     }
     glBindVertexArray(0);
     glBindTexture(GL_TEXTURE_2D, 0);
-    glEnable(GL_BLEND);
 }
 
 void Text::setAnchorPosition(ScreenAnchor anchorPosition) {

@@ -13,6 +13,7 @@
 #define OLYMPUS_CONTROLMANAGER_HPP
 
 #include <vector>
+#include <map>
 
 #include "./Keybind/Keybind.hpp"
 
@@ -22,6 +23,8 @@ public:
 
     std::vector<Keybind> keybindings { };
     std::vector<Keybind> dragBindings { };
+    std::map<int, int> heldKeys { };
+
 
     bool leftDown = false;
     bool rightDown = false;
@@ -31,6 +34,7 @@ public:
 
     void executeKeybinds(int keycode, int action);
     void executeDragging();
+    void executeHolding();
 };
 
 

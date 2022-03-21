@@ -16,40 +16,80 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f22769bb-d6a0-46e4-a0f3-ebdc8ac76c3d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../LowData/Resources/fonts/NewHiScore.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../LowData/Resources/images/Coin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../LowData/Resources/images/Grass.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../LowData/Resources/images/Hero.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LowData/LowDataGame.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LowData/LowDataGame.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LowData/Scenes/GameScene.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LowData/Scenes/GameScene.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../LowData/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../LowData/Scenes/MenuScene.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../LowData/Scenes/MenuScene.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../LowData/Scenes/MenuScene.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../LowData/Scenes/MenuScene.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/.cmake/api/v1/reply/target-LowData-Debug-aadd4da60200430ac756.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../LowData/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../LowData/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/CMakeFiles/LowData.dir/Scenes/MenuScene.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../LowData/cmake-build-debug/CMakeFiles/LowData.dir/Scenes/MenuScene.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/CMakeFiles/LowData.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../LowData/cmake-build-debug/CMakeFiles/LowData.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/CMakeFiles/LowData.dir/Scenes/MenuScene.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/CMakeFiles/LowData.dir/main.cpp.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Scene/Scene.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Scene/Scene.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Text/Text.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Text/Text.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Text/TextManager.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Text/TextManager.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/UI/Button/Button.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/UI/Button/Button.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/UI/UIElement.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/UI/UIElement.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/libHephaestus.a" beforeDir="false" afterPath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/libHephaestus.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/LowData" beforeDir="false" afterPath="$PROJECT_DIR$/../LowData/cmake-build-debug/LowData" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/al/auxeffectslot.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/al/buffer.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/al/effect.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/al/effects/autowah.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/al/effects/chorus.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/al/effects/compressor.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/al/effects/convolution.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/al/effects/dedicated.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/al/effects/distortion.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/al/effects/echo.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/al/effects/equalizer.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/al/effects/fshifter.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/al/effects/modulator.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/al/effects/null.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/al/effects/pshifter.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/al/effects/reverb.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/al/effects/vmorpher.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/al/error.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/al/event.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/al/extension.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/al/filter.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/al/listener.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/al/source.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/al/state.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/alc.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/alconfig.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/alu.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/bformatdec.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/buffer_storage.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/converter.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/effects/autowah.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/effects/chorus.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/effects/compressor.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/effects/convolution.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/effects/dedicated.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/effects/distortion.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/effects/echo.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/effects/equalizer.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/effects/fshifter.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/effects/modulator.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/effects/null.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/effects/pshifter.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/effects/reverb.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/effects/vmorpher.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/effectslot.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/helpers.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/hrtf.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/panning.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/libcommon.a" beforeDir="false" afterPath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/libcommon.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/libopenal.1.21.1.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/libopenal.1.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/Library/openal-soft/libopenal.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/Hephaestus/libHephaestus.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/LowData" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../LowData/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LowData/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../LowData/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hephaestus/Hephaestus.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Hephaestus.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hephaestus/Hephaestus.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Hephaestus.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hephaestus/Text/Text.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Text/Text.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hephaestus/Text/Text.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/Text/Text.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hephaestus/UI/Button/Button.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/UI/Button/Button.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hephaestus/UI/Button/Button.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/UI/Button/Button.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hephaestus/UI/Image/Image.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/UI/Image/Image.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hephaestus/UI/Image/Image.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/UI/Image/Image.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hephaestus/UI/UIElement.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/UI/UIElement.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hephaestus/UI/UIElement.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hephaestus/UI/UIElement.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Olympus.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -328,6 +368,9 @@
       <workItem from="1647618027148" duration="62000" />
       <workItem from="1647618109196" duration="8000" />
       <workItem from="1647618971873" duration="706000" />
+      <workItem from="1647661541680" duration="11000" />
+      <workItem from="1647663287146" duration="364000" />
+      <workItem from="1647877630538" duration="64000" />
     </task>
     <servers />
   </component>

@@ -9,10 +9,14 @@
 */
 
 #include "MenuScene.hpp"
+#include "../../Olympus/Hephaestus/HephaestusEnums.hpp"
 
-MenuScene::MenuScene(Hephaestus* _engine) {
+MenuScene::MenuScene(Hephaestus* _engine, Function _continueFunction) {
     engine = _engine;
+    continueFunction = _continueFunction;
+}
 
+void MenuScene::setupScene() {
     scene.setShouldCheckCollision(false);
 
     using namespace std::placeholders;
@@ -26,10 +30,12 @@ MenuScene::MenuScene(Hephaestus* _engine) {
     scene.addText(&welcomeText);
     scene.addUIElement(&titleImage);
 
+    scene.addCamera(&camera, true);
+    scene.addKeybind(HEPHAESTUS_ANY_KEY, GLFW_PRESS, std::bind(&MenuScene::startGame, this));
 }
 
 void MenuScene::init() {
-    scene.addCamera(&camera, true);
+
 }
 
 void MenuScene::destroy() {
@@ -46,4 +52,8 @@ void MenuScene::update() {
 
 void MenuScene::render() {
 
+}
+
+void MenuScene::startGame() {
+    continueFunction();
 }

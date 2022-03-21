@@ -1,4 +1,5 @@
 .DS_Store
-Olympus/cmake-build-debug/
+Olympus/cmake-build-debug/Olympus
 *.log
 GameOfLife/cmake-build-debug/GameOfLife
+LowData/cmake-build-debug/LowData

@@ -8,6 +8,8 @@
     =================
 */
 
+#define HEPHAESTUS_ANY_KEY      314901
+
 #ifndef LOWDATA_HEPHAESTUSENUMS_HPP
 #define LOWDATA_HEPHAESTUSENUMS_HPP
 

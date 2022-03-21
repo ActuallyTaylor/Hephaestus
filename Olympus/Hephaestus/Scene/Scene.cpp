@@ -27,7 +27,6 @@ void Scene::setupScene(GLFWwindow *parent) {
     self_scene = this;
     glfwSetKeyCallback(parent, keyCallback);
     glfwSetMouseButtonCallback(parent, mouseButtonCallback);
-
 }
 
 void Scene::drawSprites() {
@@ -255,10 +254,11 @@ void Scene::moveSprites() {
 void Scene::updateScene() {
     moveSprites();
     checkCollisions();
-    pollDragging();
+    pollKeybinds();
 }
 
-void Scene::pollDragging() {
+void Scene::pollKeybinds() {
+    this->controlManager.executeHolding();
     this->controlManager.executeDragging();
 }
 
