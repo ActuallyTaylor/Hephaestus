@@ -29,8 +29,15 @@ void GameScene::setupScene() {
     scene.addKeybind(GLFW_KEY_LEFT, GLFW_PRESS, std::bind(&GameScene::moveCharacterLeftUnit, this));
     scene.addKeybind(GLFW_KEY_RIGHT, GLFW_PRESS, std::bind(&GameScene::moveCharacterRightUnit, this));
 
-    scene.loadFont("./fonts/NewHiScore.ttf", 32);
-    scene.addText(&welcText);
+
+    scene.addKeybind(GLFW_KEY_W, GLFW_PRESS, std::bind(&GameScene::moveCameraUpUnit, this));
+    scene.addKeybind(GLFW_KEY_S, GLFW_PRESS, std::bind(&GameScene::moveCameraDownUnit, this));
+    scene.addKeybind(GLFW_KEY_A, GLFW_PRESS, std::bind(&GameScene::moveCameraLeftUnit, this));
+    scene.addKeybind(GLFW_KEY_D, GLFW_PRESS, std::bind(&GameScene::moveCameraRightUnit, this));
+
+    scene.loadFont("./fonts/NewHiScore.ttf", 18);
+    scene.addText(&playerDebugText);
+    scene.addText(&cameraDebugText);
 
     scene.addCamera(&gameCamera, true);
 
@@ -52,7 +59,10 @@ void GameScene::tick() {
 }
 
 void GameScene::update() {
+    playerDebugText.text = std::string("x: ") + std::to_string(character.position.x) + std::string(", y: ") + std::to_string(character.position.y);
+    cameraDebugText.text = std::string("x: ") + std::to_string(gameCamera.position.x) + std::string(", y: ") + std::to_string(gameCamera.position.y);
 
+    checkIfSceneShouldMove();
 }
 
 void GameScene::render() {
@@ -72,5 +82,31 @@ void GameScene::moveCharacterRightUnit() {
 }
 
 void GameScene::moveCharacterLeftUnit() {
-    character.position.x -= unitSizeInPixels;
+    gameCamera.position.x -= unitSizeInPixels;
+}
+
+void GameScene::moveCameraUpUnit() {
+    gameCamera.position.y += unitSizeInPixels;
+}
+
+void GameScene::moveCameraDownUnit() {
+    gameCamera.position.y -= unitSizeInPixels;
+}
+
+void GameScene::moveCameraRightUnit() {
+    gameCamera.position.x += unitSizeInPixels;
+}
+
+void GameScene::moveCameraLeftUnit() {
+    gameCamera.position.x -= unitSizeInPixels;
+}
+
+
+bool hasMoved = false;
+void GameScene::checkIfSceneShouldMove() {
+    if (character.position.y > scene.height && !hasMoved) {
+        hasMoved = true;
+        printf("Move");
+        gameCamera.position += glm::vec3(0, -scene.height, 0);
+    }
 }

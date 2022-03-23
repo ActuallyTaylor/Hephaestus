@@ -29,12 +29,10 @@ Text::Text(std::string text, std::string fontPath, glm::vec4 color, ScreenAnchor
 
     this->positionType = relative;
     this->anchorPosition = _anchor;
-    this->anchorPositionBeforeOffset = _anchorOffset;
+    this->relativePositionOffset = _anchorOffset;
     this->anchorPoint = _anchorPoint;
     updateAnchorPosition();
 }
-
-
 
 void Text::assign(Shader* shader, GLuint* vbo, GLuint* vao, glm::mat4* _projection, glm::vec2 screenSize, std::map<char, Character> _characters) {
     this->textShader = shader;

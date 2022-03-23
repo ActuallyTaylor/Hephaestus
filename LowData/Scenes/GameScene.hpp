@@ -37,7 +37,8 @@ class GameScene {
     /*
      * Scene Variables
      */
-    Text welcText = { "Welcome to Low Data!", "./fonts/NewHiScore.ttf", { 1.0f, 1.0f, 1.0f, 1.0f }, center, {0, 0}, pointCenter, 32};
+    Text playerDebugText = { "x: ,y: ", "./fonts/NewHiScore.ttf", { 1.0f, 1.0f, 1.0f, 1.0f }, topLeft, {0, 0}, pointTopLeft, 18};
+    Text cameraDebugText = { "x: ,y: ", "./fonts/NewHiScore.ttf", { 1.0f, 1.0f, 1.0f, 1.0f }, topLeft, {0, -18}, pointTopLeft, 18};
 
     Sprite character = { "./images/Main_Character.png", nearest, { 10, 10, 0}, { 32, 32 }, {0, 0, 0}};
 
@@ -49,10 +50,17 @@ class GameScene {
     void moveCharacterRightUnit();
     void moveCharacterLeftUnit();
 
+    void moveCameraUpUnit();
+    void moveCameraDownUnit();
+    void moveCameraLeftUnit();
+    void moveCameraRightUnit();
+
+    void checkIfSceneShouldMove();
+
     /*
      * Game Configuration Variables
      */
-    float unitSizeInPixels = 5;
+    float unitSizeInPixels = 2;
 public:
     GameScene(Hephaestus* engine, Function continueFunction);
 
