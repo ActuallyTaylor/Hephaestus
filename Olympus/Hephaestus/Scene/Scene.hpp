@@ -44,9 +44,6 @@ class Scene {
 
     ControlManager controlManager;
 
-    int width { 720 };
-    int height { 720 };
-
     const char *defaultVertexShader = R""""(
 #version 330 core
 layout (location = 0) in vec3 position;
@@ -96,6 +93,8 @@ void main()
 public:
     Scene();
     double deltaTime{};
+    int width { 720 };
+    int height { 720 };
 
     void addSprite(Sprite *sprite);
     void setShouldCheckCollision(bool _collision);

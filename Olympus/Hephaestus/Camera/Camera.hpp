@@ -31,7 +31,7 @@ public:
     Camera();
     glm::vec3 position {0.0f, 0.0f, 3.0f};
     glm::vec3 rotation {0.0f, 0.0f, 0.0f};
-    glm::vec3 target   {0.0f, 0.0f, 0.0f};
+    glm::vec3* target;
 
     bool isUICamera = false;
 
@@ -41,8 +41,8 @@ public:
     void setRotation(glm::vec3 newRotation);
     glm::vec3 getRotation();
 
-    void setTarget(glm::vec3 newTarget);
-    glm::vec3 getTarget();
+    void setTarget(glm::vec3* newTarget);
+    glm::vec3* getTarget();
 
 //    glm::vec3 getDirection();
 

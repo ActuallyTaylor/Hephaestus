@@ -44,7 +44,9 @@ void Scene::drawUI() {
 
 void Scene::addSprite(Sprite *sprite) {
     sprite->updateScreenDimensions(width, height);
+
     sprite->updateCamera(currentCamera);
+
     sprite->registerSprite();
     sprite->shader = defaultSpriteShader;
     sprites.push_back(sprite);
