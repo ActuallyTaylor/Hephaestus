@@ -9,6 +9,8 @@
 */
 
 #pragma once
+#include <fstream>
+#include <sstream>
 
 #ifndef LOWDATA_GAMESCENE_HPP
 #define LOWDATA_GAMESCENE_HPP
@@ -42,6 +44,7 @@ class GameScene {
 
     Sprite character = { "./images/Main_Character.png", nearest, { 10, 10, 0}, { 32, 32 }, {0, 0, 0}};
 
+    vector<Sprite> worldSprites { };
     /*
      * Scene Functions
      */
@@ -56,6 +59,8 @@ class GameScene {
     void moveCameraRightUnit();
 
     void checkIfSceneShouldMove();
+
+    void buildWorldFromTextDefinition(const std::string& worldPath);
 
     /*
      * Game Configuration Variables

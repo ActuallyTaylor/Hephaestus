@@ -63,7 +63,7 @@ void Sprite::createTexture(const std::string& texturePath, SamplingType sampling
         }
         glGenerateMipmap(GL_TEXTURE_2D);
     } else {
-        printf("Failed to load texture");
+        printf("Failed to load texture: %s", texturePath.c_str());
     }
     stbi_image_free(data);
 }

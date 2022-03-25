@@ -31,8 +31,20 @@ void Scene::setupScene(GLFWwindow *parent) {
 
 void Scene::drawSprites() {
     for(Sprite *sprite : sprites) {
-        sprite->draw();
+        if(shouldDrawSprite(sprite)) {
+            sprite->draw();
+        } else {
+            printf("Not Drawing");
+        }
     }
+}
+
+bool Scene::shouldDrawSprite(Sprite* sprite) {
+    if ((sprite->getX() <= -currentCamera->position.x + width && sprite->getX() + sprite->getWidth() >= -currentCamera->position.x) &&
+        (sprite->getY() <= -currentCamera->position.y + height && sprite->getY() + sprite->getHeight() >= -currentCamera->position.y)) {
+        return true;
+    }
+    return false;
 }
 
 void Scene::drawUI() {

@@ -41,7 +41,12 @@ void GameScene::setupScene() {
 
     scene.addCamera(&gameCamera, true);
 
-    character.position = { engine->windowHeight() / 2, engine->windowWidth() / 2, 0};
+    /*
+     * Sprite Placing
+     */
+    buildWorldFromTextDefinition("./hub_world.LDataWorld");
+
+    character.position = { engine->windowWidth() / 2 - 16, engine->windowHeight() / 2 - 16, 0};
     scene.addSprite(&character);
 }
 
@@ -71,18 +76,22 @@ void GameScene::render() {
 
 void GameScene::moveCharacterUpUnit() {
     character.position.y += unitSizeInPixels;
+    gameCamera.position.y -= unitSizeInPixels;
 }
 
 void GameScene::moveCharacterDownUnit() {
     character.position.y -= unitSizeInPixels;
+    gameCamera.position.y += unitSizeInPixels;
 }
 
 void GameScene::moveCharacterRightUnit() {
     character.position.x += unitSizeInPixels;
+    gameCamera.position.x -= unitSizeInPixels;
 }
 
 void GameScene::moveCharacterLeftUnit() {
-    gameCamera.position.x -= unitSizeInPixels;
+    character.position.x -= unitSizeInPixels;
+    gameCamera.position.x += unitSizeInPixels;
 }
 
 void GameScene::moveCameraUpUnit() {
@@ -101,12 +110,56 @@ void GameScene::moveCameraLeftUnit() {
     gameCamera.position.x -= unitSizeInPixels;
 }
 
-
 bool hasMoved = false;
 void GameScene::checkIfSceneShouldMove() {
     if (character.position.y > scene.height && !hasMoved) {
         hasMoved = true;
-        printf("Move");
         gameCamera.position += glm::vec3(0, -scene.height, 0);
     }
+}
+
+void GameScene::buildWorldFromTextDefinition(const std::string& worldPath) {
+    std::ifstream file(worldPath);
+
+    if (file.is_open()) {
+        std::string line;
+
+        bool passedDataLine = false;
+        int lineCount { 0 };
+        while (std::getline(file, line)) {
+            if (!passedDataLine) { // Skip header line
+                if(line == "=== ALL DATA ABOVE THIS LINE WILL BE IGNORED ===") {
+                    passedDataLine = true;
+                }
+                printf("Skipped line %s\n", line.c_str());
+                continue;
+            }
+
+            // Parse a regular line
+            std::istringstream stringStream(line);
+            vector<string> values {};
+
+            // Break into comma seperated values
+            while(stringStream.good()) {
+                string subString;
+                getline(stringStream, subString, ',');
+                values.push_back(subString);
+            }
+
+            std::string imagePath = "./WorldSprites/" + values.at(0) + ".png"; //Append sprite name to get the image path
+            glm::vec3 position = {std::stof(values.at(1)), std::stof(values.at(2)), std::stof(values.at(3))};
+            glm::vec2 dimension = {std::stof(values.at(4)), std::stof(values.at(5))};
+            glm::vec3 rotation = {std::stof(values.at(6)), std::stof(values.at(7)), std::stof(values.at(8))};
+
+            Sprite constructedSprite = Sprite(imagePath, nearest, position, dimension, rotation);
+            worldSprites.push_back(constructedSprite);
+            scene.addSprite(&worldSprites.at(lineCount));
+            lineCount ++;
+        }
+
+        file.close();
+    } else {
+        std::cerr << "Unable to open file" << std::endl;
+    }
+
 }

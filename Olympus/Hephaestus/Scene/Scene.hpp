@@ -41,6 +41,7 @@ class Scene {
 
     vector<Camera*> cameras;
     Camera* currentCamera{};
+    bool shouldDrawSprite(Sprite* sprite);
 
     ControlManager controlManager;
 

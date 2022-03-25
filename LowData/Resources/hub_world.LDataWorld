@@ -1,0 +1,5 @@
+FORMAT: ITEM_NAME,StartX,StartY,StartZ,WIDTH,HEIGHT,RotX,RotY,RotZ
+This file contains the world data for the hub world of Low Data.
+
+=== ALL DATA ABOVE THIS LINE WILL BE IGNORED ===
+Grass, 0, 0, 0, 32, 32, 0, 0, 0
