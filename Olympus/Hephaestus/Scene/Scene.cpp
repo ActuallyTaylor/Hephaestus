@@ -33,8 +33,6 @@ void Scene::drawSprites() {
     for(Sprite *sprite : sprites) {
         if(shouldDrawSprite(sprite)) {
             sprite->draw();
-        } else {
-            printf("Not Drawing");
         }
     }
 }
