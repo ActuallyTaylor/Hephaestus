@@ -58,8 +58,6 @@ class GameScene {
     void moveCameraLeftUnit();
     void moveCameraRightUnit();
 
-    void checkIfSceneShouldMove();
-
     void buildWorldFromTextDefinition(const std::string& worldPath);
 
     /*

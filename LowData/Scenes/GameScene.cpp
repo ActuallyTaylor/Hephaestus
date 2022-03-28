@@ -35,10 +35,6 @@ void GameScene::setupScene() {
     scene.addKeybind(GLFW_KEY_A, GLFW_PRESS, std::bind(&GameScene::moveCameraLeftUnit, this));
     scene.addKeybind(GLFW_KEY_D, GLFW_PRESS, std::bind(&GameScene::moveCameraRightUnit, this));
 
-    scene.loadFont("./fonts/NewHiScore.ttf", 18);
-    scene.addText(&playerDebugText);
-    scene.addText(&cameraDebugText);
-
     scene.addCamera(&gameCamera, true);
 
     /*
@@ -48,6 +44,13 @@ void GameScene::setupScene() {
 
     character.position = { engine->windowWidth() / 2 - 16, engine->windowHeight() / 2 - 16, 0};
     scene.addSprite(&character);
+
+    /*
+     * Font Loading
+     */
+    scene.loadFont("./fonts/NewHiScore.ttf", 18);
+    scene.addText(&playerDebugText);
+    scene.addText(&cameraDebugText);
 }
 
 
@@ -66,8 +69,6 @@ void GameScene::tick() {
 void GameScene::update() {
     playerDebugText.text = std::string("x: ") + std::to_string(character.position.x) + std::string(", y: ") + std::to_string(character.position.y);
     cameraDebugText.text = std::string("x: ") + std::to_string(gameCamera.position.x) + std::string(", y: ") + std::to_string(gameCamera.position.y);
-
-    checkIfSceneShouldMove();
 }
 
 void GameScene::render() {
@@ -110,14 +111,6 @@ void GameScene::moveCameraLeftUnit() {
     gameCamera.position.x -= unitSizeInPixels;
 }
 
-bool hasMoved = false;
-void GameScene::checkIfSceneShouldMove() {
-    if (character.position.y > scene.height && !hasMoved) {
-        hasMoved = true;
-        gameCamera.position += glm::vec3(0, -scene.height, 0);
-    }
-}
-
 void GameScene::buildWorldFromTextDefinition(const std::string& worldPath) {
     std::ifstream file(worldPath);
 
@@ -153,8 +146,11 @@ void GameScene::buildWorldFromTextDefinition(const std::string& worldPath) {
 
             Sprite constructedSprite = Sprite(imagePath, nearest, position, dimension, rotation);
             worldSprites.push_back(constructedSprite);
-            scene.addSprite(&worldSprites.at(lineCount));
             lineCount ++;
+        }
+
+        for(auto & worldSprite : worldSprites) {
+            scene.addSprite(&worldSprite);
         }
 
         file.close();
