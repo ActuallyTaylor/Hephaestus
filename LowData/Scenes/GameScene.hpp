@@ -64,6 +64,9 @@ class GameScene {
      * Game Configuration Variables
      */
     float unitSizeInPixels = 2;
+    int characterCenteringX { };
+    int characterCenteringY { };
+
 public:
     GameScene(Hephaestus* engine, Function continueFunction);
 

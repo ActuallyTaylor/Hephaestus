@@ -153,18 +153,29 @@ struct WorldLoader: View {
     var body: some View {
         ScrollView([.vertical]) {
             VStack {//(columns: threeColumnGrid) {
-                let worlds = handler.getWorlds()
-                ForEach(0..<worlds.count) { index in
+                ForEach(handler.worlds) { world in
                     HStack {
-                        Text(worlds[index].name)
+                        Text(world.name)
                             .padding(5)
                         Spacer()
                     }
+                    .background(Color(nsColor: NSColor.systemGray))
+                    .cornerRadius(5)
+                    .padding(3)
                     .onTapGesture {
                         self.showSheet = false
-                        handler.loadWorld(world: worlds[index])
+                        handler.loadWorld(world: world)
                     }
-
+                    .contextMenu {
+                      Button(action:{
+                          handler.worlds.removeAll { nWorld in
+                              return world.id == nWorld.id
+                          }
+                          handler.saveAllWorlds()
+                      }){
+                        Text("Delete")
+                      }
+                    }
                 }
                 HStack {
                     Image(systemName: "plus")
@@ -192,9 +203,10 @@ struct Map: View {
     var body: some View {
         ScrollView ([.horizontal, .vertical], showsIndicators: true) {
             VStack(spacing: 0) {
-                ForEach(0..<$handler.mapWidth.wrappedValue, id: \.self) { x in
+                ForEach(0..<$handler.mapHeight.wrappedValue, id: \.self) { y in
+                    let y = handler.mapWidth - 1 - y
                     HStack(spacing: 0) {
-                        ForEach(0..<$handler.mapWidth.wrappedValue, id: \.self) { y in
+                        ForEach(0..<$handler.mapWidth.wrappedValue, id: \.self) { x in
                             VStack {
                                 Image(nsImage: NSImage(named: handler.images[handler.currentLayer.layerMatrix[x, y]])!)
                                     .resizable()

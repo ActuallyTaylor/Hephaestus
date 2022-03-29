@@ -173,17 +173,35 @@ float clamp(float value, float min, float max) {
 }
 
 void Scene::checkCollisions() {
-    if(shouldCheckCollisions) {
+    if(shouldCheckPhysicsCollisions || shouldCheckNonPhysicsCollisions) {
         for (int x = 0; x < sprites.size(); ++x) {
             Sprite *sprite = sprites[x];
 
-            if(sprite->collidable()) {
-                for (int y = x+1; y < sprites.size(); ++y) {
+            if(sprite->physicscCollidable()) {
+                for (int y = x + 1; y < sprites.size(); ++y) {
                     Sprite *checkSprite = sprites[y];
-                    if (checkSprite->collidable()) {
-                        Collision collision { checkCollision(sprite, checkSprite) };
+                    if (checkSprite->physicscCollidable()) {
+                        PhysicsCollision collision {checkCollision(sprite, checkSprite) };
                         if(collision.successful) {
                             collision.perform(deltaTime);
+                        }
+                    }
+                }
+            } else if (sprite->collidable()) {
+                for (int y = x + 1; y < sprites.size(); ++y) {
+                    Sprite *checkSprite = sprites[y];
+                    if (checkSprite->collidable()) {
+
+                        if(checkSprite->immovable && !sprite->immovable) {
+                            PhysicsCollision collision { checkCollision(sprite, checkSprite) };
+                            if(collision.successful) {
+                                collision.perform(deltaTime);
+                            }
+                        } else if (!checkSprite->immovable && sprite->immovable) {
+                            PhysicsCollision collision { checkCollision(checkSprite, sprite) };
+                            if(collision.successful) {
+                                collision.perform(deltaTime);
+                            }
                         }
                     }
                 }
@@ -193,7 +211,7 @@ void Scene::checkCollisions() {
 }
 
 // https://learnopengl.com/In-Practice/2D-Game/Collisions/Collision-resolution
-Collision Scene::checkCollision(Sprite *one, Sprite *two) {
+PhysicsCollision Scene::checkCollision(Sprite *one, Sprite *two) {
     if (one != two) {
         if (one->getShape() == Sprite::sphere && two->getShape() == Sprite::sphere) {
             // Calculate collision for sphere & sphere
@@ -226,7 +244,7 @@ Collision Scene::checkCollision(Sprite *one, Sprite *two) {
 }
 
 // https://learnopengl.com/In-Practice/2D-Game/Collisions/Collision-detection
-Collision Scene::checkAABBSphereCollision(Sprite* aabb, Sprite* sphere) {
+PhysicsCollision Scene::checkAABBSphereCollision(Sprite* aabb, Sprite* sphere) {
     glm::vec2 center {sphere->getPosition() + sphere->getRadius()};
     // calculate AABB info (center, half-extents)
     glm::vec2 aabb_half_extents {aabb->getWidth() / 2.0f, aabb->getHeight() / 2.0f};
@@ -243,12 +261,17 @@ Collision Scene::checkAABBSphereCollision(Sprite* aabb, Sprite* sphere) {
     // retrieve vector between center circle and closest point AABB and check if length <= radius
     difference = closest - center;
 
-    return Collision(glm::length(difference) < sphere->getRadius(), aabb, sphere, {difference, 0.0}, {difference, 0.0});
+    return PhysicsCollision(glm::length(difference) < sphere->getRadius(), aabb, sphere, {difference, 0.0}, {difference, 0.0});
 }
 
-void Scene::setShouldCheckCollision(bool _collision) {
-    shouldCheckCollisions = _collision;
+void Scene::setShouldCheckPhysicsCollision(bool _collision) {
+    shouldCheckPhysicsCollisions = _collision;
 }
+
+void Scene::setShouldCheckNonPhysicsCollision(bool _collision) {
+    shouldCheckNonPhysicsCollisions = _collision;
+}
+
 
 void Scene::drawScene() {
     drawUI();
@@ -257,7 +280,7 @@ void Scene::drawScene() {
 
 void Scene::moveSprites() {
     for (Sprite* sprite: sprites) {
-         if(sprite->canMove()) {
+         if(sprite->canMovePhysically()) {
              sprite->move(deltaTime);
          }
     }

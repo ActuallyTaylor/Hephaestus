@@ -12,7 +12,7 @@
 #define OLYMPUS_PHYSICSSPRITE_HPP
 
 #include "../Sprite.hpp"
-#include "../../Collision/Collision.hpp"
+#include "../../Collision/PhysicsCollision.hpp"
 #include "../../Shader/Shader.hpp"
 
 class PhysicsSprite: public Sprite {
@@ -45,9 +45,9 @@ public:
     void addForce(glm::vec3 force);
     float getMass();
 
-    bool collidable() override;
+    bool physicscCollidable() override;
 
-    bool canMove() override;
+    bool canMovePhysically() override;
 };
 
 

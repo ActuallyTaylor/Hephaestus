@@ -177,12 +177,12 @@ build CMakeFiles/Hephaestus.dir/Sprite/PhysicsSprite/PhysicsSprite.cpp.o: CXX_CO
   TARGET_COMPILE_PDB = CMakeFiles/Hephaestus.dir/Hephaestus.pdb
   TARGET_PDB = libHephaestus.pdb
 
-build CMakeFiles/Hephaestus.dir/Collision/Collision.cpp.o: CXX_COMPILER__Hephaestus_Release /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Collision/Collision.cpp || cmake_object_order_depends_target_Hephaestus
-  DEP_FILE = CMakeFiles/Hephaestus.dir/Collision/Collision.cpp.o.d
+build CMakeFiles/Hephaestus.dir/PhysicsCollision/PhysicsCollision.cpp.o: CXX_COMPILER__Hephaestus_Release /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/PhysicsCollision/PhysicsCollision.cpp || cmake_object_order_depends_target_Hephaestus
+  DEP_FILE = CMakeFiles/Hephaestus.dir/PhysicsCollision/PhysicsCollision.cpp.o.d
   FLAGS = -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2 -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks  -std=gnu++17
   INCLUDES = -I/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/openal-soft/include -isystem /usr/local/include -isystem /Library/Frameworks/Mono.framework/Headers -isystem /usr/local/include/freetype2
   OBJECT_DIR = CMakeFiles/Hephaestus.dir
-  OBJECT_FILE_DIR = CMakeFiles/Hephaestus.dir/Collision
+  OBJECT_FILE_DIR = CMakeFiles/Hephaestus.dir/PhysicsCollision
   TARGET_COMPILE_PDB = CMakeFiles/Hephaestus.dir/Hephaestus.pdb
   TARGET_PDB = libHephaestus.pdb
 
@@ -257,7 +257,7 @@ build CMakeFiles/Hephaestus.dir/AudioEngine/AudioSnippet.cpp.o: CXX_COMPILER__He
 #############################################
 # Link the static library libHephaestus.a
 
-build libHephaestus.a: CXX_STATIC_LIBRARY_LINKER__Hephaestus_Release CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o CMakeFiles/Hephaestus.dir/Shader/Shader.cpp.o CMakeFiles/Hephaestus.dir/Sprite/Sprite.cpp.o CMakeFiles/Hephaestus.dir/Controls/ControlManager.cpp.o CMakeFiles/Hephaestus.dir/Controls/Keybind/Keybind.cpp.o CMakeFiles/Hephaestus.dir/Camera/Camera.cpp.o CMakeFiles/Hephaestus.dir/Sprite/PhysicsSprite/PhysicsSprite.cpp.o CMakeFiles/Hephaestus.dir/Collision/Collision.cpp.o CMakeFiles/Hephaestus.dir/Text/TextManager.cpp.o CMakeFiles/Hephaestus.dir/Text/Text.cpp.o CMakeFiles/Hephaestus.dir/UI/Button/Button.cpp.o CMakeFiles/Hephaestus.dir/UI/UIElement.cpp.o CMakeFiles/Hephaestus.dir/Scene/Scene.cpp.o CMakeFiles/Hephaestus.dir/AudioEngine/AudioEngine.cpp.o CMakeFiles/Hephaestus.dir/AudioEngine/AudioSnippet.cpp.o || Library/openal-soft/libopenal.dylib Library/openal-soft/libopenal.dylib /usr/local/lib/libglfw.3.3.dylib /usr/local/lib/libGLEW.2.2.0.dylib
+build libHephaestus.a: CXX_STATIC_LIBRARY_LINKER__Hephaestus_Release CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o CMakeFiles/Hephaestus.dir/Shader/Shader.cpp.o CMakeFiles/Hephaestus.dir/Sprite/Sprite.cpp.o CMakeFiles/Hephaestus.dir/Controls/ControlManager.cpp.o CMakeFiles/Hephaestus.dir/Controls/Keybind/Keybind.cpp.o CMakeFiles/Hephaestus.dir/Camera/Camera.cpp.o CMakeFiles/Hephaestus.dir/Sprite/PhysicsSprite/PhysicsSprite.cpp.o CMakeFiles/Hephaestus.dir/PhysicsCollision/PhysicsCollision.cpp.o CMakeFiles/Hephaestus.dir/Text/TextManager.cpp.o CMakeFiles/Hephaestus.dir/Text/Text.cpp.o CMakeFiles/Hephaestus.dir/UI/Button/Button.cpp.o CMakeFiles/Hephaestus.dir/UI/UIElement.cpp.o CMakeFiles/Hephaestus.dir/Scene/Scene.cpp.o CMakeFiles/Hephaestus.dir/AudioEngine/AudioEngine.cpp.o CMakeFiles/Hephaestus.dir/AudioEngine/AudioSnippet.cpp.o || Library/openal-soft/libopenal.dylib Library/openal-soft/libopenal.dylib /usr/local/lib/libglfw.3.3.dylib /usr/local/lib/libGLEW.2.2.0.dylib
   ARCH_FLAGS = -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2
   LANGUAGE_COMPILE_FLAGS = -O3 -DNDEBUG
   OBJECT_DIR = CMakeFiles/Hephaestus.dir

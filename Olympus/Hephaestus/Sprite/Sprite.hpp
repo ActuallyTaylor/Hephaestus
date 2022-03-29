@@ -36,6 +36,8 @@ public:
     Sprite();
     ~Sprite();
 
+    bool immovable = false;
+
     /*
      * Sprite Position
      */
@@ -107,14 +109,23 @@ public:
     bool getRegistered();
 
     /*
-     * Collision
+     * PhysicsCollision
      */
-    virtual bool collidable();
-    void setCollidable(bool _collidable);
+    virtual bool physicscCollidable();
+    void setPhysicscCollidable(bool _collidable);
+    bool isPhysicscCollidable = false;
 
     // Shape
     void setShape(Shape shape);
     virtual Shape getShape();
+    Shape spriteShape = square;
+
+    /*
+     * Normal Collisions
+     */
+    virtual bool collidable();
+    void setCollidable(bool _collidable);
+    bool isCollidable = false;
 
     /*
      * Drawing Functions
@@ -123,7 +134,7 @@ public:
 
     virtual void move(float deltaTime);
 
-    void setTexture(std::string texturePath);
+    void setTexture(const std::string& texturePath);
     SamplingType samplingType = linear;
 
     void updateScreenDimensions(int width, int height);
@@ -134,7 +145,7 @@ public:
 
     bool hidden = false;
 
-    virtual bool canMove();
+    virtual bool canMovePhysically();
 
 protected:
     glm::mat4 projection { };
@@ -148,10 +159,6 @@ protected:
     GLuint VBO, VAO, EBO, textureAtlas;
 
     bool registered;
-
-    Shape spriteShape = square;
-
-    bool isCollidable = false;
 };
 
 #endif //OLYMPUS_SPRITE_HPP

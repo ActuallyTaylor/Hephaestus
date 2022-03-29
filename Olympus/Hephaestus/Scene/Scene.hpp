@@ -19,7 +19,7 @@
 #include "../UI/UIElement.hpp"
 #include "../Controls/Keybind/Keybind.hpp"
 #include "../Controls/ControlManager.hpp"
-#include "../Collision/Collision.hpp"
+#include "../Collision/PhysicsCollision.hpp"
 #include "../Function.hpp"
 
 class Scene {
@@ -27,10 +27,12 @@ class Scene {
     vector<Sprite*> sprites;
     void drawSprites();
     void moveSprites();
-    Collision checkCollision(Sprite *one, Sprite *two);
-    Collision checkAABBSphereCollision(Sprite* aabb, Sprite* sphere);
+    PhysicsCollision checkCollision(Sprite *one, Sprite *two);
+    PhysicsCollision checkAABBSphereCollision(Sprite* aabb, Sprite* sphere);
+
     void checkCollisions();
-    bool shouldCheckCollisions = true;
+    bool shouldCheckPhysicsCollisions = true;
+    bool shouldCheckNonPhysicsCollisions = true;
 
     TextManager textManager;
 
@@ -98,7 +100,8 @@ public:
     int height { 720 };
 
     void addSprite(Sprite *sprite);
-    void setShouldCheckCollision(bool _collision);
+    void setShouldCheckPhysicsCollision(bool _collision);
+    void setShouldCheckNonPhysicsCollision(bool _collision);
     int getNumberOfSprites();
 
     void addText(Text *text);

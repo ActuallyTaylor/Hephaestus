@@ -13,10 +13,13 @@
 GameScene::GameScene(Hephaestus* _engine, Function _continueFunction) {
     engine = _engine;
     continueFunction = _continueFunction;
+
+    characterCenteringX = engine->windowWidth() / 2 - 16;
+    characterCenteringY = engine->windowHeight() / 2 - 16;
 }
 
 void GameScene::setupScene() {
-    scene.setShouldCheckCollision(false);
+    scene.setShouldCheckNonPhysicsCollision(false);
 
     scene.setInit(std::bind(&GameScene::init, this));
     scene.setDestroy(std::bind(&GameScene::destroy, this));
@@ -40,9 +43,10 @@ void GameScene::setupScene() {
     /*
      * Sprite Placing
      */
-    buildWorldFromTextDefinition("./hub_world.LDataWorld");
+    buildWorldFromTextDefinition("./CollisionTests.LDataWorld");
 
     character.position = { engine->windowWidth() / 2 - 16, engine->windowHeight() / 2 - 16, 0};
+    character.setCollidable(true);
     scene.addSprite(&character);
 
     /*
@@ -69,6 +73,9 @@ void GameScene::tick() {
 void GameScene::update() {
     playerDebugText.text = std::string("x: ") + std::to_string(character.position.x) + std::string(", y: ") + std::to_string(character.position.y);
     cameraDebugText.text = std::string("x: ") + std::to_string(gameCamera.position.x) + std::string(", y: ") + std::to_string(gameCamera.position.y);
+
+    gameCamera.position.y = -(character.position.y - characterCenteringY);
+    gameCamera.position.x = -(character.position.x - characterCenteringX);
 }
 
 void GameScene::render() {
@@ -76,23 +83,27 @@ void GameScene::render() {
 }
 
 void GameScene::moveCharacterUpUnit() {
+//    std::cout << "Character Position x: " << character.position.x << ", y: " << character.position.y << ". Camera Position x:" << gameCamera.position.x << ", y:" << gameCamera.position.y << std::endl;
     character.position.y += unitSizeInPixels;
-    gameCamera.position.y -= unitSizeInPixels;
+//    gameCamera.position.y -= unitSizeInPixels;
 }
 
 void GameScene::moveCharacterDownUnit() {
+//    std::cout << "Character Position x: " << character.position.x << ", y: " << character.position.y << ". Camera Position x:" << gameCamera.position.x << ", y:" << gameCamera.position.y << std::endl;
     character.position.y -= unitSizeInPixels;
-    gameCamera.position.y += unitSizeInPixels;
+//    gameCamera.position.y += unitSizeInPixels;
 }
 
 void GameScene::moveCharacterRightUnit() {
+//    std::cout << "Character Position x: " << character.position.x << ", y: " << character.position.y << ". Camera Position x:" << gameCamera.position.x << ", y:" << gameCamera.position.y << std::endl;
     character.position.x += unitSizeInPixels;
-    gameCamera.position.x -= unitSizeInPixels;
+//    gameCamera.position.x -= unitSizeInPixels;
 }
 
 void GameScene::moveCharacterLeftUnit() {
+//    std::cout << "Character Position x: " << character.position.x << ", y: " << character.position.y << ". Camera Position x:" << gameCamera.position.x << ", y:" << gameCamera.position.y << std::endl;
     character.position.x -= unitSizeInPixels;
-    gameCamera.position.x += unitSizeInPixels;
+//    gameCamera.position.x += unitSizeInPixels;
 }
 
 void GameScene::moveCameraUpUnit() {
@@ -145,6 +156,13 @@ void GameScene::buildWorldFromTextDefinition(const std::string& worldPath) {
             glm::vec3 rotation = {std::stof(values.at(6)), std::stof(values.at(7)), std::stof(values.at(8))};
 
             Sprite constructedSprite = Sprite(imagePath, nearest, position, dimension, rotation);
+            if(std::stoi(values.at(9))) {
+                constructedSprite.setCollidable(true);
+            } else {
+                constructedSprite.setCollidable(false);
+            }
+
+            constructedSprite.immovable = true;
             worldSprites.push_back(constructedSprite);
             lineCount ++;
         }

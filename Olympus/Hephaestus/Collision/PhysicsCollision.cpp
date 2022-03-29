@@ -1,5 +1,5 @@
 /*
-    Collision.cpp
+    PhysicsCollision.cpp
     Zachary lineman
     11/16/21
     
@@ -8,13 +8,13 @@
     =================
 */
 
-#include "Collision.hpp"
+#include "PhysicsCollision.hpp"
 #include "../Sprite/PhysicsSprite/PhysicsSprite.hpp"
 
 // Inspiration taken from
 // https://github.com/phetsims/collision-lab/blob/02daa56b42da682c85cc2c1828f9a95364d9bfde/js/common/model/CollisionEngine.js#L384
 
-Collision::Collision(bool success, Sprite* one, Sprite* two, glm::vec3 delta, glm::vec3 penetration) {
+PhysicsCollision::PhysicsCollision(bool success, Sprite* one, Sprite* two, glm::vec3 delta, glm::vec3 penetration) {
     this->successful = success;
     this->one = one;
     this->two = two;
@@ -22,7 +22,7 @@ Collision::Collision(bool success, Sprite* one, Sprite* two, glm::vec3 delta, gl
     this->delta = delta;
 }
 
-void Collision::perform(float deltaTime) {
+void PhysicsCollision::perform(float deltaTime) {
     auto* pOne = dynamic_cast<PhysicsSprite *>(this->one);
     auto* pTwo = dynamic_cast<PhysicsSprite *>(this->two);
     if (pOne != nullptr && pTwo != nullptr) {
@@ -65,8 +65,10 @@ void Collision::perform(float deltaTime) {
     } else if (pTwo != nullptr) {
         // One is not a physics sprite but two is.
         handleSolidCollision(one, pTwo);
-    } else {
+    } else if (pOne == nullptr && pTwo == nullptr) {
         Direction direction = VectorDirection(delta);
+
+        std::cout << "Check Collision" << std::endl;
 
         if(direction == UP || direction == DOWN) {
             if(direction == UP) {
@@ -89,7 +91,7 @@ void Collision::perform(float deltaTime) {
 }
 
 
-Collision::Direction Collision::VectorDirection(glm::vec2 target) {
+PhysicsCollision::Direction PhysicsCollision::VectorDirection(glm::vec2 target) {
     glm::vec2 compass[] = {
             glm::vec2(0.0f, 1.0f),	// up
             glm::vec2(1.0f, 0.0f),	// right
@@ -107,10 +109,10 @@ Collision::Direction Collision::VectorDirection(glm::vec2 target) {
             best_match = i;
         }
     }
-    return (Collision::Direction)best_match;
+    return (PhysicsCollision::Direction)best_match;
 }
 
-void Collision::handleSolidCollision(Sprite* nonPhysicsSprite, Sprite* _physicsSprite) {
+void PhysicsCollision::handleSolidCollision(Sprite* nonPhysicsSprite, Sprite* _physicsSprite) {
     PhysicsSprite* physicsSprite = dynamic_cast<PhysicsSprite *>(_physicsSprite);
     Direction direction = VectorDirection(delta);
 

@@ -68,5 +68,4 @@ glm::mat4 Camera::getView() {
     view = glm::translate(view, position);
 
     return view;
-    //return glm::lookAt(*target, position, glm::vec3(0,1,0));
 }

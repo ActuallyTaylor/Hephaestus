@@ -129,8 +129,8 @@ void Sprite::draw() {
     glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 }
 
-void Sprite::setTexture(std::string texturePath) {
-    createTexture(std::move(texturePath), samplingType);
+void Sprite::setTexture(const std::string& texturePath) {
+    createTexture(texturePath, samplingType);
 }
 
 void Sprite::updateScreenDimensions(int width, int height) {
@@ -253,14 +253,22 @@ bool Sprite::getRegistered() {
     return registered;
 }
 
+bool Sprite::physicscCollidable() {
+    return isPhysicscCollidable;
+}
+
+void Sprite::setPhysicscCollidable(bool _collidable) {
+    isPhysicscCollidable = _collidable;
+}
+
+bool Sprite::canMovePhysically() {
+    return false;
+}
+
 bool Sprite::collidable() {
     return isCollidable;
 }
 
 void Sprite::setCollidable(bool _collidable) {
     isCollidable = _collidable;
-}
-
-bool Sprite::canMove() {
-    return false;
 }

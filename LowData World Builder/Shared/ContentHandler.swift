@@ -10,6 +10,8 @@ import AppKit
 
 class ContentHandler: ObservableObject  {
     
+    @Published var worlds: [World] = []
+    
     @Published var fileExporterOpen: Bool = false
     @Published var exportFile: TextFile = TextFile(initialText: "")
     
@@ -23,7 +25,8 @@ class ContentHandler: ObservableObject  {
     @Published var layerName: String = ""
     @Published var layerDescription: String = ""
 
-    var images: [String] = ["Empty", "Grass", "Dirt", "Stone", "Wood", "Water"]
+    var images: [String] = ["Empty", "Grass", "Dirt", "Stone", "Wood", "Water", "Fence_Full", "Fence_Left_Half", "Fence_Right_Half", "Fence_Poll"]
+    var collisionImages: [String] = ["Fence_Full", "Fence_Left_Half", "Fence_Right_Half", "Fence_Poll"]
 
     class World: Codable, Identifiable {
         var name: String
@@ -73,6 +76,8 @@ class ContentHandler: ObservableObject  {
     public init() {
         layers.append(Layer(name: "Background", description: "A background layer", layerMatrix: Matrix(rows: mapWidth, columns: mapHeight)))
         selectLayer(index: 0)
+        
+        worlds = getWorlds()
     }
     
     func createNewLayer() {
@@ -83,7 +88,6 @@ class ContentHandler: ObservableObject  {
         currentLayer = layers[index]
         layerName = currentLayer.name
         layerDescription = currentLayer.description
-
     }
     
     func getWorlds() -> [World] {
@@ -105,6 +109,10 @@ class ContentHandler: ObservableObject  {
         worldUUID = world.id
     }
     
+    func saveAllWorlds() {
+        UserDefaults.standard.set(try? PropertyListEncoder().encode(worlds), forKey: "Worlds")
+    }
+    
     func saveWorld() {
         var worlds: [World] = []
         if UserDefaults.standard.object(forKey: "Worlds") != nil {
@@ -115,11 +123,16 @@ class ContentHandler: ObservableObject  {
         }
         
         let world = World(name: worldName, description: worldDescription, id: worldUUID, layers: layers)
-        worlds.removeAll { listWorld in
-            return listWorld.id == worldUUID
+        
+        if worldName != "" {
+            worlds.removeAll { listWorld in
+                return listWorld.id == worldUUID
+            }
+            worlds.append(world)
+            UserDefaults.standard.set(try? PropertyListEncoder().encode(worlds), forKey: "Worlds")
+            
+            self.worlds = worlds
         }
-        worlds.append(world)
-        UserDefaults.standard.set(try? PropertyListEncoder().encode(worlds), forKey: "Worlds")
     }
     
     func clearCurrentWorld() {
@@ -144,8 +157,9 @@ class ContentHandler: ObservableObject  {
                     if name.lowercased() != "empty" {
                         let xPosition = 32 * x
                         let yPosition = 32 * y
+                        let isCollision = collisionImages.contains(name)
                         
-                        let line = "\(name), \(xPosition), \(yPosition), 0, \(tileSize), \(tileSize), 0, 0, 0\n"
+                        let line = "\(name), \(xPosition), \(yPosition), 0, \(tileSize), \(tileSize), 0, 0, 0, \(isCollision ? "1" : "0")\n"
                         dataContents.append(line)
                     }
                 }
@@ -153,7 +167,7 @@ class ContentHandler: ObservableObject  {
         }
         
         let finalFileContents: String = """
-        FORMAT: ITEM_NAME,StartX,StartY,StartZ,WIDTH,HEIGHT,RotX,RotY,RotZ
+        FORMAT: ITEM_NAME,StartX,StartY,StartZ,WIDTH,HEIGHT,RotX,RotY,RotZ,CollisionEntity
         WORLD NAME: \(worldName)
         WORLD DESCRIPTION: \(worldDescription)
         

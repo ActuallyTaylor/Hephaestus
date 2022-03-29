@@ -1,5 +1,5 @@
 /*
-    Collision.hpp
+    PhysicsCollision.hpp
     Zachary lineman
     11/16/21
     
@@ -14,7 +14,7 @@
 #define GLM_ENABLE_EXPERIMENTAL
 #include "../Sprite/Sprite.hpp"
 
-struct Collision {
+struct PhysicsCollision {
     enum Direction {
         UP,
         RIGHT,
@@ -22,7 +22,7 @@ struct Collision {
         LEFT
     };
 
-    Collision(bool success, Sprite *one, Sprite *two, glm::vec3 delta, glm::vec3 penetration);
+    PhysicsCollision(bool success, Sprite *one, Sprite *two, glm::vec3 delta, glm::vec3 penetration);
 
     Sprite* one;
     Sprite* two;
