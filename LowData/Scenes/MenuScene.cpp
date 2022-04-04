@@ -17,7 +17,7 @@ MenuScene::MenuScene(Hephaestus* _engine, Function _continueFunction) {
 }
 
 void MenuScene::setupScene() {
-    scene.setShouldCheckPhysicsCollision(false);
+    scene.setPhysicsEnabled(false);
 
     using namespace std::placeholders;
     scene.setInit(std::bind(&MenuScene::init, this));

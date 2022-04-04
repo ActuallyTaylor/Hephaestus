@@ -23,10 +23,6 @@
 #include "../Function.hpp"
 
 class Camera {
-private:
-    Function updatePositionCallback;
-    Function updateRotationCallback;
-    Function updateTargetCallback;
 public:
     Camera();
     glm::vec3 position {0.0f, 0.0f, 3.0f};
@@ -43,12 +39,6 @@ public:
 
     void setTarget(glm::vec3* newTarget);
     glm::vec3* getTarget();
-
-//    glm::vec3 getDirection();
-
-    void setUpdatePositionCallback(Function callback);
-    void setUpdateRotationCallback(Function callback);
-    void setUpdateTargetCallback(Function callback);
 
     glm::mat4 getView();
 };

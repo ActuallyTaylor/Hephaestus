@@ -82,9 +82,6 @@ glm::vec2 Scene::getMousePosition() {
 }
 
 void Scene::addCamera(Camera *camera, bool setDefault) {
-    camera->setUpdatePositionCallback(cameraPositionChanged);
-    camera->setUpdateRotationCallback(cameraRotationChanged);
-    camera->setUpdateRotationCallback(cameraTargetChanged);
     cameras.push_back(camera);
 
     if(setDefault) {
@@ -173,12 +170,12 @@ float clamp(float value, float min, float max) {
 }
 
 void Scene::checkCollisions() {
-    if(shouldCheckPhysicsCollisions || shouldCheckNonPhysicsCollisions) {
+    if(collisionsEnabled) {
         for (int x = 0; x < sprites.size(); ++x) {
             Sprite *sprite = sprites[x];
 
-            if(sprite->physicscCollidable()) {
-                for (int y = x + 1; y < sprites.size(); ++y) {
+            if(sprite->physicscCollidable() && physicsEnabled) {
+                for (int y = x + 1; y < sprites.size(); y++) {
                     Sprite *checkSprite = sprites[y];
                     if (checkSprite->physicscCollidable()) {
                         PhysicsCollision collision {checkCollision(sprite, checkSprite) };
@@ -188,7 +185,8 @@ void Scene::checkCollisions() {
                     }
                 }
             } else if (sprite->collidable()) {
-                for (int y = x + 1; y < sprites.size(); ++y) {
+                // Check to see if it overlaps with other sprites.
+                for (int y = x + 1; y < sprites.size(); y++) {
                     Sprite *checkSprite = sprites[y];
                     if (checkSprite->collidable()) {
 
@@ -203,6 +201,14 @@ void Scene::checkCollisions() {
                                 collision.perform(deltaTime);
                             }
                         }
+                    }
+                }
+                // Check to see if it overlaps with collision areas
+                for (int y = 0;  y < collisionAreas.size(); y++) {
+                    CollisionArea* collision = collisionAreas[y];
+
+                    if (collision->overlaps(sprite)) {
+                        collision->executeOnCollide();
                     }
                 }
             }
@@ -264,12 +270,15 @@ PhysicsCollision Scene::checkAABBSphereCollision(Sprite* aabb, Sprite* sphere) {
     return PhysicsCollision(glm::length(difference) < sphere->getRadius(), aabb, sphere, {difference, 0.0}, {difference, 0.0});
 }
 
-void Scene::setShouldCheckPhysicsCollision(bool _collision) {
-    shouldCheckPhysicsCollisions = _collision;
+void Scene::setPhysicsEnabled(bool _collision) {
+    physicsEnabled = _collision;
+    if (!collisionsEnabled) {
+        std::cerr << "Physics enabled but collisions is turned off. Please enable collisions to allow physical collisions between objects" << std::endl;
+    }
 }
 
-void Scene::setShouldCheckNonPhysicsCollision(bool _collision) {
-    shouldCheckNonPhysicsCollisions = _collision;
+void Scene::setCollisionsEnabled(bool _collision) {
+    collisionsEnabled = _collision;
 }
 
 
@@ -315,14 +324,6 @@ int Scene::getNumberOfSprites() {
     return sprites.size();
 }
 
-void Scene::cameraPositionChanged() {
-
-}
-
-void Scene::cameraRotationChanged() {
-
-}
-
-void Scene::cameraTargetChanged() {
-
+void Scene::addCollisionArea(CollisionArea* collisionArea) {
+    collisionAreas.push_back(collisionArea);
 }

@@ -13,7 +13,7 @@
 #include <sstream>
 
 #ifndef LOWDATA_GAMESCENE_HPP
-#define LOWDATA_GAMESCENE_HPP
+#define LOWDATeA_GAMESCENE_HPP
 
 #include "../../Olympus/Hephaestus/Hephaestus.hpp"
 #include "../../Olympus/Hephaestus/Scene/Scene.hpp"
@@ -42,7 +42,9 @@ class GameScene {
     Text playerDebugText = { "x: ,y: ", "./fonts/NewHiScore.ttf", { 1.0f, 1.0f, 1.0f, 1.0f }, topLeft, {0, 0}, pointTopLeft, 18};
     Text cameraDebugText = { "x: ,y: ", "./fonts/NewHiScore.ttf", { 1.0f, 1.0f, 1.0f, 1.0f }, topLeft, {0, -18}, pointTopLeft, 18};
 
-    Sprite character = { "./images/Main_Character.png", nearest, { 10, 10, 0}, { 32, 32 }, {0, 0, 0}};
+    Sprite character = { "Main Character", { "Player" }, "./images/Main_Character.png", nearest, { 10, 10, 0}, { 32, 32 }, {0, 0, 0}};
+
+    CollisionArea merchantCollision = CollisionArea({0,0,0}, {64, 64, 0}, "Merchant", [this] { overlapMerchant(); }, { "Player" });
 
     vector<Sprite> worldSprites { };
     /*
@@ -60,6 +62,7 @@ class GameScene {
 
     void buildWorldFromTextDefinition(const std::string& worldPath);
 
+    void overlapMerchant();
     /*
      * Game Configuration Variables
      */

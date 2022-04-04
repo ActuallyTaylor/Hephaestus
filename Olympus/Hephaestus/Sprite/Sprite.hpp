@@ -23,6 +23,9 @@
 #define GLM_ENABLE_EXPERIMENTAL
 #include <glm/gtc/quaternion.hpp>
 #include <glm/gtx/quaternion.hpp>
+#include <vector>
+#include <string>
+
 #include "../HephaestusEnums.hpp"
 
 class Sprite {
@@ -32,9 +35,12 @@ public:
         square
     };
 
-    Sprite(std::string texturePath, SamplingType samplingType, glm::vec3 position = {300.0f, 300.0f, 0.0f}, glm::vec2 dimensions = {50.0f, 50.0f}, glm::vec3 rotation = {0.0f, 0.0f, 0.0f});
+    Sprite(std::string id, std::vector<std::string> collisionTags, std::string texturePath, SamplingType samplingType, glm::vec3 position = {300.0f, 300.0f, 0.0f}, glm::vec2 dimensions = {50.0f, 50.0f}, glm::vec3 rotation = {0.0f, 0.0f, 0.0f});
     Sprite();
     ~Sprite();
+
+    std::string id;
+    std::vector<std::string> collisionTags { };
 
     bool immovable = false;
 

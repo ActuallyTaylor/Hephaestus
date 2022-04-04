@@ -19,31 +19,31 @@ GameScene::GameScene(Hephaestus* _engine, Function _continueFunction) {
 }
 
 void GameScene::setupScene() {
-    scene.setShouldCheckNonPhysicsCollision(false);
+    scene.setCollisionsEnabled(true);
+    scene.setPhysicsEnabled(false);
 
-    scene.setInit(std::bind(&GameScene::init, this));
-    scene.setDestroy(std::bind(&GameScene::destroy, this));
-    scene.setTick(std::bind(&GameScene::tick, this));
-    scene.setUpdate(std::bind(&GameScene::update, this));
-    scene.setRender(std::bind(&GameScene::render, this));
+    scene.setInit([this] { init(); });
+    scene.setDestroy([this] { destroy(); });
+    scene.setTick([this] { tick(); });
+    scene.setUpdate([this] { update(); });
+    scene.setRender([this] { render(); });
 
-    scene.addKeybind(GLFW_KEY_UP, GLFW_PRESS, std::bind(&GameScene::moveCharacterUpUnit, this));
-    scene.addKeybind(GLFW_KEY_DOWN, GLFW_PRESS, std::bind(&GameScene::moveCharacterDownUnit, this));
-    scene.addKeybind(GLFW_KEY_LEFT, GLFW_PRESS, std::bind(&GameScene::moveCharacterLeftUnit, this));
-    scene.addKeybind(GLFW_KEY_RIGHT, GLFW_PRESS, std::bind(&GameScene::moveCharacterRightUnit, this));
+    scene.addKeybind(GLFW_KEY_UP, GLFW_PRESS, [this] { moveCharacterUpUnit(); });
+    scene.addKeybind(GLFW_KEY_DOWN, GLFW_PRESS, [this] { moveCharacterDownUnit(); });
+    scene.addKeybind(GLFW_KEY_LEFT, GLFW_PRESS, [this] { moveCharacterLeftUnit(); });
+    scene.addKeybind(GLFW_KEY_RIGHT, GLFW_PRESS, [this] { moveCharacterRightUnit(); });
 
-
-    scene.addKeybind(GLFW_KEY_W, GLFW_PRESS, std::bind(&GameScene::moveCameraUpUnit, this));
-    scene.addKeybind(GLFW_KEY_S, GLFW_PRESS, std::bind(&GameScene::moveCameraDownUnit, this));
-    scene.addKeybind(GLFW_KEY_A, GLFW_PRESS, std::bind(&GameScene::moveCameraLeftUnit, this));
-    scene.addKeybind(GLFW_KEY_D, GLFW_PRESS, std::bind(&GameScene::moveCameraRightUnit, this));
+    scene.addKeybind(GLFW_KEY_W, GLFW_PRESS, [this] { moveCameraUpUnit(); });
+    scene.addKeybind(GLFW_KEY_S, GLFW_PRESS, [this] { moveCameraDownUnit(); });
+    scene.addKeybind(GLFW_KEY_A, GLFW_PRESS, [this] { moveCameraLeftUnit(); });
+    scene.addKeybind(GLFW_KEY_D, GLFW_PRESS, [this] { moveCameraRightUnit(); });
 
     scene.addCamera(&gameCamera, true);
 
     /*
      * Sprite Placing
      */
-    buildWorldFromTextDefinition("./CollisionTests.LDataWorld");
+    buildWorldFromTextDefinition("./TestWorld.LDataWorld");
 
     character.position = { engine->windowWidth() / 2 - 16, engine->windowHeight() / 2 - 16, 0};
     character.setCollidable(true);
@@ -55,6 +55,11 @@ void GameScene::setupScene() {
     scene.loadFont("./fonts/NewHiScore.ttf", 18);
     scene.addText(&playerDebugText);
     scene.addText(&cameraDebugText);
+
+    /*
+     * Collision Areas Placing
+     */
+    scene.addCollisionArea(&merchantCollision);
 }
 
 
@@ -155,8 +160,9 @@ void GameScene::buildWorldFromTextDefinition(const std::string& worldPath) {
             glm::vec2 dimension = {std::stof(values.at(4)), std::stof(values.at(5))};
             glm::vec3 rotation = {std::stof(values.at(6)), std::stof(values.at(7)), std::stof(values.at(8))};
 
-            Sprite constructedSprite = Sprite(imagePath, nearest, position, dimension, rotation);
+            Sprite constructedSprite = Sprite(values.at(0), { "Ground" }, imagePath, nearest, position, dimension, rotation);
             if(std::stoi(values.at(9))) {
+                constructedSprite.collisionTags.emplace_back("Player");
                 constructedSprite.setCollidable(true);
             } else {
                 constructedSprite.setCollidable(false);
@@ -175,5 +181,8 @@ void GameScene::buildWorldFromTextDefinition(const std::string& worldPath) {
     } else {
         std::cerr << "Unable to open file" << std::endl;
     }
+}
 
+void GameScene::overlapMerchant() {
+    std::cout << "Overlapped Merchant" << std::endl;
 }

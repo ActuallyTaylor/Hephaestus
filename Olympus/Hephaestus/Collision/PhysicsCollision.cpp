@@ -68,8 +68,6 @@ void PhysicsCollision::perform(float deltaTime) {
     } else if (pOne == nullptr && pTwo == nullptr) {
         Direction direction = VectorDirection(delta);
 
-        std::cout << "Check Collision" << std::endl;
-
         if(direction == UP || direction == DOWN) {
             if(direction == UP) {
                 // The non physics sprite is below. This is because the vector from the nps is pointing upwards to the ps.

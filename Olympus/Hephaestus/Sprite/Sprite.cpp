@@ -18,8 +18,9 @@ Sprite::Sprite() {
     rotation = {0.0f, 0.0f, 0.0f};
 }
 
-Sprite::Sprite(std::string _texturePath, SamplingType _samplingType, glm::vec3 _position, glm::vec2 _dimensions, glm::vec3 _rotation) {
-//    shader = _shader;
+Sprite::Sprite(std::string _id, std::vector<std::string> _collisionTags, std::string _texturePath, SamplingType _samplingType, glm::vec3 _position, glm::vec2 _dimensions, glm::vec3 _rotation) {
+    id = _id;
+    collisionTags = _collisionTags;
     position = _position;
     dimensions = _dimensions;
     rotation = _rotation;

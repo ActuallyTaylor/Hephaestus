@@ -142,6 +142,13 @@ build CMakeFiles/LowData.dir/Scenes/GameScene.cpp.o: CXX_COMPILER__LowData_Debug
   OBJECT_DIR = CMakeFiles/LowData.dir
   OBJECT_FILE_DIR = CMakeFiles/LowData.dir/Scenes
 
+build CMakeFiles/LowData.dir/Characters/Merchant.cpp.o: CXX_COMPILER__LowData_Debug /Users/zacharylineman/Developer/GitHub/Hephaestus/LowData/Characters/Merchant.cpp || cmake_object_order_depends_target_LowData
+  DEP_FILE = CMakeFiles/LowData.dir/Characters/Merchant.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2 -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks  -std=gnu++14
+  INCLUDES = -I/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/openal-soft/include -isystem /usr/local/include -isystem /Library/Frameworks/Mono.framework/Headers -isystem /usr/local/include/freetype2
+  OBJECT_DIR = CMakeFiles/LowData.dir
+  OBJECT_FILE_DIR = CMakeFiles/LowData.dir/Characters
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target LowData
@@ -150,7 +157,7 @@ build CMakeFiles/LowData.dir/Scenes/GameScene.cpp.o: CXX_COMPILER__LowData_Debug
 #############################################
 # Link the executable LowData
 
-build LowData: CXX_EXECUTABLE_LINKER__LowData_Debug CMakeFiles/LowData.dir/main.cpp.o CMakeFiles/LowData.dir/Scenes/MenuScene.cpp.o CMakeFiles/LowData.dir/LowDataGame.cpp.o CMakeFiles/LowData.dir/Scenes/GameScene.cpp.o | Hephaestus/libHephaestus.a Hephaestus/Library/openal-soft/libopenal.1.21.1.dylib /usr/local/lib/libglfw.3.3.dylib /usr/local/lib/libGLEW.2.2.0.dylib /usr/local/lib/libfreetype.dylib || Hephaestus/Library/openal-soft/libopenal.dylib Hephaestus/libHephaestus.a Hephaestus/Library/openal-soft/libopenal.dylib
+build LowData: CXX_EXECUTABLE_LINKER__LowData_Debug CMakeFiles/LowData.dir/main.cpp.o CMakeFiles/LowData.dir/Scenes/MenuScene.cpp.o CMakeFiles/LowData.dir/LowDataGame.cpp.o CMakeFiles/LowData.dir/Scenes/GameScene.cpp.o CMakeFiles/LowData.dir/Characters/Merchant.cpp.o | Hephaestus/libHephaestus.a Hephaestus/Library/openal-soft/libopenal.1.21.1.dylib /usr/local/lib/libglfw.3.3.dylib /usr/local/lib/libGLEW.2.2.0.dylib /usr/local/lib/libfreetype.dylib || Hephaestus/Library/openal-soft/libopenal.dylib Hephaestus/libHephaestus.a Hephaestus/Library/openal-soft/libopenal.dylib
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2
   LINK_LIBRARIES = -Wl,-rpath,/Users/zacharylineman/Developer/GitHub/Hephaestus/LowData/cmake-build-debug/Hephaestus/Library/openal-soft -Wl,-rpath,/usr/local/lib  Hephaestus/libHephaestus.a  Hephaestus/Library/openal-soft/libopenal.1.21.1.dylib  /usr/local/lib/libglfw.3.3.dylib  /usr/local/lib/libGLEW.2.2.0.dylib  -framework  OpenGL  /usr/local/lib/libfreetype.dylib
   LINK_PATH = -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks
@@ -351,6 +358,13 @@ build Hephaestus/CMakeFiles/Hephaestus.dir/UI/Image/Image.cpp.o: CXX_COMPILER__H
   OBJECT_DIR = Hephaestus/CMakeFiles/Hephaestus.dir
   OBJECT_FILE_DIR = Hephaestus/CMakeFiles/Hephaestus.dir/UI/Image
 
+build Hephaestus/CMakeFiles/Hephaestus.dir/Collision/CollisionArea.cpp.o: CXX_COMPILER__Hephaestus_Debug /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Collision/CollisionArea.cpp || cmake_object_order_depends_target_Hephaestus
+  DEP_FILE = Hephaestus/CMakeFiles/Hephaestus.dir/Collision/CollisionArea.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2 -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks  -std=gnu++17
+  INCLUDES = -I/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/openal-soft/include -isystem /usr/local/include -isystem /Library/Frameworks/Mono.framework/Headers -isystem /usr/local/include/freetype2
+  OBJECT_DIR = Hephaestus/CMakeFiles/Hephaestus.dir
+  OBJECT_FILE_DIR = Hephaestus/CMakeFiles/Hephaestus.dir/Collision
+
 
 # =============================================================================
 # Link build statements for STATIC_LIBRARY target Hephaestus
@@ -359,7 +373,7 @@ build Hephaestus/CMakeFiles/Hephaestus.dir/UI/Image/Image.cpp.o: CXX_COMPILER__H
 #############################################
 # Link the static library Hephaestus/libHephaestus.a
 
-build Hephaestus/libHephaestus.a: CXX_STATIC_LIBRARY_LINKER__Hephaestus_Debug Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o Hephaestus/CMakeFiles/Hephaestus.dir/Shader/Shader.cpp.o Hephaestus/CMakeFiles/Hephaestus.dir/Sprite/Sprite.cpp.o Hephaestus/CMakeFiles/Hephaestus.dir/Controls/ControlManager.cpp.o Hephaestus/CMakeFiles/Hephaestus.dir/Controls/Keybind/Keybind.cpp.o Hephaestus/CMakeFiles/Hephaestus.dir/Camera/Camera.cpp.o Hephaestus/CMakeFiles/Hephaestus.dir/Sprite/PhysicsSprite/PhysicsSprite.cpp.o Hephaestus/CMakeFiles/Hephaestus.dir/Collision/PhysicsCollision.cpp.o Hephaestus/CMakeFiles/Hephaestus.dir/Text/TextManager.cpp.o Hephaestus/CMakeFiles/Hephaestus.dir/Text/Text.cpp.o Hephaestus/CMakeFiles/Hephaestus.dir/UI/Button/Button.cpp.o Hephaestus/CMakeFiles/Hephaestus.dir/UI/UIElement.cpp.o Hephaestus/CMakeFiles/Hephaestus.dir/Scene/Scene.cpp.o Hephaestus/CMakeFiles/Hephaestus.dir/AudioEngine/AudioEngine.cpp.o Hephaestus/CMakeFiles/Hephaestus.dir/AudioEngine/AudioSnippet.cpp.o Hephaestus/CMakeFiles/Hephaestus.dir/UI/Image/Image.cpp.o || Hephaestus/Library/openal-soft/libopenal.dylib Hephaestus/Library/openal-soft/libopenal.dylib /usr/local/lib/libglfw.3.3.dylib /usr/local/lib/libGLEW.2.2.0.dylib
+build Hephaestus/libHephaestus.a: CXX_STATIC_LIBRARY_LINKER__Hephaestus_Debug Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o Hephaestus/CMakeFiles/Hephaestus.dir/Shader/Shader.cpp.o Hephaestus/CMakeFiles/Hephaestus.dir/Sprite/Sprite.cpp.o Hephaestus/CMakeFiles/Hephaestus.dir/Controls/ControlManager.cpp.o Hephaestus/CMakeFiles/Hephaestus.dir/Controls/Keybind/Keybind.cpp.o Hephaestus/CMakeFiles/Hephaestus.dir/Camera/Camera.cpp.o Hephaestus/CMakeFiles/Hephaestus.dir/Sprite/PhysicsSprite/PhysicsSprite.cpp.o Hephaestus/CMakeFiles/Hephaestus.dir/Collision/PhysicsCollision.cpp.o Hephaestus/CMakeFiles/Hephaestus.dir/Text/TextManager.cpp.o Hephaestus/CMakeFiles/Hephaestus.dir/Text/Text.cpp.o Hephaestus/CMakeFiles/Hephaestus.dir/UI/Button/Button.cpp.o Hephaestus/CMakeFiles/Hephaestus.dir/UI/UIElement.cpp.o Hephaestus/CMakeFiles/Hephaestus.dir/Scene/Scene.cpp.o Hephaestus/CMakeFiles/Hephaestus.dir/AudioEngine/AudioEngine.cpp.o Hephaestus/CMakeFiles/Hephaestus.dir/AudioEngine/AudioSnippet.cpp.o Hephaestus/CMakeFiles/Hephaestus.dir/UI/Image/Image.cpp.o Hephaestus/CMakeFiles/Hephaestus.dir/Collision/CollisionArea.cpp.o || Hephaestus/Library/openal-soft/libopenal.dylib Hephaestus/Library/openal-soft/libopenal.dylib /usr/local/lib/libglfw.3.3.dylib /usr/local/lib/libGLEW.2.2.0.dylib
   ARCH_FLAGS = -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = Hephaestus/CMakeFiles/Hephaestus.dir

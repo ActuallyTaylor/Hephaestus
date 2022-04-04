@@ -15,9 +15,9 @@ class ContentHandler: ObservableObject  {
     @Published var fileExporterOpen: Bool = false
     @Published var exportFile: TextFile = TextFile(initialText: "")
     
-    @Published var mapWidth: Int = 25
+    @Published var mapWidth: Int = 32
 
-    @Published var mapHeight: Int = 25
+    @Published var mapHeight: Int = 32
     @Published var worldName: String = ""
     @Published var worldDescription: String = ""
     var worldUUID: UUID = UUID()

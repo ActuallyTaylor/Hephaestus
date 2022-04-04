@@ -18,9 +18,6 @@ Camera::Camera() {
 
 void Camera::setPosition(glm::vec3 newPosition) {
     position = newPosition;
-    if (updatePositionCallback != nullptr) {
-        updatePositionCallback();
-    }
 }
 
 glm::vec3 Camera::getPosition() {
@@ -29,9 +26,6 @@ glm::vec3 Camera::getPosition() {
 
 void Camera::setRotation(glm::vec3 newRotation) {
     rotation = newRotation;
-    if (updateRotationCallback != nullptr) {
-        updateRotationCallback();
-    }
 }
 
 glm::vec3 Camera::getRotation() {
@@ -40,24 +34,10 @@ glm::vec3 Camera::getRotation() {
 
 void Camera::setTarget(glm::vec3* newTarget) {
     target = newTarget;
-    if (updateTargetCallback != nullptr) {
-        updateTargetCallback();
-    }
 }
 
 glm::vec3* Camera::getTarget() {
     return target;
-}
-void Camera::setUpdatePositionCallback(Function callback) {
-    updatePositionCallback = callback;
-}
-
-void Camera::setUpdateRotationCallback(Function callback) {
-    updateRotationCallback = callback;
-}
-
-void Camera::setUpdateTargetCallback(Function callback) {
-    updateTargetCallback = callback;
 }
 
 glm::mat4 Camera::getView() {

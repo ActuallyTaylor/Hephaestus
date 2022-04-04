@@ -16,6 +16,8 @@ struct PhysicsSim {
         startButton.setOnClick(std::bind(&PhysicsSim::stopSpawning, this));
 //    startButton.setNormalText("Hello World", "./fonts/SFNSRounded.ttf", { 0.4, 0.3, 0.4, 1.0});
         mainScene.addUIElement(&startButton);
+        mainScene.setPhysicsEnabled(true);
+        mainScene.setCollisionsEnabled(true);
 
         mainScene.addDrag(GLFW_MOUSE_BUTTON_LEFT, std::bind(&PhysicsSim::spawnOnCursor, this));
         mainScene.loadFont("./Fonts/SFNSRounded.ttf");

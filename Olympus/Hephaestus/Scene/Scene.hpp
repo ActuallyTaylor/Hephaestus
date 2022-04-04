@@ -20,19 +20,23 @@
 #include "../Controls/Keybind/Keybind.hpp"
 #include "../Controls/ControlManager.hpp"
 #include "../Collision/PhysicsCollision.hpp"
+#include "../Collision/CollisionArea.hpp"
 #include "../Function.hpp"
 
 class Scene {
     /// An array of all of the sprites that managed by the window.
     vector<Sprite*> sprites;
+
     void drawSprites();
     void moveSprites();
+
+    vector<CollisionArea*> collisionAreas;
     PhysicsCollision checkCollision(Sprite *one, Sprite *two);
     PhysicsCollision checkAABBSphereCollision(Sprite* aabb, Sprite* sphere);
 
     void checkCollisions();
-    bool shouldCheckPhysicsCollisions = true;
-    bool shouldCheckNonPhysicsCollisions = true;
+    bool physicsEnabled = false;
+    bool collisionsEnabled = true;
 
     TextManager textManager;
 
@@ -82,26 +86,17 @@ void main()
     Shader defaultUIShader = Shader("Scene UI Shader", defaultVertexShader, defaultFragmentShader);
 
     GLFWwindow* parentWindow;
-
-    /*
-     * Static Camera Callbacks
-     */
-    /// Gets called when the cameras position changes
-    static void cameraPositionChanged();
-    /// Gets called when the cameras rotation changes
-    static void cameraRotationChanged();
-    /// Gets called when the cameras target changes
-    static void cameraTargetChanged();
-
 public:
     Scene();
     double deltaTime{};
     int width { 720 };
     int height { 720 };
 
-    void addSprite(Sprite *sprite);
-    void setShouldCheckPhysicsCollision(bool _collision);
-    void setShouldCheckNonPhysicsCollision(bool _collision);
+    void addSprite(Sprite* sprite);
+
+    void addCollisionArea(CollisionArea* collisionArea);
+    void setPhysicsEnabled(bool _collision);
+    void setCollisionsEnabled(bool _collision);
     int getNumberOfSprites();
 
     void addText(Text *text);
