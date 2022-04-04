@@ -189,7 +189,6 @@ void Scene::checkCollisions() {
                 for (int y = x + 1; y < sprites.size(); y++) {
                     Sprite *checkSprite = sprites[y];
                     if (checkSprite->collidable()) {
-
                         if(checkSprite->immovable && !sprite->immovable) {
                             PhysicsCollision collision { checkCollision(sprite, checkSprite) };
                             if(collision.successful) {
@@ -208,7 +207,7 @@ void Scene::checkCollisions() {
                     CollisionArea* collision = collisionAreas[y];
 
                     if (collision->overlaps(sprite)) {
-                        collision->executeOnCollide();
+                        collision->executeOnCollide(sprite->id);
                     }
                 }
             }

@@ -57,9 +57,9 @@ void GameScene::setupScene() {
     scene.addText(&cameraDebugText);
 
     /*
-     * Collision Areas Placing
+     * Merchant Setup
      */
-    scene.addCollisionArea(&merchantCollision);
+    merchant.setupMerchant(&scene);
 }
 
 
@@ -160,9 +160,8 @@ void GameScene::buildWorldFromTextDefinition(const std::string& worldPath) {
             glm::vec2 dimension = {std::stof(values.at(4)), std::stof(values.at(5))};
             glm::vec3 rotation = {std::stof(values.at(6)), std::stof(values.at(7)), std::stof(values.at(8))};
 
-            Sprite constructedSprite = Sprite(values.at(0), { "Ground" }, imagePath, nearest, position, dimension, rotation);
+            Sprite constructedSprite = Sprite(values.at(0), imagePath, nearest, position, dimension, rotation);
             if(std::stoi(values.at(9))) {
-                constructedSprite.collisionTags.emplace_back("Player");
                 constructedSprite.setCollidable(true);
             } else {
                 constructedSprite.setCollidable(false);
@@ -181,8 +180,4 @@ void GameScene::buildWorldFromTextDefinition(const std::string& worldPath) {
     } else {
         std::cerr << "Unable to open file" << std::endl;
     }
-}
-
-void GameScene::overlapMerchant() {
-    std::cout << "Overlapped Merchant" << std::endl;
 }

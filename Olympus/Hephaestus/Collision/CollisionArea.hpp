@@ -24,14 +24,13 @@
 
 class CollisionArea {
 public:
-    CollisionArea(glm::vec3 position, glm::vec3 dimensions, std::string identifier, Function executeOnCollide, std::vector<std::string> collisionTags);
+    CollisionArea(glm::vec3 position, glm::vec3 dimensions, std::string identifier, CollisionCallback executeOnCollide);
 
     glm::vec3 position { };
     glm::vec3 dimensions { };
     std::string identifier { };
-    std::vector<std::string> collisionTags { };
 
-    Function executeOnCollide;
+    CollisionCallback executeOnCollide;
 
     bool overlaps(Sprite* sprite);
 
