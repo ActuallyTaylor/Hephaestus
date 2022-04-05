@@ -15,12 +15,13 @@
 #include "../../Olympus/Hephaestus/Scene/Scene.hpp"
 
 class Merchant: Sprite {
-    CollisionArea merchantCollision = CollisionArea({0,0,0}, {64, 64, 0}, "Merchant", std::bind(&Merchant::overlapMerchant, this, std::placeholders::_1));
-    Text merchantText = { "Hello, Welcome to my Shop!", "./fonts/NewHiScore.ttf", { 1.0f, 1.0f, 1.0f, 1.0f }, topLeft, {0, 0}, pointTopLeft, 18};
+    CollisionArea merchantCollision = CollisionArea({0,0,0}, {64, 64, 0}, "Merchant", std::bind(&Merchant::overlapMerchant, this, std::placeholders::_1), std::bind(&Merchant::leaveMerchant, this, std::placeholders::_1));
+    Text merchantText = { "Hello, Welcome to my Shop!", "./fonts/NewHiScore.ttf", { 1.0f, 1.0f, 1.0f, 1.0f }, bottomCenter, {0, 50}, pointBottomCenter, 26};
 
     Scene* scenePointer;
 
     void overlapMerchant(std::string spriteID);
+    void leaveMerchant(std::string spriteID);
 
 public:
     using Sprite::Sprite;

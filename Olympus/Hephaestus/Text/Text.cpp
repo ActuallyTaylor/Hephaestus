@@ -45,6 +45,10 @@ void Text::assign(Shader* shader, GLuint* vbo, GLuint* vao, glm::mat4* _projecti
 }
 
 void Text::draw() {
+    if(hidden) {
+        return;
+    }
+
     glm::vec2 _position = this->position;
 
     if(positionType == relative) {

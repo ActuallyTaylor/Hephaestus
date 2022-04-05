@@ -55,7 +55,7 @@ public:
     bool registered = false;
 
     void draw();
-
+    bool hidden = false;
     // Call functions are needed because we need to recalculate the position when this changes
     void setAnchorPosition(ScreenAnchor anchorPosition);
     void setAnchorPoint(AnchorPoint anchorPoint);
