@@ -149,6 +149,20 @@ build CMakeFiles/LowData.dir/Characters/Merchant.cpp.o: CXX_COMPILER__LowData_De
   OBJECT_DIR = CMakeFiles/LowData.dir
   OBJECT_FILE_DIR = CMakeFiles/LowData.dir/Characters
 
+build CMakeFiles/LowData.dir/Characters/MainCharacter.cpp.o: CXX_COMPILER__LowData_Debug /Users/zacharylineman/Developer/GitHub/Hephaestus/LowData/Characters/MainCharacter.cpp || cmake_object_order_depends_target_LowData
+  DEP_FILE = CMakeFiles/LowData.dir/Characters/MainCharacter.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2 -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks  -std=gnu++14
+  INCLUDES = -I/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/openal-soft/include -isystem /usr/local/include -isystem /Library/Frameworks/Mono.framework/Headers -isystem /usr/local/include/freetype2
+  OBJECT_DIR = CMakeFiles/LowData.dir
+  OBJECT_FILE_DIR = CMakeFiles/LowData.dir/Characters
+
+build CMakeFiles/LowData.dir/Characters/AnimationFlipbook.cpp.o: CXX_COMPILER__LowData_Debug /Users/zacharylineman/Developer/GitHub/Hephaestus/LowData/Characters/AnimationFlipbook.cpp || cmake_object_order_depends_target_LowData
+  DEP_FILE = CMakeFiles/LowData.dir/Characters/AnimationFlipbook.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2 -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks  -std=gnu++14
+  INCLUDES = -I/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/openal-soft/include -isystem /usr/local/include -isystem /Library/Frameworks/Mono.framework/Headers -isystem /usr/local/include/freetype2
+  OBJECT_DIR = CMakeFiles/LowData.dir
+  OBJECT_FILE_DIR = CMakeFiles/LowData.dir/Characters
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target LowData
@@ -157,7 +171,7 @@ build CMakeFiles/LowData.dir/Characters/Merchant.cpp.o: CXX_COMPILER__LowData_De
 #############################################
 # Link the executable LowData
 
-build LowData: CXX_EXECUTABLE_LINKER__LowData_Debug CMakeFiles/LowData.dir/main.cpp.o CMakeFiles/LowData.dir/Scenes/MenuScene.cpp.o CMakeFiles/LowData.dir/LowDataGame.cpp.o CMakeFiles/LowData.dir/Scenes/GameScene.cpp.o CMakeFiles/LowData.dir/Characters/Merchant.cpp.o | Hephaestus/libHephaestus.a Hephaestus/Library/openal-soft/libopenal.1.21.1.dylib /usr/local/lib/libglfw.3.3.dylib /usr/local/lib/libGLEW.2.2.0.dylib /usr/local/lib/libfreetype.dylib || Hephaestus/Library/openal-soft/libopenal.dylib Hephaestus/libHephaestus.a Hephaestus/Library/openal-soft/libopenal.dylib
+build LowData: CXX_EXECUTABLE_LINKER__LowData_Debug CMakeFiles/LowData.dir/main.cpp.o CMakeFiles/LowData.dir/Scenes/MenuScene.cpp.o CMakeFiles/LowData.dir/LowDataGame.cpp.o CMakeFiles/LowData.dir/Scenes/GameScene.cpp.o CMakeFiles/LowData.dir/Characters/Merchant.cpp.o CMakeFiles/LowData.dir/Characters/MainCharacter.cpp.o CMakeFiles/LowData.dir/Characters/AnimationFlipbook.cpp.o | Hephaestus/libHephaestus.a Hephaestus/Library/openal-soft/libopenal.1.21.1.dylib /usr/local/lib/libglfw.3.3.dylib /usr/local/lib/libGLEW.2.2.0.dylib /usr/local/lib/libfreetype.dylib || Hephaestus/Library/openal-soft/libopenal.dylib Hephaestus/libHephaestus.a Hephaestus/Library/openal-soft/libopenal.dylib
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2
   LINK_LIBRARIES = -Wl,-rpath,/Users/zacharylineman/Developer/GitHub/Hephaestus/LowData/cmake-build-debug/Hephaestus/Library/openal-soft -Wl,-rpath,/usr/local/lib  Hephaestus/libHephaestus.a  Hephaestus/Library/openal-soft/libopenal.1.21.1.dylib  /usr/local/lib/libglfw.3.3.dylib  /usr/local/lib/libGLEW.2.2.0.dylib  -framework  OpenGL  /usr/local/lib/libfreetype.dylib
   LINK_PATH = -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks

@@ -18,6 +18,7 @@
 #include "../../Olympus/Hephaestus/Hephaestus.hpp"
 #include "../../Olympus/Hephaestus/Scene/Scene.hpp"
 #include "../Characters/Merchant.hpp"
+#include "../Characters/MainCharacter.hpp"
 
 class GameScene {
     /*
@@ -43,29 +44,18 @@ class GameScene {
     Text playerDebugText = { "x: ,y: ", "./fonts/NewHiScore.ttf", { 1.0f, 1.0f, 1.0f, 1.0f }, topLeft, {0, 0}, pointTopLeft, 18};
     Text cameraDebugText = { "x: ,y: ", "./fonts/NewHiScore.ttf", { 1.0f, 1.0f, 1.0f, 1.0f }, topLeft, {0, -18}, pointTopLeft, 18};
 
-    Sprite character = { "Main Character",  "./images/Main_Character.png", nearest, { 10, 10, 0}, { 32, 32 }, {0, 0, 0}};
+    MainCharacter mainCharacter = { "Main Character",  "./images/Main_Character.png", nearest, { 10, 10, 0}, { 32, 32 }, {0, 0, 0}};
     Merchant merchant = { "Merchant", "./images/Merchant.png", nearest, { 10, 10, 0}, { 32, 32 }, {0, 0, 0}};
 
     vector<Sprite> worldSprites { };
     /*
      * Scene Functions
-     */
-    void moveCharacterUpUnit();
-    void moveCharacterDownUnit();
-    void moveCharacterRightUnit();
-    void moveCharacterLeftUnit();
-
-    void moveCameraUpUnit();
-    void moveCameraDownUnit();
-    void moveCameraLeftUnit();
-    void moveCameraRightUnit();
-
+    */
     void buildWorldFromTextDefinition(const std::string& worldPath);
 
     /*
      * Game Configuration Variables
      */
-    float unitSizeInPixels = 2;
     int characterCenteringX { };
     int characterCenteringY { };
 

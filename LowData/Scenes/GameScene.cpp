@@ -28,26 +28,12 @@ void GameScene::setupScene() {
     scene.setUpdate([this] { update(); });
     scene.setRender([this] { render(); });
 
-    scene.addKeybind(GLFW_KEY_UP, GLFW_PRESS, [this] { moveCharacterUpUnit(); });
-    scene.addKeybind(GLFW_KEY_DOWN, GLFW_PRESS, [this] { moveCharacterDownUnit(); });
-    scene.addKeybind(GLFW_KEY_LEFT, GLFW_PRESS, [this] { moveCharacterLeftUnit(); });
-    scene.addKeybind(GLFW_KEY_RIGHT, GLFW_PRESS, [this] { moveCharacterRightUnit(); });
-
-    scene.addKeybind(GLFW_KEY_W, GLFW_PRESS, [this] { moveCameraUpUnit(); });
-    scene.addKeybind(GLFW_KEY_S, GLFW_PRESS, [this] { moveCameraDownUnit(); });
-    scene.addKeybind(GLFW_KEY_A, GLFW_PRESS, [this] { moveCameraLeftUnit(); });
-    scene.addKeybind(GLFW_KEY_D, GLFW_PRESS, [this] { moveCameraRightUnit(); });
-
     scene.addCamera(&gameCamera, true);
 
     /*
      * Sprite Placing
      */
     buildWorldFromTextDefinition("./TestWorld.LDataWorld");
-
-    character.position = { engine->windowWidth() / 2 - 16, engine->windowHeight() / 2 - 16, 0};
-    character.setCollidable(true);
-    scene.addSprite(&character);
 
     /*
      * Font Loading
@@ -57,9 +43,10 @@ void GameScene::setupScene() {
     scene.addText(&cameraDebugText);
 
     /*
-     * Merchant Setup
+     * Character Setup Setup
      */
     merchant.setupMerchant(&scene);
+    mainCharacter.setupCharacter(&scene);
 }
 
 
@@ -76,55 +63,15 @@ void GameScene::tick() {
 }
 
 void GameScene::update() {
-    playerDebugText.text = std::string("x: ") + std::to_string(character.position.x) + std::string(", y: ") + std::to_string(character.position.y);
+    playerDebugText.text = std::string("x: ") + std::to_string(mainCharacter.position.x) + std::string(", y: ") + std::to_string(mainCharacter.position.y);
     cameraDebugText.text = std::string("x: ") + std::to_string(gameCamera.position.x) + std::string(", y: ") + std::to_string(gameCamera.position.y);
 
-    gameCamera.position.y = -(character.position.y - characterCenteringY);
-    gameCamera.position.x = -(character.position.x - characterCenteringX);
+    gameCamera.position.y = -(mainCharacter.position.y - characterCenteringY);
+    gameCamera.position.x = -(mainCharacter.position.x - characterCenteringX);
 }
 
 void GameScene::render() {
 
-}
-
-void GameScene::moveCharacterUpUnit() {
-//    std::cout << "Character Position x: " << character.position.x << ", y: " << character.position.y << ". Camera Position x:" << gameCamera.position.x << ", y:" << gameCamera.position.y << std::endl;
-    character.position.y += unitSizeInPixels;
-//    gameCamera.position.y -= unitSizeInPixels;
-}
-
-void GameScene::moveCharacterDownUnit() {
-//    std::cout << "Character Position x: " << character.position.x << ", y: " << character.position.y << ". Camera Position x:" << gameCamera.position.x << ", y:" << gameCamera.position.y << std::endl;
-    character.position.y -= unitSizeInPixels;
-//    gameCamera.position.y += unitSizeInPixels;
-}
-
-void GameScene::moveCharacterRightUnit() {
-//    std::cout << "Character Position x: " << character.position.x << ", y: " << character.position.y << ". Camera Position x:" << gameCamera.position.x << ", y:" << gameCamera.position.y << std::endl;
-    character.position.x += unitSizeInPixels;
-//    gameCamera.position.x -= unitSizeInPixels;
-}
-
-void GameScene::moveCharacterLeftUnit() {
-//    std::cout << "Character Position x: " << character.position.x << ", y: " << character.position.y << ". Camera Position x:" << gameCamera.position.x << ", y:" << gameCamera.position.y << std::endl;
-    character.position.x -= unitSizeInPixels;
-//    gameCamera.position.x += unitSizeInPixels;
-}
-
-void GameScene::moveCameraUpUnit() {
-    gameCamera.position.y += unitSizeInPixels;
-}
-
-void GameScene::moveCameraDownUnit() {
-    gameCamera.position.y -= unitSizeInPixels;
-}
-
-void GameScene::moveCameraRightUnit() {
-    gameCamera.position.x += unitSizeInPixels;
-}
-
-void GameScene::moveCameraLeftUnit() {
-    gameCamera.position.x -= unitSizeInPixels;
 }
 
 void GameScene::buildWorldFromTextDefinition(const std::string& worldPath) {

@@ -34,3 +34,4 @@ void Merchant::setupMerchant(Scene* scene) {
     scene->addCollisionArea(&merchantCollision);
 }
 
+
