@@ -71,7 +71,10 @@ void GameScene::update() {
 }
 
 void GameScene::render() {
-
+    if (!mainCharacter.isMoving()) {
+//        std::cout << "Is Not Moving" << std::endl;
+        mainCharacter.flipbook.updateAnimation("idle_bounce");
+    }
 }
 
 void GameScene::buildWorldFromTextDefinition(const std::string& worldPath) {

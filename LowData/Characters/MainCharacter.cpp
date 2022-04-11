@@ -11,7 +11,8 @@
 #include "MainCharacter.hpp"
 
 void MainCharacter::setupCharacter(Scene *scene) {
-    flipbook.addAnimation("walking", { "./images/characters/Main_Character_Run_1.png", "./images/characters/Main_Character_Run_2.png", "./images/characters/Main_Character_Run_3.png", "./images/characters/Main_Character_Run_4.png" });
+    flipbook.addAnimation("walking_down", { "./images/characters/Main_Character_Walk_1.png", "./images/characters/Main_Character_Walk_2.png", "./images/characters/Main_Character_Walk_3.png", "./images/characters/Main_Character_Walk_4.png" });
+    flipbook.addAnimation("idle_bounce", { "./images/characters/Main_Character_Idle_1.png", "./images/characters/Main_Character_Idle_2.png" });
 
     this->scenePointer = scene;
 
@@ -24,36 +25,52 @@ void MainCharacter::setupCharacter(Scene *scene) {
     scene->addKeybind(GLFW_KEY_LEFT, GLFW_PRESS, [this] { moveCharacterLeftUnit(); });
     scene->addKeybind(GLFW_KEY_RIGHT, GLFW_PRESS, [this] { moveCharacterRightUnit(); });
 
-    scene->addKeybind(GLFW_KEY_W, GLFW_PRESS, [this] { moveCharacterUpUnit(); });
-    scene->addKeybind(GLFW_KEY_S, GLFW_PRESS, [this] { moveCharacterDownUnit(); });
-    scene->addKeybind(GLFW_KEY_A, GLFW_PRESS, [this] { moveCharacterLeftUnit(); });
-    scene->addKeybind(GLFW_KEY_D, GLFW_PRESS, [this] { moveCharacterRightUnit(); });
+    scene->addKeybind(GLFW_KEY_UP, GLFW_RELEASE, [this] { stopMovingUp(); });
+    scene->addKeybind(GLFW_KEY_DOWN, GLFW_RELEASE, [this] { stopMovingDown(); });
+    scene->addKeybind(GLFW_KEY_LEFT, GLFW_RELEASE, [this] { stopMovingLeft(); });
+    scene->addKeybind(GLFW_KEY_RIGHT, GLFW_RELEASE, [this] { stopMovingRight(); });
+}
+
+bool MainCharacter::isMoving() const {
+    return upHeld || downHeld || rightHeld || leftHeld;
+}
+
+void MainCharacter::stopMovingUp() {
+    upHeld = false;
+}
+
+void MainCharacter::stopMovingDown() {
+    downHeld = false;
+}
+
+void MainCharacter::stopMovingRight() {
+    rightHeld = false;
+}
+
+void MainCharacter::stopMovingLeft() {
+    leftHeld = false;
 }
 
 void MainCharacter::moveCharacterUpUnit() {
-//    std::cout << "Character Position x: " << character.position.x << ", y: " << character.position.y << ". Camera Position x:" << gameCamera.position.x << ", y:" << gameCamera.position.y << std::endl;
+    upHeld = true;
     position.y += unitSizeInPixels;
-    flipbook.updateAnimation("walking");
-//    gameCamera.position.y -= unitSizeInPixels;
+    flipbook.updateAnimation("walking_down");
 }
 
 void MainCharacter::moveCharacterDownUnit() {
-//    std::cout << "Character Position x: " << character.position.x << ", y: " << character.position.y << ". Camera Position x:" << gameCamera.position.x << ", y:" << gameCamera.position.y << std::endl;
+    downHeld = true;
     position.y -= unitSizeInPixels;
-    flipbook.updateAnimation("walking");
-//    gameCamera.position.y += unitSizeInPixels;
+    flipbook.updateAnimation("walking_down");
 }
 
 void MainCharacter::moveCharacterRightUnit() {
-//    std::cout << "Character Position x: " << character.position.x << ", y: " << character.position.y << ". Camera Position x:" << gameCamera.position.x << ", y:" << gameCamera.position.y << std::endl;
+    rightHeld = true;
     position.x += unitSizeInPixels;
-    flipbook.updateAnimation("walking");
-//    gameCamera.position.x -= unitSizeInPixels;
+    flipbook.updateAnimation("walking_down");
 }
 
 void MainCharacter::moveCharacterLeftUnit() {
-//    std::cout << "Character Position x: " << character.position.x << ", y: " << character.position.y << ". Camera Position x:" << gameCamera.position.x << ", y:" << gameCamera.position.y << std::endl;
+    leftHeld = true;
     position.x -= unitSizeInPixels;
-    flipbook.updateAnimation("walking");
-//    gameCamera.position.x += unitSizeInPixels;
+    flipbook.updateAnimation("walking_down");
 }

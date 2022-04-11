@@ -42,7 +42,6 @@ void AnimationFlipbook::updateAnimation(std::string type) {
         } else {
             currentAnimationProgress = 0;
         }
-        std::cout << currentAnimationProgress << std::endl;
     }
 
     vector<std::string> frames = mappedAnimations[type];

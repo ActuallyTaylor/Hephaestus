@@ -22,6 +22,7 @@ void ControlManager::executeKeybinds(int keycode, int action) {
     } else if (action == GLFW_RELEASE) {
         heldKeys.erase(keycode);
     }
+
     for(Keybind & keybinding : keybindings) {
         if ((keybinding.keyCode == keycode || keybinding.keyCode == HEPHAESTUS_ANY_KEY) && keybinding.action == action) {
             keybinding.execute();
@@ -52,7 +53,7 @@ void ControlManager::executeDragging() {
 
 void ControlManager::executeHolding() {
     for(Keybind & keybind : keybindings) {
-        if(heldKeys.count(keybind.keyCode) > 0) { // We found the keybind is being held
+        if(heldKeys.count(keybind.keyCode) > 0 && keybind.action == GLFW_PRESS) { // We found the keybind is being held
             keybind.execute();
         }
     }

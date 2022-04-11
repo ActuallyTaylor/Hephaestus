@@ -24,7 +24,7 @@ public:
     AnimationFlipbook(Sprite* targetSprite, std::map<std::string, std::vector<std::string>> mappedAnimations);
 
     int animationFPS = 12;
-    int animationFPSCount = 12;
+    int animationFPSCount = 0;
     void addAnimation(std::string identifier, std::vector<std::string> animationFrames);
     void updateAnimation(std::string type);
 };

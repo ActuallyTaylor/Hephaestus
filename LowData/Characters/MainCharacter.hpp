@@ -23,19 +23,29 @@
 
 class MainCharacter: public Sprite {
     Scene* scenePointer;
-    AnimationFlipbook flipbook = AnimationFlipbook(this);
 
     float unitSizeInPixels = 2;
 
+    bool upHeld = false;
     void moveCharacterUpUnit();
+    bool downHeld = false;
     void moveCharacterDownUnit();
+    bool rightHeld = false;
     void moveCharacterRightUnit();
+    bool leftHeld = false;
     void moveCharacterLeftUnit();
 
+    void stopMovingUp();
+    void stopMovingDown();
+    void stopMovingRight();
+    void stopMovingLeft();
 public:
     using Sprite::Sprite;
 
     void setupCharacter(Scene* scene);
+
+    bool isMoving() const;
+    AnimationFlipbook flipbook = AnimationFlipbook(this);
 };
 
 
