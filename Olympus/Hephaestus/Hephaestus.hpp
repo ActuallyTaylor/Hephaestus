@@ -35,9 +35,9 @@ private:
     /// The GLFW window that this class wraps.
     GLFWwindow *window;
     /// The pixel width of the window.
-    int width { 480 };
+    int width { 1920 };
     /// The pixel height of the window.
-    int height { 270 };
+    int height { 1080 };
 
     bool printFrames { false };
 

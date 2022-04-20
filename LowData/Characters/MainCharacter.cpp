@@ -15,6 +15,8 @@ void MainCharacter::setupCharacter(Scene *scene) {
     flipbook.addAnimation("idle_bounce", { "./images/characters/Main_Character_Idle_1.png", "./images/characters/Main_Character_Idle_2.png" });
 
     this->scenePointer = scene;
+    scenePointer->addUIElement(&bagImage);
+    bagImage.hidden = true;
 
     position = { scene->width / 2 - 16, scene->height / 2 - 16, 0};
     setCollidable(true);
@@ -29,6 +31,18 @@ void MainCharacter::setupCharacter(Scene *scene) {
     scene->addKeybind(GLFW_KEY_DOWN, GLFW_RELEASE, [this] { stopMovingDown(); });
     scene->addKeybind(GLFW_KEY_LEFT, GLFW_RELEASE, [this] { stopMovingLeft(); });
     scene->addKeybind(GLFW_KEY_RIGHT, GLFW_RELEASE, [this] { stopMovingRight(); });
+
+    scene->addKeybind(GLFW_KEY_B, GLFW_RELEASE, [this] {openBag(); });
+}
+
+void MainCharacter::openBag() {
+    if (bagIsOpen) {
+        bagImage.hidden = true;
+        bagIsOpen = false;
+    } else {
+        bagImage.hidden = false;
+        bagIsOpen = true;
+    }
 }
 
 bool MainCharacter::isMoving() const {

@@ -23,9 +23,9 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)
 Performing C++ SOURCE FILE Test HAVE_LIBATOMIC failed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_df3d0 && [1/2] Building CXX object CMakeFiles/cmTC_df3d0.dir/src.cxx.o
-FAILED: CMakeFiles/cmTC_df3d0.dir/src.cxx.o 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DHAVE_LIBATOMIC  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2 -MD -MT CMakeFiles/cmTC_df3d0.dir/src.cxx.o -MF CMakeFiles/cmTC_df3d0.dir/src.cxx.o.d -o CMakeFiles/cmTC_df3d0.dir/src.cxx.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_78b17 && [1/2] Building CXX object CMakeFiles/cmTC_78b17.dir/src.cxx.o
+FAILED: CMakeFiles/cmTC_78b17.dir/src.cxx.o 
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DHAVE_LIBATOMIC  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -MD -MT CMakeFiles/cmTC_78b17.dir/src.cxx.o -MF CMakeFiles/cmTC_78b17.dir/src.cxx.o.d -o CMakeFiles/cmTC_78b17.dir/src.cxx.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx:2:21: error: expected ';' after top level declarator
 std::atomic<int> foo{0};
                     ^
@@ -41,10 +41,10 @@ int main() { return foo.fetch_add(2); }
 Determining if the function __android_log_print exists in the log failed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_c36ca && [1/2] Building C object CMakeFiles/cmTC_c36ca.dir/CheckFunctionExists.c.o
-[2/2] Linking C executable cmTC_c36ca
-FAILED: cmTC_c36ca 
-: && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -DCHECK_FUNCTION_EXISTS=__android_log_print -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/cmTC_c36ca.dir/CheckFunctionExists.c.o -o cmTC_c36ca  -llog && :
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_11542 && [1/2] Building C object CMakeFiles/cmTC_11542.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_11542
+FAILED: cmTC_11542 
+: && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -DCHECK_FUNCTION_EXISTS=__android_log_print -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/cmTC_11542.dir/CheckFunctionExists.c.o -o cmTC_11542  -llog && :
 ld: library not found for -llog
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 ninja: build stopped: subcommand failed.
@@ -54,9 +54,9 @@ ninja: build stopped: subcommand failed.
 Performing C SOURCE FILE Test HAVE_GCC_PROTECTED_VISIBILITY failed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_afb5e && [1/2] Building C object CMakeFiles/cmTC_afb5e.dir/src.c.o
-FAILED: CMakeFiles/cmTC_afb5e.dir/src.c.o 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -DHAVE_GCC_PROTECTED_VISIBILITY  -Wattributes -Werror -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2 -MD -MT CMakeFiles/cmTC_afb5e.dir/src.c.o -MF CMakeFiles/cmTC_afb5e.dir/src.c.o.d -o CMakeFiles/cmTC_afb5e.dir/src.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_15bdc && [1/2] Building C object CMakeFiles/cmTC_15bdc.dir/src.c.o
+FAILED: CMakeFiles/cmTC_15bdc.dir/src.c.o 
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -DHAVE_GCC_PROTECTED_VISIBILITY  -Wattributes -Werror -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -MD -MT CMakeFiles/cmTC_15bdc.dir/src.c.o -MF CMakeFiles/cmTC_15bdc.dir/src.c.o.d -o CMakeFiles/cmTC_15bdc.dir/src.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/src.c:1:26: error: target does not support 'protected' visibility; using 'default' [-Werror,-Wunsupported-visibility]
 int foo() __attribute__((visibility("protected")));
                          ^
@@ -70,9 +70,9 @@ int foo() __attribute__((visibility("protected")));
 Determining if the include file arm_neon.h exists failed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_69f30 && [1/2] Building C object CMakeFiles/cmTC_69f30.dir/CheckIncludeFile.c.o
-FAILED: CMakeFiles/cmTC_69f30.dir/CheckIncludeFile.c.o 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2 -MD -MT CMakeFiles/cmTC_69f30.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_69f30.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_69f30.dir/CheckIncludeFile.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_dbb49 && [1/2] Building C object CMakeFiles/cmTC_dbb49.dir/CheckIncludeFile.c.o
+FAILED: CMakeFiles/cmTC_dbb49.dir/CheckIncludeFile.c.o 
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -MD -MT CMakeFiles/cmTC_dbb49.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_dbb49.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_dbb49.dir/CheckIncludeFile.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
 In file included from /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include/arm_neon.h:28:2: error: "NEON intrinsics not available with the soft-float ABI. Please use -mfloat-abi=softfp or -mfloat-abi=hard"
 #error "NEON intrinsics not available with the soft-float ABI. Please use -mfloat-abi=softfp or -mfloat-abi=hard"
@@ -85,9 +85,9 @@ ninja: build stopped: subcommand failed.
 Determining if the include file malloc.h exists failed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_8c764 && [1/2] Building C object CMakeFiles/cmTC_8c764.dir/CheckIncludeFile.c.o
-FAILED: CMakeFiles/cmTC_8c764.dir/CheckIncludeFile.c.o 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2 -MD -MT CMakeFiles/cmTC_8c764.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_8c764.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_8c764.dir/CheckIncludeFile.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_de0bc && [1/2] Building C object CMakeFiles/cmTC_de0bc.dir/CheckIncludeFile.c.o
+FAILED: CMakeFiles/cmTC_de0bc.dir/CheckIncludeFile.c.o 
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -MD -MT CMakeFiles/cmTC_de0bc.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_de0bc.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_de0bc.dir/CheckIncludeFile.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: 'malloc.h' file not found
 #include <malloc.h>
          ^~~~~~~~~~
@@ -99,9 +99,9 @@ ninja: build stopped: subcommand failed.
 Determining if the include file intrin.h exists failed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_bae0e && [1/2] Building C object CMakeFiles/cmTC_bae0e.dir/CheckIncludeFile.c.o
-FAILED: CMakeFiles/cmTC_bae0e.dir/CheckIncludeFile.c.o 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2 -MD -MT CMakeFiles/cmTC_bae0e.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_bae0e.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_bae0e.dir/CheckIncludeFile.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_84ecf && [1/2] Building C object CMakeFiles/cmTC_84ecf.dir/CheckIncludeFile.c.o
+FAILED: CMakeFiles/cmTC_84ecf.dir/CheckIncludeFile.c.o 
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -MD -MT CMakeFiles/cmTC_84ecf.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_84ecf.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_84ecf.dir/CheckIncludeFile.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
 In file included from /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include/intrin.h:12:15: fatal error: 'intrin.h' file not found
 #include_next <intrin.h>
@@ -114,9 +114,9 @@ ninja: build stopped: subcommand failed.
 Determining if the include file guiddef.h exists failed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_78488 && [1/2] Building C object CMakeFiles/cmTC_78488.dir/CheckIncludeFile.c.o
-FAILED: CMakeFiles/cmTC_78488.dir/CheckIncludeFile.c.o 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2 -MD -MT CMakeFiles/cmTC_78488.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_78488.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_78488.dir/CheckIncludeFile.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_ca60c && [1/2] Building C object CMakeFiles/cmTC_ca60c.dir/CheckIncludeFile.c.o
+FAILED: CMakeFiles/cmTC_ca60c.dir/CheckIncludeFile.c.o 
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -MD -MT CMakeFiles/cmTC_ca60c.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_ca60c.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_ca60c.dir/CheckIncludeFile.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: 'guiddef.h' file not found
 #include <guiddef.h>
          ^~~~~~~~~~~
@@ -128,9 +128,9 @@ ninja: build stopped: subcommand failed.
 Determining if the include file initguid.h exists failed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_0e979 && [1/2] Building C object CMakeFiles/cmTC_0e979.dir/CheckIncludeFile.c.o
-FAILED: CMakeFiles/cmTC_0e979.dir/CheckIncludeFile.c.o 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2 -MD -MT CMakeFiles/cmTC_0e979.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_0e979.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_0e979.dir/CheckIncludeFile.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_a283e && [1/2] Building C object CMakeFiles/cmTC_a283e.dir/CheckIncludeFile.c.o
+FAILED: CMakeFiles/cmTC_a283e.dir/CheckIncludeFile.c.o 
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -MD -MT CMakeFiles/cmTC_a283e.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_a283e.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_a283e.dir/CheckIncludeFile.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: 'initguid.h' file not found
 #include <initguid.h>
          ^~~~~~~~~~~~
@@ -142,10 +142,10 @@ ninja: build stopped: subcommand failed.
 Determining if the function clock_gettime exists in the rt failed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_8effd && [1/2] Building C object CMakeFiles/cmTC_8effd.dir/CheckFunctionExists.c.o
-[2/2] Linking C executable cmTC_8effd
-FAILED: cmTC_8effd 
-: && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -DCHECK_FUNCTION_EXISTS=clock_gettime -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/cmTC_8effd.dir/CheckFunctionExists.c.o -o cmTC_8effd  -lrt  -lm && :
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_0fe5f && [1/2] Building C object CMakeFiles/cmTC_0fe5f.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_0fe5f
+FAILED: cmTC_0fe5f 
+: && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -DCHECK_FUNCTION_EXISTS=clock_gettime -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/cmTC_0fe5f.dir/CheckFunctionExists.c.o -o cmTC_0fe5f  -lrt  -lm && :
 ld: library not found for -lrt
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 ninja: build stopped: subcommand failed.
@@ -155,9 +155,9 @@ ninja: build stopped: subcommand failed.
 Determining if the _aligned_malloc exist failed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_e38c8 && [1/2] Building C object CMakeFiles/cmTC_e38c8.dir/CheckSymbolExists.c.o
-FAILED: CMakeFiles/cmTC_e38c8.dir/CheckSymbolExists.c.o 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2 -MD -MT CMakeFiles/cmTC_e38c8.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_e38c8.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_e38c8.dir/CheckSymbolExists.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_e12d0 && [1/2] Building C object CMakeFiles/cmTC_e12d0.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_e12d0.dir/CheckSymbolExists.c.o 
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -MD -MT CMakeFiles/cmTC_e12d0.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_e12d0.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_e12d0.dir/CheckSymbolExists.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:2:10: fatal error: 'malloc.h' file not found
 #include <malloc.h>
          ^~~~~~~~~~
@@ -182,9 +182,9 @@ int main(int argc, char** argv)
 Determining if files pthread.h;pthread_np.h exist failed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_4c9fb && [1/2] Building C object CMakeFiles/cmTC_4c9fb.dir/HAVE_PTHREAD_NP_H.c.o
-FAILED: CMakeFiles/cmTC_4c9fb.dir/HAVE_PTHREAD_NP_H.c.o 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -pthread -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2 -MD -MT CMakeFiles/cmTC_4c9fb.dir/HAVE_PTHREAD_NP_H.c.o -MF CMakeFiles/cmTC_4c9fb.dir/HAVE_PTHREAD_NP_H.c.o.d -o CMakeFiles/cmTC_4c9fb.dir/HAVE_PTHREAD_NP_H.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CheckIncludeFiles/HAVE_PTHREAD_NP_H.c
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_eb739 && [1/2] Building C object CMakeFiles/cmTC_eb739.dir/HAVE_PTHREAD_NP_H.c.o
+FAILED: CMakeFiles/cmTC_eb739.dir/HAVE_PTHREAD_NP_H.c.o 
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -pthread -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -MD -MT CMakeFiles/cmTC_eb739.dir/HAVE_PTHREAD_NP_H.c.o -MF CMakeFiles/cmTC_eb739.dir/HAVE_PTHREAD_NP_H.c.o.d -o CMakeFiles/cmTC_eb739.dir/HAVE_PTHREAD_NP_H.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CheckIncludeFiles/HAVE_PTHREAD_NP_H.c
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CheckIncludeFiles/HAVE_PTHREAD_NP_H.c:3:10: fatal error: 'pthread_np.h' file not found
 #include <pthread_np.h>
          ^~~~~~~~~~~~~~
@@ -203,9 +203,9 @@ int main(void){return 0;}
 Performing C SOURCE FILE Test PTHREAD_SETNAME_NP_THREE_PARAMS failed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_4c663 && [1/2] Building C object CMakeFiles/cmTC_4c663.dir/src.c.o
-FAILED: CMakeFiles/cmTC_4c663.dir/src.c.o 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -DPTHREAD_SETNAME_NP_THREE_PARAMS  -pthread -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2 -MD -MT CMakeFiles/cmTC_4c663.dir/src.c.o -MF CMakeFiles/cmTC_4c663.dir/src.c.o.d -o CMakeFiles/cmTC_4c663.dir/src.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_f0989 && [1/2] Building C object CMakeFiles/cmTC_f0989.dir/src.c.o
+FAILED: CMakeFiles/cmTC_f0989.dir/src.c.o 
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -DPTHREAD_SETNAME_NP_THREE_PARAMS  -pthread -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -MD -MT CMakeFiles/cmTC_f0989.dir/src.c.o -MF CMakeFiles/cmTC_f0989.dir/src.c.o.d -o CMakeFiles/cmTC_f0989.dir/src.c.o -c /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
 /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/src.c:5:40: error: too many arguments to function call, expected 1, have 3
     pthread_setname_np(pthread_self(), "%s", "testname");
     ~~~~~~~~~~~~~~~~~~                 ^~~~~~~~~~~~~~~~

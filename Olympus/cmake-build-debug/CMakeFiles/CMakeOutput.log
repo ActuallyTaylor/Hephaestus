@@ -1,4 +1,4 @@
-The system is: Darwin - 21.3.0 - x86_64
+The system is: Darwin - 21.4.0 - x86_64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
 Compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc 
 Build flags: 
@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
 
-The C compiler identification is AppleClang, found in "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdC/CMakeCCompilerId.o"
+The C compiler identification is AppleClang, found in "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/3.22.3/CompilerIdC/CMakeCCompilerId.o"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ 
@@ -23,19 +23,19 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
 
-The CXX compiler identification is AppleClang, found in "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdCXX/CMakeCXXCompilerId.o"
+The CXX compiler identification is AppleClang, found in "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/3.22.3/CompilerIdCXX/CMakeCXXCompilerId.o"
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_66424 && [1/2] Building C object CMakeFiles/cmTC_66424.dir/CMakeCCompilerABI.c.o
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_f2d8a && [1/2] Building C object CMakeFiles/cmTC_f2d8a.dir/CMakeCCompilerABI.c.o
 Apple clang version 13.1.6 (clang-1316.0.21.2)
-Target: x86_64-apple-darwin21.3.0
+Target: x86_64-apple-darwin21.4.0
 Thread model: posix
 InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
 clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple x86_64-apple-macosx12.2.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-strict-return -fno-rounding-math -munwind-tables -target-sdk-version=12.3 -fvisibility-inlines-hidden-static-local-var -target-cpu penryn -tune-cpu generic -debugger-tuning=lldb -target-linker-version 762 -v -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6 -dependency-file CMakeFiles/cmTC_66424.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_66424.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -Wno-objc-load-method -fdebug-compilation-dir=/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -fcommon -clang-vendor-feature=+messageToSelfInClassMethodIdReturnType -clang-vendor-feature=+disableInferNewAvailabilityFromInit -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_66424.dir/CMakeCCompilerABI.c.o -x c "/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCCompilerABI.c"
-clang -cc1 version 13.1.6 (clang-1316.0.21.2) default target x86_64-apple-darwin21.3.0
+ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple x86_64-apple-macosx12.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-strict-return -fno-rounding-math -munwind-tables -target-sdk-version=12.3 -fvisibility-inlines-hidden-static-local-var -target-cpu penryn -tune-cpu generic -debugger-tuning=lldb -target-linker-version 762 -v -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6 -dependency-file CMakeFiles/cmTC_f2d8a.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_f2d8a.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -Wno-objc-load-method -fdebug-compilation-dir=/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -fcommon -clang-vendor-feature=+messageToSelfInClassMethodIdReturnType -clang-vendor-feature=+disableInferNewAvailabilityFromInit -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_f2d8a.dir/CMakeCCompilerABI.c.o -x c "/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CMakeCCompilerABI.c"
+clang -cc1 version 13.1.6 (clang-1316.0.21.2) default target x86_64-apple-darwin21.4.0
 ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/local/include"
 ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/Library/Frameworks"
 #include "..." search starts here:
@@ -45,12 +45,12 @@ ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platf
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/System/Library/Frameworks (framework directory)
 End of search list.
-[2/2] Linking C executable cmTC_66424
+[2/2] Linking C executable cmTC_f2d8a
 Apple clang version 13.1.6 (clang-1316.0.21.2)
-Target: x86_64-apple-darwin21.3.0
+Target: x86_64-apple-darwin21.4.0
 Thread model: posix
 InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 12.2.0 12.3 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -o cmTC_66424 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_66424.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/lib/darwin/libclang_rt.osx.a
+ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 12.0.0 12.3 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -o cmTC_f2d8a -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_f2d8a.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/lib/darwin/libclang_rt.osx.a
 @(#)PROGRAM:ld  PROJECT:ld64-762
 BUILD 06:28:45 Feb 18 2022
 configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
@@ -78,14 +78,14 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_66424 && [1/2] Building C object CMakeFiles/cmTC_66424.dir/CMakeCCompilerABI.c.o]
+  ignore line: [Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_f2d8a && [1/2] Building C object CMakeFiles/cmTC_f2d8a.dir/CMakeCCompilerABI.c.o]
   ignore line: [Apple clang version 13.1.6 (clang-1316.0.21.2)]
-  ignore line: [Target: x86_64-apple-darwin21.3.0]
+  ignore line: [Target: x86_64-apple-darwin21.4.0]
   ignore line: [Thread model: posix]
   ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
   ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
-  ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple x86_64-apple-macosx12.2.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-strict-return -fno-rounding-math -munwind-tables -target-sdk-version=12.3 -fvisibility-inlines-hidden-static-local-var -target-cpu penryn -tune-cpu generic -debugger-tuning=lldb -target-linker-version 762 -v -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6 -dependency-file CMakeFiles/cmTC_66424.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_66424.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -Wno-objc-load-method -fdebug-compilation-dir=/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -fcommon -clang-vendor-feature=+messageToSelfInClassMethodIdReturnType -clang-vendor-feature=+disableInferNewAvailabilityFromInit -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_66424.dir/CMakeCCompilerABI.c.o -x c "/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCCompilerABI.c"]
-  ignore line: [clang -cc1 version 13.1.6 (clang-1316.0.21.2) default target x86_64-apple-darwin21.3.0]
+  ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple x86_64-apple-macosx12.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-strict-return -fno-rounding-math -munwind-tables -target-sdk-version=12.3 -fvisibility-inlines-hidden-static-local-var -target-cpu penryn -tune-cpu generic -debugger-tuning=lldb -target-linker-version 762 -v -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6 -dependency-file CMakeFiles/cmTC_f2d8a.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_f2d8a.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -Wno-objc-load-method -fdebug-compilation-dir=/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -fcommon -clang-vendor-feature=+messageToSelfInClassMethodIdReturnType -clang-vendor-feature=+disableInferNewAvailabilityFromInit -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_f2d8a.dir/CMakeCCompilerABI.c.o -x c "/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CMakeCCompilerABI.c"]
+  ignore line: [clang -cc1 version 13.1.6 (clang-1316.0.21.2) default target x86_64-apple-darwin21.4.0]
   ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/local/include"]
   ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/Library/Frameworks"]
   ignore line: [#include "..." search starts here:]
@@ -95,12 +95,12 @@ Parsed C implicit link information from above output:
   ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
   ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/System/Library/Frameworks (framework directory)]
   ignore line: [End of search list.]
-  ignore line: [[2/2] Linking C executable cmTC_66424]
+  ignore line: [[2/2] Linking C executable cmTC_f2d8a]
   ignore line: [Apple clang version 13.1.6 (clang-1316.0.21.2)]
-  ignore line: [Target: x86_64-apple-darwin21.3.0]
+  ignore line: [Target: x86_64-apple-darwin21.4.0]
   ignore line: [Thread model: posix]
   ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
-  link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 12.2.0 12.3 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -o cmTC_66424 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_66424.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/lib/darwin/libclang_rt.osx.a]
+  link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 12.0.0 12.3 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -o cmTC_f2d8a -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_f2d8a.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/lib/darwin/libclang_rt.osx.a]
     arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
     arg [-demangle] ==> ignore
     arg [-lto_library] ==> ignore, skip following value
@@ -110,16 +110,16 @@ Parsed C implicit link information from above output:
     arg [x86_64] ==> ignore
     arg [-platform_version] ==> ignore
     arg [macos] ==> ignore
-    arg [12.2.0] ==> ignore
+    arg [12.0.0] ==> ignore
     arg [12.3] ==> ignore
     arg [-syslibroot] ==> ignore
     arg [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_66424] ==> ignore
+    arg [cmTC_f2d8a] ==> ignore
     arg [-search_paths_first] ==> ignore
     arg [-headerpad_max_install_names] ==> ignore
     arg [-v] ==> ignore
-    arg [CMakeFiles/cmTC_66424.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_f2d8a.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lSystem] ==> lib [System]
     arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/lib/darwin/libclang_rt.osx.a]
   Library search paths: [;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/lib]
@@ -137,14 +137,14 @@ Parsed C implicit link information from above output:
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_15a36 && [1/2] Building CXX object CMakeFiles/cmTC_15a36.dir/CMakeCXXCompilerABI.cpp.o
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_17371 && [1/2] Building CXX object CMakeFiles/cmTC_17371.dir/CMakeCXXCompilerABI.cpp.o
 Apple clang version 13.1.6 (clang-1316.0.21.2)
-Target: x86_64-apple-darwin21.3.0
+Target: x86_64-apple-darwin21.4.0
 Thread model: posix
 InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
 clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple x86_64-apple-macosx12.2.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-strict-return -fno-rounding-math -munwind-tables -target-sdk-version=12.3 -fvisibility-inlines-hidden-static-local-var -target-cpu penryn -tune-cpu generic -debugger-tuning=lldb -target-linker-version 762 -v -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6 -dependency-file CMakeFiles/cmTC_15a36.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_15a36.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -stdlib=libc++ -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -Wno-objc-load-method -fdeprecated-macro -fdebug-compilation-dir=/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+messageToSelfInClassMethodIdReturnType -clang-vendor-feature=+disableInferNewAvailabilityFromInit -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_15a36.dir/CMakeCXXCompilerABI.cpp.o -x c++ "/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCXXCompilerABI.cpp"
-clang -cc1 version 13.1.6 (clang-1316.0.21.2) default target x86_64-apple-darwin21.3.0
+ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple x86_64-apple-macosx12.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-strict-return -fno-rounding-math -munwind-tables -target-sdk-version=12.3 -fvisibility-inlines-hidden-static-local-var -target-cpu penryn -tune-cpu generic -debugger-tuning=lldb -target-linker-version 762 -v -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6 -dependency-file CMakeFiles/cmTC_17371.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_17371.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -stdlib=libc++ -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -Wno-objc-load-method -fdeprecated-macro -fdebug-compilation-dir=/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+messageToSelfInClassMethodIdReturnType -clang-vendor-feature=+disableInferNewAvailabilityFromInit -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_17371.dir/CMakeCXXCompilerABI.cpp.o -x c++ "/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp"
+clang -cc1 version 13.1.6 (clang-1316.0.21.2) default target x86_64-apple-darwin21.4.0
 ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/local/include"
 ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/Library/Frameworks"
 #include "..." search starts here:
@@ -155,12 +155,12 @@ ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platf
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/System/Library/Frameworks (framework directory)
 End of search list.
-[2/2] Linking CXX executable cmTC_15a36
+[2/2] Linking CXX executable cmTC_17371
 Apple clang version 13.1.6 (clang-1316.0.21.2)
-Target: x86_64-apple-darwin21.3.0
+Target: x86_64-apple-darwin21.4.0
 Thread model: posix
 InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 12.2.0 12.3 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -o cmTC_15a36 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_15a36.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/lib/darwin/libclang_rt.osx.a
+ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 12.0.0 12.3 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -o cmTC_17371 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_17371.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/lib/darwin/libclang_rt.osx.a
 @(#)PROGRAM:ld  PROJECT:ld64-762
 BUILD 06:28:45 Feb 18 2022
 configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
@@ -190,14 +190,14 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_15a36 && [1/2] Building CXX object CMakeFiles/cmTC_15a36.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_17371 && [1/2] Building CXX object CMakeFiles/cmTC_17371.dir/CMakeCXXCompilerABI.cpp.o]
   ignore line: [Apple clang version 13.1.6 (clang-1316.0.21.2)]
-  ignore line: [Target: x86_64-apple-darwin21.3.0]
+  ignore line: [Target: x86_64-apple-darwin21.4.0]
   ignore line: [Thread model: posix]
   ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
   ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
-  ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple x86_64-apple-macosx12.2.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-strict-return -fno-rounding-math -munwind-tables -target-sdk-version=12.3 -fvisibility-inlines-hidden-static-local-var -target-cpu penryn -tune-cpu generic -debugger-tuning=lldb -target-linker-version 762 -v -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6 -dependency-file CMakeFiles/cmTC_15a36.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_15a36.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -stdlib=libc++ -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -Wno-objc-load-method -fdeprecated-macro -fdebug-compilation-dir=/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+messageToSelfInClassMethodIdReturnType -clang-vendor-feature=+disableInferNewAvailabilityFromInit -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_15a36.dir/CMakeCXXCompilerABI.cpp.o -x c++ "/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCXXCompilerABI.cpp"]
-  ignore line: [clang -cc1 version 13.1.6 (clang-1316.0.21.2) default target x86_64-apple-darwin21.3.0]
+  ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple x86_64-apple-macosx12.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-strict-return -fno-rounding-math -munwind-tables -target-sdk-version=12.3 -fvisibility-inlines-hidden-static-local-var -target-cpu penryn -tune-cpu generic -debugger-tuning=lldb -target-linker-version 762 -v -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6 -dependency-file CMakeFiles/cmTC_17371.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_17371.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -stdlib=libc++ -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -Wno-objc-load-method -fdeprecated-macro -fdebug-compilation-dir=/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+messageToSelfInClassMethodIdReturnType -clang-vendor-feature=+disableInferNewAvailabilityFromInit -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_17371.dir/CMakeCXXCompilerABI.cpp.o -x c++ "/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp"]
+  ignore line: [clang -cc1 version 13.1.6 (clang-1316.0.21.2) default target x86_64-apple-darwin21.4.0]
   ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/local/include"]
   ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/Library/Frameworks"]
   ignore line: [#include "..." search starts here:]
@@ -208,12 +208,12 @@ Parsed CXX implicit link information from above output:
   ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
   ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/System/Library/Frameworks (framework directory)]
   ignore line: [End of search list.]
-  ignore line: [[2/2] Linking CXX executable cmTC_15a36]
+  ignore line: [[2/2] Linking CXX executable cmTC_17371]
   ignore line: [Apple clang version 13.1.6 (clang-1316.0.21.2)]
-  ignore line: [Target: x86_64-apple-darwin21.3.0]
+  ignore line: [Target: x86_64-apple-darwin21.4.0]
   ignore line: [Thread model: posix]
   ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
-  link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 12.2.0 12.3 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -o cmTC_15a36 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_15a36.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/lib/darwin/libclang_rt.osx.a]
+  link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 12.0.0 12.3 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -o cmTC_17371 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_17371.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/lib/darwin/libclang_rt.osx.a]
     arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
     arg [-demangle] ==> ignore
     arg [-lto_library] ==> ignore, skip following value
@@ -223,16 +223,16 @@ Parsed CXX implicit link information from above output:
     arg [x86_64] ==> ignore
     arg [-platform_version] ==> ignore
     arg [macos] ==> ignore
-    arg [12.2.0] ==> ignore
+    arg [12.0.0] ==> ignore
     arg [12.3] ==> ignore
     arg [-syslibroot] ==> ignore
     arg [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_15a36] ==> ignore
+    arg [cmTC_17371] ==> ignore
     arg [-search_paths_first] ==> ignore
     arg [-headerpad_max_install_names] ==> ignore
     arg [-v] ==> ignore
-    arg [CMakeFiles/cmTC_15a36.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_17371.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lc++] ==> lib [c++]
     arg [-lSystem] ==> lib [System]
     arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.1.6/lib/darwin/libclang_rt.osx.a]
@@ -251,8 +251,8 @@ Parsed CXX implicit link information from above output:
 Determining if the posix_memalign exist passed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_ec99d && [1/2] Building C object CMakeFiles/cmTC_ec99d.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_ec99d
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_b55aa && [1/2] Building C object CMakeFiles/cmTC_b55aa.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_b55aa
 
 
 File /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -272,8 +272,8 @@ int main(int argc, char** argv)
 Performing C++ SOURCE FILE Test HAVE___RESTRICT succeeded with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_a7e7d && [1/2] Building CXX object CMakeFiles/cmTC_a7e7d.dir/src.cxx.o
-[2/2] Linking CXX executable cmTC_a7e7d
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_59f0c && [1/2] Building CXX object CMakeFiles/cmTC_59f0c.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_59f0c
 
 
 Source file was:
@@ -282,8 +282,8 @@ int main() { return 0; }
 Performing C SOURCE FILE Test HAVE_FNO_MATH_ERRNO succeeded with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_a1123 && [1/2] Building C object CMakeFiles/cmTC_a1123.dir/src.c.o
-[2/2] Linking C executable cmTC_a1123
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_f539c && [1/2] Building C object CMakeFiles/cmTC_f539c.dir/src.c.o
+[2/2] Linking C executable cmTC_f539c
 
 
 Source file was:
@@ -291,8 +291,8 @@ int main(void) { return 0; }
 Performing C SOURCE FILE Test HAVE_GCC_DEFAULT_VISIBILITY succeeded with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_49b72 && [1/2] Building C object CMakeFiles/cmTC_49b72.dir/src.c.o
-[2/2] Linking C executable cmTC_49b72
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_d5641 && [1/2] Building C object CMakeFiles/cmTC_d5641.dir/src.c.o
+[2/2] Linking C executable cmTC_d5641
 
 
 Source file was:
@@ -301,8 +301,8 @@ int foo() __attribute__((visibility("default")));
 Performing C SOURCE FILE Test HAVE_VISIBILITY_HIDDEN_SWITCH succeeded with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_27642 && [1/2] Building C object CMakeFiles/cmTC_27642.dir/src.c.o
-[2/2] Linking C executable cmTC_27642
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_6bdbb && [1/2] Building C object CMakeFiles/cmTC_6bdbb.dir/src.c.o
+[2/2] Linking C executable cmTC_6bdbb
 
 
 Source file was:
@@ -310,8 +310,8 @@ int main(void) { return 0; }
 Performing C SOURCE FILE Test HAVE_MSSE2_SWITCH succeeded with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_f8461 && [1/2] Building C object CMakeFiles/cmTC_f8461.dir/src.c.o
-[2/2] Linking C executable cmTC_f8461
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_985a4 && [1/2] Building C object CMakeFiles/cmTC_985a4.dir/src.c.o
+[2/2] Linking C executable cmTC_985a4
 
 
 Source file was:
@@ -319,40 +319,40 @@ int main(void) { return 0; }
 Determining if the include file xmmintrin.h exists passed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_43d19 && [1/2] Building C object CMakeFiles/cmTC_43d19.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_43d19
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_141a4 && [1/2] Building C object CMakeFiles/cmTC_141a4.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_141a4
 
 
 
 Determining if the include file emmintrin.h exists passed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_78940 && [1/2] Building C object CMakeFiles/cmTC_78940.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_78940
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_15c92 && [1/2] Building C object CMakeFiles/cmTC_15c92.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_15c92
 
 
 
 Determining if the include file pmmintrin.h exists passed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_68b01 && [1/2] Building C object CMakeFiles/cmTC_68b01.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_68b01
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_d0a47 && [1/2] Building C object CMakeFiles/cmTC_d0a47.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_d0a47
 
 
 
 Determining if the include file smmintrin.h exists passed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_33dd3 && [1/2] Building C object CMakeFiles/cmTC_33dd3.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_33dd3
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_804c2 && [1/2] Building C object CMakeFiles/cmTC_804c2.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_804c2
 
 
 
 Performing C SOURCE FILE Test HAVE_SSE_INTRINSICS succeeded with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_87a22 && [1/2] Building C object CMakeFiles/cmTC_87a22.dir/src.c.o
-[2/2] Linking C executable cmTC_87a22
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_94753 && [1/2] Building C object CMakeFiles/cmTC_94753.dir/src.c.o
+[2/2] Linking C executable cmTC_94753
 
 
 Source file was:
@@ -361,51 +361,51 @@ Source file was:
 Determining if the include file cpuid.h exists passed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_5c13d && [1/2] Building C object CMakeFiles/cmTC_5c13d.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_5c13d
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_860c6 && [1/2] Building C object CMakeFiles/cmTC_860c6.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_860c6
 
 
 
 Determining if the function pow exists in the m passed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_3fdfd && [1/2] Building C object CMakeFiles/cmTC_3fdfd.dir/CheckFunctionExists.c.o
-/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckFunctionExists.c:7:3: warning: incompatible redeclaration of library function 'pow' [-Wincompatible-library-redeclaration]
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_fa990 && [1/2] Building C object CMakeFiles/cmTC_fa990.dir/CheckFunctionExists.c.o
+/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CheckFunctionExists.c:7:3: warning: incompatible redeclaration of library function 'pow' [-Wincompatible-library-redeclaration]
   CHECK_FUNCTION_EXISTS(void);
   ^
 <command line>:1:31: note: expanded from here
 #define CHECK_FUNCTION_EXISTS pow
                               ^
-/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckFunctionExists.c:7:3: note: 'pow' is a builtin with type 'double (double, double)'
+/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/cmake/mac/share/cmake-3.22/Modules/CheckFunctionExists.c:7:3: note: 'pow' is a builtin with type 'double (double, double)'
 <command line>:1:31: note: expanded from here
 #define CHECK_FUNCTION_EXISTS pow
                               ^
 1 warning generated.
-[2/2] Linking C executable cmTC_3fdfd
+[2/2] Linking C executable cmTC_fa990
 
 
 
 Determining if the include file dlfcn.h exists passed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_1dc03 && [1/2] Building C object CMakeFiles/cmTC_1dc03.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_1dc03
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_e06af && [1/2] Building C object CMakeFiles/cmTC_e06af.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_e06af
 
 
 
 Determining if the function dlopen exists in the dl passed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_90ef2 && [1/2] Building C object CMakeFiles/cmTC_90ef2.dir/CheckFunctionExists.c.o
-[2/2] Linking C executable cmTC_90ef2
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_55f10 && [1/2] Building C object CMakeFiles/cmTC_55f10.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_55f10
 
 
 
 Performing C SOURCE FILE Test HAVE_GCC_GET_CPUID succeeded with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_1cc5f && [1/2] Building C object CMakeFiles/cmTC_1cc5f.dir/src.c.o
-[2/2] Linking C executable cmTC_1cc5f
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_ffaea && [1/2] Building C object CMakeFiles/cmTC_ffaea.dir/src.c.o
+[2/2] Linking C executable cmTC_ffaea
 
 
 Source file was:
@@ -418,8 +418,8 @@ Source file was:
 Determining if the posix_memalign exist passed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_0980e && [1/2] Building C object CMakeFiles/cmTC_0980e.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_0980e
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_9d066 && [1/2] Building C object CMakeFiles/cmTC_9d066.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_9d066
 
 
 File /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -439,8 +439,8 @@ int main(int argc, char** argv)
 Determining if the proc_pidpath exist passed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_9feae && [1/2] Building C object CMakeFiles/cmTC_9feae.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_9feae
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_d777e && [1/2] Building C object CMakeFiles/cmTC_d777e.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_d777e
 
 
 File /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -460,16 +460,16 @@ int main(int argc, char** argv)
 Determining if the include file pthread.h exists passed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_338dd && [1/2] Building C object CMakeFiles/cmTC_338dd.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_338dd
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_7f211 && [1/2] Building C object CMakeFiles/cmTC_7f211.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_7f211
 
 
 
 Performing C SOURCE FILE Test HAVE_PTHREAD succeeded with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_84fdf && [1/2] Building C object CMakeFiles/cmTC_84fdf.dir/src.c.o
-[2/2] Linking C executable cmTC_84fdf
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_a8fec && [1/2] Building C object CMakeFiles/cmTC_a8fec.dir/src.c.o
+[2/2] Linking C executable cmTC_a8fec
 
 
 Source file was:
@@ -477,8 +477,8 @@ int main(void) { return 0; }
 Determining if the pthread_setschedparam exist passed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_0f7ee && [1/2] Building C object CMakeFiles/cmTC_0f7ee.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_0f7ee
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_cedea && [1/2] Building C object CMakeFiles/cmTC_cedea.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_cedea
 
 
 File /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -498,8 +498,8 @@ int main(int argc, char** argv)
 Determining if the pthread_setname_np exist passed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_73b96 && [1/2] Building C object CMakeFiles/cmTC_73b96.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_73b96
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_51b3a && [1/2] Building C object CMakeFiles/cmTC_51b3a.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_51b3a
 
 
 File /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -519,8 +519,8 @@ int main(int argc, char** argv)
 Performing C SOURCE FILE Test PTHREAD_SETNAME_NP_ONE_PARAM succeeded with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_63d4e && [1/2] Building C object CMakeFiles/cmTC_63d4e.dir/src.c.o
-[2/2] Linking C executable cmTC_63d4e
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_e138f && [1/2] Building C object CMakeFiles/cmTC_e138f.dir/src.c.o
+[2/2] Linking C executable cmTC_e138f
 
 
 Source file was:
@@ -534,8 +534,8 @@ int main()
 Determining if the getopt exist passed with the following output:
 Change Dir: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/CLion.app/Contents/bin/ninja/mac/ninja cmTC_d7707 && [1/2] Building C object CMakeFiles/cmTC_d7707.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_d7707
+Run Build Command(s):/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja cmTC_5cd2b && [1/2] Building C object CMakeFiles/cmTC_5cd2b.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_5cd2b
 
 
 File /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:

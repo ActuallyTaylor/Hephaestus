@@ -13,6 +13,7 @@
 #include "./AnimationFlipbook.hpp"
 
 #include "../../Olympus/Hephaestus/Sprite/Sprite.hpp"
+#include "../../Olympus/Hephaestus/UI/Image/Image.hpp"
 #include "../../Olympus/Hephaestus/Scene/Scene.hpp"
 #include <glm/glm.hpp>
 #include <glm/ext/matrix_transform.hpp>
@@ -23,6 +24,7 @@
 
 class MainCharacter: public Sprite {
     Scene* scenePointer;
+    Image bagImage = Image("./images/Bag.jpeg", nearest, center, {0,0,0}, pointCenter, {160, 140});
 
     float unitSizeInPixels = 2;
 
@@ -39,6 +41,9 @@ class MainCharacter: public Sprite {
     void stopMovingDown();
     void stopMovingRight();
     void stopMovingLeft();
+
+    bool bagIsOpen = false;
+    void openBag();
 public:
     using Sprite::Sprite;
 

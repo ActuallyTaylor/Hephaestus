@@ -65,6 +65,7 @@ void UIElement::createVirtualBufferObject() {
 }
 
 void UIElement::draw() {
+    if (hidden) { return; }
     shader.use();
     glm::vec3 _position = this->position;
 

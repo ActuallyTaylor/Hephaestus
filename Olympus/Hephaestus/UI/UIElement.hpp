@@ -39,6 +39,7 @@ public:
 
     glm::vec4 tintColor { 0.0, 0.0, 0.0, 1.0 };
 
+    bool hidden = false;
     bool isClicked = false;
 
     Shader shader { "Hold UIManager Shader" };

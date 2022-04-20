@@ -282,8 +282,8 @@ void Scene::setCollisionsEnabled(bool _collision) {
 
 
 void Scene::drawScene() {
-    drawUI();
     drawSprites();
+    drawUI();
 }
 
 void Scene::moveSprites() {

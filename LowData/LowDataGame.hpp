@@ -17,7 +17,7 @@
 #include "Scenes/GameScene.hpp"
 
 struct LowDataGame {
-    Hephaestus engine = Hephaestus("Low Data");
+    Hephaestus engine = Hephaestus("Low Data", 480, 320);
 
     LowDataGame();
 
