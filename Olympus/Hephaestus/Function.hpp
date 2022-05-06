@@ -14,7 +14,7 @@
 #define OLYMPUS_FUNCTION_HPP
 
 typedef std::function<void()> Function;
-typedef std::function<void(std::string spriteID)> CollisionCallback;
+typedef std::function<void(std::string spriteID)> IDCallback;
 
 //template<typename T>
 //

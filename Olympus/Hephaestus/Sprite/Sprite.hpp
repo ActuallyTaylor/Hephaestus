@@ -25,8 +25,7 @@
 #include <glm/gtx/quaternion.hpp>
 #include <vector>
 #include <string>
-
-#include "../HephaestusEnums.hpp"
+#include "../HephaestusUtility.hpp"
 
 class Sprite {
 public:

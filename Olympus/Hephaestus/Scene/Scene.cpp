@@ -62,6 +62,19 @@ void Scene::addSprite(Sprite *sprite) {
     sprites.push_back(sprite);
 }
 
+void Scene::removeSprite(Sprite* sprite) {
+    sprites.erase(std::remove_if(sprites.begin(), sprites.end(), [&sprite](Sprite * i) { return i && (i->id == sprite->id); }));
+}
+
+Sprite* Scene::getSprite(std::string id) {
+    auto it = std::find_if(sprites.begin(), sprites.end(), [id](const Sprite* obj) {return obj->id == id;});
+    return *it;
+}
+
+void Scene::removeCollision(CollisionArea* collisionArea) {
+    collisionAreas.erase(std::remove_if(collisionAreas.begin(), collisionAreas.end(), [&collisionArea](CollisionArea * i) { return i && (i->id == collisionArea->id); }));
+}
+
 void Scene::addText(Text *text) {
     textManager.addText(text);
 }
@@ -207,7 +220,9 @@ void Scene::checkCollisions() {
                     CollisionArea* collision = collisionAreas[y];
 
                     if (collision->overlaps(sprite)) {
-                        collision->executeOnCollide(sprite->id);
+                        if (collision->executeOnCollide) {
+                            collision->executeOnCollide(sprite->id);
+                        }
                     }
                 }
             }

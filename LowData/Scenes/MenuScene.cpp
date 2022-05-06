@@ -9,7 +9,7 @@
 */
 
 #include "MenuScene.hpp"
-#include "../../Olympus/Hephaestus/HephaestusEnums.hpp"
+#include "../../Olympus/Hephaestus/HephaestusUtility.hpp"
 
 MenuScene::MenuScene(Hephaestus* _engine, Function _continueFunction) {
     engine = _engine;

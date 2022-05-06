@@ -63,7 +63,18 @@ void Sprite::createTexture(const std::string& texturePath, SamplingType sampling
         }
         glGenerateMipmap(GL_TEXTURE_2D);
     } else {
-        printf("Failed to load texture: %s", texturePath.c_str());
+        printf("Failed to load texture: %s, using backup texture\n", texturePath.c_str());
+        unsigned char *data = stbi_load("./Hephaestus/null.png", &width, &height, &nrChannels, 0);
+        if (data) {
+            if (nrChannels == 3) {
+                glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+            } else if (nrChannels == 4) {
+                glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
+            }
+            glGenerateMipmap(GL_TEXTURE_2D);
+        } else {
+            printf("Failed to load backup texture");
+        }
     }
     stbi_image_free(data);
 }

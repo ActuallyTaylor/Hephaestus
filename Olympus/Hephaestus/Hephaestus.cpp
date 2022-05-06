@@ -14,6 +14,8 @@
 Hephaestus* self;
 
 Hephaestus::Hephaestus(const std::string& _name) {
+    srand (static_cast <unsigned> (time(nullptr)));
+
     name = _name;
     self = this;
 
@@ -52,6 +54,8 @@ Hephaestus::Hephaestus(const std::string& _name) {
 }
 
 Hephaestus::Hephaestus(std::string name, int width, int height) {
+    srand (static_cast <unsigned> (time(nullptr)));
+
     this->name = name;
     this->width = width;
     this->height = height;
@@ -90,7 +94,6 @@ Hephaestus::Hephaestus(std::string name, int width, int height) {
 
     // Set GLFW key callbacks
     glfwSetWindowSizeCallback(window, windowCallback);
-
 }
 
 

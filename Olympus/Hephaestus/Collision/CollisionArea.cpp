@@ -12,13 +12,16 @@
 
 #include <utility>
 
-CollisionArea::CollisionArea(glm::vec3 position, glm::vec3 dimensions, std::string identifier, CollisionCallback executeOnCollide, CollisionCallback executeOnLeave) {
+CollisionArea::CollisionArea(glm::vec3 position, glm::vec3 dimensions, std::string identifier, IDCallback executeOnCollide, IDCallback executeOnLeave) {
     this->position = position;
     this->dimensions = dimensions;
-    this->identifier = std::move(identifier);
+    this->id = std::move(identifier);
     this->executeOnCollide = std::move(executeOnCollide);
     this->executeOnLeave = std::move(executeOnLeave);
 }
+
+
+CollisionArea::CollisionArea() { }
 
 bool CollisionArea::overlaps(Sprite *sprite) {
     bool collide = (sprite->getX() <= position.x + dimensions.x && sprite->getX() + sprite->getWidth() >= position.y) &&
@@ -31,7 +34,9 @@ bool CollisionArea::overlaps(Sprite *sprite) {
         auto itr = std::find(spritesInsideCollisionArea.begin(), spritesInsideCollisionArea.end(), sprite->id);
         if (itr != spritesInsideCollisionArea.end()) {
             spritesInsideCollisionArea.erase(itr);
-            executeOnLeave(sprite->id);
+            if (executeOnLeave) {
+                executeOnLeave(sprite->id);
+            }
         }
     }
 

@@ -3,7 +3,7 @@ project(LowData)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(LowData main.cpp Scenes/MenuScene.cpp Scenes/MenuScene.hpp LowDataGame.cpp LowDataGame.hpp Scenes/GameScene.cpp Scenes/GameScene.hpp Characters/Merchant.cpp Characters/Merchant.hpp Characters/MainCharacter.cpp Characters/MainCharacter.hpp Characters/AnimationFlipbook.cpp Characters/AnimationFlipbook.hpp)
+add_executable(LowData main.cpp Scenes/MenuScene.cpp Scenes/MenuScene.hpp LowDataGame.cpp LowDataGame.hpp Scenes/GameScene.cpp Scenes/GameScene.hpp Characters/Merchant.cpp Characters/Merchant.hpp Characters/MainCharacter.cpp Characters/MainCharacter.hpp Characters/AnimationFlipbook.cpp Characters/AnimationFlipbook.hpp Items/Item.cpp Items/Item.hpp Items/DroppedItem.cpp Items/DroppedItem.hpp Environment/EncounterSpace.cpp Environment/EncounterSpace.hpp)
 
 add_subdirectory(../Olympus/Hephaestus ./Hephaestus/)
 target_link_libraries(LowData Hephaestus)

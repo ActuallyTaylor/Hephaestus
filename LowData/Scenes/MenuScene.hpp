@@ -15,7 +15,6 @@
 #include "../../Olympus/Hephaestus/Hephaestus.hpp"
 #include "../../Olympus/Hephaestus/Scene/Scene.hpp"
 #include "../../Olympus/Hephaestus/UI/Image/Image.hpp"
-#include "../../Olympus/Hephaestus/HephaestusEnums.hpp"
 #include "../../Olympus/Hephaestus/Sprite/PhysicsSprite/PhysicsSprite.hpp"
 #include "../../Olympus/Hephaestus/Function.hpp"
 

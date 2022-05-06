@@ -10,9 +10,11 @@
 
 #include "GameScene.hpp"
 
+#include <utility>
+
 GameScene::GameScene(Hephaestus* _engine, Function _continueFunction) {
     engine = _engine;
-    continueFunction = _continueFunction;
+    continueFunction = std::move(_continueFunction);
 
     characterCenteringX = engine->windowWidth() / 2 - 16;
     characterCenteringY = engine->windowHeight() / 2 - 16;
@@ -43,10 +45,18 @@ void GameScene::setupScene() {
     scene.addText(&cameraDebugText);
 
     /*
-     * Character Setup Setup
+     * Character Setup
      */
     merchant.setupMerchant(&scene);
+
+    space.setupSprite(&scene);
+
     mainCharacter.setupCharacter(&scene);
+
+    for(DroppedItem &item: droppedItems) {
+        item.setupSprite(&scene);
+        item.spriteOverlapped = [this](auto && PH1, auto && PH2) { droppedItemOverlapped(std::forward<decltype(PH1)>(PH1), std::forward<decltype(PH2)>(PH2)); };
+    }
 }
 
 
@@ -62,17 +72,22 @@ void GameScene::tick() {
 
 }
 
+int rotationValue = 0;
 void GameScene::update() {
     playerDebugText.text = std::string("x: ") + std::to_string(mainCharacter.position.x) + std::string(", y: ") + std::to_string(mainCharacter.position.y);
     cameraDebugText.text = std::string("x: ") + std::to_string(gameCamera.position.x) + std::string(", y: ") + std::to_string(gameCamera.position.y);
 
     gameCamera.position.y = -(mainCharacter.position.y - characterCenteringY);
     gameCamera.position.x = -(mainCharacter.position.x - characterCenteringX);
+
+    for(DroppedItem& droppedItem: droppedItems) {
+        droppedItem.droppedSprite.rotation.y = rotationValue;
+    }
+    rotationValue ++;
 }
 
 void GameScene::render() {
     if (!mainCharacter.isMoving()) {
-//        std::cout << "Is Not Moving" << std::endl;
         mainCharacter.flipbook.updateAnimation("idle_bounce");
     }
 }
@@ -130,4 +145,22 @@ void GameScene::buildWorldFromTextDefinition(const std::string& worldPath) {
     } else {
         std::cerr << "Unable to open file" << std::endl;
     }
+}
+
+void GameScene::droppedItemOverlapped(Item* item, DroppedItem* dItem) {
+    std::cout << "Dropped Item Overlapped: " << dItem->id << std::endl;
+    if (mainCharacter.pickupItem(*item)) {
+        scene.removeSprite(&dItem->droppedSprite);
+        scene.removeCollision(&dItem->itemCollision);
+        dItem->pickedUP = true;
+
+//         Remove based on index instead of this dumb remove_if
+//        int index = indexOf(*dItem, droppedItems);
+//
+//        droppedItems.erase(droppedItems.begin() + index);
+    }
+}
+
+void GameScene::overlappedEncounterSpace(EncounterSpace *encounterSpace) {
+    std::cout << "Overlapped Encounter Space: " << encounterSpace->id << std::endl;
 }

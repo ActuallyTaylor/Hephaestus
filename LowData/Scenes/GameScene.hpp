@@ -13,12 +13,14 @@
 #include <sstream>
 
 #ifndef LOWDATA_GAMESCENE_HPP
-#define LOWDATeA_GAMESCENE_HPP
+#define LOWDATA_GAMESCENE_HPP
 
 #include "../../Olympus/Hephaestus/Hephaestus.hpp"
 #include "../../Olympus/Hephaestus/Scene/Scene.hpp"
 #include "../Characters/Merchant.hpp"
 #include "../Characters/MainCharacter.hpp"
+#include "../Items/DroppedItem.hpp"
+#include "../Environment/EncounterSpace.hpp"
 
 class GameScene {
     /*
@@ -46,12 +48,18 @@ class GameScene {
 
     MainCharacter mainCharacter = { "Main Character",  "./images/Main_Character.png", nearest, { 10, 10, 0}, { 32, 32 }, {0, 0, 0}};
     Merchant merchant = { "Merchant", "./images/Merchant.png", nearest, { 10, 10, 0}, { 32, 32 }, {0, 0, 0}};
+    EncounterSpace space = EncounterSpace(1.0,EncounterSpace::Grass, { 100, 100, 0 }, [this](auto && PH1) { overlappedEncounterSpace(std::forward<decltype(PH1)>(PH1)); });
 
     vector<Sprite> worldSprites { };
+    vector<DroppedItem> droppedItems { };
+    bool isPickingUp = false;
+
     /*
      * Scene Functions
     */
     void buildWorldFromTextDefinition(const std::string& worldPath);
+    void droppedItemOverlapped(Item* item, DroppedItem* dItem);
+    void overlappedEncounterSpace(EncounterSpace* encounterSpace);
 
     /*
      * Game Configuration Variables

@@ -93,8 +93,11 @@ public:
     int height { 720 };
 
     void addSprite(Sprite* sprite);
+    void removeSprite(Sprite* sprite);
+    Sprite* getSprite(std::string id);
 
     void addCollisionArea(CollisionArea* collisionArea);
+    void removeCollision(CollisionArea* collisionArea);
     void setPhysicsEnabled(bool _collision);
     void setCollisionsEnabled(bool _collision);
     int getNumberOfSprites();
