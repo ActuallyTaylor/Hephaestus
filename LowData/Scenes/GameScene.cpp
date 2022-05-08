@@ -163,4 +163,5 @@ void GameScene::droppedItemOverlapped(Item* item, DroppedItem* dItem) {
 
 void GameScene::overlappedEncounterSpace(EncounterSpace *encounterSpace) {
     std::cout << "Overlapped Encounter Space: " << encounterSpace->id << std::endl;
+
 }

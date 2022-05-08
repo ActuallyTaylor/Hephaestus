@@ -8,8 +8,9 @@
     =================
 */
 
-#import <random>
-#import <map>
+#include <climits>
+#include <random>
+#include <map>
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #define HEPHAESTUS_ANY_KEY      314901
