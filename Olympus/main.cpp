@@ -8,12 +8,14 @@
 
 Hephaestus engine = Hephaestus("Hephaestus Engine", 480, 320);
 
-struct PhysicsSim {
+struct HomeScene {
     Scene mainScene = Scene();
     Camera mainCamera = Camera();
     Text fpsTextObject = { "Olympus Launcher", "./Fonts/SFNSRounded.ttf", { 1.0f, 1.0f, 1.0f, 1.0f }, topCenter, {0, -10}, pointTopCenter, 32};
 
-    PhysicsSim() {
+
+
+    HomeScene() {
         mainScene.setPhysicsEnabled(false);
         mainScene.setCollisionsEnabled(false);
 
@@ -53,8 +55,8 @@ struct PhysicsSim {
 };
 
 int main() {
-    PhysicsSim sim = PhysicsSim();
-    engine.openScene(&sim.mainScene);
+    HomeScene homeScene = HomeScene();
+    engine.openScene(&homeScene.mainScene);
     engine.startWindowLoop();
     
     return 0;

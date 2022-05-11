@@ -16,21 +16,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f22769bb-d6a0-46e4-a0f3-ebdc8ac76c3d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../LowData/Items/Item.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../LowData/Items/Item.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../LowData/Resources/images/Bag.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../LowData/Resources/notexture.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LowData/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../LowData/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LowData/Characters/MainCharacter.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../LowData/Characters/MainCharacter.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LowData/Resources/images/Bag.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LowData/Scenes/GameScene.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../LowData/Scenes/GameScene.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LowData/Scenes/GameScene.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../LowData/Scenes/GameScene.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../LowData/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LowData/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../LowData/cmake-build-debug/build.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Shader/Shader.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Shader/Shader.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
@@ -311,6 +297,9 @@
       <workItem from="1649086812811" duration="67000" />
       <workItem from="1650405341265" duration="1502000" />
       <workItem from="1650642839280" duration="9000" />
+      <workItem from="1652182465418" duration="4000" />
+      <workItem from="1652187023234" duration="71000" />
+      <workItem from="1652283877619" duration="1000" />
     </task>
     <servers />
   </component>
