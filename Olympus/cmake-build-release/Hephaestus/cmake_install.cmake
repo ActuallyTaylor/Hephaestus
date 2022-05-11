@@ -1,4 +1,4 @@
-# Install script for directory: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus
+# Install script for directory: /Users/zacharylineman/Developer/GitHub/Hephaestus/Hephaestus
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

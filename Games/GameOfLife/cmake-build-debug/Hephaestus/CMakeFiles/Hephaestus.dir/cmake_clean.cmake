@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/Hephaestus.dir/AudioEngine/AudioEngine.cpp.o"
+  "CMakeFiles/Hephaestus.dir/AudioEngine/AudioEngine.cpp.o.d"
+  "CMakeFiles/Hephaestus.dir/AudioEngine/AudioSnippet.cpp.o"
+  "CMakeFiles/Hephaestus.dir/AudioEngine/AudioSnippet.cpp.o.d"
+  "CMakeFiles/Hephaestus.dir/Camera/Camera.cpp.o"
+  "CMakeFiles/Hephaestus.dir/Camera/Camera.cpp.o.d"
+  "CMakeFiles/Hephaestus.dir/Collision/CollisionArea.cpp.o"
+  "CMakeFiles/Hephaestus.dir/Collision/CollisionArea.cpp.o.d"
+  "CMakeFiles/Hephaestus.dir/Collision/PhysicsCollision.cpp.o"
+  "CMakeFiles/Hephaestus.dir/Collision/PhysicsCollision.cpp.o.d"
+  "CMakeFiles/Hephaestus.dir/Controls/ControlManager.cpp.o"
+  "CMakeFiles/Hephaestus.dir/Controls/ControlManager.cpp.o.d"
+  "CMakeFiles/Hephaestus.dir/Controls/Keybind/Keybind.cpp.o"
+  "CMakeFiles/Hephaestus.dir/Controls/Keybind/Keybind.cpp.o.d"
+  "CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o"
+  "CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o.d"
+  "CMakeFiles/Hephaestus.dir/Scene/Scene.cpp.o"
+  "CMakeFiles/Hephaestus.dir/Scene/Scene.cpp.o.d"
+  "CMakeFiles/Hephaestus.dir/Shader/Shader.cpp.o"
+  "CMakeFiles/Hephaestus.dir/Shader/Shader.cpp.o.d"
+  "CMakeFiles/Hephaestus.dir/Sprite/PhysicsSprite/PhysicsSprite.cpp.o"
+  "CMakeFiles/Hephaestus.dir/Sprite/PhysicsSprite/PhysicsSprite.cpp.o.d"
+  "CMakeFiles/Hephaestus.dir/Sprite/Sprite.cpp.o"
+  "CMakeFiles/Hephaestus.dir/Sprite/Sprite.cpp.o.d"
+  "CMakeFiles/Hephaestus.dir/Text/Text.cpp.o"
+  "CMakeFiles/Hephaestus.dir/Text/Text.cpp.o.d"
+  "CMakeFiles/Hephaestus.dir/Text/TextManager.cpp.o"
+  "CMakeFiles/Hephaestus.dir/Text/TextManager.cpp.o.d"
+  "CMakeFiles/Hephaestus.dir/UI/Button/Button.cpp.o"
+  "CMakeFiles/Hephaestus.dir/UI/Button/Button.cpp.o.d"
+  "CMakeFiles/Hephaestus.dir/UI/Image/Image.cpp.o"
+  "CMakeFiles/Hephaestus.dir/UI/Image/Image.cpp.o.d"
+  "CMakeFiles/Hephaestus.dir/UI/UIElement.cpp.o"
+  "CMakeFiles/Hephaestus.dir/UI/UIElement.cpp.o.d"
+  "libHephaestus.a"
+  "libHephaestus.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/Hephaestus.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

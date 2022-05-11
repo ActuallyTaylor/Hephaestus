@@ -1,10 +1,7 @@
 #include <iostream>
 #include <thread>
-#include "Hephaestus/Hephaestus.hpp"
-#include "Hephaestus/Scene/Scene.hpp"
-#include "Hephaestus/Sprite/PhysicsSprite/PhysicsSprite.hpp"
-#include "Hephaestus/UI/Button/Button.hpp"
-#include "Hephaestus/AudioEngine/AudioEngine.hpp"
+#include "../Hephaestus/Hephaestus.hpp"
+#include "../Hephaestus/Scene/Scene.hpp"
 
 Hephaestus engine = Hephaestus("Hephaestus Engine", 480, 320);
 
@@ -12,8 +9,6 @@ struct HomeScene {
     Scene mainScene = Scene();
     Camera mainCamera = Camera();
     Text fpsTextObject = { "Olympus Launcher", "./Fonts/SFNSRounded.ttf", { 1.0f, 1.0f, 1.0f, 1.0f }, topCenter, {0, -10}, pointTopCenter, 32};
-
-
 
     HomeScene() {
         mainScene.setPhysicsEnabled(false);
