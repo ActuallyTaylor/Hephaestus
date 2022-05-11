@@ -424,7 +424,7 @@ Hephaestus_BINARY_DIR:STATIC=/Users/zacharylineman/Developer/GitHub/Hephaestus/O
 Hephaestus_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-Hephaestus_SOURCE_DIR:STATIC=/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus
+Hephaestus_SOURCE_DIR:STATIC=/Users/zacharylineman/Developer/GitHub/Hephaestus/Hephaestus
 
 //The JACK include directory
 JACK_INCLUDE_DIR:PATH=JACK_INCLUDE_DIR-NOTFOUND
@@ -466,7 +466,7 @@ OpenAL_IS_TOP_LEVEL:STATIC=OFF
 OpenAL_LIB_DEPENDS:STATIC=general;common;general;-pthread;general;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/System/Library/Frameworks/AudioToolbox.framework;general;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/System/Library/Frameworks/CoreAudio.framework;general;/System/Library/Frameworks/AudioUnit.framework;general;/System/Library/Frameworks/ApplicationServices.framework;general;dl;general;m;
 
 //Value Computed by CMake
-OpenAL_SOURCE_DIR:STATIC=/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/Library/openal-soft
+OpenAL_SOURCE_DIR:STATIC=/Users/zacharylineman/Developer/GitHub/Hephaestus/Hephaestus/Library/openal-soft
 
 //The PortAudio include directory
 PORTAUDIO_INCLUDE_DIR:PATH=PORTAUDIO_INCLUDE_DIR-NOTFOUND
@@ -673,7 +673,7 @@ CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding Freetype
-FIND_PACKAGE_MESSAGE_DETAILS_Freetype:INTERNAL=[/usr/local/lib/libfreetype.dylib][/Library/Frameworks/Mono.framework/Headers;/usr/local/include/freetype2][v2.11.1()]
+FIND_PACKAGE_MESSAGE_DETAILS_Freetype:INTERNAL=[/usr/local/lib/libfreetype.dylib][/Library/Frameworks/Mono.framework/Headers;/usr/local/include/freetype2][v2.12.0()]
 //Details about finding GLEW
 FIND_PACKAGE_MESSAGE_DETAILS_GLEW:INTERNAL=[/usr/local/lib/cmake/glew/glew-config.cmake][v()]
 //Details about finding Git

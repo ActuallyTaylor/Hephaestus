@@ -1,0 +1,116 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"/Users/zacharylineman/Developer/GitHub/Hephaestus/Hephaestus/Library/openal-soft/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1373,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1382,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1386,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1388,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"Hephaestus/Library/openal-soft/libopenal.1.21.1.dylib",
+				"Hephaestus/Library/openal-soft/libopenal.1.dylib"
+			],
+			"targetId" : "OpenAL::@310c50f5be078a9748a4",
+			"targetIndex" : 2,
+			"targetInstallNamelink" : "skip",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"Hephaestus/Library/openal-soft/libopenal.dylib"
+			],
+			"targetId" : "OpenAL::@310c50f5be078a9748a4",
+			"targetIndex" : 2,
+			"targetInstallNamelink" : "only",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/OpenAL",
+			"exportName" : "OpenAL",
+			"exportTargets" : 
+			[
+				{
+					"id" : "OpenAL::@310c50f5be078a9748a4",
+					"index" : 2
+				}
+			],
+			"paths" : 
+			[
+				"Hephaestus/Library/openal-soft/CMakeFiles/Export/lib/cmake/OpenAL/OpenALConfig.cmake"
+			],
+			"type" : "export"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"/Users/zacharylineman/Developer/GitHub/Hephaestus/Hephaestus/Library/openal-soft/include/AL"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Unspecified",
+			"destination" : "lib/pkgconfig",
+			"paths" : 
+			[
+				"cmake-build-debug/Hephaestus/Library/openal-soft/openal.pc"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "Hephaestus/Library/openal-soft",
+		"source" : "/Users/zacharylineman/Developer/GitHub/Hephaestus/Hephaestus/Library/openal-soft"
+	}
+}
