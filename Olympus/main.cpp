@@ -1,11 +1,51 @@
 #include <iostream>
 #include <thread>
+#include "../Hephaestus/Library/json.hpp"
 #include "../Hephaestus/Hephaestus.hpp"
 #include "../Hephaestus/Scene/Scene.hpp"
 
 Hephaestus engine = Hephaestus("Hephaestus Engine", 480, 320);
 
+using namespace std;
+using json = nlohmann::json;
+
+struct GameLoader {
+    struct Game {
+        string name;
+        string executablePath;
+        string resourcePath;
+        string description;
+        string creator;
+
+        Game(string name, string executablePath, string resourcePath, string description, string creator) {
+            this->name = name;
+            this->executablePath= executablePath;
+            this->resourcePath = resourcePath;
+            this->description = description;
+            this->creator = creator;
+        }
+    };
+
+    json j;
+
+    GameLoader() {
+        string test;
+        ifstream i("./directory.json");
+        i >> test;
+        cout << test << endl;
+
+        i >> j;
+
+        // range-based for
+        for (auto& element : j["Games"]) {
+            std::cout << element << '\n';
+        }
+    }
+};
+
 struct HomeScene {
+    GameLoader loader = GameLoader();
+
     Scene mainScene = Scene();
     Camera mainCamera = Camera();
     Text fpsTextObject = { "Olympus Launcher", "./Fonts/SFNSRounded.ttf", { 1.0f, 1.0f, 1.0f, 1.0f }, topCenter, {0, -10}, pointTopCenter, 32};

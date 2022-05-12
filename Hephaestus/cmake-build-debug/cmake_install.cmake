@@ -1,4 +1,4 @@
-# Install script for directory: /Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus
+# Install script for directory: /Users/zacharylineman/Developer/GitHub/Hephaestus/Hephaestus
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/cmake-build-debug/Library/openal-soft/cmake_install.cmake")
+  include("/Users/zacharylineman/Developer/GitHub/Hephaestus/Hephaestus/cmake-build-debug/Library/openal-soft/cmake_install.cmake")
 
 endif()
 
@@ -51,5 +51,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Hephaestus/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/zacharylineman/Developer/GitHub/Hephaestus/Hephaestus/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

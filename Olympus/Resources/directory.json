@@ -1,0 +1,11 @@
+{
+  "Games": [
+    {
+      "name": "Low Data",
+      "executablePath": "../Games/LowData/Build/LowData",
+      "resources": "./Resources/Games/LowData/",
+      "description": "Fight through procedurally generated dungeons on your way to creating the best team of monsters ever.",
+      "creator": "Zachary Lineman"
+    }
+  ]
+}
