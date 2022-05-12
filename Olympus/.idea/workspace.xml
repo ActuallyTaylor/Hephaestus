@@ -16,95 +16,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f22769bb-d6a0-46e4-a0f3-ebdc8ac76c3d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Hephaestus/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Hephaestus/.idea/Hephaestus.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Hephaestus/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Hephaestus/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Hephaestus/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Hephaestus/Library/json.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Games/LowData/Main_Character.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Games/LowData/Title_Artwork.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/directory.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hephaestus/cmake-build-debug/.cmake/api/v1/reply/cache-v2-f20ec971d6cdaaa91072.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hephaestus/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-ad6c6e07e02b047146a3.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hephaestus/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-4cdef56a59c53b324940.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hephaestus/cmake-build-debug/.cmake/api/v1/reply/index-2022-03-17T16-22-15-0747.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hephaestus/cmake-build-debug/.cmake/api/v1/reply/target-Hephaestus-Debug-aa66d3adeb30f224eabd.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hephaestus/cmake-build-debug/.cmake/api/v1/reply/target-OpenAL-Debug-2d212fece5de731edab2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hephaestus/cmake-build-debug/.cmake/api/v1/reply/target-common-Debug-a0ccd6a1e6869fd7032a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hephaestus/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hephaestus/cmake-build-debug/CMakeFiles/3.21.1/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hephaestus/cmake-build-debug/CMakeFiles/3.21.1/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hephaestus/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hephaestus/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hephaestus/cmake-build-debug/CMakeFiles/3.21.1/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hephaestus/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hephaestus/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdC/CMakeCCompilerId.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hephaestus/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hephaestus/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdCXX/CMakeCXXCompilerId.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hephaestus/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hephaestus/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hephaestus/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hephaestus/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hephaestus/cmake-build-debug/Library/openal-soft/CMakeFiles/Export/lib/cmake/OpenAL/OpenALConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/cmake-build-debug/Library/openal-soft/CMakeFiles/Export/lib/cmake/OpenAL/OpenALConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hephaestus/cmake-build-debug/Library/openal-soft/OpenALConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/cmake-build-debug/Library/openal-soft/OpenALConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hephaestus/cmake-build-debug/Library/openal-soft/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/cmake-build-debug/Library/openal-soft/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hephaestus/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/cmake-build-debug/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hephaestus/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/fonts/SFNSRounded.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeError.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/CXX.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Shader/Shader.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/cmake_clean_target.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/Hephaestus.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/libHephaestus.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Images/circle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Images/circle_white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Images/missing.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Images/wall.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Images/white.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Shaders/Common/shader.frag" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Shaders/Common/shader.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Games/LowData/Main_Character.png" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Games/LowData/banner.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Games/LowData/Title_Artwork.png" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Games/LowData/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/directory.json" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/directory.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeError.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeError.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/clion-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/Hephaestus/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/Hephaestus/CMakeFiles/Hephaestus.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/Hephaestus/CMakeFiles/Hephaestus.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/Hephaestus/CMakeFiles/Hephaestus.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/Hephaestus/CMakeFiles/Hephaestus.dir/cmake_clean_target.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/Hephaestus/CMakeFiles/Hephaestus.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/Hephaestus/CMakeFiles/Hephaestus.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/Hephaestus/CMakeFiles/Hephaestus.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/Hephaestus/CMakeFiles/Hephaestus.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/Hephaestus/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/Hephaestus/Hephaestus.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/Hephaestus/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/Hephaestus/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/Olympus.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/clion-log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -393,7 +315,7 @@
       <workItem from="1652283877619" duration="264000" />
       <workItem from="1652284278867" duration="17000" />
       <workItem from="1652284344336" duration="23000" />
-      <workItem from="1652369985400" duration="1797000" />
+      <workItem from="1652369985400" duration="2657000" />
     </task>
     <servers />
   </component>

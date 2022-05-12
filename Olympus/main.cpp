@@ -1,8 +1,8 @@
 #include <iostream>
 #include <thread>
+#include <utility>
 #include "../Hephaestus/Library/json.hpp"
 #include "../Hephaestus/Hephaestus.hpp"
-#include "../Hephaestus/Scene/Scene.hpp"
 
 Hephaestus engine = Hephaestus("Hephaestus Engine", 480, 320);
 
@@ -18,28 +18,38 @@ struct GameLoader {
         string creator;
 
         Game(string name, string executablePath, string resourcePath, string description, string creator) {
-            this->name = name;
-            this->executablePath= executablePath;
-            this->resourcePath = resourcePath;
-            this->description = description;
-            this->creator = creator;
+            this->name = std::move(name);
+            this->executablePath= std::move(executablePath);
+            this->resourcePath = std::move(resourcePath);
+            this->description = std::move(description);
+            this->creator = std::move(creator);
         }
     };
 
     json j;
+    vector<Game> games { };
 
     GameLoader() {
-        string test;
-        ifstream i("./directory.json");
-        i >> test;
-        cout << test << endl;
+        reloadGames();
+    }
 
+    void reloadGames() {
+        ifstream i("./directory.json");
         i >> j;
 
+        games.clear();
         // range-based for
         for (auto& element : j["Games"]) {
-            std::cout << element << '\n';
+            games.emplace_back(element["name"], element["executablePath"], element["resourcePath"], element["description"], element["creator"]);
         }
+    }
+
+    string getGameIcon(Game& game) {
+        return game.resourcePath + "icon.png";
+    }
+
+    string getGameBanner(Game& game) {
+        return game.resourcePath + "banner.png";
     }
 };
 
@@ -48,13 +58,13 @@ struct HomeScene {
 
     Scene mainScene = Scene();
     Camera mainCamera = Camera();
-    Text fpsTextObject = { "Olympus Launcher", "./Fonts/SFNSRounded.ttf", { 1.0f, 1.0f, 1.0f, 1.0f }, topCenter, {0, -10}, pointTopCenter, 32};
+    Text fpsTextObject = { "Olympus Launcher", "./fonts/SFNSRounded.ttf", { 1.0f, 1.0f, 1.0f, 1.0f }, topCenter, {0, -10}, pointTopCenter, 32};
 
     HomeScene() {
         mainScene.setPhysicsEnabled(false);
         mainScene.setCollisionsEnabled(false);
 
-        mainScene.loadFont("./Fonts/SFNSRounded.ttf", 32);
+        mainScene.loadFont("./fonts/SFNSRounded.ttf", 32);
 
         mainScene.addText(&fpsTextObject);
         mainScene.setInit([this] { init(); });
@@ -86,6 +96,9 @@ struct HomeScene {
     }
 
     void render() {
+        for(GameLoader::Game& game: loader.games) {
+            cout << game.name << endl;
+        }
     }
 };
 
