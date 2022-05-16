@@ -46,10 +46,10 @@ bool Scene::shouldDrawSprite(Sprite* sprite) {
 }
 
 void Scene::drawUI() {
-    textManager.draw();
     for(UIElement *element: uiElements) {
         element->draw();
     }
+    textManager.draw();
 }
 
 void Scene::addSprite(Sprite *sprite) {

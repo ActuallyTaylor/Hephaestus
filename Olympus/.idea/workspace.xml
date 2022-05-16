@@ -16,14 +16,152 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f22769bb-d6a0-46e4-a0f3-ebdc8ac76c3d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Resources/fonts/SFNSRounded.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Audio/mono_bounce.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Audio/pop.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/CMakeFiles/GameOfLife.dir/main.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/CMakeFiles/GameOfLife.dir/main.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/CMakeFiles/GameOfLife.dir/mainLevelScene.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/CMakeFiles/GameOfLife.dir/mainLevelScene.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Fonts/arial.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/GameOfLife" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/CMakeFiles/Hephaestus.dir/AudioEngine/AudioEngine.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/CMakeFiles/Hephaestus.dir/AudioEngine/AudioEngine.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/CMakeFiles/Hephaestus.dir/AudioEngine/AudioSnippet.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/CMakeFiles/Hephaestus.dir/AudioEngine/AudioSnippet.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/CMakeFiles/Hephaestus.dir/Camera/Camera.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/CMakeFiles/Hephaestus.dir/Camera/Camera.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/CMakeFiles/Hephaestus.dir/Collision/CollisionArea.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/CMakeFiles/Hephaestus.dir/Collision/CollisionArea.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/CMakeFiles/Hephaestus.dir/Collision/PhysicsCollision.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/CMakeFiles/Hephaestus.dir/Collision/PhysicsCollision.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/CMakeFiles/Hephaestus.dir/Controls/ControlManager.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/CMakeFiles/Hephaestus.dir/Controls/ControlManager.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/CMakeFiles/Hephaestus.dir/Controls/Keybind/Keybind.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/CMakeFiles/Hephaestus.dir/Controls/Keybind/Keybind.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/CMakeFiles/Hephaestus.dir/Scene/Scene.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/CMakeFiles/Hephaestus.dir/Scene/Scene.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/CMakeFiles/Hephaestus.dir/Shader/Shader.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/CMakeFiles/Hephaestus.dir/Shader/Shader.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/CMakeFiles/Hephaestus.dir/Sprite/PhysicsSprite/PhysicsSprite.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/CMakeFiles/Hephaestus.dir/Sprite/PhysicsSprite/PhysicsSprite.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/CMakeFiles/Hephaestus.dir/Sprite/Sprite.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/CMakeFiles/Hephaestus.dir/Sprite/Sprite.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/CMakeFiles/Hephaestus.dir/Text/Text.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/CMakeFiles/Hephaestus.dir/Text/Text.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/CMakeFiles/Hephaestus.dir/Text/TextManager.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/CMakeFiles/Hephaestus.dir/Text/TextManager.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/CMakeFiles/Hephaestus.dir/UI/Button/Button.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/CMakeFiles/Hephaestus.dir/UI/Button/Button.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/CMakeFiles/Hephaestus.dir/UI/Image/Image.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/CMakeFiles/Hephaestus.dir/UI/Image/Image.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/CMakeFiles/Hephaestus.dir/UI/UIElement.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/CMakeFiles/Hephaestus.dir/UI/UIElement.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/backends/base.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/backends/base.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/backends/coreaudio.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/backends/coreaudio.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/backends/loopback.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/backends/loopback.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/backends/null.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/backends/null.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/backends/wave.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/backends/wave.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/effects/vmorpher.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/effects/vmorpher.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/helpers.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/helpers.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/hrtf.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/hrtf.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/panning.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/panning.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/uiddefs.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/uiddefs.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/voice.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/alc/voice.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/ambdec.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/ambdec.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/bs2b.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/bs2b.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/bsinc_tables.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/bsinc_tables.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/cpu_caps.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/cpu_caps.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/devformat.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/devformat.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/except.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/except.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/filters/biquad.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/filters/biquad.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/filters/nfc.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/filters/nfc.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/filters/splitter.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/filters/splitter.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/fmt_traits.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/fmt_traits.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/fpu_ctrl.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/fpu_ctrl.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/logging.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/logging.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/mastering.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/mastering.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/mixer/mixer_c.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/mixer/mixer_c.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/mixer/mixer_sse.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/mixer/mixer_sse.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/mixer/mixer_sse2.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/mixer/mixer_sse2.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/mixer/mixer_sse3.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/mixer/mixer_sse3.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/mixer/mixer_sse41.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/mixer/mixer_sse41.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/uhjfilter.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/core/uhjfilter.cpp.o.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/libopenal.1.21.1.dylib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/libopenal.1.dylib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Library/openal-soft/libopenal.dylib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Shaders/Font.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Shaders/Font.vert" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Shaders/shader.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/Shaders/shader.vert" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/blank.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/libHephaestus.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Hephaestus/null.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Images/Piece.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Images/Piece2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Images/Smiley.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Images/StartButton.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Images/StopButton.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Images/characterImage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Images/circle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Images/missing.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Images/wall.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Games/GameOfLife/Build/Images/white.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Games/GameOfLife/Banner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Games/GameOfLife/Icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Games/PhysicsDemo/Banner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Games/PhysicsDemo/Icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Games/UI/Background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Games/UI/Border.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Games/GameOfLife/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-67d00efe0e0ba9d3d82e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Games/GameOfLife/cmake-build-debug/.cmake/api/v1/reply/index-2022-05-11T16-00-16-0081.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Games/GameOfLife/cmake-build-debug/CMakeFiles/GameOfLife.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Games/GameOfLife/cmake-build-debug/CMakeFiles/GameOfLife.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../Games/GameOfLife/cmake-build-debug/CMakeFiles/GameOfLife.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Games/GameOfLife/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Games/GameOfLife/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Games/GameOfLife/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Games/GameOfLife/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Games/GameOfLife/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Games/GameOfLife/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../Games/GameOfLife/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Games/GameOfLife/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Games/GameOfLife/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../Games/GameOfLife/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/OpenAL.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Games/GameOfLife/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/common.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Games/GameOfLife/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/common.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../Games/GameOfLife/cmake-build-debug/Hephaestus/Library/openal-soft/CMakeFiles/common.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/UI/UIElement.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/UI/UIElement.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/UI/UIElement.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/UI/UIElement.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Games/LowData/Main_Character.png" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Games/LowData/banner.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Games/LowData/Title_Artwork.png" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Games/LowData/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Games/LowData/banner.png" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Games/LowData/banner.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Games/LowData/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Games/LowData/icon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/directory.json" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/directory.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeError.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeError.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Hephaestus/CMakeFiles/Hephaestus.dir/Hephaestus.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/clion-log.txt" afterDir="false" />
@@ -75,17 +213,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;cmake.loaded.for.project&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "cmake.loaded.for.project": "true",
+    "structure.view.defaults.are.configured": "true"
   }
-}</component>
+}]]></component>
   <component name="ReaderModeSettings">
     <option name="enabled" value="false" />
   </component>
@@ -94,11 +233,11 @@
       <recent name="$PROJECT_DIR$/cmake-build-debug" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cmake-build-debug/UI" />
+      <recent name="$PROJECT_DIR$/Resources/Games/UI" />
+      <recent name="$PROJECT_DIR$/Resources" />
       <recent name="$PROJECT_DIR$/Resources/Audio" />
       <recent name="$PROJECT_DIR$/Hephaestus/Library/AL" />
-      <recent name="$PROJECT_DIR$/Hephaestus/Library/freealut" />
-      <recent name="$PROJECT_DIR$/Hephaestus/Library" />
-      <recent name="$PROJECT_DIR$/Hephaestus/Library/irrKlang/lib" />
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.Olympus">
@@ -315,7 +454,13 @@
       <workItem from="1652283877619" duration="264000" />
       <workItem from="1652284278867" duration="17000" />
       <workItem from="1652284344336" duration="23000" />
-      <workItem from="1652369985400" duration="2657000" />
+      <workItem from="1652369985400" duration="2736000" />
+      <workItem from="1652414904693" duration="608000" />
+      <workItem from="1652657478827" duration="1024000" />
+      <workItem from="1652658560129" duration="1160000" />
+      <workItem from="1652659728729" duration="3026000" />
+      <workItem from="1652663176910" duration="3021000" />
+      <workItem from="1652666290974" duration="2614000" />
     </task>
     <servers />
   </component>

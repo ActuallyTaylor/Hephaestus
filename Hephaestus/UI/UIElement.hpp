@@ -26,6 +26,7 @@
 class UIElement {
 public:
     glm::vec3 position { 0.0, 0.0, 0.0 };
+    glm::vec3 absolutePositionOffset { 0.0, 0.0, 0.0 };
     glm::vec3 relativePositionOffset { 0.0, 0.0, 0.0 };
     PositioningType positionType = absolute;
 
@@ -70,6 +71,7 @@ protected:
     AnchorPoint anchorPoint { pointBottomLeft };
     glm::vec3 anchorPositionBeforeOffset { 0.0, 0.0, 0.0 };
     void updateAnchorPosition();
+    void updateAnchorPointPosition();
 };
 
 

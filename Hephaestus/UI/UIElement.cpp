@@ -17,7 +17,8 @@ UIElement::UIElement(glm::vec3 _position, glm::vec2 _dimensions, glm::vec3 _rota
     dimensions = _dimensions;
     rotation = _rotation;
 
-    updateAnchorPosition();
+        updateAnchorPosition();
+        updateAnchorPointPosition();
 }
 
 UIElement::UIElement(ScreenAnchor _anchor, glm::vec3 _anchorOffset, AnchorPoint _anchorPoint, glm::vec2 _dimensions, glm::vec3 _rotation) {
@@ -28,7 +29,8 @@ UIElement::UIElement(ScreenAnchor _anchor, glm::vec3 _anchorOffset, AnchorPoint 
     dimensions = _dimensions;
     rotation = _rotation;
 
-    updateAnchorPosition();
+        updateAnchorPosition();
+        updateAnchorPointPosition();
 }
 
 
@@ -67,7 +69,7 @@ void UIElement::createVirtualBufferObject() {
 void UIElement::draw() {
     if (hidden) { return; }
     shader.use();
-    glm::vec3 _position = this->position;
+    glm::vec3 _position = anchorPositionBeforeOffset + absolutePositionOffset;
 
     if(positionType == relative) {
         // Get the calculated relative position and add the offset specific by the user.
@@ -144,7 +146,8 @@ void UIElement::updateScreenDimensions(int width, int height) {
     screenSize = glm::vec2(width, height);
     projection = glm::ortho(0.0f, screenSize.x, 0.0f, screenSize.y, -1000.0f, 1000.0f);
     createVirtualBufferObject();
-    updateAnchorPosition();
+        updateAnchorPosition();
+        updateAnchorPointPosition();
 }
 
 void UIElement::primaryFunction() {}
@@ -166,11 +169,12 @@ void UIElement::addShader(Shader _shader) {
 }
 
 void UIElement::setAnchorPoint(AnchorPoint anchorPoint) {
-    if (this->positionType == absolute) {
-        std::cout << "Warning: Make sure to set positionType to relative for anchor position to be used";
-    }
+//    if (this->positionType == absolute) {
+//        std::cout << "Warning: Make sure to set positionType to relative for anchor position to be used";
+//    }
     this->anchorPoint = anchorPoint;
     updateAnchorPosition();
+    updateAnchorPointPosition();
 }
 
 void UIElement::setAnchorPosition(ScreenAnchor anchorPosition) {
@@ -178,40 +182,47 @@ void UIElement::setAnchorPosition(ScreenAnchor anchorPosition) {
         std::cout << "Warning: Make sure to set positionType to relative for anchor position to be used";
     }
     this->anchorPosition = anchorPosition;
-    updateAnchorPosition();
+        updateAnchorPosition();
+        updateAnchorPointPosition();
 }
 
 void UIElement::updateAnchorPosition() {
-    switch(this->anchorPosition) {
-        case topLeft:
-            anchorPositionBeforeOffset = { 0, screenSize.y, 0};
-            break;
-        case topCenter:
-            anchorPositionBeforeOffset = { screenSize.x / 2, screenSize.y, 0};
-            break;
-        case topRight:
-            anchorPositionBeforeOffset = { screenSize.x, screenSize.y / 2, 0};
-            break;
-        case centerLeft:
-            anchorPositionBeforeOffset = { 0, screenSize.y / 2, 0};
-            break;
-        case center:
-            anchorPositionBeforeOffset = { screenSize.x / 2, screenSize.y / 2, 0};
-            break;
-        case centerRight:
-            anchorPositionBeforeOffset = { screenSize.x, screenSize.y / 2, 0};
-            break;
-        case bottomLeft:
-            anchorPositionBeforeOffset = { 0, 0, 0};
-            break;
-        case bottomCenter:
-            anchorPositionBeforeOffset = { screenSize.x / 2, 0, 0};
-            break;
-        case bottomRight:
-            anchorPositionBeforeOffset = { screenSize.x, 0, 0};
-            break;
+    if(positionType == relative) {
+        switch(this->anchorPosition) {
+            case topLeft:
+                anchorPositionBeforeOffset = { 0, screenSize.y, 0};
+                break;
+            case topCenter:
+                anchorPositionBeforeOffset = { screenSize.x / 2, screenSize.y, 0};
+                break;
+            case topRight:
+                anchorPositionBeforeOffset = { screenSize.x, screenSize.y / 2, 0};
+                break;
+            case centerLeft:
+                anchorPositionBeforeOffset = { 0, screenSize.y / 2, 0};
+                break;
+            case center:
+                anchorPositionBeforeOffset = { screenSize.x / 2, screenSize.y / 2, 0};
+                break;
+            case centerRight:
+                anchorPositionBeforeOffset = { screenSize.x, screenSize.y / 2, 0};
+                break;
+            case bottomLeft:
+                anchorPositionBeforeOffset = { 0, 0, 0};
+                break;
+            case bottomCenter:
+                anchorPositionBeforeOffset = { screenSize.x / 2, 0, 0};
+                break;
+            case bottomRight:
+                anchorPositionBeforeOffset = { screenSize.x, 0, 0};
+                break;
+        }
+    } else if (positionType == absolute) {
+        anchorPositionBeforeOffset = position;
     }
+}
 
+void UIElement::updateAnchorPointPosition() {
     switch(this->anchorPoint) {
         case pointTopLeft:
             anchorPositionBeforeOffset = { anchorPositionBeforeOffset.x, anchorPositionBeforeOffset.y  - dimensions.y, anchorPositionBeforeOffset.z };

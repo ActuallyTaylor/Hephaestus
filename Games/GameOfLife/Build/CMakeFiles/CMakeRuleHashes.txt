@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+f27c3d4c83cad1c46dd42adf159d3df6 Hephaestus/Library/openal-soft/hrtf_default.h
