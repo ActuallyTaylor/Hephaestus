@@ -125,6 +125,10 @@ void Scene::setRender(Function function1) {
     render = function1;
 }
 
+void Scene::setScreenSizeChanged(Function function1) {
+    screenSizeChanged = function1;
+}
+
 void Scene::addKeybind(int inKeyCode, int inAction, Function inExecutionFunction, bool executesOnHold) {
     Keybind keybind = Keybind{inKeyCode, inAction, inExecutionFunction, executesOnHold};
     controlManager.addKeybind(keybind);

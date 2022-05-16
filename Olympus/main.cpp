@@ -60,7 +60,8 @@ struct HomeScene {
     Camera mainCamera = Camera();
     Text fpsTextObject = { "Olympus Launcher", "./fonts/SFNSRounded.ttf", { 1.0f, 1.0f, 1.0f, 1.0f }, topCenter, {0, -10}, pointTopCenter, 32};
     Image borderImage = Image("./UI/Border.png", SamplingType::linear, { 0, engine.windowHeight() / 2, 0}, { 0, 0});
-    Image backgroundImage = Image("./UI/Background.png", SamplingType::linear, { engine.windowHeight(), engine.windowHeight(), 0}, { 0, 0});
+    Image backgroundImage = Image("./UI/Background.png", SamplingType::linear, center, { 0, 0, -1 }, pointCenter, {engine.windowWidth(), engine.windowHeight()});
+
 
     int imageWidth = 1920/7;
     int imageHeight = 1080/7;
@@ -72,7 +73,7 @@ struct HomeScene {
         mainScene.setCollisionsEnabled(false);
 
         mainScene.loadFont("./fonts/SFNSRounded.ttf", 32);
-        backgroundImage = Image("./UI/Background.png", SamplingType::linear, center, { 0, 0, -1 }, pointCenter, {engine.windowWidth(), engine.windowHeight(),});
+        backgroundImage = Image("./UI/Background.png", SamplingType::linear, center, { 0, 0, -1 }, pointCenter, {engine.windowWidth(), engine.windowHeight()});
         mainScene.addUIElement(&backgroundImage);
 
         borderImage = Image("./UI/Border.png", SamplingType::linear, center, { 0, 0, 0 }, pointCenter, {imageWidth, imageHeight});
@@ -84,6 +85,7 @@ struct HomeScene {
         mainScene.setTick([this] { tick(); });
         mainScene.setUpdate([this] { update(); });
         mainScene.setRender([this] { render(); });
+        mainScene.setScreenSizeChanged([this] { sizeChanged(); });
 
         mainScene.addKeybind(GLFW_KEY_RIGHT, GLFW_PRESS, [this] { right(); }, false);
         mainScene.addKeybind(GLFW_KEY_LEFT, GLFW_PRESS, [this] { left(); }, false);
@@ -160,6 +162,11 @@ struct HomeScene {
     void enter() {
         string executionPath = "cd " + loader.games[selectedIndex].executablePath + " && ./" +  loader.games[selectedIndex].executableName;
         system(executionPath.c_str());
+    }
+
+    void sizeChanged() {
+        backgroundImage.dimensions = {engine.windowWidth(), engine.windowHeight()};
+
     }
 };
 

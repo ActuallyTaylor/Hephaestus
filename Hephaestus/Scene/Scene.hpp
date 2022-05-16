@@ -121,7 +121,7 @@ public:
      * Set Scene Callback Functions
      *  - You do not need to set all of these. They are just there if you need them.
     */
-    Function init{}, destroy{}, tick{}, update{}, render{};
+    Function init{}, destroy{}, tick{}, update{}, render{}, screenSizeChanged{};
 
     /// Sets the initialization callback function
     /// \param function1 The void function pointer that will be called when init is called.
@@ -142,6 +142,10 @@ public:
     /// Sets the render callback function
     /// \param function1 The void function pointer that will be called when render is called.
     void setRender(Function function1);
+
+    /// Sets the render callback function
+    /// \param function1 The void function pointer that will be called when render is called.
+    void setScreenSizeChanged(Function function1);
 
     void setupScene(GLFWwindow *parent);
 

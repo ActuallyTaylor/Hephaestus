@@ -206,6 +206,9 @@ void Hephaestus::windowCallback(GLFWwindow *window, int width, int height) {
     self->height = height;
 
     self->currentScene->updateSceneDimensions(width, height);
+    if (self->currentScene->screenSizeChanged != nullptr) {
+        self->currentScene->screenSizeChanged();
+    }
 }
 
 void Hephaestus::openScene(Scene *scene) {
