@@ -21,16 +21,18 @@ protected:
 
     Shape spriteShape = sphere;
 
-    glm::vec3 velocity { 0.0, 0.0, 0.0 };
-
     bool effectedByGravity { true };
     float mass { 1.0f };
 
 public:
+    constexpr const static float restitution = 0.45;
+
     using Sprite::Sprite;
+    glm::vec3 velocity { 0.0, 0.0, 0.0 };
 
     // Override Functions
     void move(float deltaTime) override;
+    void boundSprite();
     Sprite::Shape getShape() override;
 
     // Getters & Setters

@@ -188,6 +188,9 @@ float clamp(float value, float min, float max) {
 
 void Scene::checkCollisions() {
     if(collisionsEnabled) {
+        vector<PhysicsCollision> collisions { };
+
+#pragma omp parallel for
         for (int x = 0; x < sprites.size(); ++x) {
             Sprite *sprite = sprites[x];
 
@@ -195,9 +198,9 @@ void Scene::checkCollisions() {
                 for (int y = x + 1; y < sprites.size(); y++) {
                     Sprite *checkSprite = sprites[y];
                     if (checkSprite->physicscCollidable()) {
-                        PhysicsCollision collision {checkCollision(sprite, checkSprite) };
+                        PhysicsCollision collision { checkCollision(sprite, checkSprite) };
                         if(collision.successful) {
-                            collision.perform(deltaTime);
+                            collisions.push_back(collision);
                         }
                     }
                 }
@@ -209,20 +212,19 @@ void Scene::checkCollisions() {
                         if(checkSprite->immovable && !sprite->immovable) {
                             PhysicsCollision collision { checkCollision(sprite, checkSprite) };
                             if(collision.successful) {
-                                collision.perform(deltaTime);
+                                collisions.push_back(collision);
                             }
                         } else if (!checkSprite->immovable && sprite->immovable) {
                             PhysicsCollision collision { checkCollision(checkSprite, sprite) };
                             if(collision.successful) {
-                                collision.perform(deltaTime);
+                                collisions.push_back(collision);
                             }
                         }
                     }
                 }
-                // Check to see if it overlaps with collision areas
-                for (int y = 0;  y < collisionAreas.size(); y++) {
-                    CollisionArea* collision = collisionAreas[y];
 
+                // Check to see if it overlaps with collision areas
+                for (auto collision : collisionAreas) {
                     if (collision->overlaps(sprite)) {
                         if (collision->executeOnCollide) {
                             collision->executeOnCollide(sprite->id);
@@ -230,6 +232,10 @@ void Scene::checkCollisions() {
                     }
                 }
             }
+        }
+
+        for(auto collision: collisions) {
+            collision.perform(deltaTime);
         }
     }
 }
@@ -299,7 +305,6 @@ void Scene::setCollisionsEnabled(bool _collision) {
     collisionsEnabled = _collision;
 }
 
-
 void Scene::drawScene() {
     drawSprites();
     drawUI();
@@ -315,7 +320,9 @@ void Scene::moveSprites() {
 
 void Scene::updateScene() {
     moveSprites();
-    checkCollisions();
+    for(int x = 0; x < numberOfPhysicsSteps; ++x) {
+        checkCollisions();
+    }
     pollKeybinds();
 }
 

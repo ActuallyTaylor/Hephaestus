@@ -23,6 +23,7 @@ enum PositioningType { absolute, relative };
 enum AnchorPoint { pointTopLeft, pointTopCenter, pointTopRight, pointCenterLeft, pointCenter, pointCenterRight, pointBottomLeft, pointBottomCenter, pointBottomRight };
 enum SamplingType { nearest, linear, nearestMipMapNearest, linearMipMapNearest, nearestMipmapLinear, linearMipmapLinear};
 
+
 inline GLint translateSamplingType(SamplingType samplingType) {
     switch(samplingType) {
         case nearest:

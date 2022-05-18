@@ -11,9 +11,6 @@
 #include "PhysicsCollision.hpp"
 #include "../Sprite/PhysicsSprite/PhysicsSprite.hpp"
 
-// Inspiration taken from
-// https://github.com/phetsims/collision-lab/blob/02daa56b42da682c85cc2c1828f9a95364d9bfde/js/common/model/CollisionEngine.js#L384
-
 PhysicsCollision::PhysicsCollision(bool success, Sprite* one, Sprite* two, glm::vec3 delta, glm::vec3 penetration) {
     this->successful = success;
     this->one = one;
@@ -42,23 +39,27 @@ void PhysicsCollision::perform(float deltaTime) {
 
         glm::vec3 delt = p1 - p2;
         float dot = glm::dot((v1 - v2), delt);
-        float magnitude = glm::sqrt(delt.x * delt.x + delt.y * delt.y + delt.z * delt.z);
-        magnitude *= magnitude;
+        float magnitude = (delt.x * delt.x) + (delt.y * delt.y) + (delt.z * delt.z);
+//        magnitude *= magnitude;
 
-        glm::vec3 vf1 = v1 - ((2 * m2 )/(m1 + m2)) * (dot / magnitude) * (delt);
+        float addedMass = m1 + m2;
+        glm::vec3 vf1 = v1 - ((2 * m2) / addedMass) * (dot / magnitude) * (delt);
 
         delt = p2 - p1;
         dot = glm::dot((v2 - v1), delt);
-        magnitude = glm::sqrt(delt.x * delt.x + delt.y * delt.y + delt.z * delt.z);
-        magnitude *= magnitude;
+        magnitude = (delt.x * delt.x) + (delt.y * delt.y) + (delt.z * delt.z);
+//        magnitude *= magnitude;
 
-        glm::vec3 vf2 = v2 - ((2 * m1 )/(m1 + m2)) * (dot / magnitude) * (delt);
+        glm::vec3 vf2 = v2 - ((2 * m1 ) / addedMass) * (dot / magnitude) * (delt);
 
         pOne->position -= positionOffset;
         pTwo->position += positionOffset;
 
-        pOne->setVelocity(vf1);
-        pTwo->setVelocity(vf2);
+        pOne->velocity = vf1 * PhysicsSprite::restitution;
+        pTwo->velocity = vf2 * PhysicsSprite::restitution;
+
+        pOne->boundSprite();
+        pTwo->boundSprite();
     } else if (pOne != nullptr) {
         // Two is not a physics sprite but one is.
         handleSolidCollision(two, pOne);
@@ -71,18 +72,20 @@ void PhysicsCollision::perform(float deltaTime) {
         if(direction == UP || direction == DOWN) {
             if(direction == UP) {
                 // The non physics sprite is below. This is because the vector from the nps is pointing upwards to the ps.
-                one->setY(two->getY() + two->getHeight());
+                one->position.y = two->position.y + two->dimensions.y;
             } else {
                 // The non physics sprite is above. This is because the vector from the nps is pointing downwards to the ps.
-                one->setY(two->getY() - one->getHeight());
+                one->position.y = two->position.y + one->dimensions.y;
+
             }
         } else if (direction == LEFT || direction == RIGHT) {
             if(direction == RIGHT) {
                 // The non physics sprite is to the right. This is because the vector from the nps is pointing left towards the ps.
-                one->setX(two->getX() + two->getWidth());
+                one->position.x = two->position.x - one->dimensions.x;
+
             } else {
                 // The non physics sprite is to the left. This is because the vector from the nps is pointing right towards the ps.
-                one->setX(two->getX() - two->getWidth());
+                one->position.x = two->position.x + two->dimensions.x;
             }
         }
     }
@@ -115,22 +118,23 @@ void PhysicsCollision::handleSolidCollision(Sprite* nonPhysicsSprite, Sprite* _p
     Direction direction = VectorDirection(delta);
 
     if(direction == UP || direction == DOWN) {
-        physicsSprite->setYVelocity(-physicsSprite->getVelocity().y);
+        physicsSprite->velocity.y = -physicsSprite->velocity.y;
         if(direction == UP) {
             // The non physics sprite is below. This is because the vector from the nps is pointing upwards to the ps.
-            physicsSprite->setY(nonPhysicsSprite->getY() - physicsSprite->getHeight());
+            physicsSprite->position.y = nonPhysicsSprite->position.y - physicsSprite->dimensions.y;
         } else {
             // The non physics sprite is above. This is because the vector from the nps is pointing downwards to the ps.
-            physicsSprite->setY(nonPhysicsSprite->getY() + nonPhysicsSprite->getHeight());
+            physicsSprite->position.y = nonPhysicsSprite->position.y - nonPhysicsSprite->dimensions.y;
         }
     } else if (direction == LEFT || direction == RIGHT) {
-        physicsSprite->setXVelocity(-physicsSprite->getVelocity().x);
+        physicsSprite->velocity.x = -physicsSprite->velocity.x;
         if(direction == RIGHT) {
             // The non physics sprite is to the right. This is because the vector from the nps is pointing left towards the ps.
-            physicsSprite->setX(nonPhysicsSprite->getX() - physicsSprite->getWidth());
+            physicsSprite->position.x = nonPhysicsSprite->position.x - physicsSprite->dimensions.x;
+
         } else {
             // The non physics sprite is to the left. This is because the vector from the nps is pointing right towards the ps.
-            physicsSprite->setX(nonPhysicsSprite->getX() + nonPhysicsSprite->getWidth());
+            physicsSprite->position.x = nonPhysicsSprite->position.x - nonPhysicsSprite->dimensions.x;
         }
     }
 }

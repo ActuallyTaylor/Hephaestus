@@ -10,33 +10,35 @@
 
 #include "PhysicsSprite.hpp"
 
-float elasticity = 0.1;
-
 Sprite::Shape PhysicsSprite::getShape() {
     return this->spriteShape;
 }
 
 void PhysicsSprite::move(float deltaTime) {
-    if (effectedByGravity) {
+    if (position.y > 100 && effectedByGravity) {
         velocity += (mass * gravitationalAcceleration);
     }
 
     position += velocity * deltaTime;
 
-    if (position.x  < 0.0f) {
-        velocity.x = (-velocity.x * elasticity);
-        position.x = 0;
-    } else if (position.x + dimensions.x > screenSize.x) {
-        velocity.x = (-velocity.x * elasticity);
-        position.x = screenSize.x - dimensions.x;
+    boundSprite();
+}
+
+void PhysicsSprite::boundSprite() {
+    if (position.x  < 100.0f) {
+        position.x = 100;
+        velocity.x = (-velocity.x * restitution);
+    } else if (position.x + dimensions.x > screenSize.x - 100) {
+        position.x = screenSize.x - 100 - dimensions.x;
+        velocity.x = (-velocity.x * restitution);
     }
 
-    if (position.y < 0.0f) {
-        velocity.y = (-velocity.y * elasticity);
-        position.y = 0;
-    } else if (position.y + dimensions.y > screenSize.y) {
-        velocity.y = (-velocity.y * elasticity);
-        position.y = screenSize.y - dimensions.y;
+    if (position.y < 100) {
+        position.y = 100;
+        velocity.y = (-velocity.y * restitution);
+    } else if (position.y + dimensions.y > screenSize.y - 100) {
+        position.y = screenSize.y - 100 - dimensions.y;
+        velocity.y = (-velocity.y * restitution);
     }
 }
 

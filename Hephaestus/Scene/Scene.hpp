@@ -100,6 +100,8 @@ public:
     void removeCollision(CollisionArea* collisionArea);
     void setPhysicsEnabled(bool _collision);
     void setCollisionsEnabled(bool _collision);
+    int numberOfPhysicsSteps = 5;
+
     int getNumberOfSprites();
 
     void addText(Text *text);
