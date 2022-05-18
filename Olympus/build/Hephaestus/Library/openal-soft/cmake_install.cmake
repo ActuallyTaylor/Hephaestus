@@ -39,8 +39,8 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/build/Hephaestus/Library/openal-soft/libopenal.1.21.1.dylib"
-    "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/build/Hephaestus/Library/openal-soft/libopenal.1.dylib"
+    "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Build/Hephaestus/Library/openal-soft/libopenal.1.21.1.dylib"
+    "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Build/Hephaestus/Library/openal-soft/libopenal.1.dylib"
     )
   foreach(file
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libopenal.1.21.1.dylib"
@@ -56,7 +56,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/build/Hephaestus/Library/openal-soft/libopenal.dylib")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Build/Hephaestus/Library/openal-soft/libopenal.dylib")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libopenal.dylib" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libopenal.dylib")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -69,7 +69,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/OpenAL/OpenALConfig.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/OpenAL/OpenALConfig.cmake"
-         "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/build/Hephaestus/Library/openal-soft/CMakeFiles/Export/lib/cmake/OpenAL/OpenALConfig.cmake")
+         "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Build/Hephaestus/Library/openal-soft/CMakeFiles/Export/lib/cmake/OpenAL/OpenALConfig.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/OpenAL/OpenALConfig-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -78,9 +78,9 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/OpenAL" TYPE FILE FILES "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/build/Hephaestus/Library/openal-soft/CMakeFiles/Export/lib/cmake/OpenAL/OpenALConfig.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/OpenAL" TYPE FILE FILES "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Build/Hephaestus/Library/openal-soft/CMakeFiles/Export/lib/cmake/OpenAL/OpenALConfig.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/OpenAL" TYPE FILE FILES "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/build/Hephaestus/Library/openal-soft/CMakeFiles/Export/lib/cmake/OpenAL/OpenALConfig-relwithdebinfo.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/OpenAL" TYPE FILE FILES "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Build/Hephaestus/Library/openal-soft/CMakeFiles/Export/lib/cmake/OpenAL/OpenALConfig-relwithdebinfo.cmake")
   endif()
 endif()
 
@@ -89,6 +89,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/build/Hephaestus/Library/openal-soft/openal.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Build/Hephaestus/Library/openal-soft/openal.pc")
 endif()
 

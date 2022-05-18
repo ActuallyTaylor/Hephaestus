@@ -51,7 +51,7 @@ set_target_properties(OpenAL::OpenAL PROPERTIES
 # Import target "OpenAL::OpenAL" for configuration "RelWithDebInfo"
 set_property(TARGET OpenAL::OpenAL APPEND PROPERTY IMPORTED_CONFIGURATIONS RELWITHDEBINFO)
 set_target_properties(OpenAL::OpenAL PROPERTIES
-  IMPORTED_LOCATION_RELWITHDEBINFO "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/build/Hephaestus/Library/openal-soft/libopenal.1.21.1.dylib"
+  IMPORTED_LOCATION_RELWITHDEBINFO "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus/Build/Hephaestus/Library/openal-soft/libopenal.1.21.1.dylib"
   IMPORTED_SONAME_RELWITHDEBINFO "@rpath/libopenal.1.dylib"
   )
 
