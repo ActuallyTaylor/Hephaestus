@@ -63,8 +63,9 @@ struct HomeScene {
     Image backgroundImage = Image("./UI/Background.png", SamplingType::linear, center, { 0, 0, -1 }, pointCenter, {engine.windowWidth(), engine.windowHeight()});
 
 
-    int imageWidth = 1920/7;
-    int imageHeight = 1080/7;
+    const int imageWidth = 1920/7;
+    const int imageHeight = 1080/7;
+    const int spacing = 20;
     int selectedIndex { 0 };
     vector<Image> images { };
 
@@ -107,7 +108,7 @@ struct HomeScene {
         for(GameLoader::Game& game: loader.games) {
             Image gameImage = Image(game.banner, SamplingType::linear, center, { x, 0, 0 }, pointCenter, {imageWidth, imageHeight});
             images.emplace_back(gameImage);
-            x += imageWidth;
+            x += imageWidth + spacing;
         }
 
         for(Image& image: images) {
@@ -137,7 +138,7 @@ struct HomeScene {
         if (selectedIndex < loader.games.size() - 1) {
             selectedIndex += 1;
             for(Image& image: images) {
-                image.relativePositionOffset.x -= imageWidth;
+                image.relativePositionOffset.x -= imageWidth + spacing;
             }
         }
     }
@@ -146,7 +147,7 @@ struct HomeScene {
         if (selectedIndex > 0) {
             selectedIndex -= 1;
             for(Image& image: images) {
-                image.relativePositionOffset.x += imageWidth;
+                image.relativePositionOffset.x += imageWidth + spacing;
             }
         }
     }
@@ -166,7 +167,6 @@ struct HomeScene {
 
     void sizeChanged() {
         backgroundImage.dimensions = {engine.windowWidth(), engine.windowHeight()};
-
     }
 };
 

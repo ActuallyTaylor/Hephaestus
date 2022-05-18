@@ -17,8 +17,8 @@ UIElement::UIElement(glm::vec3 _position, glm::vec2 _dimensions, glm::vec3 _rota
     dimensions = _dimensions;
     rotation = _rotation;
 
-        updateAnchorPosition();
-        updateAnchorPointPosition();
+    updateAnchorPosition();
+    updateAnchorPointPosition();
 }
 
 UIElement::UIElement(ScreenAnchor _anchor, glm::vec3 _anchorOffset, AnchorPoint _anchorPoint, glm::vec2 _dimensions, glm::vec3 _rotation) {
@@ -29,8 +29,8 @@ UIElement::UIElement(ScreenAnchor _anchor, glm::vec3 _anchorOffset, AnchorPoint 
     dimensions = _dimensions;
     rotation = _rotation;
 
-        updateAnchorPosition();
-        updateAnchorPointPosition();
+    updateAnchorPosition();
+    updateAnchorPointPosition();
 }
 
 
@@ -220,6 +220,7 @@ void UIElement::updateAnchorPosition() {
     } else if (positionType == absolute) {
         anchorPositionBeforeOffset = position;
     }
+    position = anchorPositionBeforeOffset;
 }
 
 void UIElement::updateAnchorPointPosition() {
@@ -252,4 +253,5 @@ void UIElement::updateAnchorPointPosition() {
             anchorPositionBeforeOffset = { anchorPositionBeforeOffset.x - dimensions.x, anchorPositionBeforeOffset.y, anchorPositionBeforeOffset.z };
             break;
     }
+    position = anchorPositionBeforeOffset;
 }

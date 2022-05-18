@@ -12,6 +12,7 @@
 #include <utility>
 
 Button::Button(std::string backgroundImagePath, glm::vec3 _position, glm::vec2 _dimensions, glm::vec3 _rotation) {
+    position = _position;
     positionType = relative;
     dimensions = _dimensions;
     rotation = _rotation;
@@ -33,6 +34,7 @@ Button::Button(std::string backgroundImagePath, ScreenAnchor _anchor, glm::vec3 
 }
 
 Button::Button(glm::vec4 backgroundColor, glm::vec3 _position, glm::vec2 _dimensions, glm::vec3 _rotation) {
+    position = _position;
     positionType = relative;
     dimensions = _dimensions;
     rotation = _rotation;

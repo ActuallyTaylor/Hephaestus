@@ -1,16 +1,23 @@
 "/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=/Users/zacharylineman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/CLion.app/Contents/bin/ninja/mac/ninja" -G Ninja -S /Users/zacharylineman/Developer/GitHub/Hephaestus/Games/PhysicsDemo -B /Users/zacharylineman/Developer/GitHub/Hephaestus/Games/PhysicsDemo/cmake-build-debug
--- The C compiler identification is AppleClang 13.1.6.13160021
--- The CXX compiler identification is AppleClang 13.1.6.13160021
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Check for working C compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc - skipped
--- Detecting C compile features
--- Detecting C compile features - done
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Check for working CXX compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ - skipped
--- Detecting CXX compile features
--- Detecting CXX compile features - done
+-- Could NOT find ALSA (missing: ALSA_LIBRARY ALSA_INCLUDE_DIR) 
+-- Could NOT find OSS (missing: OSS_INCLUDE_DIR) 
+-- Could NOT find AudioIO (missing: AUDIOIO_INCLUDE_DIR) 
+-- Could NOT find SoundIO (missing: SOUNDIO_LIBRARY SOUNDIO_INCLUDE_DIR) 
+-- Could NOT find PortAudio (missing: PORTAUDIO_LIBRARY PORTAUDIO_INCLUDE_DIR) 
+-- Could NOT find PulseAudio (missing: PULSEAUDIO_LIBRARY PULSEAUDIO_INCLUDE_DIR) 
+-- Could NOT find JACK (missing: JACK_LIBRARY JACK_INCLUDE_DIR) 
+-- Could NOT find OpenSL (missing: OPENSL_LIBRARY OPENSL_INCLUDE_DIR OPENSL_ANDROID_INCLUDE_DIR) 
+-- 
+Building OpenAL with support for the following backends:
+     CoreAudio, WaveFile, Null
+
+Building with support for CPU extensions:
+    Default, SSE, SSE2, SSE3, SSE4.1
+
+-- Embedding HRTF datasets
+
+-- Installing library and headers
+-- 
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /Users/zacharylineman/Developer/GitHub/Hephaestus/Games/PhysicsDemo/cmake-build-debug

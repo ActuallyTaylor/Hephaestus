@@ -4,7 +4,7 @@
 
 #include "mainLevelScene.hpp"
 
-Hephaestus engine = Hephaestus("Conways game of life", 720, 720);
+Hephaestus engine = Hephaestus("Conways Game of Life", 480, 320);
 
 int main() {
     MainLevelScene mainLevel = MainLevelScene(&engine);
