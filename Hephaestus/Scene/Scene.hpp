@@ -28,13 +28,16 @@ class Scene {
     vector<Sprite*> sprites;
 
     void drawSprites();
-    void moveSprites();
 
     vector<CollisionArea*> collisionAreas;
     PhysicsCollision checkCollision(Sprite *one, Sprite *two);
     PhysicsCollision checkAABBSphereCollision(Sprite* aabb, Sprite* sphere);
 
-    void checkCollisions();
+    void checkCollisionAreas();
+    void applyGravity();
+    void solveCollisions();
+    void updateSpritePositions();
+
     bool physicsEnabled = false;
     bool collisionsEnabled = true;
 
@@ -96,11 +99,11 @@ public:
     void removeSprite(Sprite* sprite);
     Sprite* getSprite(std::string id);
 
+    int physicsSubSteps = 2;
     void addCollisionArea(CollisionArea* collisionArea);
     void removeCollision(CollisionArea* collisionArea);
     void setPhysicsEnabled(bool _collision);
     void setCollisionsEnabled(bool _collision);
-    int numberOfPhysicsSteps = 5;
 
     int getNumberOfSprites();
 

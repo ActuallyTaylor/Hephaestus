@@ -9,6 +9,7 @@
 */
 
 #include "Scene.hpp"
+#include "../Sprite/PhysicsSprite/PhysicsSprite.hpp"
 
 Scene* self_scene;
 
@@ -186,48 +187,137 @@ float clamp(float value, float min, float max) {
     return std::max(min, std::min(max, value));
 }
 
-void Scene::checkCollisions() {
+void Scene::setPhysicsEnabled(bool _collision) {
+    physicsEnabled = _collision;
+    if (!collisionsEnabled) {
+        std::cerr << "Physics enabled but collisions is turned off. Please enable collisions to allow physical collisions between objects" << std::endl;
+    }
+}
+
+void Scene::setCollisionsEnabled(bool _collision) {
+    collisionsEnabled = _collision;
+}
+
+void Scene::drawScene() {
+    drawSprites();
+    drawUI();
+}
+
+void Scene::pollKeybinds() {
+    this->controlManager.executeHolding();
+    this->controlManager.executeDragging();
+}
+
+void Scene::updateSceneDimensions(int _width, int _height) {
+    width = _width;
+    height = _height;
+
+    for (Sprite *sprite: sprites) {
+        sprite->updateScreenDimensions(width, height);
+    }
+    textManager.updateScreenDimensions(width, height);
+
+    for (UIElement *element: uiElements) {
+        element->updateScreenDimensions(width, height);
+    }
+}
+
+int Scene::getNumberOfSprites() {
+    return sprites.size();
+}
+
+void Scene::addCollisionArea(CollisionArea* collisionArea) {
+    collisionAreas.push_back(collisionArea);
+}
+
+void Scene::checkCollisionAreas() {
+    for (Sprite* sprite: sprites) { // Check to see if it overlaps with collision areas
+        for (auto collision : collisionAreas) {
+            if (collision->overlaps(sprite)) {
+                if (collision->executeOnCollide) {
+                    collision->executeOnCollide(sprite->id);
+                }
+            }
+        }
+    }
+}
+
+void Scene::updateScene() {
+    checkCollisionAreas();
+    pollKeybinds();
+    for(int x = 0; x < physicsSubSteps; ++x) {
+        applyGravity();
+        solveCollisions();
+        updateSpritePositions();
+    }
+}
+
+void Scene::updateSpritePositions() {
+    for (Sprite* sprite: sprites) {
+        if(sprite->canMovePhysically()) {
+            sprite->move(deltaTime);
+        }
+    }
+}
+
+float restThreshold = 0.5;
+void Scene::applyGravity() {
+    float averageY = 0;
+    float averageX = 0;
+    int numb = 0;
+    for (Sprite* _sprite: sprites) {
+        if(_sprite->canMovePhysically()) {
+            auto* sprite = dynamic_cast<PhysicsSprite *>(_sprite);
+            if(sprite->lastVelocity.y == 0 || (sprite->velocity.y >= -sprite->gravitationalAcceleration.y || sprite->velocity.y <= sprite->gravitationalAcceleration.y)) {
+                sprite->velocity += (sprite->mass * sprite->gravitationalAcceleration);
+            } else {
+                sprite->velocity.y = 0;
+            }
+            cout << sprite->velocity.y << " " << sprite->lastVelocity.y << endl;
+            sprite->boundSprite();
+            averageY += sprite->velocity.y;
+            averageX += sprite->velocity.x;
+            numb += 1;
+        }
+    }
+//    cout << averageX / numb << " " << averageY / numb << endl;
+}
+
+void Scene::solveCollisions() {
     if(collisionsEnabled) {
         vector<PhysicsCollision> collisions { };
 
-#pragma omp parallel for
+        #pragma omp parallel for
         for (int x = 0; x < sprites.size(); ++x) {
             Sprite *sprite = sprites[x];
 
-            if(sprite->physicscCollidable() && physicsEnabled) {
-                for (int y = x + 1; y < sprites.size(); y++) {
-                    Sprite *checkSprite = sprites[y];
-                    if (checkSprite->physicscCollidable()) {
-                        PhysicsCollision collision { checkCollision(sprite, checkSprite) };
-                        if(collision.successful) {
-                            collisions.push_back(collision);
-                        }
-                    }
-                }
-            } else if (sprite->collidable()) {
-                // Check to see if it overlaps with other sprites.
-                for (int y = x + 1; y < sprites.size(); y++) {
-                    Sprite *checkSprite = sprites[y];
-                    if (checkSprite->collidable()) {
-                        if(checkSprite->immovable && !sprite->immovable) {
+            if(sprite->physicscCollidable()) {
+                if(physicsEnabled) {
+                    for (int y = x + 1; y < sprites.size(); y++) {
+                        Sprite *checkSprite = sprites[y];
+                        if (checkSprite->physicscCollidable()) {
                             PhysicsCollision collision { checkCollision(sprite, checkSprite) };
                             if(collision.successful) {
                                 collisions.push_back(collision);
                             }
-                        } else if (!checkSprite->immovable && sprite->immovable) {
-                            PhysicsCollision collision { checkCollision(checkSprite, sprite) };
-                            if(collision.successful) {
-                                collisions.push_back(collision);
-                            }
                         }
                     }
-                }
-
-                // Check to see if it overlaps with collision areas
-                for (auto collision : collisionAreas) {
-                    if (collision->overlaps(sprite)) {
-                        if (collision->executeOnCollide) {
-                            collision->executeOnCollide(sprite->id);
+                } else {
+                    // Check to see if it overlaps with other sprites.
+                    for (int y = x + 1; y < sprites.size(); y++) {
+                        Sprite *checkSprite = sprites[y];
+                        if (checkSprite->collidable()) {
+                            if(checkSprite->immovable && !sprite->immovable) {
+                                PhysicsCollision collision { checkCollision(sprite, checkSprite) };
+                                if(collision.successful) {
+                                    collisions.push_back(collision);
+                                }
+                            } else if (!checkSprite->immovable && sprite->immovable) {
+                                PhysicsCollision collision { checkCollision(checkSprite, sprite) };
+                                if(collision.successful) {
+                                    collisions.push_back(collision);
+                                }
+                            }
                         }
                     }
                 }
@@ -292,63 +382,4 @@ PhysicsCollision Scene::checkAABBSphereCollision(Sprite* aabb, Sprite* sphere) {
     difference = closest - center;
 
     return PhysicsCollision(glm::length(difference) < sphere->getRadius(), aabb, sphere, {difference, 0.0}, {difference, 0.0});
-}
-
-void Scene::setPhysicsEnabled(bool _collision) {
-    physicsEnabled = _collision;
-    if (!collisionsEnabled) {
-        std::cerr << "Physics enabled but collisions is turned off. Please enable collisions to allow physical collisions between objects" << std::endl;
-    }
-}
-
-void Scene::setCollisionsEnabled(bool _collision) {
-    collisionsEnabled = _collision;
-}
-
-void Scene::drawScene() {
-    drawSprites();
-    drawUI();
-}
-
-void Scene::moveSprites() {
-    for (Sprite* sprite: sprites) {
-         if(sprite->canMovePhysically()) {
-             sprite->move(deltaTime);
-         }
-    }
-}
-
-void Scene::updateScene() {
-    moveSprites();
-    for(int x = 0; x < numberOfPhysicsSteps; ++x) {
-        checkCollisions();
-    }
-    pollKeybinds();
-}
-
-void Scene::pollKeybinds() {
-    this->controlManager.executeHolding();
-    this->controlManager.executeDragging();
-}
-
-void Scene::updateSceneDimensions(int _width, int _height) {
-    width = _width;
-    height = _height;
-
-    for (Sprite *sprite: sprites) {
-        sprite->updateScreenDimensions(width, height);
-    }
-    textManager.updateScreenDimensions(width, height);
-
-    for (UIElement *element: uiElements) {
-        element->updateScreenDimensions(width, height);
-    }
-}
-
-int Scene::getNumberOfSprites() {
-    return sprites.size();
-}
-
-void Scene::addCollisionArea(CollisionArea* collisionArea) {
-    collisionAreas.push_back(collisionArea);
 }

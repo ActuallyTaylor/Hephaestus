@@ -17,18 +17,16 @@
 
 class PhysicsSprite: public Sprite {
 protected:
-    glm::vec3 gravitationalAcceleration { 0.0, -9.8, 0.0 };
-
     Shape spriteShape = sphere;
 
     bool effectedByGravity { true };
-    float mass { 1.0f };
-
 public:
-    constexpr const static float restitution = 0.45;
+    glm::vec3 gravitationalAcceleration { 0.0, -9.8, 0.0 };
+    constexpr const static float restitution = 0.7;
 
     using Sprite::Sprite;
     glm::vec3 velocity { 0.0, 0.0, 0.0 };
+    glm::vec3 lastVelocity { 0.0, 0.0, 0.0 };
 
     // Override Functions
     void move(float deltaTime) override;
@@ -50,6 +48,8 @@ public:
     bool physicscCollidable() override;
 
     bool canMovePhysically() override;
+
+    float mass { 1.0f };
 };
 
 

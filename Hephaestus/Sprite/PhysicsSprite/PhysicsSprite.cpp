@@ -15,29 +15,24 @@ Sprite::Shape PhysicsSprite::getShape() {
 }
 
 void PhysicsSprite::move(float deltaTime) {
-    if (position.y > 100 && effectedByGravity) {
-        velocity += (mass * gravitationalAcceleration);
-    }
-
     position += velocity * deltaTime;
-
-    boundSprite();
+    lastVelocity = velocity;
 }
 
 void PhysicsSprite::boundSprite() {
-    if (position.x  < 100.0f) {
-        position.x = 100;
+    if (position.x  < 0.0f) {
+        position.x = 0;
         velocity.x = (-velocity.x * restitution);
-    } else if (position.x + dimensions.x > screenSize.x - 100) {
-        position.x = screenSize.x - 100 - dimensions.x;
+    } else if (position.x + dimensions.x > screenSize.x - 0) {
+        position.x = screenSize.x - dimensions.x - 1;
         velocity.x = (-velocity.x * restitution);
     }
 
-    if (position.y < 100) {
-        position.y = 100;
+    if (position.y < 0) {
+        position.y = 0;
         velocity.y = (-velocity.y * restitution);
-    } else if (position.y + dimensions.y > screenSize.y - 100) {
-        position.y = screenSize.y - 100 - dimensions.y;
+    } else if (position.y + dimensions.y > screenSize.y - 0) {
+        position.y = screenSize.y - dimensions.y - 1;
         velocity.y = (-velocity.y * restitution);
     }
 }
