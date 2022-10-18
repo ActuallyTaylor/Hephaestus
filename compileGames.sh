@@ -9,30 +9,26 @@ mkdir $CWD/compiled/LowData/
 mkdir $CWD/compiled/PhysicsDemo/
 mkdir $CWD/compiled/Olympus/
 
-cd $CWD
-cd ./compiled/GameOfLife/
+cd $CWD/compiled/GameOfLife/
 echo "CMAKE Game of Life $CWD"
-cmake $CWD/Games/GameOfLife/CMakeLists.txt
+cmake $CWD/Games/GameOfLife/
 echo "Compiling Game Of Life $CWD"
 make
 
-cd $CWD
-cd ./compiled/LowData/
+cd $CWD/compiled/LowData/
 echo "CMAKE Low Data $CWD"
-cmake $CWD/Games/LowData/CMakeLists.txt
+cmake $CWD/Games/LowData/
 echo "Compiling Low Data $CWD"
 make
 
-cd $CWD
-cd ./compiled/PhysicsDemo/
+cd $CWD/compiled/PhysicsDemo/
 echo "CMAKE Physics Demo $CWD"
-cmake $CWD/Games/PhysicsDemo/CMakeLists.txt
+cmake $CWD/Games/PhysicsDemo/
 echo "Compiling Physics Demo $CWD"
 make
 
-cd $CWD
-cd ./compiled/Olympus/
+cd $CWD/compiled/Olympus/
 echo "CMAKE Olympus $CWD"
-cmake $CWD/Olympus/CMakeLists.txt
+cmake $CWD/Olympus/
 echo "Compiling Olympus $CWD"
 make
