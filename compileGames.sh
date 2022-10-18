@@ -12,19 +12,27 @@ mkdir $CWD/compiled/Olympus/
 echo "CMAKE Game of Life $CWD"
 cmake -B$CWD/compiled/GameOfLife/ -S$CWD/Games/GameOfLife/
 echo "Compiling Game Of Life $CWD"
-make $CWD/compiled/GameOfLife/
+cd $CWD/compiled/GameOfLife/
+make 
+cd $CWD
 
 echo "CMAKE Low Data $CWD"
 cmake -B$CWD/compiled/LowData/ -S$CWD/Games/LowData/
 echo "Compiling Low Data $CWD"
-make $CWD/compiled/LowData/
+cd $CWD/compiled/LowData/
+make 
+cd $CWD
 
 echo "CMAKE Physics Demo $CWD"
 cmake -B$CWD/compiled/PhysicsDemo/ -S$CWD/Games/PhysicsDemo/
 echo "Compiling Physics Demo $CWD"
-make $CWD/compiled/PhysicsDemo/
+cd $CWD/compiled/PhysicsDemo/
+make 
+cd $CWD
 
 echo "CMAKE Olympus $CWD"
 cmake -B$CWD/compiled/Olympus/ -S$CWD/Games/Olympus/
 echo "Compiling Olympus $CWD"
-make $CWD/compiled/Olympus/
+cd $CWD/compiled/Olympus/
+make
+cd $CWD
