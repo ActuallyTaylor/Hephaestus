@@ -1,4 +1,5 @@
 rm -rf ./compiled &&
+mkdir ./compiled &&
 mkdir ./compiled/GameOfLife/ &&
 mkdir ./compiled/LowData/ &&
 mkdir ./compiled/PhysicsDemo/ &&
