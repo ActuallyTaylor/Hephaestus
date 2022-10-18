@@ -1,8 +1,7 @@
 .DS_Store
-Olympus/cmake-build-debug/Olympus
 *.log
-GameOfLife/cmake-build-debug/GameOfLife
-LowData/cmake-build-debug/LowData
 .ninja_deps
 .ninja_log
-LowData/cmake-build-debug/
+build/
+cmake-build-debug/
+cmake-build-release/
