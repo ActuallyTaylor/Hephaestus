@@ -1,9 +1,10 @@
 #include <iostream>
 #include <thread>
 #include <utility>
-#include "../Hephaestus/Library/json.hpp"
-#include "../Hephaestus/Hephaestus.hpp"
-#include "../Hephaestus/UI/Image/Image.hpp"
+#include <Hephaestus/Hephaestus.hpp>
+#include <Hephaestus/Camera/Camera.hpp>
+#include <Hephaestus/UI/Image/Image.hpp>
+#include <Hephaestus/libs/json.hpp>
 
 Hephaestus engine = Hephaestus("Hephaestus Engine", 480, 320);
 

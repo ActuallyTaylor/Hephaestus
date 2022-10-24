@@ -16,14 +16,734 @@
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
-      <configuration PROFILE_NAME="Debug" ENABLED="true" GENERATION_DIR="build" CONFIG_NAME="Debug" />
-      <configuration PROFILE_NAME="Release" ENABLED="true" GENERATION_DIR="build-release" CONFIG_NAME="Release" />
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f22769bb-d6a0-46e4-a0f3-ebdc8ac76c3d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+    <list default="true" id="2d077f58-dac8-44d6-9e7d-cea4628e1944" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/AudioEngine/AudioEngine.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/src/AudioEngine/AudioEngine.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/AudioEngine/AudioEngine.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/include/Hephaestus/AudioEngine/AudioEngine.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/AudioEngine/AudioSnippet.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/src/AudioEngine/AudioSnippet.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/AudioEngine/AudioSnippet.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/include/Hephaestus/AudioEngine/AudioSnippet.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Camera/Camera.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/src/Camera/Camera.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Camera/Camera.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/include/Hephaestus/Camera/Camera.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Collision/CollisionArea.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/src/Collision/CollisionArea.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Collision/CollisionArea.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/include/Hephaestus/Collision/CollisionArea.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Collision/PhysicsCollision.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/src/Collision/PhysicsCollision.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Collision/PhysicsCollision.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/include/Hephaestus/Collision/PhysicsCollision.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Controls/ControlManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/src/Controls/ControlManager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Controls/ControlManager.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/include/Hephaestus/Controls/ControlManager.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Controls/Keybind/Keybind.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/src/Controls/Keybind/Keybind.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Controls/Keybind/Keybind.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/include/Hephaestus/Controls/Keybind/Keybind.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Function.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/include/Hephaestus/Function.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Hephaestus.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/src/Hephaestus.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Hephaestus.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/include/Hephaestus/Hephaestus.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/HephaestusUtility.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/include/Hephaestus/HephaestusUtility.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/AL/al.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/AL/alc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/AL/alext.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/AL/efx-creative.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/AL/efx-presets.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/AL/efx.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/common.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/_features.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/_fixes.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/_noise.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/_swizzle.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/_swizzle_func.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/_vectorize.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/compute_common.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/compute_vector_relational.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/func_common.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/func_common_simd.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/func_exponential.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/func_exponential_simd.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/func_geometric.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/func_geometric_simd.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/func_integer.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/func_integer_simd.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/func_matrix.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/func_matrix_simd.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/func_packing.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/func_packing_simd.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/func_trigonometric.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/func_trigonometric_simd.inl" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/cmake/install_and_expose.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/func_vector_relational.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/func_vector_relational_simd.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/glm.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/qualifier.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/setup.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/type_float.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/type_half.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/type_half.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/type_mat2x2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/type_mat2x2.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/type_mat2x3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/type_mat2x3.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/type_mat2x4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/type_mat2x4.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/type_mat3x2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/type_mat3x2.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/type_mat3x3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/type_mat3x3.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/type_mat3x4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/type_mat3x4.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/type_mat4x2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/type_mat4x2.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/type_mat4x3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/type_mat4x3.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/type_mat4x4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/type_mat4x4.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/type_mat4x4_simd.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/type_quat.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/type_quat.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/type_quat_simd.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/type_vec1.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/type_vec1.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/type_vec2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/type_vec2.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/type_vec3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/type_vec3.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/type_vec4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/type_vec4.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/detail/type_vec4_simd.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/exponential.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_clip_space.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_clip_space.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_common.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_common.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_double2x2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_double2x2_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_double2x3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_double2x3_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_double2x4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_double2x4_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_double3x2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_double3x2_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_double3x3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_double3x3_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_double3x4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_double3x4_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_double4x2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_double4x2_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_double4x3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_double4x3_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_double4x4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_double4x4_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_float2x2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_float2x2_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_float2x3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_float2x3_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_float2x4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_float2x4_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_float3x2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_float3x2_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_float3x3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_float3x3_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_float3x4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_float3x4_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_float4x2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_float4x2_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_float4x3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_float4x3_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_float4x4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_float4x4_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_int2x2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_int2x2_sized.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_int2x3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_int2x3_sized.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_int2x4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_int2x4_sized.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_int3x2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_int3x2_sized.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_int3x3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_int3x3_sized.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_int3x4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_int3x4_sized.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_int4x2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_int4x2_sized.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_int4x3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_int4x3_sized.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_int4x4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_int4x4_sized.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_projection.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_projection.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_relational.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_relational.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_transform.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_transform.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_uint2x2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_uint2x2_sized.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_uint2x3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_uint2x3_sized.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_uint2x4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_uint2x4_sized.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_uint3x2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_uint3x2_sized.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_uint3x3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_uint3x3_sized.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_uint3x4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_uint3x4_sized.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_uint4x2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_uint4x2_sized.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_uint4x3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_uint4x3_sized.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_uint4x4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/matrix_uint4x4_sized.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/quaternion_common.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/quaternion_common.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/quaternion_common_simd.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/quaternion_double.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/quaternion_double_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/quaternion_exponential.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/quaternion_exponential.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/quaternion_float.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/quaternion_float_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/quaternion_geometric.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/quaternion_geometric.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/quaternion_relational.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/quaternion_relational.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/quaternion_transform.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/quaternion_transform.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/quaternion_trigonometric.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/quaternion_trigonometric.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/scalar_common.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/scalar_common.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/scalar_constants.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/scalar_constants.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/scalar_int_sized.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/scalar_integer.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/scalar_integer.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/scalar_packing.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/scalar_packing.inl" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/version.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/scalar_relational.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/scalar_relational.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/scalar_uint_sized.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/scalar_ulp.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/scalar_ulp.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_bool1.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_bool1_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_bool2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_bool2_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_bool3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_bool3_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_bool4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_bool4_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_common.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_common.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_double1.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_double1_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_double2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_double2_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_double3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_double3_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_double4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_double4_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_float1.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_float1_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_float2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_float2_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_float3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_float3_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_float4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_float4_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_int1.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_int1_sized.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_int2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_int2_sized.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_int3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_int3_sized.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_int4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_int4_sized.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_integer.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_integer.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_packing.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_packing.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_relational.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_relational.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_uint1.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_uint1_sized.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_uint2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_uint2_sized.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_uint3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_uint3_sized.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_uint4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_uint4_sized.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_ulp.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/ext/vector_ulp.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/fwd.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/geometric.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/glm.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/bitfield.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/bitfield.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/color_space.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/color_space.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/constants.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/constants.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/epsilon.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/epsilon.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/integer.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/integer.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/matrix_access.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/matrix_access.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/matrix_integer.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/matrix_inverse.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/matrix_inverse.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/matrix_transform.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/matrix_transform.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/noise.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/noise.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/packing.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/packing.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/quaternion.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/quaternion.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/quaternion_simd.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/random.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/random.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/reciprocal.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/reciprocal.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/round.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/round.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/type_aligned.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/type_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/type_precision.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/type_ptr.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/type_ptr.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/ulp.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/ulp.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtc/vec1.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/associated_min_max.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/associated_min_max.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/bit.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/bit.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/closest_point.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/closest_point.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/color_encoding.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/color_encoding.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/color_space.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/color_space.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/color_space_YCoCg.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/color_space_YCoCg.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/common.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/common.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/compatibility.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/compatibility.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/component_wise.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/component_wise.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/dual_quaternion.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/dual_quaternion.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/easing.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/easing.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/euler_angles.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/euler_angles.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/extend.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/extend.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/extended_min_max.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/extended_min_max.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/exterior_product.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/exterior_product.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/fast_exponential.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/fast_exponential.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/fast_square_root.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/fast_square_root.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/fast_trigonometry.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/fast_trigonometry.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/float_notmalize.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/functions.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/functions.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/gradient_paint.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/gradient_paint.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/handed_coordinate_space.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/handed_coordinate_space.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/hash.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/hash.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/integer.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/integer.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/intersect.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/intersect.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/io.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/io.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/log_base.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/log_base.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/matrix_cross_product.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/matrix_cross_product.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/matrix_decompose.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/matrix_decompose.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/matrix_factorisation.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/matrix_factorisation.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/matrix_interpolation.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/matrix_interpolation.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/matrix_major_storage.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/matrix_major_storage.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/matrix_operation.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/matrix_operation.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/matrix_query.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/matrix_query.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/matrix_transform_2d.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/matrix_transform_2d.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/mixed_product.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/mixed_product.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/norm.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/norm.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/normal.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/normal.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/normalize_dot.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/normalize_dot.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/number_precision.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/number_precision.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/optimum_pow.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/optimum_pow.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/orthonormalize.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/orthonormalize.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/perpendicular.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/perpendicular.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/polar_coordinates.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/polar_coordinates.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/projection.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/projection.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/quaternion.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/quaternion.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/range.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/raw_data.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/raw_data.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/rotate_normalized_axis.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/rotate_normalized_axis.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/rotate_vector.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/rotate_vector.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/scalar_multiplication.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/scalar_relational.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/scalar_relational.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/spline.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/spline.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/std_based_type.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/std_based_type.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/string_cast.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/string_cast.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/texture.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/texture.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/transform.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/transform.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/transform2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/transform2.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/type_aligned.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/type_aligned.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/type_trait.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/type_trait.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/vec_swizzle.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/vector_angle.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/vector_angle.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/vector_query.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/vector_query.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/wrap.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/gtx/wrap.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/integer.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/mat2x2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/mat2x3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/mat2x4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/mat3x2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/mat3x3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/mat3x4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/mat4x2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/mat4x3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/mat4x4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/matrix.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/packing.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/simd/common.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/simd/exponential.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/simd/geometric.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/simd/integer.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/simd/matrix.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/simd/neon.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/simd/packing.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/simd/platform.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/simd/trigonometric.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/simd/vector_relational.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/trigonometric.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/vec2.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/vec3.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/vec4.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/glm/vector_relational.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/json.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/include/Hephaestus/libs/json.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/BSD-3Clause" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/BSD-3Clause" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/COPYING" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/COPYING" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/XCompile-Android.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/XCompile-Android.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/XCompile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/XCompile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/al/auxeffectslot.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/al/auxeffectslot.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/al/auxeffectslot.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/al/auxeffectslot.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/al/buffer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/al/buffer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/al/buffer.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/al/buffer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/al/effect.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/al/effect.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/al/effect.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/al/effect.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/al/effects/autowah.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/al/effects/autowah.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/al/effects/chorus.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/al/effects/chorus.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/al/effects/compressor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/al/effects/compressor.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/al/effects/convolution.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/al/effects/convolution.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/al/effects/dedicated.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/al/effects/dedicated.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/al/effects/distortion.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/al/effects/distortion.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/al/effects/echo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/al/effects/echo.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/al/effects/effects.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/al/effects/effects.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/al/effects/equalizer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/al/effects/equalizer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/al/effects/fshifter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/al/effects/fshifter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/al/effects/modulator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/al/effects/modulator.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/al/effects/null.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/al/effects/null.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/al/effects/pshifter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/al/effects/pshifter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/al/effects/reverb.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/al/effects/reverb.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/al/effects/vmorpher.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/al/effects/vmorpher.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/al/error.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/al/error.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/al/event.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/al/event.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/al/event.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/al/event.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/al/extension.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/al/extension.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/al/filter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/al/filter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/al/filter.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/al/filter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/al/listener.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/al/listener.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/al/listener.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/al/listener.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/al/source.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/al/source.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/al/source.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/al/source.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/al/state.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/al/state.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/alc.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/alc.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/alcmain.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/alcmain.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/alconfig.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/alconfig.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/alconfig.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/alconfig.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/alcontext.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/alcontext.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/alu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/alu.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/alu.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/alu.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/async_event.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/async_event.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/backends/alsa.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/backends/alsa.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/backends/alsa.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/backends/alsa.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/backends/base.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/backends/base.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/backends/base.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/backends/base.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/backends/coreaudio.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/backends/coreaudio.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/backends/coreaudio.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/backends/coreaudio.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/backends/dsound.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/backends/dsound.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/backends/dsound.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/backends/dsound.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/backends/jack.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/backends/jack.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/backends/jack.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/backends/jack.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/backends/loopback.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/backends/loopback.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/backends/loopback.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/backends/loopback.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/backends/null.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/backends/null.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/backends/null.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/backends/null.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/backends/oboe.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/backends/oboe.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/backends/oboe.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/backends/oboe.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/backends/opensl.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/backends/opensl.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/backends/opensl.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/backends/opensl.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/backends/oss.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/backends/oss.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/backends/oss.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/backends/oss.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/backends/portaudio.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/backends/portaudio.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/backends/portaudio.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/backends/portaudio.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/backends/pulseaudio.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/backends/pulseaudio.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/backends/pulseaudio.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/backends/pulseaudio.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/backends/sdl2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/backends/sdl2.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/backends/sdl2.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/backends/sdl2.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/backends/sndio.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/backends/sndio.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/backends/sndio.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/backends/sndio.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/backends/solaris.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/backends/solaris.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/backends/solaris.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/backends/solaris.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/backends/wasapi.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/backends/wasapi.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/backends/wasapi.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/backends/wasapi.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/backends/wave.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/backends/wave.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/backends/wave.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/backends/wave.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/backends/winmm.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/backends/winmm.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/backends/winmm.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/backends/winmm.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/bformatdec.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/bformatdec.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/bformatdec.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/bformatdec.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/buffer_storage.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/buffer_storage.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/buffer_storage.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/buffer_storage.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/compat.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/compat.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/converter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/converter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/converter.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/converter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/effects/autowah.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/effects/autowah.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/effects/base.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/effects/base.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/effects/chorus.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/effects/chorus.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/effects/compressor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/effects/compressor.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/effects/convolution.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/effects/convolution.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/effects/dedicated.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/effects/dedicated.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/effects/distortion.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/effects/distortion.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/effects/echo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/effects/echo.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/effects/equalizer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/effects/equalizer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/effects/fshifter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/effects/fshifter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/effects/modulator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/effects/modulator.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/effects/null.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/effects/null.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/effects/pshifter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/effects/pshifter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/effects/reverb.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/effects/reverb.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/effects/vmorpher.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/effects/vmorpher.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/effectslot.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/effectslot.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/effectslot.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/effectslot.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/front_stablizer.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/front_stablizer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/helpers.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/helpers.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/hrtf.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/hrtf.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/hrtf.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/hrtf.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/inprogext.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/inprogext.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/panning.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/panning.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/uiddefs.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/uiddefs.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/voice.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/voice.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/voice.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/voice.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alc/voice_change.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alc/voice_change.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/alsoftrc.sample" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/alsoftrc.sample" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/cmake/FindALSA.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/cmake/FindALSA.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/cmake/FindAudioIO.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/cmake/FindAudioIO.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/cmake/FindFFmpeg.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/cmake/FindFFmpeg.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/cmake/FindJACK.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/cmake/FindJACK.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/cmake/FindMySOFA.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/cmake/FindMySOFA.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/cmake/FindOSS.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/cmake/FindOSS.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/cmake/FindOboe.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/cmake/FindOboe.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/cmake/FindOpenSL.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/cmake/FindOpenSL.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/cmake/FindPortAudio.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/cmake/FindPortAudio.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/cmake/FindPulseAudio.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/cmake/FindPulseAudio.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/cmake/FindSDL2.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/cmake/FindSDL2.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/cmake/FindSndFile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/cmake/FindSndFile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/cmake/FindSoundIO.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/cmake/FindSoundIO.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/cmake/bin2h.script.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/cmake/bin2h.script.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/common/albit.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/common/albit.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/common/albyte.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/common/albyte.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/common/alcomplex.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/common/alcomplex.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/common/alcomplex.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/common/alcomplex.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/common/aldeque.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/common/aldeque.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/common/alfstream.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/common/alfstream.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/common/alfstream.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/common/alfstream.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/common/almalloc.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/common/almalloc.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/common/almalloc.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/common/almalloc.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/common/alnumeric.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/common/alnumeric.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/common/aloptional.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/common/aloptional.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/common/alspan.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/common/alspan.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/common/alstring.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/common/alstring.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/common/alstring.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/common/alstring.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/common/atomic.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/common/atomic.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/common/dynload.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/common/dynload.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/common/dynload.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/common/dynload.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/common/intrusive_ptr.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/common/intrusive_ptr.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/common/math_defs.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/common/math_defs.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/common/opthelpers.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/common/opthelpers.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/common/polyphase_resampler.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/common/polyphase_resampler.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/common/polyphase_resampler.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/common/polyphase_resampler.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/common/pragmadefs.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/common/pragmadefs.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/common/ringbuffer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/common/ringbuffer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/common/ringbuffer.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/common/ringbuffer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/common/strutils.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/common/strutils.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/common/strutils.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/common/strutils.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/common/threads.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/common/threads.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/common/threads.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/common/threads.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/common/vecmat.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/common/vecmat.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/common/vector.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/common/vector.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/common/win_main_utf8.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/common/win_main_utf8.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/config.h.in" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/config.h.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/ambdec.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/ambdec.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/ambdec.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/ambdec.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/ambidefs.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/ambidefs.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/bs2b.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/bs2b.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/bs2b.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/bs2b.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/bsinc_defs.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/bsinc_defs.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/bsinc_tables.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/bsinc_tables.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/bsinc_tables.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/bsinc_tables.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/bufferline.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/bufferline.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/cpu_caps.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/cpu_caps.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/cpu_caps.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/cpu_caps.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/devformat.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/devformat.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/devformat.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/devformat.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/except.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/except.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/except.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/except.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/filters/biquad.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/filters/biquad.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/filters/biquad.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/filters/biquad.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/filters/nfc.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/filters/nfc.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/filters/nfc.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/filters/nfc.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/filters/splitter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/filters/splitter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/filters/splitter.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/filters/splitter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/fmt_traits.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/fmt_traits.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/fmt_traits.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/fmt_traits.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/fpu_ctrl.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/fpu_ctrl.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/fpu_ctrl.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/fpu_ctrl.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/logging.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/logging.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/logging.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/logging.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/mastering.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/mastering.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/mastering.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/mastering.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/mixer/defs.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/mixer/defs.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/mixer/hrtfbase.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/mixer/hrtfbase.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/mixer/hrtfdefs.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/mixer/hrtfdefs.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/mixer/mixer_c.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/mixer/mixer_c.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/mixer/mixer_neon.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/mixer/mixer_neon.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/mixer/mixer_sse.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/mixer/mixer_sse.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/mixer/mixer_sse2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/mixer/mixer_sse2.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/mixer/mixer_sse3.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/mixer/mixer_sse3.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/mixer/mixer_sse41.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/mixer/mixer_sse41.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/uhjfilter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/uhjfilter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/core/uhjfilter.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/core/uhjfilter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/hrtf/Default HRTF.mhr" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/hrtf/Default HRTF.mhr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/include/AL/al.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/include/AL/al.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/include/AL/alc.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/include/AL/alc.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/include/AL/alext.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/include/AL/alext.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/include/AL/efx-creative.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/include/AL/efx-creative.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/include/AL/efx-presets.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/include/AL/efx-presets.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/include/AL/efx.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/include/AL/efx.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/openal.pc.in" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/openal.pc.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/presets/3D7.1.ambdec" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/presets/3D7.1.ambdec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/presets/hexagon.ambdec" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/presets/hexagon.ambdec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/presets/itu5.1-nocenter.ambdec" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/presets/itu5.1-nocenter.ambdec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/presets/itu5.1.ambdec" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/presets/itu5.1.ambdec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/presets/presets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/presets/presets.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/presets/rectangle.ambdec" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/presets/rectangle.ambdec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/presets/square.ambdec" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/presets/square.ambdec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/resources/openal32.rc" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/resources/openal32.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/resources/resource.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/resources/resource.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/resources/router.rc" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/resources/router.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/resources/soft_oal.rc" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/resources/soft_oal.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/router/al.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/router/al.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/router/alc.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/router/alc.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/router/router.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/router/router.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/router/router.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/router/router.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/utils/CIAIR.def" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/utils/CIAIR.def" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/utils/IRC_1005.def" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/utils/IRC_1005.def" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/utils/MIT_KEMAR.def" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/utils/MIT_KEMAR.def" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/utils/MIT_KEMAR_sofa.def" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/utils/MIT_KEMAR_sofa.def" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/utils/SCUT_KEMAR.def" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/utils/SCUT_KEMAR.def" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/utils/alsoft-config/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/utils/alsoft-config/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/utils/alsoft-config/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/utils/alsoft-config/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/utils/alsoft-config/mainwindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/utils/alsoft-config/mainwindow.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/utils/alsoft-config/mainwindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/utils/alsoft-config/mainwindow.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/utils/alsoft-config/mainwindow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/utils/alsoft-config/mainwindow.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/utils/alsoft-config/verstr.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/utils/alsoft-config/verstr.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/utils/alsoft-config/verstr.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/utils/alsoft-config/verstr.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/utils/getopt.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/utils/getopt.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/utils/getopt.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/utils/getopt.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/utils/makemhr/loaddef.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/utils/makemhr/loaddef.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/utils/makemhr/loaddef.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/utils/makemhr/loaddef.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/utils/makemhr/loadsofa.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/utils/makemhr/loadsofa.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/utils/makemhr/loadsofa.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/utils/makemhr/loadsofa.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/utils/makemhr/makemhr.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/utils/makemhr/makemhr.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/utils/makemhr/makemhr.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/utils/makemhr/makemhr.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/utils/openal-info.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/utils/openal-info.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/utils/sofa-info.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/utils/sofa-info.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/utils/sofa-support.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/utils/sofa-support.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/utils/sofa-support.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/utils/sofa-support.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/version.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/version.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/openal-soft/version.h.in" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/libs/openal-soft/version.h.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Library/stb_image.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/include/Hephaestus/libs/stb_image.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Scene/Scene.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/src/Scene/Scene.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Scene/Scene.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Shader/Shader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/src/Shader/Shader.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Shader/Shader.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/include/Hephaestus/Shader/Shader.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Sprite/PhysicsSprite/PhysicsSprite.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/src/Sprite/PhysicsSprite.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Sprite/PhysicsSprite/PhysicsSprite.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/include/Hephaestus/Sprite/PhysicsSprite.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Sprite/Sprite.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/src/Sprite/Sprite.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Sprite/Sprite.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/include/Hephaestus/Sprite/Sprite.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Text/Text.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/src/Text/Text.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Text/Text.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/include/Hephaestus/Text/Text.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Text/TextManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/src/Text/TextManager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/Text/TextManager.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/include/Hephaestus/Text/TextManager.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/UI/Button/Button.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/src/UI/Button/Button.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/UI/Button/Button.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/include/Hephaestus/UI/Button/Button.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/UI/Image/Image.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/src/UI/Image/Image.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/UI/Image/Image.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/include/Hephaestus/UI/Image/Image.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/UI/UIElement.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/src/UI/UIElement.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/UI/UIElement.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/include/Hephaestus/UI/UIElement.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,84 +754,40 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="CMakeLists.txt" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/main.cpp" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
-    <option name="majorVersion" value="2021" />
-    <option name="minorVersion" value="3.4" />
+    <option name="majorVersion" value="2022" />
+    <option name="minorVersion" value="2.4" />
   </component>
-  <component name="ProjectId" id="20KCL6BxFflAbGZyf9BMoLUeJZC" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2GYaCzugWoZrddbileeOW1GwmIF" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "cmake.loaded.for.project": "true",
-    "last_opened_file_path": "/Users/zacharylineman/Developer/GitHub/Hephaestus/Olympus",
-    "settings.editor.selected.configurable": "CMakeSettings",
-    "structure.view.defaults.are.configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="ReaderModeSettings">
-    <option name="enabled" value="false" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/cmake-build-debug" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/cmake-build-debug/UI" />
-      <recent name="$PROJECT_DIR$/Resources/Games/UI" />
-      <recent name="$PROJECT_DIR$/Resources" />
-      <recent name="$PROJECT_DIR$/Resources/Audio" />
-      <recent name="$PROJECT_DIR$/Hephaestus/Library/AL" />
-    </key>
-  </component>
+}</component>
   <component name="RunManager" selected="CMake Application.Olympus">
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Hephaestus" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Olympus" TARGET_NAME="Hephaestus" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Olympus" type="CMakeRunConfiguration" factoryName="Application" folderName="Olympus" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Olympus" RUN_TARGET_NAME="Olympus" EXPLICIT_BUILD_TARGET_NAME="all">
+    <configuration name="Olympus" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Olympus" TARGET_NAME="Olympus" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Olympus" RUN_TARGET_NAME="Olympus">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -121,220 +797,29 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="common" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Olympus" TARGET_NAME="common" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="Copy Directory" type="ShConfigurationType">
-      <option name="SCRIPT_TEXT" value="rsync  $PROJECT_DIR$/Hephaestus/ $PROJECT_DIR$/../GameOfLife/lib/hephaestus/include/ -v -r --include &quot;*.hpp&quot; --include &quot;*.h&quot; --include &quot;*/&quot;  --exclude &quot;*&quot; " />
-      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
-      <option name="SCRIPT_PATH" value="" />
-      <option name="SCRIPT_OPTIONS" value="" />
-      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
-      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
-      <option name="INTERPRETER_PATH" value="/bin/zsh" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="EXECUTE_IN_TERMINAL" value="true" />
-      <option name="EXECUTE_SCRIPT_FILE" value="false" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="Copy .a" type="ShConfigurationType">
-      <option name="SCRIPT_TEXT" value="cp $PROJECT_DIR$/cmake-build-debug/Hephaestus/libHephaestus.a $PROJECT_DIR$/../GameOfLife/lib/hephaestus/lib/libHephaestus.a" />
-      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
-      <option name="SCRIPT_PATH" value="" />
-      <option name="SCRIPT_OPTIONS" value="" />
-      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
-      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
-      <option name="INTERPRETER_PATH" value="/bin/zsh" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="EXECUTE_IN_TERMINAL" value="true" />
-      <option name="EXECUTE_SCRIPT_FILE" value="false" />
-      <envs />
-      <method v="2" />
     </configuration>
     <list>
       <item itemvalue="CMake Application.Olympus" />
       <item itemvalue="CMake Application.Hephaestus" />
       <item itemvalue="CMake Application.common" />
       <item itemvalue="CMake Application.OpenAL" />
-      <item itemvalue="Shell Script.Copy Directory" />
-      <item itemvalue="Shell Script.Copy .a" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f22769bb-d6a0-46e4-a0f3-ebdc8ac76c3d" name="Changes" comment="" />
-      <created>1635783832273</created>
+      <changelist id="2d077f58-dac8-44d6-9e7d-cea4628e1944" name="Changes" comment="" />
+      <created>1666567848664</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1635783832273</updated>
-      <workItem from="1635783833793" duration="1862000" />
-      <workItem from="1635789700915" duration="780000" />
-      <workItem from="1635868409949" duration="2633000" />
-      <workItem from="1635942969427" duration="10739000" />
-      <workItem from="1636070391549" duration="5582000" />
-      <workItem from="1636076395243" duration="1786000" />
-      <workItem from="1636078268938" duration="1000" />
-      <workItem from="1636081531586" duration="790000" />
-      <workItem from="1636115324032" duration="27000" />
-      <workItem from="1636122033684" duration="6948000" />
-      <workItem from="1636389398938" duration="4138000" />
-      <workItem from="1636485847659" duration="225000" />
-      <workItem from="1636562336866" duration="5929000" />
-      <workItem from="1636649216465" duration="3356000" />
-      <workItem from="1636735441542" duration="7466000" />
-      <workItem from="1636820589373" duration="29605000" />
-      <workItem from="1636978592740" duration="321000" />
-      <workItem from="1636987082477" duration="91000" />
-      <workItem from="1636994336705" duration="6942000" />
-      <workItem from="1637081600049" duration="14631000" />
-      <workItem from="1637204361766" duration="7259000" />
-      <workItem from="1637247198861" duration="985000" />
-      <workItem from="1637253357263" duration="4007000" />
-      <workItem from="1637339471246" duration="4779000" />
-      <workItem from="1637435462999" duration="12535000" />
-      <workItem from="1637552529424" duration="133000" />
-      <workItem from="1637552666411" duration="7868000" />
-      <workItem from="1637689030898" duration="3911000" />
-      <workItem from="1637705625820" duration="541000" />
-      <workItem from="1638200823358" duration="288000" />
-      <workItem from="1638380078716" duration="898000" />
-      <workItem from="1638463165829" duration="2498000" />
-      <workItem from="1638540202578" duration="1559000" />
-      <workItem from="1638549653523" duration="13090000" />
-      <workItem from="1638808785409" duration="1230000" />
-      <workItem from="1638896068432" duration="9242000" />
-      <workItem from="1638974883532" duration="383000" />
-      <workItem from="1638976617282" duration="3500000" />
-      <workItem from="1638982738417" duration="6327000" />
-      <workItem from="1639057004539" duration="1726000" />
-      <workItem from="1639068013982" duration="5503000" />
-      <workItem from="1639154518360" duration="3053000" />
-      <workItem from="1639414353466" duration="538000" />
-      <workItem from="1639490423078" duration="2329000" />
-      <workItem from="1639500974191" duration="776000" />
-      <workItem from="1639517717728" duration="947000" />
-      <workItem from="1639587493580" duration="3000" />
-      <workItem from="1639587504714" duration="707000" />
-      <workItem from="1639588244421" duration="1747000" />
-      <workItem from="1639603930675" duration="2356000" />
-      <workItem from="1639672659481" duration="2795000" />
-      <workItem from="1639760597404" duration="3462000" />
-      <workItem from="1639860732462" duration="347000" />
-      <workItem from="1639874475230" duration="2228000" />
-      <workItem from="1639876771363" duration="3000" />
-      <workItem from="1639969381154" duration="949000" />
-      <workItem from="1639971880446" duration="1000" />
-      <workItem from="1639971914693" duration="1280000" />
-      <workItem from="1640006881460" duration="60000" />
-      <workItem from="1640019652756" duration="1013000" />
-      <workItem from="1640020919918" duration="559000" />
-      <workItem from="1640032744666" duration="3232000" />
-      <workItem from="1640061497557" duration="1768000" />
-      <workItem from="1641227918645" duration="2608000" />
-      <workItem from="1641314451016" duration="1786000" />
-      <workItem from="1641316323798" duration="862000" />
-      <workItem from="1641317191022" duration="2000" />
-      <workItem from="1641322215343" duration="944000" />
-      <workItem from="1641400741088" duration="79000" />
-      <workItem from="1641401515352" duration="3555000" />
-      <workItem from="1641436196345" duration="45000" />
-      <workItem from="1641487503637" duration="2025000" />
-      <workItem from="1641501301646" duration="46000" />
-      <workItem from="1641575571797" duration="1857000" />
-      <workItem from="1641585062734" duration="46000" />
-      <workItem from="1641832828043" duration="1344000" />
-      <workItem from="1641930690639" duration="843000" />
-      <workItem from="1642005475505" duration="5942000" />
-      <workItem from="1642037264940" duration="192000" />
-      <workItem from="1642093246816" duration="328000" />
-      <workItem from="1642525025015" duration="1121000" />
-      <workItem from="1642698427709" duration="1722000" />
-      <workItem from="1642783133356" duration="3447000" />
-      <workItem from="1643042840719" duration="1712000" />
-      <workItem from="1643129685928" duration="3118000" />
-      <workItem from="1643215058904" duration="1994000" />
-      <workItem from="1643339079816" duration="469000" />
-      <workItem from="1643467651288" duration="294000" />
-      <workItem from="1643478654810" duration="3801000" />
-      <workItem from="1643648280470" duration="995000" />
-      <workItem from="1643661156878" duration="614000" />
-      <workItem from="1643855308693" duration="18000" />
-      <workItem from="1644340629821" duration="1232000" />
-      <workItem from="1644597566770" duration="2697000" />
-      <workItem from="1644634736978" duration="95000" />
-      <workItem from="1644856819694" duration="666000" />
-      <workItem from="1644858230108" duration="1140000" />
-      <workItem from="1644859395151" duration="192000" />
-      <workItem from="1644944158451" duration="2231000" />
-      <workItem from="1645029526178" duration="4227000" />
-      <workItem from="1645055653490" duration="541000" />
-      <workItem from="1645116274170" duration="13012000" />
-      <workItem from="1645238726459" duration="28000" />
-      <workItem from="1645634362862" duration="4704000" />
-      <workItem from="1645720599269" duration="1290000" />
-      <workItem from="1645810685379" duration="1848000" />
-      <workItem from="1646066728181" duration="1247000" />
-      <workItem from="1646152685592" duration="420000" />
-      <workItem from="1646153277401" duration="211000" />
-      <workItem from="1646153559791" duration="559000" />
-      <workItem from="1646154331811" duration="13000" />
-      <workItem from="1646154693150" duration="4000" />
-      <workItem from="1646231404464" duration="11000" />
-      <workItem from="1646672224598" duration="19000" />
-      <workItem from="1646846524188" duration="45000" />
-      <workItem from="1646846675441" duration="480000" />
-      <workItem from="1646930321524" duration="3000" />
-      <workItem from="1646931176952" duration="372000" />
-      <workItem from="1646931619375" duration="11000" />
-      <workItem from="1647360487869" duration="34000" />
-      <workItem from="1647533175668" duration="1062000" />
-      <workItem from="1647618027148" duration="62000" />
-      <workItem from="1647618109196" duration="8000" />
-      <workItem from="1647618971873" duration="706000" />
-      <workItem from="1647661541680" duration="11000" />
-      <workItem from="1647663287146" duration="364000" />
-      <workItem from="1647877630538" duration="64000" />
-      <workItem from="1648829109264" duration="83000" />
-      <workItem from="1649086812811" duration="67000" />
-      <workItem from="1650405341265" duration="1502000" />
-      <workItem from="1650642839280" duration="9000" />
-      <workItem from="1652182465418" duration="4000" />
-      <workItem from="1652187023234" duration="71000" />
-      <workItem from="1652283877619" duration="264000" />
-      <workItem from="1652284278867" duration="17000" />
-      <workItem from="1652284344336" duration="23000" />
-      <workItem from="1652369985400" duration="2736000" />
-      <workItem from="1652414904693" duration="608000" />
-      <workItem from="1652657478827" duration="1024000" />
-      <workItem from="1652658560129" duration="1160000" />
-      <workItem from="1652659728729" duration="3026000" />
-      <workItem from="1652663176910" duration="3021000" />
-      <workItem from="1652666290974" duration="3144000" />
-      <workItem from="1652669613342" duration="62000" />
-      <workItem from="1652716142108" duration="1036000" />
-      <workItem from="1652846120248" duration="136000" />
-      <workItem from="1652846278867" duration="13000" />
-      <workItem from="1652847349556" duration="22000" />
-      <workItem from="1657506180931" duration="41000" />
-      <workItem from="1660593545218" duration="96000" />
-      <workItem from="1661051851007" duration="80000" />
-      <workItem from="1661219785119" duration="104000" />
-      <workItem from="1661521893612" duration="11000" />
-      <workItem from="1664495937164" duration="1000" />
-      <workItem from="1664844170197" duration="4000" />
-      <workItem from="1664923287570" duration="161000" />
-      <workItem from="1666065855316" duration="320000" />
+      <updated>1666567848664</updated>
+      <workItem from="1666567849949" duration="299000" />
+      <workItem from="1666568154619" duration="5000" />
+      <workItem from="1666568412285" duration="610000" />
     </task>
     <servers />
   </component>
@@ -351,15 +836,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <ignored-roots>
-      <path value="$PROJECT_DIR$/../.." />
-    </ignored-roots>
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>
