@@ -20,7 +20,6 @@ if(UNIX AND NOT APPLE)
     find_package(OpenGL REQUIRED)
     find_package(OpenAL REQUIRED)
 
-
     target_link_libraries(${PROJECT_NAME}
             PUBLIC OpenGL
             PUBLIC OpenAL
@@ -28,11 +27,8 @@ if(UNIX AND NOT APPLE)
 endif()
 
 find_package(glm REQUIRED)
-
 find_package(glfw3 REQUIRED)
-
 find_package(GLEW REQUIRED)
-
 find_package(Freetype REQUIRED)
 
 target_link_libraries(${PROJECT_NAME}

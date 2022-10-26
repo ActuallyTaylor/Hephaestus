@@ -17,8 +17,12 @@
 #include <thread>
 #include <glm/glm.hpp>
 
-#include <OpenAL/alc.h>
+#if __linux__
+#include "al.h"
+#elif __APPLE__
 #include <OpenAL/al.h>
+#include <OpenAL/alc.h>
+#endif
 
 class AudioSnippet {
 public:
