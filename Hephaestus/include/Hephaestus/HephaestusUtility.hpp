@@ -38,7 +38,8 @@ inline GLint translateSamplingType(SamplingType samplingType) {
         case linearMipmapLinear:
             return GL_LINEAR_MIPMAP_LINEAR;
     }
-};
+    return GL_LINEAR;
+}
 
 template <typename T>
 int indexOf(T object, std::vector<T> vector) {

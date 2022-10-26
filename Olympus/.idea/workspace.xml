@@ -19,9 +19,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d077f58-dac8-44d6-9e7d-cea4628e1944" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Hephaestus/include/Hephaestus/AudioEngine/AudioEngine.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/include/Hephaestus/AudioEngine/AudioEngine.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hephaestus/include/Hephaestus/AudioEngine/AudioSnippet.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/include/Hephaestus/AudioEngine/AudioSnippet.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hephaestus/src/AudioEngine/AudioEngine.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/src/AudioEngine/AudioEngine.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/include/Hephaestus/HephaestusUtility.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/include/Hephaestus/HephaestusUtility.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
