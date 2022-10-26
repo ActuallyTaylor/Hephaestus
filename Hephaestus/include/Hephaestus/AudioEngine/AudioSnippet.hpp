@@ -18,7 +18,7 @@
 #include <glm/glm.hpp>
 
 #if __linux__
-#include "al.h"
+#include <AL/al.h>
 #elif __APPLE__
 #include <OpenAL/al.h>
 #include <OpenAL/alc.h>
