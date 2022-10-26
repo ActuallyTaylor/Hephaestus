@@ -71,7 +71,11 @@ AudioSnippet AudioEngine::createAudioSnippet(std::string path) {
 
 bool AudioEngine::checkOpenALError(std::string caller) {
     // Check for an error
-    ALCenum error = alGetError();
+    #if __linux__
+        ALenum error = alGetError();
+    #elif __APPLE__
+        ALCenum error = alGetError();
+    #endif
     if(error != AL_NO_ERROR) {
         std::cerr << caller << " ";
         switch(error) {
