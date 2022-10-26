@@ -93,11 +93,7 @@ void AudioSnippet::close() {
 
 bool AudioSnippet::checkOpenALError(std::string caller) {
     // Check for an error
-    #if __linux__
     ALenum error = alGetError();
-    #elif __APPLE__
-    ALCenum error = alGetError();
-    #endif
     if(error != AL_NO_ERROR) {
         std::cerr << caller << " ";
         switch(error) {
