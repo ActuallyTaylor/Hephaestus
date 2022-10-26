@@ -10,4 +10,6 @@ sudo apt -y install libglfw3-dev
 sudo apt -y install libglew-dev
 sudo apt -y install libfreetype6-dev
 sudo apt -y install libglm-dev
+sudo apt -y install libalut-dev
+sudo apt-get install libopenal-dev
 git clone https://github.com/ActuallyZach/Hephaestus.git
