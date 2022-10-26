@@ -3,7 +3,7 @@
     {
       "name": "Low Data",
       "executableName": "LowData",
-      "executablePath": "/Users/zacharylineman/Developer/GitHub/Hephaestus/Games/LowData/Build/",
+      "executablePath": "../LowData/",
       "resourcePath": "./Games/LowData/",
       "description": "Fight through procedurally generated dungeons on your way to creating the best team of monsters ever.",
       "creator": "Zachary Lineman"
@@ -11,7 +11,7 @@
     {
       "name": "Game of Life",
       "executableName": "GameOfLife",
-      "executablePath": "/Users/zacharylineman/Developer/GitHub/Hephaestus/Games/GameOfLife/Build/",
+      "executablePath": "../GameOfLife/",
       "resourcePath": "./Games/GameOfLife/",
       "description": "Play a recreation of conways game of life.",
       "creator": "Zachary Lineman"
@@ -19,7 +19,7 @@
     {
       "name": "Physics Demo",
       "executableName": "PhysicsDemo",
-      "executablePath": "/Users/zacharylineman/Developer/GitHub/Hephaestus/Games/PhysicsDemo/Build/",
+      "executablePath": "../PhysicsDemo/",
       "resourcePath": "./Games/PhysicsDemo/",
       "description": "Check out a Hephaestus Engine physics demo.",
       "creator": "Zachary Lineman"
