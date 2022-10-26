@@ -18,11 +18,13 @@ target_sources(${PROJECT_NAME} PRIVATE  src/Hephaestus.cpp src/Hephaestus.cpp in
 # Handle Dependencies
 if(UNIX AND NOT APPLE)
     find_package(OpenGL REQUIRED)
-    find_package(OpenAL REQUIRED)
+    find_package(Openal REQUIRED)
+    find_package(ALUT REQUIRED)
 
     target_link_libraries(${PROJECT_NAME}
             PUBLIC OpenGL
             PUBLIC OpenAL
+            PUBLIC ALUT
             )
 endif()
 
