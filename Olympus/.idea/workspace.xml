@@ -21,26 +21,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d077f58-dac8-44d6-9e7d-cea4628e1944" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Games/GameOfLife/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Games/GameOfLife/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Games/GameOfLife/mainLevelScene.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Games/GameOfLife/mainLevelScene.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Games/LowData/Characters/AnimationFlipbook.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Games/LowData/Characters/AnimationFlipbook.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Games/LowData/Characters/MainCharacter.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Games/LowData/Characters/MainCharacter.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Games/LowData/Characters/Merchant.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Games/LowData/Characters/Merchant.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Games/LowData/Environment/EncounterSpace.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Games/LowData/Environment/EncounterSpace.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Games/LowData/Environment/EncounterSpace.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Games/LowData/Environment/EncounterSpace.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Games/LowData/Items/DroppedItem.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Games/LowData/Items/DroppedItem.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Games/LowData/Items/Item.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Games/LowData/Items/Item.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Games/LowData/LowDataGame.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Games/LowData/LowDataGame.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Games/LowData/Scenes/GameScene.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Games/LowData/Scenes/GameScene.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Games/LowData/Scenes/MenuScene.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Games/LowData/Scenes/MenuScene.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Games/LowData/Scenes/MenuScene.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Games/LowData/Scenes/MenuScene.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Games/PhysicsDemo/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Games/PhysicsDemo/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hephaestus/include/Hephaestus/Sprite/PhysicsSprite.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/include/Hephaestus/Sprite/PhysicsSprite.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hephaestus/include/Hephaestus/Sprite/Sprite.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/include/Hephaestus/Sprite/Sprite.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hephaestus/src/Hephaestus.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/src/Hephaestus.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hephaestus/src/Scene/Scene.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/src/Scene/Scene.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hephaestus/src/Sprite/PhysicsSprite.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/src/Sprite/PhysicsSprite.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hephaestus/src/Sprite/Sprite.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/src/Sprite/Sprite.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hephaestus/include/Hephaestus/Function.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Hephaestus/include/Hephaestus/Function.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,6 +103,7 @@
       <workItem from="1666568412285" duration="610000" />
       <workItem from="1666754047809" duration="742000" />
       <workItem from="1666754803075" duration="174000" />
+      <workItem from="1666755942030" duration="9000" />
     </task>
     <servers />
   </component>

@@ -9,6 +9,7 @@
 */
 #pragma once
 #include <functional>
+#include <string>
 
 #ifndef OLYMPUS_FUNCTION_HPP
 #define OLYMPUS_FUNCTION_HPP
