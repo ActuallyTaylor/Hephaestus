@@ -14,8 +14,8 @@ Sprite::Shape PhysicsSprite::getShape() {
     return this->spriteShape;
 }
 
-void PhysicsSprite::move(float deltaTime) {
-    position += velocity * deltaTime;
+void PhysicsSprite::move(double deltaTime) {
+    position += velocity * (float) deltaTime;
     lastVelocity = velocity;
 }
 

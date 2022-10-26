@@ -8,8 +8,8 @@
     =================
 */
 #include <iostream>
-#include "../../../Hephaestus/Sprite/Sprite.hpp"
-#include "../../../Hephaestus/Scene/Scene.hpp"
+#include <Hephaestus/Sprite/Sprite.hpp>
+#include <Hephaestus/Scene/Scene.hpp>
 
 #ifndef LOWDATA_ENCOUNTERSPACE_HPP
 #define LOWDATA_ENCOUNTERSPACE_HPP

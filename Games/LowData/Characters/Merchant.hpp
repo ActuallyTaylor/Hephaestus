@@ -10,9 +10,9 @@
 
 #ifndef LOWDATA_MERCHANT_HPP
 #define LOWDATA_MERCHANT_HPP
-#include "../../../Hephaestus/Sprite/Sprite.hpp"
-#include "../../../Hephaestus/Collision/CollisionArea.hpp"
-#include "../../../Hephaestus/Scene/Scene.hpp"
+#include <Hephaestus/Sprite/Sprite.hpp>
+#include <Hephaestus/Collision/CollisionArea.hpp>
+#include <Hephaestus/Scene/Scene.hpp>
 
 class Merchant: Sprite {
     CollisionArea merchantCollision = CollisionArea({0,0,0}, {64, 64, 0}, "Merchant", std::bind(&Merchant::overlapMerchant, this, std::placeholders::_1), std::bind(&Merchant::leaveMerchant, this, std::placeholders::_1));

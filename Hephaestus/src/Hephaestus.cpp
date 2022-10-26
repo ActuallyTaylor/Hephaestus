@@ -120,8 +120,8 @@ void Hephaestus::startWindowLoop() {
 
     int framesThisSecond = 0;
     // Uncomment this to delimit framerate. Currently, limited because physics breaks.
-//    glfwSwapInterval(0);
-//    currentScene->addText(&renderingText);
+    // glfwSwapInterval(0);
+    // currentScene->addText(&renderingText);
     currentScene->updateSceneDimensions(width, height);
 
     while (!glfwWindowShouldClose(window)) {
@@ -156,6 +156,8 @@ void Hephaestus::startWindowLoop() {
         // Poll for and process events
         glfwPollEvents();
     }
+
+    _destroy();
 }
 
 void Hephaestus::_init() const {
@@ -204,6 +206,7 @@ void Hephaestus::_render() const {
 void Hephaestus::windowCallback(GLFWwindow *window, int width, int height) {
     self->width = width;
     self->height = height;
+    std::cout << "TEST" << std::endl;
 
     self->currentScene->updateSceneDimensions(width, height);
     if (self->currentScene->screenSizeChanged != nullptr) {

@@ -12,11 +12,11 @@
 #ifndef LOWDATA_MENUSCENE_HPP
 #define LOWDATA_MENUSCENE_HPP
 
-#include "../../../Hephaestus/Hephaestus.hpp"
-#include "../../../Hephaestus/Scene/Scene.hpp"
-#include "../../../Hephaestus/UI/Image/Image.hpp"
-#include "../../../Hephaestus/Sprite/PhysicsSprite/PhysicsSprite.hpp"
-#include "../../../Hephaestus/Function.hpp"
+#include <Hephaestus/Hephaestus.hpp>
+#include <Hephaestus/Scene/Scene.hpp>
+#include <Hephaestus/UI/Image/Image.hpp>
+#include <Hephaestus/Sprite/PhysicsSprite.hpp>
+#include <Hephaestus/Function.hpp>
 
 class MenuScene {
     /*

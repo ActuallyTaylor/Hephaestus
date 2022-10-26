@@ -9,7 +9,7 @@
 */
 
 #include "EncounterSpace.hpp"
-#include "../../../Hephaestus/HephaestusUtility.hpp"
+#include <Hephaestus/HephaestusUtility.hpp>
 
 EncounterSpace::EncounterSpace(float encounterChance, EncounterSpace::SpaceType spaceType, glm::vec3 worldPosition, EncounterCallback spriteOverlapped) {
     this->spaceType = spaceType;

@@ -13,9 +13,9 @@
 #include "./AnimationFlipbook.hpp"
 #include "../Items/Item.hpp"
 
-#include "../../../Hephaestus/Sprite/Sprite.hpp"
-#include "../../../Hephaestus/UI/Image/Image.hpp"
-#include "../../../Hephaestus/Scene/Scene.hpp"
+#include <Hephaestus/Sprite/Sprite.hpp>
+#include <Hephaestus/UI/Image/Image.hpp>
+#include <Hephaestus/Scene/Scene.hpp>
 #include <glm/glm.hpp>
 #include <glm/ext/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>

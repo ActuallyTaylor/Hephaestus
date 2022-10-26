@@ -10,6 +10,7 @@
 
 #include <Hephaestus/Scene/Scene.hpp>
 #include <Hephaestus/Sprite/PhysicsSprite.hpp>
+#include <utility>
 Scene* self_scene;
 
 Scene::Scene() {
@@ -63,7 +64,7 @@ void Scene::addSprite(Sprite *sprite) {
 }
 
 void Scene::removeSprite(Sprite* sprite) {
-    sprites.erase(std::remove_if(sprites.begin(), sprites.end(), [&sprite](Sprite * i) { return i && (i->id == sprite->id); }));
+    sprites.erase(std::remove_if(sprites.begin(), sprites.end(), [&sprite](Sprite * i) { return i && (i->id == sprite->id); }), sprites.end());
 }
 
 Sprite* Scene::getSprite(std::string id) {
@@ -72,7 +73,7 @@ Sprite* Scene::getSprite(std::string id) {
 }
 
 void Scene::removeCollision(CollisionArea* collisionArea) {
-    collisionAreas.erase(std::remove_if(collisionAreas.begin(), collisionAreas.end(), [&collisionArea](CollisionArea * i) { return i && (i->id == collisionArea->id); }));
+    collisionAreas.erase(std::remove_if(collisionAreas.begin(), collisionAreas.end(), [&collisionArea](CollisionArea * i) { return i && (i->id == collisionArea->id); }), collisionAreas.end());
 }
 
 void Scene::addText(Text *text) {
@@ -80,7 +81,7 @@ void Scene::addText(Text *text) {
 }
 
 void Scene::loadFont(std::string fontPath, int pixelHeight) {
-    textManager.loadFont(fontPath, pixelHeight);
+    textManager.loadFont(std::move(fontPath), pixelHeight);
 }
 
 void Scene::addUIElement(UIElement *element) {
@@ -106,36 +107,36 @@ void Scene::addCamera(Camera *camera, bool setDefault) {
 }
 
 void Scene::setInit(Function function1) {
-    init = function1;
+    init = std::move(function1);
 }
 
 void Scene::setDestroy(Function function1) {
-    destroy = function1;
+    destroy = std::move(function1);
 }
 
 void Scene::setTick(Function function1) {
-    tick = function1;
+    tick = std::move(function1);
 }
 
 void Scene::setUpdate(Function function1) {
-    update = function1;
+    update = std::move(function1);
 }
 
 void Scene::setRender(Function function1) {
-    render = function1;
+    render = std::move(function1);
 }
 
 void Scene::setScreenSizeChanged(Function function1) {
-    screenSizeChanged = function1;
+    screenSizeChanged = std::move(function1);
 }
 
 void Scene::addKeybind(int inKeyCode, int inAction, Function inExecutionFunction, bool executesOnHold) {
-    Keybind keybind = Keybind{inKeyCode, inAction, inExecutionFunction, executesOnHold};
+    Keybind keybind = Keybind{inKeyCode, inAction, std::move(inExecutionFunction), executesOnHold};
     controlManager.addKeybind(keybind);
 }
 
 void Scene::addDrag(int keyCode, Function executionFunction) {
-    Keybind keybind = Keybind{keyCode, GLFW_PRESS, executionFunction};
+    Keybind keybind = Keybind{keyCode, GLFW_PRESS, std::move(executionFunction)};
     controlManager.addDrag(keybind);
 }
 

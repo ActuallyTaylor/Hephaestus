@@ -10,9 +10,9 @@
 #include <iostream>
 #include <random>
 #include "./Item.hpp"
-#include "../../../Hephaestus/Sprite/Sprite.hpp"
-#include "../../../Hephaestus/Scene/Scene.hpp"
-#include "../../../Hephaestus/Function.hpp"
+#include <Hephaestus/Sprite/Sprite.hpp>
+#include <Hephaestus/Scene/Scene.hpp>
+#include <Hephaestus/Function.hpp>
 
 #ifndef LOWDATA_DROPPEDITEM_HPP
 #define LOWDATA_DROPPEDITEM_HPP

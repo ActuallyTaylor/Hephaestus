@@ -1,10 +1,10 @@
 #include <iostream>
 #include <thread>
-#include "../../Hephaestus/Hephaestus.hpp"
-#include "../../Hephaestus/Scene/Scene.hpp"
-#include "../../Hephaestus/Sprite/PhysicsSprite/PhysicsSprite.hpp"
-#include "../../Hephaestus/UI/Button/Button.hpp"
-#include "../../Hephaestus/AudioEngine/AudioEngine.hpp"
+#include <Hephaestus/Hephaestus.hpp>
+#include <Hephaestus/Scene/Scene.hpp>
+#include <Hephaestus/Sprite/PhysicsSprite.hpp>
+#include <Hephaestus/UI/Button/Button.hpp>
+#include <Hephaestus/AudioEngine/AudioEngine.hpp>
 
 Hephaestus engine = Hephaestus("Physics Demo", 480, 320);
 

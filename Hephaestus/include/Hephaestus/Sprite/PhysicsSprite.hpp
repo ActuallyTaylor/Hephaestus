@@ -29,7 +29,7 @@ public:
     glm::vec3 lastVelocity { 0.0, 0.0, 0.0 };
 
     // Override Functions
-    void move(float deltaTime) override;
+    void move(double deltaTime) override;
     void boundSprite();
     Sprite::Shape getShape() override;
 

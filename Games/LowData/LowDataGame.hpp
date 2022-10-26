@@ -12,7 +12,7 @@
 
 #ifndef LOWDATA_LOWDATAGAME_HPP
 #define LOWDATA_LOWDATAGAME_HPP
-#include "../../Hephaestus/Hephaestus.hpp"
+#include <Hephaestus/Hephaestus.hpp>
 #include "Scenes/MenuScene.hpp"
 #include "Scenes/GameScene.hpp"
 

@@ -11,7 +11,7 @@
 #ifndef LOWDATA_ANIMATIONFLIPBOOK_HPP
 #define LOWDATA_ANIMATIONFLIPBOOK_HPP
 #include <map>
-#include "../../../Hephaestus/Sprite/Sprite.hpp"
+#include <Hephaestus/Sprite/Sprite.hpp>
 
 class AnimationFlipbook {
     std::map<std::string, std::vector<std::string>> mappedAnimations { };

@@ -11,8 +11,8 @@
 #ifndef GAMEOFLIFE_MAINLEVELSCENE_HPP
 #define GAMEOFLIFE_MAINLEVELSCENE_HPP
 
-#include "../../Hephaestus/Hephaestus.hpp"
-#include "../../Hephaestus/Scene/Scene.hpp"
+#include <Hephaestus/Hephaestus.hpp>
+#include <Hephaestus/Scene/Scene.hpp>
 
 struct Cell {
     int x { 0 };

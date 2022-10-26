@@ -250,7 +250,7 @@ Sprite::Shape Sprite::getShape() {
     return spriteShape;
 }
 
-void Sprite::move(float deltaTime) { }
+void Sprite::move(double deltaTime) { }
 
 float Sprite::getRadius() {
     return dimensions.x / 2;

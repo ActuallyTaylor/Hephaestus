@@ -137,7 +137,7 @@ public:
      */
     void draw();
 
-    virtual void move(float deltaTime);
+    virtual void move(double deltaTime);
 
     void setTexture(const std::string& texturePath);
     SamplingType samplingType = linear;

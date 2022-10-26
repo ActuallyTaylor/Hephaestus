@@ -15,8 +15,8 @@
 #ifndef LOWDATA_GAMESCENE_HPP
 #define LOWDATA_GAMESCENE_HPP
 
-#include "../../../Hephaestus/Hephaestus.hpp"
-#include "../../../Hephaestus/Scene/Scene.hpp"
+#include <Hephaestus/Hephaestus.hpp>
+#include <Hephaestus/Scene/Scene.hpp>
 #include "../Characters/Merchant.hpp"
 #include "../Characters/MainCharacter.hpp"
 #include "../Items/DroppedItem.hpp"

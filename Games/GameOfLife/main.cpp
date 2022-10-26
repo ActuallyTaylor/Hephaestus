@@ -1,7 +1,4 @@
-#include <iostream>
-#include <vector>
-#include "../../Hephaestus/Hephaestus.hpp"
-
+#include <Hephaestus/Hephaestus.hpp>
 #include "mainLevelScene.hpp"
 
 Hephaestus engine = Hephaestus("Conways Game of Life", 480, 320);

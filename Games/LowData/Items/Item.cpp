@@ -11,7 +11,7 @@
 #include "Item.hpp"
 
 #include <utility>
-#include "../../../Hephaestus/HephaestusUtility.hpp"
+#include <Hephaestus/HephaestusUtility.hpp>
 #include "../Characters/MainCharacter.hpp"
 
 Item::Item() {
