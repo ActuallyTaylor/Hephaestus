@@ -55,7 +55,7 @@ AudioSnippet AudioEngine::createAudioSnippet(std::string path) {
     if (loadedAudioData.count(path) > 0) {
         std::cout << "Using cached audio data" << std::endl;
         AudioSnippet::AudioFile audio = loadedAudioData.at(path);
-        return { audio, device, context };
+        return AudioSnippet (audio, device, context );
     } else {
         std::cout << "Loading Audio File" << std::endl;
         int chan, sampleRate, bitsPerSample, dataSize;
@@ -65,7 +65,7 @@ AudioSnippet AudioEngine::createAudioSnippet(std::string path) {
         data = loadWaveFile(path, chan, sampleRate, bitsPerSample, dataSize, format);
         AudioSnippet::AudioFile audio = AudioSnippet::AudioFile(chan, sampleRate, bitsPerSample, dataSize, format, data);
         loadedAudioData.insert(std::pair<std::string, AudioSnippet::AudioFile>(path, audio));
-        return { audio, device, context };
+        return AudioSnippet (audio, device, context );
     }
 }
 
