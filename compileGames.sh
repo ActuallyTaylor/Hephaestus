@@ -11,7 +11,7 @@ mkdir $CWD/compiled/PhysicsDemo/
 mkdir $CWD/compiled/Olympus/
 
 echo "CMAKE Hephaestus $CWD/compiled/Hephaestus"
-cmake -B$CWD/compiled/Hephaestus/ -S$CWD/Games/Hephaestus/
+cmake -B$CWD/compiled/Hephaestus/ -S$CWD/Hephaestus/
 echo "Compiling Hephaestus $CWD/compiled/Hephaestus"
 cd $CWD/compiled/Hephaestus/
 make 
