@@ -17,6 +17,7 @@ target_sources(${PROJECT_NAME} PRIVATE  src/Hephaestus.cpp src/Hephaestus.cpp in
 
 # Handle Dependencies
 if(UNIX AND NOT APPLE)
+    set(ALUT_DIR ${PROJECT_SOURCE_DIR}/cmake/FindALUT.cmake)
     find_package(OpenGL REQUIRED)
     find_package(OpenAL REQUIRED)
     find_package(ALUT REQUIRED)
