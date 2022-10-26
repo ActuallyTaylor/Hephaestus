@@ -38,9 +38,9 @@ cd $CWD/compiled/PhysicsDemo/
 make 
 cd $CWD
 
-echo "CMAKE Olympus $CWD/Games/Olympus/"
-cmake -B$CWD/compiled/Olympus/ -S$CWD/Games/Olympus/
-echo "Compiling Olympus $CWD/Games/Olympus/"
+echo "CMAKE Olympus $CWD/Olympus/"
+cmake -B$CWD/compiled/Olympus/ -S$CWD/Olympus/
+echo "Compiling Olympus $CWD/Olympus/"
 cd $CWD/compiled/Olympus/
 make
 cd $CWD
