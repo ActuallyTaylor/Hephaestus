@@ -21,8 +21,7 @@ if(UNIX AND NOT APPLE)
     target_link_libraries(${PROJECT_NAME} PUBLIC OpenGL)
 endif()
 
-add_subdirectory(libs/openal-soft/)
-install(TARGETS OpenAL EXPORT)
+find_package(OpenAL REQUIRED)
 
 find_package(glm REQUIRED)
 

@@ -17,8 +17,8 @@
 #include <thread>
 #include <glm/glm.hpp>
 
-#include <AL/al.h>
-#include <Al/alc.h>
+#include <OpenAL/alc.h>
+#include <OpenAL/al.h>
 
 class AudioSnippet {
 public:
