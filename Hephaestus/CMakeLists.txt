@@ -20,13 +20,13 @@ SET(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake;${CMAKE_MODULE_PATH}")
 if(UNIX AND NOT APPLE)
     # set(ALUT_DIR ${PROJECT_SOURCE_DIR}/cmake/FindALUT.cmake)
     find_package(OpenGL REQUIRED)
-    find_package(OpenAL REQUIRED)
-    find_package(ALUT REQUIRED)
+#    find_package(OpenAL REQUIRED)
+#    find_package(ALUT REQUIRED)
 
     target_link_libraries(${PROJECT_NAME}
             PUBLIC OpenGL
-            PUBLIC OpenAL
-            PUBLIC ALUT
+#            PUBLIC OpenAL
+#            PUBLIC ALUT
             )
 endif()
 
