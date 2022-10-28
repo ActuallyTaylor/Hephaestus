@@ -112,8 +112,6 @@ void Hephaestus::startWindowLoop() {
 
     glfwGetWindowSize(window, &width, &height);
 
-    self->currentScene->updateSceneDimensions(width, height);
-
     double currentTime = glfwGetTime();
     double lastTime = glfwGetTime();
     double lastFrameCountTime = glfwGetTime();
@@ -206,7 +204,6 @@ void Hephaestus::_render() const {
 void Hephaestus::windowCallback(GLFWwindow *window, int width, int height) {
     self->width = width;
     self->height = height;
-    std::cout << "TEST" << std::endl;
 
     self->currentScene->updateSceneDimensions(width, height);
     if (self->currentScene->screenSizeChanged != nullptr) {
